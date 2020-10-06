@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020373 {
+    bda:LGD26A86851658607E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020373"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020373"@en , "imported pubinfo for W1FEMC020373"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020373
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020373 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "dc/MW1FEMC020373.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020373 ;
+        adm:logEntry        bda:LGD26A86851658607E , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF806FC560F2D29AFC
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "65" ;
+        :microfilmStrip     "159" .
+    
+    bdr:MW1FEMC020373
+        a                   :Instance ;
+        skos:prefLabel      "ស្រទប​ចេក​"@km , "sradap cek"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "3, 5" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT1319F44F1FEA839F , bdr:TT1FDCEA29C008B634 , bdr:TT47D439786217DC75 , bdr:TTBB155C8B2A98E16D , bdr:TTE7C3C49393DE3673 , bdr:TTF55F4372F1308DF1 ;
+        :instanceHasReproduction  bdr:W1FEMC020373 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF806FC560F2D29AFC ;
+        :note               bdr:NTB079A87A3F49F159 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.8.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NTB079A87A3F49F159
+        a                   :Note ;
+        :contentLocationStatement  "pg. 74" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1319F44F1FEA839F
+        a                   :Title ;
+        rdfs:label          "ស្រទប​ចេក​"@km .
+    
+    bdr:TT1FDCEA29C008B634
+        a                   :CoverTitle ;
+        rdfs:label          "ទេវុង្ស"@km-x-kmpre20c .
+    
+    bdr:TT47D439786217DC75
+        a                   :CoverTitle ;
+        rdfs:label          "ទេវវង្សកុមារ"@km ;
+        :femcConversionOf   bdr:TT1FDCEA29C008B634 .
+    
+    bdr:TTBB155C8B2A98E16D
+        a                   :CoverTitle ;
+        rdfs:label          "devuṅs"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTE7C3C49393DE3673
+        a                   :CoverTitle ;
+        rdfs:label          "devavaṅs kumār"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTBB155C8B2A98E16D .
+    
+    bdr:TTF55F4372F1308DF1
+        a                   :Title ;
+        rdfs:label          "sradap cek"@km-x-kmfemc .
+}

@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011125 {
+    bda:LG207D4F8F3D72366E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011125"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC011125"@en , "imported pubinfo for W1FEMC011125"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011125
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC011125 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b4/MW1FEMC011125.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011125 ;
+        adm:logEntry        bda:LG207D4F8F3D72366E , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFC9D44FF203501679
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "30" ;
+        :microfilmStrip     "49" .
+    
+    bdr:MW1FEMC011125
+        a                   :Instance ;
+        skos:prefLabel      "វិបស្សនា (ត្រៃសរណគមន៍, ត្រៃលក្ខណញាណ)"@km , "vipassanā (trai saraṇagaman, trai lakkhaṇañāṇ)"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT57CF1679CD22A9B6 , bdr:TTA14005809349D6E8 , bdr:TTB69BB759ED9B5A69 , bdr:TTEBB03E11468A0DDB ;
+        :instanceHasReproduction  bdr:W1FEMC011125 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC9D44FF203501679 ;
+        :note               bdr:NT6E561C47F9A38E0A , bdr:NT82A2D7C417106FCF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "023-A.04.17.02.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT6E561C47F9A38E0A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 272" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:NT82A2D7C417106FCF
+        a                   :Note ;
+        :noteText           "Should we write (ច្ច-ទ្ទ) ?"@en .
+    
+    bdr:TT57CF1679CD22A9B6
+        a                   :CoverTitle ;
+        rdfs:label          "vipassaṇā"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTA14005809349D6E8
+        a                   :CoverTitle ;
+        rdfs:label          "វិបស្សណា (ច្ច-ទ្ទ)"@km-x-kmpre20c .
+    
+    bdr:TTB69BB759ED9B5A69
+        a                   :Title ;
+        rdfs:label          "វិបស្សនា (ត្រៃសរណគមន៍, ត្រៃលក្ខណញាណ)"@km ;
+        :femcConversionOf   bdr:TTA14005809349D6E8 .
+    
+    bdr:TTEBB03E11468A0DDB
+        a                   :Title ;
+        rdfs:label          "vipassanā (trai saraṇagaman, trai lakkhaṇañāṇ)"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT57CF1679CD22A9B6 .
+}

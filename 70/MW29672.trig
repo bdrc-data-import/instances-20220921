@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29672 {
+    bda:LGD55B44BE42FFDB70
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29672  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW29672 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "70/MW29672.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29672 ;
+        adm:logEntry        bda:LGD55B44BE42FFDB70 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4EC20107C4163EA5
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID0B3DD7E713A91BB2
+        a                   bdr:HollisId ;
+        rdf:value           "014260079" .
+    
+    bdr:MW29672  a          :Instance ;
+        skos:altLabel       "a collected advises of the past masters"@en ;
+        skos:prefLabel      "rje btsun dam pa rnams kyi zhal gdams phyogs bsgrigs su bkod pa dad pa'i dwangs shel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0B3DD7E713A91BB2 ;
+        :hasTitle           bdr:TT7F6AEC68A1A3402B , bdr:TTD8D76AEAE54A6CD1 ;
+        :instanceEvent      bdr:EV4EC20107C4163EA5 ;
+        :instanceHasReproduction  bdr:W29672 ;
+        :instanceOf         bdr:WA29672 ;
+        :isRoot             true ;
+        :note               bdr:NTBA9690D5D375816C ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bylakuppe], karnataka"@en ;
+        :publisherName      "ngagyur nyingma institute"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 154 p" .
+    
+    bdr:NTBA9690D5D375816C
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n5559"@en .
+    
+    bdr:TT7F6AEC68A1A3402B
+        a                   :Title ;
+        rdfs:label          "rje btsun dam pa rnams kyi zhal gdams phyogs bsgrigs su bkod pa dad pa'i dwangs shel/"@bo-x-ewts .
+    
+    bdr:TTD8D76AEAE54A6CD1
+        a                   :Subtitle ;
+        rdfs:label          "a collected advises of the past masters"@en .
+}

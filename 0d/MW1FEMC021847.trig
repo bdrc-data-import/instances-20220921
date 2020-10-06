@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021847 {
+    bda:LG9EF10ACD2D33E992
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021847"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021847"@en , "imported pubinfo for W1FEMC021847"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021847
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021847 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "0d/MW1FEMC021847.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021847 ;
+        adm:logEntry        bda:LG9EF10ACD2D33E992 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC021847
+        a                   :Instance ;
+        skos:prefLabel      "ចន្ទគោរព"@km , "cand gorab"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT0226368204C9FD8C , bdr:TT260BFD7B097A75BC , bdr:TT2D051D3A154EEC16 , bdr:TT5EEFDB585A5AA070 , bdr:TTB24C1DAA9ACC4758 , bdr:TTB6F423E9B6B145DC ;
+        :instanceHasReproduction  bdr:W1FEMC021847 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTFEAF0F32A9325129 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.629.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NTFEAF0F32A9325129
+        a                   :Note ;
+        :contentLocationStatement  "pg. 331" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0226368204C9FD8C
+        a                   :CoverTitle ;
+        rdfs:label          "មុជលិន្ទ"@km ;
+        :femcConversionOf   bdr:TT5EEFDB585A5AA070 .
+    
+    bdr:TT260BFD7B097A75BC
+        a                   :Title ;
+        rdfs:label          "cand gorab"@km-x-kmfemc .
+    
+    bdr:TT2D051D3A154EEC16
+        a                   :CoverTitle ;
+        rdfs:label          "mujalind"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTB6F423E9B6B145DC .
+    
+    bdr:TT5EEFDB585A5AA070
+        a                   :CoverTitle ;
+        rdfs:label          "ម៉ុច្ចលិន"@km-x-kmpre20c .
+    
+    bdr:TTB24C1DAA9ACC4758
+        a                   :Title ;
+        rdfs:label          "ចន្ទគោរព"@km .
+    
+    bdr:TTB6F423E9B6B145DC
+        a                   :CoverTitle ;
+        rdfs:label          "m\"uccalin"@km-x-kmpre20c-kmfemc .
+}

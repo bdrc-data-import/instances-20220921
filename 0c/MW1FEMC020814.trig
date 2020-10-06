@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020814 {
+    bda:LGCA3BCFEA8739004E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020814"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020814"@en , "imported pubinfo for W1FEMC020814"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020814
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020814 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0c/MW1FEMC020814.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020814 ;
+        adm:logEntry        bda:LGCA3BCFEA8739004E , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020814
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ពាក្យចាស់"@km , "cpāp' bāky cās'"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT24626EA34360A043 , bdr:TT6D3CF3C0428D8771 , bdr:TT9C8FA11173578FDB , bdr:TTD8501F6FD29935D9 ;
+        :instanceHasReproduction  bdr:W1FEMC020814 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT38FFBDB884DE87DC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.485.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
+    
+    bdr:NT38FFBDB884DE87DC
+        a                   :Note ;
+        :contentLocationStatement  "pg. 145" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT24626EA34360A043
+        a                   :CoverTitle ;
+        rdfs:label          "ពាកចា្ស"@km-x-kmpre20c .
+    
+    bdr:TT6D3CF3C0428D8771
+        a                   :CoverTitle ;
+        rdfs:label          "bāk cās°"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT9C8FA11173578FDB
+        a                   :Title ;
+        rdfs:label          "cpāp' bāky cās'"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT6D3CF3C0428D8771 .
+    
+    bdr:TTD8501F6FD29935D9
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ពាក្យចាស់"@km ;
+        :femcConversionOf   bdr:TT24626EA34360A043 .
+}

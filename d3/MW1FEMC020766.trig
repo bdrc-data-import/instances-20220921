@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020766 {
+    bda:LG9C40CAF788F55098
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020766"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020766"@en , "imported pubinfo for W1FEMC020766"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020766
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020766 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d3/MW1FEMC020766.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020766 ;
+        adm:logEntry        bda:LG9C40CAF788F55098 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020766
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km , "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "13" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT5B145098651F60E0 , bdr:TT5FC02D9C4B434B15 , bdr:TT912559044BA0250B , bdr:TTC16724C30CD7F72E ;
+        :instanceHasReproduction  bdr:W1FEMC020766 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT31DE6EE3DB7AA1C6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.437.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NT31DE6EE3DB7AA1C6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 138" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT5B145098651F60E0
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal dīpanī aṭṭhakathā maṅgal sūtr"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT5FC02D9C4B434B15
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលទីបនីអដ្ឋកថាមង្គលសូត្រ"@km-x-kmpre20c .
+    
+    bdr:TT912559044BA0250B
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
+        :femcConversionOf   bdr:TT5FC02D9C4B434B15 .
+    
+    bdr:TTC16724C30CD7F72E
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT5B145098651F60E0 .
+}

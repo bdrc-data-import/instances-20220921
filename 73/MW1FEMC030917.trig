@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC030917 {
+    bda:LG4983582527D39900
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-09-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC030917"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC030917"@en , "imported pubinfo for W1FEMC030917"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC030917
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC030917 ;
+        adm:contentProvider  bda:CP048 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "73/MW1FEMC030917.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC030917 ;
+        adm:logEntry        bda:LG4983582527D39900 , bda:LGIM61B7CB85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC030917
+        a                   :Instance ;
+        skos:prefLabel      "នេះគឺច្បាប់ក្រម"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT45566FE7DBEBB132 ;
+        :instanceHasReproduction  bdr:W1FEMC030917 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT692E6429DE896A9E , bdr:NTB4D7A0E0232331F3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "0912-B.01.06.01.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
+    
+    bdr:NT692E6429DE896A9E
+        a                   :Note ;
+        :noteText           "នេះគឺច្បាប់ក្រម > នេះគឺក្រមច្បាប់"@en .
+    
+    bdr:NTB4D7A0E0232331F3
+        a                   :Note ;
+        :contentLocationStatement  "pg. 28" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT45566FE7DBEBB132
+        a                   :Title ;
+        rdfs:label          "នេះគឺច្បាប់ក្រម"@km .
+}

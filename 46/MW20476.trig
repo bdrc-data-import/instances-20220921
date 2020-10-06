@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20476 {
+    bda:LG34B865D8887F2C92
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-09-02T02:47:08.829Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted inProduct PR1COPYRIGHT"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LG93F8EC96B1059052
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20476  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW20476 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "46/MW20476.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20476 ;
+        adm:logEntry        bda:LG34B865D8887F2C92 , bda:LG93F8EC96B1059052 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60BD1188FD68D93F
+        a                   :PublishedEvent ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:IDBE1C16026BFA36A8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542004379" .
+    
+    bdr:IDD162AAFEAB480274
+        a                   bdr:HollisId ;
+        rdf:value           "014258175" .
+    
+    bdr:MW20476  a          :Instance ;
+        skos:prefLabel      "chab shog yid 'phrog dri za'i zlos gar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBE1C16026BFA36A8 , bdr:IDD162AAFEAB480274 ;
+        :authorshipStatement  "rje 'jigs med dam chos rgya mtshos brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TTB62C8388612B067E ;
+        :instanceEvent      bdr:EV60BD1188FD68D93F ;
+        :instanceHasItem    bdr:ITW20476_001 ;
+        :instanceHasReproduction  bdr:W20476 ;
+        :instanceOf         bdr:WA20476 ;
+        :isRoot             true ;
+        :note               bdr:NT67E7478E9A4FAD2F ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 263 p." .
+    
+    bdr:NT67E7478E9A4FAD2F
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4863"@en .
+    
+    bdr:TTB62C8388612B067E
+        a                   :Title ;
+        rdfs:label          "chab shog yid 'phrog dri za'i zlos gar/"@bo-x-ewts .
+}

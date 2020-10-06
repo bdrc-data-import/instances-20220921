@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16582 {
+    bda:LG766B5ADB99EE9742
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-02-03T11:46:46.392Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW1KG16582  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1KG16582 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ac/MW1KG16582.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16582 ;
+        adm:logEntry        bda:LG766B5ADB99EE9742 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR4561C5620B04ADB4
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV48164F9F300692A2
+        a                   :PublishedEvent ;
+        :onYear             "2009"^^xsd:gYear .
+    
+    bdr:IDB17F781B9407960D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542116277" .
+    
+    bdr:MW1KG16582  a       :Instance ;
+        skos:altLabel       "《果惹擦宗》《少帅扎拉次吉》《森达海螺宗》《扎拉铠甲宗》《阿达拉姆秘传》"@zh-hans ;
+        skos:prefLabel      "mtsho sngon zhing chen gyi ge sar sgrung ba grags can gyi dpe tshogs/ go ra tshwa rdzong / lha sras dgra lha rtse rgyal/ seng stag dung dkar stag rjong / dgra lha'i khrab rjong / a stag lha mo'i gsang rnam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB17F781B9407960D ;
+        :authorshipStatement  "gcod pa don grub kyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR4561C5620B04ADB4 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT797DC4AF812B9660 , bdr:TTBEC06008F434CEF4 , bdr:TTFB6700463C61107D ;
+        :instanceEvent      bdr:EV48164F9F300692A2 ;
+        :instanceOf         bdr:WA1KG16582 ;
+        :isRoot             true ;
+        :note               bdr:NTB459D7843B792A7D ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5 v." .
+    
+    bdr:NTB459D7843B792A7D
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT797DC4AF812B9660
+        a                   :Title ;
+        rdfs:label          "mtsho sngon zhing chen gyi ge sar sgrung ba grags can gyi dpe tshogs/ go ra tshwa rdzong / lha sras dgra lha rtse rgyal/ seng stag dung dkar stag rjong / dgra lha'i khrab rjong / a stag lha mo'i gsang rnam/"@bo-x-ewts .
+    
+    bdr:TTBEC06008F434CEF4
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "《果惹擦宗》《少帅扎拉次吉》《森达海螺宗》《扎拉铠甲宗》《阿达拉姆秘传》"@zh-hans .
+    
+    bdr:TTFB6700463C61107D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "《guo re ca zong》《shao shuai zha la ci ji》《sen da hai luo zong》《zha la kai jia zong》《a da la mi chuan》"@zh-latn-pinyin-x-ndia .
+}

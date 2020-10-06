@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022069 {
+    bda:LG9D5D4C4ECDF96C5D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022069"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022069"@en , "imported pubinfo for W1FEMC022069"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022069
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022069 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5d/MW1FEMC022069.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022069 ;
+        adm:logEntry        bda:LG9D5D4C4ECDF96C5D , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFAB6CE871A7D729E7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "7" ;
+        :microfilmStrip     "27" .
+    
+    bdr:MW1FEMC022069
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT003BE71DAE0BC318 , bdr:TT3390A12DEE200DAD , bdr:TT473D5F58ABCC2A44 , bdr:TT9C13A5F7DAC07650 , bdr:TTB4F14C165E553F32 , bdr:TTE06249EBAF0A904B ;
+        :instanceHasReproduction  bdr:W1FEMC022069 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAB6CE871A7D729E7 ;
+        :note               bdr:NT943FED5B3769C962 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "018.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT943FED5B3769C962
+        a                   :Note ;
+        :contentLocationStatement  "pg. 366" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT003BE71DAE0BC318
+        a                   :CoverTitle ;
+        rdfs:label          "កស្សបចោទទៅព្រះអនុរុទ្ធត្ថេរម្ដង"@km ;
+        :femcConversionOf   bdr:TT3390A12DEE200DAD .
+    
+    bdr:TT3390A12DEE200DAD
+        a                   :CoverTitle ;
+        rdfs:label          "កាសព្វចោតទៅព្រះអនុរុត្តថែម្ដង"@km-x-kmpre20c .
+    
+    bdr:TT473D5F58ABCC2A44
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-kmfemc .
+    
+    bdr:TT9C13A5F7DAC07650
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
+    
+    bdr:TTB4F14C165E553F32
+        a                   :CoverTitle ;
+        rdfs:label          "kāsabb cot dau braḥ anuruttathè mtaṅ"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTE06249EBAF0A904B
+        a                   :CoverTitle ;
+        rdfs:label          "kassap cod dau braḥ anuruddhatther mtaṅ"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTB4F14C165E553F32 .
+}

@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24006 {
+    bda:LG1C9DDB1F246F12CE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9B727EAB808081B8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T14:41:41.467Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24006  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW24006 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "83/MW24006.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24006 ;
+        adm:logEntry        bda:LG1C9DDB1F246F12CE , bda:LG9B727EAB808081B8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV598E30EB294BB044
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:ID88E95397CA582F37
+        a                   bdr:HollisId ;
+        rdf:value           "014259281" .
+    
+    bdr:IDB51F63B2BC990B1F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950.A877 J35 1982" .
+    
+    bdr:IDE1122780879FF082
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82902939" .
+    
+    bdr:MW24006  a          :Instance ;
+        skos:altLabel       "jo bo rje dpal ldan a ti sa'i rnam thar : a poetic biography of atisa dipankarasrijnana"@en-x-mixed ;
+        skos:prefLabel      "jo bo rje dpal ldan a ti sha'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID88E95397CA582F37 , bdr:IDB51F63B2BC990B1F , bdr:IDE1122780879FF082 ;
+        :authorshipStatement  "gtsang mkhan-chen 'jam-dbyans-dpal-ldan-rgya-mtsho/"@bo-x-ewts ;
+        :biblioNote         "reproduced from a rare bhutanese manuscript from the library of slob-dpon kun-legs"@en ;
+        :hasTitle           bdr:TT143C0247EA06E322 , bdr:TTD6C0A3E0EF0B3BEB , bdr:TTD75557DB6124F95D ;
+        :instanceEvent      bdr:EV598E30EB294BB044 ;
+        :instanceHasReproduction  bdr:W24006 ;
+        :instanceOf         bdr:WA24006 ;
+        :isRoot             true ;
+        :note               bdr:NTB69C63E5262EA21C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "tango monastic community"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "430 p." .
+    
+    bdr:NTB69C63E5262EA21C
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n3623"@en .
+    
+    bdr:TT143C0247EA06E322
+        a                   :Title ;
+        rdfs:label          "jo bo rje dpal ldan a ti sha'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TTD6C0A3E0EF0B3BEB
+        a                   :CoverTitle ;
+        rdfs:label          "the poetical biography atisa/"@bo-x-ewts .
+    
+    bdr:TTD75557DB6124F95D
+        a                   :TitlePageTitle ;
+        rdfs:label          "jo bo rje dpal ldan a ti sa'i rnam thar : a poetic biography of atisa dipankarasrijnana"@en-x-mixed .
+}

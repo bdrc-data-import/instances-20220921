@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010560 {
+    bda:LG59AFB22CFF1E1D3E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010560"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010560"@en , "imported pubinfo for W1FEMC010560"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010560
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010560 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "be/MW1FEMC010560.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010560 ;
+        adm:logEntry        bda:LG59AFB22CFF1E1D3E , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF5EC726D149580855
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "17" ;
+        :microfilmStrip     "72" .
+    
+    bdr:MW1FEMC010560
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "4" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT39DFCEE59C0EA6F9 , bdr:TT554ECBAD78B8C778 , bdr:TT556FFFC969D5BD04 , bdr:TT6D5A85C899D0F85E , bdr:TTC65579EF661C70AC , bdr:TTE7E3F4FC5629E920 ;
+        :instanceHasReproduction  bdr:W1FEMC010560 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5EC726D149580855 ;
+        :note               bdr:NT059EEA96FD2711C4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "060-A.02.10.01.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT059EEA96FD2711C4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 164" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT39DFCEE59C0EA6F9
+        a                   :CoverTitle ;
+        rdfs:label          "អព្ភិធម្ម"@km-x-kmpre20c .
+    
+    bdr:TT554ECBAD78B8C778
+        a                   :CoverTitle ;
+        rdfs:label          "abbhidhamm"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT556FFFC969D5BD04
+        a                   :CoverTitle ;
+        rdfs:label          "បុគ្គលបញ្ញត្តិ"@km ;
+        :femcConversionOf   bdr:TT39DFCEE59C0EA6F9 .
+    
+    bdr:TT6D5A85C899D0F85E
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-kmfemc .
+    
+    bdr:TTC65579EF661C70AC
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTE7E3F4FC5629E920
+        a                   :CoverTitle ;
+        rdfs:label          "puggal paññatti"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT554ECBAD78B8C778 .
+}

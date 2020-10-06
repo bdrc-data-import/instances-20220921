@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010361 {
+    bda:LGDEE2E44F276F3C20
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010361"@en ;
+        adm:logWho          bdu:U00091 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010361"@en , "imported pubinfo for W1FEMC010361"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010361
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010361 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "28/MW1FEMC010361.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010361 ;
+        adm:logEntry        bda:LGDEE2E44F276F3C20 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFEE7AA6F4E9B360A7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "16" ;
+        :microfilmStrip     "65" .
+    
+    bdr:MW1FEMC010361
+        a                   :Instance ;
+        skos:prefLabel      "អនត្តលក្ខណសូត្រ"@km , "anattalakkhaṇ sūtr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT197BF39BDE1ED337 , bdr:TT8C1DFFFE2F205426 , bdr:TTBA54ECC939E3656D , bdr:TTCCB8EC3B295772E1 ;
+        :instanceHasReproduction  bdr:W1FEMC010361 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEE7AA6F4E9B360A7 ;
+        :note               bdr:NTD23F122F5999BB37 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "086-PP.03.03.03.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NTD23F122F5999BB37
+        a                   :Note ;
+        :contentLocationStatement  "pg. 123" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT197BF39BDE1ED337
+        a                   :CoverTitle ;
+        rdfs:label          "អនត្តលក្ខណសុត្ត"@km-x-kmpre20c .
+    
+    bdr:TT8C1DFFFE2F205426
+        a                   :Title ;
+        rdfs:label          "anattalakkhaṇ sūtr"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTCCB8EC3B295772E1 .
+    
+    bdr:TTBA54ECC939E3656D
+        a                   :Title ;
+        rdfs:label          "អនត្តលក្ខណសូត្រ"@km ;
+        :femcConversionOf   bdr:TT197BF39BDE1ED337 .
+    
+    bdr:TTCCB8EC3B295772E1
+        a                   :CoverTitle ;
+        rdfs:label          "anattalakkha sutt"@km-x-kmpre20c-kmfemc .
+}

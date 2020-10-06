@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011323 {
+    bda:LG7EC7606059F4F2F0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011323"@en ;
+        adm:logWho          bdu:U00086 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC011323"@en , "imported pubinfo for W1FEMC011323"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011323
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC011323 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "88/MW1FEMC011323.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011323 ;
+        adm:logEntry        bda:LG7EC7606059F4F2F0 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF28E8D5B06F78CFAF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "54" ;
+        :microfilmStrip     "143" .
+    
+    bdr:MW1FEMC011323
+        a                   :Instance ;
+        skos:prefLabel      "មហាវេស្សន្ដរជាតក"@pi-khmr , "mahā vessantar jātak"@pi-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "5" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT202F5A356E415FF5 , bdr:TT224EC0F8F0A6EA71 , bdr:TT2C1D8EF212D5C68A , bdr:TT307E92A6DFCCBD35 , bdr:TT55F6C15A6FCD0D5B , bdr:TTF4807EA9AACBE16D ;
+        :instanceHasReproduction  bdr:W1FEMC011323 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF28E8D5B06F78CFAF ;
+        :note               bdr:NT4E2F4BA2104C96C4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "015-A.09.01.01.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT4E2F4BA2104C96C4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 310" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT202F5A356E415FF5
+        a                   :CoverTitle ;
+        rdfs:label          "jātak jūjak"@pi-x-kmfemc ;
+        :femcConversionOf   bdr:TT224EC0F8F0A6EA71 .
+    
+    bdr:TT224EC0F8F0A6EA71
+        a                   :CoverTitle ;
+        rdfs:label          "jūjuk"@pi-x-kmpre20c-kmfemc .
+    
+    bdr:TT2C1D8EF212D5C68A
+        a                   :CoverTitle ;
+        rdfs:label          "ជូជក"@pi-khmr ;
+        :femcConversionOf   bdr:TT55F6C15A6FCD0D5B .
+    
+    bdr:TT307E92A6DFCCBD35
+        a                   :Title ;
+        rdfs:label          "mahā vessantar jātak"@pi-x-kmfemc .
+    
+    bdr:TT55F6C15A6FCD0D5B
+        a                   :CoverTitle ;
+        rdfs:label          "ជូជុក"@pi-khmr-x-kmpre20c .
+    
+    bdr:TTF4807EA9AACBE16D
+        a                   :Title ;
+        rdfs:label          "មហាវេស្សន្ដរជាតក"@pi-khmr .
+}

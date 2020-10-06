@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020100 {
+    bda:LG868BA8CDCC704E9C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020100"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020100"@en , "imported pubinfo for W1FEMC020100"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020100
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020100 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7d/MW1FEMC020100.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020100 ;
+        adm:logEntry        bda:LG868BA8CDCC704E9C , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020100
+        a                   :Instance ;
+        skos:prefLabel      "តារារត្នរឿងរង្សី"@km , "tārāratn rīöṅ raṅsī"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "6, 7, 8" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT5B16E75D2F8343EF , bdr:TT98FFABF9E83AEFCF , bdr:TTE729E7FE34DAD4D1 , bdr:TTFFD260F079A7C82D ;
+        :instanceHasReproduction  bdr:W1FEMC020100 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT613186F521D36021 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "a.94.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 ;
+        :workKDPPOldId      "1619" .
+    
+    bdr:NT613186F521D36021
+        a                   :Note ;
+        :contentLocationStatement  "pg. 21" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT5B16E75D2F8343EF
+        a                   :CoverTitle ;
+        rdfs:label          "តរារត្នរឿងរង្សី"@km-x-kmpre20c .
+    
+    bdr:TT98FFABF9E83AEFCF
+        a                   :CoverTitle ;
+        rdfs:label          "tarāratn rīöṅ raṅsī"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTE729E7FE34DAD4D1
+        a                   :Title ;
+        rdfs:label          "tārāratn rīöṅ raṅsī"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT98FFABF9E83AEFCF .
+    
+    bdr:TTFFD260F079A7C82D
+        a                   :Title ;
+        rdfs:label          "តារារត្នរឿងរង្សី"@km ;
+        :femcConversionOf   bdr:TT5B16E75D2F8343EF .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010211 {
+    bda:LG685852E62CC5FD95
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010211"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010211"@en , "imported pubinfo for W1FEMC010211"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010211
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010211 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ce/MW1FEMC010211.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010211 ;
+        adm:logEntry        bda:LG685852E62CC5FD95 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFEDDC8AF460F704CB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "2" ;
+        :microfilmStrip     "7" .
+    
+    bdr:MW1FEMC010211
+        a                   :Instance ;
+        skos:prefLabel      "នេមិរាជជាតក"@km , "nemirāj jātak"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT5E9FC0139FC7D9F1 , bdr:TT7189E1DF34F33D0B , bdr:TT97413DE2AA4C5434 , bdr:TT9AF5210803FFA454 , bdr:TTA77B03B15C7F447A , bdr:TTEA24C7BC40D42160 ;
+        :instanceHasReproduction  bdr:W1FEMC010211 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEDDC8AF460F704CB ;
+        :note               bdr:NT72718C4145B9A8F9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "013-PP.02.06.02.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT72718C4145B9A8F9
+        a                   :Note ;
+        :contentLocationStatement  "pg. 95" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT5E9FC0139FC7D9F1
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT7189E1DF34F33D0B
+        a                   :CoverTitle ;
+        rdfs:label          "និម្ងរាជ"@km-x-kmpre20c .
+    
+    bdr:TT97413DE2AA4C5434
+        a                   :Title ;
+        rdfs:label          "នេមិរាជជាតក"@km ;
+        :femcConversionOf   bdr:TT7189E1DF34F33D0B .
+    
+    bdr:TT9AF5210803FFA454
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTA77B03B15C7F447A
+        a                   :CoverTitle ;
+        rdfs:label          "nimaṅ° rāj"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTEA24C7BC40D42160
+        a                   :Title ;
+        rdfs:label          "nemirāj jātak"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTA77B03B15C7F447A .
+}

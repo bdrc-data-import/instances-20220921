@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21658 {
+    bda:LG1BAB0477DEE1E309
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21658  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW21658 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f4/MW21658.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21658 ;
+        adm:logEntry        bda:LG1BAB0477DEE1E309 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV50FDD3595621EEB2
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID6F6D100E930DDCAD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105034785" .
+    
+    bdr:ID95FE15E5D4978FCB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949066" .
+    
+    bdr:IDD4E8447EEEB9D091
+        a                   bdr:HollisId ;
+        rdf:value           "014258377" .
+    
+    bdr:IDE5E98558814156FD
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .T48 1999" .
+    
+    bdr:MW21658  a          :Instance ;
+        skos:altLabel       "zang yi ren ti jie gou lun"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gso bya lus kyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6F6D100E930DDCAD , bdr:ID95FE15E5D4978FCB , bdr:IDD4E8447EEEB9D091 , bdr:IDE5E98558814156FD ;
+        :authorshipStatement  "thub bstan phun tshogs kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TT8734A1BD27FB1625 , bdr:TTDD052F191029C494 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV50FDD3595621EEB2 ;
+        :instanceHasReproduction  bdr:W21658 ;
+        :instanceOf         bdr:WA21658 ;
+        :isRoot             true ;
+        :note               bdr:NTCC6D4830B8DE9D00 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 203 p." .
+    
+    bdr:NTCC6D4830B8DE9D00
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4795"@en .
+    
+    bdr:TT8734A1BD27FB1625
+        a                   :ColophonTitle ;
+        rdfs:label          "zang yi ren ti jie gou lun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTDD052F191029C494
+        a                   :Title ;
+        rdfs:label          "gso bya lus kyi rnam bshad/"@bo-x-ewts .
+}

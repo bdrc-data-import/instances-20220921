@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031997 {
+    bda:LGA7F1B7BA58A6C157
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC031997"@en .
+    
+    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031997"@en , "imported pubinfo for W1FEMC031997"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031997
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031997 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fb/MW1FEMC031997.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031997 ;
+        adm:logEntry        bda:LGA7F1B7BA58A6C157 , bda:LGIM6A01C8B4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031997
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះធម្ម៌វឹងសុំង"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasTitle           bdr:TT0B8C22FDF30AD9B1 ;
+        :instanceHasReproduction  bdr:W1FEMC031997 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT7220ACD13875068F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "136-B.01.03.03.V.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_V_1 .
+    
+    bdr:NT7220ACD13875068F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0B8C22FDF30AD9B1
+        a                   :Title ;
+        rdfs:label          "ព្រះធម្ម៌វឹងសុំង"@km .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021247 {
+    bda:LG487EC1A3BA2559C1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021247"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021247"@en , "imported pubinfo for W1FEMC021247"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021247
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021247 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "58/MW1FEMC021247.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021247 ;
+        adm:logEntry        bda:LG487EC1A3BA2559C1 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF70880CBE04D3BD7F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXV" ;
+        :microfilmStrip     "50" .
+    
+    bdr:MW1FEMC021247
+        a                   :Instance ;
+        skos:prefLabel      "ចតុក្កនិបាតជាតក"@km , "catukkanipāta jātaka"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1-6" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT0CAE47E9EAA2A129 , bdr:TT14B1EE307067C73E , bdr:TT19F16DBBC79FB4D3 , bdr:TTDDE1A77DAE4A82F8 ;
+        :instanceHasReproduction  bdr:W1FEMC021247 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF70880CBE04D3BD7F ;
+        :note               bdr:NT035751B0C3EB5801 , bdr:NT4D7D61B2241F75BA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "D.65.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT035751B0C3EB5801
+        a                   :Note ;
+        :noteText           "[colophon : devatāpaṇhājātaka] what does it mean?"@en .
+    
+    bdr:NT4D7D61B2241F75BA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 228" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0CAE47E9EAA2A129
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុក្កនិបាត"@km-x-kmpre20c .
+    
+    bdr:TT14B1EE307067C73E
+        a                   :Title ;
+        rdfs:label          "catukkanipāta jātaka"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT19F16DBBC79FB4D3 .
+    
+    bdr:TT19F16DBBC79FB4D3
+        a                   :CoverTitle ;
+        rdfs:label          "catukkanipāta"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTDDE1A77DAE4A82F8
+        a                   :Title ;
+        rdfs:label          "ចតុក្កនិបាតជាតក"@km ;
+        :femcConversionOf   bdr:TT0CAE47E9EAA2A129 .
+}

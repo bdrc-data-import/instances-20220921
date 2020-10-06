@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021945 {
+    bda:LGAA97020CBFB245D7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021945"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021945"@en , "imported pubinfo for W1FEMC021945"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021945
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021945 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "04/MW1FEMC021945.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021945 ;
+        adm:logEntry        bda:LGAA97020CBFB245D7 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC021945
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧​គ​ម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "5" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT7AC631A8F3811893 , bdr:TTB9477E58D9AC568B ;
+        :instanceHasReproduction  bdr:W1FEMC021945 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT6DA9FB499EF6995A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.727.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT6DA9FB499EF6995A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 346" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT7AC631A8F3811893
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-kmfemc .
+    
+    bdr:TTB9477E58D9AC568B
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧​គ​ម្ពីរ"@km .
+}

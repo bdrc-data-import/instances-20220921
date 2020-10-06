@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023157 {
+    bda:LG56020490E6BE442E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023157"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC023157"@en , "imported pubinfo for W1FEMC023157"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023157
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC023157 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8e/MW1FEMC023157.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023157 ;
+        adm:logEntry        bda:LG56020490E6BE442E , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC023157
+        a                   :Instance ;
+        skos:prefLabel      "នមស្សការព្រះពុទ្ធបញ្ញធិក សទ្ធាធិក វីរិយាធិក"@km , "namassakār braḥ buddhapaññadhika saddhādhika vīriyādhika"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasInstanceNum     "3" ;
+        :hasTitle           bdr:TT2F43C82F33CFFD61 , bdr:TTC11E179F1C749C92 ;
+        :instanceHasReproduction  bdr:W1FEMC023157 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :note               bdr:NTD3CC2E8C2C307393 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.956.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NTD3CC2E8C2C307393
+        a                   :Note ;
+        :contentLocationStatement  "pg. 557" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2F43C82F33CFFD61
+        a                   :Title ;
+        rdfs:label          "namassakār braḥ buddhapaññadhika saddhādhika vīriyādhika"@km-x-kmfemc .
+    
+    bdr:TTC11E179F1C749C92
+        a                   :Title ;
+        rdfs:label          "នមស្សការព្រះពុទ្ធបញ្ញធិក សទ្ធាធិក វីរិយាធិក"@km .
+}

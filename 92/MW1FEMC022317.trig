@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022317 {
+    bda:LG6FBD9F99E9249AA1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022317"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022317"@en , "imported pubinfo for W1FEMC022317"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022317
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022317 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "92/MW1FEMC022317.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022317 ;
+        adm:logEntry        bda:LG6FBD9F99E9249AA1 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC022317
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1-7" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT78D742D0AA1F847F , bdr:TTBF9B0994B35241D8 , bdr:TTCFD83BA311697719 , bdr:TTF330EA26CCC04342 ;
+        :instanceHasReproduction  bdr:W1FEMC022317 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE003E8BFD411F83A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "c.21.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 ;
+        :workKDPPOldId      "526" .
+    
+    bdr:NTE003E8BFD411F83A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 414" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT78D742D0AA1F847F
+        a                   :CoverTitle ;
+        rdfs:label          "sattapakaraṇābhidhamm"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTBF9B0994B35241D8
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km ;
+        :femcConversionOf   bdr:TTF330EA26CCC04342 .
+    
+    bdr:TTCFD83BA311697719
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT78D742D0AA1F847F .
+    
+    bdr:TTF330EA26CCC04342
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តបករណាភិធម្ម"@km-x-kmpre20c .
+}

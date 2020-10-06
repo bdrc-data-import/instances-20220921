@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031037 {
+    bda:LG53A883BA67EC1036
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-09-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031037"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031037"@en , "imported pubinfo for W1FEMC031037"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031037
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031037 ;
+        adm:contentProvider  bda:CP048 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "55/MW1FEMC031037.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031037 ;
+        adm:logEntry        bda:LG53A883BA67EC1036 , bda:LGIM61B7CB85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031037
+        a                   :Instance ;
+        skos:prefLabel      "គុណព្រះនិព្វានធម្មទាំង7យ៉ាង"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT11897DF7F32E1308 ;
+        :instanceHasReproduction  bdr:W1FEMC031037 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT8D60D7B9FB04553C , bdr:NTA81DF2CDDCE3827C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "1026-B.01.06.01.I.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_3 .
+    
+    bdr:NT8D60D7B9FB04553C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 30" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:NTA81DF2CDDCE3827C
+        a                   :Note ;
+        :noteText           "7យ៉ាង > ៧យ៉ាង"@en .
+    
+    bdr:TT11897DF7F32E1308
+        a                   :Title ;
+        rdfs:label          "គុណព្រះនិព្វានធម្មទាំង7យ៉ាង"@km .
+}

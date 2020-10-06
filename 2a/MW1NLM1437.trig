@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1437 {
+    bda:LG6C1D8F75E731CAE2
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1437"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1437  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1437 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2a/MW1NLM1437.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1437 ;
+        adm:logEntry        bda:LG6C1D8F75E731CAE2 , bda:LGIM15986367 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1437  a       :Instance ;
+        skos:prefLabel      "bla ma mchod pa'i khrid yig dngos grub kyi char 'bebs sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 賴泯菱"@en ;
+        :dimensionsStatement  "26x6" ;
+        :hasTitle           bdr:TT283A3ABD0D411EE8 ;
+        :instanceHasReproduction  bdr:W1NLM1437 ;
+        :instanceOf         bdr:WA1NLM1437 ;
+        :isRoot             true ;
+        :note               bdr:NT14F655B29BA434DE , bdr:NT475891D784D53B27 , bdr:NT5E3FCAC22A0943F7 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "44 ff., 2 ff., 1 ff., 7 ff., 3 ff., 3 ff., 6 ff., 8 end folio missing, 4 ff., 3 ff., 5 ff., 4 ff., 2-12 ff., 14 ff., 3 ff., 5 ff.end folio missing, 9 ff." .
+    
+    bdr:NT14F655B29BA434DE
+        a                   :Note ;
+        :noteText           "missingPages: M0059355-008 [Final pages are missing 9A] Image 149 M0059355-014 [Page 14 was double numbered] Image 230-233 M0059355-016 [Final pages are missing 6A] Image 250"@en .
+    
+    bdr:NT475891D784D53B27
+        a                   :Note ;
+        :noteText           "nlmId: M0059355"@en .
+    
+    bdr:NT5E3FCAC22A0943F7
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:TT283A3ABD0D411EE8
+        a                   :Title ;
+        rdfs:label          "bla ma mchod pa'i khrid yig dngos grub kyi char 'bebs sogs/"@bo-x-ewts .
+}

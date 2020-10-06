@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031888 {
+    bda:LGF69879D7B0EECAC1
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC031888"@en .
+    
+    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031888"@en , "imported pubinfo for W1FEMC031888"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031888
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031888 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c2/MW1FEMC031888.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031888 ;
+        adm:logEntry        bda:LGF69879D7B0EECAC1 , bda:LGIM6A01C8B4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031888
+        a                   :Instance ;
+        skos:prefLabel      "ជុច (១-៥)"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasTitle           bdr:TTA169431D2C6D2D0F ;
+        :instanceHasReproduction  bdr:W1FEMC031888 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTD7C43C5BFC110110 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "027-B.01.03.03.II.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_2 .
+    
+    bdr:NTD7C43C5BFC110110
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA169431D2C6D2D0F
+        a                   :Title ;
+        rdfs:label          "ជុច (១-៥)"@km .
+}

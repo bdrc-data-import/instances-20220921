@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022733 {
+    bda:LG96EC1841B3A9AA45
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022733"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022733"@en , "imported pubinfo for W1FEMC022733"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022733
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022733 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e1/MW1FEMC022733.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022733 ;
+        adm:logEntry        bda:LG96EC1841B3A9AA45 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF0BFAC3A49E0A3F83
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XLVI" ;
+        :microfilmStrip     "71" .
+    
+    bdr:MW1FEMC022733
+        a                   :Instance ;
+        skos:prefLabel      "នេមិរាជជាតក"@km , "nemirāja jātaka"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT7868546AF7B7183D , bdr:TT956B6FBD2DDD2F9A , bdr:TTDD5627FC8207A55A , bdr:TTEC0E9D1BE47C25F6 ;
+        :instanceHasReproduction  bdr:W1FEMC022733 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0BFAC3A49E0A3F83 ;
+        :note               bdr:NTFACC19D9595B87B0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "A.209.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII ;
+        :workKDPPOldId      "70" .
+    
+    bdr:NTFACC19D9595B87B0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 489" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT7868546AF7B7183D
+        a                   :Title ;
+        rdfs:label          "នេមិរាជជាតក"@km ;
+        :femcConversionOf   bdr:TTEC0E9D1BE47C25F6 .
+    
+    bdr:TT956B6FBD2DDD2F9A
+        a                   :CoverTitle ;
+        rdfs:label          "nimirāja jātakaṃ"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTDD5627FC8207A55A
+        a                   :Title ;
+        rdfs:label          "nemirāja jātaka"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT956B6FBD2DDD2F9A .
+    
+    bdr:TTEC0E9D1BE47C25F6
+        a                   :CoverTitle ;
+        rdfs:label          "និមិរាជជាតកំ"@km-x-kmpre20c .
+}

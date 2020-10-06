@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020923 {
+    bda:LG3E8743EDD5F1F7B6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020923"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020923"@en , "imported pubinfo for W1FEMC020923"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020923
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020923 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "eb/MW1FEMC020923.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020923 ;
+        adm:logEntry        bda:LG3E8743EDD5F1F7B6 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF7464DC5C5B719259
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "I" ;
+        :microfilmStrip     "1" .
+    
+    bdr:MW1FEMC020923
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km , "maṅgalatthadīpanī aṭṭhakathāmaṅgalasūtra"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2, 5, 6, 7, 9, 10, 14, 23, 27, 29" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT08A95B8DE535F379 , bdr:TT3B1CEB2585636A6B , bdr:TT6A6A51F6AC289F65 , bdr:TTEB96D5864611D5EB ;
+        :instanceHasReproduction  bdr:W1FEMC020923 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7464DC5C5B719259 ;
+        :note               bdr:NTD97D5A9F470F1833 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "A.2.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII ;
+        :workKDPPOldId      "459" .
+    
+    bdr:NTD97D5A9F470F1833
+        a                   :Note ;
+        :contentLocationStatement  "pg. 161" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT08A95B8DE535F379
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
+        :femcConversionOf   bdr:TT3B1CEB2585636A6B .
+    
+    bdr:TT3B1CEB2585636A6B
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលត្ថទិបនីអដ្ឋកថាមង្គលសូត្រ"@km-x-kmpre20c .
+    
+    bdr:TT6A6A51F6AC289F65
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgalatthadipanī aṭṭhakathāmaṅgalasūtra"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTEB96D5864611D5EB
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathāmaṅgalasūtra"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT6A6A51F6AC289F65 .
+}

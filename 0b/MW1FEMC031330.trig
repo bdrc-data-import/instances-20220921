@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031330 {
+    bda:LGC17B1B4FB326BE9C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC031330"@en .
+    
+    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031330"@en , "imported pubinfo for W1FEMC031330"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031330
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031330 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0b/MW1FEMC031330.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031330 ;
+        adm:logEntry        bda:LGC17B1B4FB326BE9C , bda:LGIM6A01C8B4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031330
+        a                   :Instance ;
+        skos:prefLabel      "săṅkh silp jăy"@km-x-unspec , "ស័ង្ខសិល្ប៏ជ័យ"@km-x-unspec ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "7" ;
+        :hasTitle           bdr:TT5C86D92019744CD3 , bdr:TT84B4F60699DAEB6F , bdr:TTE015913ADE146431 , bdr:TTFA17BDD580AB4A47 ;
+        :instanceHasReproduction  bdr:W1FEMC031330 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT87CED4516DA14179 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "024-PP.02.01.01.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NT87CED4516DA14179
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5C86D92019744CD3
+        a                   :Title ;
+        rdfs:label          "săṅkh silp jăy"@km-x-unspec ;
+        :femcConversionOf   bdr:TTFA17BDD580AB4A47 .
+    
+    bdr:TT84B4F60699DAEB6F
+        a                   :Title ;
+        rdfs:label          "ស័ង្ខសិល្ប៏ជ័យ"@km-x-unspec ;
+        :femcConversionOf   bdr:TTE015913ADE146431 .
+    
+    bdr:TTE015913ADE146431
+        a                   :CoverTitle ;
+        rdfs:label          "ស្ងំសិលជៃ្យ"@km-x-unspec .
+    
+    bdr:TTFA17BDD580AB4A47
+        a                   :CoverTitle ;
+        rdfs:label          "saṃṅ° sil jaiy°"@km-x-unspec .
+}

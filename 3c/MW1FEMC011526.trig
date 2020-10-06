@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011526 {
+    bda:LG9537EA3E82B67EB1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011526"@en ;
+        adm:logWho          bdu:U00091 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC011526"@en , "imported pubinfo for W1FEMC011526"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011526
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC011526 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3c/MW1FEMC011526.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011526 ;
+        adm:logEntry        bda:LG9537EA3E82B67EB1 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF690F0D0CBAEF35D3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "52" ;
+        :microfilmStrip     "135" .
+    
+    bdr:MW1FEMC011526
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "5" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT327F43CF023ECA20 , bdr:TT3A1C5DA65305FD8B , bdr:TT73BEB5A605FC2688 , bdr:TT85BE869925AE091A , bdr:TTA68AA3E77CFA30EA , bdr:TTD248356A66E5E5B4 ;
+        :instanceHasReproduction  bdr:W1FEMC011526 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF690F0D0CBAEF35D3 ;
+        :note               bdr:NT5EDA21F584A4C256 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "010-A.10.09.02.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT5EDA21F584A4C256
+        a                   :Note ;
+        :contentLocationStatement  "pg. 349" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT327F43CF023ECA20
+        a                   :CoverTitle ;
+        rdfs:label          "kaththā vatthu"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT3A1C5DA65305FD8B
+        a                   :CoverTitle ;
+        rdfs:label          "kathāvatthu"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT327F43CF023ECA20 .
+    
+    bdr:TT73BEB5A605FC2688
+        a                   :CoverTitle ;
+        rdfs:label          "កថាវត្ថុ"@km ;
+        :femcConversionOf   bdr:TTA68AA3E77CFA30EA .
+    
+    bdr:TT85BE869925AE091A
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTA68AA3E77CFA30EA
+        a                   :CoverTitle ;
+        rdfs:label          "កថ្ថាវត្ថុ"@km-x-kmpre20c .
+    
+    bdr:TTD248356A66E5E5B4
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-kmfemc .
+}

@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC030101 {
+    bda:LG0981DF6734DA3AE3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-09-07"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC030101"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC030101"@en , "imported pubinfo for W1FEMC030101"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC030101
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC030101 ;
+        adm:contentProvider  bda:CP048 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "32/MW1FEMC030101.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC030101 ;
+        adm:logEntry        bda:LG0981DF6734DA3AE3 , bda:LGIM61B7CB85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC030101
+        a                   :Instance ;
+        skos:prefLabel      "ចោទឆ្លើយគម្ពីរព្រះសូត្របិដក"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1ខ្សែចប់" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TTB17559A627C1D3CE ;
+        :instanceHasReproduction  bdr:W1FEMC030101 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT3EFE6CEFF5198E2D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "0101-B.01.06.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT3EFE6CEFF5198E2D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 8" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TTB17559A627C1D3CE
+        a                   :Title ;
+        rdfs:label          "ចោទឆ្លើយគម្ពីរព្រះសូត្របិដក"@km .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020298 {
+    bda:LGF032C07CEDFAD439
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020298"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020298"@en , "imported pubinfo for W1FEMC020298"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020298
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020298 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "32/MW1FEMC020298.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020298 ;
+        adm:logEntry        bda:LGF032C07CEDFAD439 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFBA09E8BC1BA1B3D1
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "63" ;
+        :microfilmStrip     "157" .
+    
+    bdr:MW1FEMC020298
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣ពិស្តារ"@km , "saṅgāyanā grè 3 bistār"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT131DBE8D5A36E70F , bdr:TT57ABADA477F7F9BE , bdr:TT9F39838D419DF2DB , bdr:TTA6FB5677B743E5F5 , bdr:TTD9A4A809D4F0DF51 , bdr:TTFC5DA294E0F54923 ;
+        :instanceHasReproduction  bdr:W1FEMC020298 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBA09E8BC1BA1B3D1 ;
+        :note               bdr:NTBB9482ED6DA8FC47 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "b.191.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTBB9482ED6DA8FC47
+        a                   :Note ;
+        :contentLocationStatement  "pg. 59" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT131DBE8D5A36E70F
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័យ បុច្ឆាវិសុជនា"@km-x-kmpre20c .
+    
+    bdr:TT57ABADA477F7F9BE
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3 bistār"@km-x-kmfemc .
+    
+    bdr:TT9F39838D419DF2DB
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣ពិស្តារ"@km .
+    
+    bdr:TTA6FB5677B743E5F5
+        a                   :CoverTitle ;
+        rdfs:label          "vinăy pucchā vissajjsanā"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTD9A4A809D4F0DF51 .
+    
+    bdr:TTD9A4A809D4F0DF51
+        a                   :CoverTitle ;
+        rdfs:label          "vinăy pucchā visujanā"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTFC5DA294E0F54923
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័យបុច្ឆាវិស្សជ្ជនា"@km ;
+        :femcConversionOf   bdr:TT131DBE8D5A36E70F .
+}

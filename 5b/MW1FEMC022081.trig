@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022081 {
+    bda:LGC5A898A400D52FC4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022081"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022081"@en , "imported pubinfo for W1FEMC022081"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022081
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022081 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5b/MW1FEMC022081.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022081 ;
+        adm:logEntry        bda:LGC5A898A400D52FC4 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF3CDA38EF13703D40
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "7" ;
+        :microfilmStrip     "27" .
+    
+    bdr:MW1FEMC022081
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT4BBA5288D1FA014F , bdr:TT640EB4C9E891CD2C , bdr:TTAA3555D7978AC13C , bdr:TTAB31442C46B368CC , bdr:TTD124DAD3980F884E , bdr:TTFDFFCE4BD2160CBD ;
+        :instanceHasReproduction  bdr:W1FEMC022081 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF3CDA38EF13703D40 ;
+        :note               bdr:NT3F25E55C70FC1072 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "030.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT3F25E55C70FC1072
+        a                   :Note ;
+        :contentLocationStatement  "pg. 368" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4BBA5288D1FA014F
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-kmfemc .
+    
+    bdr:TT640EB4C9E891CD2C
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មចោទសួរ"@km ;
+        :femcConversionOf   bdr:TTAB31442C46B368CC .
+    
+    bdr:TTAA3555D7978AC13C
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTAB31442C46B368CC
+        a                   :CoverTitle ;
+        rdfs:label          "អព្ភិធម្មចោតសួរ"@km-x-kmpre20c .
+    
+    bdr:TTD124DAD3980F884E
+        a                   :CoverTitle ;
+        rdfs:label          "abbhidhamm cot suor"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTFDFFCE4BD2160CBD
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm cod suor"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTD124DAD3980F884E .
+}

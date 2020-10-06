@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1434 {
+    bda:LG2077DBF1BF8F10F3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1434"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1434  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1434 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "79/MW1NLM1434.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1434 ;
+        adm:logEntry        bda:LG2077DBF1BF8F10F3 , bda:LGIM15986367 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1434  a       :Instance ;
+        skos:prefLabel      "lcags mkhar zur bcu drug pa'i ngag 'don sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 王郁綺"@en ;
+        :dimensionsStatement  "17x7" ;
+        :hasTitle           bdr:TT2120390F24401A02 ;
+        :instanceHasReproduction  bdr:W1NLM1434 ;
+        :instanceOf         bdr:WA1NLM1434 ;
+        :isRoot             true ;
+        :note               bdr:NT0D02ADC603B2AC2E , bdr:NT653B3E1599156D70 , bdr:NT67250B3F77E112F3 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "24 ff. end folio missing, 12 ff., 5 ff., 4 ff., 2 ff., 3 ff., 10 ff., 3 ff., 18 ff., 16 ff., 3 ff., 5 ff., 8 ff., 20 ff., 2-37 ff., 3 ff., 3 ff., 2 ff., 3 ff., 5 ff., 2-8 ff., 4 ff., 13 ff., 4 ff., 29 ff. end folio missing, 2 ff." .
+    
+    bdr:NT0D02ADC603B2AC2E
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT653B3E1599156D70
+        a                   :Note ;
+        :noteText           "nlmId: M0059352"@en .
+    
+    bdr:NT67250B3F77E112F3
+        a                   :Note ;
+        :noteText           "missingPages: M0059352-001 [Final pages are missing 25A] Image 49, The end of M0059352-013 and begining of M0059352-014 are in the same page 194-195, M0059352-017 [Page 18 was double numbered ] Image 260-263, M0059352-026 [Missing page from 1A-1B] Image 374-375, M0059352-030 [Final pages are missing 30A] Image 490"@en .
+    
+    bdr:TT2120390F24401A02
+        a                   :Title ;
+        rdfs:label          "lcags mkhar zur bcu drug pa'i ngag 'don sogs/"@bo-x-ewts .
+}

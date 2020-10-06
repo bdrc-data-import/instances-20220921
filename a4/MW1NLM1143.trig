@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1143 {
+    bda:LG6ED8A74BE0F6C433
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-20T14:23:45.653Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBFAA4D81FF961F61
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1143"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1143  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1143 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a4/MW1NLM1143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1143 ;
+        adm:logEntry        bda:LG6ED8A74BE0F6C433 , bda:LGBFAA4D81FF961F61 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1143  a       :Instance ;
+        skos:prefLabel      "lha mo gtad dkar 'gro bzang ma'i sgrub chog dang 'brel ba'i dus mchod bya tshul phyugs g.yang 'gugs byed don yod lcags kyu sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 余修賢"@en ;
+        :dimensionsStatement  "38.5x6" ;
+        :hasTitle           bdr:TTDAF5613BED828BAF ;
+        :instanceHasReproduction  bdr:W1NLM1143 ;
+        :instanceOf         bdr:WA1NLM1143 ;
+        :isRoot             true ;
+        :note               bdr:NT1E26B828B7B55625 , bdr:NT54F86C9119374AB0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "12 ff., 13 ff., 6 ff., 3 ff., 4 ff., 3 ff., 4 ff., 13 ff., 6 ff., 23 ff., 9 ff., 5 ff., 21 ff., 10 ff., 3 ff., 11 ff., 11 ff., 8 ff., 6 ff., 14 ff., 9 ff., 1 ff., 3 ff., 5 ff., 4 ff., 2 ff." .
+    
+    bdr:NT1E26B828B7B55625
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT54F86C9119374AB0
+        a                   :Note ;
+        :noteText           "nlmId: M0059056"@en .
+    
+    bdr:TTDAF5613BED828BAF
+        a                   :Title ;
+        rdfs:label          "lha mo gtad dkar 'gro bzang ma'i sgrub chog dang 'brel ba'i dus mchod bya tshul phyugs g.yang 'gugs byed don yod lcags kyu sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010957 {
+    bda:LG1A4E7BBBAA85C3E6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010957"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010957"@en , "imported pubinfo for W1FEMC010957"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010957
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010957 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "79/MW1FEMC010957.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010957 ;
+        adm:logEntry        bda:LG1A4E7BBBAA85C3E6 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF25F4D567E4A9BB98
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "24" ;
+        :microfilmStrip     "26" .
+    
+    bdr:MW1FEMC010957
+        a                   :Instance ;
+        skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT295665D172060BA6 , bdr:TT45ECEE721B9EC189 , bdr:TT67226E504E891B6D , bdr:TT70092C62A13F7208 , bdr:TT73D32CE6F8B099F0 , bdr:TTAB72509F764D3535 ;
+        :instanceHasReproduction  bdr:W1FEMC010957 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF25F4D567E4A9BB98 ;
+        :note               bdr:NTA8EB780CF57170F0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "125-A.04.03.02.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTA8EB780CF57170F0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 240" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT295665D172060BA6
+        a                   :CoverTitle ;
+        rdfs:label          "caturārīyasec"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT45ECEE721B9EC189
+        a                   :CoverTitle ;
+        rdfs:label          "caturāriyasacc"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT295665D172060BA6 .
+    
+    bdr:TT67226E504E891B6D
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុរារីយសេច"@km-x-kmpre20c .
+    
+    bdr:TT70092C62A13F7208
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុរារិយសច្ច"@km ;
+        :femcConversionOf   bdr:TT67226E504E891B6D .
+    
+    bdr:TT73D32CE6F8B099F0
+        a                   :Title ;
+        rdfs:label          "អរិយសច្ច"@km .
+    
+    bdr:TTAB72509F764D3535
+        a                   :Title ;
+        rdfs:label          "ariy sacc"@km-x-kmfemc .
+}

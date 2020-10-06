@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020985 {
+    bda:LG1ACBB23BA1D54CE3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020985"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020985"@en , "imported pubinfo for W1FEMC020985"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020985
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020985 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "89/MW1FEMC020985.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020985 ;
+        adm:logEntry        bda:LG1ACBB23BA1D54CE3 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFFDF59EADC13A3CEF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "II" ;
+        :microfilmStrip     "9" .
+    
+    bdr:MW1FEMC020985
+        a                   :Instance ;
+        skos:prefLabel      "ទីឃនិកាយព្រហ្មជាលសុត្ត,​ អភិធម្មមាតិកា, សហស្សនយ"@km , "dīghanikāyabrahmajālasutta, abhidhammamātikā, sahassanaya"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT1BE8D1B78AF738CD , bdr:TT20FFE573D310DA3C , bdr:TT3FE701D8B7EACB51 , bdr:TT47EE3A95017C1BC5 ;
+        :instanceHasReproduction  bdr:W1FEMC020985 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFDF59EADC13A3CEF ;
+        :note               bdr:NTE018C2424C60EE71 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "A.60.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NTE018C2424C60EE71
+        a                   :Note ;
+        :contentLocationStatement  "pg. 174" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1BE8D1B78AF738CD
+        a                   :Title ;
+        rdfs:label          "dīghanikāyabrahmajālasutta, abhidhammamātikā, sahassanaya"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT3FE701D8B7EACB51 .
+    
+    bdr:TT20FFE573D310DA3C
+        a                   :Title ;
+        rdfs:label          "ទីឃនិកាយព្រហ្មជាលសុត្ត,​ អភិធម្មមាតិកា, សហស្សនយ"@km ;
+        :femcConversionOf   bdr:TT47EE3A95017C1BC5 .
+    
+    bdr:TT3FE701D8B7EACB51
+        a                   :CoverTitle ;
+        rdfs:label          "dīghanikāyabrahmajālasutta, abhidhammamātikāsahassaneyya"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT47EE3A95017C1BC5
+        a                   :CoverTitle ;
+        rdfs:label          "ទីឃនិកាយព្រហ្មជាលសុត្ត, អភិធម្មមាតិកាសហស្សនេយ្យ"@km-x-kmpre20c .
+}

@@ -1,0 +1,57 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1950 {
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1950"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1950  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1950 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "8c/MW1NLM1950.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1950 ;
+        adm:logEntry        bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1950  a       :Instance ;
+        skos:prefLabel      "bla ma mchog gsum spyi'i mchod chog yid bzhin dbang rgyal sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en ;
+        :dimensionsStatement  "31x5.5" ;
+        :hasTitle           bdr:TT7252FE2C816A3CB2 ;
+        :instanceHasReproduction  bdr:W1NLM1950 ;
+        :instanceOf         bdr:WA1NLM1950 ;
+        :isRoot             true ;
+        :note               bdr:NT3342626C5721A147 , bdr:NT4D6466869DEC2F6C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "24 ff., 11 ff., 2 ff., 5 ff., 5 ff., 9 ff., 2-26 ff., 15 ff., 7 ff., 4 ff., 7 ff., 8 ff." .
+    
+    bdr:NT3342626C5721A147
+        a                   :Note ;
+        :noteText           "nlmId: M0059868"@en .
+    
+    bdr:NT4D6466869DEC2F6C
+        a                   :Note ;
+        :noteText           "missingPages: M0059868-002 [4, 5th pages printed on the same page] Image 55, 56 M0059868-006 [Missing page from 4A-4B] Image 89, 90"@en .
+    
+    bdr:TT7252FE2C816A3CB2
+        a                   :Title ;
+        rdfs:label          "bla ma mchog gsum spyi'i mchod chog yid bzhin dbang rgyal sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020296 {
+    bda:LGCC85AF7AFB36A30A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020296"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020296"@en , "imported pubinfo for W1FEMC020296"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020296
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020296 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "98/MW1FEMC020296.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020296 ;
+        adm:logEntry        bda:LGCC85AF7AFB36A30A , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFD0EA08796A28132F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "63" ;
+        :microfilmStrip     "157" .
+    
+    bdr:MW1FEMC020296
+        a                   :Instance ;
+        skos:prefLabel      "សុវណ្ណសាមជាតក"@km , "suvaṇṇ sām jātak"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT27E6A2B3D1C409AE , bdr:TT5E666F999429A459 , bdr:TT60BC99D44A4A8D6E , bdr:TT6788494E2A273CE3 , bdr:TT8B8028EAA71A10C1 , bdr:TTD7AD3CE7FD5A8B7E ;
+        :instanceHasReproduction  bdr:W1FEMC020296 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD0EA08796A28132F ;
+        :note               bdr:NTF72B887B972A59EC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "b.189.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NTF72B887B972A59EC
+        a                   :Note ;
+        :contentLocationStatement  "pg. 59" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT27E6A2B3D1C409AE
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ sām jātak"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTD7AD3CE7FD5A8B7E .
+    
+    bdr:TT5E666F999429A459
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT60BC99D44A4A8D6E
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណសាមជាតក"@km ;
+        :femcConversionOf   bdr:TT6788494E2A273CE3 .
+    
+    bdr:TT6788494E2A273CE3
+        a                   :CoverTitle ;
+        rdfs:label          "សុពា៌សិយាម"@km-x-kmpre20c .
+    
+    bdr:TT8B8028EAA71A10C1
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTD7AD3CE7FD5A8B7E
+        a                   :CoverTitle ;
+        rdfs:label          "subāṛ siyām"@km-x-kmpre20c-kmfemc .
+}

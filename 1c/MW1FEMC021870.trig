@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021870 {
+    bda:LG5BACB93743456A85
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021870"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021870"@en , "imported pubinfo for W1FEMC021870"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021870
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021870 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1c/MW1FEMC021870.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021870 ;
+        adm:logEntry        bda:LG5BACB93743456A85 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC021870
+        a                   :Instance ;
+        skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TTA7AE31BC8B6DE5A4 , bdr:TTBAA9963DABAE9ACA , bdr:TTD2B4F669A5D761BD , bdr:TTE39111CE0367FAB6 ;
+        :instanceHasReproduction  bdr:W1FEMC021870 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT8ECAED61FCCD9FA8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.652.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT8ECAED61FCCD9FA8
+        a                   :Note ;
+        :contentLocationStatement  "pg. 334" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TTA7AE31BC8B6DE5A4
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមិលិន្ទបញ្ហា"@km-x-kmpre20c .
+    
+    bdr:TTBAA9963DABAE9ACA
+        a                   :Title ;
+        rdfs:label          "មិលិន្ទប្បញ្ហា"@km ;
+        :femcConversionOf   bdr:TTA7AE31BC8B6DE5A4 .
+    
+    bdr:TTD2B4F669A5D761BD
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTE39111CE0367FAB6 .
+    
+    bdr:TTE39111CE0367FAB6
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ milind pañhā"@km-x-kmpre20c-kmfemc .
+}

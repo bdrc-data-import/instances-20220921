@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1423 {
+    bda:LG6BDD152D0908AC44
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG9709083F6EDD6AF6
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-19T09:58:41.215Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1423"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1423  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1423 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f6/MW1NLM1423.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1423 ;
+        adm:logEntry        bda:LG6BDD152D0908AC44 , bda:LG9709083F6EDD6AF6 , bda:LGIM15986367 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1423  a       :Instance ;
+        skos:prefLabel      "gsol 'debs ngag gi dbang phyug ma'i 'grel pa bla ma'i rang bzhin gsal ba'i me long sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 盧戰、盧陳纏(父母共一本)"@en ;
+        :dimensionsStatement  "53x7" ;
+        :hasTitle           bdr:TTBFD24120B114745A ;
+        :instanceHasReproduction  bdr:W1NLM1423 ;
+        :instanceOf         bdr:WA1NLM1243 ;
+        :isRoot             true ;
+        :note               bdr:NT82125D8C5EF28187 , bdr:NTE1AE484D7D15342F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "33 ff., 7 ff., 16 ff., 9 ff., 13 ff., 6 ff." .
+    
+    bdr:NT82125D8C5EF28187
+        a                   :Note ;
+        :noteText           "nlmId: M0059341"@en .
+    
+    bdr:NTE1AE484D7D15342F
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:TTBFD24120B114745A
+        a                   :Title ;
+        rdfs:label          "gsol 'debs ngag gi dbang phyug ma'i 'grel pa bla ma'i rang bzhin gsal ba'i me long sogs/"@bo-x-ewts .
+}

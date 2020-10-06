@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020443 {
+    bda:LG5F1EDDE958FC743D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020443"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020443"@en , "imported pubinfo for W1FEMC020443"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020443
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020443 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5c/MW1FEMC020443.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020443 ;
+        adm:logEntry        bda:LG5F1EDDE958FC743D , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF412B0413D1AF3BB6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "68" ;
+        :microfilmStrip     "162" .
+    
+    bdr:MW1FEMC020443
+        a                   :Instance ;
+        skos:prefLabel      "សុរព្ភ"@km , "surabbh"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "4" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT030D3FB4B356368F , bdr:TT21CA0AD17825C3FC , bdr:TT50439BA0D3614BE6 , bdr:TT6D38617A88C162A6 , bdr:TTA775B6B0C2328277 , bdr:TTE7A406CAF3107B37 ;
+        :instanceHasReproduction  bdr:W1FEMC020443 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF412B0413D1AF3BB6 ;
+        :note               bdr:NTA03ACFBD3DA5DEAA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.76.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 ;
+        :workKDPPOldId      "1596" .
+    
+    bdr:NTA03ACFBD3DA5DEAA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 86" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT030D3FB4B356368F
+        a                   :CoverTitle ;
+        rdfs:label          "សុរព្ភនិទាន"@km ;
+        :femcConversionOf   bdr:TTA775B6B0C2328277 .
+    
+    bdr:TT21CA0AD17825C3FC
+        a                   :Title ;
+        rdfs:label          "surabbh"@km-x-kmfemc .
+    
+    bdr:TT50439BA0D3614BE6
+        a                   :CoverTitle ;
+        rdfs:label          "surabbh nidān"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT6D38617A88C162A6 .
+    
+    bdr:TT6D38617A88C162A6
+        a                   :CoverTitle ;
+        rdfs:label          "sorubbh nīdān"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTA775B6B0C2328277
+        a                   :CoverTitle ;
+        rdfs:label          "សោរុព្ភនីទាន"@km-x-kmpre20c .
+    
+    bdr:TTE7A406CAF3107B37
+        a                   :Title ;
+        rdfs:label          "សុរព្ភ"@km .
+}

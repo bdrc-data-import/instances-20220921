@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020768 {
+    bda:LGB956FCBCEB2D4B0C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020768"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020768"@en , "imported pubinfo for W1FEMC020768"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020768
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020768 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d2/MW1FEMC020768.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020768 ;
+        adm:logEntry        bda:LGB956FCBCEB2D4B0C , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020768
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "3, 10" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT538A4E66B4AE20C8 , bdr:TTC627422AA3E6D6CD , bdr:TTD3064383910997F9 , bdr:TTE74148E8BA2AE87E ;
+        :instanceHasReproduction  bdr:W1FEMC020768 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT82146032CB583780 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.439.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT82146032CB583780
+        a                   :Note ;
+        :contentLocationStatement  "pg. 139" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT538A4E66B4AE20C8
+        a                   :CoverTitle ;
+        rdfs:label          "ថំម្មសំពោធ្ធិ"@km-x-kmpre20c .
+    
+    bdr:TTC627422AA3E6D6CD
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@km ;
+        :femcConversionOf   bdr:TT538A4E66B4AE20C8 .
+    
+    bdr:TTD3064383910997F9
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTE74148E8BA2AE87E .
+    
+    bdr:TTE74148E8BA2AE87E
+        a                   :CoverTitle ;
+        rdfs:label          "thaṃmm saṃbodhdhi"@km-x-kmpre20c-kmfemc .
+}

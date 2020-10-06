@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010759 {
+    bda:LG0ABF82C7A71E5DF3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010759"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010759"@en , "imported pubinfo for W1FEMC010759"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010759
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010759 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "76/MW1FEMC010759.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010759 ;
+        adm:logEntry        bda:LG0ABF82C7A71E5DF3 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFC74AFD7A3BA2947F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "49" ;
+        :microfilmStrip     "123" .
+    
+    bdr:MW1FEMC010759
+        a                   :Instance ;
+        skos:prefLabel      "មហោសថ"@km , "mahosath"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "6, 13" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT19C3D31BA12FDFA4 , bdr:TT2BE96B7FE4E28E5C , bdr:TT334B520EDEB48C45 , bdr:TT69836EC749127F34 , bdr:TT8841692526E2B314 , bdr:TT8C9E8681AB742B0E ;
+        :instanceHasReproduction  bdr:W1FEMC010759 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC74AFD7A3BA2947F ;
+        :note               bdr:NT6E2C499D92986D15 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "030-A.03.08.01.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT6E2C499D92986D15
+        a                   :Note ;
+        :contentLocationStatement  "pg. 203" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT19C3D31BA12FDFA4
+        a                   :Title ;
+        rdfs:label          "មហោសថ"@km ;
+        :femcConversionOf   bdr:TT334B520EDEB48C45 .
+    
+    bdr:TT2BE96B7FE4E28E5C
+        a                   :CoverTitle ;
+        rdfs:label          "mahosut"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT334B520EDEB48C45
+        a                   :CoverTitle ;
+        rdfs:label          "មហោសុត"@km-x-kmpre20c .
+    
+    bdr:TT69836EC749127F34
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT8841692526E2B314
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT8C9E8681AB742B0E
+        a                   :Title ;
+        rdfs:label          "mahosath"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT2BE96B7FE4E28E5C .
+}

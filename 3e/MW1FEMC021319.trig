@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021319 {
+    bda:LGD634CB524AA357B1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021319"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021319"@en , "imported pubinfo for W1FEMC021319"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021319
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021319 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3e/MW1FEMC021319.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021319 ;
+        adm:logEntry        bda:LGD634CB524AA357B1 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFFF60509F5B73A8BD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXVIII" ;
+        :microfilmStrip     "53" .
+    
+    bdr:MW1FEMC021319
+        a                   :Instance ;
+        skos:prefLabel      "សារត្ថ​ទីបនីដីកាចតុត្ថសមន្តបាសាទិកា"@km , "sāratthadīpanī ṭikācatutthasamantapāsādikā"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "3" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT391A54806432B821 , bdr:TT892E7525082EE158 , bdr:TTD5A0F6DA19B8046C , bdr:TTFB745492A758FC7C ;
+        :instanceHasReproduction  bdr:W1FEMC021319 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFF60509F5B73A8BD ;
+        :note               bdr:NT9DD1DD8EF7B92A9A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "D.133.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII ;
+        :workKDPPOldId      "1589" .
+    
+    bdr:NT9DD1DD8EF7B92A9A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 242" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT391A54806432B821
+        a                   :Title ;
+        rdfs:label          "sāratthadīpanī ṭikācatutthasamantapāsādikā"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT892E7525082EE158 .
+    
+    bdr:TT892E7525082EE158
+        a                   :CoverTitle ;
+        rdfs:label          "sāratthadipanī ṭikācatutthasāmantapāsādika"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTD5A0F6DA19B8046C
+        a                   :Title ;
+        rdfs:label          "សារត្ថ​ទីបនីដីកាចតុត្ថសមន្តបាសាទិកា"@km ;
+        :femcConversionOf   bdr:TTFB745492A758FC7C .
+    
+    bdr:TTFB745492A758FC7C
+        a                   :CoverTitle ;
+        rdfs:label          "សារត្ថទិ​បនីដីកាចតុត្ថសាមន្តបាសាទិក"@km-x-kmpre20c .
+}

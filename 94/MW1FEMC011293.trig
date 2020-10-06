@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011293 {
+    bda:LGA22CBEA1527BA8B7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011293"@en ;
+        adm:logWho          bdu:U00086 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC011293"@en , "imported pubinfo for W1FEMC011293"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011293
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC011293 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "94/MW1FEMC011293.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011293 ;
+        adm:logEntry        bda:LGA22CBEA1527BA8B7 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF544551DC98C0672D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "44" ;
+        :microfilmStrip     "104" .
+    
+    bdr:MW1FEMC011293
+        a                   :Instance ;
+        skos:prefLabel      "បឋមវិងស៊ុងសង្ខេមសេចក្តី"@km , "paṭham viṅ-suṅ saṅkhep sec-ktī"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT282756A01931FEAD , bdr:TT429C211CA21B18E6 , bdr:TT642C93ABEE3B626A , bdr:TT877A39A05C4E7A3B , bdr:TTA1701A8EF986FE47 , bdr:TTFD9E2DDDA61B61EE ;
+        :instanceHasReproduction  bdr:W1FEMC011293 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF544551DC98C0672D ;
+        :note               bdr:NT43F9AF884D7E25BF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "003-A.07.04.01.V.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_V_1 ;
+        :workKDPPOldId      "a 2622" .
+    
+    bdr:NT43F9AF884D7E25BF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 304" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT282756A01931FEAD
+        a                   :CoverTitle ;
+        rdfs:label          "ភទ្រកល្បវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TT877A39A05C4E7A3B .
+    
+    bdr:TT429C211CA21B18E6
+        a                   :CoverTitle ;
+        rdfs:label          "bhadrakalp viṅ-suṅ"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTA1701A8EF986FE47 .
+    
+    bdr:TT642C93ABEE3B626A
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុងសង្ខេមសេចក្តី"@km .
+    
+    bdr:TT877A39A05C4E7A3B
+        a                   :CoverTitle ;
+        rdfs:label          "ភក្រកាលវិងស៊ុង"@km-x-kmpre20c .
+    
+    bdr:TTA1701A8EF986FE47
+        a                   :CoverTitle ;
+        rdfs:label          "bhakrakāl viṅ suṅ"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTFD9E2DDDA61B61EE
+        a                   :Title ;
+        rdfs:label          "paṭham viṅ-suṅ saṅkhep sec-ktī"@km-x-kmfemc .
+}

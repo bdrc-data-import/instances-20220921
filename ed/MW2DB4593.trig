@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2DB4593 {
+    bda:LG0D97999A39E352DF
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-28T09:40:31.125Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGC3958CE07D5275DA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-11-28T09:29:42.219Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2DB4593  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW2DB4593 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ed/MW2DB4593.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2DB4593 ;
+        adm:logEntry        bda:LG0D97999A39E352DF , bda:LGC3958CE07D5275DA , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A5FCD2E0C9BD25F
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID5332A53960926A64
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006448385" .
+    
+    bdr:ID6DB2177849D68AD3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3716 .N34 2006" .
+    
+    bdr:ID8D98B8AEBFB4082D
+        a                   bdr:HollisId ;
+        rdf:value           "014260513" .
+    
+    bdr:IDB4293555323D0867
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105077913" .
+    
+    bdr:MW2DB4593  a        :Instance ;
+        skos:prefLabel      "nags klong khu byug 'du gnas/"@bo-x-ewts , "lin hai ju du juan"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5332A53960926A64 , bdr:ID6DB2177849D68AD3 , bdr:ID8D98B8AEBFB4082D , bdr:IDB4293555323D0867 ;
+        :authorshipStatement  "mtsho sngon bod yig gsar 'gyur khang gis bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TT050E92FF690F17F1 , bdr:TT14E12E8AA9206ED4 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV3A5FCD2E0C9BD25F ;
+        :instanceHasReproduction  bdr:W2DB4593 ;
+        :instanceOf         bdr:WA2DB4593 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "11, 13, 639 p." .
+    
+    bdr:TT050E92FF690F17F1
+        a                   :Title ;
+        rdfs:label          "nags klong khu byug 'du gnas/"@bo-x-ewts .
+    
+    bdr:TT14E12E8AA9206ED4
+        a                   :ColophonTitle ;
+        rdfs:label          "lin hai ju du juan"@zh-latn-pinyin-x-ndia .
+}

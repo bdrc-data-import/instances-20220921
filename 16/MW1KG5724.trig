@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5724 {
+    bda:LGD878017EC449E072
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-07-30T12:23:31.631Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5724  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1KG5724 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "16/MW1KG5724.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5724 ;
+        adm:logEntry        bda:LGD878017EC449E072 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV347DBC4154D59ADB
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID5FF22AF6820AD024
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800574857" .
+    
+    bdr:IDC880B7BCA06B38C4
+        a                   bdr:HollisId ;
+        rdf:value           "014257183" .
+    
+    bdr:IDED87E7AD41E5BF29
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .B637 2001" .
+    
+    bdr:IDFCAA28976CE323B4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2008306406" .
+    
+    bdr:MW1KG5724  a        :Instance ;
+        skos:prefLabel      "bod zhi bas bcings 'grol btang nas lo ngo lnga bcu 'khor bar dran gso zhu ba'i rtsom yig phyogs bsgrigs/"@bo-x-ewts , "he ping jie fang xi zang 50 zhou ji nian wen ji"@zh-latn-pinyin ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5FF22AF6820AD024 , bdr:IDC880B7BCA06B38C4 , bdr:IDED87E7AD41E5BF29 , bdr:IDFCAA28976CE323B4 ;
+        :authorshipStatement  "krung go'i bod rig pa zhib 'jug lte gnas kyis bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TT90B94A1AE10B17E9 , bdr:TT9F159EED0E3CDE67 ;
+        :illustrations      "ill. (some color)" ;
+        :instanceEvent      bdr:EV347DBC4154D59ADB ;
+        :instanceHasReproduction  bdr:IE1KG5724 , bdr:W1KG5724 ;
+        :instanceOf         bdr:WA1KG5724 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[pe cin]"@en ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 524 p." .
+    
+    bdr:TT90B94A1AE10B17E9
+        a                   :Title ;
+        rdfs:label          "bod zhi bas bcings 'grol btang nas lo ngo lnga bcu 'khor bar dran gso zhu ba'i rtsom yig phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT9F159EED0E3CDE67
+        a                   :ColophonTitle ;
+        rdfs:label          "he ping jie fang xi zang 50 zhou ji nian wen ji"@zh-latn-pinyin .
+}

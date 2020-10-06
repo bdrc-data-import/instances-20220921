@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010676 {
+    bda:LG5CE6B231614FA2C7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010676"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010676"@en , "imported pubinfo for W1FEMC010676"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010676
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010676 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "18/MW1FEMC010676.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010676 ;
+        adm:logEntry        bda:LG5CE6B231614FA2C7 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF749C493EB59F7092
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "49" ;
+        :microfilmStrip     "124" .
+    
+    bdr:MW1FEMC010676
+        a                   :Instance ;
+        skos:prefLabel      "ចន្ទកុមារ"@km , "cand kumār"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT2A5FA3229F8F6121 , bdr:TT32E1414885D0FF34 , bdr:TT6BF7F97B57796E7A , bdr:TT7226C3992FC52571 , bdr:TT74DC94BECF272D94 , bdr:TT8A470336887FE2B5 ;
+        :instanceHasReproduction  bdr:W1FEMC010676 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF749C493EB59F7092 ;
+        :note               bdr:NTFE2EE41E5BDA714A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "004-A.03.03.01.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NTFE2EE41E5BDA714A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 186" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT2A5FA3229F8F6121
+        a                   :Title ;
+        rdfs:label          "ចន្ទកុមារ"@km ;
+        :femcConversionOf   bdr:TT6BF7F97B57796E7A .
+    
+    bdr:TT32E1414885D0FF34
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT6BF7F97B57796E7A
+        a                   :CoverTitle ;
+        rdfs:label          "ចន្ទកូម្មា"@km-x-kmpre20c .
+    
+    bdr:TT7226C3992FC52571
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT74DC94BECF272D94
+        a                   :Title ;
+        rdfs:label          "cand kumār"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT8A470336887FE2B5 .
+    
+    bdr:TT8A470336887FE2B5
+        a                   :CoverTitle ;
+        rdfs:label          "cand kūmmā"@km-x-kmpre20c-kmfemc .
+}

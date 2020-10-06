@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022284 {
+    bda:LG51FF02C88EF6CDDE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022284"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022284"@en , "imported pubinfo for W1FEMC022284"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022284
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022284 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "92/MW1FEMC022284.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022284 ;
+        adm:logEntry        bda:LG51FF02C88EF6CDDE , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC022284
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ២"@km , "saṅgāyanā grè 2"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT22F92ABB3A185C05 , bdr:TT3767DEBC488434A5 , bdr:TT3805529222B26B9A , bdr:TT5F6A47FADE3A1A91 , bdr:TTB56E52A1B6898BA8 , bdr:TTF2216E4F7EEBEEF1 ;
+        :instanceHasReproduction  bdr:W1FEMC022284 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT9B1418B000FBFF2D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "b.362.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 ;
+        :workKDPPOldId      "1064" .
+    
+    bdr:NT9B1418B000FBFF2D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 408" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT22F92ABB3A185C05
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ២"@km .
+    
+    bdr:TT3767DEBC488434A5
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 2"@km-x-kmfemc .
+    
+    bdr:TT3805529222B26B9A
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅgh cody chlöy"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT5F6A47FADE3A1A91
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្ឃចោទ្យឆ្លើយ"@km-x-kmpre20c .
+    
+    bdr:TTB56E52A1B6898BA8
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs cod chlöy"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT3805529222B26B9A .
+    
+    bdr:TTF2216E4F7EEBEEF1
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សចោទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TT5F6A47FADE3A1A91 .
+}

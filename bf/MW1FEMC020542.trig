@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020542 {
+    bda:LGD94229BA83ECEAE4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020542"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020542"@en , "imported pubinfo for W1FEMC020542"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020542
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020542 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "bf/MW1FEMC020542.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020542 ;
+        adm:logEntry        bda:LGD94229BA83ECEAE4 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF6400F18F36E6526D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "61" ;
+        :microfilmStrip     "155" .
+    
+    bdr:MW1FEMC020542
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់កូនចៅធំ"@km , "cpāp kūn cau dhaṃ"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT08F24D5EF5F3B3F7 , bdr:TT12B9B63DF2AF3721 , bdr:TT313C018E0BD46CAD , bdr:TT864F07EEBAA67C7A , bdr:TTA9DF384A59EECBB6 , bdr:TTB65778242275A357 ;
+        :instanceHasReproduction  bdr:W1FEMC020542 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6400F18F36E6526D ;
+        :note               bdr:NTFF8596437D25C764 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d*.175.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
+    
+    bdr:NTFF8596437D25C764
+        a                   :Note ;
+        :contentLocationStatement  "pg. 105" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT08F24D5EF5F3B3F7
+        a                   :Title ;
+        rdfs:label          "cpāp kūn cau dhaṃ"@km-x-kmfemc .
+    
+    bdr:TT12B9B63DF2AF3721
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កូនចៅធំ"@km .
+    
+    bdr:TT313C018E0BD46CAD
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' paṇtāṃ Uvbuk"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTA9DF384A59EECBB6 .
+    
+    bdr:TT864F07EEBAA67C7A
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់បណ្ដាំឪពុក"@km ;
+        :femcConversionOf   bdr:TTB65778242275A357 .
+    
+    bdr:TTA9DF384A59EECBB6
+        a                   :CoverTitle ;
+        rdfs:label          "paṇtām Uvbuk"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTB65778242275A357
+        a                   :CoverTitle ;
+        rdfs:label          "បណ្ដាំឪពុក"@km-x-kmpre20c .
+}

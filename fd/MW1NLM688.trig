@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM688 {
+    bda:LG1E62BB68365CB77F
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-23T11:24:45.058Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC7501A07D51E9183
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-11T11:06:47.348Z"^^xsd:dateTime ;
+        adm:logMessage      "add doners name"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM688"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM688  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM688 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fd/MW1NLM688.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM688 ;
+        adm:logEntry        bda:LG1E62BB68365CB77F , bda:LGC7501A07D51E9183 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM688  a        :Instance ;
+        skos:prefLabel      "dbu ma la 'jug pa sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 梁瑞耘"@en ;
+        :dimensionsStatement  "13.5x4.5" ;
+        :hasTitle           bdr:TTCAACCE201ED116B4 ;
+        :instanceHasReproduction  bdr:W1NLM688 ;
+        :instanceOf         bdr:WA1NLM688 ;
+        :isRoot             true ;
+        :note               bdr:NT605AC53B33B1F907 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "94 ff., 54 ff." .
+    
+    bdr:NT605AC53B33B1F907
+        a                   :Note ;
+        :noteText           "nlmId: M0058601"@en .
+    
+    bdr:TTCAACCE201ED116B4
+        a                   :Title ;
+        rdfs:label          "dbu ma la 'jug pa sogs/"@bo-x-ewts .
+}

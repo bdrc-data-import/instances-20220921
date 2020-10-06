@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020512 {
+    bda:LG3EC4EFBA87A7D15D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020512"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020512"@en , "imported pubinfo for W1FEMC020512"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020512
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020512 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0d/MW1FEMC020512.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020512 ;
+        adm:logEntry        bda:LG3EC4EFBA87A7D15D , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFBC50BCB09E66F6C4
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "69" ;
+        :microfilmStrip     "163" .
+    
+    bdr:MW1FEMC020512
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្ស​កឋិនខន្ធ"@km , "ānisaṅs kaṭhin khandh"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT7E4C5CF0C4BF01B7 , bdr:TT83C771118D209674 , bdr:TT95CCAF281BFD9D0E , bdr:TTCC35396FDBF7D0B3 , bdr:TTD5E6A8CBCE4280D6 , bdr:TTDDE01E906D237469 ;
+        :instanceHasReproduction  bdr:W1FEMC020512 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBC50BCB09E66F6C4 ;
+        :note               bdr:NTA245897793AB70A9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.145.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NTA245897793AB70A9
+        a                   :Note ;
+        :contentLocationStatement  "pg. 99" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT7E4C5CF0C4BF01B7
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs jhmoḥ samantapāsādik kathā"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTD5E6A8CBCE4280D6 .
+    
+    bdr:TT83C771118D209674
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្ឃឈ្មោះសាមន្តបាសាទិគាថា"@km-x-kmpre20c .
+    
+    bdr:TT95CCAF281BFD9D0E
+        a                   :Title ;
+        rdfs:label          "ānisaṅs kaṭhin khandh"@km-x-kmfemc .
+    
+    bdr:TTCC35396FDBF7D0B3
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សឈ្មោះសមន្តបាសាទិកកថា"@km ;
+        :femcConversionOf   bdr:TT83C771118D209674 .
+    
+    bdr:TTD5E6A8CBCE4280D6
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs jhmoḥ sāmantapāsādi gāthā"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTDDE01E906D237469
+        a                   :Title ;
+        rdfs:label          "អានិសង្ស​កឋិនខន្ធ"@km .
+}

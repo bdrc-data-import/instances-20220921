@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010098 {
+    bda:LG924BA46675E7E885
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010098"@en ;
+        adm:logWho          bdu:U00086 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010098"@en , "imported pubinfo for W1FEMC010098"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010098
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010098 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "14/MW1FEMC010098.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010098 ;
+        adm:logEntry        bda:LG924BA46675E7E885 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF3F174D6493D6BF81
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "12" ;
+        :microfilmStrip     "46" .
+    
+    bdr:MW1FEMC010098
+        a                   :Instance ;
+        skos:prefLabel      "ភូរិទត្តជាតក"@km , "bhūridātt jātak"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "4" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT0D3F48BFFF0D58AF , bdr:TT8B0E4CD06BBB4CC7 , bdr:TT9B20DD0111E13967 , bdr:TTC5D904183C1C0194 , bdr:TTED5592EDC41F684A , bdr:TTFE07DB0F279BE483 ;
+        :instanceHasReproduction  bdr:W1FEMC010098 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF3F174D6493D6BF81 ;
+        :note               bdr:NT32CDE24C23D4635A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "056-PP.01.10.03.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT32CDE24C23D4635A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 73" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT0D3F48BFFF0D58AF
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT8B0E4CD06BBB4CC7
+        a                   :Title ;
+        rdfs:label          "ភូរិទត្តជាតក"@km ;
+        :femcConversionOf   bdr:TTC5D904183C1C0194 .
+    
+    bdr:TT9B20DD0111E13967
+        a                   :CoverTitle ;
+        rdfs:label          "bhūradātth"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTC5D904183C1C0194
+        a                   :CoverTitle ;
+        rdfs:label          "ភូរទាត្ថ"@km-x-kmpre20c .
+    
+    bdr:TTED5592EDC41F684A
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTFE07DB0F279BE483
+        a                   :Title ;
+        rdfs:label          "bhūridātt jātak"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT9B20DD0111E13967 .
+}

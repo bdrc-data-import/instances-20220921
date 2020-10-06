@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020045 {
+    bda:LG1ED0F77B00E6E987
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC020045"@en .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020045"@en , "imported pubinfo for W1FEMC020045"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020045
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020045 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "34/MW1FEMC020045.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020045 ;
+        adm:logEntry        bda:LG1ED0F77B00E6E987 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF09F862FB2B203152
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "20" ;
+        :microfilmStrip     "9" .
+    
+    bdr:MW1FEMC020045
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ហៃមហាជន"@km , "cpāp' hai mahā jan"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT1CF50BDBD325C89D , bdr:TT30BA2ED380364DB3 , bdr:TT6BB98B93EAC6EB27 , bdr:TTEA1BCCB431280733 ;
+        :instanceHasReproduction  bdr:W1FEMC020045 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF09F862FB2B203152 ;
+        :note               bdr:NT665A62BC7E053B91 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "a.41.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 ;
+        :workKDPPOldId      "1530" .
+    
+    bdr:NT665A62BC7E053B91
+        a                   :Note ;
+        :contentLocationStatement  "pg. 10" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1CF50BDBD325C89D
+        a                   :CoverTitle ;
+        rdfs:label          "mahā jan"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT30BA2ED380364DB3
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ហៃមហាជន"@km ;
+        :femcConversionOf   bdr:TTEA1BCCB431280733 .
+    
+    bdr:TT6BB98B93EAC6EB27
+        a                   :Title ;
+        rdfs:label          "cpāp' hai mahā jan"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT1CF50BDBD325C89D .
+    
+    bdr:TTEA1BCCB431280733
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជន"@km-x-kmpre20c .
+}

@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020851 {
+    bda:LGE20618CB4A222276
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-27"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020851"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020851"@en , "imported pubinfo for W1FEMC020851"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020851
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020851 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3a/MW1FEMC020851.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020851 ;
+        adm:logEntry        bda:LGE20618CB4A222276 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF4CBBB090BA57DDD6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "134" ;
+        :microfilmStrip     "228" .
+    
+    bdr:MW1FEMC020851
+        a                   :Instance ;
+        skos:prefLabel      "គាថាស្តោះប្រគ្រីវ, គាថាកំចាត់សត្រូវ, គាថាអ្នកតាធ្វើពុំត្រូវ, គាថាស្តេចសារិកា, ដង្ហើមរស់ដង្ហើមស្លាប់, នមោនមស្សការ​ (សូត្ររំលឹកគុណ)"@km , "gāthā stoḥ pragrīv, gāthā kaṃcāt' satrūv, gāthā anak tā dhvö buṃ trūv, gāthā stec sārikā, ṭaṅhöm ras' ṭaṅhöm slāp', namo namassakār (sūtr raṃlịk guṇ)"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasInstanceNum     "2" ;
+        :hasTitle           bdr:TTA2BE41EC2E3478D0 , bdr:TTADFD41610AA976DA ;
+        :instanceHasReproduction  bdr:W1FEMC020851 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF4CBBB090BA57DDD6 ;
+        :note               bdr:NT4E530B3FF90D19BB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.500.VI.6 (ក្រាំង)" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NT4E530B3FF90D19BB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 150" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TTA2BE41EC2E3478D0
+        a                   :Title ;
+        rdfs:label          "gāthā stoḥ pragrīv, gāthā kaṃcāt' satrūv, gāthā anak tā dhvö buṃ trūv, gāthā stec sārikā, ṭaṅhöm ras' ṭaṅhöm slāp', namo namassakār (sūtr raṃlịk guṇ)"@km-x-kmfemc .
+    
+    bdr:TTADFD41610AA976DA
+        a                   :Title ;
+        rdfs:label          "គាថាស្តោះប្រគ្រីវ, គាថាកំចាត់សត្រូវ, គាថាអ្នកតាធ្វើពុំត្រូវ, គាថាស្តេចសារិកា, ដង្ហើមរស់ដង្ហើមស្លាប់, នមោនមស្សការ​ (សូត្ររំលឹកគុណ)"@km .
+}

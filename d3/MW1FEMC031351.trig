@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031351 {
+    bda:LGD85889F4C60A2EF7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC031351"@en .
+    
+    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031351"@en , "imported pubinfo for W1FEMC031351"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031351
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031351 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d3/MW1FEMC031351.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031351 ;
+        adm:logEntry        bda:LGD85889F4C60A2EF7 , bda:LGIM6A01C8B4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031351
+        a                   :Instance ;
+        skos:prefLabel      "cpāp' abhidhamm kūn go"@km-x-unspec , "ច្បាប់អភិធម្មកូនគោ"@km-x-unspec ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT24BF60A419E20ED2 , bdr:TT7CD5DEA71ACB728A , bdr:TT80C40E8A3A548C92 , bdr:TTFA80CB2E31256649 ;
+        :instanceHasReproduction  bdr:W1FEMC031351 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTBD35A2766FE3006D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "045-PP.02.01.01.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
+    
+    bdr:NTBD35A2766FE3006D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT24BF60A419E20ED2
+        a                   :Title ;
+        rdfs:label          "cpāp' abhidhamm kūn go"@km-x-unspec ;
+        :femcConversionOf   bdr:TT7CD5DEA71ACB728A .
+    
+    bdr:TT7CD5DEA71ACB728A
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm kūn goṇ"@km-x-unspec .
+    
+    bdr:TT80C40E8A3A548C92
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មកូនគោណ៍"@km-x-unspec .
+    
+    bdr:TTFA80CB2E31256649
+        a                   :Title ;
+        rdfs:label          "ច្បាប់អភិធម្មកូនគោ"@km-x-unspec ;
+        :femcConversionOf   bdr:TT80C40E8A3A548C92 .
+}

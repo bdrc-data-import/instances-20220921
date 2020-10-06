@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC030800 {
+    bda:LG72571D930FBAC5EE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-09-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC030800"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC030800"@en , "imported pubinfo for W1FEMC030800"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC030800
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC030800 ;
+        adm:contentProvider  bda:CP048 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "32/MW1FEMC030800.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC030800 ;
+        adm:logEntry        bda:LG72571D930FBAC5EE , bda:LGIM61B7CB85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFD3AD28A749343BCB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "123" ;
+        :microfilmStrip     "217" .
+    
+    bdr:MW1FEMC030800
+        a                   :Instance ;
+        skos:prefLabel      "ទឹករាំផ្ការាំ"@km ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TTBAF5FF224057072C ;
+        :instanceHasReproduction  bdr:W1FEMC030800 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD3AD28A749343BCB ;
+        :note               bdr:NT2BA1B1DF0D939A08 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "0795-B.01.06.01.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NT2BA1B1DF0D939A08
+        a                   :Note ;
+        :contentLocationStatement  "pg. 26" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TTBAF5FF224057072C
+        a                   :Title ;
+        rdfs:label          "ទឹករាំផ្ការាំ"@km .
+}

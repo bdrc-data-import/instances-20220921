@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023270 {
+    bda:LG3C288D9227D93CEC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023270"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC023270"@en , "imported pubinfo for W1FEMC023270"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023270
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC023270 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3c/MW1FEMC023270.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023270 ;
+        adm:logEntry        bda:LG3C288D9227D93CEC , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC023270
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាមើលហេតុតាមថ្ងៃចូលឆ្នាំ"@km , "tamrā möl hetu tām thṅai cūl chnāṃ"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "2" ;
+        :hasTitle           bdr:TT267D64D0987503C6 , bdr:TT3C686FADB32EC04D ;
+        :instanceHasReproduction  bdr:W1FEMC023270 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT04C066B4C6B4D450 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.983.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NT04C066B4C6B4D450
+        a                   :Note ;
+        :contentLocationStatement  "pg. 568" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT267D64D0987503C6
+        a                   :Title ;
+        rdfs:label          "តម្រាមើលហេតុតាមថ្ងៃចូលឆ្នាំ"@km .
+    
+    bdr:TT3C686FADB32EC04D
+        a                   :Title ;
+        rdfs:label          "tamrā möl hetu tām thṅai cūl chnāṃ"@km-x-kmfemc .
+}

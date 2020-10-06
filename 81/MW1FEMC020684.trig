@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020684 {
+    bda:LGDFC90B526503D416
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020684"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020684"@en , "imported pubinfo for W1FEMC020684"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020684
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020684 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "81/MW1FEMC020684.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020684 ;
+        adm:logEntry        bda:LGDFC90B526503D416 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020684
+        a                   :Instance ;
+        skos:prefLabel      "បុច្ឆាវិស្សជ្ជនាព្រះវិន័យ"@km , "pucchā vissajjanā braḥ vinăy"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT0C92EA2BBA97798D , bdr:TT6B0ECA3F8FA9698B , bdr:TTA6CC9C926B82E3A4 , bdr:TTDF4557CA22E5F7D3 ;
+        :instanceHasReproduction  bdr:W1FEMC020684 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTF103631D9594FCC5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.317.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NTF103631D9594FCC5
+        a                   :Note ;
+        :contentLocationStatement  "pg. 126" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0C92EA2BBA97798D
+        a                   :CoverTitle ;
+        rdfs:label          "វិនយបុច្ឆាវិសុជនា"@km-x-kmpre20c .
+    
+    bdr:TT6B0ECA3F8FA9698B
+        a                   :Title ;
+        rdfs:label          "បុច្ឆាវិស្សជ្ជនាព្រះវិន័យ"@km ;
+        :femcConversionOf   bdr:TT0C92EA2BBA97798D .
+    
+    bdr:TTA6CC9C926B82E3A4
+        a                   :Title ;
+        rdfs:label          "pucchā vissajjanā braḥ vinăy"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTDF4557CA22E5F7D3 .
+    
+    bdr:TTDF4557CA22E5F7D3
+        a                   :CoverTitle ;
+        rdfs:label          "vinay pucchā visujanā"@km-x-kmpre20c-kmfemc .
+}

@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010885 {
+    bda:LG7DD9CB632E3C2F00
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010885"@en ;
+        adm:logWho          bdu:U00091 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010885"@en , "imported pubinfo for W1FEMC010885"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010885
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010885 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b6/MW1FEMC010885.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010885 ;
+        adm:logEntry        bda:LG7DD9CB632E3C2F00 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFE53D668A2B208082
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "25" ;
+        :microfilmStrip     "28" .
+    
+    bdr:MW1FEMC010885
+        a                   :Instance ;
+        skos:prefLabel      "សំវរវិន័យ (ដ-ដោ)"@km , "saṃvar vinăy"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT8782E408EB207557 , bdr:TT9E30028AE15096D0 ;
+        :instanceHasReproduction  bdr:W1FEMC010885 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE53D668A2B208082 ;
+        :note               bdr:NT67A51348E8F38F71 , bdr:NTF29F59A39740CE92 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "006-A.04.03.01.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NT67A51348E8F38F71
+        a                   :Note ;
+        :noteText           "Should we write (ដ-ដោ) ?"@en .
+    
+    bdr:NTF29F59A39740CE92
+        a                   :Note ;
+        :contentLocationStatement  "pg. 227" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT8782E408EB207557
+        a                   :Title ;
+        rdfs:label          "saṃvar vinăy"@km-x-kmfemc .
+    
+    bdr:TT9E30028AE15096D0
+        a                   :Title ;
+        rdfs:label          "សំវរវិន័យ (ដ-ដោ)"@km .
+}

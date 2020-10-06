@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23728 {
+    bda:LG380CCD5927268B4E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23728  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW23728 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b6/MW23728.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23728 ;
+        adm:logEntry        bda:LG380CCD5927268B4E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV92B0396BCB0C7CDD
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID02B061799A18B444
+        a                   bdr:HollisId ;
+        rdf:value           "014259071" .
+    
+    bdr:MW23728  a          :Instance ;
+        skos:prefLabel      "gsang ba sgyu 'phrul zhi khro gnyis kyi rtsa 'chams byung khungs lo rgyus rtsa tshig bcas go gsal du bkod pa bzhugs so/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID02B061799A18B444 ;
+        :biblioNote         "reproduced form a [sic] prints from a digital edition prepared by trulku kunga rinpoche"@en ;
+        :hasTitle           bdr:TT0C62ECC265A2B8B8 ;
+        :instanceEvent      bdr:EV92B0396BCB0C7CDD ;
+        :instanceHasReproduction  bdr:W23728 ;
+        :instanceOf         bdr:WA23728 ;
+        :isRoot             true ;
+        :note               bdr:NT74F6465B23BB2252 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "samdrup tshering"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "27 p." .
+    
+    bdr:NT74F6465B23BB2252
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n2528"@en .
+    
+    bdr:TT0C62ECC265A2B8B8
+        a                   :Title ;
+        rdfs:label          "gsang ba sgyu 'phrul zhi khro gnyis kyi rtsa 'chams byung khungs lo rgyus rtsa tshig bcas go gsal du bkod pa bzhugs so/"@bo-x-ewts .
+}

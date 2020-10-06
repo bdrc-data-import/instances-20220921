@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010780 {
+    bda:LGF965DF552F738153
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010780"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010780"@en , "imported pubinfo for W1FEMC010780"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010780
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010780 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d7/MW1FEMC010780.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010780 ;
+        adm:logEntry        bda:LGF965DF552F738153 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF622F1701F3A64959
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "51" ;
+        :microfilmStrip     "131" .
+    
+    bdr:MW1FEMC010780
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT28555666CBEFDEAD , bdr:TT75E565C9D75E330C , bdr:TT7CF0552EAF6A6A68 , bdr:TT7EFA314E40B1B2C3 , bdr:TT815709A3C5F6BD2C , bdr:TT870BE9C24880805D ;
+        :instanceHasReproduction  bdr:W1FEMC010780 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF622F1701F3A64959 ;
+        :note               bdr:NT9EF38F0B3A5572BD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "016-A.03.08.02.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT9EF38F0B3A5572BD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 207" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT28555666CBEFDEAD
+        a                   :CoverTitle ;
+        rdfs:label          "វិភង្គ"@km ;
+        :femcConversionOf   bdr:TT75E565C9D75E330C .
+    
+    bdr:TT75E565C9D75E330C
+        a                   :CoverTitle ;
+        rdfs:label          "វិភំង"@km-x-kmpre20c .
+    
+    bdr:TT7CF0552EAF6A6A68
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TT7EFA314E40B1B2C3
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-kmfemc .
+    
+    bdr:TT815709A3C5F6BD2C
+        a                   :CoverTitle ;
+        rdfs:label          "vibhaṅg"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT870BE9C24880805D .
+    
+    bdr:TT870BE9C24880805D
+        a                   :CoverTitle ;
+        rdfs:label          "vibhaṃṅ"@km-x-kmpre20c-kmfemc .
+}

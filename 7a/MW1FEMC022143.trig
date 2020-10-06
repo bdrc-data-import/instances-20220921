@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022143 {
+    bda:LGDB8B6C07151D3F69
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022143"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022143"@en , "imported pubinfo for W1FEMC022143"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022143
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022143 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "7a/MW1FEMC022143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022143 ;
+        adm:logEntry        bda:LGDB8B6C07151D3F69 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFF4A0D108640A7AE8
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "138" ;
+        :microfilmStrip     "232" .
+    
+    bdr:MW1FEMC022143
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកក្បាលក្របី"@km , "lpök kpāl krapī"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT05B39D6DABFA65C3 , bdr:TT188F179A4B8C1945 , bdr:TT25514F4EA998439D , bdr:TT2DD7B0F6CDF465DF , bdr:TTD66D564689B93A3A , bdr:TTDD573F1684D3D8B2 ;
+        :instanceHasReproduction  bdr:W1FEMC022143 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF4A0D108640A7AE8 ;
+        :note               bdr:NT2C190107AD2CE11E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "a.133.I.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_3 ;
+        :workKDPPOldId      "1415" .
+    
+    bdr:NT2C190107AD2CE11E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 380" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT05B39D6DABFA65C3
+        a                   :CoverTitle ;
+        rdfs:label          "lpök luoṅ lom kūn prus"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTDD573F1684D3D8B2 .
+    
+    bdr:TT188F179A4B8C1945
+        a                   :CoverTitle ;
+        rdfs:label          "ល្បើកលួងលោមកូនប្រុស"@km ;
+        :femcConversionOf   bdr:TT2DD7B0F6CDF465DF .
+    
+    bdr:TT25514F4EA998439D
+        a                   :Title ;
+        rdfs:label          "ល្បើកក្បាលក្របី"@km .
+    
+    bdr:TT2DD7B0F6CDF465DF
+        a                   :CoverTitle ;
+        rdfs:label          "លួងលោមកូនប្រុស"@km-x-kmpre20c .
+    
+    bdr:TTD66D564689B93A3A
+        a                   :Title ;
+        rdfs:label          "lpök kpāl krapī"@km-x-kmfemc .
+    
+    bdr:TTDD573F1684D3D8B2
+        a                   :CoverTitle ;
+        rdfs:label          "luoṅ lom kūn prus"@km-x-kmpre20c-kmfemc .
+}

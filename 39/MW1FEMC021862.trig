@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021862 {
+    bda:LG1B934D5ACB0628A5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021862"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021862"@en , "imported pubinfo for W1FEMC021862"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021862
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021862 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "39/MW1FEMC021862.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021862 ;
+        adm:logEntry        bda:LG1B934D5ACB0628A5 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC021862
+        a                   :Instance ;
+        skos:prefLabel      "បុច្ចាវិស្សជ្ជនាសរសើរគុណព្រះរតនត្រៃ"@km , "pucchā vissajjanā sar-sör guṇ braḥ ratanatrai"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT51B0FEAC85E9B98A , bdr:TT8D7170A4E6FE3732 , bdr:TT9B2A0AE0B1BACD0F , bdr:TTC002C004119860E1 ;
+        :instanceHasReproduction  bdr:W1FEMC021862 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTDBB409DEB2C8B3AD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.644.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTDBB409DEB2C8B3AD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 333" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT51B0FEAC85E9B98A
+        a                   :CoverTitle ;
+        rdfs:label          "pucchā visujjanā sar- sör guṇ braḥ ratanatrai"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT8D7170A4E6FE3732
+        a                   :Title ;
+        rdfs:label          "បុច្ចាវិស្សជ្ជនាសរសើរគុណព្រះរតនត្រៃ"@km ;
+        :femcConversionOf   bdr:TT9B2A0AE0B1BACD0F .
+    
+    bdr:TT9B2A0AE0B1BACD0F
+        a                   :CoverTitle ;
+        rdfs:label          "បុច្ចាវិសុជ្ជនាសរសើរគុណព្រះរតនត្រៃ"@km-x-kmpre20c .
+    
+    bdr:TTC002C004119860E1
+        a                   :Title ;
+        rdfs:label          "pucchā vissajjanā sar-sör guṇ braḥ ratanatrai"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT51B0FEAC85E9B98A .
+}

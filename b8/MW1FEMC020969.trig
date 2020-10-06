@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020969 {
+    bda:LG614E6BDAFA4DB493
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020969"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020969"@en , "imported pubinfo for W1FEMC020969"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020969
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020969 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b8/MW1FEMC020969.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020969 ;
+        adm:logEntry        bda:LG614E6BDAFA4DB493 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF2CB6713E06F1FC04
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "II" ;
+        :microfilmStrip     "7" .
+    
+    bdr:MW1FEMC020969
+        a                   :Instance ;
+        skos:prefLabel      "អដ្ឋកនិបាតជាតក"@km , "aṭṭhakanipāta jātaka"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT456D3BF4C960D1E5 , bdr:TT5F1D87B960C55D04 , bdr:TT6BF202949C57F16C , bdr:TTAB614389279108D1 ;
+        :instanceHasReproduction  bdr:W1FEMC020969 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2CB6713E06F1FC04 ;
+        :note               bdr:NT026863B537605F09 , bdr:NT1C3491C25C8D8826 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "A.44.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII ;
+        :workKDPPOldId      "1607" .
+    
+    bdr:NT026863B537605F09
+        a                   :Note ;
+        :noteText           "What does (suite de A.42) refer to?"@en .
+    
+    bdr:NT1C3491C25C8D8826
+        a                   :Note ;
+        :contentLocationStatement  "pg. 171" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT456D3BF4C960D1E5
+        a                   :CoverTitle ;
+        rdfs:label          "aṭṭhanipāta jātaka"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT5F1D87B960C55D04
+        a                   :Title ;
+        rdfs:label          "អដ្ឋកនិបាតជាតក"@km ;
+        :femcConversionOf   bdr:TTAB614389279108D1 .
+    
+    bdr:TT6BF202949C57F16C
+        a                   :Title ;
+        rdfs:label          "aṭṭhakanipāta jātaka"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT456D3BF4C960D1E5 .
+    
+    bdr:TTAB614389279108D1
+        a                   :CoverTitle ;
+        rdfs:label          "អដ្ឋនិបាតជាតក"@km-x-kmpre20c .
+}

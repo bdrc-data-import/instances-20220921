@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21842 {
+    bda:LG3AE4C6129D1D5942
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21842  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW21842 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "cc/MW21842.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21842 ;
+        adm:logEntry        bda:LG3AE4C6129D1D5942 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV77C15619E42D0E54
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID502325AF0973B617
+        a                   bdr:HollisId ;
+        rdf:value           "014258464" .
+    
+    bdr:IDD563563C57CA3A61
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540922982" .
+    
+    bdr:MW21842  a          :Instance ;
+        skos:altLabel       "gesaer wang zhuan jue ri de gu shi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rma smad jo ru rgyal po'i rdzu 'phrul gyis mdzad pa kha shas phyogs bsgrigs byas pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID502325AF0973B617 , bdr:IDD563563C57CA3A61 ;
+        :authorshipStatement  "dpal ldan gyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "a she ya mthun grogs tshogs pas bod kyi rig gna' rgyus mi nyams gong 'phel 'byung ched du..."@bo-x-ewts ;
+        :hasTitle           bdr:TT725E2C8E40C8D99D , bdr:TT91D422505DF3AB46 , bdr:TTADA4FFC975472FCC , bdr:TTD5F4D15C469752A1 ;
+        :instanceEvent      bdr:EV77C15619E42D0E54 ;
+        :instanceHasReproduction  bdr:W21842 ;
+        :instanceOf         bdr:WA21842 ;
+        :isRoot             true ;
+        :note               bdr:NT177F53F71920F931 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1, 366 p." .
+    
+    bdr:NT177F53F71920F931
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution"@en .
+    
+    bdr:TT725E2C8E40C8D99D
+        a                   :Title ;
+        rdfs:label          "rma smad jo ru rgyal po'i rdzu 'phrul gyis mdzad pa kha shas phyogs bsgrigs byas pa/"@bo-x-ewts .
+    
+    bdr:TT91D422505DF3AB46
+        a                   :ColophonTitle ;
+        rdfs:label          "gesaer wang zhuan jue ri de gu shi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTADA4FFC975472FCC
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling rje ge sar rgyal po'i sgrung rma smad jo ru rgyal po'i rdzu 'phrul gyis mdzad pa kha shas phyogs bsgrigs byas pa/"@bo-x-ewts .
+    
+    bdr:TTD5F4D15C469752A1
+        a                   :SpineTitle ;
+        rdfs:label          "rma smad jo ru rgyal po'i mdzad rnam kha shas/"@bo-x-ewts .
+}

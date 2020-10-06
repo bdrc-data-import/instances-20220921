@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023149 {
+    bda:LGD716E7480D8F3788
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023149"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC023149"@en , "imported pubinfo for W1FEMC023149"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023149
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC023149 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f9/MW1FEMC023149.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023149 ;
+        adm:logEntry        bda:LGD716E7480D8F3788 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC023149
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនពិធីបុណ្យភ្នំខ្សាច់ (ក្រាំង)"@km , "kpuon bidhī puṇy bhnaṃ khsāc'"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasInstanceNum     "27" ;
+        :hasTitle           bdr:TT45C499C653D4A179 , bdr:TT6DBDD7A986D1901D ;
+        :instanceHasReproduction  bdr:W1FEMC023149 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :note               bdr:NT221855BB72948CAE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.954.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 ;
+        :workKDPPOldId      "UB070" .
+    
+    bdr:NT221855BB72948CAE
+        a                   :Note ;
+        :contentLocationStatement  "pg. 556" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT45C499C653D4A179
+        a                   :Title ;
+        rdfs:label          "ក្បួនពិធីបុណ្យភ្នំខ្សាច់ (ក្រាំង)"@km .
+    
+    bdr:TT6DBDD7A986D1901D
+        a                   :Title ;
+        rdfs:label          "kpuon bidhī puṇy bhnaṃ khsāc'"@km-x-kmfemc .
+}

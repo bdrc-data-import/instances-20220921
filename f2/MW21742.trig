@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21742 {
+    bda:LG953C15DD51371923
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21742  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW21742 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f2/MW21742.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21742 ;
+        adm:logEntry        bda:LG953C15DD51371923 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4D2E888759BBB503
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID13BC92B45026B6B9
+        a                   bdr:HollisId ;
+        rdf:value           "014258424" .
+    
+    bdr:ID49121E635FE882E5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "RD85.A25 M43 2000" .
+    
+    bdr:IDBD9824951ACAC2FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105040769" .
+    
+    bdr:IDFDBBA945093B531E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004333314" .
+    
+    bdr:MW21742  a          :Instance ;
+        skos:altLabel       "zang yi huo jiu liao fa"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "me btsa'i rnam bshad mthong ba don ldan : bod rgya deb ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID13BC92B45026B6B9 , bdr:ID49121E635FE882E5 , bdr:IDBD9824951ACAC2FA , bdr:IDFDBBA945093B531E ;
+        :authorshipStatement  "rtsom sgrig pa, gdugs dkar, 'o tshogs chen, don grub tshe ring /"@bo-x-ewts ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TT12B6E095EF368118 , bdr:TTDDF9A44101A5B796 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV4D2E888759BBB503 ;
+        :instanceHasReproduction  bdr:W21742 ;
+        :instanceOf         bdr:WA21742 ;
+        :isRoot             true ;
+        :note               bdr:NT9F7D57031F14D12F ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5, 3, 3, 148, 80 p." .
+    
+    bdr:NT9F7D57031F14D12F
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4765"@en .
+    
+    bdr:TT12B6E095EF368118
+        a                   :Title ;
+        rdfs:label          "me btsa'i rnam bshad mthong ba don ldan : bod rgya deb ma/"@bo-x-ewts .
+    
+    bdr:TTDDF9A44101A5B796
+        a                   :ColophonTitle ;
+        rdfs:label          "zang yi huo jiu liao fa"@zh-latn-pinyin-x-ndia .
+}

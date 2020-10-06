@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010883 {
+    bda:LG5E2ADF94E8FFEF3D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010883"@en ;
+        adm:logWho          bdu:U00091 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010883"@en , "imported pubinfo for W1FEMC010883"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010883
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010883 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "41/MW1FEMC010883.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010883 ;
+        adm:logEntry        bda:LG5E2ADF94E8FFEF3D , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFFBFB98D2B34960EE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "25" ;
+        :microfilmStrip     "28" .
+    
+    bdr:MW1FEMC010883
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលទាំង៣៨ប្រការ"@km , "maṅgal dāṃṅ 38 prakār"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "4" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT35FFD15C66F2FBE2 , bdr:TT77F9AA6C9FD50F33 , bdr:TT865F7A4FC48D6469 , bdr:TT99DE00630EFFA0F2 , bdr:TTBE184039985A6F7B , bdr:TTE6994245F147B483 ;
+        :instanceHasReproduction  bdr:W1FEMC010883 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFBFB98D2B34960EE ;
+        :note               bdr:NTE13370C431A2686B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "004-A.04.03.01.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NTE13370C431A2686B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 226" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT35FFD15C66F2FBE2
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal sūtr pubb bhāgy°"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT77F9AA6C9FD50F33
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលសូត្របុព្វភាគ"@km ;
+        :femcConversionOf   bdr:TTE6994245F147B483 .
+    
+    bdr:TT865F7A4FC48D6469
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal sūtr pubb bhāg"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT35FFD15C66F2FBE2 .
+    
+    bdr:TT99DE00630EFFA0F2
+        a                   :Title ;
+        rdfs:label          "maṅgal dāṃṅ 38 prakār"@km-x-kmfemc .
+    
+    bdr:TTBE184039985A6F7B
+        a                   :Title ;
+        rdfs:label          "មង្គលទាំង៣៨ប្រការ"@km .
+    
+    bdr:TTE6994245F147B483
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលសូត្របុព្វភាគ្យ"@km-x-kmpre20c .
+}

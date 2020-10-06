@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021889 {
+    bda:LG6863F760EEA2FA8A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021889"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC021889"@en , "imported pubinfo for W1FEMC021889"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021889
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC021889 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3f/MW1FEMC021889.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021889 ;
+        adm:logEntry        bda:LG6863F760EEA2FA8A , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC021889
+        a                   :Instance ;
+        skos:prefLabel      "ក្រុងមហាជម្ពូរាជាធិបតី"@km , "kruṅ mahā jambū rājādhipatī"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT0625754170C18E01 , bdr:TT596E395A3B28318C , bdr:TT8BD818D084B45642 , bdr:TT8E7B987551FB1C0A ;
+        :instanceHasReproduction  bdr:W1FEMC021889 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT7685CDE51C80FCA7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d.671.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT7685CDE51C80FCA7
+        a                   :Note ;
+        :contentLocationStatement  "pg. 337" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0625754170C18E01
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជម្ពូបុតី"@km-x-kmpre20c .
+    
+    bdr:TT596E395A3B28318C
+        a                   :Title ;
+        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT8E7B987551FB1C0A .
+    
+    bdr:TT8BD818D084B45642
+        a                   :Title ;
+        rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
+        :femcConversionOf   bdr:TT0625754170C18E01 .
+    
+    bdr:TT8E7B987551FB1C0A
+        a                   :CoverTitle ;
+        rdfs:label          "mahā jambū putī"@km-x-kmpre20c-kmfemc .
+}

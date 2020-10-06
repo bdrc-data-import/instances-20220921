@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1424 {
+    bda:LG150EE27FE9E0D90F
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-19T09:58:41.55Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG903EA1D8ED7E8AB9
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1424"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1424  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1NLM1424 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1c/MW1NLM1424.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1424 ;
+        adm:logEntry        bda:LG150EE27FE9E0D90F , bda:LG903EA1D8ED7E8AB9 , bda:LGIM15986367 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1424  a       :Instance ;
+        skos:prefLabel      "bslab bya rin po che thar ba'i 'jug ngogs sogs/"@bo-x-ewts ;
+        :biblioNote         "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en , "Scanning sponsored through the kind support of 莊佳瑩"@en ;
+        :dimensionsStatement  "46.5x7" ;
+        :hasTitle           bdr:TT8F44D7A72B308B3E ;
+        :instanceHasReproduction  bdr:W1NLM1424 ;
+        :instanceOf         bdr:WA1NLM1424 ;
+        :isRoot             true ;
+        :note               bdr:NT614B45CF90F0B1BD , bdr:NTB3C1A41F87EA06AE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "170-235 ff., 29 ff." .
+    
+    bdr:NT614B45CF90F0B1BD
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NTB3C1A41F87EA06AE
+        a                   :Note ;
+        :noteText           "nlmId: M0059342"@en .
+    
+    bdr:TT8F44D7A72B308B3E
+        a                   :Title ;
+        rdfs:label          "bslab bya rin po che thar ba'i 'jug ngogs sogs/"@bo-x-ewts .
+}

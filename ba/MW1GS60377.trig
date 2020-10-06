@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS60377 {
+    bda:LGB409AEC8A96771E3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-13T13:04:08.78Z"^^xsd:dateTime ;
+        adm:logMessage      "published for creating scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS60377  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1GS60377 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ba/MW1GS60377.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS60377 ;
+        adm:logEntry        bda:LGB409AEC8A96771E3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR24A4C146E4394CDE
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1GS60376 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD4DE9421696672DE
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID0B2F0EC5BBBF3F41
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105081287" .
+    
+    bdr:ID38A110CDF5E1861F
+        a                   bdr:HollisId ;
+        rdf:value           "014255501" .
+    
+    bdr:MW1GS60377  a       :Instance ;
+        skos:prefLabel      "sman gzhung gces btus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0B2F0EC5BBBF3F41 , bdr:ID38A110CDF5E1861F ;
+        :authorshipStatement  "gso sgrig pa skal bzang rdo rje/"@bo-x-ewts ;
+        :creator            bdr:CR24A4C146E4394CDE ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasTitle           bdr:TT7EE399CFE72B3594 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVD4DE9421696672DE ;
+        :instanceHasReproduction  bdr:W1GS60377 ;
+        :instanceOf         bdr:WA1GS60377 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "266 p." .
+    
+    bdr:TT7EE399CFE72B3594
+        a                   :Title ;
+        rdfs:label          "sman gzhung gces btus/"@bo-x-ewts .
+}

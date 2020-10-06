@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010043 {
+    bda:LG25842C4AD4A3B86F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010043"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010043"@en , "imported pubinfo for W1FEMC010043"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010043
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010043 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "72/MW1FEMC010043.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010043 ;
+        adm:logEntry        bda:LG25842C4AD4A3B86F , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFEDB4FDF59AF93007
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "12" ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC010043
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "3-6, 8" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT20D7F64C24DCA9BA , bdr:TT2EB0D8D82824ACCC , bdr:TT4D8B663B79D5422E , bdr:TT83033BAA1AC5F401 , bdr:TTA256F1E543E10EE2 , bdr:TTCB06A1419B1BFC5B ;
+        :instanceHasReproduction  bdr:W1FEMC010043 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEDB4FDF59AF93007 ;
+        :note               bdr:NT974830ED376EC9D7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "010-014-PP.01.02.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT974830ED376EC9D7
+        a                   :Note ;
+        :contentLocationStatement  "pg. 62" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT20D7F64C24DCA9BA
+        a                   :CoverTitle ;
+        rdfs:label          "sati mahā paṭṭhān"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT2EB0D8D82824ACCC .
+    
+    bdr:TT2EB0D8D82824ACCC
+        a                   :CoverTitle ;
+        rdfs:label          "satti mahā paṭṭhān"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT4D8B663B79D5422E
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-kmfemc .
+    
+    bdr:TT83033BAA1AC5F401
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តិមហាបដ្ឋាន"@km-x-kmpre20c .
+    
+    bdr:TTA256F1E543E10EE2
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
+    
+    bdr:TTCB06A1419B1BFC5B
+        a                   :CoverTitle ;
+        rdfs:label          "សតិមហាបដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TT83033BAA1AC5F401 .
+}

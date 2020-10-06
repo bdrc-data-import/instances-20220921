@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022043 {
+    bda:LGABE88322601EA78D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022043"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC022043"@en , "imported pubinfo for W1FEMC022043"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022043
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC022043 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "34/MW1FEMC022043.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022043 ;
+        adm:logEntry        bda:LGABE88322601EA78D , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC022043
+        a                   :Instance ;
+        skos:prefLabel      "គិរិមានន្ទសូត្រ, ឥសិគិលិសូត្រ, មហាសមយសូត្រ"@km , "girimānandasūtra, Isigilisūtra, mahāsamayasūtra"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT046A3D42E2654D01 , bdr:TT9B18822E8AC7C146 , bdr:TTD53FD3ED68EAC5EE , bdr:TTDC570B5BBDB059ED ;
+        :instanceHasReproduction  bdr:W1FEMC022043 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT62321E944D0D6E33 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "D.399.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT62321E944D0D6E33
+        a                   :Note ;
+        :contentLocationStatement  "pg. 361" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT046A3D42E2654D01
+        a                   :Title ;
+        rdfs:label          "girimānandasūtra, Isigilisūtra, mahāsamayasūtra"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT9B18822E8AC7C146 .
+    
+    bdr:TT9B18822E8AC7C146
+        a                   :CoverTitle ;
+        rdfs:label          "girimānanda Isīgili mahāsamaya"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTD53FD3ED68EAC5EE
+        a                   :CoverTitle ;
+        rdfs:label          "គិរិមានន្ទ ឥសីគិលិ មហាសមយ"@km-x-kmpre20c .
+    
+    bdr:TTDC570B5BBDB059ED
+        a                   :Title ;
+        rdfs:label          "គិរិមានន្ទសូត្រ, ឥសិគិលិសូត្រ, មហាសមយសូត្រ"@km ;
+        :femcConversionOf   bdr:TTD53FD3ED68EAC5EE .
+}

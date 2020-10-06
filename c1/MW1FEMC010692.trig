@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010692 {
+    bda:LGB49002C35856623C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010692"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010692"@en , "imported pubinfo for W1FEMC010692"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010692
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010692 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c1/MW1FEMC010692.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010692 ;
+        adm:logEntry        bda:LGB49002C35856623C , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFD837A753AF80CE01
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "46" ;
+        :microfilmStrip     "112" .
+    
+    bdr:MW1FEMC010692
+        a                   :Instance ;
+        skos:prefLabel      "មហាវេស្សន្តរជាតក"@km , "mahā vessantar jātak"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "2" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT1033536A5F04CB0F , bdr:TT450462F66796B648 , bdr:TT494542AA59A6B898 , bdr:TT8C31F869D8EDE674 , bdr:TT94ACA6E2BA20377F , bdr:TTFA73A9450765FDD9 ;
+        :instanceHasReproduction  bdr:W1FEMC010692 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD837A753AF80CE01 ;
+        :note               bdr:NTB8CA2BF11A90EE7E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "002-A.03.07.01.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NTB8CA2BF11A90EE7E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 190" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1033536A5F04CB0F
+        a                   :Title ;
+        rdfs:label          "មហាវេស្សន្តរជាតក"@km .
+    
+    bdr:TT450462F66796B648
+        a                   :CoverTitle ;
+        rdfs:label          "ហេមពាន្ត"@km ;
+        :femcConversionOf   bdr:TT8C31F869D8EDE674 .
+    
+    bdr:TT494542AA59A6B898
+        a                   :CoverTitle ;
+        rdfs:label          "hempūbān"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT8C31F869D8EDE674
+        a                   :CoverTitle ;
+        rdfs:label          "ហេម្បូពាន"@km-x-kmpre20c .
+    
+    bdr:TT94ACA6E2BA20377F
+        a                   :CoverTitle ;
+        rdfs:label          "hemabānt"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT494542AA59A6B898 .
+    
+    bdr:TTFA73A9450765FDD9
+        a                   :Title ;
+        rdfs:label          "mahā vessantar jātak"@km-x-kmfemc .
+}

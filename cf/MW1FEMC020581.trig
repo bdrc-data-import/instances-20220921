@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020581 {
+    bda:LGB97F54A513DC1A3A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020581"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020581"@en , "imported pubinfo for W1FEMC020581"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020581
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020581 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cf/MW1FEMC020581.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020581 ;
+        adm:logEntry        bda:LGB97F54A513DC1A3A , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC020581
+        a                   :Instance ;
+        skos:prefLabel      "មហាជនកជាតក"@km , "mahā janak jātak"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT22EAE470A4ECCB38 , bdr:TT3800CCBDE0E502A3 , bdr:TT67426E7EC0B1504E , bdr:TTBB13EA7811EF7668 , bdr:TTC25E7311FDE44D5C , bdr:TTC6959BDC9373F817 ;
+        :instanceHasReproduction  bdr:W1FEMC020581 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTA3D155844FEAE678 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "d'.214.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NTA3D155844FEAE678
+        a                   :Note ;
+        :contentLocationStatement  "pg. 111" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT22EAE470A4ECCB38
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT3800CCBDE0E502A3
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT67426E7EC0B1504E
+        a                   :CoverTitle ;
+        rdfs:label          "mahā jīnuk"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTBB13EA7811EF7668
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជីនុក"@km-x-kmpre20c .
+    
+    bdr:TTC25E7311FDE44D5C
+        a                   :Title ;
+        rdfs:label          "mahā janak jātak"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT67426E7EC0B1504E .
+    
+    bdr:TTC6959BDC9373F817
+        a                   :Title ;
+        rdfs:label          "មហាជនកជាតក"@km ;
+        :femcConversionOf   bdr:TTBB13EA7811EF7668 .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010618 {
+    bda:LGFA1E087D3848E7AB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010618"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010618"@en , "imported pubinfo for W1FEMC010618"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010618
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010618 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "05/MW1FEMC010618.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010618 ;
+        adm:logEntry        bda:LGFA1E087D3848E7AB , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF11648D78A82185E7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "54" .
+    
+    bdr:MW1FEMC010618
+        a                   :Instance ;
+        skos:prefLabel      "មេសូត្រនិទ្ទេស"@pi-khmr , "mesūtraniddesa"@pi-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT6A464699D3CC01A9 , bdr:TT6A9CCD8E2A9218B6 , bdr:TTAB44AA0C9CF01E84 , bdr:TTDB65AFDB26778A88 ;
+        :instanceHasReproduction  bdr:W1FEMC010618 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF11648D78A82185E7 ;
+        :note               bdr:NT30A718BB4FAFFD7E , bdr:NT4FD629596547C5F0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "001-A.02.11.01.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT30A718BB4FAFFD7E
+        a                   :Note ;
+        :noteText           "Should we write (ក-ឃំ) ?"@en .
+    
+    bdr:NT4FD629596547C5F0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 175" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT6A464699D3CC01A9
+        a                   :Title ;
+        rdfs:label          "mesūtraniddesa"@pi-x-kmfemc ;
+        :femcConversionOf   bdr:TTAB44AA0C9CF01E84 .
+    
+    bdr:TT6A9CCD8E2A9218B6
+        a                   :CoverTitle ;
+        rdfs:label          "មេសូត្រនិទេសន(ក-ឃំ)"@pi-khmr-x-kmpre20c .
+    
+    bdr:TTAB44AA0C9CF01E84
+        a                   :CoverTitle ;
+        rdfs:label          "mesūtranidesana"@pi-x-kmpre20c-kmfemc .
+    
+    bdr:TTDB65AFDB26778A88
+        a                   :Title ;
+        rdfs:label          "មេសូត្រនិទ្ទេស"@pi-khmr ;
+        :femcConversionOf   bdr:TT6A9CCD8E2A9218B6 .
+}

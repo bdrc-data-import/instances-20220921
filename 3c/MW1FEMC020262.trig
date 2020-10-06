@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020262 {
+    bda:LG5CACDBA6E7A32090
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020262"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC020262"@en , "imported pubinfo for W1FEMC020262"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020262
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC020262 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3c/MW1FEMC020262.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020262 ;
+        adm:logEntry        bda:LG5CACDBA6E7A32090 , bda:LGIM3045394C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFE14766B666D13D96
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "62" ;
+        :microfilmStrip     "156" .
+    
+    bdr:MW1FEMC020262
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសង្គាយនាព្រះធម្មចក្ក (បឋមសង្គាយនាសម្រាប់ទេសនា១អង្គឯង)"@km , "paṭham saṅgāyanā braḥ dhammacakk"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT99289154A75C0007 , bdr:TT9AEBB038F46D1FBE , bdr:TTBD618CB564F9E14F , bdr:TTD39447E7BA65B98C ;
+        :instanceHasReproduction  bdr:W1FEMC020262 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE14766B666D13D96 ;
+        :note               bdr:NT38188EE5DB0B553E , bdr:NT5DB5DD1B0FB579FF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "b.155.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 ;
+        :workKDPPOldId      "1149" .
+    
+    bdr:NT38188EE5DB0B553E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 52" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT5DB5DD1B0FB579FF
+        a                   :Note ;
+        :noteText           "(saṅgāyanā ā1 secue prêcheur) what is it?and where can I write it?"@en .
+    
+    bdr:TT99289154A75C0007
+        a                   :Title ;
+        rdfs:label          "បឋមសង្គាយនាព្រះធម្មចក្ក (បឋមសង្គាយនាសម្រាប់ទេសនា១អង្គឯង)"@km ;
+        :femcConversionOf   bdr:TT9AEBB038F46D1FBE .
+    
+    bdr:TT9AEBB038F46D1FBE
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មសំឃ៊ាយនារព្រះធម្មចក្ខ"@km-x-kmpre20c .
+    
+    bdr:TTBD618CB564F9E14F
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm saṃghāyanār braḥ dhammacakkh"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTD39447E7BA65B98C
+        a                   :Title ;
+        rdfs:label          "paṭham saṅgāyanā braḥ dhammacakk"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TTBD618CB564F9E14F .
+}

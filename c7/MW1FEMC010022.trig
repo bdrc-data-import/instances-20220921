@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010022 {
+    bda:LG51B51A1B527DC43B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010022"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC010022"@en , "imported pubinfo for W1FEMC010022"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010022
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC010022 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c7/MW1FEMC010022.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010022 ;
+        adm:logEntry        bda:LG51B51A1B527DC43B , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF2A3B05AEC513FB66
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "1" ;
+        :microfilmStrip     "1" .
+    
+    bdr:MW1FEMC010022
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនលក្ខណៈដែលបញ្ចុះក្នុងខ្លួនព្រះអង្គ"@km , "kpuon lakkhaṇa: ṭèl pañcuḥ knuṅ khluon braḥ aṅg"@km-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasFascicles       "1" ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT1C39B1E7B3034945 , bdr:TT2BF0DA44D461712A , bdr:TT93D1CEE6A1C28FFA , bdr:TTE8DA72520F7C226F ;
+        :instanceHasReproduction  bdr:W1FEMC010022 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2A3B05AEC513FB66 ;
+        :note               bdr:NT1D3CE08592CA79DE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "009-PP.00.03.01.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NT1D3CE08592CA79DE
+        a                   :Note ;
+        :contentLocationStatement  "pg. 57" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1C39B1E7B3034945
+        a                   :Title ;
+        rdfs:label          "ក្បួនលក្ខណៈដែលបញ្ចុះក្នុងខ្លួនព្រះអង្គ"@km ;
+        :femcConversionOf   bdr:TT2BF0DA44D461712A .
+    
+    bdr:TT2BF0DA44D461712A
+        a                   :CoverTitle ;
+        rdfs:label          "ក្បួនលក្ខណៈដែលប័ញ្ចុះក្នុងខ្លួនព្រះអង្គ"@km-x-kmpre20c .
+    
+    bdr:TT93D1CEE6A1C28FFA
+        a                   :CoverTitle ;
+        rdfs:label          "kpuon lakkhaṇa: ṭèl păñcuḥ knuṅ khluon braḥ aṅg"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TTE8DA72520F7C226F
+        a                   :Title ;
+        rdfs:label          "kpuon lakkhaṇa: ṭèl pañcuḥ knuṅ khluon braḥ aṅg"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT93D1CEE6A1C28FFA .
+}

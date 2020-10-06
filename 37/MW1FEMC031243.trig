@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031243 {
+    bda:LG9B4EE2416591DE83
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-10-05"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031243"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC031243"@en , "imported pubinfo for W1FEMC031243"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031243
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC031243 ;
+        adm:contentProvider  bda:CP040 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "37/MW1FEMC031243.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031243 ;
+        adm:logEntry        bda:LG9B4EE2416591DE83 , bda:LGIM61B7CB85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC031243
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សបុគ្គល (ខ-ខូ)"@km ;
+        :biblioNote         "This manuscript was digitized from a physical copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT779636BBE28A2CCC ;
+        :instanceHasReproduction  bdr:W1FEMC031243 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT829D9913FC4DCD3B , bdr:NTB60A810DB42E49BC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "172-PP.03.03.03" ;
+        :workIsAbout        bdr:FEMC_Scheme_03 .
+    
+    bdr:NT829D9913FC4DCD3B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:NTB60A810DB42E49BC
+        a                   :Note ;
+        :noteText           "Where to put (ខ-ខូ)?"@en .
+    
+    bdr:TT779636BBE28A2CCC
+        a                   :Title ;
+        rdfs:label          "អានិសង្សបុគ្គល (ខ-ខូ)"@km .
+}

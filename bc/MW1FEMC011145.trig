@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011145 {
+    bda:LG70DE2A6971FA1B93
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011145"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 01 workW1FEMC011145"@en , "imported pubinfo for W1FEMC011145"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011145
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC011145 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "bc/MW1FEMC011145.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011145 ;
+        adm:logEntry        bda:LG70DE2A6971FA1B93 , bda:LGIMC3FF7CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFBF2333C5D8202B69
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "III" ;
+        :microfilmStrip     "15" .
+    
+    bdr:MW1FEMC011145
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr , "bhikkhuppāṭimokkha"@pi-x-kmfemc ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :hasInstanceNum     "1" ;
+        :hasTitle           bdr:TT7DF3CBC7FD5DEAC8 , bdr:TT7F3BF4364AF51197 , bdr:TT8328C0E84E6D7C88 , bdr:TTD17FCEB4BD6E1C09 ;
+        :instanceHasReproduction  bdr:W1FEMC011145 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBF2333C5D8202B69 ;
+        :note               bdr:NT620DEF63F6EFD58E , bdr:NT6D0B169350FA359A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "004'-A.04.17.02.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT620DEF63F6EFD58E
+        a                   :Note ;
+        :noteText           "Should we write (កា-ឃា) ?"@en .
+    
+    bdr:NT6D0B169350FA359A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 276" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT7DF3CBC7FD5DEAC8
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr ;
+        :femcConversionOf   bdr:TT7F3BF4364AF51197 .
+    
+    bdr:TT7F3BF4364AF51197
+        a                   :CoverTitle ;
+        rdfs:label          "បាដិមោក្ខ (កា-ឃា)"@pi-khmr-x-kmpre20c .
+    
+    bdr:TT8328C0E84E6D7C88
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkha"@pi-x-kmfemc ;
+        :femcConversionOf   bdr:TTD17FCEB4BD6E1C09 .
+    
+    bdr:TTD17FCEB4BD6E1C09
+        a                   :CoverTitle ;
+        rdfs:label          "pāṭimokkha"@pi-x-kmpre20c-kmfemc .
+}

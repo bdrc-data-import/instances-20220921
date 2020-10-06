@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1CZ1873 {
+    bda:LG27C1560E46C39451
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-17T16:24:11.743Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGA24AF00C1FEA6491
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-06-29T12:04:35.597Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD4DF120E18ED1CCE
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-21T16:50:54.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1CZ1873  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1CZ1873 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "11/MW1CZ1873.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1CZ1873 ;
+        adm:logEntry        bda:LG27C1560E46C39451 , bda:LGA24AF00C1FEA6491 , bda:LGD4DF120E18ED1CCE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC64F79AFF1948837
+        a                   bdr:HollisId ;
+        rdf:value           "014255262" .
+    
+    bdr:MW1CZ1873  a        :Instance ;
+        skos:prefLabel      "zhang ston gyi lo rgyus 'bri 'phro/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC64F79AFF1948837 ;
+        :biblioNote         "scanned from original microfilm copy of an dbu can manuscript"@en , "unkown author"@en ;
+        :hasTitle           bdr:TT6346A895AEA2B203 ;
+        :instanceHasReproduction  bdr:W1CZ1873 ;
+        :instanceOf         bdr:WA1CZ1873 ;
+        :isRoot             true ;
+        :note               bdr:NT6A01B50C8CA4D08C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "5 ff." .
+    
+    bdr:NT6A01B50C8CA4D08C
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files"@en .
+    
+    bdr:TT6346A895AEA2B203
+        a                   :Title ;
+        rdfs:label          "zhang ston gyi lo rgyus 'bri 'phro/"@bo-x-ewts .
+}
