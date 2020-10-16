@@ -12,45 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG5043 {
-    bda:LG842CBC526ED7145E
+    bda:LGEAE5DA82B295712F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-10-09T13:26:11.856Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGF1D29BEA6F9F385B
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-15T23:39:34.64Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW2KG5043  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG5043 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "8c/MW2KG5043.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG5043 ;
-        adm:logEntry        bda:LG842CBC526ED7145E ;
+        adm:logEntry        bda:LGEAE5DA82B295712F , bda:LGF1D29BEA6F9F385B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVDF90E5345C06E4C8
+    bdr:EV842CBC526ED7145E
         a                   :PublishedEvent ;
-        :onYear             "2019"^^xsd:gYear .
+        :onYear             "2018"^^xsd:gYear .
     
-    bdr:MW2KG5043  a        :Instance ;
-        skos:prefLabel      "rje yab sras gsum gyi gsung 'bum dpe bsdur ma/"@bo-x-ewts ;
-        :authorshipStatement  "rje yab sras gsum gyi gsung 'bum sdud sgrig khang /"@bo-x-ewts ;
-        :biblioNote         "The PDF and Word document files are generous support by Je Yabse Sungbum Project, Drepung Loseling Pethub Khangtsen Education Society to make accessible these important texts for the wider users."@en ;
+    bdr:IDD780CB613CCBFAA3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789383068821" .
+    
+    bdr:MW2KG5043  a        :Instance , :SerialInstance ;
+        skos:prefLabel      "snang ba lhar sgrub pa'i tshul la brtag pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD780CB613CCBFAA3 ;
+        :authorshipStatement  "Edited by Oma Almogi and Dorji Wangchuk"@en ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :editionStatement   "1st ed."@en ;
-        :hasTitle           bdr:TTE8E020A7E1278810 ;
-        :instanceEvent      bdr:EVDF90E5345C06E4C8 ;
+        :hasTitle           bdr:TTDF90E5345C06E4C8 , bdr:TTE8E020A7E1278810 ;
+        :instanceEvent      bdr:EV842CBC526ED7145E ;
         :instanceOf         bdr:WA2KG5043 ;
         :isRoot             true ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Mundgod, Karnataka"@en ;
-        :publisherName      "Drepung Loseling Pethub Khangtsen Education Society"@en ;
+        :publisherLocation  "Bylakuppe, Mysore, Karnataka"@en ;
+        :publisherName      "Ngagyur Nyingma Research Centre"@en ;
         :script             bdr:ScriptTibt ;
-        :sourceNote         "Je Yabse Sungbum Project, Drepung Loseling Pethub Khangtsen Education Society"@en ;
-        :workExtentStatement  "45 v." .
+        :sourceNote         "snga 'gyur rnying ma'i zhib 'jug lte gnas khang /"@bo-x-ewts ;
+        :workExtentStatement  "ii, xv, 411 p." ;
+        :workSeriesNumber   "1" .
+    
+    bdr:TTDF90E5345C06E4C8
+        a                   :TitlePageTitle ;
+        rdfs:label          "rong zom chos kyi bzang po'i mdzad rnam dang / snang ba lhar sgrub chen mo'i zhib dpyad zhu dag de'i brjod bya rjod byed la brtag pa/"@bo-x-ewts .
     
     bdr:TTE8E020A7E1278810
         a                   :Title ;
-        rdfs:label          "rje yab sras gsum gyi gsung 'bum dpe bsdur ma/"@bo-x-ewts .
+        rdfs:label          "snang ba lhar sgrub pa'i tshul la brtag pa/"@bo-x-ewts .
 }
