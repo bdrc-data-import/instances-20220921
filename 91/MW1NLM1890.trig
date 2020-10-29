@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1890 {
+    bda:LG29653A56070DE06C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-28T15:12:13.112Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,32 +27,36 @@ bdg:MW1NLM1890 {
     bda:MW1NLM1890  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1890 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "91/MW1NLM1890.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1890 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG29653A56070DE06C , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1890  a       :Instance ;
         skos:prefLabel      "mdo sde brgyad brgya pa/"@bo-x-ewts ;
         :dimensionsStatement  "18.5x6" ;
-        :hasTitle           bdr:TT3E1A354ABE22C312 ;
+        :hasTitle           bdr:TT3E1A354ABE22C312 , bdr:TTB17EE8423687B709 ;
         :instanceHasReproduction  bdr:W1NLM1890 ;
         :instanceOf         bdr:WA1NLM1890 ;
         :isRoot             true ;
-        :note               bdr:NTB17EE8423687B709 ;
+        :note               bdr:NT8A4D7DF67558D547 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "76 ff." .
     
-    bdr:NTB17EE8423687B709
+    bdr:NT8A4D7DF67558D547
         a                   :Note ;
         :noteText           "nlmId: M0059808"@en .
     
     bdr:TT3E1A354ABE22C312
         a                   :Title ;
         rdfs:label          "mdo sde brgyad brgya pa/"@bo-x-ewts .
+    
+    bdr:TTB17EE8423687B709
+        a                   :FullTitle ;
+        rdfs:label          "de bzhin gshegs pa bdun gyi sngon gyi smon lam gyi khyad par rgyas pa zhes bya theg pa chen po'i mdo/"@bo-x-ewts .
 }
