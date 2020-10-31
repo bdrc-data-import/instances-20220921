@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1901 {
+    bda:LGA1E7C07BBC54A2E2
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-30T17:39:18.79Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,32 +26,40 @@ bdg:MW1NLM1901 {
     bda:MW1NLM1901  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1901 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "5b/MW1NLM1901.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1901 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGA1E7C07BBC54A2E2 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1901  a       :Instance ;
         skos:prefLabel      "sman bla mchog yid bzhin dbang rgyal sogs/"@bo-x-ewts ;
         :dimensionsStatement  "17.5x6" ;
-        :hasTitle           bdr:TTA1E6BE1DB71629E1 ;
+        :hasTitle           bdr:TT39B9E0636680EFD9 , bdr:TTAEFF0307A2B95779 ;
         :instanceHasReproduction  bdr:W1NLM1901 ;
         :instanceOf         bdr:WA1NLM1901 ;
         :isRoot             true ;
-        :note               bdr:NT39B9E0636680EFD9 ;
+        :note               bdr:NT91D742D18944C1D9 , bdr:NTA1E6BE1DB71629E1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "71 ff., 12 ff., 10 ff., 5 ff., 4 ff., 2 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT39B9E0636680EFD9
+    bdr:NT91D742D18944C1D9
         a                   :Note ;
         :noteText           "nlmId: M0059819"@en .
     
-    bdr:TTA1E6BE1DB71629E1
+    bdr:NTA1E6BE1DB71629E1
+        a                   :Note ;
+        :noteText           "01)  sman bla mchog yid bzhin dbang rgyal / 72 ff.\n02)  dbus su bzhugs pa'i sme ba bcos thabs gnod 'tshe kun sel/ 12 ff.\n03)  byang sems dang rig pa' 'dzin pa'i phyir bcos/  10 ff.\n04)  dge slong gi dus dran dang phyir bcos/ 5 ff.\n05) 'bras rtsis shel dkar me long gi 'khor lo/  4 ff.\n06) 'go ba'i lha lnga bsgral ba/ 2 ff."@en .
+    
+    bdr:TT39B9E0636680EFD9
         a                   :Title ;
         rdfs:label          "sman bla mchog yid bzhin dbang rgyal sogs/"@bo-x-ewts .
+    
+    bdr:TTAEFF0307A2B95779
+        a                   :OtherTitle ;
+        rdfs:label          "dbus su bzhugs pa'i sme ba bcos thabs gnod 'tshe kun sel/"@bo-x-ewts .
 }
