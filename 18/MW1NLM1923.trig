@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1923 {
+    bda:LG2E03EBAC16A050E3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-11T13:50:52.502Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,36 +26,40 @@ bdg:MW1NLM1923 {
     bda:MW1NLM1923  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1923 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "18/MW1NLM1923.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1923 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG2E03EBAC16A050E3 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1923  a       :Instance ;
-        skos:prefLabel      "dpal gsang ba 'dus pa'i rtsa rgyud/"@bo-x-ewts ;
+        skos:prefLabel      "gsang 'dus rtsa rgyud/"@bo-x-ewts ;
         :dimensionsStatement  "17x6.5" ;
-        :hasTitle           bdr:TT2D23F576F0757611 ;
+        :hasTitle           bdr:TT0E29654EC1EFB723 , bdr:TT2D23F576F0757611 ;
         :instanceHasReproduction  bdr:W1NLM1923 ;
         :instanceOf         bdr:WA1NLM1923 ;
         :isRoot             true ;
-        :note               bdr:NT0E29654EC1EFB723 , bdr:NT283B38EC20BC544A ;
+        :note               bdr:NT2178D973FD5F88BB , bdr:NT283B38EC20BC544A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "89 ff." .
     
-    bdr:NT0E29654EC1EFB723
-        a                   :Note ;
-        :noteText           "nlmId: M0059841"@en .
-    
-    bdr:NT283B38EC20BC544A
+    bdr:NT2178D973FD5F88BB
         a                   :Note ;
         :noteText           "missingPages: M0059841-001 [Page 14 double numbered] Image 27-30 M0059841-001 [25,26th pages printed on the same page] Image 51"@en .
     
+    bdr:NT283B38EC20BC544A
+        a                   :Note ;
+        :noteText           "nlmId: M0059841"@en .
+    
+    bdr:TT0E29654EC1EFB723
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal gsang ba 'dus pa'i rtsa rgyud/"@bo-x-ewts .
+    
     bdr:TT2D23F576F0757611
         a                   :Title ;
-        rdfs:label          "dpal gsang ba 'dus pa'i rtsa rgyud/"@bo-x-ewts .
+        rdfs:label          "gsang 'dus rtsa rgyud/"@bo-x-ewts .
 }
