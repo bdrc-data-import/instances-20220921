@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1936 {
+    bda:LGDFA9BD51566A63E4
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-12T16:40:43.497Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,36 +27,40 @@ bdg:MW1NLM1936 {
     bda:MW1NLM1936  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1936 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b1/MW1NLM1936.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1936 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGDFA9BD51566A63E4 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1936  a       :Instance ;
-        skos:prefLabel      "chos skyong dregs pa lcam sring la dpal mgon don lnga'i gser skyems 'bul tshul byed sogs/"@bo-x-ewts ;
+        skos:prefLabel      "chos skyong dregs pa lcam sring la dpal mgon don lnga'i gser skyems 'bul tshul byed/"@bo-x-ewts ;
         :dimensionsStatement  "17.5x4.5" ;
-        :hasTitle           bdr:TT15B6731D5A399DD1 ;
+        :hasTitle           bdr:TT15B6731D5A399DD1 , bdr:TTBA7FED475FC8C0ED ;
         :instanceHasReproduction  bdr:W1NLM1936 ;
         :instanceOf         bdr:WA1NLM1936 ;
         :isRoot             true ;
-        :note               bdr:NTBA7FED475FC8C0ED , bdr:NTE398118B04D0CC57 ;
+        :note               bdr:NT08FF1B7B964BD98A , bdr:NTE398118B04D0CC57 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "4 ff., 189 ff." .
     
-    bdr:NTBA7FED475FC8C0ED
-        a                   :Note ;
-        :noteText           "nlmId: M0059854"@en .
-    
-    bdr:NTE398118B04D0CC57
+    bdr:NT08FF1B7B964BD98A
         a                   :Note ;
         :noteText           "missingPages: M0059854-002 [Page 113 was double numbered] Image 233-236 [Page 141 has gong og] Image 291-294"@en .
     
+    bdr:NTE398118B04D0CC57
+        a                   :Note ;
+        :noteText           "nlmId: M0059854"@en .
+    
     bdr:TT15B6731D5A399DD1
         a                   :Title ;
-        rdfs:label          "chos skyong dregs pa lcam sring la dpal mgon don lnga'i gser skyems 'bul tshul byed sogs/"@bo-x-ewts .
+        rdfs:label          "chos skyong dregs pa lcam sring la dpal mgon don lnga'i gser skyems 'bul tshul byed/"@bo-x-ewts .
+    
+    bdr:TTBA7FED475FC8C0ED
+        a                   :OtherTitle ;
+        rdfs:label          "rdel rtsis/"@bo-x-ewts .
 }

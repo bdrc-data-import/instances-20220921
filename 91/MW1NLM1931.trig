@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1931 {
+    bda:LGEC5C65D8BC8FCBD0
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-12T16:40:41.517Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,36 +27,50 @@ bdg:MW1NLM1931 {
     bda:MW1NLM1931  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1931 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "91/MW1NLM1931.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1931 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGEC5C65D8BC8FCBD0 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR765BC210A02332FA
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CZ16815 ;
+        :role               bdr:R0ER0015 .
+    
     bdr:MW1NLM1931  a       :Instance ;
-        skos:prefLabel      "ched du brjod pa'i tshoms dgra bcom pa chos skyob kyi bsdus pa/"@bo-x-ewts ;
+        skos:prefLabel      "ched du brjod pa'i tshoms/"@bo-x-ewts ;
+        :creator            bdr:CR765BC210A02332FA ;
         :dimensionsStatement  "18x7" ;
-        :hasTitle           bdr:TT652FB2B3CAA5B71A ;
+        :hasTitle           bdr:TT29EB6A192DBA983D , bdr:TTF9D6FA0F368AA7BD ;
         :instanceHasReproduction  bdr:W1NLM1931 ;
         :instanceOf         bdr:WA1NLM1931 ;
         :isRoot             true ;
-        :note               bdr:NT29EB6A192DBA983D , bdr:NTF9D6FA0F368AA7BD ;
+        :note               bdr:NT1F13231CB002F52D , bdr:NT652FB2B3CAA5B71A , bdr:NT72CD70A2844E2F6B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "124 ff. end folio missing," .
     
-    bdr:NT29EB6A192DBA983D
-        a                   :Note ;
-        :noteText           "missingPages: M0059849-001 [12,13th pages printed on the same page] Image 23-24 M0059849-001 [120A,121A,122A,123A 124A misnumbered.] Image 237,239,241,243,245 M0059849-001 [Final pages are missing 125A] Image 247"@en .
-    
-    bdr:NTF9D6FA0F368AA7BD
+    bdr:NT1F13231CB002F52D
         a                   :Note ;
         :noteText           "nlmId: M0059849"@en .
     
-    bdr:TT652FB2B3CAA5B71A
-        a                   :Title ;
+    bdr:NT652FB2B3CAA5B71A
+        a                   :Note ;
+        :noteSource         bdr:MW4CZ15380 .
+    
+    bdr:NT72CD70A2844E2F6B
+        a                   :Note ;
+        :noteText           "missingPages: M0059849-001 [12,13th pages printed on the same page] Image 23-24 M0059849-001 [120A,121A,122A,123A 124A misnumbered.] Image 237,239,241,243,245 M0059849-001 [Final pages are missing 125A] Image 247"@en .
+    
+    bdr:TT29EB6A192DBA983D
+        a                   :TitlePageTitle ;
         rdfs:label          "ched du brjod pa'i tshoms dgra bcom pa chos skyob kyi bsdus pa/"@bo-x-ewts .
+    
+    bdr:TTF9D6FA0F368AA7BD
+        a                   :Title ;
+        rdfs:label          "ched du brjod pa'i tshoms/"@bo-x-ewts .
 }
