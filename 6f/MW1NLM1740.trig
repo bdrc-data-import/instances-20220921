@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1740 {
+    bda:LGF8FB300784CF6735
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-19T11:27:05.835Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIMA07EBF90  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
@@ -21,35 +27,40 @@ bdg:MW1NLM1740 {
     bda:MW1NLM1740  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1740 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "6f/MW1NLM1740.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1740 ;
-        adm:logEntry        bda:LGIMA07EBF90 ;
+        adm:logEntry        bda:LGF8FB300784CF6735 , bda:LGIMA07EBF90 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1740  a       :Instance ;
-        skos:prefLabel      "slob dpon chen po pad+ma kA ra'i zhabs kyis mdzad pa'i 'bum bsangs bai TUr+ya'i sngon po bkra shis 'dod pa'i re skongs sogs/"@bo-x-ewts ;
+        skos:prefLabel      "'bum bsangs bai TUr+ya'i sngon po bkra shis 'dod pa'i re skongs sogs/"@bo-x-ewts ;
         :dimensionsStatement  "18.5x7" ;
-        :hasTitle           bdr:TT215BB5EA05C8DBB9 ;
+        :hasTitle           bdr:TT215BB5EA05C8DBB9 , bdr:TTC5E81EBC6AA35CB7 ;
         :instanceHasReproduction  bdr:W1NLM1740 ;
         :instanceOf         bdr:WA1NLM1740 ;
         :isRoot             true ;
-        :note               bdr:NT3AB6968CEE32BDDF , bdr:NTC5E81EBC6AA35CB7 ;
+        :note               bdr:NT3AB6968CEE32BDDF , bdr:NT4041AC22FE2F84EE ;
         :numberOfVolumes    1 ;
-        :script             bdr:ScriptTibt ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "32 ff., 4 ff., 6 ff., 3 ff., 8 ff., 2 ff., 3 ff., 6 ff., 3 ff., 4 ff., 12 ff., 2 ff., 2 ff., 3 ff., 6 ff., 6 ff. end folio missing" .
     
     bdr:NT3AB6968CEE32BDDF
         a                   :Note ;
-        :noteText           "missingPages: M0059658-017 [Final pages are missing 7A] Image 207"@en .
-    
-    bdr:NTC5E81EBC6AA35CB7
-        a                   :Note ;
         :noteText           "nlmId: M0059658"@en .
+    
+    bdr:NT4041AC22FE2F84EE
+        a                   :Note ;
+        :noteText           "missingPages: M0059658-017 [Final pages are missing 7A] Image 207"@en .
     
     bdr:TT215BB5EA05C8DBB9
         a                   :Title ;
+        rdfs:label          "'bum bsangs bai TUr+ya'i sngon po bkra shis 'dod pa'i re skongs sogs/"@bo-x-ewts .
+    
+    bdr:TTC5E81EBC6AA35CB7
+        a                   :TitlePageTitle ;
         rdfs:label          "slob dpon chen po pad+ma kA ra'i zhabs kyis mdzad pa'i 'bum bsangs bai TUr+ya'i sngon po bkra shis 'dod pa'i re skongs sogs/"@bo-x-ewts .
 }

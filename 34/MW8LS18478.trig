@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18478 {
+    bda:LG7B13E1F71A5EF8D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-19T16:15:33.506Z"^^xsd:dateTime ;
+        adm:logMessage      "added author and series name and number"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGB61C6F168E5509B0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-05T10:34:44.361Z"^^xsd:dateTime ;
@@ -21,11 +27,11 @@ bdg:MW8LS18478 {
     bda:MW8LS18478  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18478 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "34/MW8LS18478.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18478 ;
-        adm:logEntry        bda:LGB61C6F168E5509B0 ;
+        adm:logEntry        bda:LG7B13E1F71A5EF8D4 , bda:LGB61C6F168E5509B0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -37,28 +43,30 @@ bdg:MW8LS18478 {
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105050499" .
     
-    bdr:MW8LS18478  a       :Instance ;
+    bdr:MW8LS18478  a       :Instance , :SerialInstance ;
         skos:prefLabel      "lho kha sa khul gyi gnas yig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:IDFF228703ACE3EDCB ;
         :authorshipStatement  "chos 'phel gyis brtsams/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par thengs 6"@bo-x-ewts ;
+        :editionStatement   "par thengs drug pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT4DB6FF1581B715E8 , bdr:TT9155DAA50E780B87 ;
+        :illustrations      "ill." ;
         :instanceEvent      bdr:EV508B47A6800BF091 ;
         :instanceHasReproduction  bdr:W8LS18478 ;
         :instanceOf         bdr:WA8LS18478 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "146 p." .
+        :workExtentStatement  "146 p." ;
+        :workSeriesNumber   "1" .
     
     bdr:TT4DB6FF1581B715E8
         a                   :TitlePageTitle ;
-        rdfs:label          "gangs can ljongs kyi gnas bshad lam yig gsar ma/"@bo-x-ewts .
+        rdfs:label          "gangs can bod kyi gnas bshad lam yig gsar ma/ lho kha sa khul gyi gnas yig"@bo-x-ewts .
     
     bdr:TT9155DAA50E780B87
         a                   :Title ;

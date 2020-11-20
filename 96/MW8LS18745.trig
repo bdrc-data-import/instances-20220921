@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18745 {
+    bda:LG1A862732FA55DB0E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-19T10:47:05.609Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, series name and number"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG64BFC8FCB489E591
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-14T12:35:08.609Z"^^xsd:dateTime ;
@@ -27,11 +33,11 @@ bdg:MW8LS18745 {
     bda:MW8LS18745  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18745 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "96/MW8LS18745.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18745 ;
-        adm:logEntry        bda:LG64BFC8FCB489E591 , bda:LGF674B5F8F88350E6 ;
+        adm:logEntry        bda:LG1A862732FA55DB0E , bda:LG64BFC8FCB489E591 , bda:LGF674B5F8F88350E6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -43,14 +49,15 @@ bdg:MW8LS18745 {
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105092253" .
     
-    bdr:MW8LS18745  a       :Instance ;
+    bdr:MW8LS18745  a       :Instance , :SerialInstance ;
         skos:prefLabel      "gzhis rtse sa khul gyi gnas yig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID0F9EDA117381E922 ;
         :authorshipStatement  "chos 'phel gyis brtsams/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "208 par gzhi dang po/ 2014 par thengs bzhi pa/"@bo-x-ewts ;
+        :editionStatement   "2008 par gzhi dang po/ 2014 par thengs bzhi pa/"@bo-x-ewts ;
         :hasTitle           bdr:TTD1552B28534F1193 , bdr:TTD2B3ABA56154FE1D ;
+        :illustrations      "ill." ;
         :instanceEvent      bdr:EVAACB297D017048CD ;
         :instanceHasReproduction  bdr:W8LS18745 ;
         :instanceOf         bdr:WA8LS18745 ;
@@ -60,7 +67,8 @@ bdg:MW8LS18745 {
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "213 p." .
+        :workExtentStatement  "6, 213 p." ;
+        :workSeriesNumber   "3" .
     
     bdr:TTD1552B28534F1193
         a                   :Title ;
@@ -68,5 +76,5 @@ bdg:MW8LS18745 {
     
     bdr:TTD2B3ABA56154FE1D
         a                   :TitlePageTitle ;
-        rdfs:label          "gangs can bod kyi gnas bshad lam yig gsar ma las gzhis rtse sa khul gyi gnas yig gzhis rtse sa khul gyi gnas yig"@bo-x-ewts .
+        rdfs:label          "gangs can bod kyi gnas bshad lam yig gsar ma/ gzhis rtse sa khul gyi gnas yig"@bo-x-ewts .
 }
