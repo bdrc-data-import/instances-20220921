@@ -12,27 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016750 {
+    bda:LGB00E656131ABB62D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-04T14:42:20.921Z"^^xsd:dateTime ;
+        adm:logMessage      "published in order to create scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016750
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016750 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "3e/MW00EGS1016750.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016750 ;
+        adm:logEntry        bda:LGB00E656131ABB62D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV5C71997F0AC6B249
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID05E68CC8C9FB1529
+        a                   bdr:HollisId ;
+        rdf:value           "014253875" .
+    
     bdr:MW00EGS1016750
         a                   :Instance ;
         skos:prefLabel      "khams 'brong smad lci srib yul dgon gyi byung ba brjod pa 'brog g.yag dar ma'i rmig rjes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05E68CC8C9FB1529 ;
+        :authorshipStatement  "'brong smyon shes rab zla shar gyis brtsams/"@bo-x-ewts ;
         :hasTitle           bdr:TT7E8725F450FAE42C ;
+        :illustrations      "[9] p. plates, chiefly col." ;
+        :instanceEvent      bdr:EV5C71997F0AC6B249 ;
         :instanceHasReproduction  bdr:W00EGS1016750 ;
         :instanceOf         bdr:WA00EGS1016750 ;
         :isRoot             true ;
         :note               bdr:NTC7FC1D61EABE5D8B ;
-        :numberOfVolumes    1 .
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[zi ling?]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "223 p." .
     
     bdr:NTC7FC1D61EABE5D8B
         a                   :Note ;

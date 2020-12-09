@@ -12,27 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016711 {
+    bda:LGAA188E141BE32ABD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-02T23:31:03.247Z"^^xsd:dateTime ;
+        adm:logMessage      "attempted publication to create scanning request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016711
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016711 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a5/MW00EGS1016711.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016711 ;
+        adm:logEntry        bda:LGAA188E141BE32ABD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV4D0A20D8FDF495A9
+        a                   :PublishedEvent ;
+        :onOrAbout          "2005pref." .
+    
+    bdr:ID5D75E90C6D90B9A6
+        a                   bdr:HollisId ;
+        rdf:value           "014253860" .
+    
     bdr:MW00EGS1016711
         a                   :Instance ;
         skos:prefLabel      "bkra shis g.yas su 'khyil ba'i dung sgra/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D75E90C6D90B9A6 ;
         :hasTitle           bdr:TT1EAE519C284FACEF , bdr:TT63BC4C4E6B9FD497 , bdr:TTFD69D5D459EC27E7 ;
+        :illustrations      "[8] p. colored plates" ;
+        :instanceEvent      bdr:EV4D0A20D8FDF495A9 ;
         :instanceHasReproduction  bdr:W00EGS1016711 ;
         :instanceOf         bdr:WA00EGS1016711 ;
         :isRoot             true ;
         :note               bdr:NT65AF11C87FCC6335 ;
-        :numberOfVolumes    1 .
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[new delhi]"@en ;
+        :publisherName      "tre hor brtan bzhugs tshogs chung nas 'grems spel byas"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "xiii, 329 p." .
     
     bdr:NT65AF11C87FCC6335
         a                   :Note ;

@@ -12,25 +12,77 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016292 {
+    bda:LG62C23743AA774266
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-14T17:20:51.906Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016292
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016292 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "ec/MW00EGS1016292.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016292 ;
+        adm:logEntry        bda:LG62C23743AA774266 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV853AC214C13E2A03
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:ID24444734320E477D
+        a                   bdr:HollisId ;
+        rdf:value           "014253837" .
+    
+    bdr:ID838C3ED76E6D3FED
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ1267 .R94 1982" .
+    
+    bdr:IDD31F561418F9C3A2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83903670" .
+    
     bdr:MW00EGS1016292
-        a                   :Instance ;
-        skos:prefLabel      "snar thang dang khu re dpar ma'i bka' 'gyur tshig brjod zhib bsdus gsal byed/"@bo-x-ewts , "detailed comparisons of the textual variations between the snar-than and urga redactions of the tibetan bka'-'gyur with notesconcerning the co-ne, sde-dge, and beijing red prints"@en-x-mixed ;
+        a                   :Instance , :SerialInstance ;
+        skos:altLabel       "detailed comparisons of the textual variations between the snar-than and urga redactions of the tibetan bka'-'gyur with notesconcerning the co-ne, sde-dge, and beijing red prints"@en-x-mixed ;
+        skos:prefLabel      "snar thang dang khu re dpar ma'i bka' 'gyur tshig brjod zhib bsdus gsal byed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID24444734320E477D , bdr:ID838C3ED76E6D3FED , bdr:IDD31F561418F9C3A2 ;
+        :biblioNote         "reproduced from a manuscript presented by the ven. tanpai nyima of the ribo gegye geden phuntsokling datshang of buryat a.s.s.r."@en ;
         :hasTitle           bdr:TT32EE680B18B2D004 , bdr:TT6E7DF542F50EE919 , bdr:TTD96B033880232685 ;
+        :instanceEvent      bdr:EV853AC214C13E2A03 ;
         :instanceHasReproduction  bdr:W00EGS1016292 ;
         :instanceOf         bdr:WA00EGS1016292 ;
         :isRoot             true ;
-        :numberOfVolumes    1 .
+        :note               bdr:NTD5221DB3D17A4D11 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "tibet house"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "[156] p." ;
+        :workSeriesNumber   "v. 1" .
+    
+    bdr:NTD5221DB3D17A4D11
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files"@en .
     
     bdr:TT32EE680B18B2D004
         a                   :Title ;

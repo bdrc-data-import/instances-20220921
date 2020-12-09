@@ -18,16 +18,36 @@ bdg:MW00EGS1016259 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGE7A39CCCD16C749C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-12T18:27:52Z"^^xsd:dateTime ;
+        adm:logMessage      "new publication"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016259
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS151796" ;
         adm:adminAbout      bdr:MW00EGS1016259 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      20 ;
         adm:gitPath         "18/MW00EGS1016259.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016259 ;
-        adm:logEntry        bda:LG5ECBA6B30BEBC1B5 ;
+        adm:logEntry        bda:LG5ECBA6B30BEBC1B5 , bda:LGE7A39CCCD16C749C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious suppot of the khyentse foundation"@en ;
         adm:outlineType     bda:OutlineTypeSubjectCollection ;
@@ -51,15 +71,42 @@ bdg:MW00EGS1016259 {
         :contentLocationInstance  bdr:W00EGS1016259 ;
         :contentLocationPage  167 .
     
+    bdr:EV84A50E2D677C8F54
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:ID0E8BB9E07CFD5872
+        a                   bdr:HollisId ;
+        rdf:value           "014253821" .
+    
+    bdr:IDEA5D758A0255D8A7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82904037" .
+    
+    bdr:IDFA5608AEE41C5002
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.4 .S28 1982" .
+    
     bdr:MW00EGS1016259
         a                   :Instance ;
-        skos:prefLabel      "bsangs yig dgos 'dod kun 'grub/"@bo-x-ewts , "rituals for the offering of bsans in propitiation of the local and mountain deities"@en-x-mixed ;
+        skos:altLabel       "rituals for the offering of bsans in propitiation of the local and mountain deities"@en-x-mixed ;
+        skos:prefLabel      "bsangs yig dgos 'dod kun 'grub/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0E8BB9E07CFD5872 , bdr:IDEA5D758A0255D8A7 , bdr:IDFA5608AEE41C5002 ;
+        :authorshipStatement  "by bdag-chen rgya-gar-ba ses-rab-bzan-po and other masters of the sa-skya-pa tradition"@en ;
+        :biblioNote         "reproduced from a rare manuscript from the library of bla-ma chos-grags-rgya-mtsho."@en ;
         :hasPart            bdr:MW00EGS1016259_4A3791 , bdr:MW00EGS1016259_6B3748 , bdr:MW00EGS1016259_A73E9A ;
         :hasTitle           bdr:TTA9D94A82ACC8F1BE , bdr:TTF80DE5393191FB78 ;
+        :instanceEvent      bdr:EV84A50E2D677C8F54 ;
         :instanceHasReproduction  bdr:W00EGS1016259 ;
         :instanceOf         bdr:WA00EGS1016259 ;
         :isRoot             true ;
+        :note               bdr:NT64E542FA0A95B523 , bdr:NT829CC1D49F856CBD ;
         :numberOfVolumes    1 ;
+        :publisherLocation  "bir, distt. kangra, h.p., india"@en ;
+        :publisherName      "d. tsondu senghe"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "188 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1016259_4A3791
@@ -104,6 +151,14 @@ bdg:MW00EGS1016259 {
         :partOf             bdr:MW00EGS1016259 ;
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT64E542FA0A95B523
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files"@en .
+    
+    bdr:NT829CC1D49F856CBD
+        a                   :Note ;
+        :noteText           "contents: slob dpon pad+mas mdzad pa'i gser skyems.--bdag-chen rgya gar pas mdzad pa'i bsans yig dgos 'dod kun 'grub.-sa bsan gi tho yig.--bla bslu 'chi bdag g.yul las rgyal ba'i go mtshon."@en .
     
     bdr:TT33C9132BDD97DEF9
         a                   :Title ;

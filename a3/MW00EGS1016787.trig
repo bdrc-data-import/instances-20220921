@@ -12,14 +12,42 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016787 {
+    bda:LG99A864B262EF1285
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-05T18:59:03.843Z"^^xsd:dateTime ;
+        adm:logMessage      "second attempt to publish for scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016787
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016787 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "a3/MW00EGS1016787.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016787 ;
+        adm:logEntry        bda:LG99A864B262EF1285 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -29,16 +57,45 @@ bdg:MW00EGS1016787 {
         :agent              bdr:P8012 ;
         :role               bdr:R0ER0015 .
     
+    bdr:EVD6DFD1747EB27C62
+        a                   :PublishedEvent ;
+        :onYear             "2005"^^xsd:gYear .
+    
+    bdr:ID5648365C20AC6FAB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005385943" .
+    
+    bdr:ID8E94C0243DEA0C56
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4570.S3 M36 2005" .
+    
+    bdr:IDCE6E306D7380294D
+        a                   bdr:HollisId ;
+        rdf:value           "014253891" .
+    
+    bdr:IDE9A1BAD9D70CDEC8
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "010434033-9" .
+    
     bdr:MW00EGS1016787
         a                   :Instance ;
-        skos:prefLabel      "nang chos dang tshan rig las brtsams pa'i ched rtsom gces btus zla gsar/"@bo-x-ewts , "Naṅ chos daṅ tshan rig las brtsams paʼi ched rtsom gces btus zla gsar /rtsom sgrig pa, Na-ga Saṅs-rgyas-bstan-dar."@en-x-mixed ;
+        skos:altLabel       "Naṅ chos daṅ tshan rig las brtsams paʼi ched rtsom gces btus zla gsar /rtsom sgrig pa, Na-ga Saṅs-rgyas-bstan-dar."@en-x-mixed ;
+        skos:prefLabel      "nang chos dang tshan rig las brtsams pa'i ched rtsom gces btus zla gsar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5648365C20AC6FAB , bdr:ID8E94C0243DEA0C56 , bdr:IDCE6E306D7380294D , bdr:IDE9A1BAD9D70CDEC8 ;
+        :authorshipStatement  "rtsom sgrig pa na ga sangs rgyas bstan dar/"@bo-x-ewts ;
         :creator            bdr:CRAD075830EDDAD469 ;
         :hasTitle           bdr:TTB5BD5BB6B9DD8FFD , bdr:TTEE4BC150D92EED5F ;
+        :instanceEvent      bdr:EVD6DFD1747EB27C62 ;
         :instanceHasReproduction  bdr:W00EGS1016787 ;
         :instanceOf         bdr:WA00EGS1016787 ;
         :isRoot             true ;
         :note               bdr:NT07CDEC149FA5CEF4 ;
-        :numberOfVolumes    1 .
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.."@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "vi, 203 p." .
     
     bdr:NT07CDEC149FA5CEF4
         a                   :Note ;

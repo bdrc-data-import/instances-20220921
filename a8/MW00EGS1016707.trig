@@ -12,26 +12,87 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016707 {
+    bda:LGE4A6C3BF69E53C94
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-02T04:35:32.921Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging published in order to make scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016707
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016707 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      18 ;
         adm:gitPath         "a8/MW00EGS1016707.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016707 ;
+        adm:logEntry        bda:LGE4A6C3BF69E53C94 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVDA8885AFD2E787BF
+        a                   :PublishedEvent ;
+        :onYear             "1986"^^xsd:gYear .
+    
+    bdr:ID29EF0383E8270E6E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ1955.7 B78 1986" .
+    
+    bdr:ID4F6352797F4DEAE0
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007386136-7" .
+    
+    bdr:ID6DA3B970E9CC0CA4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "93908441" .
+    
+    bdr:ID9C42BD6FCEBC3349
+        a                   bdr:HollisId ;
+        rdf:value           "014253858" .
+    
+    bdr:IDC30BDD12BD8ACD6E
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-3041" .
+    
     bdr:MW00EGS1016707
         a                   :Instance ;
-        skos:prefLabel      "mngon rtogs rgyan gyi 'bru 'grel de nyid snang ba'i 'od/"@bo-x-ewts , "a word to word commentary on the abhisamayalankara"@en-x-mixed ;
+        skos:altLabel       "a word to word commentary on the abhisamayalankara"@en-x-mixed ;
+        skos:prefLabel      "mngon rtogs rgyan gyi 'bru 'grel de nyid snang ba'i 'od/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID29EF0383E8270E6E , bdr:ID4F6352797F4DEAE0 , bdr:ID6DA3B970E9CC0CA4 , bdr:ID9C42BD6FCEBC3349 , bdr:IDC30BDD12BD8ACD6E ;
+        :authorshipStatement  "by a sbong rin po che bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts ;
         :hasTitle           bdr:TT0EC59F792B315A16 , bdr:TT23884C7172FF644A , bdr:TT4DEF6430A1F35A93 , bdr:TT6F061EB03820CE6B , bdr:TTC71EE34F783DFA24 , bdr:TTDA332795766A27E5 ;
+        :instanceEvent      bdr:EVDA8885AFD2E787BF ;
         :instanceHasReproduction  bdr:W00EGS1016707 ;
         :instanceOf         bdr:WA00EGS1016707 ;
         :isRoot             true ;
         :note               bdr:NT513C31AAB431F48E ;
-        :numberOfVolumes    1 .
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p., india"@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "344 p." .
     
     bdr:NT513C31AAB431F48E
         a                   :Note ;

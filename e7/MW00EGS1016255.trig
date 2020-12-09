@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016255 {
+    bda:LG0D45A9F0A6557772
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-11T23:17:01.781Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG34A8719AAD37BE7C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-11-26T21:04:59.594Z"^^xsd:dateTime ;
@@ -47,16 +53,30 @@ bdg:MW00EGS1016255 {
         adm:logMessage      "subject class changed from G4167 to G1KR1648"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016255
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB90314" ;
         adm:adminAbout      bdr:MW00EGS1016255 ;
-        adm:facetIndex      96 ;
+        adm:facetIndex      105 ;
         adm:gitPath         "e7/MW00EGS1016255.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016255 ;
-        adm:logEntry        bda:LG34A8719AAD37BE7C , bda:LG45DFA5114B9414A4 , bda:LG8A11C41C97387281 , bda:LGB1FA6BAC0B54470F , bda:LGCA512D0667B44BA3 , bda:LGDF6CACD75ECFB626 ;
+        adm:logEntry        bda:LG0D45A9F0A6557772 , bda:LG34A8719AAD37BE7C , bda:LG45DFA5114B9414A4 , bda:LG8A11C41C97387281 , bda:LGB1FA6BAC0B54470F , bda:LGCA512D0667B44BA3 , bda:LGDF6CACD75ECFB626 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
         adm:outlineType     bda:OutlineTypeNoType ;
@@ -308,15 +328,45 @@ bdg:MW00EGS1016255 {
         :contentLocationInstance  bdr:W00EGS1016255 ;
         :contentLocationPage  210 .
     
+    bdr:EVD8D15714C294EC5C
+        a                   :PublishedEvent ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:ID48BEB907C6D0523B
+        a                   bdr:HollisId ;
+        rdf:value           "014253819" .
+    
+    bdr:ID748D6E5C44E47285
+        a                   bdr:PL480 ;
+        rdf:value           "i tib 2583" .
+    
+    bdr:ID80F2FF0C629D12A0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7697 .B34 1984" .
+    
+    bdr:IDBA9F1AE7D98E24E9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85901464" .
+    
     bdr:MW00EGS1016255
         a                   :Instance ;
-        skos:prefLabel      "spo rong chos spyod/"@bo-x-ewts , "rituals for the propitiation of the protective deities involked by the monastery of bde-chen padma-chos-sdins, a monastery of the bo-don tradition in spo ron, western tibet"@en-x-mixed ;
+        skos:altLabel       "rituals for the propitiation of the protective deities involked by the monastery of bde-chen padma-chos-sdins, a monastery of the bo-don tradition in spo ron, western tibet"@en-x-mixed ;
+        skos:prefLabel      "spo rong chos spyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48BEB907C6D0523B , bdr:ID748D6E5C44E47285 , bdr:ID80F2FF0C629D12A0 , bdr:IDBA9F1AE7D98E24E9 ;
+        :biblioNote         "reproduced from a rare manuscript belonging to a monk of the tradition."@en ;
         :hasPart            bdr:MW00EGS1016255_70BD0D , bdr:MW00EGS1016255_8D830D , bdr:MW00EGS1016255_A4E541 , bdr:MW00EGS1016255_D2C1A6 , bdr:MW00EGS1016255_EFF28F ;
         :hasTitle           bdr:TT605D86AB64D6237D , bdr:TTB721D748A11481A5 , bdr:TTEA45F6A58512AD82 ;
+        :instanceEvent      bdr:EVD8D15714C294EC5C ;
         :instanceHasReproduction  bdr:W00EGS1016255 ;
         :instanceOf         bdr:WA00EGS1016255 ;
         :isRoot             true ;
+        :note               bdr:NT4818F358BCDD6DA3 ;
         :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "ngawang topgyel"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "456 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1016255_0151D0
@@ -855,6 +905,10 @@ bdg:MW00EGS1016255 {
         :partOf             bdr:MW00EGS1016255 ;
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeTableOfContent .
+    
+    bdr:NT4818F358BCDD6DA3
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files"@en .
     
     bdr:TT03119A94198ED72D
         a                   :Title ;

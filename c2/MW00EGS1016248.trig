@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016248 {
+    bda:LG24ACF7276C4F4B78
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-11T17:22:12.578Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG26B4916906AFC33E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-05-16T16:49:17.081Z"^^xsd:dateTime ;
@@ -35,16 +41,30 @@ bdg:MW00EGS1016248 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016248
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1016248" ;
         adm:adminAbout      bdr:MW00EGS1016248 ;
-        adm:facetIndex      190 ;
+        adm:facetIndex      197 ;
         adm:gitPath         "c2/MW00EGS1016248.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016248 ;
-        adm:logEntry        bda:LG26B4916906AFC33E , bda:LG3EC1888C121E3DB6 , bda:LG4C247082348AED9B , bda:LG658633917139CAF4 ;
+        adm:logEntry        bda:LG24ACF7276C4F4B78 , bda:LG26B4916906AFC33E , bda:LG3EC1888C121E3DB6 , bda:LG4C247082348AED9B , bda:LG658633917139CAF4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
         adm:outlineType     bda:OutlineTypeSubjectCollection ;
@@ -686,16 +706,40 @@ bdg:MW00EGS1016248 {
         :contentLocationPage  9 ;
         :contentLocationVolume  1 .
     
+    bdr:EV8263E9AB9B331CF0
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID53C456EA5D1D5D5C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83902737" .
+    
+    bdr:ID785D77834F880557
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7695 .C65 1983" .
+    
+    bdr:IDDD5F6F26C2FD1E16
+        a                   bdr:HollisId ;
+        rdf:value           "014253816" .
+    
     bdr:MW00EGS1016248
         a                   :Instance ;
-        skos:prefLabel      "gnas chung rdo rje sgra dbyangs gling gi 'don chog"@bo-x-ewts , "the collected works of liturgy of the gnas-chun rdo-rje-sgra-dbyans-glin monastery"@en-x-mixed ;
+        skos:altLabel       "the collected works of liturgy of the gnas-chun rdo-rje-sgra-dbyans-glin monastery"@en-x-mixed ;
+        skos:prefLabel      "gnas chung rdo rje sgra dbyangs gling gi 'don chog"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID53C456EA5D1D5D5C , bdr:ID785D77834F880557 , bdr:IDDD5F6F26C2FD1E16 ;
         :hasPart            bdr:MW00EGS1016248_A6724E , bdr:MW00EGS1016248_E1654E , bdr:MW00EGS1016248_FA4193 ;
         :hasTitle           bdr:TTB162D9C47F014B02 , bdr:TTCC791002CB09F874 ;
+        :instanceEvent      bdr:EV8263E9AB9B331CF0 ;
         :instanceHasReproduction  bdr:W00EGS1016248 ;
         :instanceOf         bdr:WA00EGS1016248 ;
         :isRoot             true ;
         :note               bdr:NT98012542410BD088 ;
         :numberOfVolumes    3 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "lobzang tondan"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1016248_04B9F8

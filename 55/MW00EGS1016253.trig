@@ -24,16 +24,36 @@ bdg:MW00EGS1016253 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGE575E3F847DC7F40
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-11T22:25:43.171Z"^^xsd:dateTime ;
+        adm:logMessage      "published"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016253
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1016253" ;
         adm:adminAbout      bdr:MW00EGS1016253 ;
-        adm:facetIndex      532 ;
+        adm:facetIndex      540 ;
         adm:gitPath         "55/MW00EGS1016253.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016253 ;
-        adm:logEntry        bda:LG34799DAD85F6F1D0 , bda:LG82DB2885EA603874 ;
+        adm:logEntry        bda:LG34799DAD85F6F1D0 , bda:LG82DB2885EA603874 , bda:LGE575E3F847DC7F40 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Palri via TBRC Convert2Outline version: 1.5.5"@en ;
         adm:outlineType     bda:OutlineTypeSubjectCollection ;
@@ -1859,15 +1879,41 @@ bdg:MW00EGS1016253 {
         :contentLocationPage  5 ;
         :contentLocationVolume  9 .
     
+    bdr:EV2FA4E3091D1AA090
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:IDB9739E83C3EB140D
+        a                   bdr:HollisId ;
+        rdf:value           "014253818" .
+    
+    bdr:IDC4080137E76FA539
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83903663" .
+    
+    bdr:IDED6366075724CC42
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ8920.2 .S63 1982" .
+    
     bdr:MW00EGS1016253
         a                   :Instance ;
-        skos:prefLabel      "smad rgyud grwa tshang gi chos spyod rgyas pa/"@bo-x-ewts , "the collected rituals and explanatory texts used by the monks of tantric college"@en ;
+        skos:altLabel       "the collected rituals and explanatory texts used by the monks of tantric college"@en ;
+        skos:prefLabel      "smad rgyud grwa tshang gi chos spyod rgyas pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB9739E83C3EB140D , bdr:IDC4080137E76FA539 , bdr:IDED6366075724CC42 ;
+        :authorshipStatement  "collected from various blockprints and manuscripts by snagrampa lobsang geleg and snagrampa cheme dorje"@en ;
         :hasPart            bdr:MW00EGS1016253_06984B , bdr:MW00EGS1016253_16CF24 , bdr:MW00EGS1016253_3D0D9D , bdr:MW00EGS1016253_6849E1 , bdr:MW00EGS1016253_8863D0 , bdr:MW00EGS1016253_8A7461 , bdr:MW00EGS1016253_A1EEA6 , bdr:MW00EGS1016253_A20AE5 , bdr:MW00EGS1016253_B98AA5 , bdr:MW00EGS1016253_D7E1AD , bdr:MW00EGS1016253_F695F0 ;
         :hasTitle           bdr:TT811D868CA2E19F2C , bdr:TT8F13CD31B0F160A7 , bdr:TTDA1F0C12194FB4CB ;
+        :instanceEvent      bdr:EV2FA4E3091D1AA090 ;
         :instanceHasReproduction  bdr:W00EGS1016253 ;
         :instanceOf         bdr:WA00EGS1016253 ;
         :isRoot             true ;
+        :note               bdr:NT2C8149362D2100EC ;
         :numberOfVolumes    11 ;
+        :publisherLocation  "gyudmed tantric college"@en ;
+        :publisherName      "hunsur, karnataka"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "11 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1016253_00969E
@@ -5623,6 +5669,10 @@ bdg:MW00EGS1016253 {
         :partOf             bdr:MW00EGS1016253_A1EEA6 ;
         :partTreeIndex      "10.28" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT2C8149362D2100EC
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files"@en .
     
     bdr:TT001F9338B43E12F7
         a                   :Title ;
