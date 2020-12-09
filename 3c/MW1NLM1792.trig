@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1792 {
+    bda:LG7D422053DAE0DA61
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-08T11:29:09.815Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
@@ -21,17 +27,18 @@ bdg:MW1NLM1792 {
     bda:MW1NLM1792  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1792 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "3c/MW1NLM1792.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1792 ;
-        adm:logEntry        bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG7D422053DAE0DA61 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1792  a       :Instance ;
-        skos:prefLabel      "chos mngon pa'i mdzod sogs/"@bo-x-ewts ;
+        skos:prefLabel      "chos mngon pa mdzod kyi rtsa ba/"@bo-x-ewts ;
         :dimensionsStatement  "22x6" ;
+        :hasSourcePrintery  bdr:G1955 ;
         :hasTitle           bdr:TT14ED67ECE4B81E52 ;
         :instanceHasReproduction  bdr:W1NLM1792 ;
         :instanceOf         bdr:WA1NLM1792 ;
@@ -51,6 +58,6 @@ bdg:MW1NLM1792 {
         :noteText           "missingPages: M0059710-001 [Page 11 double numbered] Image 21-24"@en .
     
     bdr:TT14ED67ECE4B81E52
-        a                   :Title ;
-        rdfs:label          "chos mngon pa'i mdzod sogs/"@bo-x-ewts .
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos mngon pa mdzod kyi rtsa ba/"@bo-x-ewts .
 }
