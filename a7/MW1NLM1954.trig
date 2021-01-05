@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1954 {
-    bda:LG250D2CB27E9B0916
+    bda:LG5EB6D37B075CDC2A
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG7FFC8FF0387E431A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-04T11:54:49.225Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +33,42 @@ bdg:MW1NLM1954 {
     bda:MW1NLM1954  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1954 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "a7/MW1NLM1954.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1954 ;
-        adm:logEntry        bda:LG250D2CB27E9B0916 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG5EB6D37B075CDC2A , bda:LG7FFC8FF0387E431A , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV0917903814F8D13C
+        a                   :PublishedEvent .
+    
     bdr:MW1NLM1954  a       :Instance ;
-        skos:prefLabel      "dpal gsang ba 'dus pa'i rtsa rgyud/"@bo-x-ewts ;
+        skos:prefLabel      "gsang 'dus rtsa rgyud/"@bo-x-ewts ;
         :dimensionsStatement  "22x5.5" ;
-        :hasTitle           bdr:TT659E60E0C3987BF9 ;
+        :hasTitle           bdr:TT659E60E0C3987BF9 , bdr:TTF62535D6F9E3BFFF ;
+        :instanceEvent      bdr:EV0917903814F8D13C ;
         :instanceHasReproduction  bdr:W1NLM1954 ;
         :instanceOf         bdr:WA1NLM1954 ;
         :isRoot             true ;
-        :note               bdr:NTF62535D6F9E3BFFF ;
+        :note               bdr:NT250D2CB27E9B0916 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "e ge thu'i/ sog yul/"@bo-x-ewts ;
+        :publisherName      "dge ldan dam chos rab rgyas gling /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "94 ff." .
     
-    bdr:NTF62535D6F9E3BFFF
+    bdr:NT250D2CB27E9B0916
         a                   :Note ;
         :noteText           "nlmId: M0059872"@en .
     
     bdr:TT659E60E0C3987BF9
         a                   :Title ;
+        rdfs:label          "gsang 'dus rtsa rgyud/"@bo-x-ewts .
+    
+    bdr:TTF62535D6F9E3BFFF
+        a                   :TitlePageTitle ;
         rdfs:label          "dpal gsang ba 'dus pa'i rtsa rgyud/"@bo-x-ewts .
 }

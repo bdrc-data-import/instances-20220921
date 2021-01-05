@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1949 {
-    bda:LGF8F590F99399AB52
+    bda:LG842AC7CCC00AD6D0
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG9024B9D97DFC9108
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-04T11:54:47.439Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +33,45 @@ bdg:MW1NLM1949 {
     bda:MW1NLM1949  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1949 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "05/MW1NLM1949.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1949 ;
-        adm:logEntry        bda:LGF8F590F99399AB52 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG842AC7CCC00AD6D0 , bda:LG9024B9D97DFC9108 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVF8F590F99399AB52
+        a                   :PublishedEvent ;
+        :onOrAbout          "n." .
+    
     bdr:MW1NLM1949  a       :Instance ;
-        skos:prefLabel      "'phags pa spyan ras gzigs dbang phyug phyag stong spyan ston du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs sogs/"@bo-x-ewts ;
+        skos:prefLabel      "spyan ras gzigs dbang phyug phyag stong spyan stong du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs sogs/"@bo-x-ewts ;
         :dimensionsStatement  "18x6" ;
-        :hasTitle           bdr:TT87C35A06CC9548B0 ;
+        :hasTitle           bdr:TTC87E0C9380230DB4 , bdr:TTE3E1D91FFC509F1C ;
+        :instanceEvent      bdr:EVF8F590F99399AB52 ;
         :instanceHasReproduction  bdr:W1NLM1949 ;
         :instanceOf         bdr:WA1NLM1949 ;
         :isRoot             true ;
-        :note               bdr:NTE3E1D91FFC509F1C ;
+        :note               bdr:NT096AD2F8FC2599B3 , bdr:NT87C35A06CC9548B0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "27 ff., 14 ff., 15 ff., 7 ff., 5 ff., 4 ff., 5 ff., 3 ff., 4 ff., 3 ff., 2 ff.,  5 ff., 3 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NTE3E1D91FFC509F1C
+    bdr:NT096AD2F8FC2599B3
         a                   :Note ;
         :noteText           "nlmId: M0059867"@en .
     
-    bdr:TT87C35A06CC9548B0
+    bdr:NT87C35A06CC9548B0
+        a                   :Note ;
+        :noteText           "01)  spyan ras gzigs dbang phyug phyag stong spyan stong du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs/  27 ff.\n02)  slob dpon pad+mas mdzad pa'i grib bsangs dang /phyag na rdo rje'i grib bsangs/  14 ff.\n03)  khrid chen bzhi'i bsnyen sgrub byed tshul/  15 ff.\n04)  'chi ba rjes su dran pa'i man ngag snying gi thur ma/  7 ff.\n05)  ye shes sku mchog ma/   5 ff.\n06)   gzungs sna tshogsl/  4 ff.\n07)   zhi ba dkar po'i bsangs/  5 ff.\n08)   ma Ni'i 'don thabs dmigs rim / 3 ff.\n09)  rgya nag rma bsangs/   4 ff. \n10)  me lha'i bsangs mchod/  3 ff.\n11)  kha 'don rgyun khyer shin tu bsdus pa /  2 ff.\n12)  bzang spyod smon lam gyi byad grol byabs khrus bya tshul ngan sel byed pa/ 5 ff.\n13)  rnam rgyal ma'i gzungs/  3 ff."@en .
+    
+    bdr:TTC87E0C9380230DB4
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa spyan ras gzigs dbang phyug phyag stong spyan stong du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs/"@bo-x-ewts .
+    
+    bdr:TTE3E1D91FFC509F1C
         a                   :Title ;
-        rdfs:label          "'phags pa spyan ras gzigs dbang phyug phyag stong spyan ston du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs sogs/"@bo-x-ewts .
+        rdfs:label          "spyan ras gzigs dbang phyug phyag stong spyan stong du sprul pa rgya chen po yongs su rdzogs pa thogs pa med par thugs rje chen po dang ldan pa'i gzungs sogs/"@bo-x-ewts .
 }

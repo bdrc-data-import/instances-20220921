@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1953 {
-    bda:LGE9EE400A0B8B7727
+    bda:LG1FF1B79DF02AB0B7
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGDD1D27C9960001FC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-04T11:54:48.88Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +33,40 @@ bdg:MW1NLM1953 {
     bda:MW1NLM1953  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1953 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "4b/MW1NLM1953.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1953 ;
-        adm:logEntry        bda:LGE9EE400A0B8B7727 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG1FF1B79DF02AB0B7 , bda:LGDD1D27C9960001FC , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1953  a       :Instance ;
-        skos:prefLabel      "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa sogs/"@bo-x-ewts ;
+        skos:prefLabel      "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa/"@bo-x-ewts ;
         :dimensionsStatement  "17x5.5" ;
-        :hasTitle           bdr:TT6DEF4D5DC4A4A7AB ;
+        :hasTitle           bdr:TT6DEF4D5DC4A4A7AB , bdr:TTC0A16D4DD12431FC , bdr:TTE91880F57C0BB397 ;
         :instanceHasReproduction  bdr:W1NLM1953 ;
         :instanceOf         bdr:WA1NLM1953 ;
         :isRoot             true ;
-        :note               bdr:NTC0A16D4DD12431FC ;
+        :note               bdr:NTE9EE400A0B8B7727 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "69 ff., 56 ff., 10 ff." .
     
-    bdr:NTC0A16D4DD12431FC
+    bdr:NTE9EE400A0B8B7727
         a                   :Note ;
         :noteText           "nlmId: M0059871"@en .
     
     bdr:TT6DEF4D5DC4A4A7AB
         a                   :Title ;
-        rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa sogs/"@bo-x-ewts .
+        rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa/"@bo-x-ewts .
+    
+    bdr:TTC0A16D4DD12431FC
+        a                   :OtherTitle ;
+        rdfs:label          "'dod khams dbang phyug ma dmag zor rgyal mo'i sgrub thabs gtor chog"@bo-x-ewts .
+    
+    bdr:TTE91880F57C0BB397
+        a                   :OtherTitle ;
+        rdfs:label          "sgrol ma rnam gnyis dang rig byed ma rnam gsum 'brel ba'i maN+Dal bzhi'i cho ga bkra shis sgo brgya byed pa'i lde mig"@bo-x-ewts .
 }
