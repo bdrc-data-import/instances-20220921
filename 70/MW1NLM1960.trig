@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1960 {
-    bda:LGC133659911FA3494
+    bda:LG2C7C25CD6F1B0B88
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGBE09FB8CA26289B7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:44.11Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,36 +33,40 @@ bdg:MW1NLM1960 {
     bda:MW1NLM1960  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1960 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "70/MW1NLM1960.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1960 ;
-        adm:logEntry        bda:LGC133659911FA3494 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG2C7C25CD6F1B0B88 , bda:LGBE09FB8CA26289B7 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1960  a       :Instance ;
         skos:prefLabel      "bslab pa yongs su sbyong ba'i cho ga sdom brtson dgyes byed sogs/"@bo-x-ewts ;
         :dimensionsStatement  "17.5x6.5" ;
-        :hasTitle           bdr:TTFE7D3BBF30FDC273 ;
+        :hasTitle           bdr:TT440829BEC97A6544 ;
         :instanceHasReproduction  bdr:W1NLM1960 ;
         :instanceOf         bdr:WA1NLM1960 ;
         :isRoot             true ;
-        :note               bdr:NT440829BEC97A6544 , bdr:NT583F76C4D8D7140D ;
+        :note               bdr:NT0780A7B143E72DE1 , bdr:NT583F76C4D8D7140D , bdr:NTFE7D3BBF30FDC273 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "50 ff., 26 ff., 3 ff., 3 ff., 4 ff., 3 ff., 16 ff., 4 ff., 13 ff.end folio missing" .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT440829BEC97A6544
-        a                   :Note ;
-        :noteText           "nlmId: M0059878"@en .
-    
-    bdr:NT583F76C4D8D7140D
+    bdr:NT0780A7B143E72DE1
         a                   :Note ;
         :noteText           "missingPages: M0059878-009 [Final pages are missing 14A] Image 245"@en .
     
-    bdr:TTFE7D3BBF30FDC273
+    bdr:NT583F76C4D8D7140D
+        a                   :Note ;
+        :noteText           "nlmId: M0059878"@en .
+    
+    bdr:NTFE7D3BBF30FDC273
+        a                   :Note ;
+        :noteText           "01)  bslab pa yongs su sbyong ba'i cho ga sdom brtson dgyes byed/  50 ff.\n02)  rab byung bcu drg sa mo phag gi le'u tho/   26 ff.\n03)  ma gcig gsang spyod la/ 'khor 'das bsres pa'i nyams len/  3 ff.\n04)  sme dbus bcos thabs/ 3 ff.\n05)  dpal mgon don lnga'i gser skyems 'bul tshul/  4 ff.\n06)  rdo rje sder mo bsdus pa'i gzungs/ 3 ff.\n07)  chu bzhi nyer spyod/ 16 ff.\n08)  rims tshar gcod pa'i lus sbyin dri med mchog sbyin/  4 ff.\n09)  skal ldan dngos grub kun 'byung gi bshags pa/   ff. 1-13"@en .
+    
+    bdr:TT440829BEC97A6544
         a                   :Title ;
         rdfs:label          "bslab pa yongs su sbyong ba'i cho ga sdom brtson dgyes byed sogs/"@bo-x-ewts .
 }

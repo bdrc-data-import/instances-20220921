@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1961 {
-    bda:LG30084ADB5D89A600
+    bda:LG3D87A24A05210F6E
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG969159A45AFD5816
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:44.448Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +33,40 @@ bdg:MW1NLM1961 {
     bda:MW1NLM1961  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1961 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "fc/MW1NLM1961.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1961 ;
-        adm:logEntry        bda:LG30084ADB5D89A600 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG3D87A24A05210F6E , bda:LG969159A45AFD5816 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1961  a       :Instance ;
-        skos:prefLabel      "'phags pa tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo sogs/"@bo-x-ewts ;
+        skos:prefLabel      "tshe mdo sogs/"@bo-x-ewts ;
         :dimensionsStatement  "16.5x6.5" ;
-        :hasTitle           bdr:TT29FE34FB0EF06E9C ;
+        :hasTitle           bdr:TT3C231E8EDBF8AD64 , bdr:TTC18A1CC57CAC3D7C ;
         :instanceHasReproduction  bdr:W1NLM1961 ;
         :instanceOf         bdr:WA1NLM1961 ;
         :isRoot             true ;
-        :note               bdr:NTC18A1CC57CAC3D7C ;
+        :note               bdr:NT29FE34FB0EF06E9C , bdr:NT30084ADB5D89A600 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "19 ff., 10 ff., 12 ff., 18 ff., 6 ff., 5 ff., 5 ff., 3 ff., 3 ff., 2 ff.," .
+        :workExtentStatement  "1 v." .
     
-    bdr:NTC18A1CC57CAC3D7C
+    bdr:NT29FE34FB0EF06E9C
+        a                   :Note ;
+        :noteText           "01)  tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo/  19 ff.\n02)  dmigs brtse ma'i las tshogs las srog rlung bcos pa'i thabs/  10 ff.\n03)  'jam dbyangs 'khor lo'am kun thub nyes pa kun sel/  12 ff.\n04)  pad+ma 'byung gnas kyis mdzad pa'i lha 'dre dang mi phyugs mdos glud/  18 ff.\n05)  spyi'i gtor 'bul/   6 ff.\n06)  sgrol ma la brten pa'i 'chi bslu'i gdams pa tshe srog skyobs byed/  5 ff.\n07)  ja mchod/  5 ff.\n08)  spyanras gzigs kyi snying po 'don thabs/  3 ff.\n09)  skabs gsum pa ma/   3 ff.\n10) lce spyang gi bsangs/ 2 ff."@en .
+    
+    bdr:NT30084ADB5D89A600
         a                   :Note ;
         :noteText           "nlmId: M0059879"@en .
     
-    bdr:TT29FE34FB0EF06E9C
+    bdr:TT3C231E8EDBF8AD64
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
+    
+    bdr:TTC18A1CC57CAC3D7C
         a                   :Title ;
-        rdfs:label          "'phags pa tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo sogs/"@bo-x-ewts .
+        rdfs:label          "tshe mdo sogs/"@bo-x-ewts .
 }

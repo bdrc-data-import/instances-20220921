@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1957 {
-    bda:LGE94779E218CB9D5D
+    bda:LGB28DFEFDD5D77580
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGFDAFF8BFC8BF9B55
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:43.029Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,36 +33,44 @@ bdg:MW1NLM1957 {
     bda:MW1NLM1957  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1957 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "33/MW1NLM1957.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1957 ;
-        adm:logEntry        bda:LGE94779E218CB9D5D , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGB28DFEFDD5D77580 , bda:LGFDAFF8BFC8BF9B55 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1957  a       :Instance ;
-        skos:prefLabel      "dpal gsang ba 'dus pa'i bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa sogs/"@bo-x-ewts ;
+        skos:prefLabel      "gsang dus bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa sogs/"@bo-x-ewts ;
         :dimensionsStatement  "29.5x5.5" ;
-        :hasTitle           bdr:TT07022774444CC91E ;
+        :hasTitle           bdr:TT3C032607C995DB89 , bdr:TTDB7199594E3C1253 ;
         :instanceHasReproduction  bdr:W1NLM1957 ;
         :instanceOf         bdr:WA1NLM1957 ;
         :isRoot             true ;
-        :note               bdr:NT3C032607C995DB89 , bdr:NTDB7199594E3C1253 ;
+        :note               bdr:NT07022774444CC91E , bdr:NT1C6E86AAAE3DBC94 , bdr:NTE94779E218CB9D5D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "43 ff., 30 ff., 26 ff., 7 ff., 13 ff., 7 ff., 3 ff.," .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT3C032607C995DB89
+    bdr:NT07022774444CC91E
+        a                   :Note ;
+        :noteText           "01) gsang dus bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa/ 43 ff.\n02) sa bdag 'khrugs sel snang brgyad kyi mdos chog snang srid dbang sdud / 30 ff.\n03) tsong kha pa chen po'i bla ma'i rnam 'byor dang 'brel ba'i dmigs brtse ma'i bsnyen yig dang sbyin sreg bya tshul dngos grub nor bu'i gter mdzod/ 26 ff.\n04)  gsung rab 'don pa'i bshad pa/  7 ff.\n05) 'lha yul la sog sma/   (dgra lha'i gsol mchod/ ) 3 ff."@en .
+    
+    bdr:NT1C6E86AAAE3DBC94
         a                   :Note ;
         :noteText           "nlmId: M0059875"@en .
     
-    bdr:NTDB7199594E3C1253
+    bdr:NTE94779E218CB9D5D
         a                   :Note ;
         :noteText           "missingPages: M0059875-002 [Missing page from 4A-4B] Image 133-134"@en .
     
-    bdr:TT07022774444CC91E
+    bdr:TT3C032607C995DB89
         a                   :Title ;
-        rdfs:label          "dpal gsang ba 'dus pa'i bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa sogs/"@bo-x-ewts .
+        rdfs:label          "gsang dus bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa sogs/"@bo-x-ewts .
+    
+    bdr:TTDB7199594E3C1253
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal gsang ba 'dus pa'i bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pa zhus dag mdzad pa/"@bo-x-ewts .
 }

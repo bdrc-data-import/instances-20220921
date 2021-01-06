@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1963 {
-    bda:LGEAB6CC223574930F
+    bda:LG42C658C449A9F976
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG57C24F90C8401B3B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:45.134Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,36 +33,44 @@ bdg:MW1NLM1963 {
     bda:MW1NLM1963  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1963 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d7/MW1NLM1963.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1963 ;
-        adm:logEntry        bda:LGEAB6CC223574930F , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LG42C658C449A9F976 , bda:LG57C24F90C8401B3B , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1963  a       :Instance ;
-        skos:prefLabel      "rje btsun sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga gsal bar bkod pa 'dod kun 'grub sogs/"@bo-x-ewts ;
+        skos:prefLabel      "sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga gsal bar bkod pa 'dod kun 'grub sogs/"@bo-x-ewts ;
         :dimensionsStatement  "15x6" ;
-        :hasTitle           bdr:TT9222FA7D9F0FFB36 ;
+        :hasTitle           bdr:TT81F304667F4E0A6E , bdr:TTE3799B4FCBA484EC ;
         :instanceHasReproduction  bdr:W1NLM1963 ;
         :instanceOf         bdr:WA1NLM1963 ;
         :isRoot             true ;
-        :note               bdr:NT81F304667F4E0A6E , bdr:NTE3799B4FCBA484EC ;
+        :note               bdr:NT0172743160D90684 , bdr:NT9222FA7D9F0FFB36 , bdr:NTEAB6CC223574930F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "19 ff., 9 ff., 8 ff. end folio missing, 10 ff., 7 ff., 7 ff., 14 ff., 45 ff. end folio missing," .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT81F304667F4E0A6E
-        a                   :Note ;
-        :noteText           "missingPages: M0059881-004 [Final pages are missing 9A] Image-73, M0059881-005 [8th page is numbered as 7th] Image 88-89, M0059881-011 [22th page has gong, 'og] Image 192-195, M0059881-011 [Missing page from 42A-42B] Image-234, M0059881-011 [Final pages are missing 46A] Image-241"@en .
-    
-    bdr:NTE3799B4FCBA484EC
+    bdr:NT0172743160D90684
         a                   :Note ;
         :noteText           "nlmId: M0059881"@en .
     
-    bdr:TT9222FA7D9F0FFB36
+    bdr:NT9222FA7D9F0FFB36
+        a                   :Note ;
+        :noteText           "01)  sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga  19 ff.\n02)  dmag zor rgyal mo'i bsangs/  9 ff.\n03)  phyugs skeg gnod sel bcos thabs/  ff.1-8\n04)  bla ma rgyan g'bod thugs rje bskul zhing byin rlabs 'gug pa'i lcags kyu/  10 ff.\n05)  bar do 'phrang sgrol gyi gsol 'debs/   7 ff.\n06)  bla ma mchod pa'i tshogs mchod/   7 ff.\n07)  rgyal mtshan rtse mo'i dpung rgyan/  14 ff.\n08)  'bras rtsis legs bshad kun 'dus/   ff.1-45"@en .
+    
+    bdr:NTEAB6CC223574930F
+        a                   :Note ;
+        :noteText           "missingPages: M0059881-004 [Final pages are missing 9A] Image-73, M0059881-005 [8th page is numbered as 7th] Image 88-89, M0059881-011 [22th page has gong, 'og] Image 192-195, M0059881-011 [Missing page from 42A-42B] Image-234, M0059881-011 [Final pages are missing 46A] Image-241"@en .
+    
+    bdr:TT81F304667F4E0A6E
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga gsal bar bkod pa 'dod kun 'gub/"@bo-x-ewts .
+    
+    bdr:TTE3799B4FCBA484EC
         a                   :Title ;
-        rdfs:label          "rje btsun sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga gsal bar bkod pa 'dod kun 'grub sogs/"@bo-x-ewts .
+        rdfs:label          "sgrol ma maN+Dal bzhi mchod kyi sgo nas gsol ba btab tshul gyi cho ga gsal bar bkod pa 'dod kun 'grub sogs/"@bo-x-ewts .
 }

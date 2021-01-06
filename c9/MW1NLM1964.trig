@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1964 {
-    bda:LGBF71A50A9CD72CB1
+    bda:LGB924A8490D7003F7
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGD5C214FEDCC54B3C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:45.511Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,22 +33,23 @@ bdg:MW1NLM1964 {
     bda:MW1NLM1964  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1964 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "c9/MW1NLM1964.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1964 ;
-        adm:logEntry        bda:LGBF71A50A9CD72CB1 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGB924A8490D7003F7 , bda:LGD5C214FEDCC54B3C , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1964  a       :Instance ;
         skos:prefLabel      "dngos grub bkra shis char 'bebs bsangs sogs/"@bo-x-ewts ;
+        :biblioNote         "པོད་འདི་ཡིག་གཟུགས་ཞན་པ་དང་ཆད་ལྷགས་ཧ་ཅང་མང་།" ;
         :dimensionsStatement  "16x6.5" ;
-        :hasTitle           bdr:TTE746CE496AAE73D2 ;
+        :hasTitle           bdr:TT151AF040C0363F1D ;
         :instanceHasReproduction  bdr:W1NLM1964 ;
         :instanceOf         bdr:WA1NLM1964 ;
         :isRoot             true ;
-        :note               bdr:NT06E2622BA160A661 , bdr:NT151AF040C0363F1D ;
+        :note               bdr:NT06E2622BA160A661 , bdr:NT847DDD4BF48025EA , bdr:NTE746CE496AAE73D2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
@@ -50,13 +57,17 @@ bdg:MW1NLM1964 {
     
     bdr:NT06E2622BA160A661
         a                   :Note ;
-        :noteText           "missingPages: M0059882-003 [Missing page from 10A-10B, 20A-20B] Image 69-70, 89-90M0059882-004 [Final pages are missing 30A] Image 109 M0059882-005 Final pages are missing 11A] Image 130 M0059882-006 [Final page sare missing 9 A] Image 147"@en .
-    
-    bdr:NT151AF040C0363F1D
-        a                   :Note ;
         :noteText           "nlmId: M0059882"@en .
     
-    bdr:TTE746CE496AAE73D2
+    bdr:NT847DDD4BF48025EA
+        a                   :Note ;
+        :noteText           "missingPages: M0059882-003 [Missing page from 10A-10B, 20A-20B] Image 69-70, 89-90M0059882-004 [Final pages are missing 30A] Image 109 M0059882-005 Final pages are missing 11A] Image 130 M0059882-006 [Final page sare missing 9 A] Image 147"@en .
+    
+    bdr:NTE746CE496AAE73D2
+        a                   :Note ;
+        :noteText           "01)  dngos grub bkra shis char 'bebs bsangs / 21 ff.\n02)  bde mchog bsdus pa/  (le'u dang po only) 4 ff.\n03)  khros nag ma'i bskang bshags/   ff. 1-29 (missing pages)\n04)  tshogs kyi skabs bdud rtsi 'bul ba/  10 ff.\n05)  gdugs dkar bzlog bsgyur/    8  ff.\n06)  myur mdzad mgon po'i 'chi glud/   4 ff.\n07)  tshogs kyi bdag po'i rnga mong gi gzungs/  4 ff.\n08)  rnam rgyal ma'i bstod pa/   4 ff.\n09)  tshangs pa chen po'i mngon rtogs bskang bshags/ 9 ff. \n10)  tshe mdo/ 12 ff."@en .
+    
+    bdr:TT151AF040C0363F1D
         a                   :Title ;
         rdfs:label          "dngos grub bkra shis char 'bebs bsangs sogs/"@bo-x-ewts .
 }
