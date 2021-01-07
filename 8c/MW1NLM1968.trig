@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1968 {
-    bda:LG7F5F864CE17BA871
+    bda:LGA693B65C9F9713B2
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGF9A0B4673B4EFAF9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-06T15:43:08.727Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM57C6901C  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,36 +33,48 @@ bdg:MW1NLM1968 {
     bda:MW1NLM1968  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM1968 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8c/MW1NLM1968.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1968 ;
-        adm:logEntry        bda:LG7F5F864CE17BA871 , bda:LGIM57C6901C ;
+        adm:logEntry        bda:LGA693B65C9F9713B2 , bda:LGF9A0B4673B4EFAF9 , bda:LGIM57C6901C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM1968  a       :Instance ;
-        skos:prefLabel      "'phags ma dbyangs can ma'i gdams pa dngos grub 'gugs pa'i lcags kyu sogs/"@bo-x-ewts ;
+        skos:prefLabel      "'phags ma dbyangs can ma'i gdams pa dngos grub 'gugs pa'i lcags kyu/"@bo-x-ewts ;
         :dimensionsStatement  "18x6.5" ;
-        :hasTitle           bdr:TT69C283D8CDA58A98 ;
+        :hasTitle           bdr:TT33E06E0E760E5FCD , bdr:TT5365442D35E6B75C , bdr:TTB828F2E86BAFB33A ;
         :instanceHasReproduction  bdr:W1NLM1968 ;
         :instanceOf         bdr:WA1NLM1968 ;
         :isRoot             true ;
-        :note               bdr:NT33E06E0E760E5FCD , bdr:NT5365442D35E6B75C ;
+        :note               bdr:NT655281F879CFF290 , bdr:NT69C283D8CDA58A98 , bdr:NT7F5F864CE17BA871 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "52 ff. end folio missing, 36 ff., 20ff. end folio missing, 5-8 ff., 5 ff., 13 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT33E06E0E760E5FCD
+    bdr:NT655281F879CFF290
         a                   :Note ;
         :noteText           "missingPages: M0059886-001 [Page 13 double numbered] Image 25-28 M0059886-001 [Final pages are missing 53A] Image 107 M0059886-003 [Missing page from 15A-17B] Image 208 M0059886-004 [Missing page from 1A-4B] Image 215"@en .
     
-    bdr:NT5365442D35E6B75C
+    bdr:NT69C283D8CDA58A98
+        a                   :Note ;
+        :noteText           "01) dbyangs can ma'i gdams pa dngos grub 'gugs pa'i lcags kyu/  52 ff.\n02)  rdo rje gcod pa/  36 ff.\n03)  smon lam chen mmo'i dus rje tsong kha pa nyid kyi 'khrigs su sdebs pa/ 20 ff.\n04)  sde brgyad gser skyems/  ff.5-8 \n05)  rmang gzhi'i yi ge ka kha sogs kyi rnam gzhag pad dkar phrng ba/  5 ff.\n06)  byang chub ltung bshags/   13 ff."@en .
+    
+    bdr:NT7F5F864CE17BA871
         a                   :Note ;
         :noteText           "nlmId: M0059886"@en .
     
-    bdr:TT69C283D8CDA58A98
+    bdr:TT33E06E0E760E5FCD
+        a                   :TitlePageTitle ;
+        rdfs:label          "rdo rje gcod pa/"@bo-x-ewts .
+    
+    bdr:TT5365442D35E6B75C
         a                   :Title ;
-        rdfs:label          "'phags ma dbyangs can ma'i gdams pa dngos grub 'gugs pa'i lcags kyu sogs/"@bo-x-ewts .
+        rdfs:label          "'phags ma dbyangs can ma'i gdams pa dngos grub 'gugs pa'i lcags kyu/"@bo-x-ewts .
+    
+    bdr:TTB828F2E86BAFB33A
+        a                   :OtherTitle ;
+        rdfs:label          "lha sa smon lam chen mmo'i dus rje tsong kha pa nyid kyi 'khrigs su sdebs pa/"@bo-x-ewts .
 }
