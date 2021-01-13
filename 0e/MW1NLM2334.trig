@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2334 {
-    bda:LGDFA35CA6CA696928
+    bda:LG8ECFD550CD7D24B5
         a                   adm:UpdateData ;
         adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGBAE0515AEFE7CD47
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-12T12:12:10.533Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM11768AC0  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,36 +33,44 @@ bdg:MW1NLM2334 {
     bda:MW1NLM2334  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2334 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0e/MW1NLM2334.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2334 ;
-        adm:logEntry        bda:LGDFA35CA6CA696928 , bda:LGIM11768AC0 ;
+        adm:logEntry        bda:LG8ECFD550CD7D24B5 , bda:LGBAE0515AEFE7CD47 , bda:LGIM11768AC0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2334  a       :Instance ;
-        skos:prefLabel      "gsang ba'i bdag po dpal phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa sogs/"@bo-x-ewts ;
+        skos:prefLabel      "phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa sogs/"@bo-x-ewts ;
         :dimensionsStatement  "18x7.5" ;
-        :hasTitle           bdr:TT42E443687C698BAE ;
+        :hasTitle           bdr:TT3F4DC01EF7939CFC , bdr:TT816363F286D67839 ;
         :instanceHasReproduction  bdr:W1NLM2334 ;
         :instanceOf         bdr:WA1NLM2334 ;
         :isRoot             true ;
-        :note               bdr:NT3F4DC01EF7939CFC , bdr:NT816363F286D67839 ;
+        :note               bdr:NT42E443687C698BAE , bdr:NT5FD7655DCA32D0E5 , bdr:NTDFA35CA6CA696928 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "26 ff., 11 ff., 21 ff., 9 ff., 7 ff., 2 ff., 3 ff., 1 ff., 2 ff., 2 ff., 5 ff., 3 ff., 16 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT3F4DC01EF7939CFC
+    bdr:NT42E443687C698BAE
         a                   :Note ;
-        :noteText           "missingPages: M0060252-016 [Missing page from 6A-7B] Image-195"@en .
+        :noteText           "01)  phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa/  26 ff.\n02)  gnas brtan bcu drug gi gso sbyong gi 'son cha/   11 ff.\n03)  'bum gyi bsdus don snying po'i lo rgyus/  21 ff.\n04)  chos skyong gang gi sgo nas byed chog pa'i bzlog bsgyur/  9 ff.\n05)  phrag lha dgra lha spun dgu rnam la rta mchog rten du 'bul tshul/  7 ff.\n06)  g.yang 'bod/  2 ff.\n07)  mnol  bsangs gdod nas chos kun ma/  3 ff.\n08)  sgo lha'mchod tshul/  2 ff.\n09)  'dod gsol/  2 ff.\n10)  lha mo nor rgyun ma'i gzungs/    2 ff.\n11)  hang ka'i gsol mchod/  5 ff.\n12)  thang stong  rgyal po'i lugs kyi grib glud bya tshul/  3 ff. \n13)  rnam dag gser skyems/ 16 ff."@en .
     
-    bdr:NT816363F286D67839
+    bdr:NT5FD7655DCA32D0E5
         a                   :Note ;
         :noteText           "nlmId: M0060252"@en .
     
-    bdr:TT42E443687C698BAE
+    bdr:NTDFA35CA6CA696928
+        a                   :Note ;
+        :noteText           "missingPages: M0060252-016 [Missing page from 6A-7B] Image-195"@en .
+    
+    bdr:TT3F4DC01EF7939CFC
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang ba'i bdag po dpal phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TT816363F286D67839
         a                   :Title ;
-        rdfs:label          "gsang ba'i bdag po dpal phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa sogs/"@bo-x-ewts .
+        rdfs:label          "phyag na rdo rje'i bskangs bshags bstod pa skul dang bcas pa sogs/"@bo-x-ewts .
 }

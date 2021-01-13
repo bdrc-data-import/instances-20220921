@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2335 {
-    bda:LGE64B8B57DDBBC1F5
+    bda:LG7876D88213EA93E4
         a                   adm:UpdateData ;
         adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGF67A785F5412DC21
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-12T12:12:10.969Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM11768AC0  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,30 +33,34 @@ bdg:MW1NLM2335 {
     bda:MW1NLM2335  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2335 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "d0/MW1NLM2335.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2335 ;
-        adm:logEntry        bda:LGE64B8B57DDBBC1F5 , bda:LGIM11768AC0 ;
+        adm:logEntry        bda:LG7876D88213EA93E4 , bda:LGF67A785F5412DC21 , bda:LGIM11768AC0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2335  a       :Instance ;
         skos:prefLabel      "dam tshig thams cad kyi nyams chag skongs pa'i lung /"@bo-x-ewts ;
         :dimensionsStatement  "18.5x5" ;
-        :hasTitle           bdr:TTDB60B3A87C17EDDB ;
+        :hasTitle           bdr:TT4014913883CBBD9F , bdr:TTDB60B3A87C17EDDB ;
         :instanceHasReproduction  bdr:W1NLM2335 ;
         :instanceOf         bdr:WA1NLM2335 ;
         :isRoot             true ;
-        :note               bdr:NT4014913883CBBD9F ;
+        :note               bdr:NT3007E25BFC4E5660 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "112 ff." .
     
-    bdr:NT4014913883CBBD9F
+    bdr:NT3007E25BFC4E5660
         a                   :Note ;
         :noteText           "nlmId: M0060253"@en .
+    
+    bdr:TT4014913883CBBD9F
+        a                   :OtherTitle ;
+        rdfs:label          "dri med bshags rgyud/"@bo-x-ewts .
     
     bdr:TTDB60B3A87C17EDDB
         a                   :Title ;
