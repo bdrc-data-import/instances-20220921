@@ -12,7 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2346 {
-    bda:LG391454B72ED6D01F
+    bda:LG3E6278597152EF8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-13T15:06:27.26Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG899767082CD5C379
         a                   adm:UpdateData ;
         adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
@@ -24,39 +29,124 @@ bdg:MW1NLM2346 {
         adm:logMessage      "imported pubinfo for W1NLM2346"@en ;
         adm:logMethod       bda:BatchMethod .
     
-    bda:MW1NLM2346  a       adm:AdminData ;
+    bda:LGIM88A1CE5A  a     adm:InitialDataImport ;
+        adm:logDate         "2021-01-13T15:06:27.561Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:MW1NLM2346  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
+        :legacyOutlineNodeRID  "O4CZ364613" ;
         adm:adminAbout      bdr:MW1NLM2346 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "fc/MW1NLM2346.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2346 ;
-        adm:logEntry        bda:LG391454B72ED6D01F , bda:LGIM11768AC0 ;
+        adm:logEntry        bda:LG3E6278597152EF8C , bda:LG899767082CD5C379 , bda:LGIM11768AC0 , bda:LGIM88A1CE5A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
+        adm:outlineType     bda:OutlineTypeNoType ;
         adm:status          bda:StatusReleased .
     
+    bdr:CL6F5DE882222FCF85
+        a                   :ContentLocation ;
+        :contentLocationInstance  bdr:W1NLM2346 ;
+        :contentLocationPage  1 .
+    
+    bdr:CL9BE12838C96E3C34
+        a                   :ContentLocation ;
+        :contentLocationEndPage  352 ;
+        :contentLocationInstance  bdr:W1NLM2346 ;
+        :contentLocationPage  315 .
+    
+    bdr:CLB9BEE246B80F2D41
+        a                   :ContentLocation ;
+        :contentLocationEndPage  314 ;
+        :contentLocationInstance  bdr:W1NLM2346 .
+    
     bdr:MW1NLM2346  a       :Instance ;
-        skos:prefLabel      "rin 'byung snar thang brgya rtsa rdor 'phreng bcas nas gsungs pa'i bris sku mthong ba don ldan sogs/"@bo-x-ewts ;
+        skos:prefLabel      "bris sku mthong ba don ldan/"@bo-x-ewts ;
         :dimensionsStatement  "24x8" ;
-        :hasTitle           bdr:TT4F4CD6CE18C06015 ;
+        :hasPart            bdr:MW1NLM2346_8145D6 , bdr:MW1NLM2346_BDF5A6 , bdr:MW1NLM2346_F63B7D ;
+        :hasTitle           bdr:TTC848E87BF043B6FF , bdr:TTDFBEDD5020B52179 ;
         :instanceHasReproduction  bdr:W1NLM2346 ;
         :instanceOf         bdr:WA1NLM2346 ;
         :isRoot             true ;
-        :note               bdr:NT346F021545542A43 , bdr:NT9509769846473F50 ;
+        :note               bdr:NTB1B9654E8DC09916 , bdr:NTE7A7F5FAA7A4BE90 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "mongolia"@en ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "143 ff., 13 ff., 19 ff. end folio missing" .
+        :workExtentStatement  "1 v." ;
+        :workPagination     bdr:PaginationRelative .
     
-    bdr:NT346F021545542A43
-        a                   :Note ;
-        :noteText           "nlmId: M0060264"@en .
+    bdr:MW1NLM2346_8145D6
+        a                   :Instance ;
+        skos:prefLabel      "rdor 'phreng bcas nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts ;
+        :contentLocation    bdr:CL9BE12838C96E3C34 ;
+        :contentLocationStatement  "19 ff." ;
+        :hasTitle           bdr:TT3F357DCDBDB7246B ;
+        :inRootInstance     bdr:MW1NLM2346 ;
+        :instanceOf         bdr:WA0XL8145D6537B98 ;
+        :legacyOutlineNodeRID  "O4CZ3646134CZ364616" ;
+        :partIndex          3 ;
+        :partOf             bdr:MW1NLM2346 ;
+        :partTreeIndex      "3" ;
+        :partType           bdr:PartTypeText .
     
-    bdr:NT9509769846473F50
+    bdr:MW1NLM2346_BDF5A6
+        a                   :Instance ;
+        skos:prefLabel      "rin 'byung brgya rtsa nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts ;
+        :contentLocation    bdr:CL6F5DE882222FCF85 ;
+        :contentLocationStatement  "143 ff." ;
+        :hasTitle           bdr:TT5814A4A30233B0F4 ;
+        :inRootInstance     bdr:MW1NLM2346 ;
+        :instanceOf         bdr:WA0XLBDF5A60F7C6B ;
+        :legacyOutlineNodeRID  "O4CZ3646134CZ364614" ;
+        :partIndex          1 ;
+        :partOf             bdr:MW1NLM2346 ;
+        :partTreeIndex      "1" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:MW1NLM2346_F63B7D
+        a                   :Instance ;
+        skos:prefLabel      "snar thang brgya rtsa nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts ;
+        :contentLocation    bdr:CLB9BEE246B80F2D41 ;
+        :contentLocationStatement  "13 ff." ;
+        :hasTitle           bdr:TT2498387554D66046 ;
+        :inRootInstance     bdr:MW1NLM2346 ;
+        :instanceOf         bdr:WA0XLF63B7D0806CC ;
+        :legacyOutlineNodeRID  "O4CZ3646134CZ364615" ;
+        :partIndex          2 ;
+        :partOf             bdr:MW1NLM2346 ;
+        :partTreeIndex      "2" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:NTB1B9654E8DC09916
         a                   :Note ;
         :noteText           "missingPages: M0060264-001 [Page 1 double numbered] Image 1-4 M0060264-001 [51,52nd pages printed on the same page] Image 103-104                                                           M0060264-001 [Page 70 double numbered] Image 139-142"@en .
     
-    bdr:TT4F4CD6CE18C06015
+    bdr:NTE7A7F5FAA7A4BE90
+        a                   :Note ;
+        :noteText           "nlmId: M0060264"@en .
+    
+    bdr:TT2498387554D66046
         a                   :Title ;
-        rdfs:label          "rin 'byung snar thang brgya rtsa rdor 'phreng bcas nas gsungs pa'i bris sku mthong ba don ldan sogs/"@bo-x-ewts .
+        rdfs:label          "snar thang brgya rtsa nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts .
+    
+    bdr:TT3F357DCDBDB7246B
+        a                   :Title ;
+        rdfs:label          "rdor 'phreng bcas nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts .
+    
+    bdr:TT5814A4A30233B0F4
+        a                   :Title ;
+        rdfs:label          "rin 'byung brgya rtsa nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts .
+    
+    bdr:TTC848E87BF043B6FF
+        a                   :Title ;
+        rdfs:label          "bris sku mthong ba don ldan/"@bo-x-ewts .
+    
+    bdr:TTDFBEDD5020B52179
+        a                   :TitlePageTitle ;
+        rdfs:label          "rin 'byung snar thang brgya rtsa rdor 'phreng bcas nas gsungs pa'i bris sku mthong ba don ldan/"@bo-x-ewts .
 }
