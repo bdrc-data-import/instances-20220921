@@ -18,6 +18,12 @@ bdg:MW00KG01511 {
         adm:logMessage      "kiosk"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG9D47F5DD4B13EBC8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-05-09T16:02:42.649Z"^^xsd:dateTime ;
+        adm:logMessage      "catalog work"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGBE529FE3E7A23486
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-05-23T07:58:43.203Z"^^xsd:dateTime ;
@@ -35,14 +41,33 @@ bdg:MW00KG01511 {
         adm:logMessage      "corrected spelling error"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00KG01511  a      adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS44446" ;
         adm:adminAbout      bdr:MW00KG01511 ;
-        adm:facetIndex      25 ;
-        adm:logEntry        bda:LG09D39EF1CD30EBB0 , bda:LGBE529FE3E7A23486 , bda:LGCEEA3855F2A560EA , bda:LGEB6836796C5B7A17 ;
+        adm:facetIndex      33 ;
+        adm:gitPath         "fe/MW00KG01511.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG01511 ;
+        adm:logEntry        bda:LG09D39EF1CD30EBB0 , bda:LG9D47F5DD4B13EBC8 , bda:LGBE529FE3E7A23486 , bda:LGCEEA3855F2A560EA , bda:LGEB6836796C5B7A17 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gene Smith"@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0722FD35A4E6A50E
         a                   :ContentLocation ;
@@ -104,8 +129,37 @@ bdg:MW00KG01511 {
         :contentLocationInstance  bdr:W00KG01511 ;
         :contentLocationPage  95 .
     
-    bdr:MW00KG01511  :hasPart  bdr:MW00KG01511_127358 , bdr:MW00KG01511_28FF3B , bdr:MW00KG01511_7A89FE , bdr:MW00KG01511_818E5A , bdr:MW00KG01511_9790B4 , bdr:MW00KG01511_C3FF92 , bdr:MW00KG01511_D561A3 , bdr:MW00KG01511_EA1698 , bdr:MW00KG01511_F51733 , bdr:MW00KG01511_F61E5D ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EV1F501B98FD48EC5F
+        a                   :PublishedEvent ;
+        :onYear             "1988"^^xsd:gYear .
+    
+    bdr:ID9FF159CB266189DD
+        a                   bdr:HollisId ;
+        rdf:value           "014254053" .
+    
+    bdr:IDCBD110212B1742A8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105004592" .
+    
+    bdr:MW00KG01511  a      :SerialInstance ;
+        skos:prefLabel      "bod kyi rig gnas lo rgyus dpyad gzhi'i rgyu cha bdams bsgrigs/ 1 (10)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9FF159CB266189DD , bdr:IDCBD110212B1742A8 ;
+        :authorshipStatement  "bod rang skyong ljongs chab gros rig gnas dpyad gzhi'i rgyu cha u yon lhan khang gis rtsom sgrig byas pa/"@bo-x-ewts ;
+        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :hasPart            bdr:MW00KG01511_127358 , bdr:MW00KG01511_28FF3B , bdr:MW00KG01511_7A89FE , bdr:MW00KG01511_818E5A , bdr:MW00KG01511_9790B4 , bdr:MW00KG01511_C3FF92 , bdr:MW00KG01511_D561A3 , bdr:MW00KG01511_EA1698 , bdr:MW00KG01511_F51733 , bdr:MW00KG01511_F61E5D ;
+        :hasTitle           bdr:TT4E98C14AB05D00A4 , bdr:TT703ABEE86E480D25 ;
+        :instanceEvent      bdr:EV1F501B98FD48EC5F ;
+        :instanceHasReproduction  bdr:IE00KG01511 , bdr:W00KG01511 ;
+        :instanceOf         bdr:WA00KG01511 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 130 p." ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workSeriesNumber   "10" .
     
     bdr:MW00KG01511_127358
         a                   :Instance ;
@@ -261,9 +315,17 @@ bdg:MW00KG01511 {
         a                   :Title ;
         rdfs:label          "hin rdu btsan 'dzul dmag gis mon khul du btsan 'dzul byas pa'i don dngos/"@bo-x-ewts .
     
+    bdr:TT4E98C14AB05D00A4
+        a                   :Title ;
+        rdfs:label          "bod kyi lo rgyus rig gnas dpyad gzhi'i rgyu cha bdams bsgrigs/ 1 (10)"@bo-x-ewts .
+    
     bdr:TT648B34AFB0F1FEC6
         a                   :Title ;
         rdfs:label          "nga smag sgor khral bsdur bskyod skabs 'gog rkyen 'phrad pa'i gnas tshul dngos/"@bo-x-ewts .
+    
+    bdr:TT703ABEE86E480D25
+        a                   :Title ;
+        rdfs:label          "bod kyi rig gnas lo rgyus dpyad gzhi'i rgyu cha bdams bsgrigs/ 1 (10)"@bo-x-ewts .
     
     bdr:TT744DCAF30924ABC4
         a                   :Title ;
