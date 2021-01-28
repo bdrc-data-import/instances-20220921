@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2370 {
-    bda:LG2D5B5A9B9CA4B1BE
+    bda:LG5474B6E1E2A52DFC
         a                   adm:UpdateData ;
         adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGA8035630399B5CAB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-27T16:30:14.567Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM11768AC0  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +33,40 @@ bdg:MW1NLM2370 {
     bda:MW1NLM2370  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2370 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "fa/MW1NLM2370.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2370 ;
-        adm:logEntry        bda:LG2D5B5A9B9CA4B1BE , bda:LGIM11768AC0 ;
+        adm:logEntry        bda:LG5474B6E1E2A52DFC , bda:LGA8035630399B5CAB , bda:LGIM11768AC0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2370  a       :Instance ;
-        skos:prefLabel      "sman chog dang 'brel ba'i gshin po rjes 'dzin gyi cho ga nyam thag 'dren byed sdig sbyong 'od kyi zhags pa sogs/"@bo-x-ewts ;
+        skos:prefLabel      "sman chog dang 'brel ba'i gshin po rjes 'dzin gyi cho ga sogs/"@bo-x-ewts ;
         :dimensionsStatement  "28x6" ;
-        :hasTitle           bdr:TT9DFF2F5A6311BA81 ;
+        :hasTitle           bdr:TT22223D25A5DB6A09 , bdr:TT68E124CE00866FB6 ;
         :instanceHasReproduction  bdr:W1NLM2370 ;
         :instanceOf         bdr:WA1NLM2370 ;
         :isRoot             true ;
-        :note               bdr:NT68E124CE00866FB6 ;
+        :note               bdr:NT2D5B5A9B9CA4B1BE , bdr:NT9DFF2F5A6311BA81 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "38 ff., 2 ff., 5 ff., 5 ff., 3 ff., 5 ff., 6 ff., 12 ff., 8 ff., 13 ff., 5 ff., 8 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT68E124CE00866FB6
+    bdr:NT2D5B5A9B9CA4B1BE
         a                   :Note ;
         :noteText           "nlmId: M0060288"@en .
     
-    bdr:TT9DFF2F5A6311BA81
-        a                   :Title ;
+    bdr:NT9DFF2F5A6311BA81
+        a                   :Note ;
+        :noteText           "01)  sman chog dang 'brel ba'i gshin po rjes 'dzin gyi cho ga    38 ff.\n02)  ye shes kyi mgon po'i sgo nas gtad rul bya tshul lag len dang bcas pa/   2 ff.\n03)  kha 'bar ma dkar nag khra gusm la brten nas bar chad bzlog pa'i gdams pa zab mo/    5 ff.\n04)  lha mo spyan ma la brten nas byad sogs zhi ba'i thabs kyi bum pa sgrub tshul/    5 ff.\n05)  rje bal ma la brten pa'i bla ma'i rnal 'byor/    3 ff.\n06)  dmigs brtse ma'i sgo nas byabs khrus bsrung tshul/    5 ff.\n07)  glud gtor gyi cho ga kun phan 'dod 'jo/  6 ff.\n08)  seng gdong ma'i bskang gso'i lhan thabs reg gzigs ti 'god pa/   12 ff.\n09)  dpal ldan lha mo'i sgo nas bzlog bsgyur/  8 ff.\n10)  rje btsun sgrol ma la brten pa'i klu'i gdon grol gyi cho ga   13 ff.\n11)  dam can rnam gsum gyi gtor chog dam can rol mtsho/  5 ff.\n12)  kha 'bar ma dkar nag khra gsum gyi gtor ma'i cho ga   8 ff."@en .
+    
+    bdr:TT22223D25A5DB6A09
+        a                   :TitlePageTitle ;
         rdfs:label          "sman chog dang 'brel ba'i gshin po rjes 'dzin gyi cho ga nyam thag 'dren byed sdig sbyong 'od kyi zhags pa sogs/"@bo-x-ewts .
+    
+    bdr:TT68E124CE00866FB6
+        a                   :Title ;
+        rdfs:label          "sman chog dang 'brel ba'i gshin po rjes 'dzin gyi cho ga sogs/"@bo-x-ewts .
 }
