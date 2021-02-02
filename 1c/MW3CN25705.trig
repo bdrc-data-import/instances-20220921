@@ -12,16 +12,39 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN25705 {
+    bda:LG4B179F101DFAA1EC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-01-30T23:18:29.417Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGA8AA461461FDB97E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-02-01T21:54:08.049Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN25705  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN25705 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "1c/MW3CN25705.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN25705 ;
+        adm:logEntry        bda:LG4B179F101DFAA1EC , bda:LGA8AA461461FDB97E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW3CN25705  a       :Instance ;
+        skos:prefLabel      "zhi byed kyi chos skor/"@bo-x-ewts ;
+        :hasTitle           bdr:TTD1D0374FB648BD84 ;
         :instanceOf         bdr:WA3CN25705 ;
-        :isRoot             true .
+        :isRoot             true ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "309 ff." .
+    
+    bdr:TTD1D0374FB648BD84
+        a                   :Title ;
+        rdfs:label          "zhi byed kyi chos skor/"@bo-x-ewts .
 }
