@@ -12,11 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2384 {
-    bda:LG58F16CA9C32D104A
+    bda:LG30A1991CACE2401A
         a                   adm:UpdateData ;
         adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
         adm:logMessage      "added NLM biblioNote"@en ;
         adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG82BC090334E0C204
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-02-03T16:27:03.365Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM11768AC0  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -27,32 +32,40 @@ bdg:MW1NLM2384 {
     bda:MW1NLM2384  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2384 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "99/MW1NLM2384.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2384 ;
-        adm:logEntry        bda:LG58F16CA9C32D104A , bda:LGIM11768AC0 ;
+        adm:logEntry        bda:LG30A1991CACE2401A , bda:LG82BC090334E0C204 , bda:LGIM11768AC0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2384  a       :Instance ;
-        skos:prefLabel      "bya rgyud pad+ma'i rigs kyi gtso bo mgon po tshe dpag med kyi sgrub thabs smyung bar gnas pa'i cho ga dang bcas pa rin po che'i phreng ba sogs/"@bo-x-ewts ;
+        skos:prefLabel      "tshe dpag med kyi sgrub thabs smyung bar gnas pa'i cho ga dang bcas pa rin po che'i phreng ba sogs/"@bo-x-ewts ;
         :dimensionsStatement  "26.5x6" ;
-        :hasTitle           bdr:TT737C0F713856ED00 ;
+        :hasTitle           bdr:TT99D3FFCEC19786BE , bdr:TTCF4100F339F538B2 ;
         :instanceHasReproduction  bdr:W1NLM2384 ;
         :instanceOf         bdr:WA1NLM2384 ;
         :isRoot             true ;
-        :note               bdr:NT99D3FFCEC19786BE ;
+        :note               bdr:NT58F16CA9C32D104A , bdr:NT737C0F713856ED00 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "34 ff., 22 ff., 12 ff., 5 ff., 10 ff., 2 ff., 2 ff., 3 ff., 9 ff., 8 ff., 2 ff., 20 ff., 6 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT99D3FFCEC19786BE
+    bdr:NT58F16CA9C32D104A
         a                   :Note ;
         :noteText           "nlmId: M0060302"@en .
     
-    bdr:TT737C0F713856ED00
+    bdr:NT737C0F713856ED00
+        a                   :Note ;
+        :noteText           "01) tshe dpag med kyi sgrub thabs smyung bar gnas pa'i cho ga dang bcas pa rin po che'i phreng ba/  34 ff.\n02)  lam gyi rim pa'i zhal shes blo bzang zhal lung /   22 ff.\n03)  bkra shis brtsegs pa/  12 ff    \n04)  rnam 'joms dang sme brtsegs ye shes khyung khra rnams kyi bsgom bzlas sogs/   5 ff.\n05)  dur khrod bdag po yab yum gyi snying po man ngag zab pa'i yi ge/  10 ff.\n06)  dpal lmgon zhal bzhi sgo nas las tshogs ban bon mtshul gsol byad kha phur bzlog   2 ff.\n07)  ja mchod/ /   2 ff.\n08)  gshin gson lag sbrel gcod pa/   3 ff.\n09)  lha tho brtsigs tshul/   9 ff.\n10)  me mchod kyi cho ga khyer bde/   8 ff\n11) 'jigs byed kyi phyi rol/   2 ff.\n12)  man ngag rin chen 'byung gnas kyi gsang sman gab sbas gsal ston/  20 ff.\n13) rje'i rtogs brjod/ 'jig rten mthos ris ma/ 6"@en .
+    
+    bdr:TT99D3FFCEC19786BE
         a                   :Title ;
+        rdfs:label          "tshe dpag med kyi sgrub thabs smyung bar gnas pa'i cho ga dang bcas pa rin po che'i phreng ba sogs/"@bo-x-ewts .
+    
+    bdr:TTCF4100F339F538B2
+        a                   :TitlePageTitle ;
         rdfs:label          "bya rgyud pad+ma'i rigs kyi gtso bo mgon po tshe dpag med kyi sgrub thabs smyung bar gnas pa'i cho ga dang bcas pa rin po che'i phreng ba sogs/"@bo-x-ewts .
 }
