@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN15690 {
-    bda:LGE81055A5F3BB8B55
+    bda:LG47CBC8A9424F0BD8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-02-08T16:49:51.769Z"^^xsd:dateTime ;
+        adm:logMessage      "added other titles"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAE32687568E5AB11
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-05-15T11:39:27.062Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
@@ -21,23 +27,25 @@ bdg:MW3CN15690 {
     bda:MW3CN15690  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN15690 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "3f/MW3CN15690.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN15690 ;
-        adm:logEntry        bda:LGE81055A5F3BB8B55 ;
+        adm:logEntry        bda:LG47CBC8A9424F0BD8 , bda:LGAE32687568E5AB11 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0359F7816142BF93
+    bdr:EVE65B6FCA8C1DF1FD
         a                   :PublishedEvent ;
         :onYear             "2001"^^xsd:gYear .
     
-    bdr:MW3CN15690  a       :Instance ;
-        skos:prefLabel      "'phags pa phung po gsum pa'i mdo dang de'i rgya 'grel gsum/"@bo-x-ewts ;
+    bdr:MW3CN15690  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "'phags pa phung po gsum pa'i mdo dang de'i rgya 'grel gsum/"@bo-x-ewts , "âryatriskandhasåtram and its three Commentaries"@en , "आर्यत्रिस्कन्धसूत्रं टीकात्रयसंवलितम्"@sa-Deva ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT94D420A870DD5B6A ;
-        :instanceEvent      bdr:EV0359F7816142BF93 ;
+        :editionStatement   "1st ed."@en ;
+        :hasTitle           bdr:TT0359F7816142BF93 , bdr:TT94D420A870DD5B6A , bdr:TTE81055A5F3BB8B55 ;
+        :instanceEvent      bdr:EVE65B6FCA8C1DF1FD ;
         :instanceHasReproduction  bdr:W3CN15690 ;
         :instanceOf         bdr:WA3CN15690 ;
         :isRoot             true ;
@@ -46,9 +54,18 @@ bdg:MW3CN15690 {
         :publisherLocation  "sarnath, varanasi"@en ;
         :publisherName      "central institute of higher tibetan studies"@en ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "378 p." .
+        :workExtentStatement  "xl, 378 p." ;
+        :workSeriesNumber   "49" .
+    
+    bdr:TT0359F7816142BF93
+        a                   :OtherTitle ;
+        rdfs:label          "आर्यत्रिस्कन्धसूत्रं टीकात्रयसंवलितम्"@sa-Deva .
     
     bdr:TT94D420A870DD5B6A
         a                   :Title ;
         rdfs:label          "'phags pa phung po gsum pa'i mdo dang de'i rgya 'grel gsum/"@bo-x-ewts .
+    
+    bdr:TTE81055A5F3BB8B55
+        a                   :OtherTitle ;
+        rdfs:label          "âryatriskandhasåtram and its three Commentaries"@en .
 }
