@@ -12,37 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20722 {
-    bda:LG4A9123E6F78E89CD
+    bda:LG87D66F6BD3CAC704
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-12-22T08:59:36.127Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG9D70BBB7A73D84B7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-08T15:12:33.003Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, author, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS20722  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20722 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ce/MW8LS20722.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20722 ;
-        adm:logEntry        bda:LG4A9123E6F78E89CD ;
+        adm:logEntry        bda:LG87D66F6BD3CAC704 , bda:LG9D70BBB7A73D84B7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV245B34BB134CBCD7
+    bdr:CR245B34BB134CBCD7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P00EGS1016697 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE2BF92E85FD3D519
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
     bdr:MW8LS20722  a       :Instance ;
         skos:prefLabel      "li thang blo bzang byams pa'i mi tshe lo rgyus/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR245B34BB134CBCD7 ;
+        :editionStatement   "2006 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT14DE10FF5E2CA391 , bdr:TT17087CB6C6C63230 ;
-        :instanceEvent      bdr:EV245B34BB134CBCD7 ;
+        :instanceEvent      bdr:EVE2BF92E85FD3D519 ;
         :instanceHasReproduction  bdr:W8LS20722 ;
         :instanceOf         bdr:WA8LS20722 ;
         :isRoot             true ;
-        :note               bdr:NTE2BF92E85FD3D519 ;
+        :note               bdr:NT4A9123E6F78E89CD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "Kathamandu, Nepal"@en ;
@@ -50,7 +63,7 @@ bdg:MW8LS20722 {
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "170 p." .
     
-    bdr:NTE2BF92E85FD3D519
+    bdr:NT4A9123E6F78E89CD
         a                   :Note ;
         :noteText           "copy made available from the Library of Tibetan Works and Archives, LTWA Acc.No. D30211"@en .
     
