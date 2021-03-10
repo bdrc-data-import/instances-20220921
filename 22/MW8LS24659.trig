@@ -12,25 +12,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS24659 {
-    bda:LG8691A769E551BD3E
+    bda:LG8F39C08B6E9C384C
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-08-28T14:13:55.445Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGD61D686D4EECD5C3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-09T12:00:21.807Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, editor, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS24659  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS24659 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "22/MW8LS24659.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS24659 ;
-        adm:logEntry        bda:LG8691A769E551BD3E ;
+        adm:logEntry        bda:LG8F39C08B6E9C384C , bda:LGD61D686D4EECD5C3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV6570D1B2FF96155F
+    bdr:CR6570D1B2FF96155F
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75174 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8691A769E551BD3E
         a                   :PublishedEvent ;
         :onYear             "2004"^^xsd:gYear .
     
@@ -38,8 +49,10 @@ bdg:MW8LS24659 {
         skos:prefLabel      "sprul sku bstan 'dzin bde legs thub bstan chos kyi nyi ma mchog gi sku tshe stod kyi mdzad rnam/"@bo-x-ewts ;
         :authorshipStatement  "phug ron dkar po zhi bde srung skyob tshogs pas rtsom sgrig dang 'grems spel byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR6570D1B2FF96155F ;
+        :editionStatement   "2004 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT22A789F376F78AF7 , bdr:TT23F3CB33E1F7A8A0 ;
-        :instanceEvent      bdr:EV6570D1B2FF96155F ;
+        :instanceEvent      bdr:EV8691A769E551BD3E ;
         :instanceHasReproduction  bdr:W8LS24659 ;
         :instanceOf         bdr:WA8LS24659 ;
         :isRoot             true ;

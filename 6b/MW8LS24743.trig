@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS24743 {
-    bda:LG9E98BE2FE7D310FD
+    bda:LG63D448FAC3FE1066
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-09T15:05:17.762Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, editor, place, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAD6F7866733B752C
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-08-30T14:29:19.566Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,16 +27,21 @@ bdg:MW8LS24743 {
     bda:MW8LS24743  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS24743 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "6b/MW8LS24743.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS24743 ;
-        adm:logEntry        bda:LG9E98BE2FE7D310FD ;
+        adm:logEntry        bda:LG63D448FAC3FE1066 , bda:LGAD6F7866733B752C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA1CED14424174E65
+    bdr:CRA1CED14424174E65
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75176 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV9E98BE2FE7D310FD
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
@@ -38,8 +49,10 @@ bdg:MW8LS24743 {
         skos:prefLabel      "po to dgon pa'i gra zur badz+ra yi mi tshe'i lo rgyus/"@bo-x-ewts ;
         :authorshipStatement  "rtsom sgrig pa rdo gcod bstan 'dzin dbang rgyal/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRA1CED14424174E65 ;
+        :editionStatement   "2006 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT17E1BFB32344B09B , bdr:TTB191A14F21017CD9 , bdr:TTE38C827AF548F26D ;
-        :instanceEvent      bdr:EVA1CED14424174E65 ;
+        :instanceEvent      bdr:EV9E98BE2FE7D310FD ;
         :instanceHasReproduction  bdr:W8LS24743 ;
         :instanceOf         bdr:WA8LS24743 ;
         :isRoot             true ;

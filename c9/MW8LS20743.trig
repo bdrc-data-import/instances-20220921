@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20743 {
-    bda:LG2D30EB3523BDA8C4
+    bda:LG0D4B0B4204C13117
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-09T09:33:07.149Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, author, editor, topic, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC314B96D9CC75035
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-01-04T08:45:05.608Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,36 +27,43 @@ bdg:MW8LS20743 {
     bda:MW8LS20743  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20743 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "c9/MW8LS20743.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20743 ;
-        adm:logEntry        bda:LG2D30EB3523BDA8C4 ;
+        adm:logEntry        bda:LG0D4B0B4204C13117 , bda:LGC314B96D9CC75035 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9DF5F46A1B34636B
+    bdr:CR9DF5F46A1B34636B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75172 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV3D37BB66EA579C8B
         a                   :PublishedEvent ;
         :onYear             "2012"^^xsd:gYear .
     
     bdr:MW8LS20743  a       :Instance ;
         skos:prefLabel      "shangs pa lhun grub sangs rgyas kyi lo rgyus/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR9DF5F46A1B34636B ;
+        :editionStatement   "2012 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT136528F5C7F38B13 , bdr:TTA80712CC9FE6886D ;
-        :instanceEvent      bdr:EV9DF5F46A1B34636B ;
+        :instanceEvent      bdr:EV3D37BB66EA579C8B ;
         :instanceHasReproduction  bdr:W8LS20743 ;
         :instanceOf         bdr:WA8LS20743 ;
         :isRoot             true ;
-        :note               bdr:NT3D37BB66EA579C8B ;
+        :note               bdr:NT2D30EB3523BDA8C4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "Dharamsala"@en ;
-        :publisherName      "?"@en ;
+        :publisherName      "shangs pa lhun grub sangs rgyas/"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "148 p." .
     
-    bdr:NT3D37BB66EA579C8B
+    bdr:NT2D30EB3523BDA8C4
         a                   :Note ;
         :noteText           "copy made available from the Library of Tibetan Works and Archives, LTWA Acc.No. D32484"@en .
     
