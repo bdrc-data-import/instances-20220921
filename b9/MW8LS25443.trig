@@ -12,25 +12,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS25443 {
-    bda:LGE2F6BC9767F9156F
+    bda:LG160C05A2EB859C86
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-09-12T08:59:42.74Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG7D0716AECE518C1F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-10T09:58:35.446Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, editor, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS25443  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS25443 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b9/MW8LS25443.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS25443 ;
-        adm:logEntry        bda:LGE2F6BC9767F9156F ;
+        adm:logEntry        bda:LG160C05A2EB859C86 , bda:LG7D0716AECE518C1F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVC2BBEF8ABA3C0179
+    bdr:CRC2BBEF8ABA3C0179
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6982 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE2F6BC9767F9156F
         a                   :PublishedEvent ;
         :onYear             "2007"^^xsd:gYear .
     
@@ -38,8 +49,10 @@ bdg:MW8LS25443 {
         skos:prefLabel      "dkon mchog bsod nams kyi me tshe'i lo rgyus/"@bo-x-ewts ;
         :authorshipStatement  "rtsom sgrig pa/ ngag dbang tshe ring shag po/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRC2BBEF8ABA3C0179 ;
+        :editionStatement   "2007 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT492CDD8C1C6EBF84 , bdr:TT9184DF3896AD0202 ;
-        :instanceEvent      bdr:EVC2BBEF8ABA3C0179 ;
+        :instanceEvent      bdr:EVE2F6BC9767F9156F ;
         :instanceHasReproduction  bdr:W8LS25443 ;
         :instanceOf         bdr:WA8LS25443 ;
         :isRoot             true ;
