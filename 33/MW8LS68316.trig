@@ -12,28 +12,39 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS68316 {
-    bda:LG76B113A96723F091
+    bda:LG2C3F3A5C140204D7
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-02-04T15:09:46.133Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG8FEECDCFDCE3F1DB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-16T14:27:54.688Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS68316  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS68316 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "33/MW8LS68316.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS68316 ;
-        adm:logEntry        bda:LG76B113A96723F091 ;
+        adm:logEntry        bda:LG2C3F3A5C140204D7 , bda:LG8FEECDCFDCE3F1DB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF88F42E23CF1B918
+    bdr:CRF88F42E23CF1B918
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75196 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV76419CA23CEBA09A
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:ID76419CA23CEBA09A
+    bdr:ID76B113A96723F091
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105151783" .
     
@@ -41,12 +52,13 @@ bdg:MW8LS68316 {
         skos:altLabel       "Sixty Movie Directors"@en ;
         skos:prefLabel      "'khrab khrid pa drug cu/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID76419CA23CEBA09A ;
+            bdr:ID76B113A96723F091 ;
         :authorshipStatement  "sgrig gtso/ byams phrug"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRF88F42E23CF1B918 ;
         :editionStatement   "2018 par gzhi dang po/ 2018 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT6B04F5BE55605AFA , bdr:TTDCC7B1C652206B58 ;
-        :instanceEvent      bdr:EVF88F42E23CF1B918 ;
+        :instanceEvent      bdr:EV76419CA23CEBA09A ;
         :instanceHasReproduction  bdr:W8LS68316 ;
         :instanceOf         bdr:WA8LS68316 ;
         :isRoot             true ;

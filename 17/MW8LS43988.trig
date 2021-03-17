@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS43988 {
-    bda:LG3744AA38D955DBBB
+    bda:LG47BCD1419DED359F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-15T09:20:04.336Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person, author, editor, topic, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBCE7CCD5854B79C1
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-03-27T12:23:09.36Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,16 +27,21 @@ bdg:MW8LS43988 {
     bda:MW8LS43988  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS43988 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "17/MW8LS43988.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS43988 ;
-        adm:logEntry        bda:LG3744AA38D955DBBB ;
+        adm:logEntry        bda:LG47BCD1419DED359F , bda:LGBCE7CCD5854B79C1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV24C76901C3122102
+    bdr:CR24C76901C3122102
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG4866 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV3744AA38D955DBBB
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
@@ -38,8 +49,10 @@ bdg:MW8LS43988 {
         skos:prefLabel      "li g.yu/"@bo-x-ewts ;
         :authorshipStatement  "gzhis rtse no yon blo bzang phun tshogs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR24C76901C3122102 ;
+        :editionStatement   "2006 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT265C5ED30D861B70 , bdr:TTF1B48A02B3131E9B ;
-        :instanceEvent      bdr:EV24C76901C3122102 ;
+        :instanceEvent      bdr:EV3744AA38D955DBBB ;
         :instanceHasReproduction  bdr:W8LS43988 ;
         :instanceOf         bdr:WA8LS43988 ;
         :isRoot             true ;
