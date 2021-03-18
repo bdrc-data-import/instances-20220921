@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29496 {
+    bda:LG0EEBEB2AF9DD1744
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG1432DC22F85989FD
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-09-28T10:41:27.079Z"^^xsd:dateTime ;
@@ -19,8 +23,10 @@ bdg:MW29496 {
         adm:logWho          bdu:U00021 .
     
     bda:LG92270AE0674A7ACE
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T15:23:48.025Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat info and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LGB9009AEAC4A5881E
         a                   adm:InitialOutlineData ;
@@ -45,11 +51,11 @@ bdg:MW29496 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB88396" ;
         adm:adminAbout      bdr:MW29496 ;
-        adm:facetIndex      35 ;
+        adm:facetIndex      36 ;
         adm:gitPath         "85/MW29496.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29496 ;
-        adm:logEntry        bda:LG1432DC22F85989FD , bda:LG92270AE0674A7ACE , bda:LGB9009AEAC4A5881E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0EEBEB2AF9DD1744 , bda:LG1432DC22F85989FD , bda:LG92270AE0674A7ACE , bda:LGB9009AEAC4A5881E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
         adm:outlineType     bda:OutlineTypeNoType ;
@@ -134,23 +140,24 @@ bdg:MW29496 {
         rdf:value           "7542108514" .
     
     bdr:MW29496  a          :Instance ;
-        skos:altLabel       "zang zu zhe xue si xiang wen hua lun ji"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "藏族哲学思想文化论集"@zh-hans ;
         skos:prefLabel      "gzhung don mdor bstan gyi rnam bshad bsdus pa'i snying po/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID142EBD2F90005F22 , bdr:IDDB6E91967E78A7B8 ;
         :authorshipStatement  "'brug thar gyis brtsams/"@bo-x-ewts ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasPart            bdr:MW29496_0871FF , bdr:MW29496_3D1467 , bdr:MW29496_52A82A , bdr:MW29496_5DDA49 , bdr:MW29496_65583E , bdr:MW29496_662B1E , bdr:MW29496_70C55D , bdr:MW29496_869086 , bdr:MW29496_B829C9 , bdr:MW29496_C17A1E , bdr:MW29496_EBAB39 ;
-        :hasTitle           bdr:TT6996115AA7DCCFA4 , bdr:TTD19C616CD55389CA ;
+        :hasTitle           bdr:TT6996115AA7DCCFA4 , bdr:TT75B8419C50D82600 , bdr:TTD19C616CD55389CA ;
         :illustrations      "ill." ;
         :instanceEvent      bdr:EV65819456C4675CE1 ;
         :instanceHasReproduction  bdr:W29496 ;
         :instanceOf         bdr:WA29496 ;
         :isRoot             true ;
-        :note               bdr:NT75B8419C50D82600 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lan kru'u/"@bo-x-ewts ;
-        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "326 p." ;
         :workPagination     bdr:PaginationAbsolute .
@@ -308,10 +315,6 @@ bdg:MW29496 {
         :partTreeIndex      "02" ;
         :partType           bdr:PartTypeText .
     
-    bdr:NT75B8419C50D82600
-        a                   :Note ;
-        :noteText           "Miscellaneous articles on Tibetan history and classical literature."@en .
-    
     bdr:TT1075083496EF0D01
         a                   :Title ;
         rdfs:label          "rtse po tA la'i pho brang gi bzo bkod zur tsam gleng ba/"@bo-x-ewts .
@@ -329,8 +332,8 @@ bdg:MW29496 {
         rdfs:label          "gzhon nu drug gi rtogs brjod zhes bya ba'i sgrung rtsom gyi brtsams chos la dpyad pa/"@bo-x-ewts .
     
     bdr:TT6996115AA7DCCFA4
-        a                   :Title ;
-        rdfs:label          "gzhung don mdor bstan gyi rnam bshad bsdus pa'i snying po/"@bo-x-ewts .
+        a                   :OtherTitle ;
+        rdfs:label          "藏族哲学思想文化论集"@zh-hans .
     
     bdr:TT6EF40A5DEA78BCFC
         a                   :Title ;
@@ -339,6 +342,10 @@ bdg:MW29496 {
     bdr:TT72A1A3852C62B187
         a                   :Title ;
         rdfs:label          "rgyal ba tshangs dbyangs rgya mtsho dang tshangs dbyangs rgya mtsho'i mgur glu bar gyi khyad par ston pa/"@bo-x-ewts .
+    
+    bdr:TT75B8419C50D82600
+        a                   :Title ;
+        rdfs:label          "gzhung don mdor bstan gyi rnam bshad bsdus pa'i snying po/"@bo-x-ewts .
     
     bdr:TT864FD7E28B496B2C
         a                   :Title ;
@@ -357,7 +364,7 @@ bdg:MW29496 {
         rdfs:label          "bod kyi mkhas dbang chen po rje btsun dung dkar blo bzang 'phrin las dpal bzang po mchog gi mdzad rjes mtshams sbyor mdor bsdus/"@bo-x-ewts .
     
     bdr:TTD19C616CD55389CA
-        a                   :ColophonTitle ;
+        a                   :OtherTitle ;
         rdfs:label          "zang zu zhe xue si xiang wen hua lun ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TTDA463F1A241DC799

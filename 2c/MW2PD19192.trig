@@ -28,14 +28,20 @@ bdg:MW2PD19192 {
         adm:logMessage      "fixed isbn"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGF0DFF493EEA6B3BC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T16:03:02.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added aboutuncontroled, cat info, print type, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW2PD19192  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2PD19192 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "2c/MW2PD19192.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2PD19192 ;
-        adm:logEntry        bda:LG639668DB7226FB3C , bda:LG8202BF54287EB629 , bda:LGEE24A7AA98195B4F ;
+        adm:logEntry        bda:LG639668DB7226FB3C , bda:LG8202BF54287EB629 , bda:LGEE24A7AA98195B4F , bda:LGF0DFF493EEA6B3BC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -47,21 +53,26 @@ bdg:MW2PD19192 {
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9789996225581" .
     
-    bdr:MW2PD19192  a       :Instance ;
+    bdr:MW2PD19192  a       :Instance , :SerialInstance ;
         skos:prefLabel      "sog po mkhas pa rnams kyi bod skad du brtsams pa'i gsung 'bum dkar chag"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID0C748983FEA0896F ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "2013 par gzhi dang po/ 2013 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT8F715687600A8755 ;
         :instanceEvent      bdr:EVCAB6C94BDD01E2BD ;
         :instanceHasReproduction  bdr:W2PD19192 ;
         :instanceOf         bdr:WA2PD19192 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "Ulaanbaatar"@en ;
+        :publisherName      "National Library of Mongolia"@en ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "493  P." .
+        :workExtentStatement  "493  P. (v.1)" ;
+        :workSeriesNumber   "1" .
     
     bdr:TT8F715687600A8755
-        a                   :Title ;
+        a                   :TitlePageTitle ;
         rdfs:label          "sog po mkhas pa rnams kyi bod skad du brtsams pa'i gsung 'bum dkar chag"@bo-x-ewts .
 }
