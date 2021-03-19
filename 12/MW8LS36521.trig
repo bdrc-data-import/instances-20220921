@@ -12,10 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS36521 {
-    bda:LGDAE3517B89981F35
+    bda:LGCAE5ED5B253F1077
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-07-31T12:19:40.004Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGDAE3517B89981F35
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-18T14:37:40.55Z"^^xsd:dateTime ;
+        adm:logMessage      "added aboutuncontroled, edition statement"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS36521  a       adm:AdminData ;
@@ -25,23 +31,23 @@ bdg:MW8LS36521 {
         adm:gitPath         "12/MW8LS36521.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS36521 ;
-        adm:logEntry        bda:LGDAE3517B89981F35 ;
+        adm:logEntry        bda:LGCAE5ED5B253F1077 , bda:LGDAE3517B89981F35 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCAE5ED5B253F1077
+    bdr:EV3DB09ED280EB5C2A
         a                   :PublishedEvent ;
         :onYear             "2004"^^xsd:gYear .
     
     bdr:MW8LS36521  a       :Instance , :SerialInstance ;
         skos:prefLabel      "rje btsun dam pa sku phreng dang po nas gsum pa'i gsung thor bu/"@bo-x-ewts ;
-        :hasTitle           bdr:TT3DB09ED280EB5C2A ;
-        :instanceEvent      bdr:EVCAE5ED5B253F1077 ;
+        :editionStatement   "2004 par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT39C71A41E0F04149 ;
+        :instanceEvent      bdr:EV3DB09ED280EB5C2A ;
         :instanceHasReproduction  bdr:W8LS36521 ;
         :instanceOf         bdr:WA8LS36521 ;
         :isRoot             true ;
-        :note               bdr:NT39C71A41E0F04149 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
         :publisherLocation  "Ullanbaatar, Mongolia"@en ;
@@ -50,11 +56,7 @@ bdg:MW8LS36521 {
         :workExtentStatement  "324 p." ;
         :workSeriesNumber   "III" .
     
-    bdr:NT39C71A41E0F04149
-        a                   :Note ;
-        :noteText           "Contents;\n\n1\tbyang phyogs bstan 'gro'i dpal mgon khal kha rje btsun dam pa rin po che'i sku phreng rim byon rnams kyi gsung 'bum dkar chag\n2\trje btsun blo bzang bstan pa'i rgyal mtshan gyi gsung 'thor bu phyogs gcig tu bsdus pa/\n3\tmgon po chos 'bul/\n4\tchos rgyal chos 'bul/\n5\trnam sras kyi chos 'bul/\n6\ttshangs pa'i chos 'bul/"@en .
-    
-    bdr:TT3DB09ED280EB5C2A
+    bdr:TT39C71A41E0F04149
         a                   :TitlePageTitle ;
         rdfs:label          "rje btsun dam pa sku phreng dang po nas gsum pa'i gsung thor bu/"@bo-x-ewts .
 }
