@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03601 {
-    bda:LG0710D71B9B732796
+    bda:LGFC363317128A2C7D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T12:20:14.488Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and Language encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFDDFF7CE9DF27658
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-10-02T10:48:52.127Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
@@ -35,39 +41,40 @@ bdg:MW00KG03601 {
     bda:MW00KG03601  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00KG03601 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b5/MW00KG03601.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG03601 ;
-        adm:logEntry        bda:LG0710D71B9B732796 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGFC363317128A2C7D , bda:LGFDDFF7CE9DF27658 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV99101DCCFF14E904
+    bdr:EV9D078A33633E21FE
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
-    bdr:ID9D078A33633E21FE
+    bdr:ID0710D71B9B732796
         a                   bdr:HollisId ;
         rdf:value           "014254370" .
     
     bdr:MW00KG03601  a      :Instance , :SerialInstance ;
-        skos:altLabel       "gan nan zang qu si lu lv you wen hua"@zh-latn-pinyin-x-ndia ;
-        skos:prefLabel      "kan lho'i bod khul dar lam ljongs rgyu'i rig gnas/"@bo-x-ewts ;
+        skos:prefLabel      "kan lho'i bod khul dar lam ljongs rgyu'i rig gnas/"@bo-x-ewts , "甘南藏族丝路旅游文化"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9D078A33633E21FE ;
+            bdr:ID0710D71B9B732796 ;
         :authorshipStatement  "srid gros kan lho bod rigs rang skyong khul u yon lhan khang gis gtso bsgrubs/"@bo-x-ewts ;
         :biblioNote         "all the articles are written in chinese language"@en ;
-        :hasTitle           bdr:TT3C7A1DDC303471E8 , bdr:TT58805B7FF115F92B ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :hasTitle           bdr:TT3C7A1DDC303471E8 , bdr:TT58805B7FF115F92B , bdr:TT99101DCCFF14E904 ;
         :illustrations      "ills." ;
-        :instanceEvent      bdr:EV99101DCCFF14E904 ;
+        :instanceEvent      bdr:EV9D078A33633E21FE ;
         :instanceHasReproduction  bdr:W00KG03601 ;
         :instanceOf         bdr:WA00KG03601 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "kan lho/"@bo-x-ewts ;
         :publisherName      "kan lho'i lo rgyus dpyad gzhi'i yig rigs cus/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
         :workExtentStatement  "247 p." ;
         :workSeriesNumber   "18" .
     
@@ -76,6 +83,10 @@ bdg:MW00KG03601 {
         rdfs:label          "kan lho'i bod khul dar lam ljongs rgyu'i rig gnas/"@bo-x-ewts .
     
     bdr:TT58805B7FF115F92B
+        a                   :OtherTitle ;
+        rdfs:label          "甘南藏族丝路旅游文化"@zh-hans .
+    
+    bdr:TT99101DCCFF14E904
         a                   :OtherTitle ;
         rdfs:label          "gan nan zang qu si lu lv you wen hua"@zh-latn-pinyin-x-ndia .
 }

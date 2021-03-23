@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG02744 {
-    bda:LGDC7FA62C9D75EA16
+    bda:LGC3819F6DA0677EAB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T12:20:13.312Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and Language encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDA6FAE08851268C0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-08-07T11:20:00.555Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released first time"@en ;
@@ -39,54 +45,51 @@ bdg:MW00KG02744 {
         adm:gitPath         "0b/MW00KG02744.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG02744 ;
-        adm:logEntry        bda:LGDC7FA62C9D75EA16 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGC3819F6DA0677EAB , bda:LGDA6FAE08851268C0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV49708CCC5AC85F8E
+    bdr:EV560D67A72C507A53
         a                   :PublishedEvent ;
         :onYear             "2004"^^xsd:gYear .
     
-    bdr:ID9010B044DF652B72
+    bdr:ID49708CCC5AC85F8E
         a                   bdr:HollisId ;
         rdf:value           "014254350" .
     
-    bdr:IDDA6FAE08851268C0
+    bdr:ID9010B044DF652B72
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7805890439" .
     
     bdr:MW00KG02744  a      :Instance ;
         skos:prefLabel      "'dzom pa'i zhwa bshad/"@bo-x-ewts , "the praise of the hat"@en , "zang ba zan mao"@zh-latn-pinyin-x-ndia ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9010B044DF652B72 , bdr:IDDA6FAE08851268C0 ;
+            bdr:ID49708CCC5AC85F8E , bdr:ID9010B044DF652B72 ;
         :authorshipStatement  "bod ljongs spyi tshogs tshan rig khang ge sar don gcod khang nas bsgrigs/"@bo-x-ewts ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
-        :hasTitle           bdr:TT560D67A72C507A53 , bdr:TT6AF594BCE54075DD , bdr:TT826CD2B5D0FF971A ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT6AF594BCE54075DD , bdr:TT826CD2B5D0FF971A , bdr:TTEE8770FB0624CC34 ;
         :illustrations      "ill., (part. col.)" ;
-        :instanceEvent      bdr:EV49708CCC5AC85F8E ;
+        :instanceEvent      bdr:EV560D67A72C507A53 ;
         :instanceHasReproduction  bdr:W00KG02744 ;
         :instanceOf         bdr:WA00KG02744 ;
         :isRoot             true ;
-        :note               bdr:NTEE8770FB0624CC34 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
         :workExtentStatement  "8, 15, 7, 47, 22, 34, 3 p." .
     
-    bdr:NTEE8770FB0624CC34
-        a                   :Note ;
-        :noteText           "the praise and explanation of the hats of 'dzom pa of ling gesar; include's translation in chinese and english language"@en .
-    
-    bdr:TT560D67A72C507A53
-        a                   :OtherTitle ;
-        rdfs:label          "the praise of the hat"@en .
-    
     bdr:TT6AF594BCE54075DD
-        a                   :Title ;
-        rdfs:label          "'dzom pa'i zhwa bshad/"@bo-x-ewts .
+        a                   :OtherTitle ;
+        rdfs:label          "zang ba zan mao"@zh-latn-pinyin-x-ndia .
     
     bdr:TT826CD2B5D0FF971A
         a                   :OtherTitle ;
-        rdfs:label          "zang ba zan mao"@zh-latn-pinyin-x-ndia .
+        rdfs:label          "the praise of the hat"@en .
+    
+    bdr:TTEE8770FB0624CC34
+        a                   :Title ;
+        rdfs:label          "'dzom pa'i zhwa bshad/"@bo-x-ewts .
 }

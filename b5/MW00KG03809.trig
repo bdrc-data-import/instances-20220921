@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03809 {
-    bda:LG2C363C7ED17E2061
+    bda:LG688F4A4305553162
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T16:48:31.749Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6AFA32F093A08AD0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-11-12T10:52:34.977Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and published"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LG614FD802ABF8CDAE
+    bda:LG88F6D0ECD1693EE3
         a                   adm:UpdateData ;
         adm:logDate         "2009-07-20T09:18:42.335Z"^^xsd:dateTime ;
         adm:logMessage      "bc0s"@en ;
@@ -41,59 +47,69 @@ bdg:MW00KG03809 {
     bda:MW00KG03809  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00KG03809 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      16 ;
         adm:gitPath         "b5/MW00KG03809.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG03809 ;
-        adm:logEntry        bda:LG2C363C7ED17E2061 , bda:LG614FD802ABF8CDAE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG688F4A4305553162 , bda:LG6AFA32F093A08AD0 , bda:LG88F6D0ECD1693EE3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV8A42810C2953A676
+    bdr:EV1D1A1DFE40157672
         a                   :PublishedEvent ;
         :onYear             "1999"^^xsd:gYear .
     
-    bdr:ID1D1A1DFE40157672
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "00409860" .
-    
-    bdr:ID3D409BB250B25921
+    bdr:ID2C363C7ED17E2061
         a                   bdr:HollisId ;
         rdf:value           "014254421" .
     
-    bdr:ID672A7E90CE527B59
+    bdr:ID3D409BB250B25921
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "DS797.66.H836 H839 1999" .
     
-    bdr:IDBA1535DA7974B4F7
+    bdr:ID614FD802ABF8CDAE
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7226021285" .
     
+    bdr:IDBA1535DA7974B4F7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "00409860" .
+    
     bdr:MW00KG03809  a      :Instance ;
         skos:altLabel       "rma lho'i deb ther/"@bo-x-ewts ;
-        skos:prefLabel      "huang nan zhou zhi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "黄南 藏族 自治州志"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1D1A1DFE40157672 , bdr:ID3D409BB250B25921 , bdr:ID672A7E90CE527B59 , bdr:IDBA1535DA7974B4F7 ;
+            bdr:ID2C363C7ED17E2061 , bdr:ID3D409BB250B25921 , bdr:ID614FD802ABF8CDAE , bdr:IDBA1535DA7974B4F7 ;
         :authorshipStatement  "rma lho bod rigs rang skyong khul gyi deb ther rtsom sgrig u yon lhan khang gi rtsom sgrig byas/"@bo-x-ewts ;
         :biblioNote         "written in chinese"@en ;
-        :editionStatement   "di 1 ban."@bo-x-ewts ;
-        :hasTitle           bdr:TT1309D58148D18F75 , bdr:TT677162E4478222AE , bdr:TTB7A712D4293E19FA ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
+        :hasTitle           bdr:TT1309D58148D18F75 , bdr:TT672A7E90CE527B59 , bdr:TT677162E4478222AE , bdr:TT8A42810C2953A676 , bdr:TTB7A712D4293E19FA ;
         :illustrations      "ill. (plates: 23 p. in 1 v. , 24 p. in 2 v.), 5 maps (folded)" ;
-        :instanceEvent      bdr:EV8A42810C2953A676 ;
+        :instanceEvent      bdr:EV1D1A1DFE40157672 ;
         :instanceHasReproduction  bdr:W00KG03809 ;
         :instanceOf         bdr:WA00KG03809 ;
         :isRoot             true ;
         :numberOfVolumes    2 ;
-        :publisherLocation  "lanzhou shi"@en ;
-        :publisherName      "gansu ren min chu ban she"@en ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "兰州市"@zh-hans ;
+        :publisherName      "甘肃 人民 出版社"@zh-hans ;
         :script             bdr:ScriptHani ;
         :workExtentStatement  "2 v. (3, 4, 2, 15, 1623 p.)" .
     
     bdr:TT1309D58148D18F75
         a                   :TitlePageTitle ;
+        rdfs:label          "黄南 藏族 自治州志 / 黄南 藏族 自治州 地方志 编纂 委员会"@zh-hans .
+    
+    bdr:TT672A7E90CE527B59
+        a                   :TitlePageTitle ;
         rdfs:label          "huangnan zangzu zizhizhou zhi"@zh-latn-pinyin-x-ndia .
     
     bdr:TT677162E4478222AE
+        a                   :Title ;
+        rdfs:label          "黄南 藏族 自治州志"@zh-hans .
+    
+    bdr:TT8A42810C2953A676
         a                   :Title ;
         rdfs:label          "huang nan zhou zhi"@zh-latn-pinyin-x-ndia .
     

@@ -12,10 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03598 {
-    bda:LGC3706BB280BF718F
+    bda:LGAE3789B3D56AC75C
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-10-02T10:48:33.363Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB36AAC221B9C8C93
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T12:20:14.1Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and Language encoding"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
@@ -35,54 +41,60 @@ bdg:MW00KG03598 {
     bda:MW00KG03598  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00KG03598 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "b5/MW00KG03598.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG03598 ;
-        adm:logEntry        bda:LGC3706BB280BF718F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGAE3789B3D56AC75C , bda:LGB36AAC221B9C8C93 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CR231D72F99162CDA6
-        a                   :AgentAsCreator ;
-        :agent              bdr:P7049 ;
-        :role               bdr:R0ER0015 .
-    
-    bdr:CRF5D9D02D82E91465
+    bdr:CR11F149E38ADFF648
         a                   :AgentAsCreator ;
         :agent              bdr:P00KG03665 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EV11F149E38ADFF648
+    bdr:CRF5D9D02D82E91465
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7049 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVCADDD3A847411F65
         a                   :PublishedEvent ;
         :onYear             "0199"^^xsd:gYear .
     
-    bdr:IDCADDD3A847411F65
+    bdr:IDC3706BB280BF718F
         a                   bdr:HollisId ;
         rdf:value           "014254367" .
     
     bdr:MW00KG03598  a      :Instance , :SerialInstance ;
-        skos:altLabel       "re dan jia cuo huo fo chuan lue"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "热旦加措活佛传略"@zh-hans ;
         skos:prefLabel      "khri chen rab brtan rgya mtsho'i rnam thar rgyas pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCADDD3A847411F65 ;
+            bdr:IDC3706BB280BF718F ;
         :authorshipStatement  "srid gros kan lho bod rigs rang skyong khul u yon lhan khang gi rig gnas lo rgyus dpyad yig dang slob sbyong dril sgrog u yon lhan khang /"@bo-x-ewts ;
-        :creator            bdr:CR231D72F99162CDA6 , bdr:CRF5D9D02D82E91465 ;
-        :hasTitle           bdr:TT356097633FDB5DE1 , bdr:TT46172B3CC4DC47D6 , bdr:TT8A96967F39ABCDD7 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR11F149E38ADFF648 , bdr:CRF5D9D02D82E91465 ;
+        :hasTitle           bdr:TT231D72F99162CDA6 , bdr:TT356097633FDB5DE1 , bdr:TT46172B3CC4DC47D6 , bdr:TT8A96967F39ABCDD7 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EV11F149E38ADFF648 ;
+        :instanceEvent      bdr:EVCADDD3A847411F65 ;
         :instanceHasReproduction  bdr:W00KG03598 ;
         :instanceOf         bdr:WA00KG03598 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "kan lho/"@bo-x-ewts ;
         :publisherName      "kan lho'i lo rgyus dpyad gzhi'i yig rigs cus/"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "188 p." ;
         :workSeriesNumber   "14" .
     
-    bdr:TT356097633FDB5DE1
+    bdr:TT231D72F99162CDA6
         a                   :OtherTitle ;
+        rdfs:label          "re dan jia cuo huo fo chuan lue"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT356097633FDB5DE1
+        a                   :TitlePageTitle ;
         rdfs:label          "khri chen rab brtan rgya mtsho'i rnam thar rgyas pa legs byas mchod pa'i me tog phreng mdzes/"@bo-x-ewts .
     
     bdr:TT46172B3CC4DC47D6
@@ -91,5 +103,5 @@ bdg:MW00KG03598 {
     
     bdr:TT8A96967F39ABCDD7
         a                   :OtherTitle ;
-        rdfs:label          "re dan jia cuo huo fo chuan lue"@zh-latn-pinyin-x-ndia .
+        rdfs:label          "热旦加措活佛传略"@zh-hans .
 }
