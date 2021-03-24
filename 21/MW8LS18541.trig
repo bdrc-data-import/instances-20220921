@@ -12,46 +12,63 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18541 {
-    bda:LG12591C6F9AEF3F92
-        a                   adm:UpdateData ;
-        adm:logDate         "2017-04-06T16:27:34.177Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LG26E29D528C3385FA
+    bda:LG35528812B909F6A0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-06T16:11:00.266Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG4C9969E614C85398
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-04-06T16:27:34.177Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6F1B51AD1CC9EEB0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T13:58:38.265Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS18541  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18541 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "21/MW8LS18541.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18541 ;
-        adm:logEntry        bda:LG12591C6F9AEF3F92 , bda:LG26E29D528C3385FA ;
+        adm:logEntry        bda:LG35528812B909F6A0 , bda:LG4C9969E614C85398 , bda:LG6F1B51AD1CC9EEB0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9F1B5A43607BE46B
+    bdr:CR9F1B5A43607BE46B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1GS60376 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV26E29D528C3385FA
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
+    bdr:ID12591C6F9AEF3F92
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105081288" .
+    
     bdr:MW8LS18541  a       :Instance ;
         skos:prefLabel      "sman gzhung gces btus/"@bo-x-ewts ;
-        :authorshipStatement  "gtso sgrig pa/ skal bzang rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID12591C6F9AEF3F92 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par thengs 3 pa/"@bo-x-ewts ;
+        :creator            bdr:CR9F1B5A43607BE46B ;
+        :editionStatement   "2006 par gzhi dang po/ 2016 par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT90B1BB827C963C23 ;
-        :instanceEvent      bdr:EV9F1B5A43607BE46B ;
+        :instanceEvent      bdr:EV26E29D528C3385FA ;
         :instanceHasReproduction  bdr:W8LS18541 ;
         :instanceOf         bdr:WA8LS18541 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "266+6 p." .
     

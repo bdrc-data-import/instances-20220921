@@ -12,51 +12,63 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18574 {
-    bda:LG8A12F2601915635C
+    bda:LG4589264FB59BF955
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T16:36:42.408Z"^^xsd:dateTime ;
+        adm:logMessage      "added editior, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG5F89A58A62EBD0CF
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-18T14:33:32.888Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGEB43C57C0C7B9907
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-11T09:37:27.158Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGEB43C57C0C7B9907
-        a                   adm:UpdateData ;
-        adm:logDate         "2017-05-18T14:33:32.888Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:MW8LS18574  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18574 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "e5/MW8LS18574.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18574 ;
-        adm:logEntry        bda:LG8A12F2601915635C , bda:LGEB43C57C0C7B9907 ;
+        adm:logEntry        bda:LG4589264FB59BF955 , bda:LG5F89A58A62EBD0CF , bda:LGEB43C57C0C7B9907 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV3E58C36F3CAC0F15
+    bdr:CR3E58C36F3CAC0F15
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75226 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE8194548FF33EF74
         a                   :PublishedEvent ;
         :onYear             "2011"^^xsd:gYear .
     
-    bdr:IDE8194548FF33EF74
+    bdr:ID8A12F2601915635C
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105116119" .
     
     bdr:MW8LS18574  a       :Instance ;
         skos:prefLabel      "rtsis 'khor dra rgya/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE8194548FF33EF74 ;
-        :authorshipStatement  "dkon b+hes sgrig sgyur byas/"@bo-x-ewts ;
+            bdr:ID8A12F2601915635C ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR3E58C36F3CAC0F15 ;
+        :editionStatement   "2011 par gzhi dang po/ 2011 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTD416F0E9E2E1F100 ;
-        :instanceEvent      bdr:EV3E58C36F3CAC0F15 ;
+        :instanceEvent      bdr:EVE8194548FF33EF74 ;
         :instanceHasReproduction  bdr:W8LS18574 ;
         :instanceOf         bdr:WA8LS18574 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "444 p." .
     

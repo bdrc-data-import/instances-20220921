@@ -12,20 +12,26 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18565 {
-    bda:LG39476A0385A49578
+    bda:LGBD334B5BD4FBA4DC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T15:51:33.876Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGF5B5A2F7D8196A0C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T14:40:14.029Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, isbn, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS18565  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18565 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "d0/MW8LS18565.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18565 ;
-        adm:logEntry        bda:LG39476A0385A49578 ;
+        adm:logEntry        bda:LGBD334B5BD4FBA4DC , bda:LGF5B5A2F7D8196A0C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -33,11 +39,16 @@ bdg:MW8LS18565 {
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
+    bdr:ID39476A0385A49578
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105081264" .
+    
     bdr:MW8LS18565  a       :Instance ;
         skos:prefLabel      "bod sman srog chags rig pa/"@bo-x-ewts ;
-        :authorshipStatement  "gtso sgrig pa/ rnam rgyal thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID39476A0385A49578 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par thengs gsum pa/"@bo-x-ewts ;
+        :editionStatement   "2006 par gzhi dang po/ 2016 par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT45D7102AC34539CA ;
         :instanceEvent      bdr:EVA11E3F17C91CA3D3 ;
         :instanceHasReproduction  bdr:W8LS18565 ;
@@ -45,8 +56,8 @@ bdg:MW8LS18565 {
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "246+6 p." .
     

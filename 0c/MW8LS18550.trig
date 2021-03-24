@@ -12,7 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18550 {
-    bda:LG577EFC40A3E954FD
+    bda:LG0153A7C28F2C46BD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T14:06:45.283Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG2D3D2D958786DFC1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T14:15:36.389Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn number"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG446EA1017EA7619E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T09:41:31.629Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
@@ -21,32 +33,43 @@ bdg:MW8LS18550 {
     bda:MW8LS18550  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18550 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "0c/MW8LS18550.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18550 ;
-        adm:logEntry        bda:LG577EFC40A3E954FD ;
+        adm:logEntry        bda:LG0153A7C28F2C46BD , bda:LG2D3D2D958786DFC1 , bda:LG446EA1017EA7619E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV43D8A9813CA10674
+    bdr:CR43D8A9813CA10674
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6896 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV577EFC40A3E954FD
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
+    bdr:ID814D809BF3B9C914
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105079889" .
+    
     bdr:MW8LS18550  a       :Instance ;
         skos:prefLabel      "sbyor ba sman/"@bo-x-ewts ;
-        :authorshipStatement  "gtso sgrig pa/kar+ma tshogs ngyis/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID814D809BF3B9C914 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par thengs gsum pa/"@bo-x-ewts ;
+        :creator            bdr:CR43D8A9813CA10674 ;
+        :editionStatement   "2006 par gzhi dang po/ 2016 par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT0CA07AC21982CACD ;
-        :instanceEvent      bdr:EV43D8A9813CA10674 ;
+        :instanceEvent      bdr:EV577EFC40A3E954FD ;
         :instanceHasReproduction  bdr:W8LS18550 ;
-        :instanceOf         bdr:WA1KG23844 ;
+        :instanceOf         bdr:WA1KG23844 , bdr:WA8LS18550 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "286+6 p." .
     

@@ -12,46 +12,58 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18559 {
-    bda:LG38B7723E55D584A4
+    bda:LGB7F0C4AAB25E3DD9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T10:54:27.577Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGD811A3232E95B6D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T14:33:51.723Z"^^xsd:dateTime ;
+        adm:logMessage      "added editior, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS18559  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18559 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f2/MW8LS18559.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18559 ;
-        adm:logEntry        bda:LG38B7723E55D584A4 ;
+        adm:logEntry        bda:LGB7F0C4AAB25E3DD9 , bda:LGD811A3232E95B6D2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF09856B1462B8E83
+    bdr:CRF09856B1462B8E83
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75224 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVDE2F21968AAA906E
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDDE2F21968AAA906E
+    bdr:ID38B7723E55D584A4
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105111664" .
     
     bdr:MW8LS18559  a       :Instance ;
         skos:prefLabel      "tha mal nad med/ bcos sgrig ma/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDE2F21968AAA906E ;
-        :authorshipStatement  "gtso sgrig pa/ pad kho/"@bo-x-ewts ;
+            bdr:ID38B7723E55D584A4 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRF09856B1462B8E83 ;
+        :editionStatement   "2004 par gzhi dang po/ 2010 par gzhi gnyis pa/ 2019 par thengs drug pa/"@bo-x-ewts ;
         :hasTitle           bdr:TTE398A6E9406B5755 ;
-        :instanceEvent      bdr:EVF09856B1462B8E83 ;
+        :instanceEvent      bdr:EVDE2F21968AAA906E ;
         :instanceHasReproduction  bdr:W8LS18559 ;
         :instanceOf         bdr:WA8LS18559 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "162+11 p." .
     
