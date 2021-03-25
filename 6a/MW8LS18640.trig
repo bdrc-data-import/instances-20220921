@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18640 {
-    bda:LGB80410716A0C31C2
+    bda:LG8833A0DAFBFD3DD5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-24T14:41:04.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF8CE79306E88E476
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-12T10:22:27.315Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info,topic and pub info"@en ;
@@ -21,37 +27,48 @@ bdg:MW8LS18640 {
     bda:MW8LS18640  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18640 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "6a/MW8LS18640.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18640 ;
-        adm:logEntry        bda:LGB80410716A0C31C2 ;
+        adm:logEntry        bda:LG8833A0DAFBFD3DD5 , bda:LGF8CE79306E88E476 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV75BAD41911A90E33
+    bdr:CR75BAD41911A90E33
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10526 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR792CC2A537114A4B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10525 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB80410716A0C31C2
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:ID792CC2A537114A4B
+    bdr:IDE0726005A699056B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105128792" .
     
     bdr:MW8LS18640  a       :Instance ;
         skos:prefLabel      "rgya bod shan sbyar gyi skye dngos rig pa'i tshig mdzod/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID792CC2A537114A4B ;
-        :authorshipStatement  "yon tan rgya mtsho dang gu ru tshos sgrig sgyur byas/"@bo-x-ewts ;
+            bdr:IDE0726005A699056B ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR75BAD41911A90E33 , bdr:CR792CC2A537114A4B ;
+        :editionStatement   "2013 par gzhi dang po/ 2015 par thengs gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT72592DB56541A97E ;
-        :instanceEvent      bdr:EV75BAD41911A90E33 ;
+        :instanceEvent      bdr:EVB80410716A0C31C2 ;
         :instanceHasReproduction  bdr:W8LS18640 ;
         :instanceOf         bdr:WA8LS18640 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "237 p." .
     

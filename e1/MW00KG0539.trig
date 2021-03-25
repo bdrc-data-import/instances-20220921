@@ -13,14 +13,20 @@
 
 bdg:MW00KG0539 {
     bda:LG153492B9F4CB5707
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-03-08T10:23:59.106Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5AEBF86D1AB49D85
         a                   adm:UpdateData ;
         adm:logDate         "2007-03-13T15:24:32.08Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG16FCA2489E427E9D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2007-03-08T10:23:59.106Z"^^xsd:dateTime ;
+    bda:LGF28B0F5FACFC2611
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-24T08:27:40.147Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and lang encoding"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
@@ -33,53 +39,60 @@ bdg:MW00KG0539 {
     bda:MW00KG0539  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00KG0539 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "e1/MW00KG0539.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG0539 ;
-        adm:logEntry        bda:LG153492B9F4CB5707 , bda:LG16FCA2489E427E9D , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG153492B9F4CB5707 , bda:LG5AEBF86D1AB49D85 , bda:LGF28B0F5FACFC2611 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CRB0B071C1E144A5D5
-        a                   :AgentAsCreator ;
-        :agent              bdr:P8001 ;
-        :role               bdr:R0ER0015 .
-    
-    bdr:CRFDE28230A0CCB04C
+    bdr:CRBB4CA96D19C174FD
         a                   :AgentAsCreator ;
         :agent              bdr:P9596 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EVBB4CA96D19C174FD
+    bdr:CRFDE28230A0CCB04C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8001 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF46C180E2F158432
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
-    bdr:IDF46C180E2F158432
+    bdr:ID16FCA2489E427E9D
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7105078073" .
     
     bdr:MW00KG0539  a       :Instance ;
-        skos:altLabel       "guowai zangyi yaoxue yanjiu"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "国外藏医药学研究"@zh-hans ;
         skos:prefLabel      "rgyal phyi'i bod kyi gso rig zhib 'jug"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF46C180E2F158432 ;
+            bdr:ID16FCA2489E427E9D ;
         :authorshipStatement  "'bum kho dang chos dpal 'jigs byed skyabs kyis brtsams ; thub bstan gyis zhu dag gtan 'bebs byas/"@bo-x-ewts ;
-        :creator            bdr:CRB0B071C1E144A5D5 , bdr:CRFDE28230A0CCB04C ;
-        :hasTitle           bdr:TT1D0EB51D1A9905D3 , bdr:TT9C1B8995D472EA10 ;
-        :instanceEvent      bdr:EVBB4CA96D19C174FD ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRBB4CA96D19C174FD , bdr:CRFDE28230A0CCB04C ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT1D0EB51D1A9905D3 , bdr:TT9C1B8995D472EA10 , bdr:TTB0B071C1E144A5D5 ;
+        :instanceEvent      bdr:EVF46C180E2F158432 ;
         :instanceOf         bdr:WA00KG0539 ;
         :isRoot             true ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "2, 11, 2, 3, 373 p." .
     
     bdr:TT1D0EB51D1A9905D3
-        a                   :ColophonTitle ;
-        rdfs:label          "guowai zangyi yaoxue yanjiu"@zh-latn-pinyin-x-ndia .
+        a                   :OtherTitle ;
+        rdfs:label          "国外藏医药学研究"@zh-hans .
     
     bdr:TT9C1B8995D472EA10
         a                   :Title ;
         rdfs:label          "rgyal phyi'i bod kyi gso rig zhib 'jug"@bo-x-ewts .
+    
+    bdr:TTB0B071C1E144A5D5
+        a                   :OtherTitle ;
+        rdfs:label          "guowai zangyi yaoxue yanjiu"@zh-latn-pinyin-x-ndia .
 }

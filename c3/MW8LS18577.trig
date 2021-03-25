@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18577 {
-    bda:LG584FAA74109FF242
+    bda:LG1E3FBD3DED9559E5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-24T09:19:29.692Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG3C9A8F7E087EA012
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-11T09:54:55.903Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topica and pub info"@en ;
@@ -21,37 +27,48 @@ bdg:MW8LS18577 {
     bda:MW8LS18577  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18577 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "c3/MW8LS18577.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18577 ;
-        adm:logEntry        bda:LG584FAA74109FF242 ;
+        adm:logEntry        bda:LG1E3FBD3DED9559E5 , bda:LG3C9A8F7E087EA012 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV8CD3DB754D6E13DC
+    bdr:CR2B0060EF0CA3FF25
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3JM1 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR8CD3DB754D6E13DC
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75227 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV584FAA74109FF242
         a                   :PublishedEvent ;
         :onYear             "2011"^^xsd:gYear .
     
-    bdr:ID2B0060EF0CA3FF25
+    bdr:ID97D202BEBC163CFB
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105116133" .
     
     bdr:MW8LS18577  a       :Instance ;
         skos:prefLabel      "gzhi grangs mdzod rgyud khongs rnam bshad/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2B0060EF0CA3FF25 ;
-        :authorshipStatement  "spen pa dbang 'dus dang bsod nams rgya mtsho yis sgrig sgyur byas/"@bo-x-ewts ;
+            bdr:ID97D202BEBC163CFB ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR2B0060EF0CA3FF25 , bdr:CR8CD3DB754D6E13DC ;
+        :editionStatement   "2011 par gzhi dang po/ 2011 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT3D0069243759255B ;
-        :instanceEvent      bdr:EV8CD3DB754D6E13DC ;
+        :instanceEvent      bdr:EV584FAA74109FF242 ;
         :instanceHasReproduction  bdr:W8LS18577 ;
         :instanceOf         bdr:WA8LS18577 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "667 p." .
     

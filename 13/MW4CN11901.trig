@@ -12,40 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CN11901 {
-    bda:LG13C579B43EB70C11
+    bda:LG26C2B0247EE05647
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-03-01T16:35:33.575Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGA0CB90C9AEC65201
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-24T19:45:30.855Z"^^xsd:dateTime ;
+        adm:logMessage      "added authors"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW4CN11901  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CN11901 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "13/MW4CN11901.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CN11901 ;
-        adm:logEntry        bda:LG13C579B43EB70C11 ;
+        adm:logEntry        bda:LG26C2B0247EE05647 , bda:LGA0CB90C9AEC65201 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9E11A013A6ADD7F2
+    bdr:EV9A10DFC529CC0007
         a                   :PublishedEvent ;
         :onOrAbout          "2019,2020" .
     
-    bdr:ID9A10DFC529CC0007
+    bdr:ID13C579B43EB70C11
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540982850, 9787540991265" .
     
     bdr:MW4CN11901  a       :Instance ;
-        skos:prefLabel      "'dzam gling rtsom rig"@bo-x-ewts ;
+        skos:altLabel       "世界经典文学选集 （一 & 二）"@zh-hans ;
+        skos:prefLabel      "'dzam gling rtsom rig (deb dang po dang gnyis pa/）"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9A10DFC529CC0007 ;
+            bdr:ID13C579B43EB70C11 ;
         :authorshipStatement  "ldong bu/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TTC9EB81499E6F87C5 ;
-        :instanceEvent      bdr:EV9E11A013A6ADD7F2 ;
+        :hasTitle           bdr:TT9E11A013A6ADD7F2 , bdr:TTC9EB81499E6F87C5 ;
+        :instanceEvent      bdr:EV9A10DFC529CC0007 ;
         :instanceHasReproduction  bdr:W4CN11901 ;
         :instanceOf         bdr:WA4CN11901 ;
         :isRoot             true ;
@@ -54,9 +61,13 @@ bdg:MW4CN11901 {
         :publisherLocation  "khren tu'u/"@bo-x-ewts ;
         :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "2 v. (254, 252 p.)" .
+        :workExtentStatement  "2 v. (8, 3, 234p. & 4, 3, 239p.)" .
+    
+    bdr:TT9E11A013A6ADD7F2
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "世界经典文学选集 （一 & 二）"@zh-hans .
     
     bdr:TTC9EB81499E6F87C5
         a                   :Title ;
-        rdfs:label          "'dzam gling rtsom rig"@bo-x-ewts .
+        rdfs:label          "'dzam gling rtsom rig (deb dang po dang gnyis pa/）"@bo-x-ewts .
 }

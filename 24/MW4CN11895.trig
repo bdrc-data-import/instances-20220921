@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CN11895 {
-    bda:LG0D3343624B183630
+    bda:LG9E13C0ED7911806E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-24T16:44:11.766Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGBCF173F70C5BCD00
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-03-01T13:48:02.313Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
@@ -21,31 +27,37 @@ bdg:MW4CN11895 {
     bda:MW4CN11895  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CN11895 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "24/MW4CN11895.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CN11895 ;
-        adm:logEntry        bda:LG0D3343624B183630 ;
+        adm:logEntry        bda:LG9E13C0ED7911806E , bda:LGBCF173F70C5BCD00 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF407D6C60DE6926D
+    bdr:CR2E050A8F20EEF81B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CN12049 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0D3343624B183630
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:ID2E050A8F20EEF81B
+    bdr:ID9CBF75AE47D1B077
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540979799" .
     
     bdr:MW4CN11895  a       :Instance ;
         skos:prefLabel      "nga dang nga'i rtsom rig gi lta tshul/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2E050A8F20EEF81B ;
-        :authorshipStatement  "'ba' smad rgyal lo tshe ring gis brtsams/"@bo-x-ewts ;
+            bdr:ID9CBF75AE47D1B077 ;
+        :authorshipStatement  "'ba' smad rgyal lo tshe ring gis bcad 'dri byas shing bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR2E050A8F20EEF81B ;
         :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TTA5357AFF9DEC5604 ;
-        :instanceEvent      bdr:EVF407D6C60DE6926D ;
+        :hasTitle           bdr:TTA5357AFF9DEC5604 , bdr:TTF407D6C60DE6926D ;
+        :instanceEvent      bdr:EV0D3343624B183630 ;
         :instanceHasReproduction  bdr:W4CN11895 ;
         :instanceOf         bdr:WA4CN11895 ;
         :isRoot             true ;
@@ -59,4 +71,8 @@ bdg:MW4CN11895 {
     bdr:TTA5357AFF9DEC5604
         a                   :Title ;
         rdfs:label          "nga dang nga'i rtsom rig gi lta tshul/"@bo-x-ewts .
+    
+    bdr:TTF407D6C60DE6926D
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi rtsom pa po grags can rnams la bcar 'dri byas pa'i reg zig (deb lnga pa)"@bo-x-ewts .
 }
