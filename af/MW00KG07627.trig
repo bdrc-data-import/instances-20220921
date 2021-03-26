@@ -12,10 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG07627 {
-    bda:LGE2D0500F4D342B40
+    bda:LG292BFF31AD1B8508
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-03-31T16:25:26.375Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF136F42EE2811F28
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-25T11:52:11.867Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and lang encoding"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
@@ -35,23 +41,28 @@ bdg:MW00KG07627 {
     bda:MW00KG07627  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00KG07627 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "af/MW00KG07627.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG07627 ;
-        adm:logEntry        bda:LGE2D0500F4D342B40 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG292BFF31AD1B8508 , bda:LGF136F42EE2811F28 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV2A47568ABABBAFD7
+    bdr:CR2A47568ABABBAFD7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10053 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV1A972474096CD45D
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
-    bdr:ID1A972474096CD45D
+    bdr:IDC1B826E7FEE603DC
         a                   bdr:HollisId ;
         rdf:value           "014254501" .
     
-    bdr:IDC1B826E7FEE603DC
+    bdr:IDE2D0500F4D342B40
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7540932457" .
     
@@ -59,18 +70,21 @@ bdg:MW00KG07627 {
         skos:altLabel       "zang yao yu mi fang yan fang ji"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "sman dpyad lums kyi don rnams dkyus gcig tu bsdus pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1A972474096CD45D , bdr:IDC1B826E7FEE603DC ;
+            bdr:IDC1B826E7FEE603DC , bdr:IDE2D0500F4D342B40 ;
         :authorshipStatement  "bod ljongs bod lugs gso rig slob chen zhib 'jug so'o nas rtsom sgrig byas/"@bo-x-ewts ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR2A47568ABABBAFD7 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT0AAAAD7D8D053CA3 , bdr:TT3627FB7B270E80FF , bdr:TT5777C5F94230246C ;
         :illustrations      "ills." ;
-        :instanceEvent      bdr:EV2A47568ABABBAFD7 ;
+        :instanceEvent      bdr:EV1A972474096CD45D ;
         :instanceHasReproduction  bdr:W00KG07627 ;
         :instanceOf         bdr:WA00KG07627 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "khreng tu'u"@en ;
-        :publisherName      "si khron dpe skrun tshogs pa, si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "4, 3, 243 p." ;
         :workSeriesNumber   "2" .
