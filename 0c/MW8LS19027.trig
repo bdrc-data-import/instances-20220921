@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19027 {
-    bda:LGE8D47421D1CEC39B
+    bda:LGE98C6AD88D5AAD95
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-26T15:42:36.172Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGEC34E28AD4864548
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-25T15:15:55.743Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -20,37 +26,43 @@ bdg:MW8LS19027 {
     bda:MW8LS19027  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS19027 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "0c/MW8LS19027.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19027 ;
-        adm:logEntry        bda:LGE8D47421D1CEC39B ;
+        adm:logEntry        bda:LGE98C6AD88D5AAD95 , bda:LGEC34E28AD4864548 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF2CB92072B173277
+    bdr:CRF2CB92072B173277
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75220 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0C1ADA0132B3FF5B
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:ID0C1ADA0132B3FF5B
+    bdr:IDE8D47421D1CEC39B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105138562" .
     
     bdr:MW8LS19027  a       :Instance ;
         skos:prefLabel      "bod khul gyi 'brug pa bka' brgyud pa'i dgon sde khag gi lo rgyas mdor bsdus mes po dgyes pa'i mchod sprin/_deb dang po/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0C1ADA0132B3FF5B ;
-        :authorshipStatement  "rtsom sgri pa/ bde chos ye shes stobs rgyal/ par len mkhan/ bde chos dkon mchog chos 'dzin/"@bo-x-ewts ;
+            bdr:IDE8D47421D1CEC39B ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRF2CB92072B173277 ;
+        :editionStatement   "2015 par gzhi dang po/ 2015 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT43624FD8DF3DE87D ;
-        :instanceEvent      bdr:EVF2CB92072B173277 ;
+        :instanceEvent      bdr:EV0C1ADA0132B3FF5B ;
         :instanceHasReproduction  bdr:W8LS19027 ;
         :instanceOf         bdr:WA8LS19027 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "277 p." .
     

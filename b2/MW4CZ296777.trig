@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ296777 {
-    bda:LG32B0C382826CEEAA
+    bda:LG6272459F622062E8
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-09-13T10:26:18.302Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
-    bda:LG6272459F622062E8
+    bda:LGA8C3D1B4F221B431
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-26T16:35:48.854Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, added cat, pub info"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGEDFFA9A1B0AD0C2A
         a                   adm:UpdateData ;
         adm:logDate         "2020-12-21T14:22:48.936Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
@@ -27,20 +33,20 @@ bdg:MW4CZ296777 {
     bda:MW4CZ296777  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CZ296777 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b2/MW4CZ296777.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ296777 ;
-        adm:logEntry        bda:LG32B0C382826CEEAA , bda:LG6272459F622062E8 ;
+        adm:logEntry        bda:LG6272459F622062E8 , bda:LGA8C3D1B4F221B431 , bda:LGEDFFA9A1B0AD0C2A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0536FF332F568F7E
+    bdr:EV92D8E1FF4188EEF7
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:ID92D8E1FF4188EEF7
+    bdr:ID32B0C382826CEEAA
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9383441877" .
     
@@ -48,14 +54,15 @@ bdg:MW4CZ296777 {
         skos:altLabel       "Old Path White Clouds"@en ;
         skos:prefLabel      "sprin dkar lam rnying /"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID92D8E1FF4188EEF7 ;
-        :authorshipStatement  "gnas brtan thig mata hAn gyis brtsams/ nges don rgya mtshos bsgyur/"@bo-x-ewts ;
+            bdr:ID32B0C382826CEEAA ;
+        :authorshipStatement  "gnas brtan thig nat hAn gyis brtsams/ nges don rgya mtshos bsgyur/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT13147026AF11868D , bdr:TT4B95785AD9194CF1 , bdr:TTDDED5554445E5109 ;
-        :instanceEvent      bdr:EV0536FF332F568F7E ;
+        :hasTitle           bdr:TT0536FF332F568F7E , bdr:TT13147026AF11868D , bdr:TTDDED5554445E5109 ;
+        :instanceEvent      bdr:EV92D8E1FF4188EEF7 ;
         :instanceHasReproduction  bdr:W4CZ296777 ;
         :instanceOf         bdr:WA4CZ296777 ;
         :isRoot             true ;
+        :note               bdr:NT4B95785AD9194CF1 ;
         :numberOfVolumes    3 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "dharamsala, h.p."@en ;
@@ -64,15 +71,19 @@ bdg:MW4CZ296777 {
         :workExtentStatement  "3 v." ;
         :workSeriesNumber   "11-13" .
     
-    bdr:TT13147026AF11868D
+    bdr:NT4B95785AD9194CF1
+        a                   :Note ;
+        :noteText           "Text mentions that it was written by Thich Nhat Hanh Identity of this author is uncertain."@en .
+    
+    bdr:TT0536FF332F568F7E
         a                   :OtherTitle ;
         rdfs:label          "Old Path White Clouds"@en .
     
-    bdr:TT4B95785AD9194CF1
-        a                   :Title ;
-        rdfs:label          "sprin dkar lam rnying /"@bo-x-ewts .
-    
-    bdr:TTDDED5554445E5109
+    bdr:TT13147026AF11868D
         a                   :TitlePageTitle ;
         rdfs:label          "sangs rgyas bcom ldan 'das kyi rnam par thar pa/ sprin dkar lam rnying /"@bo-x-ewts .
+    
+    bdr:TTDDED5554445E5109
+        a                   :Title ;
+        rdfs:label          "sprin dkar lam rnying /"@bo-x-ewts .
 }
