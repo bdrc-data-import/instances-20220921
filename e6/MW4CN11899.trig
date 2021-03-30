@@ -12,40 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CN11899 {
-    bda:LG8FD4A0A81D19827D
+    bda:LG5BF2A62EEC964429
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-03-01T15:18:58.592Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGA6287815C419E750
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T20:32:28.351Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW4CN11899  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CN11899 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "e6/MW4CN11899.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CN11899 ;
-        adm:logEntry        bda:LG8FD4A0A81D19827D ;
+        adm:logEntry        bda:LG5BF2A62EEC964429 , bda:LGA6287815C419E750 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVC6503479135861C9
+    bdr:EV8FD4A0A81D19827D
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:IDF5E57A3968C19213
+    bdr:IDA5922F545FA41E0D
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540979782" .
     
     bdr:MW4CN11899  a       :Instance ;
-        skos:prefLabel      "zhal gsung gser gyi phreng ba/"@bo-x-ewts ;
+        skos:altLabel       "口述藏族文化史－藏学名家访谈录 (第一卷到第四卷)"@zh-hans ;
+        skos:prefLabel      "zhal gsung gser gyi phreng ba/(deb dang po nas bzhi pa bar/)"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF5E57A3968C19213 ;
-        :authorshipStatement  "mkhar bu tshe dbang rdo rje/"@bo-x-ewts ;
+            bdr:IDA5922F545FA41E0D ;
+        :authorshipStatement  "mkhar bu tshe dbang rdo rje yis bcar 'dri byas shing bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TT32A478232F8148E3 ;
-        :instanceEvent      bdr:EVC6503479135861C9 ;
+        :hasTitle           bdr:TT32A478232F8148E3 , bdr:TTC6503479135861C9 , bdr:TTF5E57A3968C19213 ;
+        :instanceEvent      bdr:EV8FD4A0A81D19827D ;
         :instanceHasReproduction  bdr:W4CN11899 ;
         :instanceOf         bdr:WA4CN11899 ;
         :isRoot             true ;
@@ -54,9 +61,17 @@ bdg:MW4CN11899 {
         :publisherLocation  "khren tu'u/"@bo-x-ewts ;
         :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "4 v. (372, 392, 394, 356 p.)" .
+        :workExtentStatement  "4 v. (348, 368, 368, 332 p.)" .
     
     bdr:TT32A478232F8148E3
         a                   :Title ;
-        rdfs:label          "zhal gsung gser gyi phreng ba/"@bo-x-ewts .
+        rdfs:label          "zhal gsung gser gyi phreng ba/(deb dang po nas bzhi pa bar/)"@bo-x-ewts .
+    
+    bdr:TTC6503479135861C9
+        a                   :Subtitle ;
+        rdfs:label          "bod kyi shes rig zhib 'jug gi ngag brjod lo rgyus bsdus pa/ (1900-2000)"@bo-x-ewts .
+    
+    bdr:TTF5E57A3968C19213
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "口述藏族文化史－藏学名家访谈录 (第一卷到第四卷)"@zh-hans .
 }

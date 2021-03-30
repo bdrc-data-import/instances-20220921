@@ -12,38 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19102 {
-    bda:LG09021861B5D53D85
+    bda:LGB3D0DAC98B49A529
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-19T14:23:22.272Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE20FF7CC71F67D62
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T10:04:57.147Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS19102  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS19102 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "12/MW8LS19102.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19102 ;
-        adm:logEntry        bda:LG09021861B5D53D85 ;
+        adm:logEntry        bda:LGB3D0DAC98B49A529 , bda:LGE20FF7CC71F67D62 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV476F691941A995C8
+    bdr:CR476F691941A995C8
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7334 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD74A63BF4FEB6E9C
         a                   :PublishedEvent ;
         :onYear             "2014"^^xsd:gYear .
     
-    bdr:IDD74A63BF4FEB6E9C
+    bdr:ID09021861B5D53D85
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105132355" .
     
     bdr:MW8LS19102  a       :Instance ;
         skos:prefLabel      "dngos lugs rig pa'i lo rgyus rags bsdus/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD74A63BF4FEB6E9C ;
-        :authorshipStatement  "gtso sgrig pa/ tshe ring sgrol ma/"@bo-x-ewts ;
+            bdr:ID09021861B5D53D85 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR476F691941A995C8 ;
+        :editionStatement   "2014 par gzhi dang po/ 2014 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT9B367EBCEBBC3799 ;
-        :instanceEvent      bdr:EV476F691941A995C8 ;
+        :instanceEvent      bdr:EVD74A63BF4FEB6E9C ;
         :instanceHasReproduction  bdr:W8LS19102 ;
         :instanceOf         bdr:WA8LS19102 ;
         :isRoot             true ;

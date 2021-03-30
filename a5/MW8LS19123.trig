@@ -12,38 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19123 {
-    bda:LGF1AC7ED4F118755B
+    bda:LG28F1BB1BBC49DE06
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-19T14:42:44.786Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGCA216DAAE26D272C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T11:54:26.427Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS19123  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS19123 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "a5/MW8LS19123.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19123 ;
-        adm:logEntry        bda:LGF1AC7ED4F118755B ;
+        adm:logEntry        bda:LG28F1BB1BBC49DE06 , bda:LGCA216DAAE26D272C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9DAC25D11050706D
+    bdr:CR9DAC25D11050706D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75253 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV381B5925CA8A875D
         a                   :PublishedEvent ;
         :onYear             "2010"^^xsd:gYear .
     
-    bdr:ID381B5925CA8A875D
+    bdr:IDF1AC7ED4F118755B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105112920" .
     
     bdr:MW8LS19123  a       :Instance ;
         skos:prefLabel      "bod kyi srol rgyun 'khal 'thag lag rtsal/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID381B5925CA8A875D ;
-        :authorshipStatement  "gtso sgrig pa/ spen pa/"@bo-x-ewts ;
+            bdr:IDF1AC7ED4F118755B ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR9DAC25D11050706D ;
+        :editionStatement   "2010 par gzhi dang po/ 2010 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTDC2A131444100AAA ;
-        :instanceEvent      bdr:EV9DAC25D11050706D ;
+        :instanceEvent      bdr:EV381B5925CA8A875D ;
         :instanceHasReproduction  bdr:W8LS19123 ;
         :instanceOf         bdr:WA8LS19123 ;
         :isRoot             true ;

@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19072 {
-    bda:LG334D6C25B379C092
+    bda:LG31906CF5CBDB9D12
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T09:16:27.794Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7D885D9BAAFABED3
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-27T14:50:18.105Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -20,41 +26,46 @@ bdg:MW8LS19072 {
     bda:MW8LS19072  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS19072 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "07/MW8LS19072.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19072 ;
-        adm:logEntry        bda:LG334D6C25B379C092 ;
+        adm:logEntry        bda:LG31906CF5CBDB9D12 , bda:LG7D885D9BAAFABED3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV7D7B37397B968F19
+    bdr:CR7D7B37397B968F19
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75245 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV31E1AC49EFDD20B8
         a                   :PublishedEvent ;
         :onYear             "2014"^^xsd:gYear .
     
-    bdr:ID31E1AC49EFDD20B8
+    bdr:ID334D6C25B379C092
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105132256" .
     
     bdr:MW8LS19072  a       :Instance ;
-        skos:prefLabel      "skye ldan rdzas 'gyur rig pa/_smad cha/"@bo-x-ewts ;
+        skos:prefLabel      "skye ldan rdzas 'gyur rig pa/ smad cha/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID31E1AC49EFDD20B8 ;
-        :authorshipStatement  "gtso sgrig pa/ mchog gsum/"@bo-x-ewts ;
+            bdr:ID334D6C25B379C092 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR7D7B37397B968F19 ;
         :hasTitle           bdr:TT28606A637DA6C110 ;
-        :instanceEvent      bdr:EV7D7B37397B968F19 ;
+        :instanceEvent      bdr:EV31E1AC49EFDD20B8 ;
         :instanceHasReproduction  bdr:W8LS19072 ;
         :instanceOf         bdr:WA8LS19072 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "257 p." .
     
     bdr:TT28606A637DA6C110
         a                   :TitlePageTitle ;
-        rdfs:label          "skye ldan rdzas 'gyur rig pa/_smad cha/"@bo-x-ewts .
+        rdfs:label          "skye ldan rdzas 'gyur rig pa/ smad cha/"@bo-x-ewts .
 }

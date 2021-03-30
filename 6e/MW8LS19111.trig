@@ -12,50 +12,67 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19111 {
-    bda:LG154DD8ED6A5761E7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2017-04-28T12:36:08.122Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LGC5A132C2E06C8F9D
+    bda:LG30BF7B7098534C08
         a                   adm:UpdateData ;
         adm:logDate         "2017-04-28T12:37:15.835Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG5CA816D40182DFCE
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T11:15:25.257Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFE17D23032CD56AA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-28T12:36:08.122Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS19111  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS19111 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "6e/MW8LS19111.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19111 ;
-        adm:logEntry        bda:LG154DD8ED6A5761E7 , bda:LGC5A132C2E06C8F9D ;
+        adm:logEntry        bda:LG30BF7B7098534C08 , bda:LG5CA816D40182DFCE , bda:LGFE17D23032CD56AA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV225BB149C4E04660
+    bdr:CR225BB149C4E04660
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1291 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CREB1A10A3BA5C8F8A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6272 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV154DD8ED6A5761E7
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDEB1A10A3BA5C8F8A
+    bdr:IDC5A132C2E06C8F9D
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105138432" .
     
     bdr:MW8LS19111  a       :Instance ;
         skos:prefLabel      "tshe rig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEB1A10A3BA5C8F8A ;
-        :authorshipStatement  "mtsho sngon slob chen bod lugs gso rig slob gling /"@bo-x-ewts ;
+            bdr:IDC5A132C2E06C8F9D ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR225BB149C4E04660 , bdr:CREB1A10A3BA5C8F8A ;
+        :editionStatement   "2015 par gzhi dang po/ 2015 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT718F9D491EE7B6D0 ;
-        :instanceEvent      bdr:EV225BB149C4E04660 ;
+        :instanceEvent      bdr:EV154DD8ED6A5761E7 ;
         :instanceHasReproduction  bdr:W8LS19111 ;
         :instanceOf         bdr:WA1AC459 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "186 p." .
     
