@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD159418 {
-    bda:LG6CC5BCE114CFD158
+    bda:LG5BF57F4FBCA6783F
         a                   adm:UpdateData ;
         adm:logDate         "2017-05-21T21:37:36.903Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
-    bda:LG86ECAA98EB8D534F
+    bda:LG688FD0A377D06BE5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-30T13:06:25.078Z"^^xsd:dateTime ;
+        adm:logMessage      "added p# and infos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG6CC5BCE114CFD158
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-02-24T14:53:27.059Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
@@ -25,31 +31,38 @@ bdg:MW1PD159418 {
     bda:MW1PD159418  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1PD159418 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0c/MW1PD159418.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD159418 ;
-        adm:logEntry        bda:LG6CC5BCE114CFD158 , bda:LG86ECAA98EB8D534F ;
+        adm:logEntry        bda:LG5BF57F4FBCA6783F , bda:LG688FD0A377D06BE5 , bda:LG6CC5BCE114CFD158 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV3BDDD0E9FAAA3D02
+    bdr:CR3BDDD0E9FAAA3D02
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CN12059 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAB1D9F834414FE3C
         a                   :PublishedEvent ;
         :onYear             "2000"^^xsd:gYear .
     
-    bdr:IDAB1D9F834414FE3C
+    bdr:ID86ECAA98EB8D534F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787536649477" .
     
     bdr:MW1PD159418  a      :Instance ;
         skos:prefLabel      "西藏昌都—历史. 传统. 现代化"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAB1D9F834414FE3C ;
+            bdr:ID86ECAA98EB8D534F ;
         :authorshipStatement  "李光文 杨松 格勒 主编"@zh-hans ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR3BDDD0E9FAAA3D02 ;
+        :editionStatement   "第一版"@zh-hans ;
         :hasTitle           bdr:TT89D4F896594C2EBE , bdr:TTBF9BE2D48EBEF294 ;
         :illustrations      "Col. ill" ;
-        :instanceEvent      bdr:EV3BDDD0E9FAAA3D02 ;
+        :instanceEvent      bdr:EVAB1D9F834414FE3C ;
         :instanceHasReproduction  bdr:W1PD159418 ;
         :instanceOf         bdr:WA1PD159418 ;
         :isRoot             true ;
