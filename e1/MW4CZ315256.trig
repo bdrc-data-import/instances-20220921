@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ315256 {
-    bda:LG59C1595FCD12E413
+    bda:LG5C936E7DC129AFCA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-31T17:06:16.038Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, Added Author"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG6AB193264F430479
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-07-30T11:49:07.952Z"^^xsd:dateTime ;
         adm:logMessage      "new catalog and released"@en ;
@@ -21,39 +27,45 @@ bdg:MW4CZ315256 {
     bda:MW4CZ315256  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CZ315256 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "e1/MW4CZ315256.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ315256 ;
-        adm:logEntry        bda:LG59C1595FCD12E413 ;
+        adm:logEntry        bda:LG5C936E7DC129AFCA , bda:LG6AB193264F430479 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA5F1DC49820DCB1C
+    bdr:CRA5F1DC49820DCB1C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG13003 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV326A240D988C0ADF
         a                   :PublishedEvent ;
         :onYear             "2002"^^xsd:gYear .
     
-    bdr:ID326A240D988C0ADF
+    bdr:ID59C1595FCD12E413
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7542108387" .
     
     bdr:MW4CZ315256  a      :Instance ;
         skos:prefLabel      "chos lugs kyi ngo bo'i rnam bshad/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID326A240D988C0ADF ;
-        :authorshipStatement  "'jar man ph+he ar pa has brtsams/ sgo me bkra shis zla bas bsgyur/ zla ba blo gros kyis zhus dag byas/"@bo-x-ewts ;
+            bdr:ID59C1595FCD12E413 ;
+        :authorshipStatement  "'jar man h+phe ar pa has brtsams/ sgo me bkra shis zla bas bsgyur/ zla ba blo gros kyis zhus dag byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRA5F1DC49820DCB1C ;
         :editionStatement   "par gzhi 1."@bo-x-ewts ;
         :hasTitle           bdr:TT68BD96259F6655DD ;
-        :instanceEvent      bdr:EVA5F1DC49820DCB1C ;
+        :instanceEvent      bdr:EV326A240D988C0ADF ;
         :instanceHasReproduction  bdr:W4CZ315256 ;
         :instanceOf         bdr:WA4CZ315256 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lan kru'u"@en ;
-        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "4, 132 p." .
     
