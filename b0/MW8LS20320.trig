@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20320 {
-    bda:LG490FAB4A85D0A01B
+    bda:LG3A24BB6605E8E50E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-01T11:56:10.91Z"^^xsd:dateTime ;
+        adm:logMessage      "added translator, editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6C20A70D30A903B6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T12:41:01.498Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -20,30 +26,36 @@ bdg:MW8LS20320 {
     bda:MW8LS20320  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20320 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b0/MW8LS20320.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20320 ;
-        adm:logEntry        bda:LG490FAB4A85D0A01B ;
+        adm:logEntry        bda:LG3A24BB6605E8E50E , bda:LG6C20A70D30A903B6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV521336D5A37C39C2
+    bdr:CR521336D5A37C39C2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75277 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV82B4B2B0EA4CF727
         a                   :PublishedEvent ;
         :onYear             "2011"^^xsd:gYear .
     
-    bdr:ID82B4B2B0EA4CF727
+    bdr:ID490FAB4A85D0A01B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787802533905" .
     
     bdr:MW8LS20320  a       :Instance ;
         skos:prefLabel      "'phrod bsten gyi rgyun shes klog deb/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID82B4B2B0EA4CF727 ;
-        :authorshipStatement  "dkar mdzes khul yig sgyur lte gnas kyis bsgirgs/ byang chub kyis bsgyur/"@bo-x-ewts ;
+            bdr:ID490FAB4A85D0A01B ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR521336D5A37C39C2 ;
+        :editionStatement   "2011 par gzhi dang po/ 2011 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTA040F820173DC23B ;
-        :instanceEvent      bdr:EV521336D5A37C39C2 ;
+        :instanceEvent      bdr:EV82B4B2B0EA4CF727 ;
         :instanceHasReproduction  bdr:W8LS20320 ;
         :instanceOf         bdr:WA8LS20320 ;
         :isRoot             true ;

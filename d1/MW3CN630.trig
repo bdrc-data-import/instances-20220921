@@ -12,31 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN630 {
-    bda:LG403885360CB57078
+    bda:LG164EE5C1923BF388
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-02T00:15:33.17Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG29D1D5B98A6E0950
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-03-08T12:25:52.673Z"^^xsd:dateTime ;
-        adm:logMessage      "added T#"@en ;
+        adm:logMessage      "added info"@en ;
         adm:logWho          bdu:U00007 .
     
     bda:MW3CN630  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN630 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "d1/MW3CN630.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN630 ;
-        adm:logEntry        bda:LG403885360CB57078 ;
+        adm:logEntry        bda:LG164EE5C1923BF388 , bda:LG29D1D5B98A6E0950 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusProvisional .
     
     bdr:MW3CN630  a         :Instance ;
-        skos:prefLabel      "bka' 'gyur/"@bo-x-ewts ;
+        skos:prefLabel      "bka' 'gyur/ (mtshal par pod zhe bdun bar/)"@bo-x-ewts ;
         :hasTitle           bdr:TTC98BDC0CB010C604 ;
         :instanceOf         bdr:WA3CN630 ;
         :isRoot             true ;
-        :script             bdr:ScriptTibt .
+        :note               bdr:NT403885360CB57078 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "47 v. (1st part)" .
+    
+    bdr:NT403885360CB57078
+        a                   :Note ;
+        :noteText           "has some damaged pages and missing pages, the rest of the volumes are still waiting and will put more detail catalog Infos."@en .
     
     bdr:TTC98BDC0CB010C604
         a                   :Title ;
-        rdfs:label          "bka' 'gyur/"@bo-x-ewts .
+        rdfs:label          "bka' 'gyur/ (mtshal par pod zhe bdun bar/)"@bo-x-ewts .
 }

@@ -12,39 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20308 {
-    bda:LGB7330A725CBB0A49
+    bda:LG7CB9C0FDCBBFAC66
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T11:49:30.15Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBF76AC41DBF1801D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-01T11:16:21.13Z"^^xsd:dateTime ;
+        adm:logMessage      "added editior, topic, edition"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS20308  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20308 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "12/MW8LS20308.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20308 ;
-        adm:logEntry        bda:LGB7330A725CBB0A49 ;
+        adm:logEntry        bda:LG7CB9C0FDCBBFAC66 , bda:LGBF76AC41DBF1801D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVACAB16E97E27AE14
+    bdr:CRACAB16E97E27AE14
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75277 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV6DDEBFFFFA98BE58
         a                   :PublishedEvent ;
         :onYear             "2009"^^xsd:gYear .
     
-    bdr:ID6DDEBFFFFA98BE58
+    bdr:IDB7330A725CBB0A49
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787800579264" .
     
     bdr:MW8LS20308  a       :Instance ;
         skos:prefLabel      "e tsi nad 'gos nad kyi rgyun shes klog deb/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6DDEBFFFFA98BE58 ;
-        :authorshipStatement  "dkar mdzes khul yig bsgyur lte gnas kyis bsgrigs/"@bo-x-ewts ;
+            bdr:IDB7330A725CBB0A49 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par theng gnyis pa/"@bo-x-ewts ;
+        :creator            bdr:CRACAB16E97E27AE14 ;
+        :editionStatement   "2007 par gzhi dang po/ 2009 par theng gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TTD3DAF2187D52AB78 ;
-        :instanceEvent      bdr:EVACAB16E97E27AE14 ;
+        :instanceEvent      bdr:EV6DDEBFFFFA98BE58 ;
         :instanceHasReproduction  bdr:W8LS20308 ;
         :instanceOf         bdr:WA8LS20308 ;
         :isRoot             true ;

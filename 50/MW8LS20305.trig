@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20305 {
-    bda:LGB115CBA0D07DBC9F
+    bda:LG1EBFA0E0EEC3CAD4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-01T11:12:10.501Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, topic, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG805B698AD543C589
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T11:38:04.668Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -20,31 +26,36 @@ bdg:MW8LS20305 {
     bda:MW8LS20305  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20305 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "50/MW8LS20305.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20305 ;
-        adm:logEntry        bda:LGB115CBA0D07DBC9F ;
+        adm:logEntry        bda:LG1EBFA0E0EEC3CAD4 , bda:LG805B698AD543C589 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCF31E5589FD41931
-        a                   :PublishedEvent ;
-        :onYear             "2015"^^xsd:gYear .
+    bdr:CRCF31E5589FD41931
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75277 ;
+        :role               bdr:R0ER0015 .
     
-    bdr:ID539243B424C6B1C6
+    bdr:EV539243B424C6B1C6
+        a                   :PublishedEvent ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:IDB115CBA0D07DBC9F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787800579257" .
     
     bdr:MW8LS20305  a       :Instance ;
         skos:prefLabel      "skye dngos srung skyob gi rgyun shes klog deb/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID539243B424C6B1C6 ;
-        :authorshipStatement  "dkar mdzes khul yig bsgyur lte gnas kyis bsgrigs/"@bo-x-ewts ;
+            bdr:IDB115CBA0D07DBC9F ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par thengs lnga pa/"@bo-x-ewts ;
+        :creator            bdr:CRCF31E5589FD41931 ;
+        :editionStatement   "2010 par gzhi dang po/ 2010 par thengs thang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTB5FE8E9FFEB39CA3 ;
-        :instanceEvent      bdr:EVCF31E5589FD41931 ;
+        :instanceEvent      bdr:EV539243B424C6B1C6 ;
         :instanceHasReproduction  bdr:W8LS20305 ;
         :instanceOf         bdr:WA8LS20305 ;
         :isRoot             true ;
