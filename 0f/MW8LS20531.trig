@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20531 {
-    bda:LG613A01723E64D17A
+    bda:LG702F81C181B2F8CF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-02T15:09:41.424Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB2BCBA1570C2F475
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-15T14:19:34.384Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -20,37 +26,43 @@ bdg:MW8LS20531 {
     bda:MW8LS20531  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20531 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "0f/MW8LS20531.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20531 ;
-        adm:logEntry        bda:LG613A01723E64D17A ;
+        adm:logEntry        bda:LG702F81C181B2F8CF , bda:LGB2BCBA1570C2F475 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF3DF2F6BAA0DED0A
+    bdr:CRF3DF2F6BAA0DED0A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1CZ815 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV517F54C0553C3B62
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:ID517F54C0553C3B62
+    bdr:ID613A01723E64D17A
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542132161" .
     
     bdr:MW8LS20531  a       :Instance ;
         skos:prefLabel      "srid pa'i khed bshad blo dang rig pa'i rtsed 'jo/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID517F54C0553C3B62 ;
-        :authorshipStatement  "mtsho byang bod rig rang skyong khul gyi dmangs khrod rig gnas dpe tshogs rtsom sgrig u yon lhan khang /"@bo-x-ewts ;
+            bdr:ID613A01723E64D17A ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRF3DF2F6BAA0DED0A ;
+        :editionStatement   "2015 par gzhi dang po/ 2015 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT190138A61D147944 , bdr:TTBE20A3339A09233F ;
-        :instanceEvent      bdr:EVF3DF2F6BAA0DED0A ;
+        :instanceEvent      bdr:EV517F54C0553C3B62 ;
         :instanceHasReproduction  bdr:W8LS20531 ;
         :instanceOf         bdr:WA8LS20531 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "kan su'u/"@en ;
-        :publisherName      "kan su'u mi rigs dpe skrun khang /"@en ;
+        :publisherLocation  "kan su'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "151 p." .
     
