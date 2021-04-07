@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20614 {
-    bda:LG9253037F39FDCFAD
+    bda:LGADD5D772CF1816E5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-06T09:39:34.987Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC89B57445D1BB6AF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-09-19T09:49:07.84Z"^^xsd:dateTime ;
         adm:logMessage      "full catalog completed"@en ;
@@ -21,30 +27,41 @@ bdg:MW8LS20614 {
     bda:MW8LS20614  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20614 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "c1/MW8LS20614.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20614 ;
-        adm:logEntry        bda:LG9253037F39FDCFAD ;
+        adm:logEntry        bda:LGADD5D772CF1816E5 , bda:LGC89B57445D1BB6AF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVE452CBC8F847B3A6
+    bdr:CR3D4FABE43FD559D2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75309 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRE452CBC8F847B3A6
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75308 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV9253037F39FDCFAD
         a                   :PublishedEvent ;
         :onYear             "2011"^^xsd:gYear .
     
-    bdr:ID3D4FABE43FD559D2
+    bdr:ID7A6BA4EC2A8D822C
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540947200" .
     
     bdr:MW8LS20614  a       :Instance ;
         skos:prefLabel      "phag mchog tshul khrims kyis chu kub za ba/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3D4FABE43FD559D2 ;
-        :authorshipStatement  "rtsom sgrig 'gan 'khur ba/ dbyangs can/ sgo me dpa' mkhar skyid kyis bsgyur/"@bo-x-ewts ;
+            bdr:ID7A6BA4EC2A8D822C ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR3D4FABE43FD559D2 , bdr:CRE452CBC8F847B3A6 ;
+        :editionStatement   "2011 par gzhi dang po/ 2012 par thengs gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT10164E0CDF7DE50B , bdr:TT78D40381F385A132 ;
-        :instanceEvent      bdr:EVE452CBC8F847B3A6 ;
+        :instanceEvent      bdr:EV9253037F39FDCFAD ;
         :instanceHasReproduction  bdr:W8LS20614 ;
         :instanceOf         bdr:WA8LS20614 ;
         :isRoot             true ;

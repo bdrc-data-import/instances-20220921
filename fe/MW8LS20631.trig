@@ -12,38 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20631 {
-    bda:LG635BA4D452AA499D
+    bda:LG53FFC4F9BF6CFA3B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-17T12:37:56.589Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE03DF31C03248950
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-06T09:54:52.636Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, edition"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:MW8LS20631  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20631 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "fe/MW8LS20631.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20631 ;
-        adm:logEntry        bda:LG635BA4D452AA499D ;
+        adm:logEntry        bda:LG53FFC4F9BF6CFA3B , bda:LGE03DF31C03248950 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCF5BAFF850128F38
+    bdr:CRCF5BAFF850128F38
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9761 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF9895A6BAF2456A7
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDF9895A6BAF2456A7
+    bdr:ID635BA4D452AA499D
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540960438" .
     
     bdr:MW8LS20631  a       :Instance ;
         skos:prefLabel      "shig dang lci ba la sogs pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF9895A6BAF2456A7 ;
-        :authorshipStatement  "rtsom sgrig pa/ bkra shis tshe ring /"@bo-x-ewts ;
+            bdr:ID635BA4D452AA499D ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRCF5BAFF850128F38 ;
+        :editionStatement   "2015 par gzhi dang po/ 2015 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT7268A5B77490B983 ;
-        :instanceEvent      bdr:EVCF5BAFF850128F38 ;
+        :instanceEvent      bdr:EVF9895A6BAF2456A7 ;
         :instanceHasReproduction  bdr:W8LS20631 ;
         :instanceOf         bdr:WA8LS20631 ;
         :isRoot             true ;
