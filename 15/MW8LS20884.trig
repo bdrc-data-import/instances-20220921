@@ -12,20 +12,26 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20884 {
-    bda:LGB0894E45E5354BF2
+    bda:LG5AB9827FC90407C4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-07-18T10:35:10.943Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG9FD35CF1A00541FF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-07T10:06:55.815Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, isbn"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS20884  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS20884 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "15/MW8LS20884.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20884 ;
-        adm:logEntry        bda:LGB0894E45E5354BF2 ;
+        adm:logEntry        bda:LG5AB9827FC90407C4 , bda:LG9FD35CF1A00541FF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -33,9 +39,14 @@ bdg:MW8LS20884 {
         a                   :PublishedEvent ;
         :onYear             "2013"^^xsd:gYear .
     
+    bdr:IDB0894E45E5354BF2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789993617174" .
+    
     bdr:MW8LS20884  a       :Instance ;
         skos:prefLabel      "me sag lam srol gyi rtsa ba na+ya'i gro d+ha'i sa bon/"@bo-x-ewts , "From Yak Herding to Enlightenment"@en ;
-        :authorshipStatement  "Gengop Karchung"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB0894E45E5354BF2 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :hasTitle           bdr:TT7CC915DF15297ABB , bdr:TTEDC731316C432183 ;
         :instanceEvent      bdr:EV18CB317BC9070B0D ;
