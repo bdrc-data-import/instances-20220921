@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS23445 {
-    bda:LGA2B02C7A495203B0
+    bda:LG28091541817907B9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-08T09:13:57.157Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE5FB156AA51CEC1D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-08-08T15:58:21.124Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,11 +27,11 @@ bdg:MW8LS23445 {
     bda:MW8LS23445  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS23445 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "b8/MW8LS23445.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS23445 ;
-        adm:logEntry        bda:LGA2B02C7A495203B0 ;
+        adm:logEntry        bda:LG28091541817907B9 , bda:LGE5FB156AA51CEC1D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -34,9 +40,14 @@ bdg:MW8LS23445 {
         a                   :PublishedEvent ;
         :onYear             "2003"^^xsd:gYear .
     
+    bdr:IDA2B02C7A495203B0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "8189096028" .
+    
     bdr:MW8LS23445  a       :Instance ;
         skos:prefLabel      "tshor ba'i pha bong /"@bo-x-ewts ;
-        :authorshipStatement  "klu tshang blo bzang ye shes kyis brtsams/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA2B02C7A495203B0 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :hasTitle           bdr:TT28389389AC3F2D11 ;
         :instanceEvent      bdr:EV39D4CD9D416CDE7C ;
