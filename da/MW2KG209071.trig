@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG209071 {
-    bda:LG3DCD1079E6A9C8F2
+    bda:LG0777A19C82B2837D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-09T22:45:20.319Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub date"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG701917CD2E06F8AA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-01-23T15:32:38.842Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
@@ -21,15 +27,19 @@ bdg:MW2KG209071 {
     bda:MW2KG209071  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG209071 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "da/MW2KG209071.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG209071 ;
-        adm:logEntry        bda:LG3DCD1079E6A9C8F2 ;
+        adm:logEntry        bda:LG0777A19C82B2837D , bda:LG701917CD2E06F8AA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC5507CA584907D1A
+    bdr:EVC5507CA584907D1A
+        a                   :PublishedEvent ;
+        :onYear             "2013"^^xsd:gYear .
+    
+    bdr:ID3DCD1079E6A9C8F2
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105126002" .
     
@@ -37,11 +47,12 @@ bdg:MW2KG209071 {
         skos:altLabel       "青年时的足迹"@zh-hans ;
         skos:prefLabel      "gzhon pa'i dus kyi rkang rjes/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC5507CA584907D1A ;
+            bdr:ID3DCD1079E6A9C8F2 ;
         :authorshipStatement  "chab 'gag rta mgrin/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT41BDACA8D89E757B , bdr:TTBA08BECC0202EE54 ;
+        :instanceEvent      bdr:EVC5507CA584907D1A ;
         :instanceHasReproduction  bdr:W2KG209071 ;
         :instanceOf         bdr:WA2KG209071 ;
         :isRoot             true ;
