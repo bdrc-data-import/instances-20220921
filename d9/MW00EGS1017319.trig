@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1017319 {
-    bda:LGB78DDB3828E5D53B
+    bda:LG79CFE771B90B8099
         a                   adm:UpdateData ;
         adm:logDate         "2007-02-11T18:10:19.093Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGD53FFE53CE36ED34
+    bda:LG9652B06C951A4935
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T15:06:10.203Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, v Language encoding, print type"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGB78DDB3828E5D53B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-02-11T18:05:44.593Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00001 .
@@ -46,11 +52,11 @@ bdg:MW00EGS1017319 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1017319 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "d9/MW00EGS1017319.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1017319 ;
-        adm:logEntry        bda:LGB78DDB3828E5D53B , bda:LGD53FFE53CE36ED34 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG79CFE771B90B8099 , bda:LG9652B06C951A4935 , bda:LGB78DDB3828E5D53B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -59,40 +65,47 @@ bdg:MW00EGS1017319 {
         :agent              bdr:P8081 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EVC981822339AF069D
+    bdr:CRC981822339AF069D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8081 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV59BA133BDFB22EC1
         a                   :PublishedEvent ;
         :onYear             "2005"^^xsd:gYear .
     
-    bdr:ID59BA133BDFB22EC1
+    bdr:IDA4986E304B2EBC87
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "MLCSC 2006/00004 (P) PL3735" .
     
-    bdr:IDA4986E304B2EBC87
+    bdr:IDC69A5016413A8426
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2005322257" .
     
-    bdr:IDC69A5016413A8426
-        a                   bdr:HollisId ;
-        rdf:value           "014253998" .
-    
-    bdr:IDE2417C60964931EC
+    bdr:IDD53FFE53CE36ED34
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7105071826" .
+    
+    bdr:IDE2417C60964931EC
+        a                   bdr:HollisId ;
+        rdf:value           "014253998" .
     
     bdr:MW00EGS1017319
         a                   :Instance ;
         skos:prefLabel      "bod ljongs ngal rtsol glu gzhas/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID59BA133BDFB22EC1 , bdr:IDA4986E304B2EBC87 , bdr:IDC69A5016413A8426 , bdr:IDE2417C60964931EC ;
+            bdr:IDA4986E304B2EBC87 , bdr:IDC69A5016413A8426 , bdr:IDD53FFE53CE36ED34 , bdr:IDE2417C60964931EC ;
         :authorshipStatement  "bde chen sgrol dkar gyis legs sgrig byas/"@bo-x-ewts ;
-        :creator            bdr:CR061078C37D86B96D ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR061078C37D86B96D , bdr:CRC981822339AF069D ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT169C9AB52040C5D1 ;
-        :instanceEvent      bdr:EVC981822339AF069D ;
+        :instanceEvent      bdr:EV59BA133BDFB22EC1 ;
         :instanceHasReproduction  bdr:IE00EGS1017319 , bdr:W00EGS1017319 ;
         :instanceOf         bdr:WA00EGS1017319 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;

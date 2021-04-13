@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS30988 {
-    bda:LG4B667B19BBC2B29F
+    bda:LG73F7C7D375F4E659
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T09:24:10.066Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, isbn, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD9449BEE2A6F0615
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-01-08T10:29:34.028Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,11 +27,11 @@ bdg:MW8LS30988 {
     bda:MW8LS30988  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS30988 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "11/MW8LS30988.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS30988 ;
-        adm:logEntry        bda:LG4B667B19BBC2B29F ;
+        adm:logEntry        bda:LG73F7C7D375F4E659 , bda:LGD9449BEE2A6F0615 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -33,10 +39,16 @@ bdg:MW8LS30988 {
         a                   :PublishedEvent ;
         :onYear             "2009"^^xsd:gYear .
     
+    bdr:ID4B667B19BBC2B29F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "978754094299" .
+    
     bdr:MW8LS30988  a       :Instance ;
         skos:prefLabel      "rgya bod dbyin gsum gsar byung rgyun bkol ming mdzod/"@bo-x-ewts , "Chinese-Tibetan-English Dictionary of New Daily Volcabulary"@en ;
-        :authorshipStatement  "gtso sgrig pa/ tshul khrims blo gros/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B667B19BBC2B29F ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "2009 par gzhi dang po/ 2009 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTDFA2633263F52781 , bdr:TTE5AAE7E88402B45D ;
         :instanceEvent      bdr:EV38E94A4DA32DD488 ;
         :instanceHasReproduction  bdr:W8LS30988 ;

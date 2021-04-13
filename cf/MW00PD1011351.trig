@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00PD1011351 {
-    bda:LGDC88700E8427DC82
+    bda:LG51B3688F983B80DE
         a                   adm:UpdateData ;
         adm:logDate         "2007-02-15T16:51:07.574Z"^^xsd:dateTime ;
         adm:logMessage      "yig chen yig chung du bsgyur"@en ;
         adm:logWho          bdu:U00021 .
     
-    bda:LGFF04A2B8675CE1DC
+    bda:LG9F57C845CD412C17
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T15:06:12.647Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, v Language encoding, print type"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGDC88700E8427DC82
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-02-15T10:25:31.378Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug pa"@en ;
@@ -41,44 +47,52 @@ bdg:MW00PD1011351 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00PD1011351 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "cf/MW00PD1011351.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00PD1011351 ;
-        adm:logEntry        bda:LGDC88700E8427DC82 , bda:LGFF04A2B8675CE1DC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG51B3688F983B80DE , bda:LG9F57C845CD412C17 , bda:LGDC88700E8427DC82 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVDCCE1B257C29ED0D
+    bdr:CRDCCE1B257C29ED0D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10049 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV29B9C755856A1D91
         a                   :PublishedEvent ;
         :onYear             "2005"^^xsd:gYear .
     
     bdr:ID0F56609654AE31C6
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "7105072768" .
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006554022" .
     
-    bdr:ID29B9C755856A1D91
+    bdr:ID32D86D03CAD2DE9F
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3703 .D46 2005" .
     
-    bdr:ID32D86D03CAD2DE9F
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2006554022" .
+    bdr:IDFF04A2B8675CE1DC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105072768" .
     
     bdr:MW00PD1011351
         a                   :Instance ;
         skos:altLabel       "xiandai wenxue"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "deng rtsom gces bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0F56609654AE31C6 , bdr:ID29B9C755856A1D91 , bdr:ID32D86D03CAD2DE9F ;
+            bdr:ID0F56609654AE31C6 , bdr:ID32D86D03CAD2DE9F , bdr:IDFF04A2B8675CE1DC ;
         :authorshipStatement  "gtso 'gan rtsom sgrig pa, lhag pa chos 'phel; gtso 'gan rtsom sgrig gzhon pa, byams pa tshul khrims/"@bo-x-ewts ;
         :biblioNote         "bod ljongs slob grwa chen mo'i slob gzhi ; bod rang skyong ljongs slob gzhi zhib bsher u lhan gyis zhib bsher mdzad/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRDCCE1B257C29ED0D ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT0520F21F10AB3CE3 , bdr:TTCCD0B212FC18CCE8 ;
-        :instanceEvent      bdr:EVDCCE1B257C29ED0D ;
+        :instanceEvent      bdr:EV29B9C755856A1D91 ;
         :instanceOf         bdr:WA00PD1011351 ;
         :isRoot             true ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@en ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "2, 2, 3, 435 p." .

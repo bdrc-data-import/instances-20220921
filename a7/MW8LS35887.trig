@@ -12,20 +12,26 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS35887 {
-    bda:LG527694101C35EB26
+    bda:LG4EF88FC41724D59F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-07-09T14:31:24.208Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG63A7832C36712078
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T15:09:20.19Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS35887  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS35887 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "a7/MW8LS35887.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS35887 ;
-        adm:logEntry        bda:LG527694101C35EB26 ;
+        adm:logEntry        bda:LG4EF88FC41724D59F , bda:LG63A7832C36712078 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -34,9 +40,14 @@ bdg:MW8LS35887 {
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
+    bdr:ID527694101C35EB26
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380282688" .
+    
     bdr:MW8LS35887  a       :Instance , :SerialInstance ;
         skos:prefLabel      "mahayana bauddha dharma ka sadhana krama aur kaya vyavastha"@sa-x-ndia ;
-        :authorshipStatement  "by Dr. Tashi Paljor"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID527694101C35EB26 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :hasTitle           bdr:TT260BFC16D8010820 ;
         :instanceEvent      bdr:EVB7F582AECE604928 ;

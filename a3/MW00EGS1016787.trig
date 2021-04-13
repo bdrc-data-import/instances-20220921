@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016787 {
+    bda:LG7D6E30D0C3F07D27
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T15:06:05.562Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, v Language encoding, print type"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LG99A864B262EF1285
         a                   adm:InitialDataCreation ;
         adm:logDate         "2006-12-05T18:59:03.843Z"^^xsd:dateTime ;
@@ -43,16 +49,21 @@ bdg:MW00EGS1016787 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW00EGS1016787 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "a3/MW00EGS1016787.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016787 ;
-        adm:logEntry        bda:LG99A864B262EF1285 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG7D6E30D0C3F07D27 , bda:LG99A864B262EF1285 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:CRAD075830EDDAD469
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8012 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CREE4BC150D92EED5F
         a                   :AgentAsCreator ;
         :agent              bdr:P8012 ;
         :role               bdr:R0ER0015 .
@@ -84,28 +95,25 @@ bdg:MW00EGS1016787 {
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID5648365C20AC6FAB , bdr:ID8E94C0243DEA0C56 , bdr:IDCE6E306D7380294D , bdr:IDE9A1BAD9D70CDEC8 ;
         :authorshipStatement  "rtsom sgrig pa na ga sangs rgyas bstan dar/"@bo-x-ewts ;
-        :creator            bdr:CRAD075830EDDAD469 ;
-        :hasTitle           bdr:TTB5BD5BB6B9DD8FFD , bdr:TTEE4BC150D92EED5F ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRAD075830EDDAD469 , bdr:CREE4BC150D92EED5F ;
+        :hasTitle           bdr:TT07CDEC149FA5CEF4 , bdr:TTB5BD5BB6B9DD8FFD ;
         :instanceEvent      bdr:EVD6DFD1747EB27C62 ;
         :instanceHasReproduction  bdr:W00EGS1016787 ;
         :instanceOf         bdr:WA00EGS1016787 ;
         :isRoot             true ;
-        :note               bdr:NT07CDEC149FA5CEF4 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "dharamsala, h.."@en ;
         :publisherName      "library of tibetan works & archives"@en ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "vi, 203 p." .
     
-    bdr:NT07CDEC149FA5CEF4
-        a                   :Note ;
-        :noteText           "collection of articles on buddhism and science"@en .
-    
-    bdr:TTB5BD5BB6B9DD8FFD
+    bdr:TT07CDEC149FA5CEF4
         a                   :Title ;
         rdfs:label          "nang chos dang tshan rig las brtsams pa'i ched rtsom gces btus zla gsar/"@bo-x-ewts .
     
-    bdr:TTEE4BC150D92EED5F
+    bdr:TTB5BD5BB6B9DD8FFD
         a                   :CoverTitle ;
         rdfs:label          "Naṅ chos daṅ tshan rig las brtsams paʼi ched rtsom gces btus zla gsar /rtsom sgrig pa, Na-ga Saṅs-rgyas-bstan-dar."@en-x-mixed .
 }
