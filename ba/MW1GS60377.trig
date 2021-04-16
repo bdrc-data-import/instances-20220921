@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1GS60377 {
-    bda:LGB409AEC8A96771E3
+    bda:LG96C76E243B916E20
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-13T17:03:14.103Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, add Language encoding, print type and speling"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGB3A31514AF37CED2
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-09-13T13:04:08.78Z"^^xsd:dateTime ;
         adm:logMessage      "published for creating scan request"@en ;
@@ -35,49 +41,55 @@ bdg:MW1GS60377 {
     bda:MW1GS60377  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1GS60377 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "ba/MW1GS60377.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1GS60377 ;
-        adm:logEntry        bda:LGB409AEC8A96771E3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG96C76E243B916E20 , bda:LGB3A31514AF37CED2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CR24A4C146E4394CDE
+    bdr:CRD4DE9421696672DE
         a                   :AgentAsCreator ;
         :agent              bdr:P1GS60376 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EVD4DE9421696672DE
+    bdr:EV38A110CDF5E1861F
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
     bdr:ID0B2F0EC5BBBF3F41
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "7105081287" .
-    
-    bdr:ID38A110CDF5E1861F
         a                   bdr:HollisId ;
         rdf:value           "014255501" .
+    
+    bdr:IDB409AEC8A96771E3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105081287" .
     
     bdr:MW1GS60377  a       :Instance ;
         skos:prefLabel      "sman gzhung gces btus/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0B2F0EC5BBBF3F41 , bdr:ID38A110CDF5E1861F ;
+            bdr:ID0B2F0EC5BBBF3F41 , bdr:IDB409AEC8A96771E3 ;
         :authorshipStatement  "gso sgrig pa skal bzang rdo rje/"@bo-x-ewts ;
-        :creator            bdr:CR24A4C146E4394CDE ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRD4DE9421696672DE ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
-        :hasTitle           bdr:TT7EE399CFE72B3594 ;
+        :hasTitle           bdr:TT24A4C146E4394CDE , bdr:TT7EE399CFE72B3594 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EVD4DE9421696672DE ;
+        :instanceEvent      bdr:EV38A110CDF5E1861F ;
         :instanceHasReproduction  bdr:W1GS60377 ;
         :instanceOf         bdr:WA1GS60377 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "266 p." .
+    
+    bdr:TT24A4C146E4394CDE
+        a                   :OtherTitle ;
+        rdfs:label          "bod lugs sman gnyer ched las dngos gzhi tshan pa'i (lo bzhi lam lugs) mu 'brel slob deb/"@bo-x-ewts .
     
     bdr:TT7EE399CFE72B3594
         a                   :Title ;

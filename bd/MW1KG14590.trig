@@ -12,19 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG14590 {
-    bda:LG176D08C48271B583
+    bda:LG051B2D77E13EA226
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-15T10:56:37.465Z"^^xsd:dateTime ;
+        adm:logMessage      "removed old invalid SR"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG1DBEBFA231E36304
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-11-04T16:03:17.492Z"^^xsd:dateTime ;
         adm:logMessage      "released fro scan request to india"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LG9686A8D77DBC5FD4
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-12-15T10:56:37.465Z"^^xsd:dateTime ;
-        adm:logMessage      "removed old invalid SR"@en ;
-        adm:logWho          bdu:U00016 .
-    
-    bda:LGDED9C6124CC04617
         a                   adm:UpdateData ;
         adm:logDate         "2017-09-29T10:35:58.031Z"^^xsd:dateTime ;
         adm:logMessage      "Completed catalogue ans released"@en ;
@@ -40,31 +40,37 @@ bdg:MW1KG14590 {
     bda:MW1KG14590  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG14590 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "bd/MW1KG14590.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG14590 ;
-        adm:logEntry        bda:LG176D08C48271B583 , bda:LG9686A8D77DBC5FD4 , bda:LGDED9C6124CC04617 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG051B2D77E13EA226 , bda:LG1DBEBFA231E36304 , bda:LG9686A8D77DBC5FD4 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD4A10042E7D6977A
+    bdr:CRD4A10042E7D6977A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228809 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV76DAA6F85A0CC8E8
         a                   :PublishedEvent ;
         :onYear             "2009"^^xsd:gYear .
     
-    bdr:ID76DAA6F85A0CC8E8
+    bdr:ID176D08C48271B583
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105097456" .
     
     bdr:MW1KG14590  a       :Instance , :SerialInstance ;
         skos:prefLabel      "byang thang dmangs sgrung rna ba'i bu ram/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID76DAA6F85A0CC8E8 ;
+            bdr:ID176D08C48271B583 ;
         :authorshipStatement  "nor bu bkra shis kyis bsdu sgrig byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRD4A10042E7D6977A ;
         :editionStatement   "par gzhi gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TTD9C5DB1A23B31625 ;
-        :instanceEvent      bdr:EVD4A10042E7D6977A ;
+        :instanceEvent      bdr:EV76DAA6F85A0CC8E8 ;
         :instanceHasReproduction  bdr:W1KG14590 ;
         :instanceOf         bdr:WA1KG14590 ;
         :isRoot             true ;

@@ -12,39 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN21703 {
-    bda:LGABB1547FAD2E3B85
+    bda:LG6B5E05481C49A9CB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-12-02T15:54:26.842Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGE1EC7F4E78AAB41C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-14T15:31:39.76Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN21703  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN21703 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "0a/MW3CN21703.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN21703 ;
-        adm:logEntry        bda:LGABB1547FAD2E3B85 ;
+        adm:logEntry        bda:LG6B5E05481C49A9CB , bda:LGE1EC7F4E78AAB41C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA9AA9FBD0DAA5AF5
+    bdr:EVE6FFFA9510CCA7EF
         a                   :PublishedEvent ;
         :onYear             "2019"^^xsd:gYear .
     
-    bdr:IDE6FFFA9510CCA7EF
+    bdr:IDABB1547FAD2E3B85
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787536645489" .
     
     bdr:MW3CN21703  a       :Instance ;
+        skos:altLabel       "青春集"@zh-hans ;
         skos:prefLabel      "lang tsho'i zil pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE6FFFA9510CCA7EF ;
+            bdr:IDABB1547FAD2E3B85 ;
         :authorshipStatement  "ra smad 'phrin pas brtsams/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT97C911DAEE48617E ;
-        :instanceEvent      bdr:EVA9AA9FBD0DAA5AF5 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT97C911DAEE48617E , bdr:TTA9AA9FBD0DAA5AF5 ;
+        :instanceEvent      bdr:EVE6FFFA9510CCA7EF ;
         :instanceHasReproduction  bdr:W3CN21703 ;
         :instanceOf         bdr:WA3CN21703 ;
         :isRoot             true ;
@@ -58,4 +66,8 @@ bdg:MW3CN21703 {
     bdr:TT97C911DAEE48617E
         a                   :Title ;
         rdfs:label          "lang tsho'i zil pa/"@bo-x-ewts .
+    
+    bdr:TTA9AA9FBD0DAA5AF5
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "青春集"@zh-hans .
 }
