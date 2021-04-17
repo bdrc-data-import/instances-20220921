@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS41995 {
-    bda:LG68A6ADEB0CD64F61
+    bda:LG3C570CCED407948D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T14:24:50.839Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBA99274B20C6D65B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-11-07T14:19:35.856Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,11 +27,11 @@ bdg:MW8LS41995 {
     bda:MW8LS41995  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS41995 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "62/MW8LS41995.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS41995 ;
-        adm:logEntry        bda:LG68A6ADEB0CD64F61 ;
+        adm:logEntry        bda:LG3C570CCED407948D , bda:LGBA99274B20C6D65B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -34,10 +40,16 @@ bdg:MW8LS41995 {
         a                   :PublishedEvent ;
         :onYear             "2010"^^xsd:gYear .
     
+    bdr:ID68A6ADEB0CD64F61
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787802532052" .
+    
     bdr:MW8LS41995  a       :Instance ;
         skos:prefLabel      "in Tar neT 'jug ngogs/"@bo-x-ewts ;
-        :authorshipStatement  "dbang grags skyabs/ bkra shis rgyal/ dkon b+he sogs kyis sgrig rtsom byas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID68A6ADEB0CD64F61 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "2010 par gzhi dang po/ 2010 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT1966C4E40B3EE768 ;
         :instanceEvent      bdr:EVAF83397D1DB11101 ;
         :instanceHasReproduction  bdr:W8LS41995 ;

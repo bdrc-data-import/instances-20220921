@@ -12,20 +12,26 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS41997 {
-    bda:LG3DFDBECDC6366EED
+    bda:LG25AA872870CA698A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-11-08T09:02:56.175Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGB00D9169A3B21EEA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T14:33:34.137Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS41997  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS41997 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "99/MW8LS41997.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS41997 ;
-        adm:logEntry        bda:LG3DFDBECDC6366EED ;
+        adm:logEntry        bda:LG25AA872870CA698A , bda:LGB00D9169A3B21EEA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -34,10 +40,16 @@ bdg:MW8LS41997 {
         a                   :PublishedEvent ;
         :onYear             "2010"^^xsd:gYear .
     
+    bdr:ID3DFDBECDC6366EED
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787802532038" .
+    
     bdr:MW8LS41997  a       :Instance ;
         skos:prefLabel      "ma'i ko ro sopha worD 2007 'jug ngogs/"@bo-x-ewts ;
-        :authorshipStatement  "dkom b+he dang /phur bu tshe ring / bsod nams rgya mtsho sogs kyis sgrig rtsom byas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3DFDBECDC6366EED ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "2010 par gzhi dang po/ 2010 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTFAF63A6085D969F8 ;
         :instanceEvent      bdr:EVD78BDA37308DB349 ;
         :instanceHasReproduction  bdr:W8LS41997 ;

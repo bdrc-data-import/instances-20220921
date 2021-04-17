@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS41994 {
-    bda:LGD701187592394498
+    bda:LGEB3B9EF9392ABFA7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T14:20:15.682Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFEE311E89D32A8F6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-11-07T09:33:41.09Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,25 +27,35 @@ bdg:MW8LS41994 {
     bda:MW8LS41994  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS41994 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "36/MW8LS41994.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS41994 ;
-        adm:logEntry        bda:LGD701187592394498 ;
+        adm:logEntry        bda:LGEB3B9EF9392ABFA7 , bda:LGFEE311E89D32A8F6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV87EA310E5E1A2DDD
+    bdr:CR87EA310E5E1A2DDD
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG20671 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD701187592394498
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75395 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0354D48CFC39C299
         a                   :PublishedEvent ;
         :onYear             "2008"^^xsd:gYear .
     
     bdr:MW8LS41994  a       :Instance , :SerialInstance ;
         skos:prefLabel      "dus rabs kyi nga /dus deb/"@bo-x-ewts ;
-        :authorshipStatement  "rtsom sgrig pa/ co leb zla ba/ skal bzang sbyin pa/ bud+ha/ blo gros/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR87EA310E5E1A2DDD , bdr:CRD701187592394498 ;
         :hasTitle           bdr:TT17033ADBA928AB97 ;
-        :instanceEvent      bdr:EV87EA310E5E1A2DDD ;
+        :instanceEvent      bdr:EV0354D48CFC39C299 ;
         :instanceHasReproduction  bdr:W8LS41994 ;
         :instanceOf         bdr:WA8LS41994 ;
         :isRoot             true ;
