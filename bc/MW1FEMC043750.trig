@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043750 {
+    bda:LG5116B82DF988B62A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043750"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043750"@en , "imported pubinfo for W1FEMC043750"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043750
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043750 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bc/MW1FEMC043750.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043750 ;
+        adm:logEntry        bda:LG5116B82DF988B62A , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF6A5A76439E9E95D0
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "188" .
+    
+    bdr:MW1FEMC043750
+        a                   :Instance ;
+        skos:prefLabel      "អនន្ទឆ្លើយ ព្រះសូត្រ អព្ភីធម្ម (ខៃ-គុំ)"@km , "anand chlőy braḥ sūtr addhī dhamm"@km-x-kmfemc ;
+        :hasTitle           bdr:TT18694B835F5454D9 , bdr:TTAA829D9AEE58B12C ;
+        :instanceHasReproduction  bdr:W1FEMC043750 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6A5A76439E9E95D0 ;
+        :note               bdr:NTE8A5626EC1237BCE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "041-B.11.05.03.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTE8A5626EC1237BCE
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT18694B835F5454D9
+        a                   :Title ;
+        rdfs:label          "អនន្ទឆ្លើយ ព្រះសូត្រ អព្ភីធម្ម (ខៃ-គុំ)"@km .
+    
+    bdr:TTAA829D9AEE58B12C
+        a                   :Title ;
+        rdfs:label          "anand chlőy braḥ sūtr addhī dhamm"@km-x-kmfemc .
+}

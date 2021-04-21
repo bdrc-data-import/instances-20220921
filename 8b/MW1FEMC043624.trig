@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043624 {
+    bda:LG7E6726EF71075AC0
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043624"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043624"@en , "imported pubinfo for W1FEMC043624"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043624
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043624 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8b/MW1FEMC043624.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043624 ;
+        adm:logEntry        bda:LG7E6726EF71075AC0 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF78A154EEC6C3ADD6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "186" .
+    
+    bdr:MW1FEMC043624
+        a                   :Instance ;
+        skos:prefLabel      "អនិសឃ៊សាលា"@km , "anῑsagh sālā"@km-x-kmfemc ;
+        :hasTitle           bdr:TT927CC4E90F3EC2A7 , bdr:TT9E916BAD38CC52AD ;
+        :instanceHasReproduction  bdr:W1FEMC043624 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF78A154EEC6C3ADD6 ;
+        :note               bdr:NT2FAC86FFE5DF44E0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "041-B.11.11.05.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NT2FAC86FFE5DF44E0
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT927CC4E90F3EC2A7
+        a                   :Title ;
+        rdfs:label          "អនិសឃ៊សាលា"@km .
+    
+    bdr:TT9E916BAD38CC52AD
+        a                   :Title ;
+        rdfs:label          "anῑsagh sālā"@km-x-kmfemc .
+}

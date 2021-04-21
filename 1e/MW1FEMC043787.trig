@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043787 {
+    bda:LG8D6EE82D1981F3C7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043787"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043787"@en , "imported pubinfo for W1FEMC043787"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043787
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043787 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1e/MW1FEMC043787.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043787 ;
+        adm:logEntry        bda:LG8D6EE82D1981F3C7 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFDB1B0A1D9BE5E443
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043787
+        a                   :Instance ;
+        skos:prefLabel      "ពាហុំ (ក-ន)"@km , "bā hurṇ"@km-x-kmfemc ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT4D8A8F724F9AD828 , bdr:TT91A2B72FE53E6A05 ;
+        :instanceHasReproduction  bdr:W1FEMC043787 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFDB1B0A1D9BE5E443 ;
+        :note               bdr:NT2F15651CFB72EDB9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "025-B.11.11.04.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT2F15651CFB72EDB9
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT4D8A8F724F9AD828
+        a                   :Title ;
+        rdfs:label          "ពាហុំ (ក-ន)"@km .
+    
+    bdr:TT91A2B72FE53E6A05
+        a                   :Title ;
+        rdfs:label          "bā hurṇ"@km-x-kmfemc .
+}

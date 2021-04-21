@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047251 {
+    bda:LGB10A1A0925C316F7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047251"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC047251"@en , "imported pubinfo for W1FEMC047251"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047251
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC047251 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "57/MW1FEMC047251.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047251 ;
+        adm:logEntry        bda:LGB10A1A0925C316F7 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF525C684BBB2CD681
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "73" ;
+        :microfilmStrip     "167" .
+    
+    bdr:MW1FEMC047251
+        a                   :Instance ;
+        skos:prefLabel      "អវិជ្ជា, ករុណា, អជ្ជ, ពាហុំ, បកវត្ត"@km , "avijjā, karuṇā, ajja, bāhuṃ, paka vatta"@km-x-kmfemc ;
+        :hasTitle           bdr:TT288C5BC5281F3442 , bdr:TT844AA099A69E7AE7 , bdr:TT89CF03A51A40CE67 , bdr:TTE5ECE433C5EA7E69 ;
+        :instanceHasReproduction  bdr:W1FEMC047251 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF525C684BBB2CD681 ;
+        :note               bdr:NT3A24487EE3425793 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "Coll part.23.12.1995.1.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NT3A24487EE3425793
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT288C5BC5281F3442
+        a                   :CoverTitle ;
+        rdfs:label          "avijjā, karuṇā, ajja, bāhuṃ, paka vatta"@km-x-kmfemc .
+    
+    bdr:TT844AA099A69E7AE7
+        a                   :Title ;
+        rdfs:label          "អវិជ្ជា, ករុណា, អជ្ជ, ពាហុំ, បកវត្ត"@km .
+    
+    bdr:TT89CF03A51A40CE67
+        a                   :Title ;
+        rdfs:label          "avijjā, karuṇā, ajja, bāhuṃ, paka vatta"@km-x-kmfemc .
+    
+    bdr:TTE5ECE433C5EA7E69
+        a                   :CoverTitle ;
+        rdfs:label          "អវិជ្ជា, ករុណា, អជ្ជ, ពាហុំ, បកវត្ត"@km .
+}

@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043645 {
+    bda:LGDCC87E9C7085E9F3
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043645"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043645"@en , "imported pubinfo for W1FEMC043645"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043645
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043645 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "00/MW1FEMC043645.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043645 ;
+        adm:logEntry        bda:LGDCC87E9C7085E9F3 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFE050655EAF72C03E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "186" .
+    
+    bdr:MW1FEMC043645
+        a                   :Instance ;
+        skos:prefLabel      "ញត្ថសែម៉ា ញត្ថកថិន"@km , "ñatth sēmā ñatth kathin"@km-x-kmfemc ;
+        :hasTitle           bdr:TT2E7D39426BC00EB2 , bdr:TTA733F8AE2B76A413 ;
+        :instanceHasReproduction  bdr:W1FEMC043645 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE050655EAF72C03E ;
+        :note               bdr:NT8D45247528EA4E81 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "062-B.11.11.05.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NT8D45247528EA4E81
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2E7D39426BC00EB2
+        a                   :Title ;
+        rdfs:label          "ញត្ថសែម៉ា ញត្ថកថិន"@km .
+    
+    bdr:TTA733F8AE2B76A413
+        a                   :Title ;
+        rdfs:label          "ñatth sēmā ñatth kathin"@km-x-kmfemc .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043761 {
+    bda:LG1C032B5631E9FAF8
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043761"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043761"@en , "imported pubinfo for W1FEMC043761"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043761
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043761 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6b/MW1FEMC043761.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043761 ;
+        adm:logEntry        bda:LG1C032B5631E9FAF8 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF00CD72453F785C1E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC043761
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មបទ (វ-សះ)"@pi-khmr , "dhammapada"@pi-x-kmfemc ;
+        :hasFascicles       "15" ;
+        :hasTitle           bdr:TT892CC4449E0705E4 , bdr:TTE32309F8CA352C02 ;
+        :instanceHasReproduction  bdr:W1FEMC043761 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF00CD72453F785C1E ;
+        :note               bdr:NT372480C0211E2865 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "005-B.11.05.03.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT372480C0211E2865
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT892CC4449E0705E4
+        a                   :Title ;
+        rdfs:label          "dhammapada"@pi-x-kmfemc .
+    
+    bdr:TTE32309F8CA352C02
+        a                   :Title ;
+        rdfs:label          "ធម្មបទ (វ-សះ)"@pi-khmr .
+}

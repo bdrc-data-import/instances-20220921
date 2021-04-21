@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043396 {
+    bda:LG7AC02843D0AEB40C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043396"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043396"@en , "imported pubinfo for W1FEMC043396"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043396
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043396 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1e/MW1FEMC043396.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043396 ;
+        adm:logEntry        bda:LG7AC02843D0AEB40C , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF1B10A940A4FC527B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC043396
+        a                   :Instance ;
+        skos:prefLabel      "ទេសនាគ្រែ៣ (១-១៨, ១-២២)"@km , "desnā grē 3"@km-x-kmfemc ;
+        :hasTitle           bdr:TT21E54799C48B3236 , bdr:TTBDF78A8875502508 ;
+        :instanceHasReproduction  bdr:W1FEMC043396 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1B10A940A4FC527B ;
+        :note               bdr:NTC1E45E171331625A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "015-B.11.15.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTC1E45E171331625A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT21E54799C48B3236
+        a                   :Title ;
+        rdfs:label          "ទេសនាគ្រែ៣ (១-១៨, ១-២២)"@km .
+    
+    bdr:TTBDF78A8875502508
+        a                   :Title ;
+        rdfs:label          "desnā grē 3"@km-x-kmfemc .
+}

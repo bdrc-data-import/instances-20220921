@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046840 {
+    bda:LGA7314EA43ACFA881
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046840"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046840"@en , "imported pubinfo for W1FEMC046840"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046840
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046840 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "da/MW1FEMC046840.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046840 ;
+        adm:logEntry        bda:LGA7314EA43ACFA881 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC046840
+        a                   :Instance ;
+        skos:prefLabel      "ទ្វាទសបរិត្ត (ញ-ញះ, ១ដ-១ដែ)"@pi-khmr ;
+        :hasFascicles       "6" ;
+        :hasTitle           bdr:TT93F8AEA8E92F6668 ;
+        :instanceHasReproduction  bdr:W1FEMC046840 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT4DAB7416A665D009 , bdr:NTAE7A5C5948167AEF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "010-B.04.09.03" ;
+        :workIsAbout        bdr:FEMC_Scheme_03 .
+    
+    bdr:NT4DAB7416A665D009
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:NTAE7A5C5948167AEF
+        a                   :Note ;
+        :noteText           "Canister078_Strip172"@en .
+    
+    bdr:TT93F8AEA8E92F6668
+        a                   :Title ;
+        rdfs:label          "ទ្វាទសបរិត្ត (ញ-ញះ, ១ដ-១ដែ)"@pi-khmr .
+}

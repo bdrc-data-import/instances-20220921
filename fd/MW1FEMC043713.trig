@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043713 {
+    bda:LG14441F6B768766E8
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043713"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043713"@en , "imported pubinfo for W1FEMC043713"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043713
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043713 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fd/MW1FEMC043713.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043713 ;
+        adm:logEntry        bda:LG14441F6B768766E8 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF8DC6835E2ABE9276
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "187" .
+    
+    bdr:MW1FEMC043713
+        a                   :Instance ;
+        skos:prefLabel      "កូមាបា (ក-ឃួ)"@km , "Kūmāpā"@km-x-kmfemc ;
+        :hasFascicles       "8" ;
+        :hasTitle           bdr:TT54241B9CE14BB9C7 , bdr:TT673B61ABA567B282 ;
+        :instanceHasReproduction  bdr:W1FEMC043713 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8DC6835E2ABE9276 ;
+        :note               bdr:NTEF96793AA5D00C6D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "004-B.11.05.03.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NTEF96793AA5D00C6D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT54241B9CE14BB9C7
+        a                   :Title ;
+        rdfs:label          "កូមាបា (ក-ឃួ)"@km .
+    
+    bdr:TT673B61ABA567B282
+        a                   :Title ;
+        rdfs:label          "Kūmāpā"@km-x-kmfemc .
+}

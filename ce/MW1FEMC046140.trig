@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046140 {
+    bda:LG8F3FAA6213F3CE28
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046140"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046140"@en , "imported pubinfo for W1FEMC046140"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046140
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046140 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ce/MW1FEMC046140.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046140 ;
+        adm:logEntry        bda:LG8F3FAA6213F3CE28 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFDF66C195C75A337D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "53" .
+    
+    bdr:MW1FEMC046140
+        a                   :Instance ;
+        skos:prefLabel      "ព្រធម្មបទបនប្លាយ (ណ-តះ)(អ-ក្រះ)"@pi-khmr , "bra dhamma pad pan panplāya"@pi-x-kmfemc ;
+        :hasFascicles       "8, 17" ;
+        :hasTitle           bdr:TT82C1ECE6E7F6A76F , bdr:TTFCF01139BD8F7F46 ;
+        :instanceHasReproduction  bdr:W1FEMC046140 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFDF66C195C75A337D ;
+        :note               bdr:NT0EDBDAB482AEB46A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "001-B.04.03.03.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT0EDBDAB482AEB46A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT82C1ECE6E7F6A76F
+        a                   :Title ;
+        rdfs:label          "ព្រធម្មបទបនប្លាយ (ណ-តះ)(អ-ក្រះ)"@pi-khmr .
+    
+    bdr:TTFCF01139BD8F7F46
+        a                   :Title ;
+        rdfs:label          "bra dhamma pad pan panplāya"@pi-x-kmfemc .
+}

@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046423 {
+    bda:LGBC7B5E85051721BB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046423"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046423"@en , "imported pubinfo for W1FEMC046423"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046423
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046423 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "05/MW1FEMC046423.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046423 ;
+        adm:logEntry        bda:LGBC7B5E85051721BB , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFDA93D934537290B3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "171" .
+    
+    bdr:MW1FEMC046423
+        a                   :Instance ;
+        skos:prefLabel      "ក្រាំងអភិធម្ម សហស្សណៃ បព្វជាខន្ធ"@km , "krāṃṅ abhidhamm, sahassaṇai, pabbajākhana"@km-x-kmfemc ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT481AF822254E11AF , bdr:TTAA29E77B25C034F2 ;
+        :instanceHasReproduction  bdr:W1FEMC046423 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MFDA93D934537290B3 ;
+        :note               bdr:NT45EDF072227FE7B8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "158-B.04.03.04.I.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_3 .
+    
+    bdr:NT45EDF072227FE7B8
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT481AF822254E11AF
+        a                   :Title ;
+        rdfs:label          "ក្រាំងអភិធម្ម សហស្សណៃ បព្វជាខន្ធ"@km .
+    
+    bdr:TTAA29E77B25C034F2
+        a                   :Title ;
+        rdfs:label          "krāṃṅ abhidhamm, sahassaṇai, pabbajākhana"@km-x-kmfemc .
+}

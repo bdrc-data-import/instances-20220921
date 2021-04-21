@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044149 {
+    bda:LG45396BEBFE9617CB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044149"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC044149"@en , "imported pubinfo for W1FEMC044149"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044149
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC044149 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5d/MW1FEMC044149.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044149 ;
+        adm:logEntry        bda:LG45396BEBFE9617CB , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFC01650952CBF3E25
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "243" .
+    
+    bdr:MW1FEMC044149
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មបទ្ទ (ធម្មបទដ្ឋកថាបុព្វភាគ)"@km ;
+        :hasFascicles       "1-9, 11-13" ;
+        :hasTitle           bdr:TTA974A28BDDFA0F94 ;
+        :instanceHasReproduction  bdr:W1FEMC044149 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC01650952CBF3E25 ;
+        :note               bdr:NTE98E7FD976533CD5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "034-B.06.05.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTE98E7FD976533CD5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA974A28BDDFA0F94
+        a                   :Title ;
+        rdfs:label          "ធម្មបទ្ទ (ធម្មបទដ្ឋកថាបុព្វភាគ)"@km .
+}

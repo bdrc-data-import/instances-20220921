@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044468 {
+    bda:LG59999C4A75D9E093
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044468"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC044468"@en , "imported pubinfo for W1FEMC044468"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044468
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC044468 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "31/MW1FEMC044468.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044468 ;
+        adm:logEntry        bda:LG59999C4A75D9E093 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF4A32475CED4CDCE9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "43" .
+    
+    bdr:MW1FEMC044468
+        a                   :Instance ;
+        skos:prefLabel      "មនុស្សវិនយវណ្ណនា"@pi-khmr , "manuss vinaya vaṇṇ nā"@pi-x-kmfemc ;
+        :hasTitle           bdr:TT92F135722E88B4A7 , bdr:TTC6B71D51AD233423 ;
+        :instanceHasReproduction  bdr:W1FEMC044468 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4A32475CED4CDCE9 ;
+        :note               bdr:NTF1821C106DD64B83 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "007-B.09.12.01.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NTF1821C106DD64B83
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT92F135722E88B4A7
+        a                   :Title ;
+        rdfs:label          "មនុស្សវិនយវណ្ណនា"@pi-khmr .
+    
+    bdr:TTC6B71D51AD233423
+        a                   :Title ;
+        rdfs:label          "manuss vinaya vaṇṇ nā"@pi-x-kmfemc .
+}

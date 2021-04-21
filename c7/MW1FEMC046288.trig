@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046288 {
+    bda:LG5F5D4E4F8C401EF5
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046288"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046288"@en , "imported pubinfo for W1FEMC046288"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046288
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046288 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c7/MW1FEMC046288.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046288 ;
+        adm:logEntry        bda:LG5F5D4E4F8C401EF5 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF34AA3F3FB9F195CC
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "169" .
+    
+    bdr:MW1FEMC046288
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះអភិធម្មត្រៃត្រឹង (១-១៩)(១-១៦)"@km , "braḥ abhi dhamma trai trịṅ"@km-x-kmfemc ;
+        :hasFascicles       "2, 3" ;
+        :hasTitle           bdr:TT065F193D5D832C2C , bdr:TT905AAF4BA4BEC3AD ;
+        :instanceHasReproduction  bdr:W1FEMC046288 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF34AA3F3FB9F195CC ;
+        :note               bdr:NT0D58660CCD787FE7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "027-B.04.03.04.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT0D58660CCD787FE7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT065F193D5D832C2C
+        a                   :Title ;
+        rdfs:label          "ព្រះអភិធម្មត្រៃត្រឹង (១-១៩)(១-១៦)"@km .
+    
+    bdr:TT905AAF4BA4BEC3AD
+        a                   :Title ;
+        rdfs:label          "braḥ abhi dhamma trai trịṅ"@km-x-kmfemc .
+}

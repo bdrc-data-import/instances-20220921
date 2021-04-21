@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC040803 {
+    bda:LGCFF4FF12794979B7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC040803"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC040803"@en , "imported pubinfo for W1FEMC040803"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC040803
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC040803 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e2/MW1FEMC040803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC040803 ;
+        adm:logEntry        bda:LGCFF4FF12794979B7 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF093DBDD8CCFC0086
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "123" ;
+        :microfilmStrip     "217" .
+    
+    bdr:MW1FEMC040803
+        a                   :Instance ;
+        skos:prefLabel      "សុគន្ធថោង"@km ;
+        :hasFascicles       "1-8" ;
+        :hasTitle           bdr:TTD452CD81C62D6467 ;
+        :instanceHasReproduction  bdr:W1FEMC040803 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF093DBDD8CCFC0086 ;
+        :note               bdr:NT0EE11F6E74B50AE0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "0798-B.01.06.01.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NT0EE11F6E74B50AE0
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTD452CD81C62D6467
+        a                   :Title ;
+        rdfs:label          "សុគន្ធថោង"@km .
+}

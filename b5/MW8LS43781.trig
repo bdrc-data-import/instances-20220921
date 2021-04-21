@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS43781 {
-    bda:LG8D5FE786C50E42DB
+    bda:LG191180586F8CA373
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-20T09:56:28.247Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8161851CFF92EEA6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-03-13T14:58:39.789Z"^^xsd:dateTime ;
         adm:logMessage      "created work record"@en ;
@@ -21,25 +27,30 @@ bdg:MW8LS43781 {
     bda:MW8LS43781  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS43781 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "b5/MW8LS43781.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS43781 ;
-        adm:logEntry        bda:LG8D5FE786C50E42DB ;
+        adm:logEntry        bda:LG191180586F8CA373 , bda:LG8161851CFF92EEA6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVE5A91559DDE11CB5
+    bdr:CRE5A91559DDE11CB5
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8D5FE786C50E42DB
         a                   :PublishedEvent ;
         :onYear             "1985"^^xsd:gYear .
     
     bdr:MW8LS43781  a       :Instance ;
         skos:prefLabel      "dpal snar thang chos sde'i lo rgyus/"@bo-x-ewts ;
-        :authorshipStatement  "bkras lhun dgon gyi lo rgyus rtsom 'bri tshogs chung gis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_TypeSet ;
+        :creator            bdr:CRE5A91559DDE11CB5 ;
         :hasTitle           bdr:TT1D73029EE781AF8F ;
-        :instanceEvent      bdr:EVE5A91559DDE11CB5 ;
+        :instanceEvent      bdr:EV8D5FE786C50E42DB ;
         :instanceHasReproduction  bdr:W8LS43781 ;
         :instanceOf         bdr:WA8LS43781 ;
         :isRoot             true ;

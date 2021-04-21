@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046493 {
+    bda:LGB04965521A0E841B
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046493"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046493"@en , "imported pubinfo for W1FEMC046493"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046493
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046493 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "15/MW1FEMC046493.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046493 ;
+        adm:logEntry        bda:LGB04965521A0E841B , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFC1A99B4002D60D29
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "188" .
+    
+    bdr:MW1FEMC046493
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គក្នុងធុតង្គនិទ្ទេស"@km , "vōsuddhimagg knuṅ dhu taṅg niddes"@km-x-kmfemc ;
+        :hasFascicles       "9" ;
+        :hasTitle           bdr:TT7ADB6916868CA53D , bdr:TTB7F54F87A1A4E6CB ;
+        :instanceHasReproduction  bdr:W1FEMC046493 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC1A99B4002D60D29 ;
+        :note               bdr:NT85BEC373AC00D1CA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "005-B.11.06.04.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT85BEC373AC00D1CA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT7ADB6916868CA53D
+        a                   :Title ;
+        rdfs:label          "vōsuddhimagg knuṅ dhu taṅg niddes"@km-x-kmfemc .
+    
+    bdr:TTB7F54F87A1A4E6CB
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គក្នុងធុតង្គនិទ្ទេស"@km .
+}

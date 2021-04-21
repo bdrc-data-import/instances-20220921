@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046091 {
+    bda:LG69BC06B54797C588
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046091"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046091"@en , "imported pubinfo for W1FEMC046091"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046091
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046091 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b2/MW1FEMC046091.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046091 ;
+        adm:logEntry        bda:LG69BC06B54797C588 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFA34E20DD78D2501B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046091
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាបប្រុះ (១-១៥)"@km , "Cpāp pruḥ"@km-x-kmfemc ;
+        :hasTitle           bdr:TT9B5FC6DD7EDEF929 , bdr:TTEC835BFFEB7105E2 ;
+        :instanceHasReproduction  bdr:W1FEMC046091 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA34E20DD78D2501B ;
+        :note               bdr:NTE07BB95A337E9AD0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "050-B.04.03.03.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
+    
+    bdr:NTE07BB95A337E9AD0
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT9B5FC6DD7EDEF929
+        a                   :Title ;
+        rdfs:label          "Cpāp pruḥ"@km-x-kmfemc .
+    
+    bdr:TTEC835BFFEB7105E2
+        a                   :Title ;
+        rdfs:label          "ច្បាបប្រុះ (១-១៥)"@km .
+}

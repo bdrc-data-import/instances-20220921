@@ -23,6 +23,12 @@ bdg:MW1KG16578 {
         adm:logDate         "2017-04-20T00:02:45.734Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGD4A8885685ECB9CE
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-20T19:02:53.24Z"^^xsd:dateTime ;
+        adm:logMessage      "added calligrapher"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
         adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
@@ -40,23 +46,28 @@ bdg:MW1KG16578 {
     bda:MW1KG16578  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG16578 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "7c/MW1KG16578.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG16578 ;
-        adm:logEntry        bda:LG6E321FB9149E9445 , bda:LGC0F7854CA2D9ED86 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 ;
+        adm:logEntry        bda:LG6E321FB9149E9445 , bda:LGC0F7854CA2D9ED86 , bda:LGD4A8885685ECB9CE , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV17EC4B265E1F5ADF
+    bdr:CR17EC4B265E1F5ADF
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6254 ;
+        :role               bdr:R0ER0013 .
+    
+    bdr:EVC775F6EDE12764F6
         a                   :PublishedEvent ;
         :onYear             "1993"^^xsd:gYear .
     
-    bdr:ID348860B255BBFD8E
+    bdr:ID16156584B1536E4F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542101952" .
     
-    bdr:IDC775F6EDE12764F6
+    bdr:ID348860B255BBFD8E
         a                   bdr:HarvardShelfId ;
         rdf:value           "013861479-2" .
     
@@ -64,15 +75,15 @@ bdg:MW1KG16578 {
         skos:altLabel       "Lañtsha daṅ Wartuʼi phyi mo utpalaʼi ʼphreṅ rgyan ces bya ba bźugs so /Kan-suʼu Źiṅ-chen Naṅ-bstan Slob-gliṅ gis bsgrigs ; Dkon-mchog-rgya-mtshos bris."@en-x-mixed , "梵文字帖"@zh-hans ;
         skos:prefLabel      "lany+tsha dang wartu'i phyi mo ut+pa la'i 'phreng rgyan/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID348860B255BBFD8E , bdr:IDC775F6EDE12764F6 ;
+            bdr:ID16156584B1536E4F , bdr:ID348860B255BBFD8E ;
         :authorshipStatement  "dkon mchog rgya mtshos bris/"@bo-x-ewts ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR17EC4B265E1F5ADF ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT14804A547D667368 , bdr:TT56AE97482326F1C3 , bdr:TT619328E716CA7C83 , bdr:TTE4D0DA0D089C5CCD ;
-        :instanceEvent      bdr:EV17EC4B265E1F5ADF ;
+        :instanceEvent      bdr:EVC775F6EDE12764F6 ;
         :instanceHasReproduction  bdr:W1KG16578 ;
         :instanceOf         bdr:WA1KG16578 ;
         :isRoot             true ;
-        :note               bdr:NT16156584B1536E4F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherLocation  "lan kru'u/"@bo-x-ewts ;
@@ -80,16 +91,12 @@ bdg:MW1KG16578 {
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "2, 1, 111, p" .
     
-    bdr:NT16156584B1536E4F
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
-    
     bdr:TT14804A547D667368
         a                   :CoverTitle ;
         rdfs:label          "Lañtsha daṅ Wartuʼi phyi mo utpalaʼi ʼphreṅ rgyan ces bya ba bźugs so /Kan-suʼu Źiṅ-chen Naṅ-bstan Slob-gliṅ gis bsgrigs ; Dkon-mchog-rgya-mtshos bris."@en-x-mixed .
     
     bdr:TT56AE97482326F1C3
-        a                   :Title ;
+        a                   :CopyrightPageTitle ;
         rdfs:label          "梵文字帖"@zh-hans .
     
     bdr:TT619328E716CA7C83

@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043747 {
+    bda:LG3DA0CA8A14A8968A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043747"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043747"@en , "imported pubinfo for W1FEMC043747"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043747
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043747 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0f/MW1FEMC043747.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043747 ;
+        adm:logEntry        bda:LG3DA0CA8A14A8968A , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF4801168BCB594360
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "188" .
+    
+    bdr:MW1FEMC043747
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះសូត (ច្ច-ឆ្ឆ)"@km , "braẖ sūt"@km-x-kmfemc ;
+        :hasTitle           bdr:TT6866669579A1E537 , bdr:TT97D889944CB76F5D ;
+        :instanceHasReproduction  bdr:W1FEMC043747 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4801168BCB594360 ;
+        :note               bdr:NT8E80EE2824D1AF69 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "038-B.11.05.03.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NT8E80EE2824D1AF69
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6866669579A1E537
+        a                   :Title ;
+        rdfs:label          "braẖ sūt"@km-x-kmfemc .
+    
+    bdr:TT97D889944CB76F5D
+        a                   :Title ;
+        rdfs:label          "ព្រះសូត (ច្ច-ឆ្ឆ)"@km .
+}

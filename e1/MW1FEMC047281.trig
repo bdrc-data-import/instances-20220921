@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047281 {
+    bda:LG6D9B0291792D59A9
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047281"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC047281"@en , "imported pubinfo for W1FEMC047281"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047281
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC047281 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e1/MW1FEMC047281.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047281 ;
+        adm:logEntry        bda:LG6D9B0291792D59A9 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFE72F6B856F7CAB01
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "128" ;
+        :microfilmStrip     "222" .
+    
+    bdr:MW1FEMC047281
+        a                   :Instance ;
+        skos:prefLabel      "ល្បាតខ្សតស្ដេចសោ្យរាជក្នុងនគក្រុងកាំម្ភូជាធីប្បតី្យ"@km , "lpāt khsat stec soy˚ rāj knaṅ naga kruṅ kāṃmbhujā dhīppatīy˚"@km-x-kmfemc ;
+        :hasTitle           bdr:TT790D041066996B71 , bdr:TT833997CBB7ED8BB8 ;
+        :instanceHasReproduction  bdr:W1FEMC047281 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE72F6B856F7CAB01 ;
+        :note               bdr:NT35FF481F04105AF5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "Coll part.10.07.2000.IV.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_IV_2 .
+    
+    bdr:NT35FF481F04105AF5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT790D041066996B71
+        a                   :Title ;
+        rdfs:label          "lpāt khsat stec soy˚ rāj knaṅ naga kruṅ kāṃmbhujā dhīppatīy˚"@km-x-kmfemc .
+    
+    bdr:TT833997CBB7ED8BB8
+        a                   :Title ;
+        rdfs:label          "ល្បាតខ្សតស្ដេចសោ្យរាជក្នុងនគក្រុងកាំម្ភូជាធីប្បតី្យ"@km .
+}

@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046420 {
+    bda:LG24D3BC758FC8817A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046420"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046420"@en , "imported pubinfo for W1FEMC046420"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046420
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046420 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "94/MW1FEMC046420.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046420 ;
+        adm:logEntry        bda:LG24D3BC758FC8817A , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFF341B8C84F20A92E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "171" .
+    
+    bdr:MW1FEMC046420
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុអ្នកគ្រងកឋិន (១-៨)"@km , "bhikkhu ānk graṅ kaṭhin"@km-x-kmfemc ;
+        :hasTitle           bdr:TT3B721C7844229478 , bdr:TTF6568757C48DBC60 ;
+        :instanceHasReproduction  bdr:W1FEMC046420 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF341B8C84F20A92E ;
+        :note               bdr:NTFFFD0AC3A88E8B68 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "155-B.04.03.04.VI.6.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NTFFFD0AC3A88E8B68
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3B721C7844229478
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុអ្នកគ្រងកឋិន (១-៨)"@km .
+    
+    bdr:TTF6568757C48DBC60
+        a                   :Title ;
+        rdfs:label          "bhikkhu ānk graṅ kaṭhin"@km-x-kmfemc .
+}

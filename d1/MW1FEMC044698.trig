@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044698 {
+    bda:LG7F81407D4C4796FD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044698"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC044698"@en , "imported pubinfo for W1FEMC044698"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044698
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC044698 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d1/MW1FEMC044698.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044698 ;
+        adm:logEntry        bda:LG7F81407D4C4796FD , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF09CBC97A2DE8D5B0
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "152" .
+    
+    bdr:MW1FEMC044698
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតិសារុពទាំង១០"@km , "das jātī sārub dāmṅ 10"@km-x-kmfemc ;
+        :hasTitle           bdr:TT48EF97A8396FEC4A , bdr:TT623A5E6FEFBBC57E ;
+        :instanceHasReproduction  bdr:W1FEMC044698 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF09CBC97A2DE8D5B0 ;
+        :note               bdr:NT3E43F9D420D675FA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "021-B.06.06.04.III.5.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NT3E43F9D420D675FA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT48EF97A8396FEC4A
+        a                   :Title ;
+        rdfs:label          "das jātī sārub dāmṅ 10"@km-x-kmfemc .
+    
+    bdr:TT623A5E6FEFBBC57E
+        a                   :Title ;
+        rdfs:label          "ទសជាតិសារុពទាំង១០"@km .
+}

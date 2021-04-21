@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047261 {
+    bda:LG481BDF5E7AD6589E
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047261"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC047261"@en , "imported pubinfo for W1FEMC047261"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047261
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC047261 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a6/MW1FEMC047261.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047261 ;
+        adm:logEntry        bda:LG481BDF5E7AD6589E , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF2DE8D1612BC66A77
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "108" ;
+        :microfilmStrip     "202" .
+    
+    bdr:MW1FEMC047261
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាមើលថ្ងៃខែ ជតារាសី និងអង្សា"@km , "tamrā möl thṅai khè jatārāsī niṅ aṅsā"@km-x-kmfemc ;
+        :hasTitle           bdr:TT0BD00B004E2EBFFF , bdr:TT8AC45D2A9B3DEE61 ;
+        :instanceHasReproduction  bdr:W1FEMC047261 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2DE8D1612BC66A77 ;
+        :note               bdr:NT0B0686636C6A49C0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "Coll part.26.05.98.VI" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI .
+    
+    bdr:NT0B0686636C6A49C0
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0BD00B004E2EBFFF
+        a                   :Title ;
+        rdfs:label          "តម្រាមើលថ្ងៃខែ ជតារាសី និងអង្សា"@km .
+    
+    bdr:TT8AC45D2A9B3DEE61
+        a                   :Title ;
+        rdfs:label          "tamrā möl thṅai khè jatārāsī niṅ aṅsā"@km-x-kmfemc .
+}

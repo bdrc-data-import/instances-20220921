@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046448 {
+    bda:LG8006C46023957B1D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046448"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046448"@en , "imported pubinfo for W1FEMC046448"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046448
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046448 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "20/MW1FEMC046448.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046448 ;
+        adm:logEntry        bda:LG8006C46023957B1D , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF365ED5E54E869453
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046448
+        a                   :Instance ;
+        skos:prefLabel      "បរាយស្សបាបកវត្ត (១-១៨)"@pi-khmr , "pasāyassa pāpaka vagga"@pi-x-kmfemc ;
+        :hasTitle           bdr:TT236B2DC816C19E84 , bdr:TTE53FDB5507987253 ;
+        :instanceHasReproduction  bdr:W1FEMC046448 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF365ED5E54E869453 ;
+        :note               bdr:NTFD1A74ACCB04C331 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "011³-B.04.03.04.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NTFD1A74ACCB04C331
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT236B2DC816C19E84
+        a                   :Title ;
+        rdfs:label          "បរាយស្សបាបកវត្ត (១-១៨)"@pi-khmr .
+    
+    bdr:TTE53FDB5507987253
+        a                   :Title ;
+        rdfs:label          "pasāyassa pāpaka vagga"@pi-x-kmfemc .
+}

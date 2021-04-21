@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC040122 {
+    bda:LGE5DFFFFF44EB7557
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC040122"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC040122"@en , "imported pubinfo for W1FEMC040122"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC040122
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC040122 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e8/MW1FEMC040122.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC040122 ;
+        adm:logEntry        bda:LGE5DFFFFF44EB7557 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFF731DDAEB141B39A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "112" ;
+        :microfilmStrip     "206" .
+    
+    bdr:MW1FEMC040122
+        a                   :Instance ;
+        skos:prefLabel      "បកិណ្ណកកថាក្នុងបទធម្មធាតុទាំង៧"@km ;
+        :hasFascicles       "1ខ្សែចប់" ;
+        :hasTitle           bdr:TT3F0F7E234D8E1746 ;
+        :instanceHasReproduction  bdr:W1FEMC040122 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF731DDAEB141B39A ;
+        :note               bdr:NTE8A9C3D528B39C6B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "0122-B.01.06.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTE8A9C3D528B39C6B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3F0F7E234D8E1746
+        a                   :Title ;
+        rdfs:label          "បកិណ្ណកកថាក្នុងបទធម្មធាតុទាំង៧"@km .
+}

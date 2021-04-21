@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046234 {
+    bda:LG261A8546A08CBBB2
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046234"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046234"@en , "imported pubinfo for W1FEMC046234"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046234
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046234 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c3/MW1FEMC046234.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046234 ;
+        adm:logEntry        bda:LG261A8546A08CBBB2 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF5154A155A82B1500
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "172" .
+    
+    bdr:MW1FEMC046234
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃភូម (ក-ខៀ)"@km , "traī bhūm"@km-x-kmfemc ;
+        :hasTitle           bdr:TTD0B65A9B378A76C0 , bdr:TTDC658EABBE4983C5 ;
+        :instanceHasReproduction  bdr:W1FEMC046234 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5154A155A82B1500 ;
+        :note               bdr:NT4942026394BAFF76 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "012-B.04.09.03.V.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_V_1 .
+    
+    bdr:NT4942026394BAFF76
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTD0B65A9B378A76C0
+        a                   :Title ;
+        rdfs:label          "ត្រៃភូម (ក-ខៀ)"@km .
+    
+    bdr:TTDC658EABBE4983C5
+        a                   :Title ;
+        rdfs:label          "traī bhūm"@km-x-kmfemc .
+}

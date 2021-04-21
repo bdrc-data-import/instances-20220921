@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046032 {
+    bda:LG45A637612296CC9E
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046032"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046032"@en , "imported pubinfo for W1FEMC046032"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046032
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046032 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "37/MW1FEMC046032.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046032 ;
+        adm:logEntry        bda:LG45A637612296CC9E , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF03BC47B07C55ABDE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "172" .
+    
+    bdr:MW1FEMC046032
+        a                   :Instance ;
+        skos:prefLabel      "អនិសង្ឃសព្វទាន (១-២៣)"@km , "ani siṅgh sabba dān"@km-x-kmfemc ;
+        :hasTitle           bdr:TT901B537C8BCEC06B , bdr:TT972EE66625F10E90 ;
+        :instanceHasReproduction  bdr:W1FEMC046032 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF03BC47B07C55ABDE ;
+        :note               bdr:NTFC2D0458B3E4581A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "014-B.04.11.02.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NTFC2D0458B3E4581A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT901B537C8BCEC06B
+        a                   :Title ;
+        rdfs:label          "អនិសង្ឃសព្វទាន (១-២៣)"@km .
+    
+    bdr:TT972EE66625F10E90
+        a                   :Title ;
+        rdfs:label          "ani siṅgh sabba dān"@km-x-kmfemc .
+}

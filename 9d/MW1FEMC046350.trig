@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046350 {
+    bda:LG20FD43D5EC36A091
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046350"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046350"@en , "imported pubinfo for W1FEMC046350"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046350
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046350 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9d/MW1FEMC046350.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046350 ;
+        adm:logEntry        bda:LG20FD43D5EC36A091 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF807B4F9CDB2D9C16
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "170" .
+    
+    bdr:MW1FEMC046350
+        a                   :Instance ;
+        skos:prefLabel      "ចន្ទសុគ្គរី្យសូត្រ (១-២២)"@km , "Cand sugga rīgasūtr"@km-x-kmfemc ;
+        :hasTitle           bdr:TTA9A07198AB06FC89 , bdr:TTE38A249051E8D09E ;
+        :instanceHasReproduction  bdr:W1FEMC046350 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF807B4F9CDB2D9C16 ;
+        :note               bdr:NTBFE93A1049F0F770 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "086-B.04.03.04.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NTBFE93A1049F0F770
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA9A07198AB06FC89
+        a                   :Title ;
+        rdfs:label          "Cand sugga rīgasūtr"@km-x-kmfemc .
+    
+    bdr:TTE38A249051E8D09E
+        a                   :Title ;
+        rdfs:label          "ចន្ទសុគ្គរី្យសូត្រ (១-២២)"@km .
+}

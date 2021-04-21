@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046176 {
+    bda:LG5CD2E8C71761A86F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046176"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046176"@en , "imported pubinfo for W1FEMC046176"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046176
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046176 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c5/MW1FEMC046176.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046176 ;
+        adm:logEntry        bda:LG5CD2E8C71761A86F , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF4BF68FF91E60D00D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "177" .
+    
+    bdr:MW1FEMC046176
+        a                   :Instance ;
+        skos:prefLabel      "នីព្វានសូត (១-២៨)"@km , "nibbān sōt"@km-x-kmfemc ;
+        :hasTitle           bdr:TTD172BA9DED7C5217 , bdr:TTF9A13DF2C7E9C508 ;
+        :instanceHasReproduction  bdr:W1FEMC046176 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4BF68FF91E60D00D ;
+        :note               bdr:NT27546E86EDF3A98E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "025-B.04.04.01.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NT27546E86EDF3A98E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTD172BA9DED7C5217
+        a                   :Title ;
+        rdfs:label          "nibbān sōt"@km-x-kmfemc .
+    
+    bdr:TTF9A13DF2C7E9C508
+        a                   :Title ;
+        rdfs:label          "នីព្វានសូត (១-២៨)"@km .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043717 {
+    bda:LG9D80E205C6203601
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043717"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043717"@en , "imported pubinfo for W1FEMC043717"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043717
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043717 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fe/MW1FEMC043717.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043717 ;
+        adm:logEntry        bda:LG9D80E205C6203601 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFCD5DC176E73AF6BF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "187" .
+    
+    bdr:MW1FEMC043717
+        a                   :Instance ;
+        skos:prefLabel      "សព្វទានានិសំសកថា"@km , "Sabb dāni Saṃrakathā"@km-x-kmfemc ;
+        :hasFascicles       "1, 5, 6, 7, 9, 11" ;
+        :hasTitle           bdr:TT1AD6B08313F053E0 , bdr:TTD974E5003E76F6B9 ;
+        :instanceHasReproduction  bdr:W1FEMC043717 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCD5DC176E73AF6BF ;
+        :note               bdr:NTD6266DCF81F533D5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "008-B.11.05.03.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NTD6266DCF81F533D5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1AD6B08313F053E0
+        a                   :Title ;
+        rdfs:label          "សព្វទានានិសំសកថា"@km .
+    
+    bdr:TTD974E5003E76F6B9
+        a                   :Title ;
+        rdfs:label          "Sabb dāni Saṃrakathā"@km-x-kmfemc .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043679 {
+    bda:LGBBD938325D69F675
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043679"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043679"@en , "imported pubinfo for W1FEMC043679"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043679
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043679 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8d/MW1FEMC043679.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043679 ;
+        adm:logEntry        bda:LGBBD938325D69F675 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFA650296F8906A96D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "200" .
+    
+    bdr:MW1FEMC043679
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម ៧ គម្ពីរ"@km , "abhidhamma 7 gambīr"@km-x-kmfemc ;
+        :hasFascicles       "1-7" ;
+        :hasTitle           bdr:TT59CDFCACBC0557FA , bdr:TT904B8F340860F43B ;
+        :instanceHasReproduction  bdr:W1FEMC043679 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA650296F8906A96D ;
+        :note               bdr:NT67208BE4A0731417 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "025-B.11.13.01.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NT67208BE4A0731417
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT59CDFCACBC0557FA
+        a                   :Title ;
+        rdfs:label          "abhidhamma 7 gambīr"@km-x-kmfemc .
+    
+    bdr:TT904B8F340860F43B
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម ៧ គម្ពីរ"@km .
+}

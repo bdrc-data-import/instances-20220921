@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046207 {
+    bda:LGD12E6ED71DE0AD44
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046207"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC046207"@en , "imported pubinfo for W1FEMC046207"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046207
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC046207 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8c/MW1FEMC046207.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046207 ;
+        adm:logEntry        bda:LGD12E6ED71DE0AD44 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF881A9EA3E8E3DBF9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "178" .
+    
+    bdr:MW1FEMC046207
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកព្រះសាស្នារ"@km , "Lpők braḥ sāsnar"@km-x-kmfemc ;
+        :hasTitle           bdr:TT7B0265D0AC540AB7 , bdr:TTC65DFAA366F29A02 ;
+        :instanceHasReproduction  bdr:W1FEMC046207 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF881A9EA3E8E3DBF9 ;
+        :note               bdr:NT46B84F0A9A6FBCBC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "031-B.04.10.01.I.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_3 .
+    
+    bdr:NT46B84F0A9A6FBCBC
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT7B0265D0AC540AB7
+        a                   :Title ;
+        rdfs:label          "ល្បើកព្រះសាស្នារ"@km .
+    
+    bdr:TTC65DFAA366F29A02
+        a                   :Title ;
+        rdfs:label          "Lpők braḥ sāsnar"@km-x-kmfemc .
+}

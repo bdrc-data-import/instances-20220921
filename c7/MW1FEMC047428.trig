@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047428 {
+    bda:LG10F3D1770531B136
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047428"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC047428"@en , "imported pubinfo for W1FEMC047428"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047428
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC047428 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c7/MW1FEMC047428.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047428 ;
+        adm:logEntry        bda:LG10F3D1770531B136 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF608281866BA63B72
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "2" ;
+        :microfilmStrip     "5" .
+    
+    bdr:MW1FEMC047428
+        a                   :Instance ;
+        skos:prefLabel      "សេចក្តីព្រះអង្គគរនិកា្យប្នប្លាយ"@km , "Secktī braḥ áńgag tarani kāyapāna plāya"@km-x-kmfemc ;
+        :hasTitle           bdr:TT82D6F21D80ACB28F , bdr:TTDCD892E5C61AF086 ;
+        :instanceHasReproduction  bdr:W1FEMC047428 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF608281866BA63B72 ;
+        :note               bdr:NT6E294F2ED5D270CD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "MOE.02.07.91.20" ;
+        :workIsAbout        bdr:FEMC_Scheme_20 .
+    
+    bdr:NT6E294F2ED5D270CD
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT82D6F21D80ACB28F
+        a                   :Title ;
+        rdfs:label          "សេចក្តីព្រះអង្គគរនិកា្យប្នប្លាយ"@km .
+    
+    bdr:TTDCD892E5C61AF086
+        a                   :Title ;
+        rdfs:label          "Secktī braḥ áńgag tarani kāyapāna plāya"@km-x-kmfemc .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043758 {
+    bda:LGFBB5593AB85B5248
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043758"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC043758"@en , "imported pubinfo for W1FEMC043758"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043758
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC043758 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ac/MW1FEMC043758.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043758 ;
+        adm:logEntry        bda:LGFBB5593AB85B5248 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFAAEE6196204BF793
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC043758
+        a                   :Instance ;
+        skos:prefLabel      "មូល្លកច្ចាយន តទ្ធិត (១-៣៤)"@pi-khmr , "mūllakaccāyana taddhit"@pi-x-kmfemc ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TT075E6204D9CD4B9E , bdr:TTB9918D65E38B501C ;
+        :instanceHasReproduction  bdr:W1FEMC043758 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAAEE6196204BF793 ;
+        :note               bdr:NT19FA0055E89B021D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "002-B.11.05.03.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NT19FA0055E89B021D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT075E6204D9CD4B9E
+        a                   :Title ;
+        rdfs:label          "mūllakaccāyana taddhit"@pi-x-kmfemc .
+    
+    bdr:TTB9918D65E38B501C
+        a                   :Title ;
+        rdfs:label          "មូល្លកច្ចាយន តទ្ធិត (១-៣៤)"@pi-khmr .
+}

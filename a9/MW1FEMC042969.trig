@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042969 {
+    bda:LG796770A43D58779E
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042969"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC042969"@en , "imported pubinfo for W1FEMC042969"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042969
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC042969 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a9/MW1FEMC042969.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042969 ;
+        adm:logEntry        bda:LG796770A43D58779E , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF907284B166ED1A82
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "230" .
+    
+    bdr:MW1FEMC042969
+        a                   :Instance ;
+        skos:prefLabel      "ស្ពាន (អានិសង្សស្ពាន)(ក១-៩)"@km ;
+        :hasTitle           bdr:TTB8154D78A7CFC644 ;
+        :instanceHasReproduction  bdr:W1FEMC042969 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF907284B166ED1A82 ;
+        :note               bdr:NT81F36C104C97E9B5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "109-B.01.09.03.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NT81F36C104C97E9B5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB8154D78A7CFC644
+        a                   :Title ;
+        rdfs:label          "ស្ពាន (អានិសង្សស្ពាន)(ក១-៩)"@km .
+}

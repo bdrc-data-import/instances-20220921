@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044442 {
+    bda:LG06E85011EDD38662
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044442"@en .
+    
+    bda:LGIMFE80F1F6  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-04-20T15:55:03.405Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 04 workW1FEMC044442"@en , "imported pubinfo for W1FEMC044442"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044442
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC044442 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "52/MW1FEMC044442.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044442 ;
+        adm:logEntry        bda:LG06E85011EDD38662 , bda:LGIMFE80F1F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF69DAB17B723A2C74
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "166" .
+    
+    bdr:MW1FEMC044442
+        a                   :Instance ;
+        skos:prefLabel      "វិនិច្ឆេយអវហាបភេទអទិន្នាទានបារាជិក"@km , "Vinichhey avahā pabhed adinnādān pārājik"@km-x-kmfemc ;
+        :hasTitle           bdr:TT0134B4BAF6C556BC , bdr:TT1497EB76C14A259D ;
+        :instanceHasReproduction  bdr:W1FEMC044442 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF69DAB17B723A2C74 ;
+        :note               bdr:NT445735095F17383A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "075-B.09.12.01.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NT445735095F17383A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0134B4BAF6C556BC
+        a                   :Title ;
+        rdfs:label          "វិនិច្ឆេយអវហាបភេទអទិន្នាទានបារាជិក"@km .
+    
+    bdr:TT1497EB76C14A259D
+        a                   :Title ;
+        rdfs:label          "Vinichhey avahā pabhed adinnādān pārājik"@km-x-kmfemc .
+}
