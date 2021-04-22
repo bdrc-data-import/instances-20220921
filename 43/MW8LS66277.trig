@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS66277 {
-    bda:LG24DA5A691B65BB8D
+    bda:LG196A87475A46560B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-21T16:30:41.977Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6745A2E258198C7F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-06-26T09:29:20.389Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,25 +27,30 @@ bdg:MW8LS66277 {
     bda:MW8LS66277  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS66277 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "43/MW8LS66277.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS66277 ;
-        adm:logEntry        bda:LG24DA5A691B65BB8D ;
+        adm:logEntry        bda:LG196A87475A46560B , bda:LG6745A2E258198C7F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV93A0A2C3B621E847
+    bdr:CR93A0A2C3B621E847
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7463 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV24DA5A691B65BB8D
         a                   :PublishedEvent ;
         :onYear             "2008"^^xsd:gYear .
     
     bdr:MW8LS66277  a       :Instance ;
         skos:prefLabel      "bod kyi lo rgyus bgro gleng /"@bo-x-ewts ;
-        :authorshipStatement  "chol gsum lo rgyus sde tshan nas phyogs bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR93A0A2C3B621E847 ;
         :hasTitle           bdr:TT5E52A9269CE28B31 ;
-        :instanceEvent      bdr:EV93A0A2C3B621E847 ;
+        :instanceEvent      bdr:EV24DA5A691B65BB8D ;
         :instanceHasReproduction  bdr:W8LS66277 ;
         :instanceOf         bdr:WA8LS66277 ;
         :isRoot             true ;
