@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS66550 {
-    bda:LGAAEC4B3F8DA06A7F
+    bda:LGB5CA8C4DBD9E25C8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-23T09:39:32.088Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF4AB469913067B05
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-08-14T10:02:08.44Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
@@ -21,30 +27,35 @@ bdg:MW8LS66550 {
     bda:MW8LS66550  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS66550 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "d8/MW8LS66550.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS66550 ;
-        adm:logEntry        bda:LGAAEC4B3F8DA06A7F ;
+        adm:logEntry        bda:LGB5CA8C4DBD9E25C8 , bda:LGF4AB469913067B05 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV4C7FD2AB358F48CA
+    bdr:CR4C7FD2AB358F48CA
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75459 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV4D0D4AC4EDBA355E
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:ID4D0D4AC4EDBA355E
+    bdr:IDAAEC4B3F8DA06A7F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9789387974180" .
     
     bdr:MW8LS66550  a       :Instance ;
         skos:prefLabel      "mon yul nas gsar du rnyed pa'i bon gyi dpe rnying bdams bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4D0D4AC4EDBA355E ;
-        :authorshipStatement  "dpe sgrig 'gan khur ba/ zung drung dge bshes she tsu rgya mtsho/"@bo-x-ewts ;
+            bdr:IDAAEC4B3F8DA06A7F ;
+        :creator            bdr:CR4C7FD2AB358F48CA ;
         :hasTitle           bdr:TT26FE62951069F316 ;
-        :instanceEvent      bdr:EV4C7FD2AB358F48CA ;
+        :instanceEvent      bdr:EV4D0D4AC4EDBA355E ;
         :instanceHasReproduction  bdr:W8LS66550 ;
         :instanceOf         bdr:WA8LS66550 ;
         :isRoot             true ;
