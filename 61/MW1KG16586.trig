@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG16586 {
+    bda:LG28DBB1A7E92B4774
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-27T20:04:01.409Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG58117E1A87BBB530
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-03T11:46:47.454Z"^^xsd:dateTime ;
@@ -33,19 +38,24 @@ bdg:MW1KG16586 {
     bda:MW1KG16586  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG16586 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "61/MW1KG16586.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG16586 ;
-        adm:logEntry        bda:LG58117E1A87BBB530 , bda:LGE4635C00097490E6 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG28DBB1A7E92B4774 , bda:LG58117E1A87BBB530 , bda:LGE4635C00097490E6 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD7EAF4FAC2167C48
+    bdr:CRD7EAF4FAC2167C48
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228818 ;
+        :role               bdr:R0ER0013 .
+    
+    bdr:EV33231C2E3C752750
         a                   :PublishedEvent ;
         :onYear             "2010"^^xsd:gYear .
     
-    bdr:ID33231C2E3C752750
+    bdr:IDCEAEAC8676B81EB7
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540945206" .
     
@@ -53,26 +63,22 @@ bdg:MW1KG16586 {
         skos:altLabel       "藏文字贴(行书)"@zh-hans ;
         skos:prefLabel      "bod kyi dbu med yi ge'i gzugs che chung gi ma phyi blo gsal 'jug ngogs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID33231C2E3C752750 ;
+            bdr:IDCEAEAC8676B81EB7 ;
         :authorshipStatement  "o rgyan bstan 'dzin gyis bris/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRD7EAF4FAC2167C48 ;
+        :editionStatement   "par gzhi gnyis pa/ par thengs gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT001A5BA0D40AF0A5 , bdr:TTCCAC12963F2A9021 , bdr:TTD3CC8B7355B96005 ;
-        :instanceEvent      bdr:EVD7EAF4FAC2167C48 ;
+        :instanceEvent      bdr:EV33231C2E3C752750 ;
         :instanceHasReproduction  bdr:W1KG16586 ;
         :instanceOf         bdr:WA1KG16586 ;
         :isRoot             true ;
-        :note               bdr:NTCEAEAC8676B81EB7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
         :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "74 p." .
-    
-    bdr:NTCEAEAC8676B81EB7
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
     
     bdr:TT001A5BA0D40AF0A5
         a                   :CopyrightPageTitle ;

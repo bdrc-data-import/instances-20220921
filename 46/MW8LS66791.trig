@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS66791 {
-    bda:LG21DC2274353F1ACF
+    bda:LG4605F303A55F09F5
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-10-08T10:25:22.715Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG4605F303A55F09F5
+    bda:LGA1D9C4E9A54AC13E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-27T11:40:31.131Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE0F5086B8641C93E
         a                   adm:UpdateData ;
         adm:logDate         "2019-12-04T11:13:50.962Z"^^xsd:dateTime ;
         adm:logMessage      "changed topic, added series and series number"@en ;
@@ -27,30 +33,35 @@ bdg:MW8LS66791 {
     bda:MW8LS66791  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS66791 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "46/MW8LS66791.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS66791 ;
-        adm:logEntry        bda:LG21DC2274353F1ACF , bda:LG4605F303A55F09F5 ;
+        adm:logEntry        bda:LG4605F303A55F09F5 , bda:LGA1D9C4E9A54AC13E , bda:LGE0F5086B8641C93E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV51DD235FEAD1C9C7
+    bdr:CR51DD235FEAD1C9C7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CZ75604 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV4B02330CDB35D61B
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:ID4B02330CDB35D61B
+    bdr:ID21DC2274353F1ACF
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223009317" .
     
     bdr:MW8LS66791  a       :Instance , :SerialInstance ;
         skos:prefLabel      "bca' yig phyogs bsgrigs/stod cha dang smad cha/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4B02330CDB35D61B ;
-        :authorshipStatement  "bod rang skyong ljongs yig tshags khang gis bsgrigs/"@bo-x-ewts ;
+            bdr:ID21DC2274353F1ACF ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR51DD235FEAD1C9C7 ;
         :hasTitle           bdr:TTFBA92DB01EA32D1F ;
-        :instanceEvent      bdr:EV51DD235FEAD1C9C7 ;
+        :instanceEvent      bdr:EV4B02330CDB35D61B ;
         :instanceHasReproduction  bdr:W8LS66791 ;
         :instanceOf         bdr:WA8LS66791 ;
         :isRoot             true ;
