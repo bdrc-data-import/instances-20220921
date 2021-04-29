@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS66833 {
-    bda:LGAB0749C46866AF86
+    bda:LG212CBC49E89C6067
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-28T10:21:45.686Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG2A769660DF82CD01
         a                   adm:UpdateData ;
         adm:logDate         "2019-12-06T15:25:50.904Z"^^xsd:dateTime ;
         adm:logMessage      "added topic and pub info"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGBE774E0BF01A015A
+    bda:LGAB0749C46866AF86
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-10-11T10:50:15.346Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
@@ -27,31 +33,36 @@ bdg:MW8LS66833 {
     bda:MW8LS66833  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS66833 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ec/MW8LS66833.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS66833 ;
-        adm:logEntry        bda:LGAB0749C46866AF86 , bda:LGBE774E0BF01A015A ;
+        adm:logEntry        bda:LG212CBC49E89C6067 , bda:LG2A769660DF82CD01 , bda:LGAB0749C46866AF86 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV96C70D9E95F00418
+    bdr:CR96C70D9E95F00418
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75365 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV6FFA86AF3422F28C
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:ID6FFA86AF3422F28C
+    bdr:IDBE774E0BF01A015A
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223038249" .
     
     bdr:MW8LS66833  a       :Instance , :SerialInstance ;
         skos:prefLabel      "sum rtags 'grel pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6FFA86AF3422F28C ;
-        :authorshipStatement  "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs bsgrigs khang nas bsgrigs/"@bo-x-ewts ;
+            bdr:IDBE774E0BF01A015A ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR96C70D9E95F00418 ;
         :editionStatement   "dpar theng gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT52A003D6772CC47C ;
-        :instanceEvent      bdr:EV96C70D9E95F00418 ;
+        :instanceEvent      bdr:EV6FFA86AF3422F28C ;
         :instanceHasReproduction  bdr:W8LS66833 ;
         :instanceOf         bdr:WA8LS66833 ;
         :isRoot             true ;
