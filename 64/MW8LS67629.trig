@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS67629 {
-    bda:LG988069FBFBE095A1
+    bda:LG0347F3D0EDA5B500
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-29T15:11:05.961Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG09897A8678C3A86B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-18T15:52:38.919Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
@@ -21,25 +27,30 @@ bdg:MW8LS67629 {
     bda:MW8LS67629  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS67629 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "64/MW8LS67629.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS67629 ;
-        adm:logEntry        bda:LG988069FBFBE095A1 ;
+        adm:logEntry        bda:LG0347F3D0EDA5B500 , bda:LG09897A8678C3A86B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD4207FAA2BF5E49D
+    bdr:CRD4207FAA2BF5E49D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6579 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV988069FBFBE095A1
         a                   :PublishedEvent ;
         :onYear             "1982"^^xsd:gYear .
     
     bdr:MW8LS67629  a       :Instance ;
         skos:prefLabel      "sprul sku'i gtam rgyud/"@bo-x-ewts ;
-        :authorshipStatement  "rtsom sgrig 'gan khur ba lhag pa tshe ring /"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_TypeSet ;
+        :creator            bdr:CRD4207FAA2BF5E49D ;
         :hasTitle           bdr:TT816A914A9F5047BB ;
-        :instanceEvent      bdr:EVD4207FAA2BF5E49D ;
+        :instanceEvent      bdr:EV988069FBFBE095A1 ;
         :instanceHasReproduction  bdr:W8LS67629 ;
         :instanceOf         bdr:WA8LS67629 ;
         :isRoot             true ;
