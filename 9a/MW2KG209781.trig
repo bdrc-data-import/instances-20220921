@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG209781 {
-    bda:LG86541733F1677634
+    bda:LG93F3DFD4759755E5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-01T08:35:29.342Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGEB206B3A01728B1D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-02-04T11:32:15.929Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
@@ -21,24 +27,31 @@ bdg:MW2KG209781 {
     bda:MW2KG209781  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG209781 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "9a/MW2KG209781.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG209781 ;
-        adm:logEntry        bda:LG86541733F1677634 ;
+        adm:logEntry        bda:LG93F3DFD4759755E5 , bda:LGEB206B3A01728B1D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVE4B0742F96A0951E
+    bdr:CRE4B0742F96A0951E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG221945 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV86541733F1677634
         a                   :PublishedEvent ;
         :onYear             "2019"^^xsd:gYear .
     
     bdr:MW2KG209781  a      :Instance ;
         skos:prefLabel      "dbang ldan zhu tshang gi gsung 'bum phyogs bsgrigs/"@bo-x-ewts ;
         :authorshipStatement  "zhu yas rig gzhung dar spel rkang 'dzin lhan tshogs/ gtso sgrig pa stong skor g.yung drung bstan pa/"@bo-x-ewts ;
+        :biblioNote         "The editor Geshe Tongkor Youngdrug Tenpa and the publisher have requested not to share this set with anybody."@en ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRE4B0742F96A0951E ;
         :hasTitle           bdr:TT118C63B5A9A821BD ;
-        :instanceEvent      bdr:EVE4B0742F96A0951E ;
+        :instanceEvent      bdr:EV86541733F1677634 ;
         :instanceHasReproduction  bdr:W2KG209781 ;
         :instanceOf         bdr:WA2KG209781 ;
         :isRoot             true ;
