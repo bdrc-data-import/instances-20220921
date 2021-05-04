@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS67692 {
-    bda:LG036696717A094E38
+    bda:LG07229DA2EB52D2D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-03T09:30:24.467Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB3F45B79395120DF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-20T12:27:42.775Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
@@ -21,30 +27,35 @@ bdg:MW8LS67692 {
     bda:MW8LS67692  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS67692 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "80/MW8LS67692.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS67692 ;
-        adm:logEntry        bda:LG036696717A094E38 ;
+        adm:logEntry        bda:LG07229DA2EB52D2D4 , bda:LGB3F45B79395120DF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV664DB36259663858
+    bdr:CR664DB36259663858
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75475 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV7F2FC88779D773B8
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:ID7F2FC88779D773B8
+    bdr:ID036696717A094E38
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787220100000" .
     
     bdr:MW8LS67692  a       :Instance ;
         skos:prefLabel      "bzhud pa'i lo zla/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7F2FC88779D773B8 ;
-        :authorshipStatement  "gzhis ka rtse grong khyer rtsom rig sgyu rtsal lhan tshogs kyis bsgirgs/"@bo-x-ewts ;
+            bdr:ID036696717A094E38 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR664DB36259663858 ;
         :hasTitle           bdr:TT984FEA78AE2B8ECF ;
-        :instanceEvent      bdr:EV664DB36259663858 ;
+        :instanceEvent      bdr:EV7F2FC88779D773B8 ;
         :instanceHasReproduction  bdr:W8LS67692 ;
         :instanceOf         bdr:WA8LS67692 ;
         :isRoot             true ;

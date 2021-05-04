@@ -12,39 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS67698 {
-    bda:LGF6150DE683A80699
+    bda:LG493C360BD84685F3
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-20T14:14:26.797Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGB5BBF2B7F857B3CB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-03T09:35:31.175Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS67698  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS67698 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "ab/MW8LS67698.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS67698 ;
-        adm:logEntry        bda:LGF6150DE683A80699 ;
+        adm:logEntry        bda:LG493C360BD84685F3 , bda:LGB5BBF2B7F857B3CB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVEA7351482C198823
+    bdr:CREA7351482C198823
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75475 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV1A1FD6628CD7C05B
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:ID1A1FD6628CD7C05B
+    bdr:IDF6150DE683A80699
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787220099731" .
     
     bdr:MW8LS67698  a       :Instance ;
         skos:prefLabel      "sems kyi 'bod pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1A1FD6628CD7C05B ;
-        :authorshipStatement  "gzhis ka rtse grong khyer rtsom rig sgyu rtsal lhan tshogs kyis bsgrigs/"@bo-x-ewts ;
+            bdr:IDF6150DE683A80699 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CREA7351482C198823 ;
         :hasTitle           bdr:TT6E391B231FCA992A ;
-        :instanceEvent      bdr:EVEA7351482C198823 ;
+        :instanceEvent      bdr:EV1A1FD6628CD7C05B ;
         :instanceHasReproduction  bdr:W8LS67698 ;
         :instanceOf         bdr:WA8LS67698 ;
         :isRoot             true ;
