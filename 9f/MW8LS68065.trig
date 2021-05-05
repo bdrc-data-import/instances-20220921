@@ -12,46 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS68065 {
-    bda:LGD9FF0855D957311E
+    bda:LG619E3B96EBAEB5D3
         a                   adm:UpdateData ;
-        adm:logDate         "2020-01-23T12:34:21.135Z"^^xsd:dateTime ;
-        adm:logMessage      "added isbn number"@en ;
+        adm:logDate         "2021-05-04T10:25:37.458Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGEF19264EEF346298
+    bda:LGD9FF0855D957311E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-01-23T09:07:16.506Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGF2033B760439779B
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-23T12:34:21.135Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn number"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS68065  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS68065 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "9f/MW8LS68065.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS68065 ;
-        adm:logEntry        bda:LGD9FF0855D957311E , bda:LGEF19264EEF346298 ;
+        adm:logEntry        bda:LG619E3B96EBAEB5D3 , bda:LGD9FF0855D957311E , bda:LGF2033B760439779B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0B00229003D05217
+    bdr:CR0B00229003D05217
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6846 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV94E96CAA0AE29846
         a                   :PublishedEvent ;
         :onYear             "2019"^^xsd:gYear .
     
-    bdr:ID94E96CAA0AE29846
+    bdr:IDEF19264EEF346298
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105111275" .
     
     bdr:MW8LS68065  a       :Instance ;
         skos:prefLabel      "rtsa rgyud/ bcos sgrig ma/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID94E96CAA0AE29846 ;
-        :authorshipStatement  "gtso sgrig pa/ nyi ma tshe ring /"@bo-x-ewts ;
+            bdr:IDEF19264EEF346298 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR0B00229003D05217 ;
         :editionStatement   "2004 par thengs dang po/ 2010 par thengs gnyis pa/ 2019 par thengs 6"@bo-x-ewts ;
         :hasTitle           bdr:TT8B383F649E0DF2DC , bdr:TTE5EED558A4C19501 ;
-        :instanceEvent      bdr:EV0B00229003D05217 ;
+        :instanceEvent      bdr:EV94E96CAA0AE29846 ;
         :instanceHasReproduction  bdr:W8LS68065 ;
         :instanceOf         bdr:WA8LS68065 ;
         :isRoot             true ;

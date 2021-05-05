@@ -13,44 +13,55 @@
 
 bdg:MW8LS68199 {
     bda:LG636F08A7295565CA
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-01-28T12:30:23.55Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LGADD573FE36016006
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-01-28T10:28:53.49Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG9186BF265DC86E44
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-04T14:23:47.858Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGABA826888C4E6F13
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-28T12:30:23.55Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS68199  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS68199 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "59/MW8LS68199.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS68199 ;
-        adm:logEntry        bda:LG636F08A7295565CA , bda:LGADD573FE36016006 ;
+        adm:logEntry        bda:LG636F08A7295565CA , bda:LG9186BF265DC86E44 , bda:LGABA826888C4E6F13 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVB30BE6C35AB869C6
+    bdr:CRB30BE6C35AB869C6
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75537 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVBB7D7D7229140180
         a                   :PublishedEvent ;
         :onYear             "2017"^^xsd:gYear .
     
-    bdr:IDBB7D7D7229140180
+    bdr:IDADD573FE36016006
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105151776" .
     
     bdr:MW8LS68199  a       :Instance ;
         skos:prefLabel      "srid phyod smra ba/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBB7D7D7229140180 ;
-        :authorshipStatement  "gtso sgrig pa/ rnam rgyal 'tsho/"@bo-x-ewts ;
+            bdr:IDADD573FE36016006 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRB30BE6C35AB869C6 ;
         :editionStatement   "2017 par gzhi dang po/ 2017 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT14D11930A8AAA35F ;
-        :instanceEvent      bdr:EVB30BE6C35AB869C6 ;
+        :instanceEvent      bdr:EVBB7D7D7229140180 ;
         :instanceHasReproduction  bdr:W8LS68199 ;
         :instanceOf         bdr:WA8LS68199 ;
         :isRoot             true ;

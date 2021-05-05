@@ -12,40 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS68153 {
-    bda:LG68D67EE67E307031
+    bda:LG93220648F7A320F0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-01-24T15:06:13.456Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGBCC03957978E1A95
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-04T10:37:20.534Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:MW8LS68153  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS68153 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "0c/MW8LS68153.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS68153 ;
-        adm:logEntry        bda:LG68D67EE67E307031 ;
+        adm:logEntry        bda:LG93220648F7A320F0 , bda:LGBCC03957978E1A95 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV88360C157EF661D9
+    bdr:CR88360C157EF661D9
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7896 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVBC6011A09DEA3686
         a                   :PublishedEvent ;
         :onYear             "2019"^^xsd:gYear .
     
-    bdr:IDBC6011A09DEA3686
+    bdr:ID68D67EE67E307031
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105119585" .
     
     bdr:MW8LS68153  a       :Instance ;
         skos:prefLabel      "gnyan rims gso ba/ bcos sgrig ma/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBC6011A09DEA3686 ;
-        :authorshipStatement  "gtso sgrig pa/ tshul khrims/"@bo-x-ewts ;
+            bdr:ID68D67EE67E307031 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR88360C157EF661D9 ;
         :editionStatement   "2004 par thengs dang po/ 2010 par thengs gnyis pa/ 2019 par thengs drug pa/"@bo-x-ewts ;
         :hasTitle           bdr:TTC64EB77261259DCA , bdr:TTEE129377AB9B62CA ;
-        :instanceEvent      bdr:EV88360C157EF661D9 ;
+        :instanceEvent      bdr:EVBC6011A09DEA3686 ;
         :instanceHasReproduction  bdr:W8LS68153 ;
         :instanceOf         bdr:WA8LS68153 ;
         :isRoot             true ;
