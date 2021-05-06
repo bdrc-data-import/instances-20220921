@@ -12,34 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG23086 {
-    bda:LG2C71E0F6BA97FB5A
+    bda:LG3869A7A3DB3C1C9F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-03-31T14:23:06.374Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LG3869A7A3DB3C1C9F
+    bda:LGEF0596424D7417FC
         a                   adm:UpdateData ;
         adm:logDate         "2017-04-27T16:27:27.674Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGFC41A5DA175F4678
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-05T14:14:09.221Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG23086  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG23086 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7f/MW1KG23086.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG23086 ;
-        adm:logEntry        bda:LG2C71E0F6BA97FB5A , bda:LG3869A7A3DB3C1C9F ;
+        adm:logEntry        bda:LG3869A7A3DB3C1C9F , bda:LGEF0596424D7417FC , bda:LGFC41A5DA175F4678 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVC1E7420043214AEB
-        a                   :PublishedEvent ;
-        :onYear             "2010"^^xsd:gYear .
+    bdr:CRC1E7420043214AEB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75485 ;
+        :role               bdr:R0ER0015 .
     
-    bdr:ID6A9CEB42301BED1C
+    bdr:EV6A9CEB42301BED1C
+        a                   :PublishedEvent ;
+        :onOrAbout          "2010,2011" .
+    
+    bdr:ID2C71E0F6BA97FB5A
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542114174" .
     
@@ -47,12 +58,13 @@ bdg:MW1KG23086 {
         skos:altLabel       "农牧民科技知识读本"@zh-hans ;
         skos:prefLabel      "tshan rig shes bya/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6A9CEB42301BED1C ;
+            bdr:ID2C71E0F6BA97FB5A ;
         :authorshipStatement  "bstan 'dzin gyis sgrig sgyur byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRC1E7420043214AEB ;
+        :editionStatement   "par gzhi dang po/ par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT54007503093A7684 , bdr:TT5B70F483D44F99AD , bdr:TTE8C92C5A5DA0E1EC ;
-        :instanceEvent      bdr:EVC1E7420043214AEB ;
+        :instanceEvent      bdr:EV6A9CEB42301BED1C ;
         :instanceHasReproduction  bdr:W1KG23086 ;
         :instanceOf         bdr:WA1KG23086 ;
         :isRoot             true ;
