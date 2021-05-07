@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS68430 {
-    bda:LGBBC97969B944B07C
+    bda:LG1E20006FCF39559F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-06T10:19:48.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG4474B4BFFCA7046B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-02-13T14:37:10.456Z"^^xsd:dateTime ;
         adm:logMessage      "new work record created"@en ;
@@ -21,31 +27,41 @@ bdg:MW8LS68430 {
     bda:MW8LS68430  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS68430 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "df/MW8LS68430.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS68430 ;
-        adm:logEntry        bda:LGBBC97969B944B07C ;
+        adm:logEntry        bda:LG1E20006FCF39559F , bda:LG4474B4BFFCA7046B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV393DE1BD92A0433A
+    bdr:CR2001BF66724A29F7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75547 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR393DE1BD92A0433A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6642 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVBBC97969B944B07C
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:ID2001BF66724A29F7
+    bdr:ID61175BD5337A6CAF
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105155767" .
     
     bdr:MW8LS68430  a       :Instance ;
         skos:prefLabel      "sman dpyad gsung rab gces gtus/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2001BF66724A29F7 ;
-        :authorshipStatement  "gtso sgrig pa/ rta mgrin rgyal/ bsam 'grub rgyal/"@bo-x-ewts ;
+            bdr:ID61175BD5337A6CAF ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR2001BF66724A29F7 , bdr:CR393DE1BD92A0433A ;
         :editionStatement   "2018 par gzhi dang po/ 2018 par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT4D5234205021FA77 , bdr:TT76406149E2B32DEA ;
-        :instanceEvent      bdr:EV393DE1BD92A0433A ;
+        :instanceEvent      bdr:EVBBC97969B944B07C ;
         :instanceHasReproduction  bdr:W8LS68430 ;
         :instanceOf         bdr:WA8LS68430 ;
         :isRoot             true ;
