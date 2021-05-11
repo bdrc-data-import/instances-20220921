@@ -12,49 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG24832 {
-    bda:LG9BE7BF7154F10815
+    bda:LG2A1DA7FBB4ECC500
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-06T12:52:40.587Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGA64002A8BBBC0F0A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T22:14:28.455Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG24832  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG24832 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "15/MW1KG24832.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG24832 ;
-        adm:logEntry        bda:LG9BE7BF7154F10815 ;
+        adm:logEntry        bda:LG2A1DA7FBB4ECC500 , bda:LGA64002A8BBBC0F0A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV357F11F34D8BA054
+    bdr:EV5F53F1E70BB78B40
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
     bdr:ID40A872D804B88FF6
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "9787105138067" .
-    
-    bdr:ID5F53F1E70BB78B40
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2015363736" .
-    
-    bdr:IDF060A5095B644039
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "MLCSC 2015/00007 (P)" .
     
+    bdr:ID4A628D19ADAFB918
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105138067" .
+    
+    bdr:ID9BE7BF7154F10815
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2015363736" .
+    
     bdr:MW1KG24832  a       :Instance ;
+        skos:altLabel       "游子亲笔"@zh-hans ;
         skos:prefLabel      "'khyam po'i zin bris/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID40A872D804B88FF6 , bdr:ID5F53F1E70BB78B40 , bdr:IDF060A5095B644039 ;
+            bdr:ID40A872D804B88FF6 , bdr:ID4A628D19ADAFB918 , bdr:ID9BE7BF7154F10815 ;
         :authorshipStatement  "rtsom pa po/ rnam rgyal/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TTA8935D79B5DA3CB3 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT357F11F34D8BA054 , bdr:TTA8935D79B5DA3CB3 , bdr:TTF060A5095B644039 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EV357F11F34D8BA054 ;
+        :instanceEvent      bdr:EV5F53F1E70BB78B40 ;
         :instanceHasReproduction  bdr:W1KG24832 ;
         :instanceOf         bdr:WA1KG24832 ;
         :isRoot             true ;
@@ -65,7 +72,15 @@ bdg:MW1KG24832 {
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "2, 343 p." .
     
+    bdr:TT357F11F34D8BA054
+        a                   :OtherTitle ;
+        rdfs:label          "游子亲笔"@zh-hans .
+    
     bdr:TTA8935D79B5DA3CB3
         a                   :Title ;
         rdfs:label          "'khyam po'i zin bris/"@bo-x-ewts .
+    
+    bdr:TTF060A5095B644039
+        a                   :OtherTitle ;
+        rdfs:label          "you zi qin bi"@zh-latn-pinyin-x-ndia .
 }

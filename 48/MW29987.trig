@@ -12,32 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29987 {
-    bda:LGDC078B946D267001
+    bda:LG31B2946AEB5459A5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6221208F1EA10086
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T14:58:38.239Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF737CCD01E546080
         a                   adm:UpdateData ;
         adm:logDate         "2016-01-13T10:07:09.705Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold and completed cataloging"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LGE8A2803CAA0C0359
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
     bda:MW29987  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW29987 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "48/MW29987.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29987 ;
-        adm:logEntry        bda:LGDC078B946D267001 , bda:LGE8A2803CAA0C0359 ;
+        adm:logEntry        bda:LG31B2946AEB5459A5 , bda:LG6221208F1EA10086 , bda:LGF737CCD01E546080 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV2ADE9EB9650AFDAD
+    bdr:CR2ADE9EB9650AFDAD
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10050 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR2B9AF1E06ACE11B9
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6579 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRDC078B946D267001
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75535 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE8A2803CAA0C0359
         a                   :PublishedEvent ;
         :onYear             "2005"^^xsd:gYear .
     
-    bdr:ID2B9AF1E06ACE11B9
+    bdr:ID6AE18644A04F7144
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7105072814" .
     
@@ -45,12 +66,12 @@ bdg:MW29987 {
         skos:altLabel       "藏语文教材教法"@zh-hans ;
         skos:prefLabel      "slob 'bring bod yig slob thabs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2B9AF1E06ACE11B9 ;
-        :authorshipStatement  "gtso 'gan rtsom sgrig pa/ byams pa tshul khrims/ lhag pa tshe ring / khongs mi/ rgyal po chung bdag/ bu lags/ srid gcod sgrol dkar/"@bo-x-ewts ;
+            bdr:ID6AE18644A04F7144 ;
         :biblioNote         "bod ljongs slob grwa chen mo'i slob gzhi/ bod rang skyong ljongs slob gzhi zhib bsher u lhan gyis zhib bsher mdzad/"@bo-x-ewts ;
+        :creator            bdr:CR2ADE9EB9650AFDAD , bdr:CR2B9AF1E06ACE11B9 , bdr:CRDC078B946D267001 ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT78088BB7D834023F , bdr:TTC24D667FA508A2AB , bdr:TTE260338DC1015B8D ;
-        :instanceEvent      bdr:EV2ADE9EB9650AFDAD ;
+        :instanceEvent      bdr:EVE8A2803CAA0C0359 ;
         :instanceHasReproduction  bdr:W29987 ;
         :instanceOf         bdr:WA29987 ;
         :isRoot             true ;

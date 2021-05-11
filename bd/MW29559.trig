@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29559 {
-    bda:LG0CCCE7593798F807
+    bda:LG06FD3D16CA863031
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6FE40E6F4DC54C9A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T10:07:16.885Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD96FE8F36BADF98C
         a                   adm:UpdateData ;
         adm:logDate         "2007-11-27T15:20:02.178Z"^^xsd:dateTime ;
         adm:logMessage      "added note"@en ;
         adm:logWho          bdu:U00003 .
-    
-    bda:LGFCC5C71DEACE600C
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -39,41 +45,46 @@ bdg:MW29559 {
     bda:MW29559  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW29559 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "bd/MW29559.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29559 ;
-        adm:logEntry        bda:LG0CCCE7593798F807 , bda:LGFCC5C71DEACE600C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG06FD3D16CA863031 , bda:LG6FE40E6F4DC54C9A , bda:LGD96FE8F36BADF98C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA61C09224D360A14
+    bdr:CRA61C09224D360A14
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75297 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV06D81489B1607BCF
         a                   :PublishedEvent ;
         :onYear             "2005"^^xsd:gYear .
     
-    bdr:ID06D81489B1607BCF
-        a                   bdr:HollisId ;
-        rdf:value           "014260026" .
-    
-    bdr:ID697A57DEA83D8DF6
+    bdr:ID0CCCE7593798F807
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7540930934" .
+    
+    bdr:ID697A57DEA83D8DF6
+        a                   bdr:HollisId ;
+        rdf:value           "014260026" .
     
     bdr:MW29559  a          :Instance ;
         skos:altLabel       "yu rong se zong"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "g.yu rong bse rdzong /"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID06D81489B1607BCF , bdr:ID697A57DEA83D8DF6 ;
-        :authorshipStatement  "si khron zhing chen ge sar zhib 'jug gzhung las khang dang brg 'go rdzong mi rigs chos lugs cus legs sgrig byas/"@bo-x-ewts ;
+            bdr:ID0CCCE7593798F807 , bdr:ID697A57DEA83D8DF6 ;
+        :creator            bdr:CRA61C09224D360A14 ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT1B9EE4A8DFDFFA26 , bdr:TT6A44498B6E686977 , bdr:TT779951DD5492B53B , bdr:TTC2B427B7C13BE3CB ;
-        :instanceEvent      bdr:EVA61C09224D360A14 ;
+        :instanceEvent      bdr:EV06D81489B1607BCF ;
         :instanceHasReproduction  bdr:W29559 ;
         :instanceOf         bdr:WA29559 ;
         :isRoot             true ;
         :note               bdr:NTEF018CB38AC2D466 ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "khreng tu'u"@en ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
         :publisherName      "si khron dpe skrun tshogs pa, si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "1, 186 p." .

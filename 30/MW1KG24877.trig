@@ -12,40 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG24877 {
-    bda:LG40087244103A49C8
+    bda:LG15C8B3C4A38B36EB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T10:45:03.233Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG1E67F424819776BC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T22:16:58.669Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG24877  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG24877 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "30/MW1KG24877.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG24877 ;
-        adm:logEntry        bda:LG40087244103A49C8 ;
+        adm:logEntry        bda:LG15C8B3C4A38B36EB , bda:LG1E67F424819776BC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV5C23543C5BDF12A8
+    bdr:CR5C23543C5BDF12A8
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6579 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRB2A9643408E797FA
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228850 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV40087244103A49C8
         a                   :PublishedEvent ;
         :onYear             "2013"^^xsd:gYear .
     
-    bdr:IDB2A9643408E797FA
+    bdr:IDC0F7C9AB20265773
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105130870" .
     
     bdr:MW1KG24877  a       :Instance ;
         skos:prefLabel      "slob khrid kyi zhib 'jug"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB2A9643408E797FA ;
+            bdr:IDC0F7C9AB20265773 ;
         :authorshipStatement  "lhag pa tshe ring dang rgyal po chung bdag gis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR5C23543C5BDF12A8 , bdr:CRB2A9643408E797FA ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTF70473DBA46507A5 ;
-        :instanceEvent      bdr:EV5C23543C5BDF12A8 ;
+        :instanceEvent      bdr:EV40087244103A49C8 ;
         :instanceHasReproduction  bdr:W1KG24877 ;
         :instanceOf         bdr:WA1KG24877 ;
         :isRoot             true ;

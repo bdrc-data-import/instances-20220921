@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29510 {
-    bda:LG188C5C46FF1BDDBF
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
-    bda:LGEB90F803232B50CE
+    bda:LG4B929C73DCE290DF
         a                   adm:UpdateData ;
         adm:logDate         "2014-03-26T14:49:38.207Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG8D71819E6A8C71C9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9522DD06AE286C88
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T09:40:12.767Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -39,41 +45,46 @@ bdg:MW29510 {
     bda:MW29510  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW29510 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "96/MW29510.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29510 ;
-        adm:logEntry        bda:LG188C5C46FF1BDDBF , bda:LGEB90F803232B50CE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG4B929C73DCE290DF , bda:LG8D71819E6A8C71C9 , bda:LG9522DD06AE286C88 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCBC3E80B6CAD7779
+    bdr:CRCBC3E80B6CAD7779
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75357 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVC61BE40874895203
         a                   :PublishedEvent ;
         :onYear             "1997"^^xsd:gYear .
     
-    bdr:IDC61BE40874895203
-        a                   bdr:HollisId ;
-        rdf:value           "014260014" .
-    
-    bdr:IDD9B53266A1622CA1
+    bdr:ID1EBE87AEB87EA6FB
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7542006738" .
+    
+    bdr:IDD9B53266A1622CA1
+        a                   bdr:HollisId ;
+        rdf:value           "014260014" .
     
     bdr:MW29510  a          :Instance ;
         skos:altLabel       "开天辟地"@zh-hans ;
         skos:prefLabel      "srid pa chags lugs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC61BE40874895203 , bdr:IDD9B53266A1622CA1 ;
-        :authorshipStatement  "mtsho sngon zhing chen dmangs khrod rig rtsal zhib 'jug tshogs pas 'tsho bsdu byas pa/"@bo-x-ewts ;
+            bdr:ID1EBE87AEB87EA6FB , bdr:IDD9B53266A1622CA1 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRCBC3E80B6CAD7779 ;
         :editionStatement   "par gzhi gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT29DACB75B02E897A , bdr:TT5BC6498C6A3DB1F0 , bdr:TTA7C751CF851E9C6B , bdr:TTDE1EB2E18E8F77D0 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EVCBC3E80B6CAD7779 ;
+        :instanceEvent      bdr:EVC61BE40874895203 ;
         :instanceHasReproduction  bdr:W29510 ;
         :instanceOf         bdr:WA29510 ;
         :isRoot             true ;
-        :note               bdr:NT1EBE87AEB87EA6FB ;
+        :note               bdr:NTEB90F803232B50CE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "zi ling /"@bo-x-ewts ;
@@ -81,7 +92,7 @@ bdg:MW29510 {
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "2, 332 p." .
     
-    bdr:NT1EBE87AEB87EA6FB
+    bdr:NTEB90F803232B50CE
         a                   :Note ;
         :noteText           "in tibetan"@en .
     
