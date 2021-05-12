@@ -12,17 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2DB16425 {
-    bda:LG09C258304342931C
+    bda:LG2692FA5C7E42846C
         a                   adm:UpdateData ;
         adm:logDate         "2008-02-07T09:17:28.679Z"^^xsd:dateTime ;
         adm:logMessage      "re;eased"@en ;
         adm:logWho          bdu:U00003 .
     
-    bda:LG8C6CC0AE1E9E5A44
+    bda:LG3982E64B2489E5D4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-02-06T12:11:38.187Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LG927424636625281B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-11T11:32:33.958Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -54,44 +60,59 @@ bdg:MW2DB16425 {
     bda:MW2DB16425  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2DB16425 ;
-        adm:facetIndex      16 ;
+        adm:facetIndex      20 ;
         adm:gitPath         "14/MW2DB16425.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2DB16425 ;
-        adm:logEntry        bda:LG09C258304342931C , bda:LG8C6CC0AE1E9E5A44 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG2692FA5C7E42846C , bda:LG3982E64B2489E5D4 , bda:LG927424636625281B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1E1D1049B5EFFE49
+    bdr:CR1E1D1049B5EFFE49
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75564 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR91F519B6D3FA3143
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2DB4585 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CREC5B2F4ABEB8A560
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2DB4586 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD19E9286DE838BEF
         a                   :PublishedEvent ;
         :onYear             "2001"^^xsd:gYear .
     
-    bdr:ID91413403AE87D4BC
-        a                   bdr:HarvardShelfId ;
-        rdf:value           "009281189-2" .
-    
-    bdr:ID91F519B6D3FA3143
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "BQ7672.9.A2 B77 2001" .
-    
-    bdr:IDD19E9286DE838BEF
+    bdr:ID09C258304342931C
         a                   bdr:HollisId ;
         rdf:value           "014260444" .
     
-    bdr:IDEC5B2F4ABEB8A560
+    bdr:ID1E75D8024F7E41AA
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009281189-2" .
+    
+    bdr:ID8C6CC0AE1E9E5A44
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2001436914" .
+    
+    bdr:ID91413403AE87D4BC
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.9.A2 B77 2001" .
     
     bdr:MW2DB16425  a       :Instance ;
         skos:altLabel       "history of lelung monastery : an account on nyag masters and the line of abbots"@en ;
         skos:prefLabel      "gnyag ston pa'i gdung rabs gdan rabs skal bzang mdzes pa'i rgyan phreng las le'u dgu pa nas bcu bzhi pa'i brjod bya btus pa mthong ba don ldan/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID91413403AE87D4BC , bdr:ID91F519B6D3FA3143 , bdr:IDD19E9286DE838BEF , bdr:IDEC5B2F4ABEB8A560 ;
-        :authorshipStatement  "rtsom sgrig pa/ gzigs pa sprul sku blo bzang bzod pa dang phun tshogs rab rgyas/"@bo-x-ewts ;
+            bdr:ID09C258304342931C , bdr:ID1E75D8024F7E41AA , bdr:ID8C6CC0AE1E9E5A44 , bdr:ID91413403AE87D4BC ;
         :biblioNote         "text in tibetan and english"@en ;
+        :creator            bdr:CR1E1D1049B5EFFE49 , bdr:CR91F519B6D3FA3143 , bdr:CREC5B2F4ABEB8A560 ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT88D139D5C3E9CD00 , bdr:TTB5C6AE1225F7E936 , bdr:TTC35C9B60FCC9D7AE , bdr:TTDC2878A2CAE4C130 ;
-        :instanceEvent      bdr:EV1E1D1049B5EFFE49 ;
+        :instanceEvent      bdr:EVD19E9286DE838BEF ;
         :instanceHasReproduction  bdr:W2DB16425 ;
         :instanceOf         bdr:WA2DB16425 ;
         :isRoot             true ;

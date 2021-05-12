@@ -12,21 +12,27 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29993 {
-    bda:LG0965F75431CB723C
+    bda:LG58042B02FEEF22F0
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-05-07T16:45:13.088Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG593F9F2A45E5B610
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG58042B02FEEF22F0
+    bda:LG9930658326CE9179
         a                   adm:UpdateData ;
         adm:logDate         "2012-05-07T23:28:39.864Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed"@en ;
         adm:logWho          bdu:U00021 .
     
-    bda:LGF23727D4AA43ECA4
+    bda:LGDF0606B90D1FC41D
         a                   adm:UpdateData ;
-        adm:logDate         "2012-05-07T16:45:13.088Z"^^xsd:dateTime ;
-        adm:logMessage      "cataloged"@en ;
-        adm:logWho          bdu:U00016 .
+        adm:logDate         "2021-05-11T09:08:41.646Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -51,11 +57,11 @@ bdg:MW29993 {
     bda:MW29993  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW29993 ;
-        adm:facetIndex      17 ;
+        adm:facetIndex      19 ;
         adm:gitPath         "5f/MW29993.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29993 ;
-        adm:logEntry        bda:LG0965F75431CB723C , bda:LG58042B02FEEF22F0 , bda:LGF23727D4AA43ECA4 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG58042B02FEEF22F0 , bda:LG593F9F2A45E5B610 , bda:LG9930658326CE9179 , bda:LGDF0606B90D1FC41D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -64,37 +70,41 @@ bdg:MW29993 {
         :agent              bdr:P10051 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EV89E54A7DF577D57C
+    bdr:CR89E54A7DF577D57C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG6096 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD4D21CC39D4FD8B2
         a                   :PublishedEvent ;
         :onYear             "2005"^^xsd:gYear .
     
     bdr:ID94F292360F1EE3EF
-        a                   bdr:HollisId ;
-        rdf:value           "014260128" .
-    
-    bdr:IDD43F9F28668D34B9
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2006554023" .
     
-    bdr:IDD4D21CC39D4FD8B2
+    bdr:IDD43F9F28668D34B9
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3735 .N4 2005" .
     
-    bdr:IDF9E2842AE88D1FD2
+    bdr:IDF23727D4AA43ECA4
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7105072776" .
+    
+    bdr:IDF9E2842AE88D1FD2
+        a                   bdr:HollisId ;
+        rdf:value           "014260128" .
     
     bdr:MW29993  a          :Instance ;
         skos:altLabel       "近代文学"@zh-hans ;
         skos:prefLabel      "nye rtsom gces bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID94F292360F1EE3EF , bdr:IDD43F9F28668D34B9 , bdr:IDD4D21CC39D4FD8B2 , bdr:IDF9E2842AE88D1FD2 ;
-        :authorshipStatement  "gtso 'gan rtsom sgrig pa/ karma 'phrin las/ gtso 'gan rtsom sgrig pa gzhon pa/ bsod nams chos 'phel/ khongs mi/ mkhas btsun/ bsod nams mtsho mo/"@bo-x-ewts ;
+            bdr:ID94F292360F1EE3EF , bdr:IDD43F9F28668D34B9 , bdr:IDF23727D4AA43ECA4 , bdr:IDF9E2842AE88D1FD2 ;
         :biblioNote         "printed from computerized input"@en ;
-        :creator            bdr:CR3A765770A463D37B ;
+        :creator            bdr:CR3A765770A463D37B , bdr:CR89E54A7DF577D57C ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT0F7B2B0B6384472B , bdr:TT1A5A9EF8BD97D714 , bdr:TTEAC07BE7DF3962EE ;
-        :instanceEvent      bdr:EV89E54A7DF577D57C ;
+        :instanceEvent      bdr:EVD4D21CC39D4FD8B2 ;
         :instanceHasReproduction  bdr:W29993 ;
         :instanceOf         bdr:WA29993 ;
         :isRoot             true ;

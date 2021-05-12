@@ -14,27 +14,33 @@
 bdg:MW2DB4599 {
     bda:LG01848C5D98A3EEF3
         a                   adm:UpdateData ;
+        adm:logDate         "2007-11-28T15:43:37.484Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LG4A633C5DFE213942
+        a                   adm:UpdateData ;
         adm:logDate         "2010-03-25T15:45:47.466Z"^^xsd:dateTime ;
         adm:logMessage      "fixed isbn"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LG109C15F4E5AF0338
+    bda:LG53C4CAE82E2CF5CE
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-11T14:37:33.695Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9E69AA8223D849D8
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-11-28T15:38:13.406Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00003 .
     
-    bda:LG4A633C5DFE213942
+    bda:LGFB639D8322A1A24B
         a                   adm:UpdateData ;
         adm:logDate         "2012-09-06T12:43:18.975Z"^^xsd:dateTime ;
         adm:logMessage      "added chines title"@en ;
         adm:logWho          bdu:U00021 .
-    
-    bda:LG9E69AA8223D849D8
-        a                   adm:UpdateData ;
-        adm:logDate         "2007-11-28T15:43:37.484Z"^^xsd:dateTime ;
-        adm:logMessage      "bcos"@en ;
-        adm:logWho          bdu:U00003 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -53,40 +59,45 @@ bdg:MW2DB4599 {
     bda:MW2DB4599  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2DB4599 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "b6/MW2DB4599.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2DB4599 ;
-        adm:logEntry        bda:LG01848C5D98A3EEF3 , bda:LG109C15F4E5AF0338 , bda:LG4A633C5DFE213942 , bda:LG9E69AA8223D849D8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG01848C5D98A3EEF3 , bda:LG4A633C5DFE213942 , bda:LG53C4CAE82E2CF5CE , bda:LG9E69AA8223D849D8 , bda:LGFB639D8322A1A24B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVFEB16B21B94A873C
+    bdr:CRFEB16B21B94A873C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CN12058 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV4AC70A93EA0F62E3
         a                   :PublishedEvent ;
         :onYear             "2003"^^xsd:gYear .
     
-    bdr:ID4AC70A93EA0F62E3
-        a                   bdr:HollisId ;
-        rdf:value           "014260517" .
-    
-    bdr:IDC968F5D84FFC8F5E
+    bdr:ID109C15F4E5AF0338
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7540928417" .
+    
+    bdr:IDC968F5D84FFC8F5E
+        a                   bdr:HollisId ;
+        rdf:value           "014260517" .
     
     bdr:MW2DB4599  a        :SerialInstance ;
         skos:altLabel       "四川藏学研究 (六)"@zh-hans ;
         skos:prefLabel      "si khron bod rig pa'i zhib 'jug (6)"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4AC70A93EA0F62E3 , bdr:IDC968F5D84FFC8F5E ;
-        :authorshipStatement  "gtso sgrig pa yangs gling rdo rje ; si khron bod rig pa'i zhib 'jug bshad sbyong gling dang si khron zhing chen chen bod rig pa'i zhib 'jug tshogs pas bsgrigs/"@bo-x-ewts ;
+            bdr:ID109C15F4E5AF0338 , bdr:IDC968F5D84FFC8F5E ;
+        :creator            bdr:CRFEB16B21B94A873C ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT7A299FE829EFFCDB , bdr:TTE4D42F7B4035DF02 , bdr:TTF13EED751FBAAF8D ;
-        :instanceEvent      bdr:EVFEB16B21B94A873C ;
+        :instanceEvent      bdr:EV4AC70A93EA0F62E3 ;
         :instanceHasReproduction  bdr:W2DB4599 ;
         :instanceOf         bdr:WA2DB4599 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "khreng tu'u"@en ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
         :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "2, 454, 4 p." ;

@@ -13,16 +13,22 @@
 
 bdg:MW2DB4593 {
     bda:LG0D97999A39E352DF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-11-28T09:29:42.219Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LG2214A0F7C10719C5
         a                   adm:UpdateData ;
         adm:logDate         "2007-11-28T09:40:31.125Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00003 .
     
-    bda:LGC3958CE07D5275DA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2007-11-28T09:29:42.219Z"^^xsd:dateTime ;
-        adm:logMessage      "gsar du bcug"@en ;
-        adm:logWho          bdu:U00003 .
+    bda:LGE2AB925A154060A1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-11T14:34:59.899Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -47,43 +53,48 @@ bdg:MW2DB4593 {
     bda:MW2DB4593  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2DB4593 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "ed/MW2DB4593.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2DB4593 ;
-        adm:logEntry        bda:LG0D97999A39E352DF , bda:LGC3958CE07D5275DA , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0D97999A39E352DF , bda:LG2214A0F7C10719C5 , bda:LGE2AB925A154060A1 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV3A5FCD2E0C9BD25F
+    bdr:CR3A5FCD2E0C9BD25F
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75566 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV6DB2177849D68AD3
         a                   :PublishedEvent ;
         :onYear             "2006"^^xsd:gYear .
     
     bdr:ID5332A53960926A64
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2006448385" .
-    
-    bdr:ID6DB2177849D68AD3
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3716 .N34 2006" .
     
     bdr:ID8D98B8AEBFB4082D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006448385" .
+    
+    bdr:IDB4293555323D0867
         a                   bdr:HollisId ;
         rdf:value           "014260513" .
     
-    bdr:IDB4293555323D0867
+    bdr:IDC3958CE07D5275DA
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7105077913" .
     
     bdr:MW2DB4593  a        :Instance ;
         skos:prefLabel      "nags klong khu byug 'du gnas/"@bo-x-ewts , "lin hai ju du juan"@zh-latn-pinyin-x-ndia ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5332A53960926A64 , bdr:ID6DB2177849D68AD3 , bdr:ID8D98B8AEBFB4082D , bdr:IDB4293555323D0867 ;
-        :authorshipStatement  "mtsho sngon bod yig gsar 'gyur khang gis bsgrigs/"@bo-x-ewts ;
+            bdr:ID5332A53960926A64 , bdr:ID8D98B8AEBFB4082D , bdr:IDB4293555323D0867 , bdr:IDC3958CE07D5275DA ;
+        :creator            bdr:CR3A5FCD2E0C9BD25F ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT050E92FF690F17F1 , bdr:TT14E12E8AA9206ED4 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EV3A5FCD2E0C9BD25F ;
+        :instanceEvent      bdr:EV6DB2177849D68AD3 ;
         :instanceHasReproduction  bdr:W2DB4593 ;
         :instanceOf         bdr:WA2DB4593 ;
         :isRoot             true ;

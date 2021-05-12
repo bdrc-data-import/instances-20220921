@@ -12,16 +12,22 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2CZ7544 {
-    bda:LG9A937E77B2BC503B
+    bda:LG8CCC69CD418E5DF9
         a                   adm:UpdateData ;
-        adm:logDate         "2021-03-25T16:51:50.47Z"^^xsd:dateTime ;
-        adm:logMessage      "Added Author, cat, pub info"@en ;
-        adm:logWho          bdu:U00017 .
+        adm:logDate         "2021-05-11T09:31:52.26Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
-    bda:LGE0376613A7D85BF3
+    bda:LGCA72A8FB6EF71F43
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-06-08T09:50:34.707Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFB3D825C9D8EE54D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-25T16:51:50.47Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, cat, pub info"@en ;
         adm:logWho          bdu:U00017 .
     
     bda:LGIM6B433BA01E
@@ -34,25 +40,40 @@ bdg:MW2CZ7544 {
     bda:MW2CZ7544  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2CZ7544 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "65/MW2CZ7544.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2CZ7544 ;
-        adm:logEntry        bda:LG9A937E77B2BC503B , bda:LGE0376613A7D85BF3 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG8CCC69CD418E5DF9 , bda:LGCA72A8FB6EF71F43 , bda:LGFB3D825C9D8EE54D , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR47345670E2891E4A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8218 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRE0376613A7D85BF3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8182 ;
+        :role               bdr:R0ER0015 .
+    
     bdr:MW2CZ7544  a        :Instance ;
         skos:prefLabel      "bka' bstan dkar chag ldan dkar ma/"@bo-x-ewts ;
-        :authorshipStatement  "gsung rab mdo sde dang bstan bcos thams cad la shu lo ka dang/ bam po'i grangs gtan la phab ste zhu chen zin to 'tshal thams cad 'brug gi lo la pho brang ldan dkar du mtshan byang dkar chag btab pa rdzogs so/"@bo-x-ewts ;
         :biblioNote         "scanned from photocopies of an old dbu med manuscript"@en ;
+        :creator            bdr:CR47345670E2891E4A , bdr:CRE0376613A7D85BF3 ;
         :hasTitle           bdr:TT199E93F06839A526 , bdr:TTACFC185774AE8A93 , bdr:TTAF75F03FD0B69FD8 ;
         :instanceOf         bdr:WA2CZ7544 ;
         :isRoot             true ;
+        :note               bdr:NT9A937E77B2BC503B ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherName      "[pho brang ldan dkar]"@en ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "29 ff." .
+    
+    bdr:NT9A937E77B2BC503B
+        a                   :Note ;
+        :noteText           "gsung rab mdo sde dang bstan bcos thams cad la shu lo ka dang/ bam po'i grangs gtan la phab ste zhu chen zin to 'tshal thams cad 'brug gi lo la pho brang ldan dkar du mtshan byang dkar chag btab pa rdzogs so/"@bo-x-ewts .
     
     bdr:TT199E93F06839A526
         a                   :RunningTitle ;
