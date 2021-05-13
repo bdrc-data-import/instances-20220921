@@ -12,7 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG24883 {
-    bda:LG4BCD409A09DEE95C
+    bda:LG42463A4D0332FC05
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-12T17:38:24.842Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG829176F1168F7540
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T16:40:46.137Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,31 +26,42 @@ bdg:MW1KG24883 {
     bda:MW1KG24883  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG24883 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "8b/MW1KG24883.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG24883 ;
-        adm:logEntry        bda:LG4BCD409A09DEE95C ;
+        adm:logEntry        bda:LG42463A4D0332FC05 , bda:LG829176F1168F7540 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF987BD994E51A297
+    bdr:CRD20322EBDE3B6EBB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6579 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRF987BD994E51A297
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10050 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV4BCD409A09DEE95C
         a                   :PublishedEvent ;
         :onYear             "2013"^^xsd:gYear .
     
-    bdr:IDD20322EBDE3B6EBB
+    bdr:ID542899230E9F16FA
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105130306" .
     
     bdr:MW1KG24883  a       :Instance ;
         skos:prefLabel      "rtsom rig brtsams chos kyi zhib 'jug"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD20322EBDE3B6EBB ;
+            bdr:ID542899230E9F16FA ;
         :authorshipStatement  "byams pa tshul khrims dang lhag pa tshe ring gis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRD20322EBDE3B6EBB , bdr:CRF987BD994E51A297 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT7EB7534C1C65DD80 ;
-        :instanceEvent      bdr:EVF987BD994E51A297 ;
+        :instanceEvent      bdr:EV4BCD409A09DEE95C ;
         :instanceHasReproduction  bdr:W1KG24883 ;
         :instanceOf         bdr:WA1KG24883 ;
         :isRoot             true ;

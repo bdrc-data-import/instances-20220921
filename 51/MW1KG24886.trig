@@ -12,48 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG24886 {
-    bda:LG97BDD93D6DC303E7
+    bda:LG04A7C3D09E15966B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-10T16:40:47.113Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGC7BAC7FFF68F1F1F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-12T17:38:25.025Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG24886  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG24886 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "51/MW1KG24886.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG24886 ;
-        adm:logEntry        bda:LG97BDD93D6DC303E7 ;
+        adm:logEntry        bda:LG04A7C3D09E15966B , bda:LGC7BAC7FFF68F1F1F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV79B6FDB31E5D87F2
+    bdr:CR79B6FDB31E5D87F2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG23581 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRCC98572810915018
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6669 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0D1D566093B1C419
         a                   :PublishedEvent ;
         :onYear             "2014"^^xsd:gYear .
     
-    bdr:ID0D1D566093B1C419
+    bdr:ID8661CCB669CD84E5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3735 .L48 2014" .
+    
+    bdr:ID97BDD93D6DC303E7
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2015307963" .
     
-    bdr:ID8661CCB669CD84E5
+    bdr:IDD792F006C71F6B9E
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105132621" .
-    
-    bdr:IDCC98572810915018
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "PL3735 .L48 2014" .
     
     bdr:MW1KG24886  a       :Instance ;
         skos:prefLabel      "lho kha'i dmangs rtsom legs btus byis pa dga' ba'i gtam/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0D1D566093B1C419 , bdr:ID8661CCB669CD84E5 , bdr:IDCC98572810915018 ;
+            bdr:ID8661CCB669CD84E5 , bdr:ID97BDD93D6DC303E7 , bdr:IDD792F006C71F6B9E ;
         :authorshipStatement  "sgrig pa po/ skal bzang dbang 'dus/ mig dmar/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR79B6FDB31E5D87F2 , bdr:CRCC98572810915018 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT4DFD42E4058D93D4 ;
-        :instanceEvent      bdr:EV79B6FDB31E5D87F2 ;
+        :instanceEvent      bdr:EV0D1D566093B1C419 ;
         :instanceHasReproduction  bdr:W1KG24886 ;
         :instanceOf         bdr:WA1KG24886 ;
         :isRoot             true ;
