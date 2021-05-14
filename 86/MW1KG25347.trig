@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25347 {
-    bda:LGB625B840BB705930
+    bda:LG42B614D97F39DB74
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-13T10:45:20.747Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor and edition"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG950C29E7B3A7B5FC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-09T12:31:27.024Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,31 +27,42 @@ bdg:MW1KG25347 {
     bda:MW1KG25347  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25347 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "86/MW1KG25347.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25347 ;
-        adm:logEntry        bda:LGB625B840BB705930 ;
+        adm:logEntry        bda:LG42B614D97F39DB74 , bda:LG950C29E7B3A7B5FC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV007DBB0CFBB8F0D1
+    bdr:CR007DBB0CFBB8F0D1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75295 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR57E045FC2F3A2B10
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75296 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB625B840BB705930
         a                   :PublishedEvent ;
         :onOrAbout          "2013,2015" .
     
-    bdr:ID57E045FC2F3A2B10
+    bdr:ID8736BFB8B5E0AB66
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542020192" .
     
     bdr:MW1KG25347  a       :Instance , :SerialInstance ;
         skos:prefLabel      "bod kyi dmangs glu snyan dbang gso ba'i bdud rtsi/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID57E045FC2F3A2B10 ;
+            bdr:ID8736BFB8B5E0AB66 ;
         :authorshipStatement  "rdo rje byams dang sangs rgyas don grub gnyis kyis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR007DBB0CFBB8F0D1 , bdr:CR57E045FC2F3A2B10 ;
+        :editionStatement   "par gzhi dang po/ par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT1719F73EDBB97DC5 , bdr:TT66231335ED9E1B5A ;
-        :instanceEvent      bdr:EV007DBB0CFBB8F0D1 ;
+        :instanceEvent      bdr:EVB625B840BB705930 ;
         :instanceHasReproduction  bdr:W1KG25347 ;
         :instanceOf         bdr:WA1KG25347 ;
         :isRoot             true ;

@@ -12,47 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25380 {
-    bda:LG0B10A5668637B450
+    bda:LG421660E5DAEB6293
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-11T15:04:39.436Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGEC0D4C4680A3AF91
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-13T10:45:21.777Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor and edition"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25380  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25380 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "60/MW1KG25380.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25380 ;
-        adm:logEntry        bda:LG0B10A5668637B450 ;
+        adm:logEntry        bda:LG421660E5DAEB6293 , bda:LGEC0D4C4680A3AF91 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV42543C9F5624B0EB
+    bdr:CR42543C9F5624B0EB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75248 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB2B1F9984EB61D40
         a                   :PublishedEvent ;
         :onOrAbout          "2011,2015" .
     
-    bdr:ID93D64FA490019D0B
+    bdr:ID0B10A5668637B450
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542016409" .
     
-    bdr:IDB2B1F9984EB61D40
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "PZ90.T58 L458 2011" .
-    
-    bdr:IDF9ECBE67FDC13355
+    bdr:ID93D64FA490019D0B
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2013311059" .
+    
+    bdr:IDF9ECBE67FDC13355
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PZ90.T58 L458 2011" .
     
     bdr:MW1KG25380  a       :Instance ;
         skos:prefLabel      "legs bshad gtam rgyud/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID93D64FA490019D0B , bdr:IDB2B1F9984EB61D40 , bdr:IDF9ECBE67FDC13355 ;
+            bdr:ID0B10A5668637B450 , bdr:ID93D64FA490019D0B , bdr:IDF9ECBE67FDC13355 ;
         :authorshipStatement  "phag mo don grub kyis bsgrigs/"@bo-x-ewts ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR42543C9F5624B0EB ;
+        :editionStatement   "par gzhi dang po/ par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT376E0CA0FAB28226 ;
-        :instanceEvent      bdr:EV42543C9F5624B0EB ;
+        :instanceEvent      bdr:EVB2B1F9984EB61D40 ;
         :instanceHasReproduction  bdr:W1KG25380 ;
         :instanceOf         bdr:WA1KG25380 ;
         :isRoot             true ;
