@@ -12,50 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25560 {
-    bda:LG670E789DF3DE3CFA
+    bda:LGA9DEAAC7D87FCE23
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T10:46:08.316Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGEEFEDA8C950775B3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-14T16:48:55.68Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25560  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25560 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "91/MW1KG25560.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25560 ;
-        adm:logEntry        bda:LG670E789DF3DE3CFA ;
+        adm:logEntry        bda:LGA9DEAAC7D87FCE23 , bda:LGEEFEDA8C950775B3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV8884DC88C10EB390
+    bdr:CR8884DC88C10EB390
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228944 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAE91F36C2E7BE9A9
         a                   :PublishedEvent ;
         :onYear             "2012"^^xsd:gYear .
     
     bdr:ID086697BC92EF3CE0
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2014358716" .
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "QL307 .R33 2012" .
     
-    bdr:ID6FDE316A5DCA067C
+    bdr:ID670E789DF3DE3CFA
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542018373" .
     
-    bdr:IDAE91F36C2E7BE9A9
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "QL307 .R33 2012" .
+    bdr:ID6FDE316A5DCA067C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2014358716" .
     
     bdr:MW1KG25560  a       :Instance ;
         skos:altLabel       "dong wu shi jie"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "srog chags kyi 'jig rten/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID086697BC92EF3CE0 , bdr:ID6FDE316A5DCA067C , bdr:IDAE91F36C2E7BE9A9 ;
+            bdr:ID086697BC92EF3CE0 , bdr:ID670E789DF3DE3CFA , bdr:ID6FDE316A5DCA067C ;
         :authorshipStatement  "'ba' tsher rta mgrin rdo rje yis sgrig rtsom byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR8884DC88C10EB390 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT88B2710C850B8681 , bdr:TT959959F61B68ECEF , bdr:TTBCB548FCBF391815 ;
         :illustrations      "ill. (col.)" ;
-        :instanceEvent      bdr:EV8884DC88C10EB390 ;
+        :instanceEvent      bdr:EVAE91F36C2E7BE9A9 ;
         :instanceHasReproduction  bdr:W1KG25560 ;
         :instanceOf         bdr:WA1KG25560 ;
         :isRoot             true ;

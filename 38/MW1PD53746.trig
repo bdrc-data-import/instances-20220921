@@ -12,17 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD53746 {
-    bda:LG61B1A73DC6054EFD
+    bda:LGDB2D62536F19183D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-11-20T12:23:30.126Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
-    bda:LGDE78A41EDF60AF07
+    bda:LGE5B4AAE146293A45
         a                   adm:UpdateData ;
         adm:logDate         "2008-11-20T13:51:29.798Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LGFB079CCDA4336FAA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-14T19:46:03.798Z"^^xsd:dateTime ;
+        adm:logMessage      "added Title, author and cataInfo....and note"@en ;
+        adm:logWho          bdu:U00007 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -41,38 +47,53 @@ bdg:MW1PD53746 {
     bda:MW1PD53746  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1PD53746 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "38/MW1PD53746.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD53746 ;
-        adm:logEntry        bda:LG61B1A73DC6054EFD , bda:LGDE78A41EDF60AF07 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGDB2D62536F19183D , bda:LGE5B4AAE146293A45 , bda:LGFB079CCDA4336FAA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0FC624DF12E41B7B
+    bdr:EVDE78A41EDF60AF07
         a                   :PublishedEvent ;
         :onYear             "2000"^^xsd:gYear .
     
-    bdr:IDBA4409DFE96EF875
+    bdr:ID726DC10FC5BFB2D4
         a                   bdr:HollisId ;
         rdf:value           "014257844" .
     
     bdr:MW1PD53746  a       :Instance ;
-        skos:prefLabel      "zhong guo zang zu wen hua yi shu cai hui da guan jian jie"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "krung go bod kyi rig gnas sgyu rtsal kun 'dus zhal thang chen mo'i rnam bshad/"@bo-x-ewts ;
+        skos:prefLabel      "《中国藏族文化艺术彩绘大观》简介"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBA4409DFE96EF875 ;
-        :authorshipStatement  "cai hui da guan chuang zuo wei yuan hui/"@bo-x-ewts ;
+            bdr:ID726DC10FC5BFB2D4 ;
+        :authorshipStatement  "彩绘大观创作委员会"@zh-hans ;
         :editionStatement   "*par gzhi 1."@bo-x-ewts ;
-        :hasTitle           bdr:TT64132561CAD622B8 ;
-        :instanceEvent      bdr:EV0FC624DF12E41B7B ;
+        :hasTitle           bdr:TT0FC624DF12E41B7B , bdr:TT61B1A73DC6054EFD , bdr:TTBA4409DFE96EF875 ;
+        :instanceEvent      bdr:EVDE78A41EDF60AF07 ;
         :instanceHasReproduction  bdr:W1PD53746 ;
         :instanceOf         bdr:WA1PD53746 ;
         :isRoot             true ;
+        :note               bdr:NT64132561CAD622B8 ;
         :numberOfVolumes    1 ;
-        :script             bdr:ScriptTibt ;
+        :script             bdr:ScriptHani ;
         :workExtentStatement  "2, 95 p." .
     
-    bdr:TT64132561CAD622B8
+    bdr:NT64132561CAD622B8
+        a                   :Note ;
+        :noteSource         bdr:MW1KG2726 ;
+        :noteText           "see also with Tibetan version"@en .
+    
+    bdr:TT0FC624DF12E41B7B
         a                   :Title ;
+        rdfs:label          "krung go bod kyi rig gnas sgyu rtsal kun 'dus zhal thang chen mo'i rnam bshad/"@bo-x-ewts .
+    
+    bdr:TT61B1A73DC6054EFD
+        a                   :CopyrightPageTitle ;
         rdfs:label          "zhong guo zang zu wen hua yi shu cai hui da guan jian jie"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTBA4409DFE96EF875
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "《中国藏族文化艺术彩绘大观》简介"@zh-hans .
 }
