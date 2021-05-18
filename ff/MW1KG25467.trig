@@ -12,41 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25467 {
-    bda:LGE7195A9BC0881740
+    bda:LG002842521B25AC5E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-15T16:49:30.535Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGA17EDDDDF9804A39
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-17T19:53:55.423Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25467  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25467 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ff/MW1KG25467.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25467 ;
-        adm:logEntry        bda:LGE7195A9BC0881740 ;
+        adm:logEntry        bda:LG002842521B25AC5E , bda:LGA17EDDDDF9804A39 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV90BBDAC329EAD1BB
+    bdr:CR90BBDAC329EAD1BB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75487 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV43854CB6584BD209
         a                   :PublishedEvent ;
         :onOrAbout          "2012,2015" .
     
-    bdr:ID43854CB6584BD209
+    bdr:IDE7195A9BC0881740
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542017987" .
     
     bdr:MW1KG25467  a       :Instance ;
         skos:prefLabel      "ri mor bltas nas lus rtsal rnam grangs ngos 'dzin pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID43854CB6584BD209 ;
+            bdr:IDE7195A9BC0881740 ;
         :authorshipStatement  "tshe ring don grub kyis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR90BBDAC329EAD1BB ;
+        :editionStatement   "par gzhi dang po/ par thengs gnyis pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT30514C58C9AB0BC4 , bdr:TTBD5DC6283939F49E ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EV90BBDAC329EAD1BB ;
+        :instanceEvent      bdr:EV43854CB6584BD209 ;
         :instanceHasReproduction  bdr:W1KG25467 ;
         :instanceOf         bdr:WA1KG25467 ;
         :isRoot             true ;
