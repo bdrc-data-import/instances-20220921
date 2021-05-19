@@ -12,40 +12,52 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25506 {
-    bda:LG266C6487B2B576F1
+    bda:LGDBA6F7DEB6EC8A98
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T16:56:27.29Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGE9944DE2726DCE9E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:08:54.189Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25506  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25506 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "8e/MW1KG25506.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25506 ;
-        adm:logEntry        bda:LG266C6487B2B576F1 ;
+        adm:logEntry        bda:LGDBA6F7DEB6EC8A98 , bda:LGE9944DE2726DCE9E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9613079E6F83C4B3
+    bdr:CR9613079E6F83C4B3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P00EGS1017951 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAF302301BFFFD0B5
         a                   :PublishedEvent ;
         :onYear             "2013"^^xsd:gYear .
     
-    bdr:IDAF302301BFFFD0B5
+    bdr:ID266C6487B2B576F1
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542019547" .
     
     bdr:MW1KG25506  a       :Instance ;
         skos:prefLabel      "byis pa'i gab tshig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAF302301BFFFD0B5 ;
+            bdr:ID266C6487B2B576F1 ;
         :authorshipStatement  "skal bzang don grub kyis 'tshol sdud byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR9613079E6F83C4B3 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT9D8AB313D3D038CD ;
-        :instanceEvent      bdr:EV9613079E6F83C4B3 ;
+        :instanceEvent      bdr:EVAF302301BFFFD0B5 ;
         :instanceHasReproduction  bdr:W1KG25506 ;
         :instanceOf         bdr:WA1KG25506 ;
         :isRoot             true ;

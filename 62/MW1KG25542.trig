@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25542 {
-    bda:LG0B2BC5E761306B04
+    bda:LG71FE63425860FCA7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:11:28.249Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC1407F1BF00892C6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-17T16:57:52.178Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,31 +27,37 @@ bdg:MW1KG25542 {
     bda:MW1KG25542  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25542 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "62/MW1KG25542.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25542 ;
-        adm:logEntry        bda:LG0B2BC5E761306B04 ;
+        adm:logEntry        bda:LG71FE63425860FCA7 , bda:LGC1407F1BF00892C6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF2904AD3CBE59426
+    bdr:CRF2904AD3CBE59426
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228939 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF24A2FEF85DD696B
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDF24A2FEF85DD696B
+    bdr:ID0B2BC5E761306B04
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542024824" .
     
     bdr:MW1KG25542  a       :Instance , :SerialInstance ;
         skos:prefLabel      "rong 'brog zhor las pa'i khe dbang srung skyong lag deb/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF24A2FEF85DD696B ;
+            bdr:ID0B2BC5E761306B04 ;
         :authorshipStatement  "pad+ma dbang chen gyis sgrig sgyur byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRF2904AD3CBE59426 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTA084A34406EAA63E ;
-        :instanceEvent      bdr:EVF2904AD3CBE59426 ;
+        :instanceEvent      bdr:EVF24A2FEF85DD696B ;
         :instanceHasReproduction  bdr:W1KG25542 ;
         :instanceOf         bdr:WA1KG25542 ;
         :isRoot             true ;

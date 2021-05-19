@@ -12,48 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25593 {
-    bda:LGCE149F7AB28A015A
+    bda:LG31367CCE17BB9351
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-19T11:18:05.491Z"^^xsd:dateTime ;
         adm:logMessage      "cataloging completed and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGE610FCEF976BC0A5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:14:44.681Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25593  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25593 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "32/MW1KG25593.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25593 ;
-        adm:logEntry        bda:LGCE149F7AB28A015A ;
+        adm:logEntry        bda:LG31367CCE17BB9351 , bda:LGE610FCEF976BC0A5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV903EA1E8C8D5A92D
+    bdr:CR903EA1E8C8D5A92D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75571 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV950E3E3C786154D0
         a                   :PublishedEvent ;
         :onOrAbout          "2011,2015" .
     
     bdr:ID14A91C236C332BEB
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "9787542016089" .
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2013311055" .
     
-    bdr:ID950E3E3C786154D0
+    bdr:ID9CB9233D06A1B132
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "BQ6348 .B63 2011" .
     
-    bdr:ID9CB9233D06A1B132
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2013311055" .
+    bdr:IDCE149F7AB28A015A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542016089" .
     
     bdr:MW1KG25593  a       :Instance ;
         skos:prefLabel      "bod kyi dgon sde grags can/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID14A91C236C332BEB , bdr:ID950E3E3C786154D0 , bdr:ID9CB9233D06A1B132 ;
+            bdr:ID14A91C236C332BEB , bdr:ID9CB9233D06A1B132 , bdr:IDCE149F7AB28A015A ;
         :authorshipStatement  "sgrol ma tshe brtan gyis sgrig rtsom byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR903EA1E8C8D5A92D ;
+        :editionStatement   "par gzhi dang po/ par thengs gsum pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT830A0C92E97B342F ;
-        :instanceEvent      bdr:EV903EA1E8C8D5A92D ;
+        :instanceEvent      bdr:EV950E3E3C786154D0 ;
         :instanceHasReproduction  bdr:W1KG25593 ;
         :instanceOf         bdr:WA1KG25593 ;
         :isRoot             true ;
