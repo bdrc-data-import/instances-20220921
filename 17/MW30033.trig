@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30033 {
-    bda:LGC27732CA764EB482
+    bda:LG36C09A88AF97CA89
         a                   adm:UpdateData ;
         adm:logDate         "2014-12-01T12:58:45.589Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold and completed cataloging"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LGDE1EED328AB97DB3
+    bda:LG93648DDE2AC4418B
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGFD089A8120A31AE7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-19T14:37:30.424Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -31,40 +37,46 @@ bdg:MW30033 {
     bda:MW30033  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW30033 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "17/MW30033.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30033 ;
-        adm:logEntry        bda:LGC27732CA764EB482 , bda:LGDE1EED328AB97DB3 , bda:LGIM3B24E310 ;
+        adm:logEntry        bda:LG36C09A88AF97CA89 , bda:LG93648DDE2AC4418B , bda:LGFD089A8120A31AE7 , bda:LGIM3B24E310 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD36637A5C0516566
+    bdr:CRD36637A5C0516566
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2CZ9127 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVED920BE3420B8861
         a                   :PublishedEvent ;
         :onYear             "2001"^^xsd:gYear .
     
     bdr:ID2B7D48E71DBC0FA1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2002/02998 PL3739" .
+    
+    bdr:IDC1293A339F36DE76
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2002293244" .
     
-    bdr:IDC1293A339F36DE76
+    bdr:IDC27732CA764EB482
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7542008692" .
-    
-    bdr:IDED920BE3420B8861
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "MLCSA 2002/02998 PL3739" .
     
     bdr:MW30033  a          :Instance ;
         skos:altLabel       "散文卷"@zh-hans ;
         skos:prefLabel      "lhug rtsom pad+ma'i ze'u 'bru/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2B7D48E71DBC0FA1 , bdr:IDC1293A339F36DE76 , bdr:IDED920BE3420B8861 ;
-        :authorshipStatement  "sbrang char rtsom sgrig khang gis bsgrigs/"@bo-x-ewts ;
+            bdr:ID2B7D48E71DBC0FA1 , bdr:IDC1293A339F36DE76 , bdr:IDC27732CA764EB482 ;
+        :biblioNote         "sbrang char rtsom sgrig khang gis bsgrigs/"@en ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRD36637A5C0516566 ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT471967454DAD3DBD , bdr:TT9D28B6E4EE53124E , bdr:TTB1400A2EC14A41E9 ;
-        :instanceEvent      bdr:EVD36637A5C0516566 ;
+        :instanceEvent      bdr:EVED920BE3420B8861 ;
         :instanceHasReproduction  bdr:W30033 ;
         :instanceOf         bdr:WA30033 ;
         :isRoot             true ;
