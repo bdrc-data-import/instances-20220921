@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30034 {
-    bda:LGAE0F6A312DEC2124
+    bda:LG0569CD9E04E1ED1D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG413F89662D1A4E2C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-25T10:49:41.551Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG4ADE4D98D3A6AB7D
         a                   adm:UpdateData ;
         adm:logDate         "2014-12-01T14:51:16.02Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold and completed cataloging"@en ;
         adm:logWho          bdu:U00016 .
-    
-    bda:LGD8450140B14F9F9B
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -31,27 +37,32 @@ bdg:MW30034 {
     bda:MW30034  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW30034 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "a7/MW30034.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30034 ;
-        adm:logEntry        bda:LGAE0F6A312DEC2124 , bda:LGD8450140B14F9F9B , bda:LGIM3B24E310 ;
+        adm:logEntry        bda:LG0569CD9E04E1ED1D , bda:LG413F89662D1A4E2C , bda:LG4ADE4D98D3A6AB7D , bda:LGIM3B24E310 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1A8FD79056ED1710
+    bdr:CR1A8FD79056ED1710
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2CZ9127 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV63F8C4DD5AEC4118
         a                   :PublishedEvent ;
         :onYear             "2001"^^xsd:gYear .
     
     bdr:ID3987EB1F1041D904
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2002293239" .
-    
-    bdr:ID63F8C4DD5AEC4118
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3734 .S625 2001" .
     
     bdr:ID78BF99AEC4247919
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002293239" .
+    
+    bdr:IDAE0F6A312DEC2124
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7542008676, 7542008684" .
     
@@ -59,13 +70,13 @@ bdg:MW30034 {
         skos:altLabel       "诗歌卷"@zh-hans ;
         skos:prefLabel      "snyan rtsom co ka'i drug 'gyur/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3987EB1F1041D904 , bdr:ID63F8C4DD5AEC4118 , bdr:ID78BF99AEC4247919 ;
-        :authorshipStatement  "sbrang char rtsom sgrig khang gis bsgrigs/"@bo-x-ewts ;
-        :biblioNote         "v. 1. isbn 7542008676 v. 2. isbn 7542008684"@en ;
+            bdr:ID3987EB1F1041D904 , bdr:ID78BF99AEC4247919 , bdr:IDAE0F6A312DEC2124 ;
+        :biblioNote         "sbrang char rtsom sgrig khang gis bsgrigs/"@en , "v. 1. isbn 7542008676 v. 2. isbn 7542008684"@en ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR1A8FD79056ED1710 ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT03EF0C2E4026D52D , bdr:TT3BA2C072D98A4B4C , bdr:TT66000758B25242DC ;
-        :instanceEvent      bdr:EV1A8FD79056ED1710 ;
+        :instanceEvent      bdr:EV63F8C4DD5AEC4118 ;
         :instanceHasReproduction  bdr:W30034 ;
         :instanceOf         bdr:WA30034 ;
         :isRoot             true ;
