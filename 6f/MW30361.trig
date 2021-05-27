@@ -12,21 +12,27 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30361 {
-    bda:LG04FFCF16F12C6CC6
+    bda:LG5271F1F7196C446E
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG11AF43D9083B4F7F
+    bda:LG878BC200213C2AF8
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-26T11:36:18.516Z"^^xsd:dateTime ;
+        adm:logMessage      "added phyogs bsgrigs as genre"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG96BC007512E034AB
         a                   adm:UpdateData ;
         adm:logDate         "2007-11-28T14:02:55.328Z"^^xsd:dateTime ;
         adm:logMessage      "added call number"@en ;
         adm:logWho          bdu:U00003 .
     
-    bda:LGB088756C283F0D33
+    bda:LGF7F777ED37A23327
         a                   adm:UpdateData ;
-        adm:logDate         "2012-03-26T11:36:18.516Z"^^xsd:dateTime ;
-        adm:logMessage      "added phyogs bsgrigs as genre"@en ;
-        adm:logWho          bdu:U00016 .
+        adm:logDate         "2021-05-26T09:09:50.599Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -51,44 +57,54 @@ bdg:MW30361 {
     bda:MW30361  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW30361 ;
-        adm:facetIndex      15 ;
+        adm:facetIndex      18 ;
         adm:gitPath         "6f/MW30361.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30361 ;
-        adm:logEntry        bda:LG04FFCF16F12C6CC6 , bda:LG11AF43D9083B4F7F , bda:LGB088756C283F0D33 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG5271F1F7196C446E , bda:LG878BC200213C2AF8 , bda:LG96BC007512E034AB , bda:LGF7F777ED37A23327 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV605E6548B75F65F3
+    bdr:CR605E6548B75F65F3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75765 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRC6C00225C8854C24
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG865 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVDBECB0E3071CF673
         a                   :PublishedEvent ;
         :onYear             "2003"^^xsd:gYear .
     
-    bdr:ID8904D9682C7FC870
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "7105064323" .
-    
-    bdr:IDA64DF813008F3F87
+    bdr:ID11AF43D9083B4F7F
         a                   bdr:HollisId ;
         rdf:value           "014260751" .
     
-    bdr:IDC6C00225C8854C24
+    bdr:ID8904D9682C7FC870
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006448367" .
+    
+    bdr:IDA64DF813008F3F87
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "HE8699.T55 B63 2004" .
     
-    bdr:IDDBECB0E3071CF673
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2006448367" .
+    bdr:IDB088756C283F0D33
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105064323" .
     
     bdr:MW30361  a          :Instance ;
         skos:altLabel       "藏语广播论文集"@zh-hans ;
         skos:prefLabel      "bod skad rlung 'phrin gyi ched rtsom phyogs bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8904D9682C7FC870 , bdr:IDA64DF813008F3F87 , bdr:IDC6C00225C8854C24 , bdr:IDDBECB0E3071CF673 ;
-        :authorshipStatement  "krung dbyang mi dmangs kun khyab rlung 'phrin las khungs kyi bod skad tshan pas bsgrigs/"@bo-x-ewts ;
-        :biblioNote         "printed from computerized input"@en ;
+            bdr:ID11AF43D9083B4F7F , bdr:ID8904D9682C7FC870 , bdr:IDA64DF813008F3F87 , bdr:IDB088756C283F0D33 ;
+        :biblioNote         "krung dbyang mi dmangs kun khyab rlung 'phrin las khungs kyi bod skad tshan pas bsgrigs/"@en , "printed from computerized input"@en ;
+        :creator            bdr:CR605E6548B75F65F3 , bdr:CRC6C00225C8854C24 ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT3E6C1CA901EA9621 , bdr:TT7C8E39E1D9DF036B , bdr:TTDEAB93E7542BFF8A ;
-        :instanceEvent      bdr:EV605E6548B75F65F3 ;
+        :instanceEvent      bdr:EVDBECB0E3071CF673 ;
         :instanceHasReproduction  bdr:W30361 ;
         :instanceOf         bdr:WA30361 ;
         :isRoot             true ;
@@ -99,7 +115,7 @@ bdg:MW30361 {
         :workExtentStatement  "4, 25, 228 p." .
     
     bdr:TT3E6C1CA901EA9621
-        a                   :Title ;
+        a                   :TitlePageTitle ;
         rdfs:label          "bod skad rlung 'phrin gyi ched rtsom phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TT7C8E39E1D9DF036B
