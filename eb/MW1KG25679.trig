@@ -12,48 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25679 {
-    bda:LGBC99D78805509C0D
+    bda:LG241B0F9EDCF36EE4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-25T16:52:31.251Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGB19B981052739DA0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-27T11:53:20.598Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25679  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25679 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "eb/MW1KG25679.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25679 ;
-        adm:logEntry        bda:LGBC99D78805509C0D ;
+        adm:logEntry        bda:LG241B0F9EDCF36EE4 , bda:LGB19B981052739DA0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1DEA95CA022091B5
+    bdr:CR1DEA95CA022091B5
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4CN12056 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV2042BEC6CD4EE094
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:ID2042BEC6CD4EE094
+    bdr:ID9BC965427F704B48
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "MLCSA 2017/50449 (P)" .
     
-    bdr:ID9BC965427F704B48
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2016325557" .
-    
-    bdr:IDE338663F8FA673C4
+    bdr:IDBC99D78805509C0D
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105140275" .
+    
+    bdr:IDE338663F8FA673C4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016325557" .
     
     bdr:MW1KG25679  a       :Instance ;
         skos:prefLabel      "gna' grong sa skya'i dmangs gzhas phyogs bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2042BEC6CD4EE094 , bdr:ID9BC965427F704B48 , bdr:IDE338663F8FA673C4 ;
+            bdr:ID9BC965427F704B48 , bdr:IDBC99D78805509C0D , bdr:IDE338663F8FA673C4 ;
         :authorshipStatement  "mdzod rtags phur bus bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR1DEA95CA022091B5 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTB97AB0CFC80E655C ;
-        :instanceEvent      bdr:EV1DEA95CA022091B5 ;
+        :instanceEvent      bdr:EV2042BEC6CD4EE094 ;
         :instanceHasReproduction  bdr:W1KG25679 ;
         :instanceOf         bdr:WA1KG25679 ;
         :isRoot             true ;

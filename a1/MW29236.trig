@@ -12,9 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29236 {
-    bda:LG4EC80F407E872216
+    bda:LG0BDD33F0C2CD8E11
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG4EC80F407E872216
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-27T10:34:10.385Z"^^xsd:dateTime ;
+        adm:logMessage      "removed Product Info pl480"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -33,11 +39,11 @@ bdg:MW29236 {
     bda:MW29236  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW29236 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "a1/MW29236.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29236 ;
-        adm:logEntry        bda:LG4EC80F407E872216 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BDD33F0C2CD8E11 , bda:LG4EC80F407E872216 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -54,33 +60,34 @@ bdg:MW29236 {
         rdf:value           "7536731035" .
     
     bdr:MW29236  a          :Instance ;
-        skos:altLabel       "qiu zhen jing shen"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "求真精神"@zh-hans ;
         skos:prefLabel      "bden 'tshol snying stobs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID838D2DED9D3AB75E , bdr:ID873743BB90CE1437 ;
         :authorshipStatement  "byang skar gyis brtsams/"@bo-x-ewts ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
-        :hasTitle           bdr:TT7A3CEDA0FD6957F4 , bdr:TTE846F8811E9243DB ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT60200F02F00B689A , bdr:TT7A3CEDA0FD6957F4 , bdr:TTE846F8811E9243DB ;
         :instanceEvent      bdr:EV8B40161AA32E2631 ;
         :instanceHasReproduction  bdr:W29236 ;
         :instanceOf         bdr:WA29236 ;
         :isRoot             true ;
-        :note               bdr:NT60200F02F00B689A ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "kun ming /"@bo-x-ewts ;
         :publisherName      "yun nan mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "172 p." .
+        :workExtentStatement  "18, 1, 172 p." .
     
-    bdr:NT60200F02F00B689A
-        a                   :Note ;
-        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n5257"@en .
+    bdr:TT60200F02F00B689A
+        a                   :Title ;
+        rdfs:label          "bden 'tshol snying stobs/"@bo-x-ewts .
     
     bdr:TT7A3CEDA0FD6957F4
-        a                   :ColophonTitle ;
+        a                   :OtherTitle ;
         rdfs:label          "qiu zhen jing shen"@zh-latn-pinyin-x-ndia .
     
     bdr:TTE846F8811E9243DB
-        a                   :Title ;
-        rdfs:label          "bden 'tshol snying stobs/"@bo-x-ewts .
+        a                   :OtherTitle ;
+        rdfs:label          "求真精神"@zh-hans .
 }

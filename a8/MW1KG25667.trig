@@ -12,7 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25667 {
-    bda:LGC964EB5B73417D08
+    bda:LGB379C7C6372F04C9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-27T11:53:20.005Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBA28A7A65BF23F16
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-25T15:47:07.69Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,31 +26,37 @@ bdg:MW1KG25667 {
     bda:MW1KG25667  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25667 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "a8/MW1KG25667.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25667 ;
-        adm:logEntry        bda:LGC964EB5B73417D08 ;
+        adm:logEntry        bda:LGB379C7C6372F04C9 , bda:LGBA28A7A65BF23F16 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD6F61C88CCF16B12
+    bdr:CRD6F61C88CCF16B12
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228954 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV943791998E07A0B2
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:ID943791998E07A0B2
+    bdr:IDC964EB5B73417D08
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105133581" .
     
     bdr:MW1KG25667  a       :Instance ;
         skos:prefLabel      "glog sdud rig pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID943791998E07A0B2 ;
+            bdr:IDC964EB5B73417D08 ;
         :authorshipStatement  "mtho rim slob grwa'i bod rgya skad gnyis slob deb phreng bstar ma'i rtsom sgrig lhan tshogs/ gtso sgrig pa/ tshe dbang rig 'dzin/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRD6F61C88CCF16B12 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT8D5F7FC169815DF9 , bdr:TTEB6CE44E9B6DBF74 ;
-        :instanceEvent      bdr:EVD6F61C88CCF16B12 ;
+        :instanceEvent      bdr:EV943791998E07A0B2 ;
         :instanceHasReproduction  bdr:W1KG25667 ;
         :instanceOf         bdr:WA1KG25667 ;
         :isRoot             true ;

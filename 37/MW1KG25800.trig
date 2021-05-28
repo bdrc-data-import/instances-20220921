@@ -12,40 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25800 {
-    bda:LGE0BAE110B48D183D
+    bda:LG159429111380E3BC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-31T16:04:40.473Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGAB21FE217E039C7C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-27T11:53:23.116Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW1KG25800  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25800 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "37/MW1KG25800.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25800 ;
-        adm:logEntry        bda:LGE0BAE110B48D183D ;
+        adm:logEntry        bda:LG159429111380E3BC , bda:LGAB21FE217E039C7C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA9ABCF2DCD66BD01
+    bdr:CRA9ABCF2DCD66BD01
+        a                   :AgentAsCreator ;
+        :agent              bdr:P00KG0636 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD0EE920E0995B27C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75249 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE0BAE110B48D183D
         a                   :PublishedEvent ;
         :onYear             "2014"^^xsd:gYear .
     
-    bdr:IDD0EE920E0995B27C
+    bdr:ID0DC0819B7219A17B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105136384" .
     
     bdr:MW1KG25800  a       :Instance ;
         skos:prefLabel      "mtsho sngon si khron kan su'u yun nan zhing chen bzhi'i bod khul gyi grong sde'i ming rgya bod shan sbyar/"@bo-x-ewts , "青川甘滇四省藏区行政村自然村名汉藏对照"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD0EE920E0995B27C ;
+            bdr:ID0DC0819B7219A17B ;
         :authorshipStatement  "gtso sgrig pa/ li wan dbyin/ zla ba tshe ring / 'jam dbyangs dar rgyas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRA9ABCF2DCD66BD01 , bdr:CRD0EE920E0995B27C ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTDA46CBD0AD437EEB , bdr:TTE79AC75459CB0BEF ;
-        :instanceEvent      bdr:EVA9ABCF2DCD66BD01 ;
+        :instanceEvent      bdr:EVE0BAE110B48D183D ;
         :instanceHasReproduction  bdr:W1KG25800 ;
         :instanceOf         bdr:WA1KG25800 ;
         :isRoot             true ;

@@ -12,7 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25722 {
-    bda:LGF6F8C7DA551BF002
+    bda:LG50BB9C0D59D5B5D8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-27T11:53:21.144Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG59BD4185830A8E8F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-19T15:51:02.734Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,15 +26,20 @@ bdg:MW1KG25722 {
     bda:MW1KG25722  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25722 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "a9/MW1KG25722.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25722 ;
-        adm:logEntry        bda:LGF6F8C7DA551BF002 ;
+        adm:logEntry        bda:LG50BB9C0D59D5B5D8 , bda:LG59BD4185830A8E8F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0D33A9E8798D1BB2
+    bdr:CR0D33A9E8798D1BB2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228956 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF6F8C7DA551BF002
         a                   :PublishedEvent ;
         :onYear             "2014"^^xsd:gYear .
     
@@ -37,10 +47,11 @@ bdg:MW1KG25722 {
         skos:prefLabel      "dam pa'i chos dang sbyar nas rgya yig slob pa/"@bo-x-ewts ;
         :authorshipStatement  "sgrol dkar mtshos bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CR0D33A9E8798D1BB2 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT36705BE90770146D ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EV0D33A9E8798D1BB2 ;
+        :instanceEvent      bdr:EVF6F8C7DA551BF002 ;
         :instanceHasReproduction  bdr:W1KG25722 ;
         :instanceOf         bdr:WA1KG25722 ;
         :isRoot             true ;
