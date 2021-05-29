@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30526 {
-    bda:LG8CF223C12DF06FAF
+    bda:LG083804363BF85482
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG980FD73196D782B1
+    bda:LGA16E96BB29D21135
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-28T09:07:00.191Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGECB22A883591C8DD
         a                   adm:UpdateData ;
         adm:logDate         "2007-11-27T15:30:11.053Z"^^xsd:dateTime ;
         adm:logMessage      "added note"@en ;
@@ -45,49 +51,55 @@ bdg:MW30526 {
     bda:MW30526  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW30526 ;
-        adm:facetIndex      15 ;
+        adm:facetIndex      17 ;
         adm:gitPath         "15/MW30526.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30526 ;
-        adm:logEntry        bda:LG8CF223C12DF06FAF , bda:LG980FD73196D782B1 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG083804363BF85482 , bda:LGA16E96BB29D21135 , bda:LGECB22A883591C8DD , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF3FE2FD28A2092F3
+    bdr:CRF3FE2FD28A2092F3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75365 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVC72246CD13B7D80F
         a                   :PublishedEvent ;
         :onYear             "2004"^^xsd:gYear .
     
     bdr:ID97885C6480238DE4
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2004309757" .
-    
-    bdr:ID9B885A5D252FF213
-        a                   bdr:HollisId ;
-        rdf:value           "014260834" .
-    
-    bdr:IDC72246CD13B7D80F
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "R603.T5 .L46 2004" .
     
-    bdr:IDE1ECD9F7D53F8EC5
+    bdr:ID980FD73196D782B1
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7223016787" .
+    
+    bdr:ID9B885A5D252FF213
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004309757" .
+    
+    bdr:IDE1ECD9F7D53F8EC5
+        a                   bdr:HollisId ;
+        rdf:value           "014260834" .
     
     bdr:MW30526  a          :Instance ;
         skos:altLabel       "shannan zang yi yuan zhuan jia lun wen ji"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "lho kha'i bod sman 'bum rams pa'i dpyad rtsom/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID97885C6480238DE4 , bdr:ID9B885A5D252FF213 , bdr:IDC72246CD13B7D80F , bdr:IDE1ECD9F7D53F8EC5 ;
-        :authorshipStatement  "lho kha sman rtsis khang bod sman slob tshogs kyis phyogs sgrig byas/"@bo-x-ewts ;
+            bdr:ID97885C6480238DE4 , bdr:ID980FD73196D782B1 , bdr:ID9B885A5D252FF213 , bdr:IDE1ECD9F7D53F8EC5 ;
+        :biblioNote         "lho kha sman rtsis khang bod sman slob tshogs kyis phyogs sgrig byas/"@en ;
+        :creator            bdr:CRF3FE2FD28A2092F3 ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT0FEAE0D7321FA37E , bdr:TT4F6FC0881F650AEE , bdr:TT75A9D71FAB571EA8 ;
-        :instanceEvent      bdr:EVF3FE2FD28A2092F3 ;
+        :instanceEvent      bdr:EVC72246CD13B7D80F ;
         :instanceHasReproduction  bdr:W30526 ;
         :instanceOf         bdr:WA30526 ;
         :isRoot             true ;
         :note               bdr:NTB2759CEAAE70F360 ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherLocation  "lha sa/"@en ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "3, 314 p." .
