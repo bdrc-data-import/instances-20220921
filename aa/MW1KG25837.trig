@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25837 {
-    bda:LGEAEA5041FDAE786F
+    bda:LG2FAB49D436BF8B20
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T15:19:29.047Z"^^xsd:dateTime ;
+        adm:logMessage      "added translator"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF69E4552D33F7024
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-31T16:04:41.365Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,31 +27,37 @@ bdg:MW1KG25837 {
     bda:MW1KG25837  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25837 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "aa/MW1KG25837.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25837 ;
-        adm:logEntry        bda:LGEAEA5041FDAE786F ;
+        adm:logEntry        bda:LG2FAB49D436BF8B20 , bda:LGF69E4552D33F7024 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCF01226B4415F1BD
+    bdr:CRCF01226B4415F1BD
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75278 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVA1E894FB0CCF1A65
         a                   :PublishedEvent ;
         :onOrAbout          "2010,2015" .
     
-    bdr:IDA1E894FB0CCF1A65
+    bdr:IDEAEA5041FDAE786F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540945848" .
     
     bdr:MW1KG25837  a       :Instance ;
         skos:prefLabel      "thon skyed dang 'tsho ba'i khrod kyi nyen gog rgyun shes/"@bo-x-ewts , "生产生活安全常识"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA1E894FB0CCF1A65 ;
+            bdr:IDEAEA5041FDAE786F ;
         :authorshipStatement  "g.yang mtshos bsgyur/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRCF01226B4415F1BD ;
+        :editionStatement   "par gzhi dang po/ par thengs bzhi pa/"@bo-x-ewts ;
         :hasTitle           bdr:TT725B5B75B5221118 , bdr:TTA503DC0D028351E8 ;
-        :instanceEvent      bdr:EVCF01226B4415F1BD ;
+        :instanceEvent      bdr:EVA1E894FB0CCF1A65 ;
         :instanceHasReproduction  bdr:W1KG25837 ;
         :instanceOf         bdr:WA1KG25837 ;
         :isRoot             true ;

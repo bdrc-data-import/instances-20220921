@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21943 {
-    bda:LG2C9B1FD6DBDB3D5C
+    bda:LG22AF7445DA68BAE8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T16:41:45.224Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog,add  author, editor, cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG75D538CE784031D0
         a                   adm:UpdateData ;
         adm:logDate         "2012-03-26T12:16:02.99Z"^^xsd:dateTime ;
         adm:logMessage      "added phyogs bsgrigs as genre"@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LGD8504889DC9AD22A
+    bda:LGF65D55BEC1728801
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
@@ -46,52 +52,60 @@ bdg:MW21943 {
     bda:MW21943  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW21943 ;
-        adm:facetIndex      16 ;
+        adm:facetIndex      18 ;
         adm:gitPath         "ec/MW21943.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21943 ;
-        adm:logEntry        bda:LG2C9B1FD6DBDB3D5C , bda:LGD8504889DC9AD22A , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG22AF7445DA68BAE8 , bda:LG75D538CE784031D0 , bda:LGF65D55BEC1728801 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV368E13923E799B67
+    bdr:CR368E13923E799B67
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7397 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV56F90F356ACCAAF7
         a                   :PublishedEvent ;
         :onYear             "1996"^^xsd:gYear .
     
-    bdr:ID4A633C8AC0710B8C
+    bdr:ID2C9B1FD6DBDB3D5C
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7805890218" .
     
-    bdr:ID56F90F356ACCAAF7
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "PL3611 .B66 1996" .
-    
-    bdr:IDACE2C31EFA0CEFB6
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "98904656" .
-    
-    bdr:IDC92514D6596E979E
+    bdr:ID4A633C8AC0710B8C
         a                   bdr:HarvardShelfId ;
         rdf:value           "008084404-9" .
     
-    bdr:IDDA267F24F82840A9
+    bdr:IDACE2C31EFA0CEFB6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3611 .B66 1996" .
+    
+    bdr:IDC92514D6596E979E
         a                   bdr:HollisId ;
         rdf:value           "014258509" .
+    
+    bdr:IDDA267F24F82840A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98904656" .
     
     bdr:MW21943  a          :Instance , :SerialInstance ;
         skos:altLabel       "Bon gyi tha sñad rig gnas bstan bcos phyogs sgrig /[Kun-bzaṅ-rgyal-mtshan sogs kyis brtsams]."@en-x-mixed , "本教文法典集"@zh-hans ;
         skos:prefLabel      "bon gyi tha snyad rig gnas bstan bcos phyogs bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4A633C8AC0710B8C , bdr:ID56F90F356ACCAAF7 , bdr:IDACE2C31EFA0CEFB6 , bdr:IDC92514D6596E979E , bdr:IDDA267F24F82840A9 ;
+            bdr:ID2C9B1FD6DBDB3D5C , bdr:ID4A633C8AC0710B8C , bdr:IDACE2C31EFA0CEFB6 , bdr:IDC92514D6596E979E , bdr:IDDA267F24F82840A9 ;
         :authorshipStatement  "kun bzang rgyal mtshan sogs kyis brtsams ; gzhon nu nor bzang gis bsgrigs/"@bo-x-ewts ;
         :biblioNote         "printed from computerized input"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR368E13923E799B67 ;
         :editionStatement   "par gzhi1"@bo-x-ewts ;
         :hasTitle           bdr:TT1CC5B2E2059C3FF0 , bdr:TT3464D7AB3D8483E3 , bdr:TT3F17A475D8971A96 , bdr:TTC64EDB10649C5746 ;
-        :instanceEvent      bdr:EV368E13923E799B67 ;
+        :instanceEvent      bdr:EV56F90F356ACCAAF7 ;
         :instanceHasReproduction  bdr:W21943 ;
         :instanceOf         bdr:WA21943 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;

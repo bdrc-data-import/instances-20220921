@@ -12,10 +12,22 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN3418 {
-    bda:LG3F1A52B602295B6C
+    bda:LG1DC6C9241FFD5608
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T15:21:27.435Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG2AD85AF95368F3BA
         a                   adm:UpdateData ;
         adm:logDate         "2017-06-02T17:08:01.159Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG3F1A52B602295B6C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2016-11-09T16:16:57.694Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00007 .
     
     bda:LG46056B5AED9A9EDF
@@ -23,21 +35,15 @@ bdg:MW3CN3418 {
         adm:logDate         "2021-03-29T12:22:54.794Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG5B79DA7AB35C9471
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2016-11-09T16:16:57.694Z"^^xsd:dateTime ;
-        adm:logMessage      "cataloged"@en ;
-        adm:logWho          bdu:U00007 .
-    
     bda:MW3CN3418  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O8LS74881" ;
         adm:adminAbout      bdr:MW3CN3418 ;
-        adm:facetIndex      370 ;
+        adm:facetIndex      372 ;
         adm:gitPath         "8a/MW3CN3418.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN3418 ;
-        adm:logEntry        bda:LG3F1A52B602295B6C , bda:LG46056B5AED9A9EDF , bda:LG5B79DA7AB35C9471 ;
+        adm:logEntry        bda:LG1DC6C9241FFD5608 , bda:LG2AD85AF95368F3BA , bda:LG3F1A52B602295B6C , bda:LG46056B5AED9A9EDF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Lobsang Shastri"@en ;
         adm:outlineType     bda:OutlineTypeNoType ;
@@ -1228,11 +1234,16 @@ bdg:MW3CN3418 {
         :contentLocationPage  258 ;
         :contentLocationVolume  6 .
     
-    bdr:EVD035DCAEF313251E
+    bdr:CRD035DCAEF313251E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26530 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV801DBB5D3F1B3435
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:ID801DBB5D3F1B3435
+    bdr:ID5B79DA7AB35C9471
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787805898605" .
     
@@ -1240,12 +1251,14 @@ bdg:MW3CN3418 {
         skos:altLabel       "那栏扎传承史文集（全17卷）"@zh-hans ;
         skos:prefLabel      "dpal sa skya ba'i chos sde nA len+dra'i gdan rabs rim byon gyi gsung 'bum/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID801DBB5D3F1B3435 ;
+            bdr:ID5B79DA7AB35C9471 ;
         :authorshipStatement  "si khron bod yig dpe rnying bsdu sgrig khang gis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRD035DCAEF313251E ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasPart            bdr:MW3CN3418_187B3E , bdr:MW3CN3418_1C99C1 , bdr:MW3CN3418_2047F3 , bdr:MW3CN3418_213188 , bdr:MW3CN3418_283D2F , bdr:MW3CN3418_3E80C9 , bdr:MW3CN3418_46BD23 , bdr:MW3CN3418_4A6948 , bdr:MW3CN3418_5507B5 , bdr:MW3CN3418_5869DF , bdr:MW3CN3418_66F05B , bdr:MW3CN3418_949AE8 , bdr:MW3CN3418_9A1A3F , bdr:MW3CN3418_AC2A98 , bdr:MW3CN3418_D43EBE , bdr:MW3CN3418_F0248D , bdr:MW3CN3418_FB5090 ;
         :hasTitle           bdr:TT01DBE99CE96CA81D , bdr:TT0F2329A359023689 , bdr:TT49F09E714A6023B4 ;
-        :instanceEvent      bdr:EVD035DCAEF313251E ;
+        :instanceEvent      bdr:EV801DBB5D3F1B3435 ;
         :instanceHasReproduction  bdr:W3CN3418 ;
         :instanceOf         bdr:WA3CN3418 ;
         :isRoot             true ;

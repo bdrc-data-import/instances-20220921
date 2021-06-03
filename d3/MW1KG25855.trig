@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25855 {
-    bda:LG886E4E8163019260
+    bda:LG745EEE736320CA1F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T15:21:06.73Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDECB850D6E1D59C7
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-06-01T11:25:56.155Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
@@ -21,19 +27,24 @@ bdg:MW1KG25855 {
     bda:MW1KG25855  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG25855 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d3/MW1KG25855.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25855 ;
-        adm:logEntry        bda:LG886E4E8163019260 ;
+        adm:logEntry        bda:LG745EEE736320CA1F , bda:LGDECB850D6E1D59C7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF621AA00F1C2C31D
+    bdr:CRF621AA00F1C2C31D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228963 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV43E794D2937EAC75
         a                   :PublishedEvent ;
         :onYear             "2013"^^xsd:gYear .
     
-    bdr:ID43E794D2937EAC75
+    bdr:ID886E4E8163019260
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787540954406" .
     
@@ -41,13 +52,14 @@ bdg:MW1KG25855 {
         skos:altLabel       "藏医精方功效晶镜"@zh-hans ;
         skos:prefLabel      "sman sbyor nus pa phyogs bsdus kun gsal me long /"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID43E794D2937EAC75 ;
+            bdr:ID886E4E8163019260 ;
         :authorshipStatement  "mtsho mos rtsom bsgrigs byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRF621AA00F1C2C31D ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT11D4159C77EA7D71 , bdr:TT205503905A58CAAA , bdr:TT3B9A937C89EAF5D7 ;
         :illustrations      "ill." ;
-        :instanceEvent      bdr:EVF621AA00F1C2C31D ;
+        :instanceEvent      bdr:EV43E794D2937EAC75 ;
         :instanceHasReproduction  bdr:W1KG25855 ;
         :instanceOf         bdr:WA1KG25855 ;
         :isRoot             true ;
