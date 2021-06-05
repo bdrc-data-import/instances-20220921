@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23894 {
-    bda:LG12DE515E311A2B94
+    bda:LG31386089536C0A13
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-04T15:18:53.86Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, author, editor,add biblio title, pub info, and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG785BDD05EBD61D62
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
@@ -33,40 +39,41 @@ bdg:MW23894 {
     bda:MW23894  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW23894 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "e7/MW23894.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23894 ;
-        adm:logEntry        bda:LG12DE515E311A2B94 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG31386089536C0A13 , bda:LG785BDD05EBD61D62 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CRE8947457F8CE3F68
+    bdr:CRB85D80C0DA0548FF
         a                   :AgentAsCreator ;
         :agent              bdr:P7680 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EVB85D80C0DA0548FF
+    bdr:EVC57A355DCD634058
         a                   :PublishedEvent ;
         :onYear             "2003"^^xsd:gYear .
     
-    bdr:IDC57A355DCD634058
+    bdr:IDE106C05CBD879E63
         a                   bdr:HollisId ;
         rdf:value           "014259205" .
     
     bdr:MW23894  a          :Instance ;
-        skos:prefLabel      "'dzi bkra shis thub bstan chos gling gi dkyil chog phyogs bsdebs dgos 'dod kun 'byung /"@bo-x-ewts ;
+        skos:prefLabel      "bkra shis thub bstan chos gling gi dkyil chog phyogs bsdebs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC57A355DCD634058 ;
-        :authorshipStatement  "edited by 'dzi sgar mkhan po 'jam dbyans ni ma/"@bo-x-ewts ;
-        :creator            bdr:CRE8947457F8CE3F68 ;
-        :hasTitle           bdr:TTC5099C719BE1CEB7 ;
-        :instanceEvent      bdr:EVB85D80C0DA0548FF ;
+            bdr:IDE106C05CBD879E63 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRB85D80C0DA0548FF ;
+        :hasTitle           bdr:TTC5099C719BE1CEB7 , bdr:TTE8947457F8CE3F68 ;
+        :instanceEvent      bdr:EVC57A355DCD634058 ;
         :instanceHasReproduction  bdr:W23894 ;
         :instanceOf         bdr:WA23894 ;
         :isRoot             true ;
         :note               bdr:NTB92632B3B83B69F6 ;
         :numberOfVolumes    13 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "kathmandu"@en ;
         :publisherName      "khenpo shedrub tenzin & lama thinley namgyal"@en ;
         :script             bdr:ScriptTibt ;
@@ -74,9 +81,13 @@ bdg:MW23894 {
     
     bdr:NTB92632B3B83B69F6
         a                   :Note ;
-        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n3132-3144\nanalysed: v. 6-7"@en .
+        :noteText           "analysed: v. 6-7"@en .
     
     bdr:TTC5099C719BE1CEB7
         a                   :Title ;
+        rdfs:label          "bkra shis thub bstan chos gling gi dkyil chog phyogs bsdebs/"@bo-x-ewts .
+    
+    bdr:TTE8947457F8CE3F68
+        a                   :TitlePageTitle ;
         rdfs:label          "'dzi bkra shis thub bstan chos gling gi dkyil chog phyogs bsdebs dgos 'dod kun 'byung /"@bo-x-ewts .
 }
