@@ -12,29 +12,35 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM58 {
-    bda:LG1C0889123E7E984F
+    bda:LGCDA153DD44973944
         a                   adm:UpdateData ;
         adm:logDate         "2018-12-18T12:17:29.355Z"^^xsd:dateTime ;
         adm:logMessage      "add pub info"@en ;
         adm:logWho          bdu:U00017 .
     
-    bda:LGC037CC90BB4089E3
+    bda:LGD044A39AB61E8820
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-23T19:57:08.054Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD49F2D6B52A0A358
         a                   adm:UpdateData ;
         adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
         adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
         adm:logWhoStr       "works-nlm-delete-sponsor" .
     
-    bda:LGEF3125DD460BA620
+    bda:LGFFA26F634B557228
         a                   adm:UpdateData ;
         adm:logDate         "2018-12-11T15:50:26.444Z"^^xsd:dateTime ;
         adm:logMessage      "full catalog"@en ;
         adm:logWho          bdu:U00017 .
     
-    bda:LGFBA84ABE92C54F31
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-01-23T19:57:08.054Z"^^xsd:dateTime ;
-        adm:logMessage      "added biblio note"@en ;
-        adm:logWho          bdu:U00016 .
+    bda:LGIM412FD421  a     adm:InitialDataImport ;
+        adm:logDate         "2019-03-06T10:08:38.233Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00017 .
     
     bda:LGIM48AAB853  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
@@ -49,40 +55,93 @@ bdg:MW1NLM58 {
         adm:logMethod       bda:BatchMethod ;
         adm:logWhoStr       "works-nlm-update-missings" .
     
-    bda:MW1NLM58  a         adm:AdminData ;
+    bda:MW1NLM58  a         adm:AdminData , adm:Outline ;
         :isRoot             true ;
+        :legacyOutlineNodeRID  "O4CZ328374" ;
         adm:adminAbout      bdr:MW1NLM58 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "78/MW1NLM58.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM58 ;
-        adm:logEntry        bda:LG1C0889123E7E984F , bda:LGC037CC90BB4089E3 , bda:LGEF3125DD460BA620 , bda:LGFBA84ABE92C54F31 , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:logEntry        bda:LGCDA153DD44973944 , bda:LGD044A39AB61E8820 , bda:LGD49F2D6B52A0A358 , bda:LGFFA26F634B557228 , bda:LGIM412FD421 , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
+        adm:outlineType     bda:OutlineTypeNoType ;
         adm:status          bda:StatusReleased .
+    
+    bdr:CL5B519F169492EA40
+        a                   :ContentLocation ;
+        :contentLocationEndPage  178 ;
+        :contentLocationInstance  bdr:W1NLM58 ;
+        :contentLocationPage  1 .
+    
+    bdr:CLE1D9608E14105580
+        a                   :ContentLocation ;
+        :contentLocationEndPage  194 ;
+        :contentLocationInstance  bdr:W1NLM58 ;
+        :contentLocationPage  179 .
     
     bdr:MW1NLM58  a         :Instance ;
         skos:prefLabel      "lnga bsdus kyi 'bras bshad bkra shis zla gsar sogs/"@bo-x-ewts ;
         :dimensionsStatement  "22x8.5" ;
-        :hasTitle           bdr:TT87528ACC3DA4A0BE ;
+        :hasPart            bdr:MW1NLM58_4234F8 , bdr:MW1NLM58_F0EC28 ;
+        :hasTitle           bdr:TT1C0889123E7E984F ;
         :instanceHasReproduction  bdr:W1NLM58 ;
         :instanceOf         bdr:WA1NLM58 ;
         :isRoot             true ;
-        :note               bdr:NT92C2BD9FD290D8A2 , bdr:NTB7C7407C28EA77A2 ;
+        :note               bdr:NT68A26F3A19513B22 , bdr:NTFBA84ABE92C54F31 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherLocation  "sog yul/"@bo-x-ewts ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "1 v." .
+        :workExtentStatement  "1 v." ;
+        :workPagination     bdr:PaginationRelative .
     
-    bdr:NT92C2BD9FD290D8A2
-        a                   :Note ;
-        :noteText           "coverType: paper cover"@en .
+    bdr:MW1NLM58_4234F8
+        a                   :Instance ;
+        skos:prefLabel      "lnga bsdus kyi 'bras bshad bkra shis zla gsar/"@bo-x-ewts ;
+        :contentLocation    bdr:CL5B519F169492EA40 ;
+        :contentLocationStatement  "86 ff." ;
+        :hasTitle           bdr:TTA7744A07D107A8D3 ;
+        :inRootInstance     bdr:MW1NLM58 ;
+        :instanceOf         bdr:WA0XL4234F8BEEA93 ;
+        :legacyOutlineNodeRID  "O4CZ3283744CZ328375" ;
+        :partIndex          1 ;
+        :partOf             bdr:MW1NLM58 ;
+        :partTreeIndex      "1" ;
+        :partType           bdr:PartTypeText .
     
-    bdr:NTB7C7407C28EA77A2
+    bdr:MW1NLM58_F0EC28
+        a                   :Instance ;
+        skos:prefLabel      "gsang ba ye shes kyi mkha' 'gro ma'i las tshogs las byang grol chang khrus ma'i man ngag lag len ngag 'don damg bcas pa/"@bo-x-ewts ;
+        :contentLocation    bdr:CLE1D9608E14105580 ;
+        :contentLocationStatement  "7 ff." ;
+        :hasTitle           bdr:TT393A12717EFA7B31 ;
+        :inRootInstance     bdr:MW1NLM58 ;
+        :instanceOf         bdr:WA0XLF0EC28B36B9C ;
+        :legacyOutlineNodeRID  "O4CZ3283744CZ328376" ;
+        :partIndex          2 ;
+        :partOf             bdr:MW1NLM58 ;
+        :partTreeIndex      "2" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:NT68A26F3A19513B22
         a                   :Note ;
         :noteText           "nlmId: M0057971"@en .
     
-    bdr:TT87528ACC3DA4A0BE
+    bdr:NTFBA84ABE92C54F31
+        a                   :Note ;
+        :noteText           "coverType: paper cover"@en .
+    
+    bdr:TT1C0889123E7E984F
         a                   :Title ;
         rdfs:label          "lnga bsdus kyi 'bras bshad bkra shis zla gsar sogs/"@bo-x-ewts .
+    
+    bdr:TT393A12717EFA7B31
+        a                   :Title ;
+        rdfs:label          "gsang ba ye shes kyi mkha' 'gro ma'i las tshogs las byang grol chang khrus ma'i man ngag lag len ngag 'don damg bcas pa/"@bo-x-ewts .
+    
+    bdr:TTA7744A07D107A8D3
+        a                   :Title ;
+        rdfs:label          "lnga bsdus kyi 'bras bshad bkra shis zla gsar/"@bo-x-ewts .
 }

@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23884 {
-    bda:LG55440B1D9C7210A5
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
-    bda:LG73C2AD6FD25B248C
+    bda:LG57EB2223D24A820B
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-25T16:53:48.284Z"^^xsd:dateTime ;
         adm:logMessage      "added print type"@en ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LGCD1BEE6900B4881A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDE0F88FF685EF6C1
+        a                   adm:InitialOutlineData ;
+        adm:logDate         "2009-07-08T11:45:56.609Z"^^xsd:dateTime ;
+        adm:logMessage      "outline created"@en ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -43,34 +49,55 @@ bdg:MW23884 {
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00006 .
     
-    bda:MW23884  a          adm:AdminData ;
+    bda:MW23884  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
+        :legacyOutlineNodeRID  "O1GS149733" ;
         adm:adminAbout      bdr:MW23884 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      21 ;
         adm:gitPath         "29/MW23884.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23884 ;
-        adm:logEntry        bda:LG55440B1D9C7210A5 , bda:LG73C2AD6FD25B248C , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG57EB2223D24A820B , bda:LGCD1BEE6900B4881A , bda:LGDE0F88FF685EF6C1 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the khyentse foundation"@en ;
+        adm:outlineType     bda:OutlineTypeSaBcad ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF79673366188612A
+    bdr:CL26E15729324D0D89
+        a                   :ContentLocation ;
+        :contentLocationEndPage  482 ;
+        :contentLocationInstance  bdr:W23884 ;
+        :contentLocationPage  211 .
+    
+    bdr:CL7DF883EB100D3931
+        a                   :ContentLocation ;
+        :contentLocationEndPage  126 ;
+        :contentLocationInstance  bdr:W23884 ;
+        :contentLocationPage  3 .
+    
+    bdr:CL9BD7B00FAD3FC0FC
+        a                   :ContentLocation ;
+        :contentLocationEndPage  210 ;
+        :contentLocationInstance  bdr:W23884 ;
+        :contentLocationPage  127 .
+    
+    bdr:EVAD2BC6EBF3B7F811
         a                   :PublishedEvent ;
         :onYear             "1979"^^xsd:gYear .
     
-    bdr:ID057690C669A13BAD
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "BQ7950.T754 D7233 1969" .
-    
-    bdr:ID2D88A65CB8E675E5
+    bdr:ID327BD41401EA201F
         a                   bdr:HollisId ;
         rdf:value           "014259200" .
     
-    bdr:ID4773480F1CD7DA5D
+    bdr:ID55440B1D9C7210A5
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "79902664" .
     
-    bdr:IDCAB7F8AD85820CB3
+    bdr:ID67B7039788B6816D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950.T754 D7233 1969" .
+    
+    bdr:IDCD60E024C70ECB1F
         a                   bdr:HarvardShelfId ;
         rdf:value           "002409852-3" .
     
@@ -78,30 +105,89 @@ bdg:MW23884 {
         skos:altLabel       "Legs bśad sñiṅ poʾi dkaʾ ʾgrel bstan paʾi sgron me bźugs so."@en-x-mixed ;
         skos:prefLabel      "legs bshad snying po'i dka' 'grel bstan pa'i sgron me/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID057690C669A13BAD , bdr:ID2D88A65CB8E675E5 , bdr:ID4773480F1CD7DA5D , bdr:IDCAB7F8AD85820CB3 ;
+            bdr:ID327BD41401EA201F , bdr:ID55440B1D9C7210A5 , bdr:ID67B7039788B6816D , bdr:IDCD60E024C70ECB1F ;
         :biblioNote         "At head of title: ser byes dpe mdzod"@en ;
-        :hasTitle           bdr:TT38692B8A36233930 , bdr:TT963B1D9F521BA954 ;
-        :instanceEvent      bdr:EVF79673366188612A ;
+        :hasPart            bdr:MW23884_19C136 , bdr:MW23884_D8CF7B , bdr:MW23884_FD9A95 ;
+        :hasTitle           bdr:TT450754D4F6BF0E24 , bdr:TT73C2AD6FD25B248C ;
+        :instanceEvent      bdr:EVAD2BC6EBF3B7F811 ;
         :instanceHasReproduction  bdr:W23884 ;
         :instanceOf         bdr:WA1AC225 ;
         :isRoot             true ;
-        :note               bdr:NTDE0F88FF685EF6C1 ;
+        :note               bdr:NTCAB7F8AD85820CB3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherLocation  "delhi"@en ;
         :publisherName      "rong tha mchog sprul rnam pa gnyis/"@bo-x-ewts ;
         :script             bdr:ScriptDbuCan ;
-        :workExtentStatement  "124, 83, 271 p." .
+        :workExtentStatement  "124, 83, 271 p." ;
+        :workPagination     bdr:PaginationAbsolute .
     
-    bdr:NTDE0F88FF685EF6C1
+    bdr:MW23884_19C136
+        a                   :Instance ;
+        skos:prefLabel      "dka' 'grel bstan pa'i sgron me thal 'gyur ba'i skor (dka' 'grel ga)"@bo-x-ewts ;
+        :colophon           "ces pa 'di yang blo bzang rgyal ba gnyis pa'i ring lugs pa chen po/ lung rtogs kyi yon tan rgya mtshos thugs kyi bang mdzod yongs su gtam pa rje btsun bla ma dam pa ser byes rong tha mchog sprul rin po che rnam pa gnyis nas/ mkhas grub bye ba'i byung gnas ser byed mkhas snyan grwa tshang gi yig cha mkhas pa'i dbang po gnyan ston dpal 'byor lhun grub kyis mdzad lpa'i elgs bshad kyi gter chen po drang nges dka' 'grel bstan pa'i sgron me par bskrun mdzad skabs/ dge bsngo'i smon tshig cig dngos tshul bka' yis bskul ba ma ldog tsam du/ mgon po gang gi gus slob tha shal ba 'bras ldan ma rgyal sras sprul ming pas smon pa'o"@bo-x-ewts , "de ltar mdo sde dgongs 'grel dang blo gros mi zad pa'i mdo sde la brten pa'i phyogs gnyis kyis/ rgyal ba'i gsung rab kyi drang nges 'byed pa'i rnam bshad legs bshad snying po'i don gsal bar byed pa'i bstan pa'i sgron me 'di ni sde snod 'dzin pa'i bshes gnyen mang pos bskul ba dang/ khyad par rgyal ba'i bstan pa ches gces spras su 'dzin cing/ lha dang mi 'dod yon phun sum tshogs pa'i rgyal srid kyi dpal la 'dod dgur dbang bskur nas bstan pa'i gtso bo jo shAkya mu ne'i lung rtogs kyi bstan pa dang de bshad sgrub kyi sgo nas 'dzin pa'i bstan 'dzin dang skye rgu yongs kyi gnyen dam par gyur cing/ rigs rus phun sum tshogs pa'i rten gyis rgyal ba'i bstan pa la rab tu byung ste/ bslab pa gsum la brten nas dal 'byor don ldan du mdzad pa'i ngur smrig gi rgyal mtshan 'dzin pa drung chos kyi dpal 'dzom ma'i gsung gis yang yang bskul zhing mthun rkyen phun sum tshogs par bsgrubs pa la brten nas/ bstan pa'i snying po 'di yun ring du gsal bar bya ba'i phyir du/ /bla ma dam pa'i man ngag dang/ lung rigs kyi sgo nas sdom brtson sde snod 'dzin pa rigs par smra ba shAkya'i dge slong dpal 'byor lhun grub kyis/ chos grwa chen po theg chen gling du sbyar ba'o"@bo-x-ewts ;
+        :contentLocation    bdr:CL26E15729324D0D89 ;
+        :contentLocationStatement  "136 ff. (pp. 1-272)" ;
+        :hasTitle           bdr:TT2BCB501FBF0157A5 ;
+        :inRootInstance     bdr:MW23884 ;
+        :instanceOf         bdr:WA0XL19C136DCCC88 ;
+        :legacyOutlineNodeRID  "O1GS1497331GS149736" ;
+        :partIndex          3 ;
+        :partOf             bdr:MW23884 ;
+        :partTreeIndex      "3" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:MW23884_D8CF7B
+        a                   :Instance ;
+        skos:prefLabel      "dka' 'grel bstan pa'i sgron me'i rang rgyud pa'i skor (dka' 'grel kha)"@bo-x-ewts ;
+        :colophon           "rang rig mi 'dod cing phyi don khas len pa de/ mdo sde spyod pa'i dbu ma rang rgyud pa'i mtshan nyid yin/ dper na/ slob dpon legs ldan 'byed dang/ ye shes snying po lta bu/ dbu ma rang rgyud pa'i nang mtshan gang zhig/ phyi don khas mi len cing rang rig yod par bzhed pa de/ rnal 'byor spyod pa'i dbu ma rang rgyud pa'i mtshan nyid yin/ dper na/ slob dpon zhi 'tsho yab sras dang/ 'phags pa grol sde dang/ slob dpon seng ge bzang po lta bu'o// rang rgyud pa'i lugs legs par bshad zin to/"@bo-x-ewts ;
+        :contentLocation    bdr:CL9BD7B00FAD3FC0FC ;
+        :contentLocationStatement  "42 ff. (pp. 1-84)" ;
+        :hasTitle           bdr:TT2450C9F2BDB92924 ;
+        :inRootInstance     bdr:MW23884 ;
+        :instanceOf         bdr:WA0XLD8CF7B0D7F9D ;
+        :legacyOutlineNodeRID  "O1GS1497331GS149735" ;
+        :partIndex          2 ;
+        :partOf             bdr:MW23884 ;
+        :partTreeIndex      "2" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:MW23884_FD9A95
+        a                   :Instance ;
+        skos:prefLabel      "legs bshad snying po'i dka' 'grel bstan pa'i sgron me (dka' 'grel ka)"@bo-x-ewts ;
+        :colophon           "'di'i dpar yig ser byed tre hor grwa ngag dbang bde legs nas bris pa'o/ /'dis kyang rgyal ba'i bstan pa sgo thams cad nas phyogs thams cad du dar zhing rgyas la yun ring du gnas par gyur cig"@bo-x-ewts ;
+        :contentLocation    bdr:CL7DF883EB100D3931 ;
+        :contentLocationStatement  "62 ff. (pp. 1-24)" ;
+        :hasTitle           bdr:TT9D931E0AA19F9AC1 ;
+        :inRootInstance     bdr:MW23884 ;
+        :instanceOf         bdr:WA1AC225 ;
+        :legacyOutlineNodeRID  "O1GS1497331GS149734" ;
+        :partIndex          1 ;
+        :partOf             bdr:MW23884 ;
+        :partTreeIndex      "1" ;
+        :partType           bdr:PartTypeText .
+    
+    bdr:NTCAB7F8AD85820CB3
         a                   :Note ;
         :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n5049"@en .
     
-    bdr:TT38692B8A36233930
+    bdr:TT2450C9F2BDB92924
+        a                   :Title ;
+        rdfs:label          "dka' 'grel bstan pa'i sgron me'i rang rgyud pa'i skor (dka' 'grel kha)"@bo-x-ewts .
+    
+    bdr:TT2BCB501FBF0157A5
+        a                   :Title ;
+        rdfs:label          "dka' 'grel bstan pa'i sgron me thal 'gyur ba'i skor (dka' 'grel ga)"@bo-x-ewts .
+    
+    bdr:TT450754D4F6BF0E24
+        a                   :CoverTitle ;
+        rdfs:label          "Legs bśad sñiṅ poʾi dkaʾ ʾgrel bstan paʾi sgron me bźugs so."@en-x-mixed .
+    
+    bdr:TT73C2AD6FD25B248C
         a                   :Title ;
         rdfs:label          "legs bshad snying po'i dka' 'grel bstan pa'i sgron me/"@bo-x-ewts .
     
-    bdr:TT963B1D9F521BA954
-        a                   :CoverTitle ;
-        rdfs:label          "Legs bśad sñiṅ poʾi dkaʾ ʾgrel bstan paʾi sgron me bźugs so."@en-x-mixed .
+    bdr:TT9D931E0AA19F9AC1
+        a                   :Title ;
+        rdfs:label          "legs bshad snying po'i dka' 'grel bstan pa'i sgron me (dka' 'grel ka)"@bo-x-ewts .
 }
