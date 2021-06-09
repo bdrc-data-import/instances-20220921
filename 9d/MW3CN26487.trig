@@ -12,38 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26487 {
-    bda:LG910E620323FAF8BF
+    bda:LG4236295C21272FA8
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-01T13:04:44.668Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG9214FB2F4ECB4454
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-08T15:54:55.223Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN26487  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN26487 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "9d/MW3CN26487.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26487 ;
-        adm:logEntry        bda:LG910E620323FAF8BF ;
+        adm:logEntry        bda:LG4236295C21272FA8 , bda:LG9214FB2F4ECB4454 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN26487  a       :Instance ;
+    bdr:EVB9843604D3E8480D
+        a                   :PublishedEvent ;
+        :onYear             "2019"^^xsd:gYear .
+    
+    bdr:ID695E18FF2A27447B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105157280" .
+    
+    bdr:MW3CN26487  a       :Instance , :SerialInstance ;
         skos:prefLabel      "slob dpon klu sgrub thogs med rta dbyangs gsum gyi rnam thar rgyas bsdus sna tshogs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID695E18FF2A27447B ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT3EA9FD267DFF2E8E ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT3EA9FD267DFF2E8E , bdr:TT910E620323FAF8BF ;
+        :instanceEvent      bdr:EVB9843604D3E8480D ;
         :instanceHasReproduction  bdr:W3CN26487 ;
         :instanceOf         bdr:WA3CN26487 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "[s.n.]"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "1 v." .
+        :workExtentStatement  "4, 4, 272, 4 p." ;
+        :workSeriesNumber   "1" .
     
     bdr:TT3EA9FD267DFF2E8E
         a                   :Title ;
         rdfs:label          "slob dpon klu sgrub thogs med rta dbyangs gsum gyi rnam thar rgyas bsdus sna tshogs/"@bo-x-ewts .
+    
+    bdr:TT910E620323FAF8BF
+        a                   :TitlePageTitle ;
+        rdfs:label          "bzhag pa 'jam dbyangs mkhas grub kyi gsung rtsom dpe tshogs pod dang po/"@bo-x-ewts .
 }

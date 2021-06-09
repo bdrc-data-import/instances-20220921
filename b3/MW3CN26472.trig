@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26472 {
-    bda:LG33C46B520256951D
+    bda:LG365C4CB7C1ED1561
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-08T16:30:19.113Z"^^xsd:dateTime ;
+        adm:logMessage      "added ISBN"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGE09E36AF411FB32E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-01T10:54:07.474Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
@@ -21,28 +27,48 @@ bdg:MW3CN26472 {
     bda:MW3CN26472  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN26472 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "b3/MW3CN26472.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26472 ;
-        adm:logEntry        bda:LG33C46B520256951D ;
+        adm:logEntry        bda:LG365C4CB7C1ED1561 , bda:LGE09E36AF411FB32E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN26472  a       :Instance ;
+    bdr:EV793FC0BB85D9A27B
+        a                   :PublishedEvent ;
+        :onYear             "2019"^^xsd:gYear .
+    
+    bdr:IDA16AD585D2CE6AA8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105157389" .
+    
+    bdr:MW3CN26472  a       :Instance , :SerialInstance ;
         skos:prefLabel      "dkon mchog gsum rjes su dran pa'i mdo'i bsdus 'grel dang rgya cher 'grel pa/"@bo-x-ewts ;
-        :hasTitle           bdr:TT291D6E3D93C6CB7A , bdr:TT8B19E40DE36A6ED7 ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA16AD585D2CE6AA8 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT291D6E3D93C6CB7A , bdr:TT33C46B520256951D , bdr:TT8B19E40DE36A6ED7 ;
+        :instanceEvent      bdr:EV793FC0BB85D9A27B ;
         :instanceHasReproduction  bdr:W3CN26472 ;
         :instanceOf         bdr:WA3CN26472 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "1 v." .
+        :workExtentStatement  "4, 6, 336, 4 p. (3rd v.)" ;
+        :workSeriesNumber   "3" .
     
     bdr:TT291D6E3D93C6CB7A
         a                   :Title ;
         rdfs:label          "dkon mchog gsum rjes su dran pa'i mdo'i bsdus 'grel dang rgya cher 'grel pa/"@bo-x-ewts .
+    
+    bdr:TT33C46B520256951D
+        a                   :Subtitle ;
+        rdfs:label          "bzhag pa 'jam dbyangs mkhas grub kyi gsung rtsom dpe tshogs pod gsum pa/"@bo-x-ewts .
     
     bdr:TT8B19E40DE36A6ED7
         a                   :TitlePageTitle ;
