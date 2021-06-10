@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG478 {
-    bda:LGDD0272A282D28F5A
+    bda:LG03667A8B8714614A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-09T11:07:13.172Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG34E22A5D0276BFDF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-09-03T11:16:52.226Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
@@ -41,56 +47,61 @@ bdg:MW1KG478 {
     bda:MW1KG478  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG478 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "c9/MW1KG478.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG478 ;
-        adm:logEntry        bda:LGDD0272A282D28F5A , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG03667A8B8714614A , bda:LG34E22A5D0276BFDF , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV35331BF7B0534C25
+    bdr:EV29BAD9E8198F4F90
         a                   :PublishedEvent ;
         :onYear             "2007"^^xsd:gYear .
     
-    bdr:ID29BAD9E8198F4F90
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "S471.C62 H869 2008" .
-    
     bdr:ID6E0ECB73CCB629F2
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "9787542012920" .
-    
-    bdr:ID9C8969644A84FB6E
         a                   bdr:HollisId ;
         rdf:value           "014256999" .
     
-    bdr:IDFF77450F4FA31635
+    bdr:ID9C8969644A84FB6E
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "2008308783" .
     
+    bdr:IDDD0272A282D28F5A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542012920" .
+    
+    bdr:IDFF77450F4FA31635
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "S471.C62 H869 2008" .
+    
     bdr:MW1KG478  a         :Instance ;
-        skos:altLabel       "huang nan ke ji du ben"@zh-latn-pinyin-x-ndia ;
-        skos:prefLabel      "rma lho'i tshan rtsal klog deb/"@bo-x-ewts ;
+        skos:prefLabel      "rma lho'i tshan rtsal klog deb/"@bo-x-ewts , "黄南科技读本"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID29BAD9E8198F4F90 , bdr:ID6E0ECB73CCB629F2 , bdr:ID9C8969644A84FB6E , bdr:IDFF77450F4FA31635 ;
+            bdr:ID6E0ECB73CCB629F2 , bdr:ID9C8969644A84FB6E , bdr:IDDD0272A282D28F5A , bdr:IDFF77450F4FA31635 ;
         :authorshipStatement  "rma lho khul tshan rtsal cus bsgrigs bsgyur byas/"@bo-x-ewts ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
-        :hasTitle           bdr:TT854AB5A7EAA59A27 , bdr:TT9EF9D48678C10540 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT35331BF7B0534C25 , bdr:TT854AB5A7EAA59A27 , bdr:TT9EF9D48678C10540 ;
         :illustrations      "ill. (col.)" ;
-        :instanceEvent      bdr:EV35331BF7B0534C25 ;
+        :instanceEvent      bdr:EV29BAD9E8198F4F90 ;
         :instanceHasReproduction  bdr:IE1KG478 , bdr:W1KG478 ;
         :instanceOf         bdr:WA1KG478 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "zi ling /"@bo-x-ewts ;
         :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
         :workExtentStatement  "2, 2, 289 p." .
     
-    bdr:TT854AB5A7EAA59A27
+    bdr:TT35331BF7B0534C25
         a                   :ColophonTitle ;
         rdfs:label          "huang nan ke ji du ben"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT854AB5A7EAA59A27
+        a                   :OtherTitle ;
+        rdfs:label          "黄南科技读本"@zh-hans .
     
     bdr:TT9EF9D48678C10540
         a                   :Title ;

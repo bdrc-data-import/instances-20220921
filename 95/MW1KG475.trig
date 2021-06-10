@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG475 {
-    bda:LG5DB36CADF9AA1618
+    bda:LG16E1635BEABD46E4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-09T11:07:12.809Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFD4E0D18F1B0BA04
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-09-03T11:16:29.101Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
@@ -41,51 +47,51 @@ bdg:MW1KG475 {
     bda:MW1KG475  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG475 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "95/MW1KG475.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG475 ;
-        adm:logEntry        bda:LG5DB36CADF9AA1618 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG16E1635BEABD46E4 , bda:LGFD4E0D18F1B0BA04 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVBD21D18423A2CB24
+    bdr:EVDFA246A5BEE54121
         a                   :PublishedEvent ;
         :onYear             "2007"^^xsd:gYear .
     
     bdr:ID037A4A728F011B62
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "9787542012890" .
-    
-    bdr:ID3CEC89E4122C28A7
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "2008308782" .
-    
-    bdr:ID9DF2D0B5E6F857A9
         a                   bdr:HollisId ;
         rdf:value           "014256991" .
     
-    bdr:IDDFA246A5BEE54121
+    bdr:ID3CEC89E4122C28A7
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "GV1459.35.C6 B64 2007" .
     
+    bdr:ID5DB36CADF9AA1618
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542012890" .
+    
+    bdr:ID9DF2D0B5E6F857A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2008308782" .
+    
     bdr:MW1KG475  a         :Instance ;
-        skos:altLabel       "zang zu min jian qi yi"@zh-latn-pinyin-x-ndia ;
-        skos:prefLabel      "bod kyi dmangs khrod mig mangs sgyu rtsal/"@bo-x-ewts ;
+        skos:prefLabel      "bod kyi dmangs khrod mig mangs sgyu rtsal/"@bo-x-ewts , "藏族民间棋艺"@zh-hans ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID037A4A728F011B62 , bdr:ID3CEC89E4122C28A7 , bdr:ID9DF2D0B5E6F857A9 , bdr:IDDFA246A5BEE54121 ;
+            bdr:ID037A4A728F011B62 , bdr:ID3CEC89E4122C28A7 , bdr:ID5DB36CADF9AA1618 , bdr:ID9DF2D0B5E6F857A9 ;
         :authorshipStatement  "rtsom sgrig u yon lhan tshogs kyis bsgrigs/"@bo-x-ewts ;
-        :biblioNote         "the text is written in chinese and tibetan language"@en ;
-        :editionStatement   "par gzhi1"@bo-x-ewts ;
-        :hasTitle           bdr:TT201CC25727AFEC9D , bdr:TT28147AF63830DC0B ;
-        :instanceEvent      bdr:EVBD21D18423A2CB24 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT201CC25727AFEC9D , bdr:TT28147AF63830DC0B , bdr:TTBD21D18423A2CB24 ;
+        :instanceEvent      bdr:EVDFA246A5BEE54121 ;
         :instanceHasReproduction  bdr:IE1KG475 , bdr:W1KG475 ;
         :instanceOf         bdr:WA1KG475 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "zi ling /"@bo-x-ewts ;
         :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
         :workExtentStatement  "2, 3, 246 p." .
     
     bdr:TT201CC25727AFEC9D
@@ -93,6 +99,10 @@ bdg:MW1KG475 {
         rdfs:label          "bod kyi dmangs khrod mig mangs sgyu rtsal/"@bo-x-ewts .
     
     bdr:TT28147AF63830DC0B
+        a                   :OtherTitle ;
+        rdfs:label          "藏族民间棋艺"@zh-hans .
+    
+    bdr:TTBD21D18423A2CB24
         a                   :OtherTitle ;
         rdfs:label          "zang zu min jian qi yi"@zh-latn-pinyin-x-ndia .
 }
