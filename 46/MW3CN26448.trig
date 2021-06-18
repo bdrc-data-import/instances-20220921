@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26448 {
-    bda:LG88D3D83551C79B8A
+    bda:LG765BF25C1A8BBCFE
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-13T21:29:14.05Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGEEB3CEF3CE8B5CFC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-01T09:40:41.335Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -21,27 +27,40 @@ bdg:MW3CN26448 {
     bda:MW3CN26448  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN26448 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "46/MW3CN26448.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26448 ;
-        adm:logEntry        bda:LG88D3D83551C79B8A ;
+        adm:logEntry        bda:LG765BF25C1A8BBCFE , bda:LGEEB3CEF3CE8B5CFC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV88D3D83551C79B8A
+        a                   :PublishedEvent ;
+        :onYear             "2020"^^xsd:gYear .
+    
+    bdr:ID47BB2A539A76A622
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787570004195" .
+    
     bdr:MW3CN26448  a       :Instance ;
         skos:prefLabel      "legs bshad 'phrul gyi dra ba dang mngon brjod tshig gter gyi 'grel pa sogs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID47BB2A539A76A622 ;
+        :authorshipStatement  "smon bzang dpe rnying bsdu sgrig khang nas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTF0F3AF0A6E73A7CF ;
+        :instanceEvent      bdr:EV88D3D83551C79B8A ;
         :instanceHasReproduction  bdr:W3CN26448 ;
         :instanceOf         bdr:WA3CN26448 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "[s.n.]"@en ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "1 v." .
+        :workExtentStatement  "3, 5, 411 p." .
     
     bdr:TTF0F3AF0A6E73A7CF
         a                   :Title ;

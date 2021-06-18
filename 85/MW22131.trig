@@ -12,15 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22131 {
-    bda:LG35F8EA1F54999627
+    bda:LG22F15808C81F0C61
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG5270724E61DA2F75
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-11T16:07:42.197Z"^^xsd:dateTime ;
         adm:logMessage      "added print type"@en ;
         adm:logWho          bdu:U00013 .
-    
-    bda:LG893B33BE180677EC
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -45,42 +45,41 @@ bdg:MW22131 {
     bda:MW22131  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW22131 ;
-        adm:facetIndex      15 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "85/MW22131.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW22131 ;
-        adm:logEntry        bda:LG35F8EA1F54999627 , bda:LG893B33BE180677EC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG22F15808C81F0C61 , bda:LG5270724E61DA2F75 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA5AC4904C450F1D5
+    bdr:EV7FB3FF9648BB11FC
         a                   :PublishedEvent ;
         :onYear             "1976"^^xsd:gYear .
     
     bdr:ID2830D8E6B2ACBB8E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77902749" .
+    
+    bdr:IDA5AC4904C450F1D5
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3748.B93 S68 1976" .
     
-    bdr:ID5270724E61DA2F75
+    bdr:IDF39B88EA9951C96C
         a                   bdr:HollisId ;
         rdf:value           "014258647" .
-    
-    bdr:IDF39B88EA9951C96C
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "77902749" .
     
     bdr:MW22131  a          :Instance ;
         skos:altLabel       "the visions of hell of byan-chub-senge"@en-x-mixed ;
         skos:prefLabel      "'das log byang chub seng+ge'i rnam thar/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2830D8E6B2ACBB8E , bdr:ID5270724E61DA2F75 , bdr:IDF39B88EA9951C96C ;
+            bdr:ID2830D8E6B2ACBB8E , bdr:IDA5AC4904C450F1D5 , bdr:IDF39B88EA9951C96C ;
         :biblioNote         "reproduced from a manuscript from dgon-pa dkar-po in bhutan"@en ;
-        :hasTitle           bdr:TT234B21FE875241C7 , bdr:TT74BEE645E90539F3 , bdr:TT7FB3FF9648BB11FC , bdr:TT8736D5FC331BD45C ;
-        :instanceEvent      bdr:EVA5AC4904C450F1D5 ;
+        :hasTitle           bdr:TT234B21FE875241C7 , bdr:TT74BEE645E90539F3 , bdr:TT8736D5FC331BD45C , bdr:TTC76764AD70F14157 ;
+        :instanceEvent      bdr:EV7FB3FF9648BB11FC ;
         :instanceHasReproduction  bdr:W22131 ;
         :instanceOf         bdr:WA22131 ;
         :isRoot             true ;
-        :note               bdr:NTC76764AD70F14157 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherLocation  "thimphu"@en ;
@@ -88,23 +87,19 @@ bdg:MW22131 {
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "273 p." .
     
-    bdr:NTC76764AD70F14157
-        a                   :Note ;
-        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n3889"@en .
-    
     bdr:TT234B21FE875241C7
+        a                   :CoverTitle ;
+        rdfs:label          "the visions of hell of byan-chub-senge"@en-x-mixed .
+    
+    bdr:TT74BEE645E90539F3
         a                   :TitlePageTitle ;
         rdfs:label          "spyan ras gzigs kyi sprul pa 'das log byang chub seng+ge'i dmyal snang shar ba las dge sdig gi shan 'byed dang gshin rje chos kyi rgyal po'i 'phrin yig rgyas pa/"@bo-x-ewts .
     
-    bdr:TT74BEE645E90539F3
-        a                   :Title ;
-        rdfs:label          "'das log byang chub seng+ge'i rnam thar/"@bo-x-ewts .
-    
-    bdr:TT7FB3FF9648BB11FC
+    bdr:TT8736D5FC331BD45C
         a                   :Subtitle ;
         rdfs:label          "account of the return from death ('das log) of byan-chub-senge, his visions of hell, and the message from the lord of death to those living to mend their ways"@en-x-mixed .
     
-    bdr:TT8736D5FC331BD45C
-        a                   :CoverTitle ;
-        rdfs:label          "the visions of hell of byan-chub-senge"@en-x-mixed .
+    bdr:TTC76764AD70F14157
+        a                   :Title ;
+        rdfs:label          "'das log byang chub seng+ge'i rnam thar/"@bo-x-ewts .
 }

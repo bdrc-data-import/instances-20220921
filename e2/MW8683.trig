@@ -12,10 +12,6 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8683 {
-    bda:LG21D7B71F09FF880D
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
     bda:LG25A8C77746BA9CA5
         a                   adm:InitialOutlineData ;
         adm:logDate         "2011-02-04T16:40:09.354Z"^^xsd:dateTime ;
@@ -27,11 +23,15 @@ bdg:MW8683 {
         adm:logMessage      "fixed audit log so publication appears in the correct year (2011)"@en ;
         adm:logWho          bdu:U00012 .
     
-    bda:LG42F976FC0A01D9D4
+    bda:LG798791C48E014EFF
         a                   adm:UpdateData ;
         adm:logDate         "2013-08-06T12:16:50.754Z"^^xsd:dateTime ;
         adm:logMessage      "added print type"@en ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LGA3159AB40DB029A9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGD06B05424ED0621C
         a                   adm:UpdateOutlineData ;
@@ -63,44 +63,43 @@ bdg:MW8683 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3JT1542" ;
         adm:adminAbout      bdr:MW8683 ;
-        adm:facetIndex      16 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "e2/MW8683.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8683 ;
-        adm:logEntry        bda:LG21D7B71F09FF880D , bda:LG25A8C77746BA9CA5 , bda:LG38F1CBE92C87DF5D , bda:LG42F976FC0A01D9D4 , bda:LGD06B05424ED0621C , bda:LGDE8B4DA651E520B9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG25A8C77746BA9CA5 , bda:LG38F1CBE92C87DF5D , bda:LG798791C48E014EFF , bda:LGA3159AB40DB029A9 , bda:LGD06B05424ED0621C , bda:LGDE8B4DA651E520B9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Jigme Namgyal; created with the generous support of the Khyentse Foundation."@en ;
         adm:outlineType     bda:OutlineTypeNoType ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV06E0528BA3196120
+    bdr:EVEFE985DCEF12BDF4
         a                   :PublishedEvent ;
         :onYear             "1985"^^xsd:gYear .
     
-    bdr:ID635D988330CCE656
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "85902812" .
-    
-    bdr:ID703FD42C013541B1
+    bdr:ID06E0528BA3196120
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "BQ950.A47933 K86 1985" .
     
-    bdr:ID798791C48E014EFF
+    bdr:ID635D988330CCE656
         a                   bdr:HollisId ;
         rdf:value           "014261100" .
+    
+    bdr:ID703FD42C013541B1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902812" .
     
     bdr:MW8683  a           :Instance ;
         skos:prefLabel      "dam chos pad dkar gyi rnam thar/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID635D988330CCE656 , bdr:ID703FD42C013541B1 , bdr:ID798791C48E014EFF ;
+            bdr:ID06E0528BA3196120 , bdr:ID635D988330CCE656 , bdr:ID703FD42C013541B1 ;
         :authorshipStatement  "by the first rgyal-sras sprul-sku kun-dga'-rgyal-mtshan (1689-1713)"@en ;
         :biblioNote         "reprinted from a rare manuscript from the national library of bhutan"@en ;
-        :hasTitle           bdr:TT71ECC095F760623E , bdr:TTEFE985DCEF12BDF4 ;
-        :instanceEvent      bdr:EV06E0528BA3196120 ;
+        :hasTitle           bdr:TT71ECC095F760623E , bdr:TTF4F9594144F5790B ;
+        :instanceEvent      bdr:EVEFE985DCEF12BDF4 ;
         :instanceHasReproduction  bdr:W8683 ;
         :instanceOf         bdr:WA8683 ;
         :isRoot             true ;
-        :note               bdr:NTF4F9594144F5790B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :publisherLocation  "thimphu, bhutan"@en ;
@@ -109,15 +108,11 @@ bdg:MW8683 {
         :workExtentStatement  "234 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
-    bdr:NTF4F9594144F5790B
-        a                   :Note ;
-        :noteText           "tbrc holds digitally scanned images, tiffs and pdf files\n3638"@en .
-    
     bdr:TT71ECC095F760623E
-        a                   :Title ;
-        rdfs:label          "dam chos pad dkar gyi rnam thar/"@bo-x-ewts .
-    
-    bdr:TTEFE985DCEF12BDF4
         a                   :TitlePageTitle ;
         rdfs:label          "mtshungs med dpal ldan bla ma dam pa dam chos pad+ma dkar po'i sde'i rnam par thar pa yon tan nor bu'i 'od kyi dkyil 'khor/"@bo-x-ewts .
+    
+    bdr:TTF4F9594144F5790B
+        a                   :Title ;
+        rdfs:label          "dam chos pad dkar gyi rnam thar/"@bo-x-ewts .
 }

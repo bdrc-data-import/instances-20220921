@@ -12,24 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8CTX30 {
+    bda:LG2FDC145F125FF35E
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:14:16.818Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF56F0C85D8CCBFC7
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-10-06T14:23:09.945Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW8CTX30  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8CTX30 ;
-        adm:facetIndex      2 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "1e/MW8CTX30.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8CTX30 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 .
+        adm:logEntry        bda:LG2FDC145F125FF35E , bda:LGF56F0C85D8CCBFC7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:MW8CTX30  a         :Instance ;
         skos:prefLabel      "yet an ot her test/"@bo-x-ewts ;
-        :hasTitle           bdr:TTF56F0C85D8CCBFC7 ;
+        :hasTitle           bdr:TT83B690E6F43D93FD ;
         :instanceHasReproduction  bdr:W8CTX30 ;
-        :instanceOf         bdr:WA8CTX30 ;
         :isRoot             true ;
         :numberOfVolumes    1 .
     
-    bdr:TTF56F0C85D8CCBFC7
+    bdr:TT83B690E6F43D93FD
         a                   :Title ;
         rdfs:label          "yet an ot her test/"@bo-x-ewts .
 }

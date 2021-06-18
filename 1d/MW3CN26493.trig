@@ -12,38 +12,69 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26493 {
-    bda:LGE2978E41F17CEA6A
+    bda:LG758865FF8FB6A5CD
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-01T13:10:35.762Z"^^xsd:dateTime ;
         adm:logMessage      "realeased"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG8322BF96A83F377B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-13T23:15:53.503Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn & pg#"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN26493  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN26493 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "1d/MW3CN26493.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26493 ;
-        adm:logEntry        bda:LGE2978E41F17CEA6A ;
+        adm:logEntry        bda:LG758865FF8FB6A5CD , bda:LG8322BF96A83F377B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVA4DCC42BAC9C843A
+        a                   :PublishedEvent ;
+        :onYear             "2020"^^xsd:gYear .
+    
+    bdr:ID64BE9BEC3CF3F865
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787521102086" .
+    
     bdr:MW3CN26493  a       :Instance ;
-        skos:prefLabel      "rgya gar grub chen pa'i gsung 'bum/"@bo-x-ewts ;
+        skos:altLabel       "江可珠钦巴文集"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/ ngag dbang dge 'dun rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID64BE9BEC3CF3F865 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT012A401E32ECD6DB ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT012A401E32ECD6DB , bdr:TT0DB6E0436040748F , bdr:TTE2978E41F17CEA6A , bdr:TTF3E0CD46B67E4744 ;
+        :instanceEvent      bdr:EVA4DCC42BAC9C843A ;
         :instanceHasReproduction  bdr:W3CN26493 ;
         :instanceOf         bdr:WA3CN26493 ;
         :isRoot             true ;
         :numberOfVolumes    2 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "[s.n.]"@en ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "2 v." .
+        :workExtentStatement  "2 v. (4,4, 531 p. & 4,4, 552 p.)" .
     
     bdr:TT012A401E32ECD6DB
         a                   :Title ;
-        rdfs:label          "rgya gar grub chen pa'i gsung 'bum/"@bo-x-ewts .
+        rdfs:label          "gsung 'bum/ ngag dbang dge 'dun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TT0DB6E0436040748F
+        a                   :TitlePageTitle ;
+        rdfs:label          "mkhas grub chos kyi nyi ma rgya mkhar rin po che rje btsun ngag dbang dge 'dun rgya mtsho'm dge 'dun 'jam dpal grub pa'i rdo rje'i gsung 'bum dri med nor bu'i a dar+sha"@bo-x-ewts .
+    
+    bdr:TTE2978E41F17CEA6A
+        a                   :Title ;
+        rdfs:label          "rgya mkhar grub chen pa'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TTF3E0CD46B67E4744
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "江可珠钦巴文集"@zh-hans .
 }

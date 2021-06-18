@@ -12,24 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4JK98795 {
+    bda:LG1EE36909595E5419
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:13:20.066Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG8EB929C0C5490369
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-06-05T10:14:24.075Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00080 .
+    
     bda:MW4JK98795  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4JK98795 ;
-        adm:facetIndex      2 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "df/MW4JK98795.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4JK98795 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 .
+        adm:logEntry        bda:LG1EE36909595E5419 , bda:LG8EB929C0C5490369 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:MW4JK98795  a       :Instance ;
         skos:prefLabel      "Second scan request Catalina Test/"@bo-x-ewts ;
-        :hasTitle           bdr:TT8EB929C0C5490369 ;
+        :hasTitle           bdr:TT0E23299F03154CB7 ;
         :instanceHasReproduction  bdr:W4JK98795 ;
-        :instanceOf         bdr:WA4JK98795 ;
         :isRoot             true ;
         :numberOfVolumes    1 .
     
-    bdr:TT8EB929C0C5490369
+    bdr:TT0E23299F03154CB7
         a                   :Title ;
         rdfs:label          "Second scan request Catalina Test/"@bo-x-ewts .
 }

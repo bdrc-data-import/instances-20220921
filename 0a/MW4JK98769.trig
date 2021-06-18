@@ -12,24 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4JK98769 {
+    bda:LG581D61005453613F
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:13:16.429Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC005705C706619BB
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-06-04T11:27:56.975Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00080 .
+    
     bda:MW4JK98769  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4JK98769 ;
-        adm:facetIndex      2 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "0a/MW4JK98769.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4JK98769 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 .
+        adm:logEntry        bda:LG581D61005453613F , bda:LGC005705C706619BB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:MW4JK98769  a       :Instance ;
         skos:prefLabel      "unknown title/"@bo-x-ewts ;
-        :hasTitle           bdr:TTC005705C706619BB ;
+        :hasTitle           bdr:TTD6E5E08751CB9612 ;
         :instanceHasReproduction  bdr:W4JK98769 ;
-        :instanceOf         bdr:WA4JK98769 ;
         :isRoot             true ;
         :numberOfVolumes    1 .
     
-    bdr:TTC005705C706619BB
+    bdr:TTD6E5E08751CB9612
         a                   :Title ;
         rdfs:label          "unknown title/"@bo-x-ewts .
 }

@@ -12,24 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8CTX18 {
+    bda:LGA2C74BA05C71024D
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-06-03T09:26:29.38Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGDEE2C7E7331C9CAB
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:14:13.129Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW8CTX18  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8CTX18 ;
-        adm:facetIndex      2 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "0c/MW8CTX18.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8CTX18 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 .
+        adm:logEntry        bda:LGA2C74BA05C71024D , bda:LGDEE2C7E7331C9CAB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:MW8CTX18  a         :Instance ;
         skos:prefLabel      "Testing SR Upload 001"@bo-x-ewts ;
-        :hasTitle           bdr:TTA2C74BA05C71024D ;
+        :hasTitle           bdr:TTCD3AE8F82E5592AA ;
         :instanceHasReproduction  bdr:W8CTX18 ;
-        :instanceOf         bdr:WA8CTX18 ;
         :isRoot             true ;
         :numberOfVolumes    1 .
     
-    bdr:TTA2C74BA05C71024D
+    bdr:TTCD3AE8F82E5592AA
         a                   :Title ;
         rdfs:label          "Testing SR Upload 001"@bo-x-ewts .
 }

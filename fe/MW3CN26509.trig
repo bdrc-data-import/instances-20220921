@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26509 {
-    bda:LGA19E2393309FC1F9
+    bda:LG06D850FD583637F5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-17T01:53:52.138Z"^^xsd:dateTime ;
+        adm:logMessage      "added pubinfos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG804E6D753241C473
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-01T14:12:54.15Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -21,24 +27,42 @@ bdg:MW3CN26509 {
     bda:MW3CN26509  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN26509 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "fe/MW3CN26509.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26509 ;
-        adm:logEntry        bda:LGA19E2393309FC1F9 ;
+        adm:logEntry        bda:LG06D850FD583637F5 , bda:LG804E6D753241C473 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN26509  a       :Instance ;
+    bdr:EVA19E2393309FC1F9
+        a                   :PublishedEvent ;
+        :onYear             "2017"^^xsd:gYear .
+    
+    bdr:ID1F0C4E584E54EF3C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787805899510" .
+    
+    bdr:MW3CN26509  a       :Instance , :SerialInstance ;
         skos:prefLabel      "dbu ma bzhi brgya pa'i mchan 'grel 'phags mchog dgyes pa'i zhal lung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1F0C4E584E54EF3C ;
+        :authorshipStatement  "(don gyi rtsom pa po dkon mchog bzod pa/) bka' brgyud bla ma'i 'bangs kyis brtsams/ 'bri gung bka' brgyud rig gzhung srung spel mnyam tshogs kyis dpar du bskrun/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT540FA329C7B4DB77 , bdr:TT9DC06476040AF206 ;
+        :instanceEvent      bdr:EVA19E2393309FC1F9 ;
         :instanceHasReproduction  bdr:W3CN26509 ;
         :instanceOf         bdr:WA3CN26509 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "1 v." .
+        :serialInstanceOf   bdr:WAS3CN26509 ;
+        :seriesNumber       "deb phreng brgyad pa/" ;
+        :workExtentStatement  "23, 2, 314 p." .
     
     bdr:TT540FA329C7B4DB77
         a                   :TitlePageTitle ;
