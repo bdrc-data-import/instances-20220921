@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20224 {
+    bda:LG332E81E43F4C958A
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-01-20T11:23:17.917Z"^^xsd:dateTime ;
+        adm:logMessage      "added subject"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG386DB4EE365E9312
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-10-19T10:03:59.835Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LGAC8F550F50A3B2EF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGC4DF7EE95981F95D
         a                   adm:UpdateOutlineData ;
@@ -23,14 +33,33 @@ bdg:MW20224 {
         adm:logMessage      "edited and released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20224  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3JT2174" ;
         adm:adminAbout      bdr:MW20224 ;
-        adm:facetIndex      38 ;
-        adm:logEntry        bda:LG386DB4EE365E9312 , bda:LGC4DF7EE95981F95D ;
+        adm:facetIndex      47 ;
+        adm:gitPath         "b8/MW20224.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20224 ;
+        adm:logEntry        bda:LG332E81E43F4C958A , bda:LG386DB4EE365E9312 , bda:LGAC8F550F50A3B2EF , bda:LGC4DF7EE95981F95D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "jigme namgyal with the generous support of the kyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03171695F282FE2D
         a                   :ContentLocation ;
@@ -151,7 +180,39 @@ bdg:MW20224 {
         :contentLocationPage  134 ;
         :contentLocationVolume  1 .
     
-    bdr:MW20224  :hasPart   bdr:MW20224_351732 , bdr:MW20224_6741CC , bdr:MW20224_C0B290 , bdr:MW20224_E84408 , bdr:MW20224_FD9E18 ;
+    bdr:EV66A4AE3E441292B6
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID1C6E9811F8797B92
+        a                   bdr:HollisId ;
+        rdf:value           "014258095" .
+    
+    bdr:IDE6B74C74FC2E7139
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223012366" .
+    
+    bdr:MW20224  a          :Instance ;
+        skos:altLabel       "america and its peoples"@en ;
+        skos:prefLabel      "a ri dang de'i mi dmangs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1C6E9811F8797B92 , bdr:IDE6B74C74FC2E7139 ;
+        :authorshipStatement  "bkra shis tshe ring gis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW20224_351732 , bdr:MW20224_6741CC , bdr:MW20224_C0B290 , bdr:MW20224_E84408 , bdr:MW20224_FD9E18 ;
+        :hasTitle           bdr:TT5483E2D9C8370A03 , bdr:TT8EB5D14881811718 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV66A4AE3E441292B6 ;
+        :instanceHasReproduction  bdr:W20224 ;
+        :instanceOf         bdr:WA20224 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "7, 122 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20224_0D3018
@@ -426,6 +487,14 @@ bdg:MW20224 {
     bdr:TT50B4F81971C9EE2D
         a                   :Title ;
         rdfs:label          "(7) gnyen sgrig dang / 'tsho ba skyel tshul/ bsam blo'i 'khyer so/ mi dang mi'i dbar gyi 'brel ba sogs a me ri kha'i spyi tshogs kyi snang tshul mthong thos dran 'char/"@bo-x-ewts .
+    
+    bdr:TT5483E2D9C8370A03
+        a                   :Title ;
+        rdfs:label          "a ri dang de'i mi dmangs/"@bo-x-ewts .
+    
+    bdr:TT8EB5D14881811718
+        a                   :OtherTitle ;
+        rdfs:label          "america and its peoples"@en .
     
     bdr:TT90D6A45529477F82
         a                   :Title ;

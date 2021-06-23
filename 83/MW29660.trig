@@ -47,20 +47,43 @@ bdg:MW29660 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG9C61A7AD3B50B4B3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGB4130AEE7B712B72
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2011-02-16T12:44:51.302Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29660  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2CN2027" ;
         adm:adminAbout      bdr:MW29660 ;
-        adm:facetIndex      79 ;
-        adm:logEntry        bda:LG0507CE75A47DA996 , bda:LG1A53A04D55E61D74 , bda:LG5FD6BA3C8148BCA0 , bda:LG676C24F6FC755CC5 , bda:LG6C7106A04E052443 , bda:LG843B72C4C3DB1834 , bda:LGB4130AEE7B712B72 ;
+        adm:facetIndex      89 ;
+        adm:gitPath         "83/MW29660.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29660 ;
+        adm:logEntry        bda:LG0507CE75A47DA996 , bda:LG1A53A04D55E61D74 , bda:LG5FD6BA3C8148BCA0 , bda:LG676C24F6FC755CC5 , bda:LG6C7106A04E052443 , bda:LG843B72C4C3DB1834 , bda:LG9C61A7AD3B50B4B3 , bda:LGB4130AEE7B712B72 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Chungdak Nangpa"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0670C96B73713779
         a                   :ContentLocation ;
@@ -470,7 +493,29 @@ bdg:MW29660 {
         :contentLocationInstance  bdr:W29660 ;
         :contentLocationPage  88 .
     
-    bdr:MW29660  :hasPart   bdr:MW29660_612AC7 , bdr:MW29660_64D317 , bdr:MW29660_ABCFED ;
+    bdr:EV9D3582B9CF24F3A8
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID4F3811334E30B507
+        a                   bdr:HollisId ;
+        rdf:value           "014260067" .
+    
+    bdr:MW29660  a          :Instance ;
+        skos:prefLabel      "bshes pa'i spring yig dang de yi 'grel pa pad+ma dkar po'i phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F3811334E30B507 ;
+        :hasPart            bdr:MW29660_612AC7 , bdr:MW29660_64D317 , bdr:MW29660_ABCFED ;
+        :hasTitle           bdr:TT33A69BE34C30350D , bdr:TT3556E06A9346A303 , bdr:TT513B7EEA0E5C85C3 , bdr:TTDFCB7BDB3E68732C , bdr:TTFD0A11658F531BFE ;
+        :instanceEvent      bdr:EV9D3582B9CF24F3A8 ;
+        :instanceHasReproduction  bdr:W29660 ;
+        :instanceOf         bdr:WA29660 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bylakuppe], karnataka"@en ;
+        :publisherName      "namdroling monastic jr. high school"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4. 108 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29660_035F65
@@ -1313,6 +1358,18 @@ bdg:MW29660 {
         :partTreeIndex      "3.62" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:TT33A69BE34C30350D
+        a                   :OtherTitle ;
+        rdfs:label          "bshes spring gi mchan 'grel pad+ma dkar po'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TT3556E06A9346A303
+        a                   :CoverTitle ;
+        rdfs:label          "bshes pa'i spring yig gi rtsa ba dang 'grel pa/"@bo-x-ewts .
+    
+    bdr:TT513B7EEA0E5C85C3
+        a                   :OtherTitle ;
+        rdfs:label          "bshes spring dang de'i 'grel pa pad dkar phreng ba/"@bo-x-ewts .
+    
     bdr:TTD57831F4314F0D9B
         a                   :Title ;
         rdfs:label          "bshes spring dang de'i 'grel pa pad dkar phreng ba'i dkar chag"@bo-x-ewts .
@@ -1321,7 +1378,15 @@ bdg:MW29660 {
         a                   :Title ;
         rdfs:label          "bshes pa'i spring yig gi mchan 'grel pa pad+ma dkar po'i phreng ba/"@bo-x-ewts .
     
+    bdr:TTDFCB7BDB3E68732C
+        a                   :Title ;
+        rdfs:label          "bshes pa'i spring yig dang de yi 'grel pa pad+ma dkar po'i phreng ba/"@bo-x-ewts .
+    
     bdr:TTFCD363F0B9EB3541
         a                   :Title ;
         rdfs:label          "bshes pa'i spring yig gi rtsa ba/"@bo-x-ewts .
+    
+    bdr:TTFD0A11658F531BFE
+        a                   :TitlePageTitle ;
+        rdfs:label          "bshes pa'i spring yig dang de yi mchan 'grel pad+ma dkar po'i phreng ba/"@bo-x-ewts .
 }

@@ -12,11 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW5926 {
+    bda:LG1D75ABDEEB4703DA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3E63376ECF34DECF
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-02T15:04:46.949Z"^^xsd:dateTime ;
         adm:logMessage      "annotation added and typo corrected"@en ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG7A19C05209D6FBF1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T14:12:27.767Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGDCB523D0BC5CF88A
         a                   adm:UpdateOutlineData ;
@@ -24,14 +34,33 @@ bdg:MW5926 {
         adm:logMessage      "added image numbers for volume 6 and 7"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW5926  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2GS83" ;
         adm:adminAbout      bdr:MW5926 ;
-        adm:facetIndex      176 ;
-        adm:logEntry        bda:LG3E63376ECF34DECF , bda:LGDCB523D0BC5CF88A ;
+        adm:facetIndex      188 ;
+        adm:gitPath         "3b/MW5926.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW5926 ;
+        adm:logEntry        bda:LG1D75ABDEEB4703DA , bda:LG3E63376ECF34DECF , bda:LG7A19C05209D6FBF1 , bda:LGDCB523D0BC5CF88A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith: outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02788E6BF295D8E0
         a                   :ContentLocation ;
@@ -642,7 +671,42 @@ bdg:MW5926 {
         :contentLocationPage  479 ;
         :contentLocationVolume  7 .
     
-    bdr:MW5926  :hasPart    bdr:MW5926_0F7A5D , bdr:MW5926_2AAAF9 , bdr:MW5926_35C308 , bdr:MW5926_611504 , bdr:MW5926_C4E289 , bdr:MW5926_CC8D91 , bdr:MW5926_DAC30E ;
+    bdr:EVABD592769F0B0D31
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID051701EE149ED8BA
+        a                   bdr:HollisId ;
+        rdf:value           "014260980" .
+    
+    bdr:ID5E11D7A536C77276
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83905048" .
+    
+    bdr:IDD65E5D95C72F6940
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .N335 1983" .
+    
+    bdr:MW5926  a           :Instance ;
+        skos:altLabel       "the collected works of chos-rje nag-dban-dpal-ldan of urga"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang dpal ldan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID051701EE149ED8BA , bdr:ID5E11D7A536C77276 , bdr:IDD65E5D95C72F6940 ;
+        :biblioNote         "reproduced from clear prints of the urga blocks"@en ;
+        :hasPart            bdr:MW5926_0F7A5D , bdr:MW5926_2AAAF9 , bdr:MW5926_35C308 , bdr:MW5926_611504 , bdr:MW5926_C4E289 , bdr:MW5926_CC8D91 , bdr:MW5926_DAC30E ;
+        :hasSourcePrintery  bdr:G3JT12593 ;
+        :hasTitle           bdr:TT459A8A97435B5B76 , bdr:TT5440C5AFB7E31988 , bdr:TTFC088BECC6D9BBF4 ;
+        :instanceEvent      bdr:EVABD592769F0B0D31 ;
+        :instanceHasReproduction  bdr:W5926 ;
+        :instanceOf         bdr:WA5926 ;
+        :isRoot             true ;
+        :note               bdr:NT626F4CA14C1E207C ;
+        :numberOfVolumes    7 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "mongolian lama gurudeva"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "7 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW5926_023642
@@ -1896,6 +1960,10 @@ bdg:MW5926 {
         :partTreeIndex      "7.08" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT626F4CA14C1E207C
+        a                   :Note ;
+        :noteText           "other examples\nFive volume printed gsung 'bum from Urga with other manuscript works which were not included. Described in v.2,  Materials for a history of Tibetan literature.\nCopies:\nOriental Institute u. 52, Gdk, State Library in Ulan Bator"@en .
+    
     bdr:TT010CEFA57C402389
         a                   :Title ;
         rdfs:label          "rje btsun bla ma dam pa 'dul ba 'dzin pa ngag dbang dpal ldan bzang po'i gsung 'bum ga pa'i dkar chag (ga)"@bo-x-ewts .
@@ -2004,6 +2072,10 @@ bdg:MW5926 {
         a                   :TitlePageTitle ;
         rdfs:label          "bka' drin zla med rtsa ba'i bla ma nges pa don gyi mkhas pa chen po ngag dbang dpal ldan pa'i mtshan can gyi yon tan brjod pa'i sgo nas bstod pa'i snyan tshig dpyid kyi dpal mo'i glu dbyangs/"@bo-x-ewts .
     
+    bdr:TT459A8A97435B5B76
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang dpal ldan/"@bo-x-ewts .
+    
     bdr:TT4E2F1EB596B24AF8
         a                   :Title ;
         rdfs:label          "sdom gsum gyi bslab bya mdo tsam bshad pa/"@bo-x-ewts .
@@ -2015,6 +2087,10 @@ bdg:MW5926 {
     bdr:TT5302379D6D061668
         a                   :Title ;
         rdfs:label          "zab lam rim gnyis sgom pa'i sngon 'gro'i chos khrid chen bzhir grags pa'i 'don ha'i rim pa ("@bo-x-ewts .
+    
+    bdr:TT5440C5AFB7E31988
+        a                   :CoverTitle ;
+        rdfs:label          "rje btsun bla ma 'dul 'dzin nag dban dpal ldan gyi gsung 'bum"@bo-alalc97 .
     
     bdr:TT58E810151AA697D3
         a                   :Title ;
@@ -2227,6 +2303,10 @@ bdg:MW5926 {
     bdr:TTF5B2BA3D807B6FFF
         a                   :Title ;
         rdfs:label          "byang chub lam gyi rim pa'i stod cha/"@bo-x-ewts .
+    
+    bdr:TTFC088BECC6D9BBF4
+        a                   :Title ;
+        rdfs:label          "the collected works of chos-rje nag-dban-dpal-ldan of urga"@en-x-mixed .
     
     bdr:TTFD7196E4239EC8F9
         a                   :Title ;

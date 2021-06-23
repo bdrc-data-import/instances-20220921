@@ -12,20 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ1019 {
+    bda:LG126962D0E08A36AA
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-01-17T11:52:15.799Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG377F3DC2BF63098F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-01-18T14:00:10.628Z"^^xsd:dateTime ;
+        adm:logMessage      "refreshed"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG911980C99E96EEFF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-04-22T15:29:29.729Z"^^xsd:dateTime ;
+        adm:logMessage      "add topic"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGA1854231AAA507A0
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:46.421Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW4CZ1019  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ1019" ;
         adm:adminAbout      bdr:MW4CZ1019 ;
-        adm:facetIndex      172 ;
-        adm:logEntry        bda:LGA1854231AAA507A0 ;
+        adm:facetIndex      180 ;
+        adm:gitPath         "75/MW4CZ1019.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW4CZ1019 ;
+        adm:logEntry        bda:LG126962D0E08A36AA , bda:LG377F3DC2BF63098F , bda:LG911980C99E96EEFF , bda:LGA1854231AAA507A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01C50B6563259AE8
         a                   :ContentLocation ;
@@ -622,7 +659,24 @@ bdg:MW4CZ1019 {
         :contentLocationPage  430 ;
         :contentLocationVolume  2 .
     
-    bdr:MW4CZ1019  :hasPart  bdr:MW4CZ1019_BF9DCF , bdr:MW4CZ1019_C2513F ;
+    bdr:IDA2A2A1761778A8EE
+        a                   bdr:HollisId ;
+        rdf:value           "014260877" .
+    
+    bdr:MW4CZ1019  a        :Instance ;
+        skos:prefLabel      "bsod nams rtse mo'i gsung 'bum/（bris ma/）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA2A2A1761778A8EE ;
+        :biblioNote         "photograph from rare an old dbu med manuscript from tbrc collection"@en ;
+        :hasPart            bdr:MW4CZ1019_BF9DCF , bdr:MW4CZ1019_C2513F ;
+        :hasTitle           bdr:TT647D07BD0639DEF6 , bdr:TT9DA7D783F443D471 ;
+        :instanceHasReproduction  bdr:W4CZ1019 ;
+        :instanceOf         bdr:WA4CZ1019 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "2 v. (ca and cha)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW4CZ1019_04F8E4
@@ -1988,6 +2042,10 @@ bdg:MW4CZ1019 {
         a                   :Title ;
         rdfs:label          "brtag pa bzhi pas grogs rnal 'byor ma ngo shes par byas pa/"@bo-x-ewts .
     
+    bdr:TT647D07BD0639DEF6
+        a                   :TitlePageTitle ;
+        rdfs:label          "sa skya bka' 'bum las bsod nams rtse mo'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT6504EBEFA184AE8B
         a                   :Title ;
         rdfs:label          "las rgyas pa'i lha mo gsum gyi bsgrub pa'i thabs bstan par bya ba/"@bo-x-ewts .
@@ -2039,6 +2097,10 @@ bdg:MW4CZ1019 {
     bdr:TT9D2B82B767B68A9B
         a                   :Title ;
         rdfs:label          "brtag pa bzhi ba/"@bo-x-ewts .
+    
+    bdr:TT9DA7D783F443D471
+        a                   :Title ;
+        rdfs:label          "bsod nams rtse mo'i gsung 'bum/（bris ma/）"@bo-x-ewts .
     
     bdr:TT9EBF1839178FED1A
         a                   :Title ;

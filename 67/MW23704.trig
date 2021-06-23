@@ -24,6 +24,16 @@ bdg:MW23704 {
         adm:logMessage      "subject class changed from T1789 to T384"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG85CC5A5476BBAC92
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T16:45:32.082Z"^^xsd:dateTime ;
+        adm:logMessage      "aded print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGD8D514EF81F46269
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGDB25A178A1C7AC60
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2015-08-28T13:20:58.351Z"^^xsd:dateTime ;
@@ -36,14 +46,33 @@ bdg:MW23704 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23704  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD90454" ;
         adm:adminAbout      bdr:MW23704 ;
-        adm:facetIndex      53 ;
-        adm:logEntry        bda:LG4E01119B700B265E , bda:LG58090D2ABC8C3C5E , bda:LGDB25A178A1C7AC60 , bda:LGFD4B784C2804E975 ;
+        adm:facetIndex      63 ;
+        adm:gitPath         "67/MW23704.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23704 ;
+        adm:logEntry        bda:LG4E01119B700B265E , bda:LG58090D2ABC8C3C5E , bda:LG85CC5A5476BBAC92 , bda:LGD8D514EF81F46269 , bda:LGDB25A178A1C7AC60 , bda:LGFD4B784C2804E975 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the generous support of the Dzongsar khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL04CF8939F69CC128
         a                   :ContentLocation ;
@@ -291,7 +320,38 @@ bdg:MW23704 {
         :contentLocationInstance  bdr:W23704 ;
         :contentLocationPage  39 .
     
-    bdr:MW23704  :hasPart   bdr:MW23704_5DF64D , bdr:MW23704_7C94DE , bdr:MW23704_8CD430 , bdr:MW23704_A6AAEB , bdr:MW23704_E763F3 ;
+    bdr:EV34BC498F5697EBD9
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID626654E891224441
+        a                   bdr:HollisId ;
+        rdf:value           "014259050" .
+    
+    bdr:IDAD4FA0751EEB9345
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902207" .
+    
+    bdr:MW23704  a          :Instance ;
+        skos:altLabel       "tibetan legal materials : a collection of texts on the legal and administrative structure of tibet"@en ;
+        skos:prefLabel      "bod khrims yig skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID626654E891224441 , bdr:IDAD4FA0751EEB9345 ;
+        :biblioNote         "reproduced from a manuscript deb-ther preserved in the library of tibetan works and archives"@en ;
+        :dimensionsStatement  "12 x 38 cm." ;
+        :hasPart            bdr:MW23704_5DF64D , bdr:MW23704_7C94DE , bdr:MW23704_8CD430 , bdr:MW23704_A6AAEB , bdr:MW23704_E763F3 ;
+        :hasTitle           bdr:TTD4E5616DF45FFB2B , bdr:TTFA15B90D94832F65 ;
+        :instanceEvent      bdr:EV34BC498F5697EBD9 ;
+        :instanceHasReproduction  bdr:W23704 ;
+        :instanceOf         bdr:WA23704 ;
+        :isRoot             true ;
+        :note               bdr:NTCB858EF6423519D3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "136 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23704_08CB99
@@ -803,6 +863,10 @@ bdg:MW23704 {
         :partTreeIndex      "1.4.2.3.13" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTCB858EF6423519D3
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 2476"@en .
+    
     bdr:TT0E27799378D799DE
         a                   :TitlePageTitle ;
         rdfs:label          "dper brjod ga'u le'i dper brjod/"@bo-x-ewts .
@@ -827,7 +891,15 @@ bdg:MW23704 {
         a                   :Title ;
         rdfs:label          "khrims 'degs kyi ang rim/"@bo-x-ewts .
     
+    bdr:TTD4E5616DF45FFB2B
+        a                   :TitlePageTitle ;
+        rdfs:label          "tibetan legal materials : a collection of texts on the legal and administrative structure of tibet"@en .
+    
     bdr:TTDE639550ACEDEA60
         a                   :Title ;
         rdfs:label          "khrims yig zhal lce bcu gnyis pa/"@bo-x-ewts .
+    
+    bdr:TTFA15B90D94832F65
+        a                   :Title ;
+        rdfs:label          "bod khrims yig skor/"@bo-x-ewts .
 }

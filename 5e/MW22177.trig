@@ -12,11 +12,27 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22177 {
+    bda:LG0DF5A415574C299A
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-28T09:47:50.084Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG2A53FCE29455C516
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-02-28T13:46:52.279Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LG345BEB768623300F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG4BEB69C67561A7CA
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-11-16T16:00:24.722Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LGAC6F21C5BA0D5D66
         a                   adm:InitialOutlineDataImport ;
@@ -30,14 +46,33 @@ bdg:MW22177 {
         adm:logMessage      "reviewed anfd released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22177  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O22177" ;
         adm:adminAbout      bdr:MW22177 ;
-        adm:facetIndex      50 ;
-        adm:logEntry        bda:LG2A53FCE29455C516 , bda:LGAC6F21C5BA0D5D66 , bda:LGDBCD9D8470DA4D2C ;
+        adm:facetIndex      58 ;
+        adm:gitPath         "5e/MW22177.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22177 ;
+        adm:logEntry        bda:LG0DF5A415574C299A , bda:LG2A53FCE29455C516 , bda:LG345BEB768623300F , bda:LG4BEB69C67561A7CA , bda:LGAC6F21C5BA0D5D66 , bda:LGDBCD9D8470DA4D2C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL12FD0BDED728D68A
         a                   :ContentLocation ;
@@ -200,7 +235,26 @@ bdg:MW22177 {
         :contentLocationPage  265 ;
         :contentLocationVolume  3 .
     
-    bdr:MW22177  :hasPart   bdr:MW22177_909F35 , bdr:MW22177_B16237 , bdr:MW22177_F3A665 ;
+    bdr:ID44C307294F49F0C7
+        a                   bdr:HollisId ;
+        rdf:value           "014258680" .
+    
+    bdr:MW22177  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_thub bstan yar 'phel dbang po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID44C307294F49F0C7 ;
+        :biblioNote         "impressions from the lhasa blocks"@en ;
+        :hasPart            bdr:MW22177_909F35 , bdr:MW22177_B16237 , bdr:MW22177_F3A665 ;
+        :hasSourcePrintery  bdr:G1PD129185 ;
+        :hasTitle           bdr:TT4F6BD0E64B14A61A , bdr:TTA96C293EB70D9C19 ;
+        :instanceHasReproduction  bdr:W22177 ;
+        :instanceOf         bdr:WA22177 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa/]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22177_06175D
@@ -580,6 +634,10 @@ bdg:MW22177 {
         a                   :Title ;
         rdfs:label          "pod kha pa'i dkar chags/"@bo-x-ewts .
     
+    bdr:TT4F6BD0E64B14A61A
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_thub bstan yar 'phel dbang po/"@bo-x-ewts .
+    
     bdr:TT55BC9EC4669E880C
         a                   :Title ;
         rdfs:label          "rje btsun ma sgrol dkar yid bzhin 'khor lo'i bsgom bzlas bya tshul gyi rim pa rgyas par bkod pa tshe dang ye shes bsod nams spel pa'i rin po che'i phreng ba/"@bo-x-ewts .
@@ -615,6 +673,10 @@ bdg:MW22177 {
     bdr:TT9BD35D2CD351B6A2
         a                   :Title ;
         rdfs:label          "bcom ldan 'das kun rig rnam par snang mdzad kyi bdag bskyed mdor bsdus nyams su len tshul dag byed bdud rtsi'i snying po/"@bo-x-ewts .
+    
+    bdr:TTA96C293EB70D9C19
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun bla ma thub bstan yar 'phel dpal bzang po'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TTB144D65EDC3EA685
         a                   :Title ;

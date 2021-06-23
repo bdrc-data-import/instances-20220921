@@ -48,6 +48,16 @@ bdg:MW23958 {
         adm:logMessage      "fixed problem"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG8D99D0506697CEA1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T12:35:03.036Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG9646F2A0BCA30598
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGCA960D62A665727F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-11T11:42:13.107Z"^^xsd:dateTime ;
@@ -77,14 +87,33 @@ bdg:MW23958 {
         adm:logDate         "2010-03-26T12:29:57.084Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23958  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD100555" ;
         adm:adminAbout      bdr:MW23958 ;
-        adm:facetIndex      126 ;
-        adm:logEntry        bda:LG28DEB029EBBA352D , bda:LG3F977541F63A4CE0 , bda:LG473F177759AF7BA6 , bda:LG539537D9E0E8815E , bda:LG710263ED3D11A3A9 , bda:LG85046694FA4123A0 , bda:LGCA960D62A665727F , bda:LGEB8BB0DACFF3BE5B , bda:LGEDD462517E8717B2 , bda:LGF1AD344EA6382CBD , bda:LGF1BB6BC21497B199 ;
+        adm:facetIndex      137 ;
+        adm:gitPath         "72/MW23958.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23958 ;
+        adm:logEntry        bda:LG28DEB029EBBA352D , bda:LG3F977541F63A4CE0 , bda:LG473F177759AF7BA6 , bda:LG539537D9E0E8815E , bda:LG710263ED3D11A3A9 , bda:LG85046694FA4123A0 , bda:LG8D99D0506697CEA1 , bda:LG9646F2A0BCA30598 , bda:LGCA960D62A665727F , bda:LGEB8BB0DACFF3BE5B , bda:LGEDD462517E8717B2 , bda:LGF1AD344EA6382CBD , bda:LGF1BB6BC21497B199 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; created with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL13E6520741C701C7
         a                   :ContentLocation ;
@@ -446,7 +475,40 @@ bdg:MW23958 {
         :contentLocationPage  426 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23958  :hasPart   bdr:MW23958_AA524A , bdr:MW23958_F34628 ;
+    bdr:EV01947E2D6A3363CC
+        a                   :PublishedEvent ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:ID02CE633619F1B3C2
+        a                   bdr:HollisId ;
+        rdf:value           "014259266" .
+    
+    bdr:IDAA477D54BD158B0D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7576 .D62" .
+    
+    bdr:IDF400A46DCD84AA92
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80900114" .
+    
+    bdr:MW23958  a          :Instance ;
+        skos:prefLabel      "rgya bod kyi yig tshang mkhas pa dga' byed chen mo 'dzam gling gsal ba'i me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID02CE633619F1B3C2 , bdr:IDAA477D54BD158B0D , bdr:IDF400A46DCD84AA92 ;
+        :authorshipStatement  "g.yas ru stag tshang pa dpal 'byor bzang pos/"@bo-x-ewts ;
+        :hasPart            bdr:MW23958_AA524A , bdr:MW23958_F34628 ;
+        :hasTitle           bdr:TT910045CC9FABDC35 , bdr:TTD1B03FCEA477E752 ;
+        :instanceEvent      bdr:EV01947E2D6A3363CC ;
+        :instanceHasReproduction  bdr:W23958 ;
+        :instanceOf         bdr:WA23958 ;
+        :isRoot             true ;
+        :note               bdr:NTB5E9F2B9BCBEAF18 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thim-phu"@en ;
+        :publisherName      "kunsang topgyel and mani dorji"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23958_056A4A
@@ -1193,6 +1255,10 @@ bdg:MW23958 {
         :workGenre          bdr:T1134 ;
         :workIsAbout        bdr:T359 .
     
+    bdr:NTB5E9F2B9BCBEAF18
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf images\n3589-3590"@en .
+    
     bdr:TT040F8AF491BAF78C
         a                   :Title ;
         rdfs:label          "dbus gtsang khri skor gyi dud grangs dang / 'ja' mo 'dzin lugs/"@bo-x-ewts .
@@ -1313,6 +1379,10 @@ bdg:MW23958 {
         a                   :Title ;
         rdfs:label          "chos rje'i bu chen shar nub gung gsum dang / khang gsar la sogs byon tshul/"@bo-x-ewts .
     
+    bdr:TT910045CC9FABDC35
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgya bod kyi yig tshang mkhas pa dga' byed chen mo 'dzam gling gsal ba'i me long /"@bo-x-ewts .
+    
     bdr:TT96CEA8DE5B5ACC1D
         a                   :OtherTitle ;
         rdfs:label          "lha pa'i chos brgyud byung tshul/"@bo-x-ewts .
@@ -1392,6 +1462,10 @@ bdg:MW23958 {
     bdr:TTCE6D626CD8D1FCA4
         a                   :Title ;
         rdfs:label          "phag gru bka' brgyud byung tshul/"@bo-x-ewts .
+    
+    bdr:TTD1B03FCEA477E752
+        a                   :Title ;
+        rdfs:label          "rgya bod yig tshang chen mo/"@bo-x-ewts .
     
     bdr:TTD94667093EC59C0F
         a                   :ColophonTitle ;

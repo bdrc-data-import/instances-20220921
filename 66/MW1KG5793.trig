@@ -12,20 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG5793 {
+    bda:LG9F2E186979EB2ED4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-08-18T09:16:39.739Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGEC43C3D74830BF96
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-30T11:23:07.298Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00006 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG5793  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG5793" ;
         adm:adminAbout      bdr:MW1KG5793 ;
-        adm:facetIndex      194 ;
-        adm:logEntry        bda:LGEC43C3D74830BF96 ;
+        adm:facetIndex      201 ;
+        adm:gitPath         "66/MW1KG5793.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5793 ;
+        adm:logEntry        bda:LG9F2E186979EB2ED4 , bda:LGEC43C3D74830BF96 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0091A8B297D7C6C3
         a                   :ContentLocation ;
@@ -699,7 +724,31 @@ bdg:MW1KG5793 {
         :contentLocationPage  321 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG5793  :hasPart  bdr:MW1KG5793_0FED0A , bdr:MW1KG5793_4FA337 , bdr:MW1KG5793_EAEEDB ;
+    bdr:EVC0199D3797E485F5
+        a                   :PublishedEvent ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:ID0E4305C04247E779
+        a                   bdr:HollisId ;
+        rdf:value           "014257197" .
+    
+    bdr:MW1KG5793  a        :Instance ;
+        skos:prefLabel      "gsung 'bum/_dkon mchog bstan 'dzin/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0E4305C04247E779 ;
+        :biblioNote         "printed from computerized input"@en ;
+        :hasPart            bdr:MW1KG5793_0FED0A , bdr:MW1KG5793_4FA337 , bdr:MW1KG5793_EAEEDB ;
+        :hasTitle           bdr:TTC275AC6B859A716F , bdr:TTD6D059727BF85C40 ;
+        :instanceEvent      bdr:EVC0199D3797E485F5 ;
+        :instanceHasReproduction  bdr:W1KG5793 ;
+        :instanceOf         bdr:WA1KG5793 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "khri'u tu'u"@en ;
+        :publisherName      "gzu dgon rig gzhung nyams gso khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG5793 ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG5793_0691AF
@@ -2393,6 +2442,10 @@ bdg:MW1KG5793 {
         a                   :Title ;
         rdfs:label          "gtsug lag sa dpyad mang po'i don bsdus legs bshad nor bu'i phreng ba/"@bo-x-ewts .
     
+    bdr:TTC275AC6B859A716F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dkon mchog bstan 'dzin/"@bo-x-ewts .
+    
     bdr:TTC2BEBBD911E2D123
         a                   :Title ;
         rdfs:label          "gza' lnga'i myur ba dag pa'i bskal rtsis zhag gsum tun mong la spyod pa mkhas pa'i yid 'phrog"@bo-x-ewts .
@@ -2420,6 +2473,10 @@ bdg:MW1KG5793 {
     bdr:TTD3929A245F36E433
         a                   :Title ;
         rdfs:label          "zab mo nang don gyi mchan 'grel gzhung du nye bar mkho ba'i zur rgyan/"@bo-x-ewts .
+    
+    bdr:TTD6D059727BF85C40
+        a                   :TitlePageTitle ;
+        rdfs:label          "mkhas dbang dkon mchog bstan 'dzin gyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TTDBDCA0A757464EAB
         a                   :Title ;

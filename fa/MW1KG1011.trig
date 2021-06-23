@@ -24,6 +24,12 @@ bdg:MW1KG1011 {
         adm:logMessage      "Normalazed"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG6B95C4FBBDEFBF8D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-11-17T16:55:20.903Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG6F4DDD3862A04CEC
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.4" ;
@@ -42,14 +48,39 @@ bdg:MW1KG1011 {
         adm:logMessage      "fixed numbers and normalazed"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGDDD96BE1A1D47040
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-14T12:13:03.776Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG1011  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG1011" ;
         adm:adminAbout      bdr:MW1KG1011 ;
-        adm:facetIndex      400 ;
-        adm:logEntry        bda:LG2B6907E77121EB43 , bda:LG4D85709A7FF72B4A , bda:LG6F4DDD3862A04CEC , bda:LG7192E97E2ABAD98D , bda:LG79ECB2E2620443B0 ;
+        adm:facetIndex      409 ;
+        adm:gitPath         "fa/MW1KG1011.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1011 ;
+        adm:logEntry        bda:LG2B6907E77121EB43 , bda:LG4D85709A7FF72B4A , bda:LG6B95C4FBBDEFBF8D , bda:LG6F4DDD3862A04CEC , bda:LG7192E97E2ABAD98D , bda:LG79ECB2E2620443B0 , bda:LGDDD96BE1A1D47040 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Palri Parkhang Nepal via TBRC Convert2Outline version: 1.5.4 Kesang lhamo added missing node"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01E182F135D10DD3
         a                   :ContentLocation ;
@@ -1403,7 +1434,32 @@ bdg:MW1KG1011 {
         :contentLocationPage  134 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG1011  :hasPart  bdr:MW1KG1011_13D29B , bdr:MW1KG1011_1BE260 ;
+    bdr:EV6427CC9AB8A8F42C
+        a                   :PublishedEvent ;
+        :onOrAbout          "1980,1982" .
+    
+    bdr:ID8D14747C2132FD5F
+        a                   bdr:HollisId ;
+        rdf:value           "014255580" .
+    
+    bdr:MW1KG1011  a        :Instance ;
+        skos:altLabel       "the regular rituals of skyid grong bkra shis bsam gtan gling and the other establishments of the tshe mchog gling tradition"@en ;
+        skos:prefLabel      "tshe mchog gling gi chos spyod rab gsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8D14747C2132FD5F ;
+        :hasPart            bdr:MW1KG1011_13D29B , bdr:MW1KG1011_1BE260 ;
+        :hasSourcePrintery  bdr:G3JT12523 ;
+        :hasTitle           bdr:TT1498A8226DD9F8A1 , bdr:TT1A07D77F03592431 , bdr:TT4FBF059586AB370F ;
+        :instanceEvent      bdr:EV6427CC9AB8A8F42C ;
+        :instanceHasReproduction  bdr:W1KG1011 ;
+        :instanceOf         bdr:WA1KG1011 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "ngawang sopa"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v. (v.1, 226 p.; v.2, 348 p.)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG1011_0096BD
@@ -4189,6 +4245,10 @@ bdg:MW1KG1011 {
         a                   :Title ;
         rdfs:label          "thun mtshams su ji ltar bya ba'i tshul/"@bo-x-ewts .
     
+    bdr:TT1498A8226DD9F8A1
+        a                   :TitlePageTitle ;
+        rdfs:label          "dben gnas tshe mchog bsam gtan gling gi chos spyod kyi rim pa 'ga' zhig phyogs gcig tu bkod pa rgyal ba'i gzhung lam/"@bo-x-ewts .
+    
     bdr:TT14E2E0400B98A880
         a                   :Title ;
         rdfs:label          "snying po ji ltar len pa'i tshul/"@bo-x-ewts .
@@ -4204,6 +4264,10 @@ bdg:MW1KG1011 {
     bdr:TT19FD85436372FC6F
         a                   :Title ;
         rdfs:label          "kun tu zhi mdzad ma sgrub tshul/"@bo-x-ewts .
+    
+    bdr:TT1A07D77F03592431
+        a                   :Title ;
+        rdfs:label          "tshe mchog gling gi chos spyod rab gsal/"@bo-x-ewts .
     
     bdr:TT1A95D0FF493EAE50
         a                   :Title ;
@@ -4408,6 +4472,10 @@ bdg:MW1KG1011 {
     bdr:TT4EC02B4F84760859
         a                   :Title ;
         rdfs:label          "rnyed par dka' ba bsam pa/"@bo-x-ewts .
+    
+    bdr:TT4FBF059586AB370F
+        a                   :OtherTitle ;
+        rdfs:label          "the regular rituals of skyid grong bkra shis bsam gtan gling and the other establishments of the tshe mchog gling tradition"@en .
     
     bdr:TT4FDACF9E1E657F72
         a                   :Title ;

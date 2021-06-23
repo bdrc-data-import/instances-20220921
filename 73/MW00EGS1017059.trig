@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1017059 {
+    bda:LG015CF977595FC7D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-05T09:24:31.248Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG22601B16EB5E7BA5
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-10-20T12:40:34.985Z"^^xsd:dateTime ;
@@ -29,15 +35,46 @@ bdg:MW00EGS1017059 {
         adm:logMessage      "lo rgyus dang dang sa cha mdo gnon yod"@en ;
         adm:logWho          bdu:U00013 .
     
+    bda:LG82FCE542F9F93DA9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-26T00:59:00.656Z"^^xsd:dateTime ;
+        adm:logMessage      "published to create scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1017059
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB90408" ;
         adm:adminAbout      bdr:MW00EGS1017059 ;
-        adm:facetIndex      24 ;
-        adm:logEntry        bda:LG22601B16EB5E7BA5 , bda:LG5BF1BD62D464CF32 , bda:LG73A166CDA5D72489 ;
+        adm:facetIndex      36 ;
+        adm:gitPath         "73/MW00EGS1017059.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1017059 ;
+        adm:logEntry        bda:LG015CF977595FC7D4 , bda:LG22601B16EB5E7BA5 , bda:LG5BF1BD62D464CF32 , bda:LG73A166CDA5D72489 , bda:LG82FCE542F9F93DA9 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0894B8455A557AF7
         a                   :ContentLocation ;
@@ -93,8 +130,44 @@ bdg:MW00EGS1017059 {
         :contentLocationInstance  bdr:W00EGS1017059 ;
         :contentLocationPage  99 .
     
+    bdr:EV99831F4E7BB0B1FD
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID12BE877392988E0E
+        a                   bdr:HollisId ;
+        rdf:value           "014253954" .
+    
+    bdr:ID304F4461672B9527
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84903606" .
+    
+    bdr:ID568B96A638DBBC55
+        a                   bdr:PL480 ;
+        rdf:value           "i tib 2360" .
+    
+    bdr:ID99546134895C7953
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6450.N35 B35 1983" .
+    
     bdr:MW00EGS1017059
+        a                   :Instance ;
+        skos:altLabel       "a collection of the guidebooks to the great stupas of the kathmandu valley and the various other places of buddhist pilgrimage"@en ;
+        skos:prefLabel      "bal yul mchod rten gsum gyi lo rgyus dang gnas bshad gangs can rna ba'i bdud rtsi/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID12BE877392988E0E , bdr:ID304F4461672B9527 , bdr:ID568B96A638DBBC55 , bdr:ID99546134895C7953 ;
         :hasPart            bdr:MW00EGS1017059_2E08EE , bdr:MW00EGS1017059_3D362D , bdr:MW00EGS1017059_5642CE , bdr:MW00EGS1017059_600F94 , bdr:MW00EGS1017059_706867 , bdr:MW00EGS1017059_7FF645 , bdr:MW00EGS1017059_949A8E , bdr:MW00EGS1017059_9D4344 , bdr:MW00EGS1017059_F2BA6C ;
+        :hasTitle           bdr:TT621F9A6F922BF9BC , bdr:TTC4E7257AAE3825B4 ;
+        :instanceEvent      bdr:EV99831F4E7BB0B1FD ;
+        :instanceHasReproduction  bdr:W00EGS1017059 ;
+        :instanceOf         bdr:WA00EGS1017059 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab sgyaltsen and lama dawa"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "336 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1017059_2E08EE
@@ -235,6 +308,10 @@ bdg:MW00EGS1017059 {
         a                   :Title ;
         rdfs:label          "dpal yang le shod rig 'dzin grub pa'i dga' tshal gyi sgrub sde'i bca' yig sdom gsum mdzes rgyan/"@bo-x-ewts .
     
+    bdr:TT621F9A6F922BF9BC
+        a                   :Title ;
+        rdfs:label          "bal yul mchod rten gsum gyi lo rgyus dang gnas bshad gangs can rna ba'i bdud rtsi/"@bo-x-ewts .
+    
     bdr:TT75E8226EB99B41E2
         a                   :Title ;
         rdfs:label          "mchod rten chen po bya rung kha shor gyi lo rgyus thos bas grol ba/"@bo-x-ewts .
@@ -250,6 +327,10 @@ bdg:MW00EGS1017059 {
     bdr:TTB83A03E563F2159F
         a                   :Title ;
         rdfs:label          "gu ru'i gsol 'debs bar chad kun sel bsam don myur 'grub/"@bo-x-ewts .
+    
+    bdr:TTC4E7257AAE3825B4
+        a                   :Subtitle ;
+        rdfs:label          "a collection of the guidebooks to the great stupas of the kathmandu valley and the various other places of buddhist pilgrimage"@en .
     
     bdr:TTCD27EE5E1FB761EC
         a                   :Title ;

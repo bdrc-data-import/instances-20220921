@@ -18,14 +18,37 @@ bdg:MW20212 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG29B747D3F7DEAFED
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20212  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS140554" ;
         adm:adminAbout      bdr:MW20212 ;
-        adm:facetIndex      162 ;
-        adm:logEntry        bda:LG10540243E4624538 ;
+        adm:facetIndex      168 ;
+        adm:gitPath         "85/MW20212.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20212 ;
+        adm:logEntry        bda:LG10540243E4624538 , bda:LG29B747D3F7DEAFED , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL030402520E094C3F
         a                   :ContentLocation ;
@@ -987,7 +1010,33 @@ bdg:MW20212 {
         :contentLocationInstance  bdr:W20212 ;
         :contentLocationPage  21 .
     
-    bdr:MW20212  :hasPart   bdr:MW20212_150670 , bdr:MW20212_5628AB ;
+    bdr:EV2DE8835DD5616095
+        a                   :PublishedEvent ;
+        :onOrAbout          "pref.1994" .
+    
+    bdr:ID6BD9C8F08E598963
+        a                   bdr:HollisId ;
+        rdf:value           "014258091" .
+    
+    bdr:MW20212  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "dga' ldan dgon pa dang brag yer pa'i lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6BD9C8F08E598963 ;
+        :authorshipStatement  "grong khyer lha sa srid gros lo rgyus rig gnas dpyad yig rgyu cha rtsom 'bri u yon lhan khang nas rtsom 'bri byas/"@bo-x-ewts ;
+        :hasPart            bdr:MW20212_150670 , bdr:MW20212_5628AB ;
+        :hasTitle           bdr:TTCCFB5A97A621BED2 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV2DE8835DD5616095 ;
+        :instanceHasReproduction  bdr:W20212 ;
+        :instanceOf         bdr:WA20212 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "grong khyer lha sa'i khul/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS19856 ;
+        :seriesNumber       "deb 2." ;
+        :workExtentStatement  "131 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20212_002B7A
@@ -2811,4 +2860,8 @@ bdg:MW20212 {
         :partOf             bdr:MW20212_150670 ;
         :partTreeIndex      "1.07" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTCCFB5A97A621BED2
+        a                   :Title ;
+        rdfs:label          "dga' ldan dgon pa dang brag yer pa'i lo rgyus/"@bo-x-ewts .
 }

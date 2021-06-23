@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03658 {
+    bda:LG42B83D2EAED515D0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-10-10T17:13:24.75Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG651E848859CCA5F5
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-16T10:27:55.786Z"^^xsd:dateTime ;
@@ -22,14 +28,47 @@ bdg:MW00KG03658 {
         adm:logDate         "2010-02-12T14:06:53.002Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00KG03658  a      adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS5380" ;
         adm:adminAbout      bdr:MW00KG03658 ;
-        adm:facetIndex      39 ;
-        adm:logEntry        bda:LG651E848859CCA5F5 , bda:LGF609C301F0E37FA2 ;
+        adm:facetIndex      53 ;
+        adm:gitPath         "35/MW00KG03658.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG03658 ;
+        adm:logEntry        bda:LG42B83D2EAED515D0 , bda:LG651E848859CCA5F5 , bda:LGF609C301F0E37FA2 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri wit the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL11F82433E145E286
         a                   :ContentLocation ;
@@ -139,7 +178,50 @@ bdg:MW00KG03658 {
         :contentLocationInstance  bdr:W00KG03658 ;
         :contentLocationPage  12 .
     
-    bdr:MW00KG03658  :hasPart  bdr:MW00KG03658_009746 , bdr:MW00KG03658_039DC7 , bdr:MW00KG03658_06420C , bdr:MW00KG03658_0B6130 , bdr:MW00KG03658_105DA8 , bdr:MW00KG03658_175E93 , bdr:MW00KG03658_232E60 , bdr:MW00KG03658_3FF606 , bdr:MW00KG03658_44F850 , bdr:MW00KG03658_6A38A4 , bdr:MW00KG03658_758202 , bdr:MW00KG03658_A096B3 , bdr:MW00KG03658_BCF3A0 , bdr:MW00KG03658_BD6161 , bdr:MW00KG03658_C90965 , bdr:MW00KG03658_DD6ED3 , bdr:MW00KG03658_F63FB1 , bdr:MW00KG03658_FE321C ;
+    bdr:EV1596043223CC6FD8
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID421086AC3C4234A8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003310518" .
+    
+    bdr:ID83C04A83870619A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "818622730x" .
+    
+    bdr:IDBADE2E3BCA0081EB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "UB419.C6 B57 2002" .
+    
+    bdr:IDE27EF557999F187D
+        a                   bdr:HollisId ;
+        rdf:value           "014254384" .
+    
+    bdr:IDEDB2C19A224CCE0E
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009765326-8" .
+    
+    bdr:MW00KG03658  a      :Instance , :SerialInstance ;
+        skos:altLabel       "Yab-bźis Gʾyu-thog sa dbaṅ dam pa Bkra-śis-don-grub mchog gi sku tsheʾi byuṅ ba che loṅ tsam ma bcos lhug par brjod pa bźugs so /Gʾyu-thog Tshe-riṅ-sgrol-dkar gyis brtsams."@en-x-mixed ;
+        skos:prefLabel      "g.yu thog sa dbang dam pa bkra shis don grub mchog gi sku tshe'i byung ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID421086AC3C4234A8 , bdr:ID83C04A83870619A9 , bdr:IDBADE2E3BCA0081EB , bdr:IDE27EF557999F187D , bdr:IDEDB2C19A224CCE0E ;
+        :authorshipStatement  "g.yu thog tshe ring sgrol dkar gyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW00KG03658_009746 , bdr:MW00KG03658_039DC7 , bdr:MW00KG03658_06420C , bdr:MW00KG03658_0B6130 , bdr:MW00KG03658_105DA8 , bdr:MW00KG03658_175E93 , bdr:MW00KG03658_232E60 , bdr:MW00KG03658_3FF606 , bdr:MW00KG03658_44F850 , bdr:MW00KG03658_6A38A4 , bdr:MW00KG03658_758202 , bdr:MW00KG03658_A096B3 , bdr:MW00KG03658_BCF3A0 , bdr:MW00KG03658_BD6161 , bdr:MW00KG03658_C90965 , bdr:MW00KG03658_DD6ED3 , bdr:MW00KG03658_F63FB1 , bdr:MW00KG03658_FE321C ;
+        :hasTitle           bdr:TT66F2AA19B9D3B086 , bdr:TT8071E530998D21B8 , bdr:TTC23D88D542947B0C ;
+        :illustrations      "ills." ;
+        :instanceEvent      bdr:EV1596043223CC6FD8 ;
+        :instanceHasReproduction  bdr:W00KG03658 ;
+        :instanceOf         bdr:WA00KG03658 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dha ram sa la"@en ;
+        :publisherName      "a myes rma chen bod kyi zhib 'jug khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG03658 ;
+        :seriesNumber       "6" ;
+        :workExtentStatement  "204 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00KG03658_009746
@@ -424,9 +506,17 @@ bdg:MW00KG03658 {
         a                   :TitlePageTitle ;
         rdfs:label          "zur rgyan gsum pa/ 'brel yod dbyin bod yig cha ngo ma khag dpar bshus gung bsgrigs pa/"@bo-x-ewts .
     
+    bdr:TT66F2AA19B9D3B086
+        a                   :TitlePageTitle ;
+        rdfs:label          "yab gzhis g.yu thog sa dbang dam pa bkra shis don grub mchog gi sku tshe'i byung ba che long tsam ma bcos lhug par brjod pa/"@bo-x-ewts .
+    
     bdr:TT7FC568D7386B295A
         a                   :TitlePageTitle ;
         rdfs:label          "zur rgyan gnyis pa/ deng rabs rgyal spyi'i gnas tshul 'pho 'gyur sogs la thugs snang rgyus can thog bod kyi brda sprod rig gnas lo rgyus sogs la byang chub pa/ gzur gnas mkhas dbang khu nu mthar phyin b+h pu mchog nas/ phyi lo 1963 nang btsan byol bod mi'i khrod du dngos yod gnas tshul khyab brdal ji yod mtshon pa'i gsar 'gyur gyi dpe mtshon zhig yul phyogs so so'i gsar 'gyur me long/ chu yos hor zla dang po/ 1963 phyi zla gnyis pa gsum pa/ lo/ 28 ang/ 3 shogs grangs 8 pa'i 'go brjod du/ nyes pa med na rgyal kha thob/ ces par gzigs mdzod/"@bo-x-ewts .
+    
+    bdr:TT8071E530998D21B8
+        a                   :CoverTitle ;
+        rdfs:label          "Yab-bźis Gʾyu-thog sa dbaṅ dam pa Bkra-śis-don-grub mchog gi sku tsheʾi byuṅ ba che loṅ tsam ma bcos lhug par brjod pa bźugs so /Gʾyu-thog Tshe-riṅ-sgrol-dkar gyis brtsams."@en-x-mixed .
     
     bdr:TT84190DC05ADA104C
         a                   :TitlePageTitle ;
@@ -451,6 +541,10 @@ bdg:MW00KG03658 {
     bdr:TTA97BF04D6D8D61E3
         a                   :TitlePageTitle ;
         rdfs:label          "7gong sa skyabs mgon chen po mchog rgya gar nas bod du phyir phebs skabs sgang tog tu phebs bsur bcar ba nas rgya gar du bzhugs ring gi gnas tshul skor/"@bo-x-ewts .
+    
+    bdr:TTC23D88D542947B0C
+        a                   :Title ;
+        rdfs:label          "g.yu thog sa dbang dam pa bkra shis don grub mchog gi sku tshe'i byung ba/"@bo-x-ewts .
     
     bdr:TTD2E6EBF18BF408C1
         a                   :TitlePageTitle ;

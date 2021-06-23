@@ -12,20 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1459 {
+    bda:LG190A390F7BB9A77A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T18:16:39.111Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG268638A464BE9778
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
     bda:LGIM9630476A  a     adm:InitialDataImport ;
         adm:logDate         "2021-03-01T18:17:18.271Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1459"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1459  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG221978" ;
         adm:adminAbout      bdr:MW1NLM1459 ;
-        adm:facetIndex      10 ;
-        adm:logEntry        bda:LGIM9630476A ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "d1/MW1NLM1459.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1459 ;
+        adm:logEntry        bda:LG190A390F7BB9A77A , bda:LG268638A464BE9778 , bda:LGIM9630476A , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL6BAE4512A0A09C36
         a                   :ContentLocation ;
@@ -51,7 +74,19 @@ bdg:MW1NLM1459 {
         :contentLocationInstance  bdr:W1NLM1459 ;
         :contentLocationPage  73 .
     
-    bdr:MW1NLM1459  :hasPart  bdr:MW1NLM1459_3ACF3D , bdr:MW1NLM1459_75725A , bdr:MW1NLM1459_77DA46 , bdr:MW1NLM1459_7D94E4 ;
+    bdr:MW1NLM1459  a       :Instance ;
+        skos:prefLabel      "zab lam bla ma'i rnal 'byor gyi man ngag snying po'i rtsa tshig gi 'grel ba snyan brgyud gsang ba'i lde mig sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "46x6" ;
+        :hasPart            bdr:MW1NLM1459_3ACF3D , bdr:MW1NLM1459_75725A , bdr:MW1NLM1459_77DA46 , bdr:MW1NLM1459_7D94E4 ;
+        :hasTitle           bdr:TT0F7285350B85EB51 ;
+        :instanceHasReproduction  bdr:W1NLM1459 ;
+        :instanceOf         bdr:WA1NLM1459 ;
+        :isRoot             true ;
+        :note               bdr:NT81B0ABC9C68DD94D , bdr:NTBE926928887E316D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "36 ff., 14 ff., 5 ff., 25 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1459_3ACF3D
@@ -108,6 +143,14 @@ bdg:MW1NLM1459 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT81B0ABC9C68DD94D
+        a                   :Note ;
+        :noteText           "nlmId: M0059377"@en .
+    
+    bdr:NTBE926928887E316D
+        a                   :Note ;
+        :noteText           "missingPages: M0059377-001 [Missing page from 1A-1B] Image 101-102"@en .
+    
     bdr:TT0515110E1514205A
         a                   :Title ;
         rdfs:label          "le'u tho'i 'go brjod sogs la mkho ba'i lo dang gza' skar gyi 'bras bu rnams kyi skor brjod pa'i le'u/"@bo-x-ewts .
@@ -115,6 +158,10 @@ bdg:MW1NLM1459 {
     bdr:TT0B1C673FC288AE35
         a                   :Title ;
         rdfs:label          "zab lam bla ma'i rnal 'byor gyi man ngag snying po'i rtsa tshig gi 'grel ba snyan brgyud gsang ba'i lde mig"@bo-x-ewts .
+    
+    bdr:TT0F7285350B85EB51
+        a                   :Title ;
+        rdfs:label          "zab lam bla ma'i rnal 'byor gyi man ngag snying po'i rtsa tshig gi 'grel ba snyan brgyud gsang ba'i lde mig sogs/"@bo-x-ewts .
     
     bdr:TT13984562EC26B57A
         a                   :Title ;

@@ -12,20 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG14507 {
+    bda:LG06FA59DA212BF23C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-10-23T13:20:02.809Z"^^xsd:dateTime ;
+        adm:logMessage      "added series name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6B0DEE6E654A8ADB
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-14T12:16:02.081Z"^^xsd:dateTime ;
+        adm:logMessage      "normalised series number"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGC0450C9EC9877157
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:15.742Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGC34228936B45A3CE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-23T12:19:38.129Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG14507  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG14507" ;
         adm:adminAbout      bdr:MW1KG14507 ;
-        adm:facetIndex      2228 ;
-        adm:logEntry        bda:LGC0450C9EC9877157 ;
+        adm:facetIndex      2237 ;
+        adm:gitPath         "16/MW1KG14507.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14507 ;
+        adm:logEntry        bda:LG06FA59DA212BF23C , bda:LG6B0DEE6E654A8ADB , bda:LGC0450C9EC9877157 , bda:LGC34228936B45A3CE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL001B1FCA015CCBB5
         a                   :ContentLocation ;
@@ -7818,7 +7855,34 @@ bdg:MW1KG14507 {
         :contentLocationPage  411 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG14507  :hasPart  bdr:MW1KG14507_782E0D , bdr:MW1KG14507_8200FE , bdr:MW1KG14507_A64E2F , bdr:MW1KG14507_BF2CF7 , bdr:MW1KG14507_D01FAF , bdr:MW1KG14507_F26C70 ;
+    bdr:EVD86E9F5F135A3F4A
+        a                   :PublishedEvent ;
+        :onYear             "2011"^^xsd:gYear .
+    
+    bdr:ID650917A0EECC299C
+        a                   bdr:HollisId ;
+        rdf:value           "014256140" .
+    
+    bdr:MW1KG14507  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "gsung 'bum/_spyan snga blo gros rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID650917A0EECC299C ;
+        :biblioNote         "collected works of three volumes was printed in 6 volumes"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :hasPart            bdr:MW1KG14507_782E0D , bdr:MW1KG14507_8200FE , bdr:MW1KG14507_A64E2F , bdr:MW1KG14507_BF2CF7 , bdr:MW1KG14507_D01FAF , bdr:MW1KG14507_F26C70 ;
+        :hasTitle           bdr:TT7B1E2886F701897F , bdr:TTDB4A11EBA96DC2BA ;
+        :instanceEvent      bdr:EVD86E9F5F135A3F4A ;
+        :instanceHasReproduction  bdr:W1KG14507 ;
+        :instanceOf         bdr:WA1KG14507 ;
+        :isRoot             true ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "247-252" ;
+        :workExtentStatement  "6 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG14507_0001E4
@@ -25486,6 +25550,10 @@ bdg:MW1KG14507 {
         a                   :Title ;
         rdfs:label          "ka18)_skyes bu dpa' bo chen por gyur ba/"@bo-x-ewts .
     
+    bdr:TT7B1E2886F701897F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_spyan snga blo gros rgyal mtshan/"@bo-x-ewts .
+    
     bdr:TT7B3AD0E6C214C672
         a                   :Title ;
         rdfs:label          "ga9)rang la rtogs pa skyes pa brtag tshul bstan pa/"@bo-x-ewts .
@@ -27157,6 +27225,10 @@ bdg:MW1KG14507 {
     bdr:TTDAF8761D8683D95A
         a                   :Title ;
         rdfs:label          "theg pa chen po'i blo sbyong dogs sel/"@bo-x-ewts .
+    
+    bdr:TTDB4A11EBA96DC2BA
+        a                   :TitlePageTitle ;
+        rdfs:label          "spyan snga blo gros rgyal mtshan gyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TTDC8736C5ED2877C4
         a                   :Title ;

@@ -12,24 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22006 {
+    bda:LG4E02D2BB848C68D7
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-04-02T15:04:56.161Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG513C09A5DE645E44
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-13T10:59:16.538Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
+    
+    bda:LG533AD27545663BA4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LG7095F22CC261FD80
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-23T10:40:13.891Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22006  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS2844" ;
         adm:adminAbout      bdr:MW22006 ;
-        adm:facetIndex      35 ;
-        adm:logEntry        bda:LG513C09A5DE645E44 , bda:LG7095F22CC261FD80 ;
+        adm:facetIndex      45 ;
+        adm:gitPath         "ae/MW22006.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22006 ;
+        adm:logEntry        bda:LG4E02D2BB848C68D7 , bda:LG513C09A5DE645E44 , bda:LG533AD27545663BA4 , bda:LG7095F22CC261FD80 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL06832611F0837E3F
         a                   :ContentLocation ;
@@ -121,7 +150,40 @@ bdg:MW22006 {
         :contentLocationInstance  bdr:W22006 ;
         :contentLocationPage  210 .
     
-    bdr:MW22006  :hasPart   bdr:MW22006_16B6DF , bdr:MW22006_7FAF5A ;
+    bdr:EVF16450EF8963C14F
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID17DE04B18626CE6E
+        a                   bdr:HollisId ;
+        rdf:value           "014258550" .
+    
+    bdr:ID27B0B66DD67CD152
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949048" .
+    
+    bdr:IDC5795A5E65EEADA8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542008218" .
+    
+    bdr:MW22006  a          :Instance ;
+        skos:altLabel       "ban chan zan zhu"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "paN chen sku phreng dgu pa dang bcu pa'i rtogs brjod gser dang dngul gyi me tog gi tshig 'grel brjod don gsal ba'i sgron me/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID17DE04B18626CE6E , bdr:ID27B0B66DD67CD152 , bdr:IDC5795A5E65EEADA8 ;
+        :authorshipStatement  "'jam dbyangs grags pas brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22006_16B6DF , bdr:MW22006_7FAF5A ;
+        :hasTitle           bdr:TTB3525CAFF7A160D4 , bdr:TTFBC6D8C84503C8F7 ;
+        :instanceEvent      bdr:EVF16450EF8963C14F ;
+        :instanceHasReproduction  bdr:W22006 ;
+        :instanceOf         bdr:WA22006 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 204 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22006_16B6DF
@@ -402,6 +464,10 @@ bdg:MW22006 {
         a                   :TitlePageTitle ;
         rdfs:label          "ngo mtshar ba'i gtam brgyad pa/"@bo-x-ewts .
     
+    bdr:TTB3525CAFF7A160D4
+        a                   :ColophonTitle ;
+        rdfs:label          "ban chan zan zhu"@zh-latn-pinyin-x-ndia .
+    
     bdr:TTBC2FCC3CA99C7F53
         a                   :TitlePageTitle ;
         rdfs:label          "ngo mtshar ba'i gtam bdun pa/"@bo-x-ewts .
@@ -413,6 +479,10 @@ bdg:MW22006 {
     bdr:TTF2FD70F7E4DB9CB8
         a                   :TitlePageTitle ;
         rdfs:label          "ngo mtshar ba'i gtam gsum pa/"@bo-x-ewts .
+    
+    bdr:TTFBC6D8C84503C8F7
+        a                   :Title ;
+        rdfs:label          "paN chen sku phreng dgu pa dang bcu pa'i rtogs brjod gser dang dngul gyi me tog gi tshig 'grel brjod don gsal ba'i sgron me/"@bo-x-ewts .
     
     bdr:TTFF56DD4923172CF4
         a                   :TitlePageTitle ;

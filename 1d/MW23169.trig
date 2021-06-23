@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23169 {
+    bda:LG28DEFA109B137F81
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG66D84644F0BC081B
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-07-07T09:52:13.54Z"^^xsd:dateTime ;
@@ -24,20 +28,45 @@ bdg:MW23169 {
         adm:logMessage      "corrected typo"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG97D2E7D154216159
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:47:52.171Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGD61C8B7D0F360994
         a                   adm:InitialOutlineData ;
         adm:logDate         "2006-09-24T03:32:14.171Z"^^xsd:dateTime ;
         adm:logMessage      "first posting"@en .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
     
     bda:MW23169  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1010205" ;
         :note               bdr:NTF54F77F150E249B2 ;
         adm:adminAbout      bdr:MW23169 ;
-        adm:facetIndex      13 ;
-        adm:logEntry        bda:LG66D84644F0BC081B , bda:LG96042534B97D5278 , bda:LGD61C8B7D0F360994 ;
+        adm:facetIndex      25 ;
+        adm:gitPath         "1d/MW23169.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23169 ;
+        adm:logEntry        bda:LG28DEFA109B137F81 , bda:LG66D84644F0BC081B , bda:LG96042534B97D5278 , bda:LG97D2E7D154216159 , bda:LGD61C8B7D0F360994 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL09ECC3BBDC66F038
         a                   :ContentLocation ;
@@ -63,7 +92,45 @@ bdg:MW23169 {
         :contentLocationInstance  bdr:W23169 ;
         :contentLocationPage  5 .
     
-    bdr:MW23169  :hasPart   bdr:MW23169_6A1488 , bdr:MW23169_6A8F02 , bdr:MW23169_845EDE , bdr:MW23169_E1F85B ;
+    bdr:EV876C99F35B4A5F71
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID1956C66D589E94FA
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2776" .
+    
+    bdr:ID4409A99714DC2FA1
+        a                   bdr:HollisId ;
+        rdf:value           "014258810" .
+    
+    bdr:ID7BC13FA88559285D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903448" .
+    
+    bdr:IDD5549F6D55ED1707
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7684.9 .R55 1985" .
+    
+    bdr:MW23169  a          :Instance ;
+        skos:altLabel       "the autobiography of 'bri-gun-pa rin-chen-phun-tshogs (1509-1557) and its continuation by rin-chen-dpal with rin-chen-phun-tshogs' biographies of 'bri-gun-glin-pa ses-rab-'byun-gnas (1187-1254) and 'bri-gun-pa kun-dga'-rin-chen (1475-1524)"@en-x-mixed ;
+        skos:prefLabel      "'bri gung rin chen phun tshogs kyi rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1956C66D589E94FA , bdr:ID4409A99714DC2FA1 , bdr:ID7BC13FA88559285D , bdr:IDD5549F6D55ED1707 ;
+        :biblioNote         "reproduced from a badly damaged manuscript from the library of yudra rinpoche"@en ;
+        :hasPart            bdr:MW23169_6A1488 , bdr:MW23169_6A8F02 , bdr:MW23169_845EDE , bdr:MW23169_E1F85B ;
+        :hasTitle           bdr:TTC10EE33E80AD5A13 , bdr:TTEC55FF381D4661BB ;
+        :instanceEvent      bdr:EV876C99F35B4A5F71 ;
+        :instanceHasReproduction  bdr:W23169 ;
+        :instanceOf         bdr:WA23169 ;
+        :isRoot             true ;
+        :note               bdr:NT6BC23E40381632E2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "bir tibetan society"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "483 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23169_6A1488
@@ -126,6 +193,10 @@ bdg:MW23169 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6BC23E40381632E2
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0375."@en .
+    
     bdr:NTF54F77F150E249B2
         a                   :Note ;
         :noteText           "the original manuscript reproduced here are badly damaged by paper rot after having been buried"@en .
@@ -145,4 +216,12 @@ bdg:MW23169 {
     bdr:TT846CD39133522E74
         a                   :Title ;
         rdfs:label          "spyan snga 'bri gung gling pa'i rnam thar snyan pa'i 'brug sgra (ka)"@bo-x-ewts .
+    
+    bdr:TTC10EE33E80AD5A13
+        a                   :TitlePageTitle ;
+        rdfs:label          "the autobiography of 'bri-gun-pa rin-chen-phun-tshogs (1509-1557) and its continuation by rin-chen-dpal with rin-chen-phun-tshogs' biographies of 'bri-gun-glin-pa ses-rab-'byun-gnas (1187-1254) and 'bri-gun-pa kun-dga'-rin-chen (1475-1524)"@en-x-mixed .
+    
+    bdr:TTEC55FF381D4661BB
+        a                   :Title ;
+        rdfs:label          "'bri gung rin chen phun tshogs kyi rnam thar/"@bo-x-ewts .
 }

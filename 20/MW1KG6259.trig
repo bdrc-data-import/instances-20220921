@@ -12,20 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG6259 {
+    bda:LG7DE21A5074C70288
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-06-26T10:33:20.87Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGA8FD480F63B96882
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-30T11:23:08.415Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00006 .
     
+    bda:LGAB42C19F78D46D99
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-12-14T16:16:50.274Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG6259  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG6259" ;
         adm:adminAbout      bdr:MW1KG6259 ;
-        adm:facetIndex      14 ;
-        adm:logEntry        bda:LGA8FD480F63B96882 ;
+        adm:facetIndex      33 ;
+        adm:gitPath         "20/MW1KG6259.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6259 ;
+        adm:logEntry        bda:LG7DE21A5074C70288 , bda:LGA8FD480F63B96882 , bda:LGAB42C19F78D46D99 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL2D32D8D20C593255
         a                   :ContentLocation ;
@@ -69,7 +113,56 @@ bdg:MW1KG6259 {
         :contentLocationPage  251 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG6259  :hasPart  bdr:MW1KG6259_662226 , bdr:MW1KG6259_9AC606 , bdr:MW1KG6259_A7D542 , bdr:MW1KG6259_C137ED , bdr:MW1KG6259_DB5E06 , bdr:MW1KG6259_F4103E ;
+    bdr:CR42D9865AC05E9904
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7489 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVFE4EE306AC9DD5EA
+        a                   :PublishedEvent ;
+        :onYear             "2009"^^xsd:gYear .
+    
+    bdr:ID077FB6E215CAC415
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105102013" .
+    
+    bdr:ID2AB8C03E3AEC48A5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2010325318" .
+    
+    bdr:ID4DBFBEF89EEA20CA
+        a                   bdr:HollisId ;
+        rdf:value           "014257347" .
+    
+    bdr:ID6EA63FFD48194D53
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "012923624-1" .
+    
+    bdr:ID74434EE1B2EB969B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .R33 2009" .
+    
+    bdr:MW1KG6259  a        :Instance ;
+        skos:altLabel       "Rba bźed\" phyogs bsgrigs /Bde-skyid kyis bsgrigs."@en-x-mixed , "《巴协》汇编"@zh-hans ;
+        skos:prefLabel      "rba bzhed phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID077FB6E215CAC415 , bdr:ID2AB8C03E3AEC48A5 , bdr:ID4DBFBEF89EEA20CA , bdr:ID6EA63FFD48194D53 , bdr:ID74434EE1B2EB969B ;
+        :authorshipStatement  "bde skyid kyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR42D9865AC05E9904 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG6259_662226 , bdr:MW1KG6259_9AC606 , bdr:MW1KG6259_A7D542 , bdr:MW1KG6259_C137ED , bdr:MW1KG6259_DB5E06 , bdr:MW1KG6259_F4103E ;
+        :hasTitle           bdr:TT40E3B74FA2760C81 , bdr:TT552F4AD8B6279F8A , bdr:TT55334C23597E288C , bdr:TT5F2510BC9B9A6EA1 , bdr:TT94DF9919A44E6C1A , bdr:TTA64E009D0A8BAFA0 ;
+        :instanceEvent      bdr:EVFE4EE306AC9DD5EA ;
+        :instanceHasReproduction  bdr:IE1KG6259 , bdr:W1KG6259 ;
+        :instanceOf         bdr:WA1KG6259 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "6, 1, 281 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG6259_662226
@@ -162,9 +255,33 @@ bdg:MW1KG6259 {
         a                   :Title ;
         rdfs:label          "dba' bzhed/"@bo-x-ewts .
     
+    bdr:TT40E3B74FA2760C81
+        a                   :Title ;
+        rdfs:label          "rba bzhed phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT552F4AD8B6279F8A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "《巴协》汇编"@zh-hans .
+    
+    bdr:TT55334C23597E288C
+        a                   :OtherTitle ;
+        rdfs:label          "sba bzhed phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT5F2510BC9B9A6EA1
+        a                   :CoverTitle ;
+        rdfs:label          "Rba bźed\" phyogs bsgrigs /Bde-skyid kyis bsgrigs."@en-x-mixed .
+    
     bdr:TT6906B6A6AEE681B0
         a                   :Title ;
         rdfs:label          "sba bzhed ces bya ba las/_sba gsal snang gi bzhed pa/"@bo-x-ewts .
+    
+    bdr:TT94DF9919A44E6C1A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "<<ba xie>> hui bian"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA64E009D0A8BAFA0
+        a                   :TitlePageTitle ;
+        rdfs:label          "rba bzhed་phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TTB54EF61BF8669DC7
         a                   :Title ;

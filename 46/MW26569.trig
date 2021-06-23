@@ -35,14 +35,37 @@ bdg:MW26569 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGD4C6394D53A0151E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW26569  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB82923" ;
         adm:adminAbout      bdr:MW26569 ;
-        adm:facetIndex      28 ;
-        adm:logEntry        bda:LG0D68C85A999E41AE , bda:LG188641C2A353D044 , bda:LG388233B86D048DDF , bda:LG7DECB7B271ED9B52 ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "46/MW26569.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26569 ;
+        adm:logEntry        bda:LG0D68C85A999E41AE , bda:LG188641C2A353D044 , bda:LG388233B86D048DDF , bda:LG7DECB7B271ED9B52 , bda:LGD4C6394D53A0151E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega ; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL20FBB84C8A80DBC9
         a                   :ContentLocation ;
@@ -152,7 +175,31 @@ bdg:MW26569 {
         :contentLocationInstance  bdr:W26569 ;
         :contentLocationPage  7 .
     
-    bdr:MW26569  :hasPart   bdr:MW26569_681645 , bdr:MW26569_741BA6 , bdr:MW26569_A5C85C , bdr:MW26569_AE62A8 , bdr:MW26569_BD9932 ;
+    bdr:EVCF388FA3AB4994E7
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID0ACCE4A23A7E8BFD
+        a                   bdr:HollisId ;
+        rdf:value           "014259545" .
+    
+    bdr:MW26569  a          :Instance ;
+        skos:prefLabel      "sde dge'i lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0ACCE4A23A7E8BFD ;
+        :authorshipStatement  "pref. signed yang gling rdo rje"@en ;
+        :hasPart            bdr:MW26569_681645 , bdr:MW26569_741BA6 , bdr:MW26569_A5C85C , bdr:MW26569_AE62A8 , bdr:MW26569_BD9932 ;
+        :hasTitle           bdr:TT1068F574C5AFAD1D , bdr:TTE086B4C6D549DE1A ;
+        :illustrations      "map" ;
+        :instanceEvent      bdr:EVCF388FA3AB4994E7 ;
+        :instanceHasReproduction  bdr:W26569 ;
+        :instanceOf         bdr:WA26569 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[sde dge rdzong]"@en ;
+        :publisherName      "srid gros sde dge rdzong rig gnas lo rgyus rgyu cha bsdu sgrig u yon lhan khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "208 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW26569_07DDE8
@@ -382,6 +429,10 @@ bdg:MW26569 {
         a                   :Title ;
         rdfs:label          "mjug byang /"@bo-x-ewts .
     
+    bdr:TT1068F574C5AFAD1D
+        a                   :TitlePageTitle ;
+        rdfs:label          "mdo khams sa skyong sde dge chos rgyal chen po'i rgyal rabs kyi lo rgyus dngul dkar me long /"@bo-x-ewts .
+    
     bdr:TT13319AD75217644E
         a                   :Title ;
         rdfs:label          "mdo khams sa skyong sde dge chos rgyal chen po'i rgyal rabs kyi lo rgyus dngul dkar me long /"@bo-x-ewts .
@@ -397,4 +448,8 @@ bdg:MW26569 {
     bdr:TTDEAAD821C92D1A16
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TTE086B4C6D549DE1A
+        a                   :Title ;
+        rdfs:label          "sde dge'i lo rgyus/"@bo-x-ewts .
 }

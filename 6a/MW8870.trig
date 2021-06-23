@@ -12,11 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8870 {
+    bda:LG0A43649747D7BAC4
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-06T12:17:28.559Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG20BED63158F0DB2F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-04-03T14:57:53.69Z"^^xsd:dateTime ;
         adm:logMessage      "added colophon & topics & published as provisional"@en ;
         adm:logWho          bdu:U00007 .
+    
+    bda:LG25A682E92742003D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LG4F7E7E64080CE973
         a                   adm:UpdateOutlineData ;
@@ -41,13 +51,32 @@ bdg:MW8870 {
         adm:logMessage      "annotation \"released\" added"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW8870  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O01DG02" ;
         adm:adminAbout      bdr:MW8870 ;
-        adm:facetIndex      94 ;
-        adm:logEntry        bda:LG20BED63158F0DB2F , bda:LG4F7E7E64080CE973 , bda:LG91D05B788DA3C61E , bda:LG9F8B7477D389ED1E , bda:LGE237742D37FB9305 ;
-        adm:outlineType     bda:OutlineTypeGsungBum .
+        adm:facetIndex      106 ;
+        adm:gitPath         "6a/MW8870.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8870 ;
+        adm:logEntry        bda:LG0A43649747D7BAC4 , bda:LG20BED63158F0DB2F , bda:LG25A682E92742003D , bda:LG4F7E7E64080CE973 , bda:LG91D05B788DA3C61E , bda:LG9F8B7477D389ED1E , bda:LGE237742D37FB9305 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:outlineType     bda:OutlineTypeGsungBum ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL119BBB3775E09286
         a                   :ContentLocation ;
@@ -252,7 +281,41 @@ bdg:MW8870 {
         :contentLocationPage  7 ;
         :contentLocationVolume  1 .
     
-    bdr:MW8870  :hasPart    bdr:MW8870_1044D6 , bdr:MW8870_4E8172 ;
+    bdr:EV3FE917E09B23BBD7
+        a                   :PublishedEvent ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:ID36C006A95594725C
+        a                   bdr:HollisId ;
+        rdf:value           "014261112" .
+    
+    bdr:ID9F0D74BB290A79F3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75900763" .
+    
+    bdr:IDB09471D140C40580
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .S63 1975" .
+    
+    bdr:MW8870  a           :Instance ;
+        skos:altLabel       "collected writings sog bzlog pa blo gros rgyal mtshan"@en ;
+        skos:prefLabel      "gsung 'bum/_blo gros rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36C006A95594725C , bdr:ID9F0D74BB290A79F3 , bdr:IDB09471D140C40580 ;
+        :biblioNote         "reproduced from a unique but incomplete dbu-can manuscript from the library of the ven. bdud-'joms rin-po-che"@en ;
+        :hasPart            bdr:MW8870_1044D6 , bdr:MW8870_4E8172 ;
+        :hasTitle           bdr:TT40D435B018EEF59B , bdr:TTBA101151ABB5B48C , bdr:TTCBD8E53401ECDD21 ;
+        :instanceEvent      bdr:EV3FE917E09B23BBD7 ;
+        :instanceHasReproduction  bdr:W8870 ;
+        :instanceOf         bdr:WA8870 ;
+        :isRoot             true ;
+        :note               bdr:NT6FC1BC5A8186D076 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "sanje dorje"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW8870_01CDC2
@@ -716,6 +779,10 @@ bdg:MW8870 {
         :partTreeIndex      "2.14" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6FC1BC5A8186D076
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1706-1707\n\nCollected writings of Sog-bzlog-pa Blo-gros-rgyal-mtshan. -- Reproduced from a unique but incomplete manuscript from the library of Bdud-'joms Rin-po-che. -- New Delhi : Sanje Dorji, 1975/\n2 v.\nBQ7662 .S63 1975  75-900763.\nCopy: TBRC.\nTIFF and PDF files available."@en .
+    
     bdr:TT088C6D98425DE853
         a                   :TitlePageTitle ;
         rdfs:label          "rdzogs chen pa sprul sku zhig po gling pa gar gyi dbang phyug rtsal gyi skyes rabs rags bsdus dang rnam thar/"@bo-x-ewts .
@@ -771,6 +838,10 @@ bdg:MW8870 {
     bdr:TT40C44BB1EFD5D699
         a                   :TitlePageTitle ;
         rdfs:label          "slan chad kyang sog bzlog mdzad pa po rnams phan pa'i phyir du rang nyid kyi sog bzlog bgyas tshul/"@bo-x-ewts .
+    
+    bdr:TT40D435B018EEF59B
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo gros rgyal mtshan/"@bo-x-ewts .
     
     bdr:TT428E3AD4423E6C7E
         a                   :Title ;
@@ -896,6 +967,10 @@ bdg:MW8870 {
         a                   :OtherTitle ;
         rdfs:label          "bla ma go 'jo'i zhu lan ma bsgom sangs rgyas kyi brtsod spong /"@bo-x-ewts .
     
+    bdr:TTBA101151ABB5B48C
+        a                   :TitlePageTitle ;
+        rdfs:label          "sog bzlog pa blo gros rgyal mtshan gyi gsung 'bum/"@bo-x-ewts .
+    
     bdr:TTBA3B2EB850781B71
         a                   :Title ;
         rdfs:label          "lha bla ma ye shes 'od kyi bka' shog gi dgongs 'grel/"@bo-x-ewts .
@@ -919,6 +994,10 @@ bdg:MW8870 {
     bdr:TTC7CA4639F8E45EBF
         a                   :Title ;
         rdfs:label          "theg dgu'i dbang gi rnam bshad/"@bo-x-ewts .
+    
+    bdr:TTCBD8E53401ECDD21
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected writings sog bzlog pa blo gros rgyal mtshan"@en .
     
     bdr:TTCC30C1FCD66D2CF1
         a                   :OtherTitle ;

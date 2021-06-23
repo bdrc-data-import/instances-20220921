@@ -12,6 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20751 {
+    bda:LG2E8EA528B3CEF0E6
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-03T11:17:57.41Z"^^xsd:dateTime ;
+        adm:logMessage      "added lccn 2002294264"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG338CA83FE8514B5E
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-02T08:02:16.988Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized catalog info"@en ;
+        adm:logWho          bdu:U00012 .
+    
     bda:LG470CFFCBB61C808E
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -24,14 +36,44 @@ bdg:MW20751 {
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGE9D987128A91EFC3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20751  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O20751" ;
         adm:adminAbout      bdr:MW20751 ;
-        adm:facetIndex      177 ;
-        adm:logEntry        bda:LG470CFFCBB61C808E , bda:LG61C5095F72E3D2F1 ;
+        adm:facetIndex      190 ;
+        adm:gitPath         "41/MW20751.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20751 ;
+        adm:logEntry        bda:LG2E8EA528B3CEF0E6 , bda:LG338CA83FE8514B5E , bda:LG470CFFCBB61C808E , bda:LG61C5095F72E3D2F1 , bda:LGE9D987128A91EFC3 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0103943B5EAF3F9A
         a                   :ContentLocation ;
@@ -635,7 +677,40 @@ bdg:MW20751 {
         :contentLocationPage  773 ;
         :contentLocationVolume  3 .
     
-    bdr:MW20751  :hasPart   bdr:MW20751_760FCD , bdr:MW20751_9AA894 , bdr:MW20751_C1058C ;
+    bdr:EV46F736E40FB4677F
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID371D3758DC548859
+        a                   bdr:HollisId ;
+        rdf:value           "014258221" .
+    
+    bdr:IDB05184F62F5F1A8B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009719428-X" .
+    
+    bdr:IDF6024A9A5248B06E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002294264" .
+    
+    bdr:MW20751  a          :Instance ;
+        skos:altLabel       "Sa-skya bkaʾ ʾbum ma phyi gsar rñed phyogs bsgrigs."@en-x-mixed ;
+        skos:prefLabel      "sa skya bka' 'bum ma phyi gsar rnyed phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID371D3758DC548859 , bdr:IDB05184F62F5F1A8B , bdr:IDF6024A9A5248B06E ;
+        :biblioNote         "produced from computer output in lha sa/"@bo-x-ewts ;
+        :hasPart            bdr:MW20751_760FCD , bdr:MW20751_9AA894 , bdr:MW20751_C1058C ;
+        :hasTitle           bdr:TT71A6F9685D0F234D , bdr:TTA3E100860C30EE91 ;
+        :instanceEvent      bdr:EV46F736E40FB4677F ;
+        :instanceHasItem    bdr:ITW20751_001 , bdr:ITW20751_002 ;
+        :instanceHasReproduction  bdr:W20751 ;
+        :instanceOf         bdr:WA20751 ;
+        :isRoot             true ;
+        :note               bdr:NT918F03DD363B2047 ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20751_003447
@@ -1877,6 +1952,10 @@ bdg:MW20751 {
         :partTreeIndex      "3.09" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT918F03DD363B2047
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1720-1722"@en .
+    
     bdr:TT002EE024F62D2748
         a                   :Title ;
         rdfs:label          "bde mchog gi sa bcad/"@bo-x-ewts .
@@ -2029,6 +2108,10 @@ bdg:MW20751 {
         a                   :Title ;
         rdfs:label          "kun la 'jug pa'i spra khrid khra bo/"@bo-x-ewts .
     
+    bdr:TT71A6F9685D0F234D
+        a                   :Title ;
+        rdfs:label          "sa skya bka' 'bum ma phyi gsar rnyed phyogs bsgrigs/"@bo-x-ewts .
+    
     bdr:TT71B5C12B6A5E05AB
         a                   :Title ;
         rdfs:label          "dbang phyug 'bum gyi dri lan/"@bo-x-ewts .
@@ -2096,6 +2179,10 @@ bdg:MW20751 {
     bdr:TTA39671F42477E7DD
         a                   :Title ;
         rdfs:label          "bdag med ma lha mo bco lnga'i bstod pa'i mchan/"@bo-x-ewts .
+    
+    bdr:TTA3E100860C30EE91
+        a                   :CoverTitle ;
+        rdfs:label          "Sa-skya bkaʾ ʾbum ma phyi gsar rñed phyogs bsgrigs."@en-x-mixed .
     
     bdr:TTA672F1FBA249FC93
         a                   :Title ;

@@ -12,25 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22026 {
+    bda:LG25B1D33E2BB5E595
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-12-17T16:17:47.228Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG28DDFAEC317F4B75
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-12-28T12:19:33.455Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG94DA283E2A2C5F0E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGCD07D4400B59D897
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-16T10:39:04.444Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22026  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD96186" ;
         adm:adminAbout      bdr:MW22026 ;
-        adm:facetIndex      23 ;
-        adm:logEntry        bda:LG28DDFAEC317F4B75 , bda:LGCD07D4400B59D897 ;
+        adm:facetIndex      31 ;
+        adm:gitPath         "be/MW22026.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22026 ;
+        adm:logEntry        bda:LG25B1D33E2BB5E595 , bda:LG28DDFAEC317F4B75 , bda:LG94DA283E2A2C5F0E , bda:LGCD07D4400B59D897 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL14E0A22A5AA115ED
         a                   :ContentLocation ;
@@ -79,7 +108,27 @@ bdg:MW22026 {
         :agent              bdr:P1PD96267 ;
         :role               bdr:R0ER0015 .
     
-    bdr:MW22026  :hasPart   bdr:MW22026_288974 , bdr:MW22026_2C62D7 , bdr:MW22026_3B3176 , bdr:MW22026_56CF3E , bdr:MW22026_80A862 , bdr:MW22026_CFB111 , bdr:MW22026_F37064 ;
+    bdr:ID8992450C8C850DF4
+        a                   bdr:HollisId ;
+        rdf:value           "014258566" .
+    
+    bdr:MW22026  a          :Instance ;
+        skos:altLabel       "muya wu xeu zhe zhuan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "mi nyag mkhas dbang lnga'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8992450C8C850DF4 ;
+        :authorshipStatement  "seng ge bzang po sogs kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22026_288974 , bdr:MW22026_2C62D7 , bdr:MW22026_3B3176 , bdr:MW22026_56CF3E , bdr:MW22026_80A862 , bdr:MW22026_CFB111 , bdr:MW22026_F37064 ;
+        :hasTitle           bdr:TT1527AEA4C939CD1B , bdr:TT967A6DF389AD0898 , bdr:TTC84E99F230E865C2 ;
+        :instanceHasReproduction  bdr:W22026 ;
+        :instanceOf         bdr:WA22026 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "200 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22026_288974
@@ -182,6 +231,10 @@ bdg:MW22026 {
         :partTreeIndex      "5" ;
         :partType           bdr:PartTypeText .
     
+    bdr:TT1527AEA4C939CD1B
+        a                   :Title ;
+        rdfs:label          "mi nyag mkhas dbang lnga'i rnam thar/"@bo-x-ewts .
+    
     bdr:TT1F4FEB1B0BFDA9DD
         a                   :Title ;
         rdfs:label          "mkhan chen byams gsar gyi rnam thar/"@bo-x-ewts .
@@ -210,6 +263,10 @@ bdg:MW22026 {
         a                   :TitlePageTitle ;
         rdfs:label          "mkhan chen thams cad mkhyen pa phyug mo ston pa gzhon nu dpal gyi rnam par thar pa ngo mtshar sna tshogs bkra ba dwangs pa'i chu rgyun/"@bo-x-ewts .
     
+    bdr:TT967A6DF389AD0898
+        a                   :ColophonTitle ;
+        rdfs:label          "木雅五学者传"@zh-hans .
+    
     bdr:TT9FC7CA83487AC7A5
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
@@ -225,6 +282,10 @@ bdg:MW22026 {
     bdr:TTC1011ED156445F87
         a                   :Title ;
         rdfs:label          "sku par/"@bo-x-ewts .
+    
+    bdr:TTC84E99F230E865C2
+        a                   :ColophonTitle ;
+        rdfs:label          "muya wu xeu zhe zhuan"@zh-latn-pinyin-x-ndia .
     
     bdr:TTF5F7E802DFE7EC50
         a                   :TitlePageTitle ;

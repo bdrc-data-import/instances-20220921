@@ -18,14 +18,39 @@ bdg:MW1GS91829 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGC3137ABA90E64412
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-02-17T16:33:01.156Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS91829  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS97712" ;
         adm:adminAbout      bdr:MW1GS91829 ;
-        adm:facetIndex      142 ;
-        adm:logEntry        bda:LG34A76120207BB5F2 ;
+        adm:facetIndex      149 ;
+        adm:gitPath         "7b/MW1GS91829.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS91829 ;
+        adm:logEntry        bda:LG34A76120207BB5F2 , bda:LGC3137ABA90E64412 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0127672DDE8F0F1D
         a                   :ContentLocation ;
@@ -862,7 +887,35 @@ bdg:MW1GS91829 {
         :contentLocationInstance  bdr:W1GS91829 ;
         :contentLocationPage  585 .
     
-    bdr:MW1GS91829  :hasPart  bdr:MW1GS91829_1DA7DE , bdr:MW1GS91829_41F418 , bdr:MW1GS91829_4310F3 , bdr:MW1GS91829_459D06 , bdr:MW1GS91829_53D164 , bdr:MW1GS91829_675EFA , bdr:MW1GS91829_6EB9A6 , bdr:MW1GS91829_86CEAE , bdr:MW1GS91829_ABC17A , bdr:MW1GS91829_B13201 , bdr:MW1GS91829_B2DCBB , bdr:MW1GS91829_DCD183 , bdr:MW1GS91829_E28E97 ;
+    bdr:EV8611502ECE340696
+        a                   :PublishedEvent ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:ID135CF6615AA4C85B
+        a                   bdr:HollisId ;
+        rdf:value           "014255551" .
+    
+    bdr:IDEF2A9246F3D45BFE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542112194" .
+    
+    bdr:MW1GS91829  a       :Instance ;
+        skos:prefLabel      "reb gong yul skor zin tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID135CF6615AA4C85B , bdr:IDEF2A9246F3D45BFE ;
+        :authorshipStatement  "chu skyes dge 'dun dpal bzang gis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS91829_1DA7DE , bdr:MW1GS91829_41F418 , bdr:MW1GS91829_4310F3 , bdr:MW1GS91829_459D06 , bdr:MW1GS91829_53D164 , bdr:MW1GS91829_675EFA , bdr:MW1GS91829_6EB9A6 , bdr:MW1GS91829_86CEAE , bdr:MW1GS91829_ABC17A , bdr:MW1GS91829_B13201 , bdr:MW1GS91829_B2DCBB , bdr:MW1GS91829_DCD183 , bdr:MW1GS91829_E28E97 ;
+        :hasTitle           bdr:TTDCA2E4F4CF69CDB0 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV8611502ECE340696 ;
+        :instanceHasReproduction  bdr:W1GS91829 ;
+        :instanceOf         bdr:WA1GS91829 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "6, 615 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS91829_003570
@@ -2564,4 +2617,8 @@ bdg:MW1GS91829 {
         :partOf             bdr:MW1GS91829_D3F55F ;
         :partTreeIndex      "04.5.05" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTDCA2E4F4CF69CDB0
+        a                   :Title ;
+        rdfs:label          "reb gong yul skor zin tho/"@bo-x-ewts .
 }

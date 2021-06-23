@@ -12,6 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1660 {
+    bda:LG15013B11F3265006
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-25T11:52:56.122Z"^^xsd:dateTime ;
+        adm:logMessage      "tewst"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG7A196B9D7293DCD7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-05T22:09:48.754Z"^^xsd:dateTime ;
+        adm:logMessage      "removed individual donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA61F5CD5A07E9864
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1660"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIMA1D0D821  a     adm:InitialDataImport ;
         adm:logDate         "2020-08-31T16:48:47.027Z"^^xsd:dateTime ;
         adm:logMessage      "full cataloged and released"@en ;
@@ -22,10 +46,15 @@ bdg:MW1NLM1660 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ361548" ;
         adm:adminAbout      bdr:MW1NLM1660 ;
-        adm:facetIndex      19 ;
-        adm:logEntry        bda:LGIMA1D0D821 ;
+        adm:facetIndex      27 ;
+        adm:gitPath         "c4/MW1NLM1660.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1660 ;
+        adm:logEntry        bda:LG15013B11F3265006 , bda:LG7A196B9D7293DCD7 , bda:LGA61F5CD5A07E9864 , bda:LGIMA07EBF90 , bda:LGIMA1D0D821 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL05B6559FF39AFDEE
         a                   :ContentLocation ;
@@ -75,7 +104,19 @@ bdg:MW1NLM1660 {
         :contentLocationInstance  bdr:W1NLM1660 ;
         :contentLocationPage  49 .
     
-    bdr:MW1NLM1660  :hasPart  bdr:MW1NLM1660_11C33D , bdr:MW1NLM1660_1CF2D2 , bdr:MW1NLM1660_25A769 , bdr:MW1NLM1660_40643F , bdr:MW1NLM1660_40C20C , bdr:MW1NLM1660_611EA7 , bdr:MW1NLM1660_E9D8D7 , bdr:MW1NLM1660_EEBF66 ;
+    bdr:MW1NLM1660  a       :Instance ;
+        skos:prefLabel      "tshe mdo sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "17.5x5" ;
+        :hasPart            bdr:MW1NLM1660_11C33D , bdr:MW1NLM1660_1CF2D2 , bdr:MW1NLM1660_25A769 , bdr:MW1NLM1660_40643F , bdr:MW1NLM1660_40C20C , bdr:MW1NLM1660_611EA7 , bdr:MW1NLM1660_E9D8D7 , bdr:MW1NLM1660_EEBF66 ;
+        :hasTitle           bdr:TT21FDAC72816E6987 , bdr:TT991FFE26A5766FFF ;
+        :instanceHasReproduction  bdr:W1NLM1660 ;
+        :instanceOf         bdr:WA1NLM1092 ;
+        :isRoot             true ;
+        :note               bdr:NT6BE4A69BCE141656 , bdr:NTE46556075D235196 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1660_11C33D
@@ -190,9 +231,21 @@ bdg:MW1NLM1660 {
         :partTreeIndex      "8" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6BE4A69BCE141656
+        a                   :Note ;
+        :noteText           "missingPages: M0059578-002 [7,8th pages printed on the same page] Image 61-62"@en .
+    
+    bdr:NTE46556075D235196
+        a                   :Note ;
+        :noteText           "nlmId: M0059578"@en .
+    
     bdr:TT042918ED24F6AA2E
         a                   :Title ;
         rdfs:label          "gshin po'i dur 'debs kyi sa bslang ba ji ltar bya rtshul gyi cho ga mdor bsdus gzhan phan snying po/"@bo-x-ewts .
+    
+    bdr:TT21FDAC72816E6987
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
     
     bdr:TT28F5321128FEE143
         a                   :Title ;
@@ -217,6 +270,10 @@ bdg:MW1NLM1660 {
     bdr:TT927675EA2D1DA838
         a                   :Title ;
         rdfs:label          "snying po don gsum nyung ngu gsal ba/"@bo-x-ewts .
+    
+    bdr:TT991FFE26A5766FFF
+        a                   :Title ;
+        rdfs:label          "tshe mdo sogs/"@bo-x-ewts .
     
     bdr:TTD451AC1D93004DCC
         a                   :TitlePageTitle ;

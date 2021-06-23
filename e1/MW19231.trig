@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW19231 {
+    bda:LG2A6041703675076F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-02T10:15:06.636Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info and changed topics"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LG522E3D64F71F994C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2007-05-02T14:13:17.856Z"^^xsd:dateTime ;
         adm:logMessage      "absolute"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG86C1F5F80C3AAF1F
+        a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:LG94A9DD15076B6054
@@ -23,6 +33,12 @@ bdg:MW19231 {
         adm:logDate         "2018-06-25T15:25:26.511Z"^^xsd:dateTime ;
         adm:logMessage      "corrected pagenation error"@en ;
         adm:logWho          bdu:U00007 .
+    
+    bda:LGAE69CAB0F96D732F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-19T11:06:07.585Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGB35DD13413AD1C70
         a                   adm:InitialOutlineData ;
@@ -42,14 +58,34 @@ bdg:MW19231 {
         adm:logMessage      "corrected typo"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19231  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS41093" ;
         adm:adminAbout      bdr:MW19231 ;
-        adm:facetIndex      74 ;
-        adm:logEntry        bda:LG522E3D64F71F994C , bda:LG94A9DD15076B6054 , bda:LGB35DD13413AD1C70 , bda:LGC050C1A024BB88E6 , bda:LGCADAA3760A30A5B3 ;
+        adm:facetIndex      86 ;
+        adm:gitPath         "e1/MW19231.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19231 ;
+        adm:logEntry        bda:LG2A6041703675076F , bda:LG522E3D64F71F994C , bda:LG86C1F5F80C3AAF1F , bda:LG94A9DD15076B6054 , bda:LGAE69CAB0F96D732F , bda:LGB35DD13413AD1C70 , bda:LGC050C1A024BB88E6 , bda:LGCADAA3760A30A5B3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL064103834103739C
         a                   :ContentLocation ;
@@ -295,7 +331,40 @@ bdg:MW19231 {
         :contentLocationInstance  bdr:W19231 ;
         :contentLocationVolume  4 .
     
-    bdr:MW19231  :hasPart   bdr:MW19231_901839 , bdr:MW19231_E16135 , bdr:MW19231_EF8785 , bdr:MW19231_F018EE ;
+    bdr:EVD13C9F3356B2A465
+        a                   :PublishedEvent ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:ID07384AF79F9B3E25
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73917981" .
+    
+    bdr:ID0C1AA6BC0FD86457
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683.9.A2 B52" .
+    
+    bdr:IDE702472BFEBAC459
+        a                   bdr:HollisId ;
+        rdf:value           "014254840" .
+    
+    bdr:MW19231  a          :Instance ;
+        skos:prefLabel      "'ba' ra bka' brgyud gser 'phreng chen mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID07384AF79F9B3E25 , bdr:ID0C1AA6BC0FD86457 , bdr:IDE702472BFEBAC459 ;
+        :biblioNote         "reproduced from the manuscript collections of gra sku-zhabs bstan-'dzin-nor-bu."@en ;
+        :hasPart            bdr:MW19231_901839 , bdr:MW19231_E16135 , bdr:MW19231_EF8785 , bdr:MW19231_F018EE ;
+        :hasTitle           bdr:TT51070F521723155D , bdr:TT5E1D1AA71EF8FE05 ;
+        :instanceEvent      bdr:EVD13C9F3356B2A465 ;
+        :instanceHasReproduction  bdr:W19231 ;
+        :instanceOf         bdr:WA19231 ;
+        :isRoot             true ;
+        :note               bdr:NT796531363800A66C ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dehra dun"@en ;
+        :publisherName      "ngawang gyaltsen and ngawang lungtok"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW19231_08CA52
@@ -817,6 +886,10 @@ bdg:MW19231 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeVolume .
     
+    bdr:NT796531363800A66C
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 1743-1746\n\n\ncontents:\nv. 1. From Vajradhara Buddha to Yang-dgon-pa Rgyal-mtshan-dpal.--\nv. 2. From Thugs-sras Spyan-mnga' Rin-chen-ldan to Rdo-rje-'dzin-pa Chen-po Nam-mkha'-rdo-rje. -- \nv. 3. From Nam-mkha'-dpal-'byor to 'Ba'-ra Ngag-dbang-ye-shes. --\nv. 4. From Dpal-ldan Bla-ma Dam-pa Ngag-dbang-chos-grags-rgya-mtsho to Bya-bral Rnal-'byor-pa Rig-'dzin Chos-dbyings-rdo-rje."@en .
+    
     bdr:TT0048292E79405DFD
         a                   :Title ;
         rdfs:label          "chos rje 'ba' ra ba sprul sku rin chen bstan pa'i gsal byed kyi rnam thar mu tig 'phreng ba (ra)"@bo-x-ewts .
@@ -861,6 +934,10 @@ bdg:MW19231 {
         a                   :Title ;
         rdfs:label          "kun mkhyen zur phug pa'i rnam thar rin po che (pa)"@bo-x-ewts .
     
+    bdr:TT51070F521723155D
+        a                   :Title ;
+        rdfs:label          "'ba' ra bka' brgyud gser 'phreng chen mo/"@bo-x-ewts .
+    
     bdr:TT56870230FF688AA9
         a                   :Title ;
         rdfs:label          "thugs sras spyan snga rin chen ldan gyi rnam par thar pa rin chen mgul rgyan/"@bo-x-ewts .
@@ -876,6 +953,10 @@ bdg:MW19231 {
     bdr:TT5AD44F56B0848AEB
         a                   :Title ;
         rdfs:label          "chos rgyal dwags po lha rje'i rnam par thar pa bsdus pa zhig"@bo-x-ewts .
+    
+    bdr:TT5E1D1AA71EF8FE05
+        a                   :OtherTitle ;
+        rdfs:label          "'ba' ra gser phreng /"@bo-x-ewts .
     
     bdr:TT6206DAD72735F237
         a                   :Title ;

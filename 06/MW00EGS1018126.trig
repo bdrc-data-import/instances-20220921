@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1018126 {
+    bda:LG0646FAEC2ADB27E3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-02-14T07:26:22.421Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3854C1121836B910
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-02-16T12:53:50.44Z"^^xsd:dateTime ;
@@ -29,15 +34,40 @@ bdg:MW00EGS1018126 {
         adm:logMessage      "changed to absolute"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1018126
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1018127" ;
         adm:adminAbout      bdr:MW00EGS1018126 ;
-        adm:facetIndex      58 ;
-        adm:logEntry        bda:LG3854C1121836B910 , bda:LGF65A2513F999FABE , bda:LGFA22CE1041E694A0 ;
+        adm:facetIndex      69 ;
+        adm:gitPath         "06/MW00EGS1018126.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1018126 ;
+        adm:logEntry        bda:LG0646FAEC2ADB27E3 , bda:LG3854C1121836B910 , bda:LGF65A2513F999FABE , bda:LGFA22CE1041E694A0 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith ; outline prepared with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL013A99CC795F3D59
         a                   :ContentLocation ;
@@ -363,8 +393,46 @@ bdg:MW00EGS1018126 {
         :contentLocationInstance  bdr:W00EGS1018126 ;
         :contentLocationPage  25 .
     
+    bdr:EV2DD1FDF674DE1E03
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID66D520167B9FE47B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006448855" .
+    
+    bdr:ID723AF37487D0186E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .M54 2006" .
+    
+    bdr:ID9BF55757C01D6683
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105069058" .
+    
+    bdr:IDB98F463B3B101251
+        a                   bdr:HollisId ;
+        rdf:value           "014254025" .
+    
     bdr:MW00EGS1018126
+        a                   :Instance , :SerialInstance ;
+        skos:prefLabel      "'ju mi pham gyi sman yig gces bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID66D520167B9FE47B , bdr:ID723AF37487D0186E , bdr:ID9BF55757C01D6683 , bdr:IDB98F463B3B101251 ;
+        :authorshipStatement  "'ju mi pham rnam rgyal rgya mtsho/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasPart            bdr:MW00EGS1018126_03D22B , bdr:MW00EGS1018126_1ACBFC , bdr:MW00EGS1018126_1E36FD , bdr:MW00EGS1018126_25A4A5 , bdr:MW00EGS1018126_37F48C , bdr:MW00EGS1018126_41BDCC , bdr:MW00EGS1018126_8D4C4C , bdr:MW00EGS1018126_90177B , bdr:MW00EGS1018126_984EE7 , bdr:MW00EGS1018126_B25AF5 , bdr:MW00EGS1018126_D6442B , bdr:MW00EGS1018126_DA4B54 , bdr:MW00EGS1018126_E8546F , bdr:MW00EGS1018126_FFF63B ;
+        :hasTitle           bdr:TT82915DCAFF86C1E8 , bdr:TTF35383CB7D4AA79F ;
+        :instanceEvent      bdr:EV2DD1FDF674DE1E03 ;
+        :instanceHasReproduction  bdr:W00EGS1018126 ;
+        :instanceOf         bdr:WA00EGS1018126 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1017462 ;
+        :seriesNumber       "23" ;
+        :workExtentStatement  "2, 3, 4, 3, 3, 474 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1018126_03D22B
@@ -1010,4 +1078,12 @@ bdg:MW00EGS1018126 {
         :partOf             bdr:MW00EGS1018126 ;
         :partTreeIndex      "10" ;
         :partType           bdr:PartTypeSection .
+    
+    bdr:TT82915DCAFF86C1E8
+        a                   :Title ;
+        rdfs:label          "'ju mi pham gyi sman yig gces bsdus/"@bo-x-ewts .
+    
+    bdr:TTF35383CB7D4AA79F
+        a                   :OtherTitle ;
+        rdfs:label          "sman yig gces btus/"@bo-x-ewts .
 }

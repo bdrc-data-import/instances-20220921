@@ -23,20 +23,43 @@ bdg:MW19988 {
         adm:logDate         "2011-02-18T14:50:41.656Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00009 .
     
+    bda:LG19B61864C60287AC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG4A3D505547204465
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2011-09-09T10:57:11.993Z"^^xsd:dateTime ;
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19988  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GC1" ;
         adm:adminAbout      bdr:MW19988 ;
-        adm:facetIndex      13 ;
-        adm:logEntry        bda:LG0ED7747A7BF46D33 , bda:LG1317784843EA39E5 , bda:LG4A3D505547204465 ;
+        adm:facetIndex      20 ;
+        adm:gitPath         "99/MW19988.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19988 ;
+        adm:logEntry        bda:LG0ED7747A7BF46D33 , bda:LG1317784843EA39E5 , bda:LG19B61864C60287AC , bda:LG4A3D505547204465 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gabi Coura"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL18BE0C7C799022BF
         a                   :ContentLocation ;
@@ -92,8 +115,32 @@ bdg:MW19988 {
         :contentLocationInstance  bdr:W19988 ;
         :contentLocationPage  46 .
     
-    bdr:MW19988  :hasPart   bdr:MW19988_298E0E , bdr:MW19988_48B8BC , bdr:MW19988_4D4816 , bdr:MW19988_7FFAED , bdr:MW19988_85F1BF , bdr:MW19988_AF1566 , bdr:MW19988_CB2C3B , bdr:MW19988_DCC5B3 , bdr:MW19988_FFD799 ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EV011B61D314C59A99
+        a                   :PublishedEvent ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:ID3CB8A8697175DAD8
+        a                   bdr:HollisId ;
+        rdf:value           "014254938" .
+    
+    bdr:MW19988  a          :Instance ;
+        skos:prefLabel      "kam tshang gser phreng gi rnam thar kha skong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3CB8A8697175DAD8 ;
+        :authorshipStatement  "karma pa'i 'bangs grags pa yongs 'du 'am stobs dga' g.yul rgyal pas/"@bo-x-ewts ;
+        :hasPart            bdr:MW19988_298E0E , bdr:MW19988_48B8BC , bdr:MW19988_4D4816 , bdr:MW19988_7FFAED , bdr:MW19988_85F1BF , bdr:MW19988_AF1566 , bdr:MW19988_CB2C3B , bdr:MW19988_DCC5B3 , bdr:MW19988_FFD799 ;
+        :hasTitle           bdr:TT839AA42014920D39 , bdr:TTC6D6C4A70770A76A ;
+        :instanceEvent      bdr:EV011B61D314C59A99 ;
+        :instanceHasReproduction  bdr:W19988 ;
+        :instanceOf         bdr:WA19988 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "New Delhi"@en ;
+        :publisherName      "Topga Yulgyal"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 391 p." ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workPrintery       "Publicity & Sales Promotion/"@bo-x-ewts .
     
     bdr:MW19988_298E0E
         a                   :Instance ;
@@ -211,4 +258,12 @@ bdg:MW19988 {
         :partType           bdr:PartTypeChapter ;
         :workGenre          bdr:T3 ;
         :workIsAbout        bdr:P937 .
+    
+    bdr:TT839AA42014920D39
+        a                   :Title ;
+        rdfs:label          "kam tshang gser phreng gi rnam thar kha skong /"@bo-x-ewts .
+    
+    bdr:TTC6D6C4A70770A76A
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' brgyud gser phreng gi rnam thar rab 'byams zla ba chu shel gyi 'phreng ba'i kha skong /"@bo-x-ewts .
 }

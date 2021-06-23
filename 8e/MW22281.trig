@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22281 {
+    bda:LG575DF3C8E9423E23
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG6BF4064E95821D9E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2011-03-18T09:46:28.019Z"^^xsd:dateTime ;
@@ -29,14 +33,40 @@ bdg:MW22281 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22281  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3JT1678" ;
         adm:adminAbout      bdr:MW22281 ;
-        adm:facetIndex      93 ;
-        adm:logEntry        bda:LG6BF4064E95821D9E , bda:LGCEB9D7F5EB7D150D , bda:LGEFE99F5A3CF3014F ;
+        adm:facetIndex      108 ;
+        adm:gitPath         "8e/MW22281.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22281 ;
+        adm:logEntry        bda:LG575DF3C8E9423E23 , bda:LG6BF4064E95821D9E , bda:LGCEB9D7F5EB7D150D , bda:LGEFE99F5A3CF3014F , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Jigme Namgyal; created with the generous support of the Khyentse Foundation."@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0219CEBFB9784A9A
         a                   :ContentLocation ;
@@ -346,7 +376,50 @@ bdg:MW22281 {
         :contentLocationPage  306 ;
         :contentLocationVolume  1 .
     
-    bdr:MW22281  :hasPart   bdr:MW22281_6389BA , bdr:MW22281_DB9C49 , bdr:MW22281_ED1E07 ;
+    bdr:EV0D39A752100F937C
+        a                   :PublishedEvent ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:ID9012F25FDED80797
+        a                   bdr:HollisId ;
+        rdf:value           "014258717" .
+    
+    bdr:ID977030EB805DEF03
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915826" .
+    
+    bdr:IDA74965A421E7D21B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008079316-9" .
+    
+    bdr:IDBFA7A03BDEC38D9F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .N67 1993" .
+    
+    bdr:IDFFB8A4EBBA59AC53
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105019247" .
+    
+    bdr:MW22281  a          :Instance ;
+        skos:altLabel       "Gaṅs-can yul gyi sa la spyod paʾi mtho ris kyi rgyal blon gtso bor brjod paʾi deb ther rdzogs ldan gźon nuʾi dgaʾ ston dpyid kyi rgyal moʾi glu dbyaṅs kyi ʾgrel pa yid kyi dgaʾ ston /Nor-braṅ O-rgyan gyis brtsams."@en-x-mixed , "hsi tsang wang ch'en chi hsiang hsih"@zh-latn-wadegile ;
+        skos:prefLabel      "bod kyi deb ther dpyid kyi rgyal mo'i glu dbyangs kyi 'grel pa yid kyi dga' ston/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9012F25FDED80797 , bdr:ID977030EB805DEF03 , bdr:IDA74965A421E7D21B , bdr:IDBFA7A03BDEC38D9F , bdr:IDFFB8A4EBBA59AC53 ;
+        :authorshipStatement  "nor brang o rgyan gyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22281_6389BA , bdr:MW22281_DB9C49 , bdr:MW22281_ED1E07 ;
+        :hasTitle           bdr:TT4F1BD61B7F65F9ED , bdr:TT5391470C1F38BA58 , bdr:TT82676399B9535709 , bdr:TTC51F74E1DFFA899E ;
+        :instanceEvent      bdr:EV0D39A752100F937C ;
+        :instanceHasReproduction  bdr:W22281 ;
+        :instanceOf         bdr:WA22281 ;
+        :isRoot             true ;
+        :note               bdr:NT58A05FAEF74685AD ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS22281 ;
+        :workExtentStatement  "2, 3, 489 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22281_014FF0
@@ -953,6 +1026,10 @@ bdg:MW22281 {
         :partType           bdr:PartTypeChapter ;
         :workIsAbout        bdr:T1387 .
     
+    bdr:NT58A05FAEF74685AD
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n4240"@en .
+    
     bdr:TT0567E94AEBB9E1EF
         a                   :TitlePageTitle ;
         rdfs:label          "bod kyi deb ther dpyid kyi rgyal mo'i glu dbyangs kyi 'grel pa yid kyi dga' ston/"@bo-x-ewts .
@@ -1001,6 +1078,10 @@ bdg:MW22281 {
         a                   :TitlePageTitle ;
         rdfs:label          "1 phag mo gru pa'i skor/"@bo-x-ewts .
     
+    bdr:TT4F1BD61B7F65F9ED
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs can yul gyi sa la spyod pa'i mtho ris kyi rgyal blon gtso bor brjod pa'i deb ther rdzogs ldan gzhon nu'i dga' ston dpyid kyi rgyal mo'i glu dbyangs kyi 'grel pa yid kyi dga' ston/"@bo-x-ewts .
+    
     bdr:TT4F5E0004429018C9
         a                   :TitlePageTitle ;
         rdfs:label          "bod kyi deb ther dpyid kyi rgyal mo'i glu dbyangs kyi 'grel pa yid kyi dga' ston dpe skrun gsal bshad/"@bo-x-ewts .
@@ -1012,6 +1093,10 @@ bdg:MW22281 {
     bdr:TT53353CEC47D06CFD
         a                   :TitlePageTitle ;
         rdfs:label          "1 rgyal phran sil ma dang gnam gyi khri bdun skor/"@bo-x-ewts .
+    
+    bdr:TT5391470C1F38BA58
+        a                   :Title ;
+        rdfs:label          "hsi tsang wang ch'en chi hsiang hsih"@zh-latn-wadegile .
     
     bdr:TT54C01F939021D8F1
         a                   :TitlePageTitle ;
@@ -1053,6 +1138,10 @@ bdg:MW22281 {
         a                   :TitlePageTitle ;
         rdfs:label          "9 bya pa khri dpon skor/"@bo-x-ewts .
     
+    bdr:TT82676399B9535709
+        a                   :Title ;
+        rdfs:label          "bod kyi deb ther dpyid kyi rgyal mo'i glu dbyangs kyi 'grel pa yid kyi dga' ston/"@bo-x-ewts .
+    
     bdr:TT84B7B2209B8E84FF
         a                   :TitlePageTitle ;
         rdfs:label          "sa bcad lnga pa/ sa skya pa'i dus rabs skor/"@bo-x-ewts .
@@ -1076,6 +1165,10 @@ bdg:MW22281 {
     bdr:TTC31E77C0A01FCD04
         a                   :ToCTitle ;
         rdfs:label          "go shI bstan 'dzin chos rgyal skor/"@bo-x-ewts .
+    
+    bdr:TTC51F74E1DFFA899E
+        a                   :CoverTitle ;
+        rdfs:label          "Gaṅs-can yul gyi sa la spyod paʾi mtho ris kyi rgyal blon gtso bor brjod paʾi deb ther rdzogs ldan gźon nuʾi dgaʾ ston dpyid kyi rgyal moʾi glu dbyaṅs kyi ʾgrel pa yid kyi dgaʾ ston /Nor-braṅ O-rgyan gyis brtsams."@en-x-mixed .
     
     bdr:TTC6234D854B809D96
         a                   :TitlePageTitle ;

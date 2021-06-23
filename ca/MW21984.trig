@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21984 {
+    bda:LG0EB797B7C3CB7DB8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG14C41547AAECADE0
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-08-12T14:39:21.115Z"^^xsd:dateTime ;
@@ -23,14 +27,45 @@ bdg:MW21984 {
         adm:logDate         "2009-08-11T16:48:43.247Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG8BE10C0A54F3E693
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-08-12T15:07:44.587Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21984  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB86468" ;
         adm:adminAbout      bdr:MW21984 ;
-        adm:facetIndex      33 ;
-        adm:logEntry        bda:LG14C41547AAECADE0 , bda:LG53282648F7CB5326 ;
+        adm:facetIndex      47 ;
+        adm:gitPath         "ca/MW21984.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21984 ;
+        adm:logEntry        bda:LG0EB797B7C3CB7DB8 , bda:LG14C41547AAECADE0 , bda:LG53282648F7CB5326 , bda:LG8BE10C0A54F3E693 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the Khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL109A54A8535A497D
         a                   :ContentLocation ;
@@ -152,7 +187,45 @@ bdg:MW21984 {
         :contentLocationInstance  bdr:W21984 ;
         :contentLocationPage  9 .
     
-    bdr:MW21984  :hasPart   bdr:MW21984_1D2CB0 , bdr:MW21984_22CC1A , bdr:MW21984_2571E2 , bdr:MW21984_7FF512 ;
+    bdr:EV2D92C4BE75F0D837
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID2899FA8585D064F6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915900" .
+    
+    bdr:ID5FCA6453F23E534B
+        a                   bdr:HollisId ;
+        rdf:value           "014258536" .
+    
+    bdr:IDE496197D0450F8C4
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542104004" .
+    
+    bdr:IDF00AC17946C23D3D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BF1714.T53 L48 1995" .
+    
+    bdr:MW21984  a          :Instance ;
+        skos:altLabel       "tsang tsu li suan"@zh-latn-wadegile ;
+        skos:prefLabel      "nag rtsis rdel 'grem 'bras bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2899FA8585D064F6 , bdr:ID5FCA6453F23E534B , bdr:IDE496197D0450F8C4 , bdr:IDF00AC17946C23D3D ;
+        :authorshipStatement  "lha mo tshul khrims/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW21984_1D2CB0 , bdr:MW21984_22CC1A , bdr:MW21984_2571E2 , bdr:MW21984_7FF512 ;
+        :hasTitle           bdr:TT2CB88D272E0BDEE1 , bdr:TT537652E1D1B59183 , bdr:TT71DDCC8D30462919 ;
+        :instanceEvent      bdr:EV2D92C4BE75F0D837 ;
+        :instanceHasReproduction  bdr:W21984 ;
+        :instanceOf         bdr:WA1KG21818 ;
+        :isRoot             true ;
+        :note               bdr:NT1CFC04307E1E1E87 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "240 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21984_05221C
@@ -408,9 +481,21 @@ bdg:MW21984 {
         :partTreeIndex      "2.7" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT1CFC04307E1E1E87
+        a                   :Note ;
+        :noteText           "tbrc holds the 2003 printing as well; [s.l. : s.n.] in 185 p. \n\n."@en .
+    
     bdr:TT16FD2DAA349CCC4C
         a                   :Title ;
         rdfs:label          "keg rtsis sogs kyi rdel 'grem dpag bsam ljon shing gi 'bras bshad nag 'gros su bkod pa 'dod dgu'i gter gyi bang mdzod/"@bo-x-ewts .
+    
+    bdr:TT2CB88D272E0BDEE1
+        a                   :ColophonTitle ;
+        rdfs:label          "tsang tsu li suan"@zh-latn-wadegile .
+    
+    bdr:TT537652E1D1B59183
+        a                   :ColophonTitle ;
+        rdfs:label          "zang zu li suan"@zh-latn-pinyin-x-ndia .
     
     bdr:TT5C90C2B096A88E24
         a                   :Title ;
@@ -419,6 +504,10 @@ bdg:MW21984 {
     bdr:TT5E570586BD5FB804
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TT71DDCC8D30462919
+        a                   :Title ;
+        rdfs:label          "nag rtsis rdel 'grem 'bras bshad/"@bo-x-ewts .
     
     bdr:TT95725B328F07C6DE
         a                   :Title ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW25250 {
+    bda:LG0AEEBF8835DF88FA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG13D97B4A078A0830
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-07-19T16:48:51.821Z"^^xsd:dateTime ;
@@ -34,14 +38,39 @@ bdg:MW25250 {
         adm:logMessage      "removed T1129"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG48E8FF92E0590F2A
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-03-18T11:03:53.277Z"^^xsd:dateTime ;
+        adm:logMessage      "added copyright titles"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW25250  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB102082" ;
         adm:adminAbout      bdr:MW25250 ;
-        adm:facetIndex      232 ;
-        adm:logEntry        bda:LG13D97B4A078A0830 , bda:LG24073A8F6964B120 , bda:LG2F529CD3CEF5D2DA , bda:LG3E011ACADB733590 ;
+        adm:facetIndex      245 ;
+        adm:gitPath         "5c/MW25250.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW25250 ;
+        adm:logEntry        bda:LG0AEEBF8835DF88FA , bda:LG13D97B4A078A0830 , bda:LG24073A8F6964B120 , bda:LG2F529CD3CEF5D2DA , bda:LG3E011ACADB733590 , bda:LG48E8FF92E0590F2A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL055D6D79158014B8
         a                   :ContentLocation ;
@@ -695,7 +724,47 @@ bdg:MW25250 {
         :contentLocationInstance  bdr:W25250 ;
         :contentLocationPage  242 .
     
-    bdr:MW25250  :hasPart   bdr:MW25250_4F4AF4 , bdr:MW25250_9DFFE0 ;
+    bdr:EVA7878646C3B11098
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID06577203BCE7AC9B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105051418" .
+    
+    bdr:ID140ADBBD2E981C7C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7982.4 .S25 2002" .
+    
+    bdr:ID8A64D9382D30747F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004326827" .
+    
+    bdr:IDC52B74AE4C7A386A
+        a                   bdr:HollisId ;
+        rdf:value           "014259438" .
+    
+    bdr:MW25250  a          :Instance ;
+        skos:altLabel       "象雄文粹"@zh-hans ;
+        skos:prefLabel      "sangs rgyas g.yung drung bon gyi zhal 'don dang lo rgyus nyung bsdus zhang zhung snying tig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID06577203BCE7AC9B , bdr:ID140ADBBD2E981C7C , bdr:ID8A64D9382D30747F , bdr:IDC52B74AE4C7A386A ;
+        :authorshipStatement  "krang ca rig 'dzin rgya mtshos rtsom sgrig byas/"@bo-x-ewts ;
+        :biblioNote         "includes some texts in chinese"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW25250_4F4AF4 , bdr:MW25250_9DFFE0 ;
+        :hasTitle           bdr:TT14639EC7266A0009 , bdr:TT1FF7C37960D8DF19 , bdr:TT2B4F54A91411527A , bdr:TTC13AC503DDB5A226 ;
+        :instanceEvent      bdr:EVA7878646C3B11098 ;
+        :instanceHasReproduction  bdr:W25250 ;
+        :instanceOf         bdr:WA25250 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5, 274 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW25250_018E0F
@@ -2210,6 +2279,10 @@ bdg:MW25250 {
         a                   :Title ;
         rdfs:label          "文字的创制"@zh-hans .
     
+    bdr:TT14639EC7266A0009
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "象雄文粹"@zh-hans .
+    
     bdr:TT1596FD7E20CD3A8A
         a                   :Title ;
         rdfs:label          "na mo dus gsum/"@bo-x-ewts .
@@ -2221,6 +2294,10 @@ bdg:MW25250 {
     bdr:TT1A80B489467C2200
         a                   :Title ;
         rdfs:label          "rgyud bskang /"@bo-x-ewts .
+    
+    bdr:TT1FF7C37960D8DF19
+        a                   :Title ;
+        rdfs:label          "sangs rgyas g.yung drung bon gyi zhal 'don dang lo rgyus nyung bsdus zhang zhung snying tig"@bo-x-ewts .
     
     bdr:TT20324897CE9D4005
         a                   :Title ;
@@ -2249,6 +2326,10 @@ bdg:MW25250 {
     bdr:TT2A322AFDBC6F0AB2
         a                   :Title ;
         rdfs:label          "mi dge'i las sgrib bshags pa/"@bo-x-ewts .
+    
+    bdr:TT2B4F54A91411527A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xiang xiong wen cui"@zh-latn-pinyin-x-ndia .
     
     bdr:TT2B72B1F07CA33C49
         a                   :Title ;
@@ -2533,6 +2614,10 @@ bdg:MW25250 {
     bdr:TTC0678A374580FFB4
         a                   :Title ;
         rdfs:label          "bon grags slob dpon bstan pa 'od zer gyis mdzad pa'i smon lam sogs/"@bo-x-ewts .
+    
+    bdr:TTC13AC503DDB5A226
+        a                   :SpineTitle ;
+        rdfs:label          "zhang zhung snying tig"@bo-x-ewts .
     
     bdr:TTC245D5152F5012FE
         a                   :Title ;

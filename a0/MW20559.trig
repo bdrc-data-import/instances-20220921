@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20559 {
+    bda:LG0B07C8E03AFAD3CA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG0F2D9A9132AFC56E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2020-05-04T08:33:15.39Z"^^xsd:dateTime ;
@@ -66,14 +70,33 @@ bdg:MW20559 {
         adm:logMessage      "added T003JR48"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20559  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD99199" ;
         adm:adminAbout      bdr:MW20559 ;
-        adm:facetIndex      192 ;
-        adm:logEntry        bda:LG0F2D9A9132AFC56E , bda:LG13271A59A4105867 , bda:LG7184A0BDB961F510 , bda:LG8DF0FA0F080ED16A , bda:LG9565C99BB4B7994E , bda:LGAAC3F863FDD3E781 , bda:LGB92E77F3262572A5 , bda:LGC77FA7B221594830 , bda:LGCE464C9E596FA393 ;
+        adm:facetIndex      202 ;
+        adm:gitPath         "a0/MW20559.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20559 ;
+        adm:logEntry        bda:LG0B07C8E03AFAD3CA , bda:LG0F2D9A9132AFC56E , bda:LG13271A59A4105867 , bda:LG7184A0BDB961F510 , bda:LG8DF0FA0F080ED16A , bda:LG9565C99BB4B7994E , bda:LGAAC3F863FDD3E781 , bda:LGB92E77F3262572A5 , bda:LGC77FA7B221594830 , bda:LGCE464C9E596FA393 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00680EB174331598
         a                   :ContentLocation ;
@@ -702,7 +725,39 @@ bdg:MW20559 {
         :contentLocationInstance  bdr:W20559 ;
         :contentLocationPage  44 .
     
-    bdr:MW20559  :hasPart   bdr:MW20559_D891C0 ;
+    bdr:EV3129C7F97A93A443
+        a                   :PublishedEvent ;
+        :onYear             "1991"^^xsd:gYear .
+    
+    bdr:IDB6D8DD4ECA3A3CD8
+        a                   bdr:HollisId ;
+        rdf:value           "014258206" .
+    
+    bdr:IDD7083284F8A14C02
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890099" .
+    
+    bdr:MW20559  a          :Instance , :SerialInstance ;
+        skos:altLabel       "jin mei ling ba jiao yan ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gtam gyi tshogs theg pa'i rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB6D8DD4ECA3A3CD8 , bdr:IDD7083284F8A14C02 ;
+        :authorshipStatement  "'jigs med gling pa/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW20559_D891C0 ;
+        :hasTitle           bdr:TT08F98C02DE052E7D , bdr:TT50733CBE7115A043 , bdr:TTE089068AECBB3420 ;
+        :instanceEvent      bdr:EV3129C7F97A93A443 ;
+        :instanceHasReproduction  bdr:W20559 ;
+        :instanceOf         bdr:WA20559 ;
+        :isRoot             true ;
+        :note               bdr:NT4309BEB0F6226155 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "18" ;
+        :workExtentStatement  "20, 645 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20559_02398A
@@ -2009,9 +2064,17 @@ bdg:MW20559 {
         :partTreeIndex      "1.48" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT4309BEB0F6226155
+        a                   :Note ;
+        :noteText           "only;"@en .
+    
     bdr:TT0727A1A48985C886
         a                   :Title ;
         rdfs:label          "rin po che brtag pa'i gtam tsin+ta ma Ni'i mdzod khang (4)"@bo-x-ewts .
+    
+    bdr:TT08F98C02DE052E7D
+        a                   :Title ;
+        rdfs:label          "gtam gyi tshogs theg pa'i rgya mtsho/"@bo-x-ewts .
     
     bdr:TT0D794BEA2D767062
         a                   :Title ;
@@ -2084,6 +2147,10 @@ bdg:MW20559 {
     bdr:TT4968F160F3AAE126
         a                   :Title ;
         rdfs:label          "bsam yas gtsug lag khang gi gtam 'dod pa'i khams kyi rna rgyan (29)"@bo-x-ewts .
+    
+    bdr:TT50733CBE7115A043
+        a                   :CoverTitle ;
+        rdfs:label          "'jigs med gling pa'i gtam tshogs/"@bo-x-ewts .
     
     bdr:TT529EAF4AED964B3B
         a                   :Title ;
@@ -2264,6 +2331,10 @@ bdg:MW20559 {
     bdr:TTE07BEF45B1A5D098
         a                   :Title ;
         rdfs:label          "ye shes kyi pha rol tu phyin pa'i gtam rdzogs pa chen po'i do ha mdzod (67)"@bo-x-ewts .
+    
+    bdr:TTE089068AECBB3420
+        a                   :ColophonTitle ;
+        rdfs:label          "jin mei ling ba jiao yan ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TTE30ECF9FB9B44351
         a                   :Title ;

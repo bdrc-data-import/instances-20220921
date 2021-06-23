@@ -12,20 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM907 {
+    bda:LG19FB95AB454566D3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-17T12:04:54.445Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG22913B24EBB4E1D9
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-15T14:50:59.922Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF64DEE3773E13267
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
     bda:LGIM0FAD5E6A  a     adm:InitialDataImport ;
         adm:logDate         "2020-03-25T09:58:43.376Z"^^xsd:dateTime ;
         adm:logMessage      "full catalog , outline and released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM907"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM907  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356247" ;
         adm:adminAbout      bdr:MW1NLM907 ;
-        adm:facetIndex      14 ;
-        adm:logEntry        bda:LGIM0FAD5E6A ;
+        adm:facetIndex      22 ;
+        adm:gitPath         "97/MW1NLM907.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM907 ;
+        adm:logEntry        bda:LG19FB95AB454566D3 , bda:LG22913B24EBB4E1D9 , bda:LGF64DEE3773E13267 , bda:LGIM0FAD5E6A , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL166CFD10AA42D66D
         a                   :ContentLocation ;
@@ -51,7 +87,19 @@ bdg:MW1NLM907 {
         :contentLocationInstance  bdr:W1NLM907 ;
         :contentLocationPage  43 .
     
-    bdr:MW1NLM907  :hasPart  bdr:MW1NLM907_16AB83 , bdr:MW1NLM907_1EE3A2 , bdr:MW1NLM907_54B9A1 , bdr:MW1NLM907_6F88CF ;
+    bdr:MW1NLM907  a        :Instance ;
+        skos:prefLabel      "rta mgrin yang gsang khros pa'i sgrub skor/"@bo-x-ewts ;
+        :dimensionsStatement  "38x6" ;
+        :hasPart            bdr:MW1NLM907_16AB83 , bdr:MW1NLM907_1EE3A2 , bdr:MW1NLM907_54B9A1 , bdr:MW1NLM907_6F88CF ;
+        :hasTitle           bdr:TT744DCEAAF899D3D2 , bdr:TTF9C6518ECDCFCDD3 ;
+        :instanceHasReproduction  bdr:W1NLM907 ;
+        :instanceOf         bdr:WA1NLM907 ;
+        :isRoot             true ;
+        :note               bdr:NT00903EDA92DDD2C4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM907_16AB83
@@ -110,6 +158,10 @@ bdg:MW1NLM907 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT00903EDA92DDD2C4
+        a                   :Note ;
+        :noteText           "nlmId: M0058820"@en .
+    
     bdr:TT07CBCEA6219F84B1
         a                   :TitlePageTitle ;
         rdfs:label          "bcom ldan 'das pad+ma dbang rta mgrin chen yang gsang khros pa lha dgu'i las byang snying por dril ba dbang chen dgyes pa'i glu dbyangs/"@bo-x-ewts .
@@ -117,6 +169,10 @@ bdg:MW1NLM907 {
     bdr:TT3382588C05707E0A
         a                   :TitlePageTitle ;
         rdfs:label          "bcom ldan 'das pad+ma dbang chen yang gsang khros pa lha dgu'i zhi ba'i sbyin sreg gi cho ga rgud mun sel byed phan bde'i 'od stong rab 'bar/"@bo-x-ewts .
+    
+    bdr:TT744DCEAAF899D3D2
+        a                   :Title ;
+        rdfs:label          "rta mgrin yang gsang khros pa'i sgrub skor/"@bo-x-ewts .
     
     bdr:TT7560A8F3EBF5CBB8
         a                   :Title ;
@@ -137,6 +193,10 @@ bdg:MW1NLM907 {
     bdr:TTE6610AA81EB61E24
         a                   :Title ;
         rdfs:label          "rta mgrin yang gsang khros pa lha dgu'i zhi ba'i sbyin sreg gi cho ga rgud mun sel byed phan bde'i 'od stong rab 'bar/"@bo-x-ewts .
+    
+    bdr:TTF9C6518ECDCFCDD3
+        a                   :TitlePageTitle ;
+        rdfs:label          "pad+ma dbang chen khrag 'thung rta mgrin yang gsang khros pa'i 'phrin las kyi gzhung dang 'brel bar gdab las kyi rim pa lag tu blang ba'i chog sgrigs rta mchog rngams pa'i bzhad sgra/"@bo-x-ewts .
     
     bdr:TTFC7EEE503C444A6A
         a                   :TitlePageTitle ;

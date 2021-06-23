@@ -28,14 +28,43 @@ bdg:MW23778 {
         adm:logDate         "2010-07-20T16:58:38.662Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00038 .
     
+    bda:LGDDEB70A0F93136C0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE4D2EC7FD330E6D6
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T10:04:06.896Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23778  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2JT7823" ;
         adm:adminAbout      bdr:MW23778 ;
-        adm:facetIndex      92 ;
-        adm:logEntry        bda:LG29BDC96D3EF64B26 , bda:LG8A687CA8A7872013 , bda:LG9AAAC03C8D6FE92C ;
+        adm:facetIndex      104 ;
+        adm:gitPath         "b6/MW23778.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23778 ;
+        adm:logEntry        bda:LG29BDC96D3EF64B26 , bda:LG8A687CA8A7872013 , bda:LG9AAAC03C8D6FE92C , bda:LGDDEB70A0F93136C0 , bda:LGE4D2EC7FD330E6D6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Jigme Tashi; created with the generous support of the Khyentse Foundation."@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL014ECE0DA276AF41
         a                   :ContentLocation ;
@@ -324,7 +353,41 @@ bdg:MW23778 {
         :contentLocationPage  497 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23778  :hasPart   bdr:MW23778_794E94 , bdr:MW23778_C81E9B ;
+    bdr:EVF345E4188719B9E6
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID3374EA4CCEB3319C
+        a                   bdr:HollisId ;
+        rdf:value           "014259119" .
+    
+    bdr:ID50B6361B46C43D0F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .G56 1985" .
+    
+    bdr:ID87EB2D5B5346A872
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903872" .
+    
+    bdr:MW23778  a          :Instance ;
+        skos:altLabel       "the collected works (bka' 'bum) of glin-chen ras-pa padma-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_pad+ma rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3374EA4CCEB3319C , bdr:ID50B6361B46C43D0F , bdr:ID87EB2D5B5346A872 ;
+        :biblioNote         "reproduced from a collection of rare manuscripts from go-'jo nub dgon"@en ;
+        :hasPart            bdr:MW23778_794E94 , bdr:MW23778_C81E9B ;
+        :hasTitle           bdr:TT1D1C48538E7B483C , bdr:TT6CF3636C0B572BB9 , bdr:TTCD798783E796F2C3 ;
+        :instanceEvent      bdr:EVF345E4188719B9E6 ;
+        :instanceHasReproduction  bdr:W23778 ;
+        :instanceOf         bdr:WA23778 ;
+        :isRoot             true ;
+        :note               bdr:NT3BD12011EFA31050 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tashijong, palampur, dt. kangra, H.P. :"@en ;
+        :publisherName      "khampa gar sungrab nyamso gyunphel parkhang, tibetan craft community,"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23778_057499
@@ -922,6 +985,10 @@ bdg:MW23778 {
         :partTreeIndex      "1.16" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT3BD12011EFA31050
+        a                   :Note ;
+        :noteText           "-2657"@en .
+    
     bdr:TT042276D2FCB25785
         a                   :Title ;
         rdfs:label          "don gsal sgron me/"@bo-x-ewts .
@@ -941,6 +1008,10 @@ bdg:MW23778 {
     bdr:TT10A220CFD854D1F4
         a                   :Title ;
         rdfs:label          "rang skyon blta ba'i me long zhes pa dang / gsung sgros bdud rtsi'i me long zhes kyang bya/"@bo-x-ewts .
+    
+    bdr:TT1D1C48538E7B483C
+        a                   :CoverTitle ;
+        rdfs:label          "glin-chen ras-pa padma-rdo-rje'i bka' 'bum"@bo-alalc97 .
     
     bdr:TT1DC45D836E8052BE
         a                   :Title ;
@@ -1014,6 +1085,10 @@ bdg:MW23778 {
         a                   :Title ;
         rdfs:label          "bstan pa byung tshul gyi sgron me/"@bo-x-ewts .
     
+    bdr:TT6CF3636C0B572BB9
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_pad+ma rdo rje/"@bo-x-ewts .
+    
     bdr:TT6E996A86E6B4A913
         a                   :Title ;
         rdfs:label          "byang chub spyod pa'i sgron me'i bsdus don/"@bo-x-ewts .
@@ -1077,6 +1152,10 @@ bdg:MW23778 {
     bdr:TTC5E1150727810858
         a                   :Title ;
         rdfs:label          "theg pa spyi'i lung /"@bo-x-ewts .
+    
+    bdr:TTCD798783E796F2C3
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (bka' 'bum) of glin-chen ras-pa padma-rdo-rje"@en-x-mixed .
     
     bdr:TTD6CE4ECE0F57CF38
         a                   :Title ;

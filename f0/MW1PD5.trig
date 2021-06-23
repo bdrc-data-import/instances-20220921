@@ -12,10 +12,33 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD5 {
+    bda:LG30FBDE5F2EF3ED6B
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-20T15:35:13.118Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG48CC1D0689B8A0E0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-02-16T16:21:06.369Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug pa"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG59ECA2D30FBF008E
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-16T16:29:06.272Z"^^xsd:dateTime ;
+        adm:logMessage      "rtsom pa gsar du bcug"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG6999AE4326A0E52A
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-02-28T07:11:45.968Z"^^xsd:dateTime ;
         adm:logMessage      "typos corrected"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGC8BCFCF96288DD62
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-02-28T06:50:19.859Z"^^xsd:dateTime ;
+        adm:logMessage      "annotation revised"@en ;
         adm:logWho          bdu:U00001 .
     
     bda:LGCDCFEA9E2CFA2659
@@ -24,14 +47,33 @@ bdg:MW1PD5 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1PD5  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS94776" ;
         adm:adminAbout      bdr:MW1PD5 ;
-        adm:facetIndex      230 ;
-        adm:logEntry        bda:LG6999AE4326A0E52A , bda:LGCDCFEA9E2CFA2659 ;
+        adm:facetIndex      243 ;
+        adm:gitPath         "f0/MW1PD5.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD5 ;
+        adm:logEntry        bda:LG30FBDE5F2EF3ED6B , bda:LG48CC1D0689B8A0E0 , bda:LG59ECA2D30FBF008E , bda:LG6999AE4326A0E52A , bda:LGC8BCFCF96288DD62 , bda:LGCDCFEA9E2CFA2659 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outline prepared with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL002CAFC423D56801
         a                   :ContentLocation ;
@@ -1365,7 +1407,38 @@ bdg:MW1PD5 {
         :contentLocationInstance  bdr:W1PD5 ;
         :contentLocationPage  610 .
     
-    bdr:MW1PD5  :hasPart    bdr:MW1PD5_23E7D9 , bdr:MW1PD5_380B24 , bdr:MW1PD5_410143 , bdr:MW1PD5_49AE96 , bdr:MW1PD5_A6D75A , bdr:MW1PD5_AC4C92 , bdr:MW1PD5_C8FC03 , bdr:MW1PD5_FC0C03 ;
+    bdr:EV5BF98EC08FCBB02D
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID37CAFDB8B6DAA724
+        a                   bdr:HollisId ;
+        rdf:value           "014257816" .
+    
+    bdr:ID45CDB4B7705B4411
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "710507101x" .
+    
+    bdr:MW1PD5  a           :Instance , :SerialInstance ;
+        skos:altLabel       "shi wan quan he mi jue hei juan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "'bum khu tshur/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID37CAFDB8B6DAA724 , bdr:ID45CDB4B7705B4411 ;
+        :authorshipStatement  "bha ro phyag rdum sogs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1PD5_23E7D9 , bdr:MW1PD5_380B24 , bdr:MW1PD5_410143 , bdr:MW1PD5_49AE96 , bdr:MW1PD5_A6D75A , bdr:MW1PD5_AC4C92 , bdr:MW1PD5_C8FC03 , bdr:MW1PD5_FC0C03 ;
+        :hasTitle           bdr:TT071EB5D72AE4C5EF , bdr:TT289F15D86385C099 , bdr:TT653B2238449C2454 , bdr:TTB8EAB206705974ED ;
+        :instanceEvent      bdr:EV5BF98EC08FCBB02D ;
+        :instanceHasReproduction  bdr:W1PD5 ;
+        :instanceOf         bdr:WA1PD5 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1017462 ;
+        :seriesNumber       "034" ;
+        :workExtentStatement  "2, 3, 4, 11, 3, 712 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1PD5_00110E
@@ -4044,6 +4117,14 @@ bdg:MW1PD5 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:TT071EB5D72AE4C5EF
+        a                   :OtherTitle ;
+        rdfs:label          "khu tshur 'bum/"@bo-x-ewts .
+    
+    bdr:TT289F15D86385C099
+        a                   :Title ;
+        rdfs:label          "'bum khu tshur/"@bo-x-ewts .
+    
     bdr:TT4A2B7242DF8ADF9D
         a                   :Title ;
         rdfs:label          "snyan nas snyan du brgyad pa'i man ngag be'u bum nag po/"@bo-x-ewts .
@@ -4052,6 +4133,10 @@ bdg:MW1PD5 {
         a                   :Title ;
         rdfs:label          "be'u bum nag po/"@bo-x-ewts .
     
+    bdr:TT653B2238449C2454
+        a                   :ColophonTitle ;
+        rdfs:label          "shi wan quan he mi jue hei juan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT7425ADCE48940362
         a                   :Title ;
         rdfs:label          "'bum khu tshur/"@bo-x-ewts .
@@ -4059,6 +4144,10 @@ bdg:MW1PD5 {
     bdr:TT878C9AC95787A39B
         a                   :Title ;
         rdfs:label          "khu tshur 'bum/"@bo-x-ewts .
+    
+    bdr:TTB8EAB206705974ED
+        a                   :OtherTitle ;
+        rdfs:label          "be'u bum nag po/"@bo-x-ewts .
     
     bdr:TTC9D58E63187F1449
         a                   :TitlePageTitle ;

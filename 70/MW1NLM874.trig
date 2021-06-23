@@ -12,6 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM874 {
+    bda:LG161A5CF1FE123932
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T14:49:15.008Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG247B0ECE5AD97961
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-05T15:22:15.916Z"^^xsd:dateTime ;
+        adm:logMessage      "release for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG25D19A31CE151CE7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM874"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:LGIMEFE1FBEB  a     adm:InitialDataImport ;
         adm:logDate         "2020-03-25T09:58:40.235Z"^^xsd:dateTime ;
         adm:logMessage      "full catalog , outline and released"@en ;
@@ -22,10 +53,15 @@ bdg:MW1NLM874 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356178" ;
         adm:adminAbout      bdr:MW1NLM874 ;
-        adm:facetIndex      18 ;
-        adm:logEntry        bda:LGIMEFE1FBEB ;
+        adm:facetIndex      28 ;
+        adm:gitPath         "70/MW1NLM874.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM874 ;
+        adm:logEntry        bda:LG161A5CF1FE123932 , bda:LG247B0ECE5AD97961 , bda:LG25D19A31CE151CE7 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 , bda:LGIMEFE1FBEB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL21160D356ADEEC14
         a                   :ContentLocation ;
@@ -63,7 +99,19 @@ bdg:MW1NLM874 {
         :contentLocationInstance  bdr:W1NLM874 ;
         :contentLocationPage  194 .
     
-    bdr:MW1NLM874  :hasPart  bdr:MW1NLM874_2F48D2 , bdr:MW1NLM874_43E2DC , bdr:MW1NLM874_778FCE , bdr:MW1NLM874_C193D9 , bdr:MW1NLM874_D554DB , bdr:MW1NLM874_E66AFB ;
+    bdr:MW1NLM874  a        :Instance ;
+        skos:prefLabel      "ngan song thams cad yongs su sbyong ba gzi brjid kyi rgyal po'i bdag bskyed shin tu rgyas pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "29x6.5" ;
+        :hasPart            bdr:MW1NLM874_2F48D2 , bdr:MW1NLM874_43E2DC , bdr:MW1NLM874_778FCE , bdr:MW1NLM874_C193D9 , bdr:MW1NLM874_D554DB , bdr:MW1NLM874_E66AFB ;
+        :hasTitle           bdr:TT2D6ECA6C88BDA012 , bdr:TTF0E25419BF22A8BC ;
+        :instanceHasReproduction  bdr:W1NLM874 ;
+        :instanceOf         bdr:WA1NLM874 ;
+        :isRoot             true ;
+        :note               bdr:NT221393667D4CD0B4 , bdr:NT557074ED53435471 , bdr:NTC7800360ECB660AE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "46 ff., 7 ff., 14 ff., 29 ff., 6 ff., 11 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM874_2F48D2
@@ -150,6 +198,22 @@ bdg:MW1NLM874 {
         :partTreeIndex      "6" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT221393667D4CD0B4
+        a                   :Note ;
+        :noteText           "missingPages: M0058787-006 [Final pages are missing 11B] image 227"@en .
+    
+    bdr:NT557074ED53435471
+        a                   :Note ;
+        :noteText           "nlmId: M0058787"@en .
+    
+    bdr:NTC7800360ECB660AE
+        a                   :Note ;
+        :noteText           "coverType: wooden cover"@en .
+    
+    bdr:TT2D6ECA6C88BDA012
+        a                   :TitlePageTitle ;
+        rdfs:label          "bcom ldan 'das ngan song thams cad yongs su sbyong ba gzi brjid kyi rgyal po'i bdag bskyed shin tu rgyas pa sogs/"@bo-x-ewts .
+    
     bdr:TT3683757DB080688A
         a                   :Title ;
         rdfs:label          "cha gsum gtor ma/"@bo-x-ewts .
@@ -185,6 +249,10 @@ bdg:MW1NLM874 {
     bdr:TTE0F7A36EEC885949
         a                   :Title ;
         rdfs:label          "mngon rtogs rgyan/"@bo-x-ewts .
+    
+    bdr:TTF0E25419BF22A8BC
+        a                   :Title ;
+        rdfs:label          "ngan song thams cad yongs su sbyong ba gzi brjid kyi rgyal po'i bdag bskyed shin tu rgyas pa sogs/"@bo-x-ewts .
     
     bdr:TTFB02BD865BCEA040
         a                   :TitlePageTitle ;

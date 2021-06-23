@@ -29,6 +29,12 @@ bdg:MW1KG422 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG81BBB76327C9520C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-08-26T15:13:14.051Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGB5415271DF07C50E
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-02-02T13:08:52.259Z"^^xsd:dateTime ;
@@ -41,14 +47,39 @@ bdg:MW1KG422 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG422  a         adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD80783" ;
         adm:adminAbout      bdr:MW1KG422 ;
-        adm:facetIndex      88 ;
-        adm:logEntry        bda:LG04DED89B8D256CE8 , bda:LG0B48DDE14F3B922A , bda:LG27E2B28B4F6E5B3A , bda:LGB5415271DF07C50E , bda:LGE907E2CA8DE0B1B0 ;
+        adm:facetIndex      100 ;
+        adm:gitPath         "0b/MW1KG422.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG422 ;
+        adm:logEntry        bda:LG04DED89B8D256CE8 , bda:LG0B48DDE14F3B922A , bda:LG27E2B28B4F6E5B3A , bda:LG81BBB76327C9520C , bda:LGB5415271DF07C50E , bda:LGE907E2CA8DE0B1B0 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; created with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL063130BAE56EC0B7
         a                   :ContentLocation ;
@@ -493,7 +524,44 @@ bdg:MW1KG422 {
         :contentLocationInstance  bdr:W1KG422 ;
         :contentLocationPage  301 .
     
-    bdr:MW1KG422  :hasPart  bdr:MW1KG422_047864 , bdr:MW1KG422_21B9CF , bdr:MW1KG422_8492FD , bdr:MW1KG422_9D301C , bdr:MW1KG422_B135F9 , bdr:MW1KG422_E08DFC , bdr:MW1KG422_EFC53B , bdr:MW1KG422_FAE269 ;
+    bdr:EV0C56162E6479A3EB
+        a                   :PublishedEvent ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:ID25C2EB1172181F84
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105085019" .
+    
+    bdr:ID580BBB0502A9D384
+        a                   bdr:HollisId ;
+        rdf:value           "014256837" .
+    
+    bdr:ID901FE871BFAC4D39
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2008308717" .
+    
+    bdr:IDAE45480844CB730B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS797.82.B75 B77 2007" .
+    
+    bdr:MW1KG422  a         :Instance ;
+        skos:altLabel       "na xu xian ren zu ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "mes po'i byung ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25C2EB1172181F84 , bdr:ID580BBB0502A9D384 , bdr:ID901FE871BFAC4D39 , bdr:IDAE45480844CB730B ;
+        :authorshipStatement  "'gom bstan 'dzin chos dbyings kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG422_047864 , bdr:MW1KG422_21B9CF , bdr:MW1KG422_8492FD , bdr:MW1KG422_9D301C , bdr:MW1KG422_B135F9 , bdr:MW1KG422_E08DFC , bdr:MW1KG422_EFC53B , bdr:MW1KG422_FAE269 ;
+        :hasTitle           bdr:TT34FE7878A140FC12 , bdr:TTF3185F3FDE08EA32 , bdr:TTFA08EF85358E4860 ;
+        :instanceEvent      bdr:EV0C56162E6479A3EB ;
+        :instanceHasReproduction  bdr:IE1KG422 , bdr:W1KG422 ;
+        :instanceOf         bdr:WA1KG422 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 3, 362 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG422_047864
@@ -1402,6 +1470,10 @@ bdg:MW1KG422 {
         a                   :Title ;
         rdfs:label          "mes po'i byung ba/"@bo-x-ewts .
     
+    bdr:TT34FE7878A140FC12
+        a                   :Title ;
+        rdfs:label          "mes po'i byung ba/"@bo-x-ewts .
+    
     bdr:TT49ACEC30F70DED4D
         a                   :Title ;
         rdfs:label          "'gom dgon chos 'khor byams pa gling gi chos khrims bca' yig"@bo-x-ewts .
@@ -1421,6 +1493,14 @@ bdg:MW1KG422 {
     bdr:TTBAFFA043A5D2436A
         a                   :Title ;
         rdfs:label          "'gom dgon chos 'khor byams pa gling gi chos khrims bca' yig kha gsab/"@bo-x-ewts .
+    
+    bdr:TTF3185F3FDE08EA32
+        a                   :ColophonTitle ;
+        rdfs:label          "na xu xian ren zu ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTFA08EF85358E4860
+        a                   :Subtitle ;
+        rdfs:label          "btsan po'i bar gyi dpal sde nags shod stong bu chung dang 'gom sde leng drug"@bo-x-ewts .
     
     bdr:TTFDFFB3CC39C9D0AD
         a                   :Title ;

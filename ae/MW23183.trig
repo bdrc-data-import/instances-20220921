@@ -18,6 +18,12 @@ bdg:MW23183 {
         adm:logMessage      "added T00AG0281"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG54D58E238CDED3E8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:48:05.548Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG5FA968AFC2B2471E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2018-06-28T15:36:06.141Z"^^xsd:dateTime ;
@@ -41,14 +47,37 @@ bdg:MW23183 {
         adm:logMessage      "fix Number"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGF8142633CA3FB8AA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23183  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB81694" ;
         adm:adminAbout      bdr:MW23183 ;
-        adm:facetIndex      526 ;
-        adm:logEntry        bda:LG2C315A86EB5F9205 , bda:LG5FA968AFC2B2471E , bda:LG74A91D027AEE252E , bda:LG90AB45E3EE2FC9A0 , bda:LGE45F30019BC8DF7D ;
+        adm:facetIndex      537 ;
+        adm:gitPath         "ae/MW23183.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23183 ;
+        adm:logEntry        bda:LG2C315A86EB5F9205 , bda:LG54D58E238CDED3E8 , bda:LG5FA968AFC2B2471E , bda:LG74A91D027AEE252E , bda:LG90AB45E3EE2FC9A0 , bda:LGE45F30019BC8DF7D , bda:LGF8142633CA3FB8AA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL001858C8E342C5A0
         a                   :ContentLocation ;
@@ -1876,7 +1905,41 @@ bdg:MW23183 {
         :contentLocationPage  40 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23183  :hasPart   bdr:MW23183_126C9D , bdr:MW23183_58EBED , bdr:MW23183_AE6A1C , bdr:MW23183_F65BDE ;
+    bdr:EV244E7BE1CC3E9170
+        a                   :PublishedEvent ;
+        :onYear             "1976"^^xsd:gYear .
+    
+    bdr:ID6EE45EE9A047CECB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76902141" .
+    
+    bdr:IDB14418B402CA0F87
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.O17 1976 ORIEN" .
+    
+    bdr:IDC06992D48DA5E1DC
+        a                   bdr:HollisId ;
+        rdf:value           "014258822" .
+    
+    bdr:MW23183  a          :Instance ;
+        skos:altLabel       "the collected rediscovered teachings (gter chos) of a-pam gter-ston o-rgyan-phrin-las-glin-pa"@en-x-mixed ;
+        skos:prefLabel      "gter chos/_dpa' bo chos dbyings rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EE45EE9A047CECB , bdr:IDB14418B402CA0F87 , bdr:IDC06992D48DA5E1DC ;
+        :biblioNote         "reproduced from all the surviving manuscripts in the possession of his disciples in india and bhutan"@en ;
+        :hasPart            bdr:MW23183_126C9D , bdr:MW23183_58EBED , bdr:MW23183_AE6A1C , bdr:MW23183_F65BDE ;
+        :hasTitle           bdr:TT35AD60C2485A57B3 , bdr:TT362F412A96069947 ;
+        :instanceEvent      bdr:EV244E7BE1CC3E9170 ;
+        :instanceHasReproduction  bdr:W23183 ;
+        :instanceOf         bdr:WA23183 ;
+        :isRoot             true ;
+        :note               bdr:NTF480AA5CA4397FAB ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "dodrup sangey lama"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23183_008EDE
@@ -5532,6 +5595,10 @@ bdg:MW23183 {
         :partTreeIndex      "4.10" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTF480AA5CA4397FAB
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0389-0392.\n\ncataloging checked against iu record; no lc record available."@en .
+    
     bdr:TT035631C2AF204FFE
         a                   :Title ;
         rdfs:label          "rtsa gsum dril sgrub nor bu'i rgya can gyi dbang chog dri med bdud rtsi'i chu rgyun/"@bo-x-ewts .
@@ -5743,6 +5810,14 @@ bdg:MW23183 {
     bdr:TT34829CD87769BBA7
         a                   :Title ;
         rdfs:label          "dbang gi phrin bcol/"@bo-x-ewts .
+    
+    bdr:TT35AD60C2485A57B3
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected rediscovered teachings (gter chos) of a-pam gter-ston o-rgyan-phrin-las-glin-pa"@en-x-mixed .
+    
+    bdr:TT362F412A96069947
+        a                   :Title ;
+        rdfs:label          "gter chos/_dpa' bo chos dbyings rdo rje/"@bo-x-ewts .
     
     bdr:TT39C2A52586D077DE
         a                   :Title ;

@@ -12,10 +12,34 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1GS8 {
+    bda:LG154B13B1E9D81D94
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-28T16:00:04.312Z"^^xsd:dateTime ;
+        adm:logMessage      "correction of typos"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG782F2CF043A03A75
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-03-01T13:16:41.703Z"^^xsd:dateTime ;
         adm:logMessage      "annotation revised"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA41D924CEAED578A
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-03-05T12:01:21.891Z"^^xsd:dateTime ;
+        adm:logMessage      "colophon"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGBF4C69FFBAA65986
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-26T10:31:15.24Z"^^xsd:dateTime ;
+        adm:logMessage      "added phyogs bsgrigs as genre"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDD39E3571911A046
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-26T07:18:04.625Z"^^xsd:dateTime ;
+        adm:logMessage      "corrections to record made: annotation"@en ;
         adm:logWho          bdu:U00001 .
     
     bda:LGDF540C2880007623
@@ -30,14 +54,38 @@ bdg:MW1GS8 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGEE266E59090F4B85
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-02-15T18:20:18.569Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS8  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS2205" ;
         adm:adminAbout      bdr:MW1GS8 ;
-        adm:facetIndex      176 ;
-        adm:logEntry        bda:LG782F2CF043A03A75 , bda:LGDF540C2880007623 , bda:LGE8112511DDC919E1 ;
+        adm:facetIndex      189 ;
+        adm:gitPath         "9d/MW1GS8.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS8 ;
+        adm:logEntry        bda:LG154B13B1E9D81D94 , bda:LG782F2CF043A03A75 , bda:LGA41D924CEAED578A , bda:LGBF4C69FFBAA65986 , bda:LGDD39E3571911A046 , bda:LGDF540C2880007623 , bda:LGE8112511DDC919E1 , bda:LGEE266E59090F4B85 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith ; outlined with the support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01370622FFA36728
         a                   :ContentLocation ;
@@ -1053,7 +1101,39 @@ bdg:MW1GS8 {
         :contentLocationInstance  bdr:W1GS8 ;
         :contentLocationPage  452 .
     
-    bdr:MW1GS8  :hasPart    bdr:MW1GS8_1A82DC , bdr:MW1GS8_45E917 , bdr:MW1GS8_49FB86 , bdr:MW1GS8_5CC6A1 , bdr:MW1GS8_735141 , bdr:MW1GS8_79196B , bdr:MW1GS8_C52876 , bdr:MW1GS8_FB2E76 , bdr:MW1GS8_FD8F11 ;
+    bdr:EV1E10ECC003CF815B
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID2CF2E3E4AD3C17FC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105073748" .
+    
+    bdr:IDB49798A2A928489C
+        a                   bdr:HollisId ;
+        rdf:value           "014255544" .
+    
+    bdr:MW1GS8  a           :Instance , :SerialInstance ;
+        skos:altLabel       "秀多医学汇集"@zh-hans ;
+        skos:prefLabel      "phyag rdor gso rig phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2CF2E3E4AD3C17FC , bdr:IDB49798A2A928489C ;
+        :authorshipStatement  "phyag rdor mgon po/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS8_1A82DC , bdr:MW1GS8_45E917 , bdr:MW1GS8_49FB86 , bdr:MW1GS8_5CC6A1 , bdr:MW1GS8_735141 , bdr:MW1GS8_79196B , bdr:MW1GS8_C52876 , bdr:MW1GS8_FB2E76 , bdr:MW1GS8_FD8F11 ;
+        :hasTitle           bdr:TT15D63CA08F6DA0FF , bdr:TT79D01F4AA38F853D , bdr:TTE1090B34D82C6E4C ;
+        :instanceEvent      bdr:EV1E10ECC003CF815B ;
+        :instanceHasReproduction  bdr:W1GS8 ;
+        :instanceOf         bdr:WA1GS8 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1017462 ;
+        :seriesNumber       "038" ;
+        :workExtentStatement  "2, 3, 4, 8, 470 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS8_02CB9F
@@ -3113,9 +3193,17 @@ bdg:MW1GS8 {
         :partTreeIndex      "7.07.09" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:TT15D63CA08F6DA0FF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xiu duo yi xue hui ji"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT29293482FFC10FE5
         a                   :Title ;
         rdfs:label          "gces bsdus rin chen phreng ba/"@bo-x-ewts .
+    
+    bdr:TT79D01F4AA38F853D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "秀多医学汇集"@zh-hans .
     
     bdr:TT7FDEE8A15EDE3191
         a                   :Title ;
@@ -3124,4 +3212,8 @@ bdg:MW1GS8 {
     bdr:TT80DF9880DEBA64BC
         a                   :Title ;
         rdfs:label          "man ngag snying gi nor bu las gzhung gi don gsal snying po/"@bo-x-ewts .
+    
+    bdr:TTE1090B34D82C6E4C
+        a                   :Title ;
+        rdfs:label          "phyag rdor gso rig phyogs bsgrigs/"@bo-x-ewts .
 }

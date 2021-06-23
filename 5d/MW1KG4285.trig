@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG4285 {
+    bda:LG5A5A35014127275B
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-01T11:29:18.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad and cover title"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG7E0203C9EA30AD08
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -24,20 +30,45 @@ bdg:MW1KG4285 {
         adm:logMessage      "reviwed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGF160382336AC8176
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-10T12:18:24.228Z"^^xsd:dateTime ;
+        adm:logMessage      "first released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGF57E09BB0F880708
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2017-07-11T16:02:38.344Z"^^xsd:dateTime ;
         adm:logMessage      "fixed pagination error"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG4285  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG4285" ;
         adm:adminAbout      bdr:MW1KG4285 ;
-        adm:facetIndex      120 ;
-        adm:logEntry        bda:LG7E0203C9EA30AD08 , bda:LGC479C06A86A57AA3 , bda:LGF57E09BB0F880708 ;
+        adm:facetIndex      131 ;
+        adm:gitPath         "5d/MW1KG4285.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4285 ;
+        adm:logEntry        bda:LG5A5A35014127275B , bda:LG7E0203C9EA30AD08 , bda:LGC479C06A86A57AA3 , bda:LGF160382336AC8176 , bda:LGF57E09BB0F880708 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0008878427DA3A79
         a                   :ContentLocation ;
@@ -445,7 +476,42 @@ bdg:MW1KG4285 {
         :contentLocationPage  61 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG4285  :hasPart  bdr:MW1KG4285_29AD41 , bdr:MW1KG4285_54C8A4 ;
+    bdr:CRB4FB9161E0472C40
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1943 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD010395D099EB84E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1034 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE48349012D288E3B
+        a                   :PublishedEvent ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:IDFCA1682640277520
+        a                   bdr:HollisId ;
+        rdf:value           "014256889" .
+    
+    bdr:MW1KG4285  a        :Instance ;
+        skos:altLabel       "mind training"@en ;
+        skos:prefLabel      "blo sbyong skor phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFCA1682640277520 ;
+        :biblioNote         "computerized printed texts"@en ;
+        :creator            bdr:CRB4FB9161E0472C40 , bdr:CRD010395D099EB84E ;
+        :hasPart            bdr:MW1KG4285_29AD41 , bdr:MW1KG4285_54C8A4 ;
+        :hasTitle           bdr:TTF4E90F9DBC69E174 , bdr:TTF9E854553C0D8586 , bdr:TTFCBA3E15F3454966 ;
+        :instanceEvent      bdr:EVE48349012D288E3B ;
+        :instanceHasReproduction  bdr:W1KG4285 ;
+        :instanceOf         bdr:WA1KG4285 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "[kathmandu]"@en ;
+        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG4285_0DD676
@@ -1506,7 +1572,19 @@ bdg:MW1KG4285 {
         a                   :Title ;
         rdfs:label          "blo sbyong sems dpa'i rim pa las zag bcas dge ba'i stobs bskyed pa'i chos/"@bo-x-ewts .
     
+    bdr:TTF4E90F9DBC69E174
+        a                   :CoverTitle ;
+        rdfs:label          "blo sbyong /"@bo-x-ewts .
+    
     bdr:TTF76E3A94BEE5335E
         a                   :Title ;
         rdfs:label          "sems dpa' chen po dkon mchog rgyal mtshan gyis phyogs bsgrigs mdzad pa'i blo sbyong brgya rtsa'i dkar chag"@bo-x-ewts .
+    
+    bdr:TTF9E854553C0D8586
+        a                   :Title ;
+        rdfs:label          "blo sbyong skor phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TTFCBA3E15F3454966
+        a                   :OtherTitle ;
+        rdfs:label          "mind training"@en .
 }

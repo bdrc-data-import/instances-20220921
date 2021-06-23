@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23692 {
+    bda:LG003D3BF650A4EBA2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T09:53:20.82Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG09E94D2FC6BA5FDB
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2006-10-14T17:17:16.281Z"^^xsd:dateTime ;
@@ -24,18 +30,41 @@ bdg:MW23692 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGCA48E17F1BE8ACF6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGD6BEE62D3015CF05
         a                   adm:InitialOutlineData ;
         adm:logDate         "2006-08-30T10:57:39.187Z"^^xsd:dateTime .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
     
     bda:MW23692  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS10542" ;
         adm:adminAbout      bdr:MW23692 ;
-        adm:facetIndex      68 ;
-        adm:logEntry        bda:LG09E94D2FC6BA5FDB , bda:LG30351E3D21C55745 , bda:LGD6BEE62D3015CF05 ;
+        adm:facetIndex      76 ;
+        adm:gitPath         "3e/MW23692.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23692 ;
+        adm:logEntry        bda:LG003D3BF650A4EBA2 , bda:LG09E94D2FC6BA5FDB , bda:LG30351E3D21C55745 , bda:LGCA48E17F1BE8ACF6 , bda:LGD6BEE62D3015CF05 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "outline prepared by annie bien; revised by gene smith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0793A77F5EFDBE40
         a                   :ContentLocation ;
@@ -219,7 +248,32 @@ bdg:MW23692 {
         :contentLocationPage  299 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23692  :hasPart   bdr:MW23692_097A4D , bdr:MW23692_0CE1A9 , bdr:MW23692_1273E7 , bdr:MW23692_5DAC9E , bdr:MW23692_684E44 , bdr:MW23692_98CC6E , bdr:MW23692_A4F817 , bdr:MW23692_D922A5 ;
+    bdr:EVBACF869C7F5B7D1A
+        a                   :PublishedEvent ;
+        :notBefore          "0019"^^xsd:gYear .
+    
+    bdr:IDEE7FECC80538A3A9
+        a                   bdr:HollisId ;
+        rdf:value           "014259038" .
+    
+    bdr:MW23692  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_rgyal tshab rje (sku 'bum par ma)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE7FECC80538A3A9 ;
+        :hasPart            bdr:MW23692_097A4D , bdr:MW23692_0CE1A9 , bdr:MW23692_1273E7 , bdr:MW23692_5DAC9E , bdr:MW23692_684E44 , bdr:MW23692_98CC6E , bdr:MW23692_A4F817 , bdr:MW23692_D922A5 ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TTC32D0B5C5DB9B7C8 ;
+        :instanceEvent      bdr:EVBACF869C7F5B7D1A ;
+        :instanceHasReproduction  bdr:W23692 ;
+        :instanceOf         bdr:WA1KG15910 ;
+        :isRoot             true ;
+        :note               bdr:NT4C8A7E2352E8A10E ;
+        :numberOfVolumes    8 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sku 'bum monastery"@en ;
+        :publisherName      "sku 'bum byams pa gling par khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "8 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23692_097A4D
@@ -722,6 +776,10 @@ bdg:MW23692 {
         :partTreeIndex      "1.3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT4C8A7E2352E8A10E
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 0708-0715"@en .
+    
     bdr:TT07AA67E90F2A8D35
         a                   :TitlePageTitle ;
         rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan gyi 'grel pa don gsal bai'i rnam bshad snying po rgyan/"@bo-x-ewts .
@@ -833,6 +891,10 @@ bdg:MW23692 {
     bdr:TTC0C9C9F4A5B68E96
         a                   :TitlePageTitle ;
         rdfs:label          "byang chub sems dpa'i spyod pa la 'jug pa'i rnam bshad rgyal sras 'jug ngogs/"@bo-x-ewts .
+    
+    bdr:TTC32D0B5C5DB9B7C8
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rgyal tshab rje (sku 'bum par ma)"@bo-x-ewts .
     
     bdr:TTCA99484F0F300233
         a                   :Title ;

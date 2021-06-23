@@ -18,6 +18,12 @@ bdg:MW22145 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG3585E89C2D0E0BCE
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-28T09:30:09.941Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG4C356434124D3945
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-01-20T11:00:06.494Z"^^xsd:dateTime ;
@@ -35,14 +41,37 @@ bdg:MW22145 {
         adm:logMessage      "added topic until v.1, p. 647"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG946C0D82B37CB84A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22145  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB89187" ;
         adm:adminAbout      bdr:MW22145 ;
-        adm:facetIndex      175 ;
-        adm:logEntry        bda:LG2BA0610F72C38EDA , bda:LG4C356434124D3945 , bda:LG4F96E9BFB9AF7061 , bda:LG6BB3F1855F36325B ;
+        adm:facetIndex      184 ;
+        adm:gitPath         "99/MW22145.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22145 ;
+        adm:logEntry        bda:LG2BA0610F72C38EDA , bda:LG3585E89C2D0E0BCE , bda:LG4C356434124D3945 , bda:LG4F96E9BFB9AF7061 , bda:LG6BB3F1855F36325B , bda:LG946C0D82B37CB84A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL031E5B7E37F9ECD7
         a                   :ContentLocation ;
@@ -645,7 +674,33 @@ bdg:MW22145 {
         :contentLocationPage  375 ;
         :contentLocationVolume  4 .
     
-    bdr:MW22145  :hasPart   bdr:MW22145_0C022F , bdr:MW22145_A7352E , bdr:MW22145_C09573 , bdr:MW22145_C322AA ;
+    bdr:EVCA37BD6A551CF4CE
+        a                   :PublishedEvent ;
+        :notBefore          "0199"^^xsd:gYear .
+    
+    bdr:ID29CCF5595DC69B02
+        a                   bdr:HollisId ;
+        rdf:value           "014258658" .
+    
+    bdr:MW22145  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_bstan pa rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID29CCF5595DC69B02 ;
+        :biblioNote         "impressions of blocks at bla brang bkra shis 'khyil"@en ;
+        :hasPart            bdr:MW22145_0C022F , bdr:MW22145_A7352E , bdr:MW22145_C09573 , bdr:MW22145_C322AA ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TTF45A1EC90542D160 , bdr:TTF8EBF46D7BF1C4E0 ;
+        :instanceEvent      bdr:EVCA37BD6A551CF4CE ;
+        :instanceHasReproduction  bdr:W22145 ;
+        :instanceOf         bdr:WA22145 ;
+        :isRoot             true ;
+        :note               bdr:NT12692C81861D6CAD ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bla brang /"@bo-x-ewts ;
+        :publisherName      "bla brang par khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22145_02575E
@@ -1857,6 +1912,10 @@ bdg:MW22145 {
         :partTreeIndex      "2.04" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT12692C81861D6CAD
+        a                   :Note ;
+        :noteText           "-3842"@en .
+    
     bdr:TT02BDF9013EB1A72E
         a                   :Title ;
         rdfs:label          "dpal gsang ba 'dus pa'i tshogs 'khor/"@bo-x-ewts .
@@ -2169,6 +2228,10 @@ bdg:MW22145 {
         a                   :Title ;
         rdfs:label          "dmigs brtsem bzla tshul snying po bcud 'dus/"@bo-x-ewts .
     
+    bdr:TTF45A1EC90542D160
+        a                   :OtherTitle ;
+        rdfs:label          "zhang ston bstan pa rgya mtsho'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TTF52CA6663CE77E64
         a                   :Title ;
         rdfs:label          "mi h+ra'i rgyud sde 'og ma gsum gyi dbang chog g.yer gshong pa'i gsung nas blangs pa/"@bo-x-ewts .
@@ -2180,6 +2243,10 @@ bdg:MW22145 {
     bdr:TTF8B8201F8D02A1A8
         a                   :Title ;
         rdfs:label          "rje bla ma'i bstod pa don dang ldan pa'i tshig 'grel nyung du/"@bo-x-ewts .
+    
+    bdr:TTF8EBF46D7BF1C4E0
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan pa rgya mtsho/"@bo-x-ewts .
     
     bdr:TTF972AAD199566926
         a                   :Title ;

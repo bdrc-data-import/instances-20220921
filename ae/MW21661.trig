@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21661 {
+    bda:LG2BAE7FD8B0577804
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG4EFFD4B5BA384068
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-02-02T12:58:25.257Z"^^xsd:dateTime ;
@@ -23,14 +27,33 @@ bdg:MW21661 {
         adm:logDate         "2010-01-29T15:59:01.046Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21661  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB95085" ;
         adm:adminAbout      bdr:MW21661 ;
-        adm:facetIndex      37 ;
-        adm:logEntry        bda:LG4EFFD4B5BA384068 , bda:LGB894517A65DBB725 ;
+        adm:facetIndex      48 ;
+        adm:gitPath         "ae/MW21661.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21661 ;
+        adm:logEntry        bda:LG2BAE7FD8B0577804 , bda:LG4EFFD4B5BA384068 , bda:LGB894517A65DBB725 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL172008F8E54FE80D
         a                   :ContentLocation ;
@@ -123,7 +146,43 @@ bdg:MW21661 {
         :contentLocationPage  13 ;
         :contentLocationVolume  1 .
     
-    bdr:MW21661  :hasPart   bdr:MW21661_16A114 , bdr:MW21661_DEB61D ;
+    bdr:CR6F969805C9C9DA6B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P5360 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV76F77157E3D28AAB
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:IDE33F703E339E4419
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107097" .
+    
+    bdr:IDF897B5CE4C708606
+        a                   bdr:HollisId ;
+        rdf:value           "014258380" .
+    
+    bdr:MW21661  a          :Instance ;
+        skos:prefLabel      "phar phyin rnam bshad snying po'i rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE33F703E339E4419 , bdr:IDF897B5CE4C708606 ;
+        :authorshipStatement  "rgyal tshab dar ma rin chen gyis mdzad ; cha ris skal bzang thogs med kyis zhu dag byas/"@bo-x-ewts ;
+        :creator            bdr:CR6F969805C9C9DA6B ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW21661_16A114 , bdr:MW21661_DEB61D ;
+        :hasTitle           bdr:TT37694F977CED6226 , bdr:TT977F3A451C7DC168 , bdr:TTEF521DCA7F42F1A6 ;
+        :instanceEvent      bdr:EV76F77157E3D28AAB ;
+        :instanceHasReproduction  bdr:W21661 ;
+        :instanceOf         bdr:WA1KG15417 , bdr:WA21661 ;
+        :isRoot             true ;
+        :note               bdr:NT21E5666BA15ABC97 ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS148 ;
+        :workExtentStatement  "2 v. (2, 785 p.)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21661_16A114
@@ -305,6 +364,10 @@ bdg:MW21661 {
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeVolume .
     
+    bdr:NT21E5666BA15ABC97
+        a                   :Note ;
+        :noteText           "-5789"@en .
+    
     bdr:TT0821A7830282A8CD
         a                   :Title ;
         rdfs:label          "skabs bdun pa'i 'grel pa'i bshad pa/"@bo-x-ewts .
@@ -320,6 +383,10 @@ bdg:MW21661 {
     bdr:TT366628A6E15C22C5
         a                   :Title ;
         rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan gyi 'grel pa don gsal ba'i rnam bshad snying po'i rgyan/"@bo-x-ewts .
+    
+    bdr:TT37694F977CED6226
+        a                   :CoverTitle ;
+        rdfs:label          "rnam bshad snying po'i rgyan/"@bo-x-ewts .
     
     bdr:TT3FB25E8FF7D964F4
         a                   :Title ;
@@ -348,6 +415,10 @@ bdg:MW21661 {
     bdr:TT948352D23C751E97
         a                   :Title ;
         rdfs:label          "skabs drug pa'i 'grel pa'i bshad pa/"@bo-x-ewts .
+    
+    bdr:TT977F3A451C7DC168
+        a                   :Title ;
+        rdfs:label          "phar phyin rnam bshad snying po'i rgyan/"@bo-x-ewts .
     
     bdr:TTA03A9FE4445C850D
         a                   :Title ;
@@ -380,6 +451,10 @@ bdg:MW21661 {
     bdr:TTEC4E2E446220EF99
         a                   :Title ;
         rdfs:label          "rnam bshad snying po'i rgyan (smad cha)"@bo-x-ewts .
+    
+    bdr:TTEF521DCA7F42F1A6
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan gyi 'grel pa don gsal ba'i rnam bshad snying po'i rgyan/"@bo-x-ewts .
     
     bdr:TTF4C6F96530CA0DCF
         a                   :Title ;

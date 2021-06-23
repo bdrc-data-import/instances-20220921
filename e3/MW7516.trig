@@ -12,20 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW7516 {
+    bda:LG76E64F18082039CE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG87E58371193BF150
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-06-08T07:27:52.687Z"^^xsd:dateTime ;
         adm:logMessage      "checkin"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW7516  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS73982" ;
         adm:adminAbout      bdr:MW7516 ;
-        adm:facetIndex      1047 ;
-        adm:logEntry        bda:LG87E58371193BF150 ;
+        adm:facetIndex      1054 ;
+        adm:gitPath         "e3/MW7516.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7516 ;
+        adm:logEntry        bda:LG76E64F18082039CE , bda:LG87E58371193BF150 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gene Smith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL001331DB2D4E2753
         a                   :ContentLocation ;
@@ -4203,7 +4226,31 @@ bdg:MW7516 {
         a                   :ContentLocation ;
         :contentLocationInstance  bdr:W7516 .
     
-    bdr:MW7516  :hasPart    bdr:MW7516_46F0F1 , bdr:MW7516_72C839 , bdr:MW7516_ABF6D5 ;
+    bdr:EV13D5F938C49F9DB7
+        a                   :PublishedEvent ;
+        :onYear             "1986"^^xsd:gYear .
+    
+    bdr:IDC6DBF702ADC29D88
+        a                   bdr:HollisId ;
+        rdf:value           "014261046" .
+    
+    bdr:MW7516  a           :Instance ;
+        skos:prefLabel      "shel gong shel 'phreng /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC6DBF702ADC29D88 ;
+        :authorshipStatement  "rtsom pa po, de'u dmar bstan 'dzin phun tshogs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW7516_46F0F1 , bdr:MW7516_72C839 , bdr:MW7516_ABF6D5 ;
+        :hasTitle           bdr:TT37C7335EA52AE2CD , bdr:TT4833B8C1777BAB92 ;
+        :instanceEvent      bdr:EV13D5F938C49F9DB7 ;
+        :instanceHasReproduction  bdr:W7516 ;
+        :instanceOf         bdr:WA1KG12958 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "32, 537 p." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW7516_007831
@@ -16791,6 +16838,14 @@ bdg:MW7516 {
     bdr:TT02948A0D0183F053
         a                   :TitlePageTitle ;
         rdfs:label          "bdud nad gzhom pa'i gnyen po rtsi sman gyi nus pa ryang bshad gsal ston dri med shel gong /"@bo-x-ewts .
+    
+    bdr:TT37C7335EA52AE2CD
+        a                   :TitlePageTitle ;
+        rdfs:label          "bdud nad 'joms pa'i gnyen po rtsi sman gyi nus pa rkyang bshad gsal ston dri med shel gong ; bdud rtsi sman gyi rnam dbye ngo bo nus ming rgyas par bshad pa dri med shel phreng /"@bo-x-ewts .
+    
+    bdr:TT4833B8C1777BAB92
+        a                   :Title ;
+        rdfs:label          "shel gong shel 'phreng /"@bo-x-ewts .
     
     bdr:TT95C501C2CD61263A
         a                   :TitlePageTitle ;

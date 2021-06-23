@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW19998 {
+    bda:LG2AFDBCA877CD4403
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG88546DF12006DB55
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-07-20T10:46:35.812Z"^^xsd:dateTime ;
@@ -34,14 +38,34 @@ bdg:MW19998 {
         adm:logMessage      "deleted repeat topics"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19998  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB102198" ;
         adm:adminAbout      bdr:MW19998 ;
-        adm:facetIndex      23 ;
-        adm:logEntry        bda:LG88546DF12006DB55 , bda:LGA33B4C3DDC56ADFD , bda:LGB83409F9FCC520F7 , bda:LGEBC07F0BC31B7957 ;
+        adm:facetIndex      32 ;
+        adm:gitPath         "8c/MW19998.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19998 ;
+        adm:logEntry        bda:LG2AFDBCA877CD4403 , bda:LG88546DF12006DB55 , bda:LGA33B4C3DDC56ADFD , bda:LGB83409F9FCC520F7 , bda:LGEBC07F0BC31B7957 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1CD05589A31B906B
         a                   :ContentLocation ;
@@ -97,7 +121,29 @@ bdg:MW19998 {
         :contentLocationInstance  bdr:W19998 ;
         :contentLocationPage  28 .
     
-    bdr:MW19998  :hasPart   bdr:MW19998_1FDEF7 , bdr:MW19998_64738C , bdr:MW19998_8EA98F , bdr:MW19998_9762E2 , bdr:MW19998_9C4E51 , bdr:MW19998_E359B8 , bdr:MW19998_E62631 , bdr:MW19998_ED4332 , bdr:MW19998_EF5AFE ;
+    bdr:EV0735CA72EA2E89EA
+        a                   :PublishedEvent ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:IDC1E67DAF693D06CF
+        a                   bdr:HollisId ;
+        rdf:value           "014254944" .
+    
+    bdr:MW19998  a          :Instance ;
+        skos:prefLabel      "rma 'gram rdo rje brag gi lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC1E67DAF693D06CF ;
+        :authorshipStatement  "blo bzang snyan grags kyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW19998_1FDEF7 , bdr:MW19998_64738C , bdr:MW19998_8EA98F , bdr:MW19998_9762E2 , bdr:MW19998_9C4E51 , bdr:MW19998_E359B8 , bdr:MW19998_E62631 , bdr:MW19998_ED4332 , bdr:MW19998_EF5AFE ;
+        :hasTitle           bdr:TT49097394E53CD8C0 , bdr:TT75A1A6FCCE831505 , bdr:TTC0C11D5C8A3E2896 ;
+        :instanceEvent      bdr:EV0735CA72EA2E89EA ;
+        :instanceHasReproduction  bdr:W19998 ;
+        :instanceOf         bdr:WA19998 ;
+        :isRoot             true ;
+        :note               bdr:NT52B9FCA4A603E3C3 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 193 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW19998_1FDEF7
@@ -217,13 +263,25 @@ bdg:MW19998 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeTableOfContent .
     
+    bdr:NT52B9FCA4A603E3C3
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images for preservation purposes; not to be distributed"@en .
+    
     bdr:TT00439ACF625F3AA4
         a                   :Title ;
         rdfs:label          "yang dar skabs kyi lha khang so so'i dkar chag 'god pa/"@bo-x-ewts .
     
+    bdr:TT49097394E53CD8C0
+        a                   :CoverTitle ;
+        rdfs:label          "mdo smad gnas chen rma 'gram rdo rje brag gi lo rgyus/"@bo-x-ewts .
+    
     bdr:TT524A0F12BF7AC374
         a                   :Title ;
         rdfs:label          "ston pa thugs rje can gyis bstan pa byang nas byang du dar bar lung bstan pa ltar bod yul du rgyal bstan dar tshul mdor bsdus te bstan pa/"@bo-x-ewts .
+    
+    bdr:TT75A1A6FCCE831505
+        a                   :Title ;
+        rdfs:label          "rma 'gram rdo rje brag gi lo rgyus/"@bo-x-ewts .
     
     bdr:TT76D582A3431E7F85
         a                   :Title ;
@@ -244,6 +302,10 @@ bdg:MW19998 {
     bdr:TTBE38C7F30DB535B6
         a                   :Title ;
         rdfs:label          "mchod par brjod pa dang rtsom par dam bca' ba/"@bo-x-ewts .
+    
+    bdr:TTC0C11D5C8A3E2896
+        a                   :TitlePageTitle ;
+        rdfs:label          "mkhas pa mi gsum dang lha lung dpal rdor gyi sgrub gnas mdo smad gnas chen rma 'gram rdo rje brag gi lo rgyus legs par bshad pa zas 'og gos kyi ri mo/"@bo-x-ewts .
     
     bdr:TTC88ACB003CFC3577
         a                   :Title ;

@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23158 {
+    bda:LG2AEAAA4ED6B5E218
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-12T14:02:49.038Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG2C28134130CBE128
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -24,19 +30,49 @@ bdg:MW23158 {
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG83819CE255F43C88
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGE5251F48528E2437
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-01-24T11:00:36.216Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23158  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23158" ;
         adm:adminAbout      bdr:MW23158 ;
-        adm:facetIndex      286 ;
-        adm:logEntry        bda:LG2C28134130CBE128 , bda:LG48C0EC00000ECAE1 , bda:LGE5251F48528E2437 ;
+        adm:facetIndex      301 ;
+        adm:gitPath         "93/MW23158.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23158 ;
+        adm:logEntry        bda:LG2AEAAA4ED6B5E218 , bda:LG2C28134130CBE128 , bda:LG48C0EC00000ECAE1 , bda:LG83819CE255F43C88 , bda:LGE5251F48528E2437 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL003A6A28641B07D9
         a                   :ContentLocation ;
@@ -1025,7 +1061,46 @@ bdg:MW23158 {
         :contentLocationPage  99 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23158  :hasPart   bdr:MW23158_04439A , bdr:MW23158_49CE35 , bdr:MW23158_AD1889 , bdr:MW23158_CB5DDB ;
+    bdr:EVDC6D68A30A82B157
+        a                   :PublishedEvent ;
+        :notAfter           "1980"^^xsd:gYear ;
+        :notBefore          "1975"^^xsd:gYear .
+    
+    bdr:ID028623613B4CE746
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7684.4 .R56 1975" .
+    
+    bdr:ID3D3A8F8CE325F4C8
+        a                   bdr:HollisId ;
+        rdf:value           "014258800" .
+    
+    bdr:ID45E6F04AD909F7F6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75905229" .
+    
+    bdr:IDA18226B3CA7C3296
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001834725-8" .
+    
+    bdr:MW23158  a          :Instance ;
+        skos:altLabel       "dam chos dgons pa yan zab kyi chos skor : a collection of the more important rediscoveries of the famed gter-ston gnam-lcags-me-'bar ('bri-gun-pa rin chen phun tshogs)"@en-x-mixed ;
+        skos:prefLabel      "dgongs pa yang zab gyi gter chos skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID028623613B4CE746 , bdr:ID3D3A8F8CE325F4C8 , bdr:ID45E6F04AD909F7F6 , bdr:IDA18226B3CA7C3296 ;
+        :biblioNote         "reproduced from blockprints from the library of sgang sngon monastery"@en ;
+        :hasPart            bdr:MW23158_04439A , bdr:MW23158_49CE35 , bdr:MW23158_AD1889 , bdr:MW23158_CB5DDB ;
+        :hasTitle           bdr:TT3DB1812FAEF80907 , bdr:TT4A970095491C53BB , bdr:TTE31635DF44C41D29 , bdr:TTE907545ECE42E89B ;
+        :instanceEvent      bdr:EVDC6D68A30A82B157 ;
+        :instanceHasReproduction  bdr:W23158 ;
+        :instanceOf         bdr:WA23158 ;
+        :isRoot             true ;
+        :note               bdr:NT46AA57029BDCB40C ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "d. tsondu senghe"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23158_02CA2D
@@ -3049,6 +3124,10 @@ bdg:MW23158 {
         :partTreeIndex      "3.41" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT46AA57029BDCB40C
+        a                   :Note ;
+        :noteText           "tbrc has scanned images, tiffs and pdf files\n0187-0190."@en .
+    
     bdr:TT018C8BDD5771C541
         a                   :Title ;
         rdfs:label          "smin byed dbang gi brgyud pa/"@bo-x-ewts .
@@ -3169,6 +3248,10 @@ bdg:MW23158 {
         a                   :Title ;
         rdfs:label          "bla ma gsang sgrub kyi byin rlabs/ (la)"@bo-x-ewts .
     
+    bdr:TT3DB1812FAEF80907
+        a                   :TitlePageTitle ;
+        rdfs:label          "dam chos dgons pa yan zab kyi chos skor : a collection of the more important rediscoveries of the famed gter-ston gnam-lcags-me-'bar ('bri-gun-pa rin chen phun tshogs)"@en-x-mixed .
+    
     bdr:TT3E91529C207ACC65
         a                   :Title ;
         rdfs:label          "bla ma'i gsang sgrub yang gsang snying po/ (ra)"@bo-x-ewts .
@@ -3184,6 +3267,10 @@ bdg:MW23158 {
     bdr:TT4548A27502053053
         a                   :Title ;
         rdfs:label          "gsang ba snying byang gi skor bka' srung gi gtor bskul them byang rnam/"@bo-x-ewts .
+    
+    bdr:TT4A970095491C53BB
+        a                   :CoverTitle ;
+        rdfs:label          "rgyal dbang rin chen phun tshogs kyi zab gter yang zab kyi chos skor/"@bo-x-ewts .
     
     bdr:TT50EABF2EECBDEB63
         a                   :Title ;
@@ -3521,6 +3608,10 @@ bdg:MW23158 {
         a                   :Title ;
         rdfs:label          "CONTENTS"@en .
     
+    bdr:TTE31635DF44C41D29
+        a                   :CoverTitle ;
+        rdfs:label          "Dam chos Dgoṅs pa yaṅ zab kyi chos skor :a collection of the more important rediscoveries of the famed Gter-ston Gnam-lcags-me-ʾbar (ʾBri-guṅ-pa Rin-chen-phun-tshogs [sic])."@en-x-mixed .
+    
     bdr:TTE35C2BD2E77D5C5C
         a                   :Title ;
         rdfs:label          "gza' ha ra'i las byang /"@bo-x-ewts .
@@ -3544,6 +3635,10 @@ bdg:MW23158 {
     bdr:TTE79596E07CA6D3AD
         a                   :Title ;
         rdfs:label          "bde gshegs khro bo rigs bsdus las phyi sgrub kyi las tshogs dug lnga'i dpung 'joms/ (zha)"@bo-x-ewts .
+    
+    bdr:TTE907545ECE42E89B
+        a                   :Title ;
+        rdfs:label          "dgongs pa yang zab gyi gter chos skor/"@bo-x-ewts .
     
     bdr:TTED321FABCE06488A
         a                   :Title ;

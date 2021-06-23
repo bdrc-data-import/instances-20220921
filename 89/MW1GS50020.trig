@@ -22,6 +22,12 @@ bdg:MW1GS50020 {
         adm:logDate         "2008-02-29T11:06:56.996Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG4445BF92B7C76F89
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-12T20:31:26.746Z"^^xsd:dateTime ;
+        adm:logMessage      "added encoding field"@en ;
+        adm:logWho          bdu:U00012 .
+    
     bda:LG6D7DD7182E32BA67
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-03-04T11:43:21.939Z"^^xsd:dateTime ;
@@ -38,10 +44,22 @@ bdg:MW1GS50020 {
         adm:logMessage      "added pinyin"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGF0BFC98A4C66135A
+        a                   adm:UpdateData ;
+        adm:logDate         "2018-10-04T11:51:16.813Z"^^xsd:dateTime ;
+        adm:logMessage      "added series and number on pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGF4C35C2B8F6C55DC
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-02-29T09:55:57.508Z"^^xsd:dateTime ;
         adm:logMessage      "checkin and checkout"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF80D4FFEC598AD79
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-06-18T06:44:12.796Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
         adm:logWho          bdu:U00001 .
     
     bda:LGFB2DDE49CA8F0A25
@@ -50,14 +68,26 @@ bdg:MW1GS50020 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS50020  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS50021" ;
         adm:adminAbout      bdr:MW1GS50020 ;
-        adm:facetIndex      192 ;
-        adm:logEntry        bda:LG14225588A130445C , bda:LG3C80AB0854E259D1 , bda:LG6D7DD7182E32BA67 , bda:LGA163D6AB0B908BF5 , bda:LGAF43F36D12AAF2BB , bda:LGF4C35C2B8F6C55DC , bda:LGFB2DDE49CA8F0A25 ;
+        adm:facetIndex      200 ;
+        adm:gitPath         "89/MW1GS50020.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS50020 ;
+        adm:logEntry        bda:LG14225588A130445C , bda:LG3C80AB0854E259D1 , bda:LG4445BF92B7C76F89 , bda:LG6D7DD7182E32BA67 , bda:LGA163D6AB0B908BF5 , bda:LGAF43F36D12AAF2BB , bda:LGF0BFC98A4C66135A , bda:LGF4C35C2B8F6C55DC , bda:LGF80D4FFEC598AD79 , bda:LGFB2DDE49CA8F0A25 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith and paldor ; outline created with the assistance of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL000DE552BA807B94
         a                   :ContentLocation ;
@@ -999,7 +1029,34 @@ bdg:MW1GS50020 {
         a                   :ContentLocation ;
         :contentLocationInstance  bdr:W1GS50020 .
     
-    bdr:MW1GS50020  :hasPart  bdr:MW1GS50020_3BC781 , bdr:MW1GS50020_F5A7CD ;
+    bdr:EVAA512561CEE36324
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID203F37E6AD0DDEB7
+        a                   bdr:HollisId ;
+        rdf:value           "014255472" .
+    
+    bdr:MW1GS50020  a       :SerialInstance ;
+        skos:altLabel       "gan nan wen shi zi liao"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "kan lho'i bod brgyud nang bstan dgon sde so so'i lo rgyus mdor bsdus/ （smad cha/）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID203F37E6AD0DDEB7 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :hasPart            bdr:MW1GS50020_3BC781 , bdr:MW1GS50020_F5A7CD ;
+        :hasTitle           bdr:TT0E2349150AE130C1 , bdr:TTA55B0C64B922523F ;
+        :instanceEvent      bdr:EVAA512561CEE36324 ;
+        :instanceHasReproduction  bdr:W1GS50020 ;
+        :instanceOf         bdr:WA1GS50020 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "[lan kru'u?]"@en ;
+        :publisherName      "kan lho'i lo rgyus dpyad gzhi'i yig rigs cus/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1GS49597 ;
+        :seriesNumber       "11" ;
+        :workExtentStatement  "5, 238, 168 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS50020_00460F
@@ -3209,4 +3266,12 @@ bdg:MW1GS50020 {
         :partOf             bdr:MW1GS50020_3BC781 ;
         :partTreeIndex      "2.74" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT0E2349150AE130C1
+        a                   :Title ;
+        rdfs:label          "kan lho'i bod brgyud nang bstan dgon sde so so'i lo rgyus mdor bsdus/ （smad cha/）"@bo-x-ewts .
+    
+    bdr:TTA55B0C64B922523F
+        a                   :ColophonTitle ;
+        rdfs:label          "gan nan wen shi zi liao"@zh-latn-pinyin-x-ndia .
 }

@@ -36,6 +36,12 @@ bdg:MW10200 {
         adm:logMessage      "added P6955"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG522004B1B0BFF045
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-12T10:06:54.302Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG58B787E47452B3DC
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-06-03T10:37:16.068Z"^^xsd:dateTime ;
@@ -77,14 +83,37 @@ bdg:MW10200 {
         adm:logMessage      "image number changed"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGCBA524DAABEA1DDA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW10200  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3LS7143" ;
         adm:adminAbout      bdr:MW10200 ;
-        adm:facetIndex      192 ;
-        adm:logEntry        bda:LG0D02FDC5E4B26264 , bda:LG317067174CCF6A14 , bda:LG3C8ED62234AA1C00 , bda:LG3DDADAD5A7A4E704 , bda:LG58B787E47452B3DC , bda:LG6835CBBFE18A48E7 , bda:LG8B5D8F0F0C4D0802 , bda:LG8C1346F0BD7C688B , bda:LGA91A784CD68FF28E , bda:LGBD812F11E756FFF1 , bda:LGC78CE22990084235 ;
+        adm:facetIndex      202 ;
+        adm:gitPath         "b1/MW10200.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10200 ;
+        adm:logEntry        bda:LG0D02FDC5E4B26264 , bda:LG317067174CCF6A14 , bda:LG3C8ED62234AA1C00 , bda:LG3DDADAD5A7A4E704 , bda:LG522004B1B0BFF045 , bda:LG58B787E47452B3DC , bda:LG6835CBBFE18A48E7 , bda:LG8B5D8F0F0C4D0802 , bda:LG8C1346F0BD7C688B , bda:LGA91A784CD68FF28E , bda:LGBD812F11E756FFF1 , bda:LGC78CE22990084235 , bda:LGCBA524DAABEA1DDA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL010A64266F655D6B
         a                   :ContentLocation ;
@@ -717,7 +746,40 @@ bdg:MW10200 {
         :contentLocationPage  581 ;
         :contentLocationVolume  1 .
     
-    bdr:MW10200  :hasPart   bdr:MW10200_108CAD , bdr:MW10200_88DDFC ;
+    bdr:EV24EF8AB7C87BF306
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID8F74D15017443D47
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .T48 1985" .
+    
+    bdr:ID976D1966F5E2202F
+        a                   bdr:HollisId ;
+        rdf:value           "014254602" .
+    
+    bdr:ID9D2D953D5A6F3BBA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "86900288" .
+    
+    bdr:MW10200  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_thub bstan brtson 'grus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8F74D15017443D47 , bdr:ID976D1966F5E2202F , bdr:ID9D2D953D5A6F3BBA ;
+        :biblioNote         "reproduced from the author's manuscripts by his disciple, mkhan-po padma-shes-rab"@en ;
+        :hasPart            bdr:MW10200_108CAD , bdr:MW10200_88DDFC ;
+        :hasTitle           bdr:TT9FE799CA327AF3F3 ;
+        :instanceEvent      bdr:EV24EF8AB7C87BF306 ;
+        :instanceHasReproduction  bdr:W10200 ;
+        :instanceOf         bdr:WA10200 ;
+        :isRoot             true ;
+        :note               bdr:NT58BD8296A906C33E ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bylakuppe"@en ;
+        :publisherName      "nyingmapa monastery"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW10200_0A18D4
@@ -2035,6 +2097,10 @@ bdg:MW10200 {
         :partType           bdr:PartTypeText ;
         :workIsAbout        bdr:T897 .
     
+    bdr:NT58BD8296A906C33E
+        a                   :Note ;
+        :noteText           "-6467"@en .
+    
     bdr:TT004EBD404B8EC2BB
         a                   :TitlePageTitle ;
         rdfs:label          "khro rgyal dgyes pa'i gsol mchod dgyes pa'i bla rdo/"@bo-x-ewts .
@@ -2278,6 +2344,10 @@ bdg:MW10200 {
     bdr:TT9F12CD13090FA898
         a                   :TitlePageTitle ;
         rdfs:label          "grub dbang rdzogs chen pa'i bstan pa rgyas pa'i smon lam rgyal ba dgyes pa'i mchod sprin/"@bo-x-ewts .
+    
+    bdr:TT9FE799CA327AF3F3
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_thub bstan brtson 'grus/"@bo-x-ewts .
     
     bdr:TTA10C9031B8954B4D
         a                   :TitlePageTitle ;

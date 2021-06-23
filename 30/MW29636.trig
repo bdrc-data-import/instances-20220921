@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29636 {
+    bda:LG062719E6C11C4E81
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGAA8D0D61B754F9A1
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-09-13T10:37:23.315Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed archiveInfo volume"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGF03BECA1BC76D19C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2019-04-15T16:20:23.633Z"^^xsd:dateTime ;
@@ -23,14 +33,33 @@ bdg:MW29636 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29636  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS54041" ;
         adm:adminAbout      bdr:MW29636 ;
-        adm:facetIndex      62 ;
-        adm:logEntry        bda:LGF03BECA1BC76D19C , bda:LGFF738A25834D4180 ;
+        adm:facetIndex      72 ;
+        adm:gitPath         "30/MW29636.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29636 ;
+        adm:logEntry        bda:LG062719E6C11C4E81 , bda:LGAA8D0D61B754F9A1 , bda:LGF03BECA1BC76D19C , bda:LGFF738A25834D4180 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gene Smith"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00970A9A102687C8
         a                   :ContentLocation ;
@@ -386,7 +415,31 @@ bdg:MW29636 {
         :contentLocationInstance  bdr:W29636 ;
         :contentLocationPage  185 .
     
-    bdr:MW29636  :hasPart   bdr:MW29636_036805 , bdr:MW29636_12DB85 , bdr:MW29636_1FB0A3 , bdr:MW29636_5A9544 , bdr:MW29636_61BD1F , bdr:MW29636_818F1D , bdr:MW29636_B6AC12 , bdr:MW29636_C979A1 , bdr:MW29636_D2446B ;
+    bdr:EVDCA78B44E890D4FB
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID00A5F8DCC8A1D841
+        a                   bdr:HollisId ;
+        rdf:value           "014260056" .
+    
+    bdr:MW29636  a          :Instance ;
+        skos:prefLabel      "byams me dgon thos bsam rnam rgyal gling gi lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00A5F8DCC8A1D841 ;
+        :authorshipStatement  "sman rams pa dkon mchog rin chen dang klu shod pa 'od zer rgya mtsho gnyis kyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW29636_036805 , bdr:MW29636_12DB85 , bdr:MW29636_1FB0A3 , bdr:MW29636_5A9544 , bdr:MW29636_61BD1F , bdr:MW29636_818F1D , bdr:MW29636_B6AC12 , bdr:MW29636_C979A1 , bdr:MW29636_D2446B ;
+        :hasTitle           bdr:TT443027829410384A , bdr:TT85FFB6B964465C4C , bdr:TTAEE27EE1E02B66DD ;
+        :illustrations      "14 p. col. ill." ;
+        :instanceEvent      bdr:EVDCA78B44E890D4FB ;
+        :instanceHasReproduction  bdr:W29636 ;
+        :instanceOf         bdr:WA29636 ;
+        :isRoot             true ;
+        :note               bdr:NT7AEC89FFCC4C1D13 ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "*'bar khams, rnga ba khul/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29636_036805
@@ -1101,4 +1154,20 @@ bdg:MW29636 {
         :partOf             bdr:MW29636_036805 ;
         :partTreeIndex      "6.09" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:NT7AEC89FFCC4C1D13
+        a                   :Note ;
+        :noteText           "history of a dge lugs monastery in mdzod dge rdzong of rnga ba prefecture\n\nthere were two main bla brang in this monastery: seng tshang and dpon bla\n\ngift from jann ronis"@en .
+    
+    bdr:TT443027829410384A
+        a                   :OtherTitle ;
+        rdfs:label          "'bras spungs byams me thos bsam rnam rgyal gling gi lo rgyus/"@bo-x-ewts .
+    
+    bdr:TT85FFB6B964465C4C
+        a                   :Title ;
+        rdfs:label          "byams me dgon thos bsam rnam rgyal gling gi lo rgyus/"@bo-x-ewts .
+    
+    bdr:TTAEE27EE1E02B66DD
+        a                   :TitlePageTitle ;
+        rdfs:label          "mdo smad lho rgyud kyi chos sde chen po 'bras spungs thos bsam rnam rgyal gling gi byung ba brjod pa rdzogs ldan gtam gyi dga' tshal/"@bo-x-ewts .
 }

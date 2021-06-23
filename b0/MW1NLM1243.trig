@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1243 {
+    bda:LG09DC20CCA9331867
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG42DCA6D9485F0A60
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-27T12:21:28.129Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGEFAC3C7573EB1D08
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
     bda:LGIM03624744  a     adm:InitialDataImport ;
         adm:logDate         "2020-04-03T09:37:30.947Z"^^xsd:dateTime ;
         adm:logMessage      "fully catalog and released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1243"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1243  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356449" ;
         adm:adminAbout      bdr:MW1NLM1243 ;
-        adm:facetIndex      19 ;
-        adm:logEntry        bda:LGIM03624744 ;
+        adm:facetIndex      26 ;
+        adm:gitPath         "b0/MW1NLM1243.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1243 ;
+        adm:logEntry        bda:LG09DC20CCA9331867 , bda:LG42DCA6D9485F0A60 , bda:LGEFAC3C7573EB1D08 , bda:LGIM03624744 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL131FF05644794FDC
         a                   :ContentLocation ;
@@ -69,7 +98,19 @@ bdg:MW1NLM1243 {
         :contentLocationInstance  bdr:W1NLM1243 ;
         :contentLocationPage  1 .
     
-    bdr:MW1NLM1243  :hasPart  bdr:MW1NLM1243_4AEF02 , bdr:MW1NLM1243_4B0F45 , bdr:MW1NLM1243_7F22CB , bdr:MW1NLM1243_89573A , bdr:MW1NLM1243_9E2640 , bdr:MW1NLM1243_CD70E2 , bdr:MW1NLM1243_E2B9FC ;
+    bdr:MW1NLM1243  a       :Instance ;
+        skos:prefLabel      "gsol 'debs ngag gi dbang phyug ma'i 'grel pa bla ma'i rang bzhin gsal ba'i me long sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "46x6" ;
+        :hasPart            bdr:MW1NLM1243_4AEF02 , bdr:MW1NLM1243_4B0F45 , bdr:MW1NLM1243_7F22CB , bdr:MW1NLM1243_89573A , bdr:MW1NLM1243_9E2640 , bdr:MW1NLM1243_CD70E2 , bdr:MW1NLM1243_E2B9FC ;
+        :hasTitle           bdr:TT5218D188E8824E92 ;
+        :instanceHasReproduction  bdr:W1NLM1243 ;
+        :instanceOf         bdr:WA1NLM1243 ;
+        :isRoot             true ;
+        :note               bdr:NT47C81C27A60F2720 , bdr:NT78C8A58524083EEF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1243_4AEF02
@@ -170,6 +211,14 @@ bdg:MW1NLM1243 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT47C81C27A60F2720
+        a                   :Note ;
+        :noteText           "nlmId: M0059161"@en .
+    
+    bdr:NT78C8A58524083EEF
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
     bdr:TT21E075CC42929CAB
         a                   :TitlePageTitle ;
         rdfs:label          "gnas chen ti si dang mtsho ma pham gyi gnas yig skal ldan lam 'dren/"@bo-x-ewts .
@@ -181,6 +230,10 @@ bdg:MW1NLM1243 {
     bdr:TT411D66BEB4FE42AF
         a                   :Title ;
         rdfs:label          "ngag gi dbang phyug ma'i 'grel pa bla ma'i rang bzhin gsal ba'i me long /"@bo-x-ewts .
+    
+    bdr:TT5218D188E8824E92
+        a                   :Title ;
+        rdfs:label          "gsol 'debs ngag gi dbang phyug ma'i 'grel pa bla ma'i rang bzhin gsal ba'i me long sogs/"@bo-x-ewts .
     
     bdr:TT8336D94A0AF466EE
         a                   :TitlePageTitle ;

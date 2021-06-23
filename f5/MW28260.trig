@@ -12,9 +12,25 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW28260 {
+    bda:LG36D368527E0C45D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-01-04T15:05:06.693Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG7DB5E861612F942F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-08T11:51:20.923Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG88BF05769D474A12
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG898CCAA7B76C0601
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-06-21T12:48:11.715Z"^^xsd:dateTime ;
+        adm:logMessage      "aedded sourceNote"@en ;
         adm:logWho          bdu:U00021 .
     
     bda:LGAC26E0453C5F68A6
@@ -22,14 +38,39 @@ bdg:MW28260 {
         adm:logDate         "2010-01-04T14:35:05.196Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGF16915306A8ED960
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-09-02T11:42:46.868Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28260  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94609" ;
         adm:adminAbout      bdr:MW28260 ;
-        adm:facetIndex      77 ;
-        adm:logEntry        bda:LG7DB5E861612F942F , bda:LGAC26E0453C5F68A6 ;
+        adm:facetIndex      91 ;
+        adm:gitPath         "f5/MW28260.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28260 ;
+        adm:logEntry        bda:LG36D368527E0C45D4 , bda:LG7DB5E861612F942F , bda:LG88BF05769D474A12 , bda:LG898CCAA7B76C0601 , bda:LGAC26E0453C5F68A6 , bda:LGF16915306A8ED960 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL08B03740F6DD0B70
         a                   :ContentLocation ;
@@ -293,7 +334,40 @@ bdg:MW28260 {
         :contentLocationPage  146 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28260  :hasPart   bdr:MW28260_1C8756 , bdr:MW28260_EFDC96 ;
+    bdr:EVE9F7E88A7DBF9CC6
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID1520F890E9EA24F3
+        a                   bdr:HollisId ;
+        rdf:value           "014259760" .
+    
+    bdr:ID684CD3736089B27B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540932597 (set)" .
+    
+    bdr:MW28260  a          :Instance ;
+        skos:altLabel       "多任班智达传"@zh-hans ;
+        skos:prefLabel      "rdo ring paN+Di ta'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1520F890E9EA24F3 , bdr:ID684CD3736089B27B ;
+        :authorshipStatement  "bstan 'dzin dpal 'byor gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi gnyis pa/"@bo-x-ewts ;
+        :hasPart            bdr:MW28260_1C8756 , bdr:MW28260_EFDC96 ;
+        :hasTitle           bdr:TT01578AC566C76AE4 , bdr:TT39C77A2115E6AB92 , bdr:TT5EB1D10CCAB5D0EC , bdr:TTD7966759B961166A ;
+        :instanceEvent      bdr:EVE9F7E88A7DBF9CC6 ;
+        :instanceHasReproduction  bdr:W28260 ;
+        :instanceOf         bdr:WA1PD96348 ;
+        :isRoot             true ;
+        :note               bdr:NT3676A74AB56AD50E ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :sourceNote         "dbu med bris ma/"@bo-x-ewts ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28260_052EEC
@@ -790,9 +864,17 @@ bdg:MW28260 {
         :partTreeIndex      "2.1.04" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT3676A74AB56AD50E
+        a                   :Note ;
+        :noteText           "Biographical materials about two 18th century Tibetan political figures, rdo ring bka' blon bstan 'dzin dpal 'byor, and his father, rdo ring paNDi ta dngos grub rab brtan; the manuscript from which this edition was printed must have been a part of a larger history of the dga' bzhi or rdo ring family"@en .
+    
     bdr:TT0052A35D562EE067
         a                   :Title ;
         rdfs:label          "rdo ring paN+Di ta'i rnam thar/ (stod cha/)"@bo-x-ewts .
+    
+    bdr:TT01578AC566C76AE4
+        a                   :TitlePageTitle ;
+        rdfs:label          "dga' bzhi ba'i mi rabs kyi byung ba brjod pa zol med gtam gyi rol mo/"@bo-x-ewts .
     
     bdr:TT10064A0402FE56A9
         a                   :Title ;
@@ -818,6 +900,10 @@ bdg:MW28260 {
         a                   :Title ;
         rdfs:label          "yig 'khyams bskyar zhib gnas chod kyis// bstan dpal do dam las grol tog gnas thob/"@bo-x-ewts .
     
+    bdr:TT39C77A2115E6AB92
+        a                   :ColophonTitle ;
+        rdfs:label          "duo ren ban zhi da zhuan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT4162C840F4F6DA03
         a                   :Title ;
         rdfs:label          "bstan gling rgyal tshab dgongs pa chos dbyings thim// ngag dbang tshul khrims chos srid byed por mngags/"@bo-x-ewts .
@@ -833,6 +919,10 @@ bdg:MW28260 {
     bdr:TT56423C195B25F104
         a                   :Title ;
         rdfs:label          "pa tshe sa dgar bskyod rjes dbus mda' bskos// no yon nang tshang lho byang gnas rten mjal/"@bo-x-ewts .
+    
+    bdr:TT5EB1D10CCAB5D0EC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "多任班智达传"@zh-hans .
     
     bdr:TT6618E9FF23A1688A
         a                   :Title ;
@@ -909,6 +999,10 @@ bdg:MW28260 {
     bdr:TTCD968255BA787221
         a                   :Title ;
         rdfs:label          "rdo ring paN+Di ta'i rnam thar/ (smad cha/)"@bo-x-ewts .
+    
+    bdr:TTD7966759B961166A
+        a                   :Title ;
+        rdfs:label          "rdo ring paN+Di ta'i rnam thar/"@bo-x-ewts .
     
     bdr:TTE0E5B89FE0E05112
         a                   :Title ;

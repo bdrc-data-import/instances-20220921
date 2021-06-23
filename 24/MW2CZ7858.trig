@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2CZ7858 {
+    bda:LG0BA6F3F9C517361F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-15T11:59:59.833Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG0D488901239B094B
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-05-21T16:59:30.375Z"^^xsd:dateTime ;
@@ -24,20 +30,45 @@ bdg:MW2CZ7858 {
         adm:logMessage      "added notes"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGA8B84A8657C2D3B5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-07-16T12:41:23.269Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGD0CC3936F2C70B71
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
         adm:logDate         "2013-05-21T16:38:13.432Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2CZ7858  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2CZ7858" ;
         adm:adminAbout      bdr:MW2CZ7858 ;
-        adm:facetIndex      120 ;
-        adm:logEntry        bda:LG0D488901239B094B , bda:LG902FDD3088744BE9 , bda:LGD0CC3936F2C70B71 ;
+        adm:facetIndex      127 ;
+        adm:gitPath         "24/MW2CZ7858.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ7858 ;
+        adm:logEntry        bda:LG0BA6F3F9C517361F , bda:LG0D488901239B094B , bda:LG902FDD3088744BE9 , bda:LGA8B84A8657C2D3B5 , bda:LGD0CC3936F2C70B71 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0322430CF31317EC
         a                   :ContentLocation ;
@@ -445,7 +476,26 @@ bdg:MW2CZ7858 {
         :contentLocationPage  17 ;
         :contentLocationVolume  1 .
     
-    bdr:MW2CZ7858  :hasPart  bdr:MW2CZ7858_06A9EB , bdr:MW2CZ7858_39B6BC ;
+    bdr:ID84F54FC961D6BA73
+        a                   bdr:HollisId ;
+        rdf:value           "014260214" .
+    
+    bdr:MW2CZ7858  a        :Instance ;
+        skos:prefLabel      "gsung 'bum/_yon tan mtha' yas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID84F54FC961D6BA73 ;
+        :hasPart            bdr:MW2CZ7858_06A9EB , bdr:MW2CZ7858_39B6BC ;
+        :hasSourcePrintery  bdr:G3JT12597 ;
+        :hasTitle           bdr:TT6E5A9931515BEE64 , bdr:TT810565FF7C636AF8 ;
+        :instanceHasReproduction  bdr:W2CZ7858 ;
+        :instanceOf         bdr:WA2CZ7858 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "mdo sde brag"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2CZ7858_06A9EB
@@ -1366,6 +1416,10 @@ bdg:MW2CZ7858 {
         a                   :Title ;
         rdfs:label          "btsan rgod jag pa ma len gyi mdos chog 'dod 'dod 'jo'i bsam 'phel/(khi)"@bo-x-ewts .
     
+    bdr:TT6E5A9931515BEE64
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_yon tan mtha' yas/"@bo-x-ewts .
+    
     bdr:TT6F8987B7974376E2
         a                   :Title ;
         rdfs:label          "spyan ras gzigs kyi sbyin sreg gi cho ga thugs rje'i lcags kyu/(tsha)"@bo-x-ewts .
@@ -1373,6 +1427,10 @@ bdg:MW2CZ7858 {
     bdr:TT73D5988E66F02C9E
         a                   :Title ;
         rdfs:label          "mnyam med shAkya rat+na'i mdzad 'phrin rjes su dran pa'i tshigs bcad nges 'byung nags kyi pho nya'i glu dbyangs/(nga)"@bo-x-ewts .
+    
+    bdr:TT810565FF7C636AF8
+        a                   :TitlePageTitle ;
+        rdfs:label          "sku bzhi'i dbang phyug ngag dbang yon tan mtha' yas kyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TT82BD920F390AE00D
         a                   :Title ;

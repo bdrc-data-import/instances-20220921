@@ -24,20 +24,49 @@ bdg:MW21825 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG7D5A241A024B2A31
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGEAE3E4990C430641
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-06-28T11:22:26.349Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGF91D07E752874621
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:08.2Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21825  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O21825" ;
         adm:adminAbout      bdr:MW21825 ;
-        adm:facetIndex      592 ;
-        adm:logEntry        bda:LG2CC4B0F60B102D14 , bda:LG53F5F4F45D86861D , bda:LGEAE3E4990C430641 ;
+        adm:facetIndex      605 ;
+        adm:gitPath         "eb/MW21825.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21825 ;
+        adm:logEntry        bda:LG2CC4B0F60B102D14 , bda:LG53F5F4F45D86861D , bda:LG7D5A241A024B2A31 , bda:LGEAE3E4990C430641 , bda:LGF91D07E752874621 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0041960BAE85F6F2
         a                   :ContentLocation ;
@@ -2097,7 +2126,41 @@ bdg:MW21825 {
         :contentLocationPage  149 ;
         :contentLocationVolume  5 .
     
-    bdr:MW21825  :hasPart   bdr:MW21825_8ED445 , bdr:MW21825_A3D577 , bdr:MW21825_B2E10A , bdr:MW21825_CAB3DF , bdr:MW21825_DEC62A ;
+    bdr:EVC7E6193362057554
+        a                   :PublishedEvent ;
+        :notAfter           "1985"^^xsd:gYear ;
+        :notBefore          "1983"^^xsd:gYear .
+    
+    bdr:ID6A5947E9A8253231
+        a                   bdr:HollisId ;
+        rdf:value           "014258459" .
+    
+    bdr:ID6A5F66688DF1789F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .T47 1983" .
+    
+    bdr:IDFC1C796D59F21D2A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84905063" .
+    
+    bdr:MW21825  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_thub bstan chos kyi glang po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6A5947E9A8253231 , bdr:ID6A5F66688DF1789F , bdr:IDFC1C796D59F21D2A ;
+        :biblioNote         "reproduced from a rare set of manuscripts from dpal-yul manastery"@en ;
+        :hasPart            bdr:MW21825_8ED445 , bdr:MW21825_A3D577 , bdr:MW21825_B2E10A , bdr:MW21825_CAB3DF , bdr:MW21825_DEC62A ;
+        :hasTitle           bdr:TT23AF73FF1E6D466F , bdr:TT9954629C94756E57 , bdr:TTD591E2674E0EECB3 , bdr:TTEE48CA9C7CAF78FE ;
+        :instanceEvent      bdr:EVC7E6193362057554 ;
+        :instanceHasReproduction  bdr:IE21825 , bdr:W21825 ;
+        :instanceOf         bdr:WA21825 ;
+        :isRoot             true ;
+        :note               bdr:NT42FC51213EF4C64F ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bylakuppe"@en ;
+        :publisherName      "nyingmapa monastery"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "6 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21825_000440
@@ -6248,6 +6311,10 @@ bdg:MW21825 {
         :partTreeIndex      "3.082" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT42FC51213EF4C64F
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 2116-2121\nscanned through the support of christine tomlinson, austin, tx."@en .
+    
     bdr:TT0047DA8E19D37DD0
         a                   :Title ;
         rdfs:label          "dbang chen rdo rje gro lod la brten nas srid pa'i 'dre lnga'i glud mdos gtong tshul/"@bo-x-ewts .
@@ -6415,6 +6482,10 @@ bdg:MW21825 {
     bdr:TT238CBC8FF8FF81BE
         a                   :Title ;
         rdfs:label          "dbang chen rdo rje gro lod kyi mnan pa'i yig chung gcig shes kun grol/"@bo-x-ewts .
+    
+    bdr:TT23AF73FF1E6D466F
+        a                   :OtherTitle ;
+        rdfs:label          "dpal yul pad nor thub bstan chos kyi glang po'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TT23B9242FFCCC3FA6
         a                   :Title ;
@@ -6952,6 +7023,10 @@ bdg:MW21825 {
         a                   :Title ;
         rdfs:label          "dang po'i las can mkhas pa'i tshul la 'jug pa'i sgo"@bo-x-ewts .
     
+    bdr:TT9954629C94756E57
+        a                   :CoverTitle ;
+        rdfs:label          "dpal yul pad nor thub bstan chos kyi glang po'i bka' 'bum/"@bo-x-ewts .
+    
     bdr:TT9ACA2F542C44EA2C
         a                   :Title ;
         rdfs:label          "khrus bgegs bskrad maN+Dal/"@bo-x-ewts .
@@ -7208,6 +7283,10 @@ bdg:MW21825 {
         a                   :Title ;
         rdfs:label          "mgur 'bum e ma sogs/"@bo-x-ewts .
     
+    bdr:TTD591E2674E0EECB3
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of the second pad-nor rin-po-che of dpal-yul thub-bstan-chos-kyi-glan-po 'jam-dpal-grub-pa'i-blo-gros"@bo-alalc97 .
+    
     bdr:TTD6E951911DF66E98
         a                   :Title ;
         rdfs:label          "bsngo smon/"@bo-x-ewts .
@@ -7319,6 +7398,10 @@ bdg:MW21825 {
     bdr:TTEDBD65D73069ACFA
         a                   :Title ;
         rdfs:label          "rgyun gyis nyams len bya tshul/"@bo-x-ewts .
+    
+    bdr:TTEE48CA9C7CAF78FE
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_thub bstan chos kyi glang po/"@bo-x-ewts .
     
     bdr:TTEE73F242B5FA7F18
         a                   :Title ;

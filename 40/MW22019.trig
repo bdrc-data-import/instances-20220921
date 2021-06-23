@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22019 {
+    bda:LG5A3DB638A60F9733
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8B6AA1A93D03060F
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-10-28T06:53:37.379Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted inProduct PR1COPYRIGHT"@en ;
+        adm:logWho          bdu:U00006 .
+    
     bda:LGD3ECDE9FDACB332F
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-09-10T13:03:05.921Z"^^xsd:dateTime ;
@@ -24,14 +34,33 @@ bdg:MW22019 {
         adm:logMessage      "availability"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22019  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS58333" ;
         adm:adminAbout      bdr:MW22019 ;
-        adm:facetIndex      35 ;
-        adm:logEntry        bda:LGD3ECDE9FDACB332F , bda:LGD802061A7DFCE0A9 ;
+        adm:facetIndex      46 ;
+        adm:gitPath         "40/MW22019.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22019 ;
+        adm:logEntry        bda:LG5A3DB638A60F9733 , bda:LG8B6AA1A93D03060F , bda:LGD3ECDE9FDACB332F , bda:LGD802061A7DFCE0A9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01B338A63BA2659F
         a                   :ContentLocation ;
@@ -135,7 +164,47 @@ bdg:MW22019 {
         :contentLocationInstance  bdr:W22019 ;
         :contentLocationPage  164 .
     
-    bdr:MW22019  :hasPart   bdr:MW22019_06DF51 , bdr:MW22019_0C8B24 , bdr:MW22019_42B6C3 , bdr:MW22019_4AE897 , bdr:MW22019_69BCF5 , bdr:MW22019_79B1FA , bdr:MW22019_86DE63 , bdr:MW22019_8BF9B2 , bdr:MW22019_A06948 , bdr:MW22019_A18E7A , bdr:MW22019_BBE6D0 , bdr:MW22019_C826B2 , bdr:MW22019_D1415C , bdr:MW22019_DBD6EA , bdr:MW22019_E8137E , bdr:MW22019_FE046F , bdr:MW22019_FEDC5F ;
+    bdr:EVAAE4E712CE80EE09
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID8F03B5DD6BDB74B2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890196" .
+    
+    bdr:IDC463232AC0B0CA17
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7910 .B63 1995" .
+    
+    bdr:IDC89DB81A91D20909
+        a                   bdr:HollisId ;
+        rdf:value           "014258561" .
+    
+    bdr:IDCCB506DF8EA69C84
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915592" .
+    
+    bdr:MW22019  a          :Instance , :SerialInstance ;
+        skos:altLabel       "hsi tsang ku chi chih hsuan pien"@zh-latn-wadegile ;
+        skos:prefLabel      "bod kyi gnas yig bdams bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8F03B5DD6BDB74B2 , bdr:IDC463232AC0B0CA17 , bdr:IDC89DB81A91D20909 , bdr:IDCCB506DF8EA69C84 ;
+        :authorshipStatement  "tshe ring dpal 'byor gyis bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22019_06DF51 , bdr:MW22019_0C8B24 , bdr:MW22019_42B6C3 , bdr:MW22019_4AE897 , bdr:MW22019_69BCF5 , bdr:MW22019_79B1FA , bdr:MW22019_86DE63 , bdr:MW22019_8BF9B2 , bdr:MW22019_A06948 , bdr:MW22019_A18E7A , bdr:MW22019_BBE6D0 , bdr:MW22019_C826B2 , bdr:MW22019_D1415C , bdr:MW22019_DBD6EA , bdr:MW22019_E8137E , bdr:MW22019_FE046F , bdr:MW22019_FEDC5F ;
+        :hasTitle           bdr:TTC0BDB86BB738EB2F , bdr:TTDFAFA0D3CE1DA2C9 ;
+        :instanceEvent      bdr:EVAAE4E712CE80EE09 ;
+        :instanceHasItem    bdr:ITW22019_001 ;
+        :instanceHasReproduction  bdr:W22019 ;
+        :instanceOf         bdr:WA22019 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "27" ;
+        :workExtentStatement  "4, 14, 414 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22019_06DF51
@@ -433,9 +502,17 @@ bdg:MW22019 {
         a                   :Title ;
         rdfs:label          "jo nang gi gnas bshad/"@bo-x-ewts .
     
+    bdr:TTC0BDB86BB738EB2F
+        a                   :Title ;
+        rdfs:label          "bod kyi gnas yig bdams bsgrigs/"@bo-x-ewts .
+    
     bdr:TTC54E597A56AE97FA
         a                   :Title ;
         rdfs:label          "lho gnas mchog gro bo lung 'og min sras mkhar gyi gtsug lag khang chen po'i rten bshad mdor bsdus pa zhig"@bo-x-ewts .
+    
+    bdr:TTDFAFA0D3CE1DA2C9
+        a                   :ColophonTitle ;
+        rdfs:label          "hsi tsang ku chi chih hsuan pien"@zh-latn-wadegile .
     
     bdr:TTF89525A4758B2C1E
         a                   :Title ;

@@ -17,6 +17,12 @@ bdg:MW1GS53494 {
         adm:logDate         "2007-12-19T15:53:21.309Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG65E618930BCEF791
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-07-16T17:21:27.738Z"^^xsd:dateTime ;
+        adm:logMessage      "caataloging completed"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG7179C9A49853B55B
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-07-17T14:37:14.289Z"^^xsd:dateTime ;
@@ -29,14 +35,33 @@ bdg:MW1GS53494 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS53494  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS53497" ;
         adm:adminAbout      bdr:MW1GS53494 ;
-        adm:facetIndex      56 ;
-        adm:logEntry        bda:LG2884CA8017237F66 , bda:LG7179C9A49853B55B , bda:LG881973DDF05E9335 ;
+        adm:facetIndex      63 ;
+        adm:gitPath         "ed/MW1GS53494.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS53494 ;
+        adm:logEntry        bda:LG2884CA8017237F66 , bda:LG65E618930BCEF791 , bda:LG7179C9A49853B55B , bda:LG881973DDF05E9335 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL059F0069B323F8E7
         a                   :ContentLocation ;
@@ -351,7 +376,37 @@ bdg:MW1GS53494 {
         :contentLocationInstance  bdr:W1GS53494 ;
         :contentLocationPage  34 .
     
-    bdr:MW1GS53494  :hasPart  bdr:MW1GS53494_0296C1 , bdr:MW1GS53494_18CE37 , bdr:MW1GS53494_2CCDA2 , bdr:MW1GS53494_5DE4F6 , bdr:MW1GS53494_620656 , bdr:MW1GS53494_73A30A , bdr:MW1GS53494_8A1C8E , bdr:MW1GS53494_9ACDD0 , bdr:MW1GS53494_B84CF5 , bdr:MW1GS53494_C52B6D , bdr:MW1GS53494_D9E3C1 , bdr:MW1GS53494_DE2F31 ;
+    bdr:EVD02023828ED1B6E3
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID2A1C17A1B542DD5D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105037695" .
+    
+    bdr:ID7BEB32A8B0A3FBFD
+        a                   bdr:HollisId ;
+        rdf:value           "014255475" .
+    
+    bdr:MW1GS53494  a       :Instance ;
+        skos:prefLabel      "dgon gong ma'i lo rgyus 'pho 'gyur rang yul srol/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2A1C17A1B542DD5D , bdr:ID7BEB32A8B0A3FBFD ;
+        :authorshipStatement  "lha mchog rgyal gyis brtsams/"@bo-x-ewts ;
+        :contentLocationStatement  "TBRC Library: Smith Room" ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS53494_0296C1 , bdr:MW1GS53494_18CE37 , bdr:MW1GS53494_2CCDA2 , bdr:MW1GS53494_5DE4F6 , bdr:MW1GS53494_620656 , bdr:MW1GS53494_73A30A , bdr:MW1GS53494_8A1C8E , bdr:MW1GS53494_9ACDD0 , bdr:MW1GS53494_B84CF5 , bdr:MW1GS53494_C52B6D , bdr:MW1GS53494_D9E3C1 , bdr:MW1GS53494_DE2F31 ;
+        :hasTitle           bdr:TTD50C0A0073553BDF ;
+        :illustrations      "8 col. plates" ;
+        :instanceEvent      bdr:EVD02023828ED1B6E3 ;
+        :instanceHasReproduction  bdr:W1GS53494 ;
+        :instanceOf         bdr:WA1GS53494 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5, 2, 561 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS53494_02071B
@@ -985,4 +1040,8 @@ bdg:MW1GS53494 {
         :partOf             bdr:MW1GS53494_5DE4F6 ;
         :partTreeIndex      "09.5" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTD50C0A0073553BDF
+        a                   :Title ;
+        rdfs:label          "dgon gong ma'i lo rgyus 'pho 'gyur rang yul srol/"@bo-x-ewts .
 }

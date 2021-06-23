@@ -12,20 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23188 {
+    bda:LG245CB795285B6FE3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG5543AEAD3139E0F1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:48:08.258Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGAD38ACD50FB583ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-04T09:49:04.483Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, added cat, pub info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGB1B6CB5A8402FFF6
         a                   adm:InitialOutlineData ;
         adm:logDate         "2008-05-02T16:27:39.52Z"^^xsd:dateTime ;
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23188  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS104299" ;
         adm:adminAbout      bdr:MW23188 ;
-        adm:facetIndex      18 ;
-        adm:logEntry        bda:LGB1B6CB5A8402FFF6 ;
+        adm:facetIndex      34 ;
+        adm:gitPath         "67/MW23188.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23188 ;
+        adm:logEntry        bda:LG245CB795285B6FE3 , bda:LG5543AEAD3139E0F1 , bda:LGAD38ACD50FB583ED , bda:LGB1B6CB5A8402FFF6 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL5D2DD58A5B6A1E8E
         a                   :ContentLocation ;
@@ -75,7 +117,46 @@ bdg:MW23188 {
         :contentLocationInstance  bdr:W23188 ;
         :contentLocationPage  93 .
     
-    bdr:MW23188  :hasPart   bdr:MW23188_245646 , bdr:MW23188_4ABF4A , bdr:MW23188_524FE9 , bdr:MW23188_64AB7C , bdr:MW23188_674974 , bdr:MW23188_94B0EB , bdr:MW23188_D68456 , bdr:MW23188_EAFF42 ;
+    bdr:EV14A5F4AA7CDDEA1C
+        a                   :PublishedEvent ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:ID7D5E36EDA3AD320B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001570255-3" .
+    
+    bdr:IDB7BC36CBC0465F67
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2165 .L57" .
+    
+    bdr:IDE16040F77748BFEC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73901857" .
+    
+    bdr:IDEA73974CC458A637
+        a                   bdr:HollisId ;
+        rdf:value           "014258827" .
+    
+    bdr:MW23188  a          :Instance ;
+        skos:altLabel       "the liturgy of the hevajra tantra according to the stag-lun dkar-brgyud-pa tradition : a collection of texts outlining the sadhana, consecrations, chants, laying our of the mandala, and other rites"@en-x-mixed ;
+        skos:prefLabel      "stag lung bka' brgyud kyi kyai rdor sgrub skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7D5E36EDA3AD320B , bdr:IDB7BC36CBC0465F67 , bdr:IDE16040F77748BFEC , bdr:IDEA73974CC458A637 ;
+        :authorshipStatement  "by various stag-lun-pa teachers"@en ;
+        :biblioNote         "reproduced from manuscripts from the library of ri-bo-che rje-drun rin-po-che of padma-bkod by tseten dorji"@en ;
+        :hasPart            bdr:MW23188_245646 , bdr:MW23188_4ABF4A , bdr:MW23188_524FE9 , bdr:MW23188_64AB7C , bdr:MW23188_674974 , bdr:MW23188_94B0EB , bdr:MW23188_D68456 , bdr:MW23188_EAFF42 ;
+        :hasTitle           bdr:TT28DF1B5B36497788 , bdr:TT8C165AA6025DF5CD , bdr:TTB7E5E4863ABA45C2 , bdr:TTD5376C7F1CB3732E ;
+        :instanceEvent      bdr:EV14A5F4AA7CDDEA1C ;
+        :instanceHasReproduction  bdr:W23188 ;
+        :instanceOf         bdr:WA23188 ;
+        :isRoot             true ;
+        :note               bdr:NT6C3C1CFC53FA0850 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tezu"@en ;
+        :publisherName      "tibetan nyingmapa monastery"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "1 v. (unpaged)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23188_245646
@@ -198,9 +279,17 @@ bdg:MW23188 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6C3C1CFC53FA0850
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files\n0600"@en .
+    
     bdr:TT17680021B8D27C82
         a                   :Title ;
         rdfs:label          "dpal dgyes pa rdo rje'i tshogs mchod mchog sprul rin po che'i man ngag dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TT28DF1B5B36497788
+        a                   :CoverTitle ;
+        rdfs:label          "The liturgy of the Hevajra Tantra according to the Stag-lun̥ Dkar-brgyud-pa tradition;a collection of texts outlining the sadhana, consecrations, chants, laying out of the mandala, and other rites, by various Stag-lun̥-pa teachers.Reproduced from original MSS. from the library of Ri-bo-che Rje-drun̥ of Padma-bkod by Tseten Dorji."@en-x-mixed .
     
     bdr:TT504A825290DA6620
         a                   :Title ;
@@ -214,13 +303,25 @@ bdg:MW23188 {
         a                   :Title ;
         rdfs:label          "bcom ldan 'das snying po kye'i rdo rje'i bsgrub thabs rgyal ba rgya mtsho dri med nor bu'i mdzod/"@bo-x-ewts .
     
+    bdr:TT8C165AA6025DF5CD
+        a                   :TitlePageTitle ;
+        rdfs:label          "kyai rdo rje'i sgrub thabs rgyal ba rgya mtsho dri med nor bu'i mdzod/"@bo-x-ewts .
+    
     bdr:TT9644DE96608149ED
         a                   :Title ;
         rdfs:label          "'phags pa sbrul mdo thar pa zhes bya ba dang sbal cang 'bu srin thams cad thar pa'i mdo/"@bo-x-ewts .
     
+    bdr:TTB7E5E4863ABA45C2
+        a                   :Title ;
+        rdfs:label          "stag lung bka' brgyud kyi kyai rdor sgrub skor/"@bo-x-ewts .
+    
     bdr:TTC1065003F5C6B17C
         a                   :Title ;
         rdfs:label          "rim gnyis grub pa'i rdo rje'i glu/"@bo-x-ewts .
+    
+    bdr:TTD5376C7F1CB3732E
+        a                   :TitlePageTitle ;
+        rdfs:label          "the liturgy of the hevajra tantra according to the stag-lun dkar-brgyud-pa tradition : a collection of texts outlining the sadhana, consecrations, chants, laying our of the mandala, and other rites"@en-x-mixed .
     
     bdr:TTE8D861258B9A0168
         a                   :Title ;

@@ -30,6 +30,16 @@ bdg:MW23477 {
         adm:logMessage      "added T2MS13818"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG95EEB0D6F24DC491
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE4DE67740D68D43E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-23T14:15:10.65Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGE5F4A833CB20586C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2015-09-28T16:17:49.426Z"^^xsd:dateTime ;
@@ -42,14 +52,33 @@ bdg:MW23477 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23477  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS107344" ;
         adm:adminAbout      bdr:MW23477 ;
-        adm:facetIndex      78 ;
-        adm:logEntry        bda:LG1F47B1B827D10C9E , bda:LG4F9081AF202E6B87 , bda:LG7C8E269718E99A80 , bda:LGE5F4A833CB20586C , bda:LGFFC420ED3C3E6E37 ;
+        adm:facetIndex      89 ;
+        adm:gitPath         "b2/MW23477.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23477 ;
+        adm:logEntry        bda:LG1F47B1B827D10C9E , bda:LG4F9081AF202E6B87 , bda:LG7C8E269718E99A80 , bda:LG95EEB0D6F24DC491 , bda:LGE4DE67740D68D43E , bda:LGE5F4A833CB20586C , bda:LGFFC420ED3C3E6E37 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith: outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00CFAC8023FE79DF
         a                   :ContentLocation ;
@@ -306,7 +335,42 @@ bdg:MW23477 {
         :contentLocationPage  379 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23477  :hasPart   bdr:MW23477_D36878 , bdr:MW23477_D9C5C2 ;
+    bdr:EV60CA6F9FF84F7166
+        a                   :PublishedEvent ;
+        :notAfter           "1976"^^xsd:gYear ;
+        :notBefore          "1973"^^xsd:gYear .
+    
+    bdr:ID03EC78ECF15F7EB9
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .S26 1973" .
+    
+    bdr:ID80A572404FBABE92
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73905480" .
+    
+    bdr:IDA2E898A0C133BDA7
+        a                   bdr:HollisId ;
+        rdf:value           "014258942" .
+    
+    bdr:MW23477  a          :Instance ;
+        skos:altLabel       "the collected works (gsun-'bum) of mkhas-grub sans-rgyas-ye-ses"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_sangs rgyas ye shes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID03EC78ECF15F7EB9 , bdr:ID80A572404FBABE92 , bdr:IDA2E898A0C133BDA7 ;
+        :authorshipStatement  "edited from prints from the library of the gro-mo dge-bses rin-po-che"@en ;
+        :hasPart            bdr:MW23477_D36878 , bdr:MW23477_D9C5C2 ;
+        :hasTitle           bdr:TT401ADBEF7B767B79 , bdr:TTE9BC636F10D3B2A5 ;
+        :instanceEvent      bdr:EV60CA6F9FF84F7166 ;
+        :instanceHasReproduction  bdr:W23477 ;
+        :instanceOf         bdr:WA1KG1624 ;
+        :isRoot             true ;
+        :note               bdr:NT01D365FACD1FE9E8 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "don 'grub rdo rje/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23477_048AE7
@@ -837,6 +901,10 @@ bdg:MW23477 {
         :partTreeIndex      "2.16" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT01D365FACD1FE9E8
+        a                   :Note ;
+        :noteText           ", tbrc volume numbers 2646-2647"@en .
+    
     bdr:TT00EFA82F377C65D1
         a                   :Title ;
         rdfs:label          "phyag rdor gtum po khyung lnga'i rjes gnang dang/ mgon po'i rjes gnang bya tshul dang/ skyer sgang lugs kyi rta mgrin gyi rjes gnang bya tshul bcas Iki)"@bo-x-ewts .
@@ -896,6 +964,10 @@ bdg:MW23477 {
     bdr:TT377DA2D8658698F2
         a                   :Title ;
         rdfs:label          "bla ma spyan ras gzigs rgyud sde rgya mtsho'i sgrub thabs dngos grub kun 'byung (ra)"@bo-x-ewts .
+    
+    bdr:TT401ADBEF7B767B79
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_sangs rgyas ye shes/"@bo-x-ewts .
     
     bdr:TT4D6A4F17DECEDE4A
         a                   :Title ;
@@ -968,6 +1040,10 @@ bdg:MW23477 {
     bdr:TTE7E7ED082FC3F04B
         a                   :Title ;
         rdfs:label          "bla ma 'jigs byed kyi dkyil 'khor nyams su len tshul (zha)"@bo-x-ewts .
+    
+    bdr:TTE9BC636F10D3B2A5
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun-'bum) of mkhas-grub sans-rgyas-ye-ses"@en-x-mixed .
     
     bdr:TTF00526A165E0076F
         a                   :Title ;

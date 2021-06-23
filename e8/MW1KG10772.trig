@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG10772 {
+    bda:LG456BA2B89EA51F9A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-11-11T10:21:19.106Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG78ABBBB864EC3302
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -24,14 +29,45 @@ bdg:MW1KG10772 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG9D7D1CAE59B7D222
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-15T11:54:31.87Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG10772  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG10772" ;
         adm:adminAbout      bdr:MW1KG10772 ;
-        adm:facetIndex      82 ;
-        adm:logEntry        bda:LG78ABBBB864EC3302 , bda:LG87C99D65B1B2E51F ;
+        adm:facetIndex      95 ;
+        adm:gitPath         "e8/MW1KG10772.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG10772 ;
+        adm:logEntry        bda:LG456BA2B89EA51F9A , bda:LG78ABBBB864EC3302 , bda:LG87C99D65B1B2E51F , bda:LG9D7D1CAE59B7D222 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02A6BECC389FB6DB
         a                   :ContentLocation ;
@@ -306,7 +342,44 @@ bdg:MW1KG10772 {
         :contentLocationPage  17 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG10772  :hasPart  bdr:MW1KG10772_0A7B95 , bdr:MW1KG10772_67C348 , bdr:MW1KG10772_AD12D4 , bdr:MW1KG10772_E0A629 , bdr:MW1KG10772_EDCBB8 , bdr:MW1KG10772_F5A015 ;
+    bdr:EV8499F9F8C5ECF2D8
+        a                   :PublishedEvent ;
+        :onYear             "1981"^^xsd:gYear .
+    
+    bdr:ID643EE1438FC04BD8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "81901507" .
+    
+    bdr:ID907AD3B34385C723
+        a                   bdr:HollisId ;
+        rdf:value           "014255672" .
+    
+    bdr:ID9602CA829D2F1ECA
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .Y43 1981" .
+    
+    bdr:MW1KG10772  a       :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works of chu-bzang bla-ma ye-shes rgya-mtsho"@en ;
+        skos:prefLabel      "gsung 'bum/_ye she rgya mtsho/ (ser smad grwa tshang par ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID643EE1438FC04BD8 , bdr:ID907AD3B34385C723 , bdr:ID9602CA829D2F1ECA ;
+        :biblioNote         "reprinted from the original block at smad dra-tshang of sera monastery, lhasa"@en ;
+        :hasPart            bdr:MW1KG10772_0A7B95 , bdr:MW1KG10772_67C348 , bdr:MW1KG10772_AD12D4 , bdr:MW1KG10772_E0A629 , bdr:MW1KG10772_EDCBB8 , bdr:MW1KG10772_F5A015 ;
+        :hasSourcePrintery  bdr:G2CN10853 ;
+        :hasTitle           bdr:TT2D3BC6AD350EE957 , bdr:TT82BAE40B19793E4F , bdr:TT965B1CE3A0039857 ;
+        :instanceEvent      bdr:EV8499F9F8C5ECF2D8 ;
+        :instanceHasReproduction  bdr:W1KG10772 ;
+        :instanceOf         bdr:WA1KG10772 ;
+        :isRoot             true ;
+        :note               bdr:NT6CA907318EAD862F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang gelek demo"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "v. 74" ;
+        :workExtentStatement  "525 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG10772_0A7B95
@@ -856,6 +929,10 @@ bdg:MW1KG10772 {
         :partTreeIndex      "6.2" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6CA907318EAD862F
+        a                   :Note ;
+        :noteText           "hand written dbu chen script on the based of the original blocks carved at smad dra-tshang of sera monastery, lhasa"@en .
+    
     bdr:TT09B87CA8E7BF0EEE
         a                   :Title ;
         rdfs:label          "sman bla bde gshegs brgyad kyi mtshan dang gzungs sngags kyi skor/"@bo-x-ewts .
@@ -883,6 +960,10 @@ bdg:MW1KG10772 {
     bdr:TT2C759D57650F6A76
         a                   :Title ;
         rdfs:label          "'jigs byed dpa' gcig bdud las rnam rgyal gyi sgo nas zhi khro sbrags sgrub byed tshul/"@bo-x-ewts .
+    
+    bdr:TT2D3BC6AD350EE957
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ye she rgya mtsho/ (ser smad grwa tshang par ma/)"@bo-x-ewts .
     
     bdr:TT3803C195B34DBAFF
         a                   :Title ;
@@ -940,6 +1021,10 @@ bdg:MW1KG10772 {
         a                   :Title ;
         rdfs:label          "tshe 'das la 'pho ba bya tshul dang 'chi khar 'pho ba'i man ngag bsgom tshul/_bsngo ba'i mthun 'gyur/_ngan song kun grol gyi bla rgyud sogs/"@bo-x-ewts .
     
+    bdr:TT82BAE40B19793E4F
+        a                   :TitlePageTitle ;
+        rdfs:label          "chu bzang bla ma'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT8500A641854E4902
         a                   :Title ;
         rdfs:label          "bla ma'i rnal 'byor dngos grub kun 'byung sogs/ (kha)"@bo-x-ewts .
@@ -959,6 +1044,10 @@ bdg:MW1KG10772 {
     bdr:TT8E1ECA4431822C21
         a                   :Title ;
         rdfs:label          "bde mchog dkar po la brten pa'i bla ma'i rnal 'byor 'chi med dga' ston/"@bo-x-ewts .
+    
+    bdr:TT965B1CE3A0039857
+        a                   :OtherTitle ;
+        rdfs:label          "the collected works of chu-bzang bla-ma ye-shes rgya-mtsho"@en .
     
     bdr:TTA21EC55A608923B0
         a                   :Title ;

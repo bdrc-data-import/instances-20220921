@@ -18,6 +18,12 @@ bdg:MW13780 {
         adm:logMessage      "subject class changed from T00JR42 to T199"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG192EE88FA048B80B
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-03-19T14:39:21.66Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG76ABFF5E58B74BDF
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-13T15:48:31.867Z"^^xsd:dateTime ;
@@ -29,6 +35,10 @@ bdg:MW13780 {
         adm:logDate         "2010-01-06T17:16:26.424Z"^^xsd:dateTime ;
         adm:logMessage      "edited annotation"@en ;
         adm:logWho          bdu:U00020 .
+    
+    bda:LG7BA0F699BB888307
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LG8AAAA54C0D54C636
         a                   adm:UpdateOutlineData ;
@@ -66,14 +76,33 @@ bdg:MW13780 {
         adm:logMessage      "typo corrected"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW13780  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1AT634" ;
         adm:adminAbout      bdr:MW13780 ;
-        adm:facetIndex      268 ;
-        adm:logEntry        bda:LG01080016F6624BA0 , bda:LG76ABFF5E58B74BDF , bda:LG77E0961E2E6EE139 , bda:LG8AAAA54C0D54C636 , bda:LG9C2E78D7A9340DF3 , bda:LGA935F07B230CE83E , bda:LGA9429DAC3B1CF846 , bda:LGAC038FF0F499CC42 , bda:LGD57B4B7A3BF13128 , bda:LGD784985672D0008E ;
+        adm:facetIndex      276 ;
+        adm:gitPath         "68/MW13780.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW13780 ;
+        adm:logEntry        bda:LG01080016F6624BA0 , bda:LG192EE88FA048B80B , bda:LG76ABFF5E58B74BDF , bda:LG77E0961E2E6EE139 , bda:LG7BA0F699BB888307 , bda:LG8AAAA54C0D54C636 , bda:LG9C2E78D7A9340DF3 , bda:LGA935F07B230CE83E , bda:LGA9429DAC3B1CF846 , bda:LGAC038FF0F499CC42 , bda:LGD57B4B7A3BF13128 , bda:LGD784985672D0008E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "antonio terrone with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL015A3691D8A2E6D5
         a                   :ContentLocation ;
@@ -654,7 +683,24 @@ bdg:MW13780 {
         :contentLocationInstance  bdr:W13780 ;
         :contentLocationPage  537 .
     
-    bdr:MW13780  :hasPart   bdr:MW13780_B0D496 , bdr:MW13780_DF317E ;
+    bdr:ID752D53AAC8BACABC
+        a                   bdr:HollisId ;
+        rdf:value           "014254690" .
+    
+    bdr:MW13780  a          :Instance ;
+        skos:prefLabel      "rdo rje snying po sprin gyi thol glu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID752D53AAC8BACABC ;
+        :biblioNote         "computerized printed texts"@en ;
+        :hasPart            bdr:MW13780_B0D496 , bdr:MW13780_DF317E ;
+        :hasTitle           bdr:TT577774C0A15988F9 , bdr:TTB00439319C8F9A3D ;
+        :instanceHasReproduction  bdr:W13780 ;
+        :instanceOf         bdr:WA13780 ;
+        :isRoot             true ;
+        :note               bdr:NTC29EB62CD5A24D12 ;
+        :numberOfVolumes    2 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW13780_0265F7
@@ -1937,6 +1983,10 @@ bdg:MW13780 {
         :partTreeIndex      "1.24" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTC29EB62CD5A24D12
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 0844-0845."@en .
+    
     bdr:TT017FC23397757B73
         a                   :Title ;
         rdfs:label          "ma mo sngags kyi bdag mo'i mchod sprin 'ja' tshon 'khor lo/"@bo-x-ewts .
@@ -2157,6 +2207,10 @@ bdg:MW13780 {
         a                   :TitlePageTitle ;
         rdfs:label          "rdo rje snying po las/_rmi lam gyi 'grel chen 'od gsal 'khor lo/"@bo-x-ewts .
     
+    bdr:TT577774C0A15988F9
+        a                   :Title ;
+        rdfs:label          "rdo rje snying po sprin gyi thol glu/"@bo-x-ewts .
+    
     bdr:TT588B9F491C0F1FF5
         a                   :Title ;
         rdfs:label          "'og sgo bde ba chen po'i rgyab chos rnam dag shel gyi me long /"@bo-x-ewts .
@@ -2364,6 +2418,10 @@ bdg:MW13780 {
     bdr:TTACEB39A89BE30C71
         a                   :TitlePageTitle ;
         rdfs:label          "rdo rje snying po las/_gtum mo me dpung ye shes 'khor lo'i lo rgyus rab gsal nyi ma'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TTB00439319C8F9A3D
+        a                   :TitlePageTitle ;
+        rdfs:label          "rdo rje snying po sprin gyi thol glu'i glegs bam dang po'i them byang ye shes 'od snang /"@bo-x-ewts .
     
     bdr:TTB05CFFBEBCCDA41B
         a                   :TitlePageTitle ;

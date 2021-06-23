@@ -18,20 +18,45 @@ bdg:MW1KG5098 {
         adm:logDate         "2014-02-06T16:16:23.045Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG42A538FADC311FCF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-05-11T13:06:30.379Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG487EAE15D6269633
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-06T18:03:22.07Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG5098  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG5098" ;
         adm:adminAbout      bdr:MW1KG5098 ;
-        adm:facetIndex      43 ;
-        adm:logEntry        bda:LG2E7A47F50CFAFA39 , bda:LG487EAE15D6269633 ;
+        adm:facetIndex      51 ;
+        adm:gitPath         "5d/MW1KG5098.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5098 ;
+        adm:logEntry        bda:LG2E7A47F50CFAFA39 , bda:LG42A538FADC311FCF , bda:LG487EAE15D6269633 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0A36311D655A1015
         a                   :ContentLocation ;
@@ -173,7 +198,30 @@ bdg:MW1KG5098 {
         :contentLocationPage  24 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG5098  :hasPart  bdr:MW1KG5098_51BB7D , bdr:MW1KG5098_6088B5 , bdr:MW1KG5098_AD3FE7 , bdr:MW1KG5098_BE1406 ;
+    bdr:CR4215816BE8E777E7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1PD90510 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:ID1D652497DE80C99A
+        a                   bdr:HollisId ;
+        rdf:value           "014257060" .
+    
+    bdr:MW1KG5098  a        :Instance ;
+        skos:prefLabel      "khrims yig zhal lce bcu drug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1D652497DE80C99A ;
+        :biblioNote         "dbu med manuscript text"@en ;
+        :creator            bdr:CR4215816BE8E777E7 ;
+        :hasPart            bdr:MW1KG5098_51BB7D , bdr:MW1KG5098_6088B5 , bdr:MW1KG5098_AD3FE7 , bdr:MW1KG5098_BE1406 ;
+        :hasTitle           bdr:TT66618104BC9678DE , bdr:TTFF595278FECA27F1 ;
+        :instanceHasReproduction  bdr:W1KG5098 ;
+        :instanceOf         bdr:WA1KG5098 ;
+        :isRoot             true ;
+        :note               bdr:NT58EDCFAE57415F3A ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "93 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG5098_1CB7C9
@@ -437,6 +485,10 @@ bdg:MW1KG5098 {
         :partTreeIndex      "4.09" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT58EDCFAE57415F3A
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 220"@en .
+    
     bdr:TT05E315CA20B24A45
         a                   :Title ;
         rdfs:label          "bzhi pa/_zhu bzhes bden 'dzin gyi zhal lce/"@bo-x-ewts .
@@ -452,6 +504,10 @@ bdg:MW1KG5098 {
     bdr:TT357B676AF3CEAE5A
         a                   :Title ;
         rdfs:label          "gsum pa/_sne mo las 'dzin gyi zhal lce/"@bo-x-ewts .
+    
+    bdr:TT66618104BC9678DE
+        a                   :Title ;
+        rdfs:label          "khrims yig zhal lce bcu drug"@bo-x-ewts .
     
     bdr:TT6BA402B3373A9E18
         a                   :Title ;
@@ -516,4 +572,8 @@ bdg:MW1KG5098 {
     bdr:TTF85E2A7653E8D98B
         a                   :Title ;
         rdfs:label          "bco lnga pa/_nam phar tshur gyi zhal lce/"@bo-x-ewts .
+    
+    bdr:TTFF595278FECA27F1
+        a                   :OtherTitle ;
+        rdfs:label          "gtsang sde srid karma bstan skyong dbang pos bod la dbang sgyur byed skabs spel ser ba sgrig tu bcug pa'i khrims yig zhal lce bcu drug"@bo-x-ewts .
 }

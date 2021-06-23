@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1046 {
+    bda:LG58E09478F6473240
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T13:54:50.933Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5F5F28C83FAA5D03
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-20T16:14:54.897Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBBAF731AE59F03A0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
     bda:LGIMDC24F5C4  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-20T17:00:17.232Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1046"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1046  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG2641" ;
         adm:adminAbout      bdr:MW1NLM1046 ;
-        adm:facetIndex      20 ;
-        adm:logEntry        bda:LGIMDC24F5C4 ;
+        adm:facetIndex      26 ;
+        adm:gitPath         "3b/MW1NLM1046.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1046 ;
+        adm:logEntry        bda:LG58E09478F6473240 , bda:LG5F5F28C83FAA5D03 , bda:LGBBAF731AE59F03A0 , bda:LGIMDC24F5C4 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL002505183EE2D013
         a                   :ContentLocation ;
@@ -90,7 +119,19 @@ bdg:MW1NLM1046 {
         :contentLocationPage  33 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM1046  :hasPart  bdr:MW1NLM1046_10A3BE , bdr:MW1NLM1046_366883 , bdr:MW1NLM1046_4AE328 , bdr:MW1NLM1046_57ABC9 , bdr:MW1NLM1046_6E5279 , bdr:MW1NLM1046_A3051F , bdr:MW1NLM1046_AF1CA8 , bdr:MW1NLM1046_CC041E , bdr:MW1NLM1046_EC36AE ;
+    bdr:MW1NLM1046  a       :Instance ;
+        skos:prefLabel      "rta mgrin gsang sgrub kyi sgo nas grib sel bya tshul nor bu ke ta ka sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "28x7" ;
+        :hasPart            bdr:MW1NLM1046_10A3BE , bdr:MW1NLM1046_366883 , bdr:MW1NLM1046_4AE328 , bdr:MW1NLM1046_57ABC9 , bdr:MW1NLM1046_6E5279 , bdr:MW1NLM1046_A3051F , bdr:MW1NLM1046_AF1CA8 , bdr:MW1NLM1046_CC041E , bdr:MW1NLM1046_EC36AE ;
+        :hasTitle           bdr:TTF5BC0B2938840ACB ;
+        :instanceHasReproduction  bdr:W1NLM1046 ;
+        :instanceOf         bdr:WA1NLM1046 ;
+        :isRoot             true ;
+        :note               bdr:NTEA317093C8C9A75D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 ff., 2 ff., 5 ff., 5 ff., 11 ff., 6 ff., 3 ff., 52 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1046_10A3BE
@@ -219,6 +260,10 @@ bdg:MW1NLM1046 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTEA317093C8C9A75D
+        a                   :Note ;
+        :noteText           "nlmId: M0058959"@en .
+    
     bdr:TT36BC69C9660312FB
         a                   :Title ;
         rdfs:label          "dpal myur mdzad ye shes kyi mgon po la gsol ba 'debs cing 'phrin las 'chol tshul dngos grub rin chen 'dren pa'i shing rta/"@bo-x-ewts .
@@ -254,4 +299,8 @@ bdg:MW1NLM1046 {
     bdr:TTF11286D4F70799E8
         a                   :Title ;
         rdfs:label          "dpal ldan lha mo'i gtor sgrub sogs la nye bar mkho ba'i 'phrin bcol mkha' 'gro'i yid 'gul/"@bo-x-ewts .
+    
+    bdr:TTF5BC0B2938840ACB
+        a                   :Title ;
+        rdfs:label          "rta mgrin gsang sgrub kyi sgo nas grib sel bya tshul nor bu ke ta ka sogs/"@bo-x-ewts .
 }

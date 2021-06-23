@@ -12,11 +12,35 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1331 {
+    bda:LG0E2C0272FFBF0BD5
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG35177E314BDDE7A5
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-17T12:55:17.741Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LG7CB5BD72E82FC255
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2020-10-22T15:08:40.662Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
+    
+    bda:LG81199F25A4681B4B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1331"@en ;
+        adm:logMethod       bda:BatchMethod .
     
     bda:LGIM541FF095  a     adm:InitialDataImport ;
         adm:logDate         "2020-04-17T15:30:18.848Z"^^xsd:dateTime ;
@@ -28,10 +52,15 @@ bdg:MW1NLM1331 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356865" ;
         adm:adminAbout      bdr:MW1NLM1331 ;
-        adm:facetIndex      35 ;
-        adm:logEntry        bda:LG7CB5BD72E82FC255 , bda:LGIM541FF095 ;
+        adm:facetIndex      42 ;
+        adm:gitPath         "42/MW1NLM1331.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1331 ;
+        adm:logEntry        bda:LG0E2C0272FFBF0BD5 , bda:LG35177E314BDDE7A5 , bda:LG7CB5BD72E82FC255 , bda:LG81199F25A4681B4B , bda:LGIM15986367 , bda:LGIM541FF095 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0B8DD5BA247BA614
         a                   :ContentLocation ;
@@ -111,7 +140,19 @@ bdg:MW1NLM1331 {
         :contentLocationInstance  bdr:W1NLM1331 ;
         :contentLocationPage  243 .
     
-    bdr:MW1NLM1331  :hasPart  bdr:MW1NLM1331_16A9D6 , bdr:MW1NLM1331_1C37D7 , bdr:MW1NLM1331_53766F , bdr:MW1NLM1331_5A2A5C , bdr:MW1NLM1331_7D4455 , bdr:MW1NLM1331_8045D2 , bdr:MW1NLM1331_865D88 , bdr:MW1NLM1331_99E2FD , bdr:MW1NLM1331_9EA69B , bdr:MW1NLM1331_AAE696 , bdr:MW1NLM1331_AB0C60 , bdr:MW1NLM1331_CFF978 , bdr:MW1NLM1331_FE3184 ;
+    bdr:MW1NLM1331  a       :Instance ;
+        skos:prefLabel      "skabs bzhi ba'i bsdus don rgyal mkhan po grags pa rgyal mtshan pa la gnang ba sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "17x5" ;
+        :hasPart            bdr:MW1NLM1331_16A9D6 , bdr:MW1NLM1331_1C37D7 , bdr:MW1NLM1331_53766F , bdr:MW1NLM1331_5A2A5C , bdr:MW1NLM1331_7D4455 , bdr:MW1NLM1331_8045D2 , bdr:MW1NLM1331_865D88 , bdr:MW1NLM1331_99E2FD , bdr:MW1NLM1331_9EA69B , bdr:MW1NLM1331_AAE696 , bdr:MW1NLM1331_AB0C60 , bdr:MW1NLM1331_CFF978 , bdr:MW1NLM1331_FE3184 ;
+        :hasTitle           bdr:TTBE2513A44223ECE5 ;
+        :instanceHasReproduction  bdr:W1NLM1331 ;
+        :instanceOf         bdr:WA1NLM1255 ;
+        :isRoot             true ;
+        :note               bdr:NT555363D0437F9454 , bdr:NT615C847A29D0BD0F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1331_16A9D6
@@ -296,6 +337,14 @@ bdg:MW1NLM1331 {
         :partTreeIndex      "09" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT555363D0437F9454
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT615C847A29D0BD0F
+        a                   :Note ;
+        :noteText           "nlmId: M0059249"@en .
+    
     bdr:TT11742A1CEEF3973C
         a                   :TitlePageTitle ;
         rdfs:label          "grub chen thang stong rgyal pos mdzad pa nad grol mar grags pa'i smon lam byin can/"@bo-x-ewts .
@@ -355,6 +404,10 @@ bdg:MW1NLM1331 {
     bdr:TTB5947A7A278ED704
         a                   :Title ;
         rdfs:label          "kun rig rtsa sngags 'don thabs/"@bo-x-ewts .
+    
+    bdr:TTBE2513A44223ECE5
+        a                   :Title ;
+        rdfs:label          "skabs bzhi ba'i bsdus don rgyal mkhan po grags pa rgyal mtshan pa la gnang ba sogs/"@bo-x-ewts .
     
     bdr:TTD1BEF049F815843C
         a                   :Title ;

@@ -12,20 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG16649 {
+    bda:LG3023CED298BAECF5
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-01-21T11:17:37.432Z"^^xsd:dateTime ;
+        adm:logMessage      "added series name and number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG30B64B5B8D7FCF9D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-02-06T12:00:17.45Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG936974E5755B9BDE
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:21.329Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
     bda:MW1KG16649  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG16649" ;
         adm:adminAbout      bdr:MW1KG16649 ;
-        adm:facetIndex      696 ;
-        adm:logEntry        bda:LG936974E5755B9BDE ;
+        adm:facetIndex      704 ;
+        adm:gitPath         "6a/MW1KG16649.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16649 ;
+        adm:logEntry        bda:LG3023CED298BAECF5 , bda:LG30B64B5B8D7FCF9D , bda:LG936974E5755B9BDE , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0008736AB8CA3D4E
         a                   :ContentLocation ;
@@ -2456,7 +2480,36 @@ bdg:MW1KG16649 {
         :contentLocationPage  78 ;
         :contentLocationVolume  5 .
     
-    bdr:MW1KG16649  :hasPart  bdr:MW1KG16649_01AF97 , bdr:MW1KG16649_1FF3A8 , bdr:MW1KG16649_2726BA , bdr:MW1KG16649_276789 , bdr:MW1KG16649_3E5ADE , bdr:MW1KG16649_5A2DCC , bdr:MW1KG16649_63CF7D , bdr:MW1KG16649_6EFDB5 , bdr:MW1KG16649_78F462 , bdr:MW1KG16649_AB8B62 , bdr:MW1KG16649_AF3968 , bdr:MW1KG16649_D54A19 , bdr:MW1KG16649_E75C9D , bdr:MW1KG16649_E8588D , bdr:MW1KG16649_E9C823 , bdr:MW1KG16649_EB3F92 ;
+    bdr:EV84CB9DBFA669FA68
+        a                   :PublishedEvent ;
+        :onYear             "2013"^^xsd:gYear .
+    
+    bdr:ID85B4CA8F6C356619
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787805894027" .
+    
+    bdr:MW1KG16649  a       :Instance , :SerialInstance ;
+        skos:altLabel       "印藏女成就者"@zh-hans ;
+        skos:prefLabel      "'phags bod kyi skyes chen ma dag gi rnam par thar ba pad+ma dkar po'i phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID85B4CA8F6C356619 ;
+        :authorshipStatement  "bla rung ar+ya tA re'i dpe tshogs rtsom sgrig khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG16649_01AF97 , bdr:MW1KG16649_1FF3A8 , bdr:MW1KG16649_2726BA , bdr:MW1KG16649_276789 , bdr:MW1KG16649_3E5ADE , bdr:MW1KG16649_5A2DCC , bdr:MW1KG16649_63CF7D , bdr:MW1KG16649_6EFDB5 , bdr:MW1KG16649_78F462 , bdr:MW1KG16649_AB8B62 , bdr:MW1KG16649_AF3968 , bdr:MW1KG16649_D54A19 , bdr:MW1KG16649_E75C9D , bdr:MW1KG16649_E8588D , bdr:MW1KG16649_E9C823 , bdr:MW1KG16649_EB3F92 ;
+        :hasTitle           bdr:TT747AEE23CA47B8C2 , bdr:TTC6059CF7B740FCB4 , bdr:TTD6AC3E70073CF0CE ;
+        :instanceEvent      bdr:EV84CB9DBFA669FA68 ;
+        :instanceHasReproduction  bdr:W1KG16649 ;
+        :instanceOf         bdr:WA1KG16649 ;
+        :isRoot             true ;
+        :numberOfVolumes    16 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG16649 ;
+        :seriesNumber       "v. 1-16" ;
+        :workExtentStatement  "15 v. + 1 v. (catalogue)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG16649_00918A
@@ -8031,6 +8084,10 @@ bdg:MW1KG16649 {
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
     
+    bdr:TT747AEE23CA47B8C2
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "印藏女成就者"@zh-hans .
+    
     bdr:TT74DE9A5C4B7749EF
         a                   :Title ;
         rdfs:label          "rgyal bu don kun grub pa'i btsun mo sa 'tsho ma'i yon tan dang lo rgyus/"@bo-x-ewts .
@@ -8483,6 +8540,10 @@ bdg:MW1KG16649 {
         a                   :Title ;
         rdfs:label          "re ma ti mched bzhi'i pha ma'i khungs dang byung rabs/"@bo-x-ewts .
     
+    bdr:TTC6059CF7B740FCB4
+        a                   :Title ;
+        rdfs:label          "'phags bod kyi skyes chen ma dag gi rnam par thar ba pad+ma dkar po'i phreng ba/"@bo-x-ewts .
+    
     bdr:TTC951A6BC83F45171
         a                   :Title ;
         rdfs:label          "nyer gsum pa/_bram ze skye ba bdun pa'i sku sha rnyed nas mchod pa'i rten du bzhag pa'i rim pa'i le'u/"@bo-x-ewts .
@@ -8594,6 +8655,10 @@ bdg:MW1KG16649 {
     bdr:TTD6AB1E574D295E39
         a                   :Title ;
         rdfs:label          "sngon 'gro'i gtam/"@bo-x-ewts .
+    
+    bdr:TTD6AC3E70073CF0CE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "yin zang nv cheng jiu zhe"@zh-latn-pinyin-x-ndia .
     
     bdr:TTD992CA51660AAFFC
         a                   :Title ;

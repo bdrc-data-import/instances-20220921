@@ -18,20 +18,62 @@ bdg:MW23651 {
         adm:logMessage      "corrected typos, added titles and topics"@en ;
         adm:logWho          bdu:U00009 .
     
+    bda:LG52933E841A9F113B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8AFB533616D58A70
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T10:45:01.185Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG8BD29C5CDEAFE7C8
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-02-14T10:38:16.281Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typos"@en ;
+        adm:logWho          bdu:U00009 .
+    
     bda:LGA5B5CE112D7D0959
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-08-31T13:37:09.348Z"^^xsd:dateTime ;
         adm:logMessage      "published to clear work space"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23651  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS151909" ;
         adm:adminAbout      bdr:MW23651 ;
-        adm:facetIndex      75 ;
-        adm:logEntry        bda:LG51CCBCDB1D573F47 , bda:LGA5B5CE112D7D0959 ;
+        adm:facetIndex      91 ;
+        adm:gitPath         "12/MW23651.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23651 ;
+        adm:logEntry        bda:LG51CCBCDB1D573F47 , bda:LG52933E841A9F113B , bda:LG8AFB533616D58A70 , bda:LG8BD29C5CDEAFE7C8 , bda:LGA5B5CE112D7D0959 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined through the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL09F834CC5C3BB514
         a                   :ContentLocation ;
@@ -218,7 +260,45 @@ bdg:MW23651 {
         :contentLocationPage  5 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23651  :hasPart   bdr:MW23651_71368B , bdr:MW23651_AFE513 ;
+    bdr:EV98976593B6ADA102
+        a                   :PublishedEvent ;
+        :onYear             "1980"^^xsd:gYear .
+    
+    bdr:ID2FDAEFC30E6B88D6
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011204691-6" .
+    
+    bdr:ID53117639DE32BF78
+        a                   bdr:HollisId ;
+        rdf:value           "014259016" .
+    
+    bdr:IDDED88CDE8F130E8C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ5595 .D87 1980" .
+    
+    bdr:IDDF64B25B6F86EB2F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80904356" .
+    
+    bdr:MW23651  a          :Instance ;
+        skos:altLabel       "selected writings of the first zwa-nag karma-pa dus-gsum-mkhyen-pa"@en ;
+        skos:prefLabel      "gsung 'bum/_dus gsum mkhyen pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2FDAEFC30E6B88D6 , bdr:ID53117639DE32BF78 , bdr:IDDED88CDE8F130E8C , bdr:IDDF64B25B6F86EB2F ;
+        :biblioNote         "reproduced from rare manuscripts from the library of zwa-dmar rin-po-che"@en ;
+        :hasPart            bdr:MW23651_71368B , bdr:MW23651_AFE513 ;
+        :hasTitle           bdr:TT55F68534227D664E , bdr:TTCAB7F4743F215A71 , bdr:TTCD052A8F9595FBF1 , bdr:TTDA35EE20B3A5983B ;
+        :instanceEvent      bdr:EV98976593B6ADA102 ;
+        :instanceHasReproduction  bdr:W23651 ;
+        :instanceOf         bdr:WA23651 ;
+        :isRoot             true ;
+        :note               bdr:NTA13BC14099B4812E ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "dzongsar chhentse labrang"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23651_04E1CA
@@ -600,6 +680,10 @@ bdg:MW23651 {
         :partTreeIndex      "1.10" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTA13BC14099B4812E
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2375-2376"@en .
+    
     bdr:TT00814A0DC748B600
         a                   :Title ;
         rdfs:label          "rnam bzhi rgyud 'grol/"@bo-x-ewts .
@@ -659,6 +743,10 @@ bdg:MW23651 {
     bdr:TT54974411A0C65345
         a                   :TitlePageTitle ;
         rdfs:label          "rje 'gro ba'i mgon po rin po che'i rnam thar skyes rabs dang bcas pa rin chen phreng ba 'bring po (ka)"@bo-x-ewts .
+    
+    bdr:TT55F68534227D664E
+        a                   :TitlePageTitle ;
+        rdfs:label          "selected writings of the first zwa-nag karma-pa dus-gsum-mkhyen-pa"@en .
     
     bdr:TT57EB60F20032F82E
         a                   :ToCTitle ;
@@ -744,6 +832,14 @@ bdg:MW23651 {
         a                   :Title ;
         rdfs:label          "zhal gcig ma'i sgrub thabs/"@bo-x-ewts .
     
+    bdr:TTCAB7F4743F215A71
+        a                   :CoverTitle ;
+        rdfs:label          "Selected writings of the First Źwa-nag Karma-pa Dus-gsum-mkhyen-pa."@en-x-mixed .
+    
+    bdr:TTCD052A8F9595FBF1
+        a                   :OtherTitle ;
+        rdfs:label          "karma pa dus gsum mkhyen pa'i bka' 'bum/"@bo-x-ewts .
+    
     bdr:TTD0BC63445F356042
         a                   :Title ;
         rdfs:label          "rta mgrin gyi rig gtad/"@bo-x-ewts .
@@ -751,6 +847,10 @@ bdg:MW23651 {
     bdr:TTD30903BF8397B464
         a                   :Title ;
         rdfs:label          "dpal rdo rje rnal 'byor ma'i gsang bsgrub rje btsun mo lhan skyes/"@bo-x-ewts .
+    
+    bdr:TTDA35EE20B3A5983B
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dus gsum mkhyen pa/"@bo-x-ewts .
     
     bdr:TTDD86AF5A7E96E6C1
         a                   :Title ;

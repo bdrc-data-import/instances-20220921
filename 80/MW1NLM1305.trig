@@ -12,6 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1305 {
+    bda:LG4FC065451E63E694
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGA47C3D927C29A968
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-08T10:22:46.862Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFA46C009C87C4026
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1305"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIMC495E943  a     adm:InitialDataImport ;
         adm:logDate         "2020-04-17T15:30:15.358Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
@@ -22,10 +46,15 @@ bdg:MW1NLM1305 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356652" ;
         adm:adminAbout      bdr:MW1NLM1305 ;
-        adm:facetIndex      31 ;
-        adm:logEntry        bda:LGIMC495E943 ;
+        adm:facetIndex      40 ;
+        adm:gitPath         "80/MW1NLM1305.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1305 ;
+        adm:logEntry        bda:LG4FC065451E63E694 , bda:LGA47C3D927C29A968 , bda:LGFA46C009C87C4026 , bda:LGIM15986367 , bda:LGIMC495E943 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL116784FAE70E781D
         a                   :ContentLocation ;
@@ -99,7 +128,19 @@ bdg:MW1NLM1305 {
         :contentLocationInstance  bdr:W1NLM1305 ;
         :contentLocationPage  282 .
     
-    bdr:MW1NLM1305  :hasPart  bdr:MW1NLM1305_25B3D1 , bdr:MW1NLM1305_279CC6 , bdr:MW1NLM1305_3AA8AC , bdr:MW1NLM1305_48AEEF , bdr:MW1NLM1305_6C1112 , bdr:MW1NLM1305_979502 , bdr:MW1NLM1305_A3B0B4 , bdr:MW1NLM1305_A5885C , bdr:MW1NLM1305_B11E24 , bdr:MW1NLM1305_B843F5 , bdr:MW1NLM1305_EBBB56 , bdr:MW1NLM1305_F841C3 ;
+    bdr:MW1NLM1305  a       :Instance ;
+        skos:prefLabel      "'jigs byed dpa' po gcig pa'i rim gnyis kyi rnam bzhag bshad pa gsang chen bde lam sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "28.5x6.5" ;
+        :hasPart            bdr:MW1NLM1305_25B3D1 , bdr:MW1NLM1305_279CC6 , bdr:MW1NLM1305_3AA8AC , bdr:MW1NLM1305_48AEEF , bdr:MW1NLM1305_6C1112 , bdr:MW1NLM1305_979502 , bdr:MW1NLM1305_A3B0B4 , bdr:MW1NLM1305_A5885C , bdr:MW1NLM1305_B11E24 , bdr:MW1NLM1305_B843F5 , bdr:MW1NLM1305_EBBB56 , bdr:MW1NLM1305_F841C3 ;
+        :hasTitle           bdr:TTD2E0D6A2475C5370 , bdr:TTDA9F5151F24C97AA ;
+        :instanceHasReproduction  bdr:W1NLM1305 ;
+        :instanceOf         bdr:WA1NLM1305 ;
+        :isRoot             true ;
+        :note               bdr:NT3275756AAB914BC2 , bdr:NT9529BC9E5A06085C , bdr:NTBE8D80FFA20E8ED9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1305_25B3D1
@@ -270,6 +311,18 @@ bdg:MW1NLM1305 {
         :partTreeIndex      "02" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT3275756AAB914BC2
+        a                   :Note ;
+        :noteText           "missingPages: M0059223-020 [Final pages are missing 42A] Image 480"@en .
+    
+    bdr:NT9529BC9E5A06085C
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NTBE8D80FFA20E8ED9
+        a                   :Note ;
+        :noteText           "nlmId: M0059223"@en .
+    
     bdr:TT12FE7CFF3E02EFD2
         a                   :TitlePageTitle ;
         rdfs:label          "dpal rdo rje 'jigs byed dpa' po gcig pa'i rim gnyis kyi rnam bzhag bshad pa gsang chen bde lam/"@bo-x-ewts .
@@ -325,6 +378,14 @@ bdg:MW1NLM1305 {
     bdr:TTB99BF8E667CBA918
         a                   :Title ;
         rdfs:label          "mig nad ling thog brtag pa dang lan gdon brtags pa/"@bo-x-ewts .
+    
+    bdr:TTD2E0D6A2475C5370
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal rdo rje 'jigs byed dpa' po gcig pa'i rim gnyis kyi rnam bzhag bshad pa gsang chen bde lam/"@bo-x-ewts .
+    
+    bdr:TTDA9F5151F24C97AA
+        a                   :Title ;
+        rdfs:label          "'jigs byed dpa' po gcig pa'i rim gnyis kyi rnam bzhag bshad pa gsang chen bde lam sogs/"@bo-x-ewts .
     
     bdr:TTDF0161F638ADFAFD
         a                   :Title ;

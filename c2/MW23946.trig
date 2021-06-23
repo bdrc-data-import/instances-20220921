@@ -18,14 +18,43 @@ bdg:MW23946 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG45FC747453A358DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-07T10:57:23.478Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG7E38E6941057E872
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23946  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS134374" ;
         adm:adminAbout      bdr:MW23946 ;
-        adm:facetIndex      10 ;
-        adm:logEntry        bda:LG2A9B2DC7BA786C1D ;
+        adm:facetIndex      21 ;
+        adm:gitPath         "c2/MW23946.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23946 ;
+        adm:logEntry        bda:LG2A9B2DC7BA786C1D , bda:LG45FC747453A358DA , bda:LG7E38E6941057E872 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL043B35B378223841
         a                   :ContentLocation ;
@@ -58,7 +87,42 @@ bdg:MW23946 {
         :contentLocationInstance  bdr:W23946 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23946  :hasPart   bdr:MW23946_345B54 , bdr:MW23946_6F4780 ;
+    bdr:EV474495AAE39AB1DD
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:ID25F2C52929914E0B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .K82 1982" .
+    
+    bdr:ID8CBD80614460D3AA
+        a                   bdr:HollisId ;
+        rdf:value           "014259254" .
+    
+    bdr:IDE43CA8767B9B137F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82903284" .
+    
+    bdr:MW23946  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of mkhan-po kun bzan-dpal-ldan"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_kun bzang dpal ldan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25F2C52929914E0B , bdr:ID8CBD80614460D3AA , bdr:IDE43CA8767B9B137F ;
+        :biblioNote         "reproduced from a clear set of prints from the sde-dge blocks from the library of h.h. dingo chhentse rinpoche"@en ;
+        :hasPart            bdr:MW23946_345B54 , bdr:MW23946_6F4780 ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT46D3505E377E2953 , bdr:TTFBBFF7FE02B65686 ;
+        :instanceEvent      bdr:EV474495AAE39AB1DD ;
+        :instanceHasReproduction  bdr:W23946 ;
+        :instanceOf         bdr:WA23946 ;
+        :isRoot             true ;
+        :note               bdr:NTF6C57E975FD17D70 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "paro, bhutan"@en ;
+        :publisherName      "lama ngodru and sherab demy"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23946_345B54
@@ -132,9 +196,17 @@ bdg:MW23946 {
         :partTreeIndex      "2.1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTF6C57E975FD17D70
+        a                   :Note ;
+        :noteText           "-3552"@en .
+    
     bdr:TT01F56C278798098B
         a                   :Title ;
         rdfs:label          "o rgyan 'jigs med chos kyi dbang po'i rnam thar dad pa'i gsos sman bdud rtsi'i bum bcud (dpal sprul rnam thar)"@bo-x-ewts .
+    
+    bdr:TT46D3505E377E2953
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_kun bzang dpal ldan/"@bo-x-ewts .
     
     bdr:TTCB13B2709ED46959
         a                   :Title ;
@@ -143,4 +215,8 @@ bdg:MW23946 {
     bdr:TTE8B4F038D3BD8CA4
         a                   :Title ;
         rdfs:label          "byang chub sems dpa'i spyod pa la 'jug pa'i tshig 'grel 'jam dbyangs bla ma'i zhal lung bdud rtsi'i thigs pa (ka spyod 'jug mkhan po kun dpal bka' 'bum)"@bo-x-ewts .
+    
+    bdr:TTFBBFF7FE02B65686
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of mkhan-po kun bzan-dpal-ldan"@en-x-mixed .
 }

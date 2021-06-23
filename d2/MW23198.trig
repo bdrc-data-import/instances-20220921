@@ -36,6 +36,12 @@ bdg:MW23198 {
         adm:logMessage      "hao"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGAD07FAAC7EEE7E0E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-22T09:24:28.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGB54BB4044DF8D151
         a                   adm:InitialOutlineData ;
         adm:logDate         "2006-10-26T08:47:26.719Z"^^xsd:dateTime ;
@@ -48,20 +54,44 @@ bdg:MW23198 {
         adm:logMessage      "changed to absolute"@en ;
         adm:logWho          bdu:U00012 .
     
+    bda:LGD0678AA65860DA00
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGE9D646A846199040
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2006-10-26T12:29:02.391Z"^^xsd:dateTime ;
         adm:logMessage      "yi gai hao"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23198  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O01DG10852" ;
         adm:adminAbout      bdr:MW23198 ;
-        adm:facetIndex      153 ;
-        adm:logEntry        bda:LG17E111810A9E8376 , bda:LG38EACB87B26DC465 , bda:LG46F2A380B9DD402D , bda:LG695FE9B99618F3A8 , bda:LGB54BB4044DF8D151 , bda:LGC54B1639239F5DB6 , bda:LGE9D646A846199040 ;
+        adm:facetIndex      162 ;
+        adm:gitPath         "d2/MW23198.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23198 ;
+        adm:logEntry        bda:LG17E111810A9E8376 , bda:LG38EACB87B26DC465 , bda:LG46F2A380B9DD402D , bda:LG695FE9B99618F3A8 , bda:LGAD07FAAC7EEE7E0E , bda:LGB54BB4044DF8D151 , bda:LGC54B1639239F5DB6 , bda:LGD0678AA65860DA00 , bda:LGE9D646A846199040 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0143342C82F03BAD
         a                   :ContentLocation ;
@@ -483,7 +513,32 @@ bdg:MW23198 {
         :contentLocationPage  13 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23198  :hasPart   bdr:MW23198_26C405 , bdr:MW23198_58977A , bdr:MW23198_5CB1DD , bdr:MW23198_76A276 , bdr:MW23198_BB12E7 , bdr:MW23198_CCD2C1 , bdr:MW23198_D815FB ;
+    bdr:EV764C8F899033719C
+        a                   :PublishedEvent ;
+        :onOrAbout          "1983,1993" .
+    
+    bdr:IDEBFDFB14130065FC
+        a                   bdr:HollisId ;
+        rdf:value           "014258837" .
+    
+    bdr:MW23198  a          :Instance ;
+        skos:prefLabel      "gzhung chen bcu gsum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEBFDFB14130065FC ;
+        :hasPart            bdr:MW23198_26C405 , bdr:MW23198_58977A , bdr:MW23198_5CB1DD , bdr:MW23198_76A276 , bdr:MW23198_BB12E7 , bdr:MW23198_CCD2C1 , bdr:MW23198_D815FB ;
+        :hasSourcePrintery  bdr:G2CN10875 ;
+        :hasTitle           bdr:TTE7EECC4A4447DB98 , bdr:TTEDD33C95E9D6CE0D ;
+        :instanceEvent      bdr:EV764C8F899033719C ;
+        :instanceHasReproduction  bdr:W23198 ;
+        :instanceOf         bdr:WA23198 ;
+        :isRoot             true ;
+        :note               bdr:NT33F0242A8D52A60A ;
+        :numberOfVolumes    7 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "konchhog lhadrepa"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "7 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23198_03A0CF
@@ -1331,6 +1386,10 @@ bdg:MW23198 {
         :partTreeIndex      "5.08" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT33F0242A8D52A60A
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0801-0807\n\nincluded on tranche 2 of the tbrc digital library\n\nthese thirteen basic sutras and shastras were widely regarded as essential for the proper understanding of exoteric buddhism. the annotations are the work of khenpo shenga or shenpen chokyi nangwa (1871-1927) who vowed to avoid the various differing tibetan interpretations that had resulted in the sectarianism in tibet. these annotated editions became known as the dzongsar yigcha or syllabus and spread throughout all of tibet"@en .
+    
     bdr:TT032203BF2817D664
         a                   :TitlePageTitle ;
         rdfs:label          "slob dpon klu sgrub kyi rnam thar mdor bsdus su bkod pa/"@bo-x-ewts .
@@ -1626,6 +1685,14 @@ bdg:MW23198 {
     bdr:TTE4F2517991AAE193
         a                   :Title ;
         rdfs:label          "dbus mtha' rnam 'byed/"@bo-x-ewts .
+    
+    bdr:TTE7EECC4A4447DB98
+        a                   :OtherTitle ;
+        rdfs:label          "rdzong gsar yig cha/"@bo-x-ewts .
+    
+    bdr:TTEDD33C95E9D6CE0D
+        a                   :Title ;
+        rdfs:label          "gzhung chen bcu gsum/"@bo-x-ewts .
     
     bdr:TTF0C591AD84A4B48E
         a                   :TitlePageTitle ;

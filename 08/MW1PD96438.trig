@@ -18,14 +18,39 @@ bdg:MW1PD96438 {
         adm:logDate         "2019-08-28T11:50:28.217Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LG958D6744073C9C16
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-06T15:04:58.451Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1PD96438  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD96438" ;
         adm:adminAbout      bdr:MW1PD96438 ;
-        adm:facetIndex      344 ;
-        adm:logEntry        bda:LG278F72FF511C2EBA ;
+        adm:facetIndex      356 ;
+        adm:gitPath         "08/MW1PD96438.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD96438 ;
+        adm:logEntry        bda:LG278F72FF511C2EBA , bda:LG958D6744073C9C16 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0273E33F9906EECD
         a                   :ContentLocation ;
@@ -1224,7 +1249,37 @@ bdg:MW1PD96438 {
         :contentLocationPage  45 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1PD96438  :hasPart  bdr:MW1PD96438_49B277 , bdr:MW1PD96438_6BC2D7 , bdr:MW1PD96438_EA5B31 ;
+    bdr:EV535A52758F72FEC5
+        a                   :PublishedEvent ;
+        :onYear             "2009"^^xsd:gYear .
+    
+    bdr:ID7DF37D908569520F
+        a                   bdr:HollisId ;
+        rdf:value           "014257982" .
+    
+    bdr:IDB049E2007FF01E52
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789624501667" .
+    
+    bdr:MW1PD96438  a       :Instance ;
+        skos:altLabel       "the collected works of dungse thinley norbu rinpoche"@en , "称来诺布文集"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/_phrin las nor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7DF37D908569520F , bdr:IDB049E2007FF01E52 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1PD96438_49B277 , bdr:MW1PD96438_6BC2D7 , bdr:MW1PD96438_EA5B31 ;
+        :hasTitle           bdr:TT0EA7E77B57DEA700 , bdr:TT7A06E65EC73AF2D8 , bdr:TT95C8205E3B7AF4A1 , bdr:TTA8CC3C649735A9D6 , bdr:TTE6E6DBC3D014A333 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV535A52758F72FEC5 ;
+        :instanceHasReproduction  bdr:W1PD96438 ;
+        :instanceOf         bdr:WA1PD96438 ;
+        :isRoot             true ;
+        :note               bdr:NT897D3375D3D11870 ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "hongkong"@en ;
+        :publisherName      "hong kong gyi ling dpe skrun tshad yod kung si/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1PD96438_00063E
@@ -3637,6 +3692,10 @@ bdg:MW1PD96438 {
         :partTreeIndex      "1.59" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT897D3375D3D11870
+        a                   :Note ;
+        :noteText           "isbn: \n9789624501667 (v.1);\n9789624501711 (v.2);\n9789624501728 (v.3)"@en .
+    
     bdr:TT0009957786AFE0FF
         a                   :Title ;
         rdfs:label          "ga2)_thun min/"@bo-x-ewts .
@@ -3672,6 +3731,10 @@ bdg:MW1PD96438 {
     bdr:TT0B2876BE92024DC7
         a                   :Title ;
         rdfs:label          "kha8)_rgyu med pa'i snying rje chen po ldan pa'i sangs rgyas rnams kyi snying rje'i rang gzugs gsang sngags nang pa bla med/"@bo-x-ewts .
+    
+    bdr:TT0EA7E77B57DEA700
+        a                   :ColophonTitle ;
+        rdfs:label          "称来诺布文集"@zh-hans .
     
     bdr:TT0EE929BAE53B5A1F
         a                   :Title ;
@@ -3945,6 +4008,10 @@ bdg:MW1PD96438 {
         a                   :Title ;
         rdfs:label          "ga3)_maN+Dal/"@bo-x-ewts .
     
+    bdr:TT7A06E65EC73AF2D8
+        a                   :TitlePageTitle ;
+        rdfs:label          "gdung sras phrin las nor bu'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT7A45DE186296B503
         a                   :Title ;
         rdfs:label          "ga4)_sgrib sbyong rdor sems sgom sgom bzla sa/"@bo-x-ewts .
@@ -4021,6 +4088,10 @@ bdg:MW1PD96438 {
         a                   :Title ;
         rdfs:label          "kha2)_rten dang brten pa'i go don dngos/"@bo-x-ewts .
     
+    bdr:TT95C8205E3B7AF4A1
+        a                   :ColophonTitle ;
+        rdfs:label          "chen lai nuo bu wen ji"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT977BC69BE1BD5977
         a                   :Title ;
         rdfs:label          "ka3)_tshogs khang pad+ma'i rgyud mang /"@bo-x-ewts .
@@ -4068,6 +4139,10 @@ bdg:MW1PD96438 {
     bdr:TTA8AB7F6CB088D9A6
         a                   :Title ;
         rdfs:label          "'gos lo gzhon nu dpal gyi deb ther rin chen be+eDUr+ya'i kha dog gi mtshan dang ldan pa/"@bo-x-ewts .
+    
+    bdr:TTA8CC3C649735A9D6
+        a                   :OtherTitle ;
+        rdfs:label          "the collected works of dungse thinley norbu rinpoche"@en .
     
     bdr:TTA95D2E54457611DA
         a                   :Title ;
@@ -4252,6 +4327,10 @@ bdg:MW1PD96438 {
     bdr:TTE600FC02B5EFE75F
         a                   :Title ;
         rdfs:label          "a ho ngo mtshar rang che'o"@bo-x-ewts .
+    
+    bdr:TTE6E6DBC3D014A333
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_phrin las nor bu/"@bo-x-ewts .
     
     bdr:TTE7C58D9F937C3C41
         a                   :Title ;

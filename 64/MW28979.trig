@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW28979 {
+    bda:LG6B852968EE0D87FC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG8C7B60EDEF180210
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-09-21T14:11:00.016Z"^^xsd:dateTime ;
@@ -24,14 +28,39 @@ bdg:MW28979 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28979  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD93340" ;
         adm:adminAbout      bdr:MW28979 ;
-        adm:facetIndex      26 ;
-        adm:logEntry        bda:LG8C7B60EDEF180210 , bda:LGBDBF16D12AB37BD6 ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "64/MW28979.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28979 ;
+        adm:logEntry        bda:LG6B852968EE0D87FC , bda:LG8C7B60EDEF180210 , bda:LGBDBF16D12AB37BD6 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL015C880EB09753FB
         a                   :ContentLocation ;
@@ -75,7 +104,45 @@ bdg:MW28979 {
         :contentLocationInstance  bdr:W28979 ;
         :contentLocationPage  365 .
     
-    bdr:MW28979  :hasPart   bdr:MW28979_34F395 , bdr:MW28979_8CA7FF , bdr:MW28979_AAEC83 ;
+    bdr:EVCAB767110EF11D81
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID26A5F78347A4195A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105066121" .
+    
+    bdr:ID5B8A6A7FA9D7482D
+        a                   bdr:HollisId ;
+        rdf:value           "014259865" .
+    
+    bdr:IDA8396018021BFC70
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004314738" .
+    
+    bdr:IDAF30A6D3A01A374B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ3237 .D42 2004" .
+    
+    bdr:MW28979  a          :Instance ;
+        skos:altLabel       "dana yin ming xue"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rta nag rnam 'grel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID26A5F78347A4195A , bdr:ID5B8A6A7FA9D7482D , bdr:IDA8396018021BFC70 , bdr:IDAF30A6D3A01A374B ;
+        :authorshipStatement  "rje rta nag dge 'dun blo bzang gis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW28979_34F395 , bdr:MW28979_8CA7FF , bdr:MW28979_AAEC83 ;
+        :hasTitle           bdr:TT197CA2B8BEA2F3CA , bdr:TT4994BA3D7F3A67EA , bdr:TTD501ABCFF038FE4A ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EVCAB767110EF11D81 ;
+        :instanceHasReproduction  bdr:W28979 ;
+        :instanceOf         bdr:WA1KG25320 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "7, 911 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28979_34F395
@@ -184,6 +251,10 @@ bdg:MW28979 {
         a                   :OtherTitle ;
         rdfs:label          "tshad ma rnam 'grel gyi le'u dang po'i mtha' dpyod/"@bo-x-ewts .
     
+    bdr:TT197CA2B8BEA2F3CA
+        a                   :Title ;
+        rdfs:label          "rgyas pa'i bstan bcos tshad ma rnam 'grel gyi le'u bzhi'i mtha' dpyod lung rigs bang mdzod/"@bo-x-ewts .
+    
     bdr:TT233015025C16A6BC
         a                   :OtherTitle ;
         rdfs:label          "tshad ma rnam 'grel gyi le'u dang po'i mtha' dpyod/"@bo-x-ewts .
@@ -199,6 +270,10 @@ bdg:MW28979 {
     bdr:TT3C117500850E4F90
         a                   :TitlePageTitle ;
         rdfs:label          "rgyas pa'i bstan bcos tshad ma rnam 'grel gyi le'u bzhi pa'i mtha' dpyod rje rta nag pa dge 'dun blo bzang gi gsung rgyun dri ma med pa/"@bo-x-ewts .
+    
+    bdr:TT4994BA3D7F3A67EA
+        a                   :ColophonTitle ;
+        rdfs:label          "dana yin ming xue"@zh-latn-pinyin-x-ndia .
     
     bdr:TT61B62A4473486613
         a                   :Title ;
@@ -219,6 +294,10 @@ bdg:MW28979 {
     bdr:TTAC72DE8E6E37BBA5
         a                   :OtherTitle ;
         rdfs:label          "tshad ma rnam 'grel gyi le'u bzhi pa'i mtha' dpyod/"@bo-x-ewts .
+    
+    bdr:TTD501ABCFF038FE4A
+        a                   :Title ;
+        rdfs:label          "rta nag rnam 'grel/"@bo-x-ewts .
     
     bdr:TTE7E257D58E3BBC7F
         a                   :Title ;

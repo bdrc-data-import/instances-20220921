@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20452 {
+    bda:LG2C5DEC034E28AB15
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG8445AD90772CFDE8
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-04T12:29:02.796Z"^^xsd:dateTime ;
@@ -23,14 +27,33 @@ bdg:MW20452 {
         adm:logDate         "2010-04-30T15:56:56.622Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20452  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94587" ;
         adm:adminAbout      bdr:MW20452 ;
-        adm:facetIndex      17 ;
-        adm:logEntry        bda:LG8445AD90772CFDE8 , bda:LGFA84C9494ADA024A ;
+        adm:facetIndex      26 ;
+        adm:gitPath         "be/MW20452.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20452 ;
+        adm:logEntry        bda:LG2C5DEC034E28AB15 , bda:LG8445AD90772CFDE8 , bda:LGFA84C9494ADA024A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL132A9409791064BD
         a                   :ContentLocation ;
@@ -74,7 +97,36 @@ bdg:MW20452 {
         :contentLocationInstance  bdr:W20452 ;
         :contentLocationPage  177 .
     
-    bdr:MW20452  :hasPart   bdr:MW20452_0FD039 , bdr:MW20452_134190 , bdr:MW20452_5FCC77 , bdr:MW20452_82A302 , bdr:MW20452_AC115E , bdr:MW20452_F5E194 , bdr:MW20452_F93869 ;
+    bdr:EVFC8DE8506EBB78B7
+        a                   :PublishedEvent ;
+        :onYear             "1997"^^xsd:gYear .
+    
+    bdr:IDC0BBF49766B98604
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540918683" .
+    
+    bdr:IDFE1195582A9E6544
+        a                   bdr:HollisId ;
+        rdf:value           "014258160" .
+    
+    bdr:MW20452  a          :Instance ;
+        skos:prefLabel      "nam sprul 'jigs med phun tshogs dang mkha' 'gro tA re lha mo'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC0BBF49766B98604 , bdr:IDFE1195582A9E6544 ;
+        :authorshipStatement  "padma 'od gsal mtha' yas kyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW20452_0FD039 , bdr:MW20452_134190 , bdr:MW20452_5FCC77 , bdr:MW20452_82A302 , bdr:MW20452_AC115E , bdr:MW20452_F5E194 , bdr:MW20452_F93869 ;
+        :hasTitle           bdr:TT68DA5F0EC29A845E , bdr:TTA56090C5CD92D8A1 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVFC8DE8506EBB78B7 ;
+        :instanceHasReproduction  bdr:W20452 ;
+        :instanceOf         bdr:WA20452 ;
+        :isRoot             true ;
+        :note               bdr:NTC1BED7BAA63B8D2E ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 161 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20452_0FD039
@@ -169,6 +221,10 @@ bdg:MW20452 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTC1BED7BAA63B8D2E
+        a                   :Note ;
+        :noteText           "biographies of nam sprul 'jigs med phun tshogs (b. 1944) and mkha' 'gro tA re lha mo (b. 1938)\n\ntbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4754"@en .
+    
     bdr:TT0CAC361BF8C3C43A
         a                   :Title ;
         rdfs:label          "nam sprul 'jigs med phun tshogs dang mkha' 'gro tA re lha mo'i sku par/"@bo-x-ewts .
@@ -177,9 +233,17 @@ bdg:MW20452 {
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
     
+    bdr:TT68DA5F0EC29A845E
+        a                   :TitlePageTitle ;
+        rdfs:label          "skyabs rje nam sprul rin po che 'jigs med phun tshogs dang mkha' 'gro tA re lha mo mchog gi rnam thar rig 'dzin mkha' 'gro dgyes pa'i mchod sprin/"@bo-x-ewts .
+    
     bdr:TT8BB6DEDBD81D10B6
         a                   :Title ;
         rdfs:label          "nam sprul 'jigs med phun tshogs kyi rnam thar nor bu'i do shal/"@bo-x-ewts .
+    
+    bdr:TTA56090C5CD92D8A1
+        a                   :Title ;
+        rdfs:label          "nam sprul 'jigs med phun tshogs dang mkha' 'gro tA re lha mo'i rnam thar/"@bo-x-ewts .
     
     bdr:TTB6EB280297C19711
         a                   :Title ;

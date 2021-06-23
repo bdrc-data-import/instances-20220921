@@ -12,6 +12,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1401 {
+    bda:LG1732BA80A45EDD6B
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-06T10:40:57.538Z"^^xsd:dateTime ;
+        adm:logMessage      "full ataloged and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG280A2135602B25EF
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-05T15:50:33.253Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG646B1941A933402E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG850C3FB6B8FD3737
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1401"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIM2BD4346E  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-06T10:40:59.384Z"^^xsd:dateTime ;
         adm:logMessage      "full ataloged and released"@en ;
@@ -22,10 +52,15 @@ bdg:MW1NLM1401 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ357380" ;
         adm:adminAbout      bdr:MW1NLM1401 ;
-        adm:facetIndex      17 ;
-        adm:logEntry        bda:LGIM2BD4346E ;
+        adm:facetIndex      25 ;
+        adm:gitPath         "56/MW1NLM1401.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1401 ;
+        adm:logEntry        bda:LG1732BA80A45EDD6B , bda:LG280A2135602B25EF , bda:LG646B1941A933402E , bda:LG850C3FB6B8FD3737 , bda:LGIM15986367 , bda:LGIM2BD4346E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1F79C7DA42EFCE0B
         a                   :ContentLocation ;
@@ -69,7 +104,21 @@ bdg:MW1NLM1401 {
         :contentLocationInstance  bdr:W1NLM1401 ;
         :contentLocationPage  173 .
     
-    bdr:MW1NLM1401  :hasPart  bdr:MW1NLM1401_23CA48 , bdr:MW1NLM1401_511A71 , bdr:MW1NLM1401_B8CF38 , bdr:MW1NLM1401_C65811 , bdr:MW1NLM1401_CBDAB3 , bdr:MW1NLM1401_D0E226 , bdr:MW1NLM1401_F64E70 ;
+    bdr:MW1NLM1401  a       :Instance ;
+        skos:prefLabel      "bslab bya rin po che thar pa'i 'jug ngogs sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "47x7" ;
+        :hasPart            bdr:MW1NLM1401_23CA48 , bdr:MW1NLM1401_511A71 , bdr:MW1NLM1401_B8CF38 , bdr:MW1NLM1401_C65811 , bdr:MW1NLM1401_CBDAB3 , bdr:MW1NLM1401_D0E226 , bdr:MW1NLM1401_F64E70 ;
+        :hasTitle           bdr:TT43FAE40D057F7407 ;
+        :instanceHasReproduction  bdr:W1NLM1401 ;
+        :instanceOf         bdr:WA1NLM1401 ;
+        :isRoot             true ;
+        :note               bdr:NT23D52FC20DA570F1 , bdr:NTF8AE0685FCF6D1D8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :publisherName      "sku gsum phun tshogs gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1401_23CA48
@@ -170,6 +219,14 @@ bdg:MW1NLM1401 {
         :partTreeIndex      "7" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT23D52FC20DA570F1
+        a                   :Note ;
+        :noteText           "nlmId: M0059319"@en .
+    
+    bdr:NTF8AE0685FCF6D1D8
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
     bdr:TT28D2E96F4A6AD2D2
         a                   :Title ;
         rdfs:label          "bslab bya rin po che thar pa'i 'jug ngogs/"@bo-x-ewts .
@@ -177,6 +234,10 @@ bdg:MW1NLM1401 {
     bdr:TT3004D4D7B909C5C2
         a                   :Title ;
         rdfs:label          "sa lam gyi rnam bzhag theg gsum mdzes rgyan/"@bo-x-ewts .
+    
+    bdr:TT43FAE40D057F7407
+        a                   :Title ;
+        rdfs:label          "bslab bya rin po che thar pa'i 'jug ngogs sogs/"@bo-x-ewts .
     
     bdr:TT46ADEA2DB00A1D27
         a                   :TitlePageTitle ;

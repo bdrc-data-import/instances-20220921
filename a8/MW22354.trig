@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22354 {
+    bda:LG165EF052B1FFFCFC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG9B3767E567950FC6
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-01-27T16:44:19.37Z"^^xsd:dateTime ;
@@ -24,14 +28,33 @@ bdg:MW22354 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22354  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS139161" ;
         adm:adminAbout      bdr:MW22354 ;
-        adm:facetIndex      26 ;
-        adm:logEntry        bda:LG9B3767E567950FC6 , bda:LGCC02150FA30E027E ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "a8/MW22354.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22354 ;
+        adm:logEntry        bda:LG165EF052B1FFFCFC , bda:LG9B3767E567950FC6 , bda:LGCC02150FA30E027E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03CE9E83E1E56E27
         a                   :ContentLocation ;
@@ -171,7 +194,36 @@ bdg:MW22354 {
         :contentLocationInstance  bdr:W22354 ;
         :contentLocationPage  16 .
     
-    bdr:MW22354  :hasPart   bdr:MW22354_2F7C9C , bdr:MW22354_9391FA , bdr:MW22354_A6B35A , bdr:MW22354_BA8952 , bdr:MW22354_FD21E0 ;
+    bdr:EVD14C933DC7EDD647
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID3A59AA2EB422749B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "982450582X" .
+    
+    bdr:IDCDF5511FB479CCA9
+        a                   bdr:HollisId ;
+        rdf:value           "014258757" .
+    
+    bdr:MW22354  a          :Instance ;
+        skos:prefLabel      "rje shing bza' paN+Di ta sku 'phreng lnga pa skal bzang chos kyi rgyal mtshan gyi rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3A59AA2EB422749B , bdr:IDCDF5511FB479CCA9 ;
+        :authorshipStatement  "shar gdong blo bzang bshad sgrub rgya mtshos brtsams/"@bo-x-ewts ;
+        :editionStatement   "par thangs 1."@bo-x-ewts ;
+        :hasPart            bdr:MW22354_2F7C9C , bdr:MW22354_9391FA , bdr:MW22354_A6B35A , bdr:MW22354_BA8952 , bdr:MW22354_FD21E0 ;
+        :hasTitle           bdr:TT545CCE9F3056FDAF , bdr:TTC5DDC709F0B9EBD9 , bdr:TTC9057852A6E006AE ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVD14C933DC7EDD647 ;
+        :instanceHasReproduction  bdr:W22354 ;
+        :instanceOf         bdr:WA22354 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "shang kang /"@bo-x-ewts ;
+        :publisherName      "shang kang then mA par skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 263 p., [16] p. of col. plates" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22354_0BFBEC
@@ -445,4 +497,16 @@ bdg:MW22354 {
         :partOf             bdr:MW22354 ;
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT545CCE9F3056FDAF
+        a                   :Title ;
+        rdfs:label          "skal bzang chos kyi rgyal mtshan gyi rnam thar/"@bo-x-ewts .
+    
+    bdr:TTC5DDC709F0B9EBD9
+        a                   :CoverTitle ;
+        rdfs:label          "rje shing bza' paN+Di ta sku 'phreng lnga pa skal bzang chos kyi rgyal mtshan gyi rnam thar/"@bo-x-ewts .
+    
+    bdr:TTC9057852A6E006AE
+        a                   :TitlePageTitle ;
+        rdfs:label          "nges don gyi sems dpa' chen po shing bza' skal bzang chos kyi rgyal mtshan dpal bzang po mchog gi rnam par thar pa dad ldan yid kyi bdud rtsi/"@bo-x-ewts .
 }

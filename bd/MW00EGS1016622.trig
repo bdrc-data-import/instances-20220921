@@ -24,21 +24,46 @@ bdg:MW00EGS1016622 {
         adm:logMessage      "ready for posting on web"@en ;
         adm:logWho          bdu:U00011 .
     
+    bda:LG878EBF84E3B15CC3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-11-27T20:41:55.734Z"^^xsd:dateTime ;
+        adm:logMessage      "first posting"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGA5356835DD7B308E
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-03-05T13:12:34.14Z"^^xsd:dateTime ;
         adm:logMessage      "pagination is screwy in the original - need to fix; jann"@en ;
         adm:logWho          bdu:U00011 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1016622
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00JR445" ;
         adm:adminAbout      bdr:MW00EGS1016622 ;
-        adm:facetIndex      53 ;
-        adm:logEntry        bda:LG0909DBB90F9138A4 , bda:LG8576FC60153599A2 , bda:LGA5356835DD7B308E ;
+        adm:facetIndex      59 ;
+        adm:gitPath         "bd/MW00EGS1016622.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1016622 ;
+        adm:logEntry        bda:LG0909DBB90F9138A4 , bda:LG8576FC60153599A2 , bda:LG878EBF84E3B15CC3 , bda:LGA5356835DD7B308E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "jann ronis"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00262E73C64C9B86
         a                   :ContentLocation ;
@@ -334,8 +359,32 @@ bdg:MW00EGS1016622 {
         :contentLocationInstance  bdr:W00EGS1016622 ;
         :contentLocationPage  196 .
     
+    bdr:EV1169148ECD87FAB6
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID0D89D9EA9B4BDED8
+        a                   bdr:HollisId ;
+        rdf:value           "014253844" .
+    
     bdr:MW00EGS1016622
+        a                   :Instance ;
+        skos:prefLabel      "rdza stod rdzong sde dgon lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0D89D9EA9B4BDED8 ;
+        :biblioNote         "survey of the monasteries in rdza stod rdzong in yu shu'u prefecture, qinghai province"@en ;
         :hasPart            bdr:MW00EGS1016622_1B21D5 , bdr:MW00EGS1016622_5F07A7 , bdr:MW00EGS1016622_950A83 , bdr:MW00EGS1016622_A3C3E4 , bdr:MW00EGS1016622_A9A976 , bdr:MW00EGS1016622_CE3E7E , bdr:MW00EGS1016622_DA4104 ;
+        :hasTitle           bdr:TTFB6A31771D708ED9 ;
+        :illustrations      "20 p. col. ill." ;
+        :instanceEvent      bdr:EV1169148ECD87FAB6 ;
+        :instanceHasReproduction  bdr:W00EGS1016622 ;
+        :instanceOf         bdr:WA00EGS1016622 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[rdza stod rdzong]"@en ;
+        :publisherName      "srid gros rdza stod rdzong rig gnas lo rgyus u yon lhan khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 3, 305 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1016622_0ABEF5
@@ -993,4 +1042,8 @@ bdg:MW00EGS1016622 {
         :partOf             bdr:MW00EGS1016622_A3C3E4 ;
         :partTreeIndex      "2.5" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTFB6A31771D708ED9
+        a                   :Title ;
+        rdfs:label          "rdza stod rdzong sde dgon lo rgyus/"@bo-x-ewts .
 }

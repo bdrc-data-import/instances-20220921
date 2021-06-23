@@ -12,20 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM211 {
+    bda:LGBC2D21200616D537
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-03-20T16:44:10.646Z"^^xsd:dateTime ;
+        adm:logMessage      "Full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGBECE8ABA45F042B0
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-29T11:21:10.99Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM4554625F  a     adm:InitialDataImport ;
         adm:logDate         "2019-03-20T16:42:29.967Z"^^xsd:dateTime ;
         adm:logMessage      "New outline NLM"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM211"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM211  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ332205" ;
         adm:adminAbout      bdr:MW1NLM211 ;
-        adm:facetIndex      24 ;
-        adm:logEntry        bda:LGIM4554625F ;
+        adm:facetIndex      30 ;
+        adm:gitPath         "b6/MW1NLM211.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM211 ;
+        adm:logEntry        bda:LGBC2D21200616D537 , bda:LGBECE8ABA45F042B0 , bda:LGIM4554625F , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL56D2F78F214B36FF
         a                   :ContentLocation ;
@@ -81,7 +111,20 @@ bdg:MW1NLM211 {
         :contentLocationInstance  bdr:W1NLM211 ;
         :contentLocationPage  99 .
     
-    bdr:MW1NLM211  :hasPart  bdr:MW1NLM211_0ECBE3 , bdr:MW1NLM211_1B4436 , bdr:MW1NLM211_710343 , bdr:MW1NLM211_7E703E , bdr:MW1NLM211_9AB126 , bdr:MW1NLM211_A46A5B , bdr:MW1NLM211_B2F2F1 , bdr:MW1NLM211_C9F0B9 , bdr:MW1NLM211_E19EFC ;
+    bdr:MW1NLM211  a        :Instance ;
+        skos:prefLabel      "dag pa gser gyi mdo thig sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "29.5x7" ;
+        :hasPart            bdr:MW1NLM211_0ECBE3 , bdr:MW1NLM211_1B4436 , bdr:MW1NLM211_710343 , bdr:MW1NLM211_7E703E , bdr:MW1NLM211_9AB126 , bdr:MW1NLM211_A46A5B , bdr:MW1NLM211_B2F2F1 , bdr:MW1NLM211_C9F0B9 , bdr:MW1NLM211_E19EFC ;
+        :hasTitle           bdr:TT26D7A0FAA555D304 ;
+        :instanceHasReproduction  bdr:W1NLM211 ;
+        :instanceOf         bdr:WA1NLM211 ;
+        :isRoot             true ;
+        :note               bdr:NT858362CBE8CDDD2E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM211_0ECBE3
@@ -210,9 +253,17 @@ bdg:MW1NLM211 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT858362CBE8CDDD2E
+        a                   :Note ;
+        :noteText           "nlmId: M0058124"@en .
+    
     bdr:TT2088610829BBBC54
         a                   :TitlePageTitle ;
         rdfs:label          "slob dpon pad+ma 'byung gnas kyis mdzad pa'i btsan mdos/"@bo-x-ewts .
+    
+    bdr:TT26D7A0FAA555D304
+        a                   :Title ;
+        rdfs:label          "dag pa gser gyi mdo thig sogs/"@bo-x-ewts .
     
     bdr:TT3D2A232C85C78049
         a                   :TitlePageTitle ;

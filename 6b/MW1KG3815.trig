@@ -12,6 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG3815 {
+    bda:LG0E218CDC997ADD0F
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-03-26T11:59:28.363Z"^^xsd:dateTime ;
+        adm:logMessage      "added lccn 94902599"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG13A6B7410AA19310
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-10-30T14:37:12.441Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG2437C98944E638B9
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-07-19T10:10:01.146Z"^^xsd:dateTime ;
@@ -29,14 +41,40 @@ bdg:MW1KG3815 {
         adm:logDate         "2010-07-16T11:03:57.087Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG3815  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD106813" ;
         adm:adminAbout      bdr:MW1KG3815 ;
-        adm:facetIndex      48 ;
-        adm:logEntry        bda:LG2437C98944E638B9 , bda:LG445F08DA871D1B3D , bda:LGB105062D69609628 ;
+        adm:facetIndex      60 ;
+        adm:gitPath         "6b/MW1KG3815.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG3815 ;
+        adm:logEntry        bda:LG0E218CDC997ADD0F , bda:LG13A6B7410AA19310 , bda:LG2437C98944E638B9 , bda:LG445F08DA871D1B3D , bda:LGB105062D69609628 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL036A7FFB594EACEF
         a                   :ContentLocation ;
@@ -170,7 +208,38 @@ bdg:MW1KG3815 {
         :contentLocationInstance  bdr:W1KG3815 ;
         :contentLocationPage  595 .
     
-    bdr:MW1KG3815  :hasPart  bdr:MW1KG3815_0A5A01 , bdr:MW1KG3815_3891CE , bdr:MW1KG3815_7C13B8 , bdr:MW1KG3815_D6CFC3 ;
+    bdr:EV04BF984F27D60566
+        a                   :PublishedEvent ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:ID3768CEF7B535540D
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007366578-9" .
+    
+    bdr:ID6F5916E6A55DF72A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "94902599" .
+    
+    bdr:ID9FDF462F9CCE796B
+        a                   bdr:HollisId ;
+        rdf:value           "014256742" .
+    
+    bdr:MW1KG3815  a        :Instance ;
+        skos:altLabel       "Collected biographies of the successive embodiments of the Karmapas, 1st to 16th /by Sman-sdong Mtshams-pa Karma Nges-don-bstan-rgyas, Kar-sras Kong-sprul Mkhyen-brtseʼi-ʼod-zer, and Khra-ʼgu Rin-po-che."@en-x-mixed ;
+        skos:prefLabel      "karma pa sku 'phreng bcu drug pa tshun rim par byon pa'i rnam thar phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3768CEF7B535540D , bdr:ID6F5916E6A55DF72A , bdr:ID9FDF462F9CCE796B ;
+        :hasPart            bdr:MW1KG3815_0A5A01 , bdr:MW1KG3815_3891CE , bdr:MW1KG3815_7C13B8 , bdr:MW1KG3815_D6CFC3 ;
+        :hasTitle           bdr:TT8D929A31009A65C8 , bdr:TT9ACF3CF2A4B1E7C8 , bdr:TTD1BE9BD3C5DF6255 ;
+        :instanceEvent      bdr:EV04BF984F27D60566 ;
+        :instanceHasReproduction  bdr:IE1KG3815 , bdr:W1KG3815 ;
+        :instanceOf         bdr:WA1KG3815 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "konchhog lhadrepa"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "378 ff. (756 p.)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG3815_0264AC
@@ -530,6 +599,10 @@ bdg:MW1KG3815 {
         a                   :Title ;
         rdfs:label          "rje btsun bdud 'dul rdo rje'i rnam par thar pa mdor bsdus/_(13)"@bo-x-ewts .
     
+    bdr:TT8D929A31009A65C8
+        a                   :Title ;
+        rdfs:label          "karma pa sku 'phreng bcu drug pa tshun rim par byon pa'i rnam thar phyogs bsgrigs/"@bo-x-ewts .
+    
     bdr:TT916DF5F7AFC037BF
         a                   :Title ;
         rdfs:label          "rgyal dbang theg mchog rdo rje'i rnam par thar pa mdor bsdus/_(14)"@bo-x-ewts .
@@ -541,6 +614,10 @@ bdg:MW1KG3815 {
     bdr:TT95CF65DFD17D3593
         a                   :Title ;
         rdfs:label          "chos rje de bzhin gshegs pa'i rnam thar mdor bsdus/_(5)"@bo-x-ewts .
+    
+    bdr:TT9ACF3CF2A4B1E7C8
+        a                   :CoverTitle ;
+        rdfs:label          "Collected biographies of the successive embodiments of the Karmapas, 1st to 16th /by Sman-sdong Mtshams-pa Karma Nges-don-bstan-rgyas, Kar-sras Kong-sprul Mkhyen-brtseʼi-ʼod-zer, and Khra-ʼgu Rin-po-che."@en-x-mixed .
     
     bdr:TT9F9E73E27769B1E9
         a                   :Title ;
@@ -557,6 +634,10 @@ bdg:MW1KG3815 {
     bdr:TTCAF88A1FA5ED04DF
         a                   :Title ;
         rdfs:label          "kun mkhyen mi bskyod rdo rje dbyangs can dga' ba'i rnam thar mdor bsdus/_(8)"@bo-x-ewts .
+    
+    bdr:TTD1BE9BD3C5DF6255
+        a                   :OtherTitle ;
+        rdfs:label          "chos rje karma pa sku 'phreng rim byon gyi rnam thar mdor bsdus dpag bsam khri shing /"@bo-x-ewts .
     
     bdr:TTD69FCEA66285BB51
         a                   :Title ;

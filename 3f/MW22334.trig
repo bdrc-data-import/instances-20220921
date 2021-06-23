@@ -30,6 +30,10 @@ bdg:MW22334 {
         adm:logMessage      "subject class changed from T880 to T1092"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG2012D87470FBBCD3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3DBEF9340F69C35C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-02-25T19:12:30.057Z"^^xsd:dateTime ;
@@ -60,10 +64,23 @@ bdg:MW22334 {
         adm:logMessage      "changed to topic t338"@en ;
         adm:logWho          bdu:U00013 .
     
+    bda:LG89F9174BCFE79628
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-01T11:56:15.261Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGA45A4289ED878166
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-03-12T10:22:24.698Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
     
     bda:LGIM8F3658FE8A
         a                   adm:UpdateOutlineData ;
@@ -72,16 +89,28 @@ bdg:MW22334 {
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22334  a          adm:AdminData , adm:Outline ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID0D5F824C8ECA97B7 ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS109594" ;
         adm:adminAbout      bdr:MW22334 ;
-        adm:facetIndex      393 ;
-        adm:logEntry        bda:LG0CC0692285B5A915 , bda:LG15799F13DC4E57B5 , bda:LG1812E6EA7DC76644 , bda:LG3DBEF9340F69C35C , bda:LG44B86C97D3EFA13C , bda:LG691C7AEF4E148853 , bda:LG6E7A66B607C54069 , bda:LG71C719D366917061 , bda:LGA45A4289ED878166 , bda:LGIM8F3658FE8A ;
+        adm:facetIndex      401 ;
+        adm:gitPath         "3f/MW22334.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22334 ;
+        adm:logEntry        bda:LG0CC0692285B5A915 , bda:LG15799F13DC4E57B5 , bda:LG1812E6EA7DC76644 , bda:LG2012D87470FBBCD3 , bda:LG3DBEF9340F69C35C , bda:LG44B86C97D3EFA13C , bda:LG691C7AEF4E148853 , bda:LG6E7A66B607C54069 , bda:LG71C719D366917061 , bda:LG89F9174BCFE79628 , bda:LGA45A4289ED878166 , bda:LGIM6B433BA01E , bda:LGIM8F3658FE8A , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02F2F0641E6B28AA
         a                   :ContentLocation ;
@@ -693,6 +722,10 @@ bdg:MW22334 {
         :contentLocationPage  435 ;
         :contentLocationVolume  3 .
     
+    bdr:EV280E75BC30C24B2B
+        a                   :PublishedEvent ;
+        :notBefore          "0199"^^xsd:gYear .
+    
     bdr:ID005C9C66C612A482
         a                   bdr:RefIsIAO ;
         rdf:value           "319-24" .
@@ -1173,6 +1206,10 @@ bdg:MW22334 {
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6429" .
     
+    bdr:IDA5DD9FDA02901207
+        a                   bdr:HollisId ;
+        rdf:value           "014258743" .
+    
     bdr:IDA6C66624092AEBD0
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6449" .
@@ -1373,7 +1410,23 @@ bdg:MW22334 {
         a                   bdr:RefIsIAO ;
         rdf:value           "318-27" .
     
-    bdr:MW22334  :hasPart   bdr:MW22334_1226CC , bdr:MW22334_ABD0B7 , bdr:MW22334_CB07DA ;
+    bdr:MW22334  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_dbyangs can grub pa'i rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA5DD9FDA02901207 ;
+        :hasPart            bdr:MW22334_1226CC , bdr:MW22334_ABD0B7 , bdr:MW22334_CB07DA ;
+        :hasSourcePrintery  bdr:G2CN10917 ;
+        :hasTitle           bdr:TT14DF655ADC24BD8F ;
+        :instanceEvent      bdr:EV280E75BC30C24B2B ;
+        :instanceHasReproduction  bdr:W22334 ;
+        :instanceOf         bdr:WA1KG15904 ;
+        :isRoot             true ;
+        :note               bdr:NT562B982C2183AD7D ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherName      "[dngul chu bla brang]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22334_0587EA
@@ -2778,6 +2831,10 @@ bdg:MW22334 {
         :partTreeIndex      "2.22" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT562B982C2183AD7D
+        a                   :Note ;
+        :noteText           "-3867"@en .
+    
     bdr:TT016EA62EBD3732C0
         a                   :Title ;
         rdfs:label          "bde mchog dril bu lugs lha lnga'i dkyil 'khor gyi cho ga bde chen dga' ston/"@bo-x-ewts .
@@ -2845,6 +2902,10 @@ bdg:MW22334 {
     bdr:TT14626F0F235439A4
         a                   :Title ;
         rdfs:label          "nyin zhag gi dbyu gu drug cu rtsa bzhi'i gtor ma la brten nas mngon spyod drag po'i zor 'phen tshul gyi man ngag gnam lcags thogs gzer myur 'debs/"@bo-x-ewts .
+    
+    bdr:TT14DF655ADC24BD8F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dbyangs can grub pa'i rdo rje/"@bo-x-ewts .
     
     bdr:TT1769469BCD1747AE
         a                   :Title ;

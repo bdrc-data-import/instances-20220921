@@ -12,20 +12,55 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23654 {
+    bda:LG45915A5EBE8B089E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T10:45:05.889Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG63A3C57CB8DB00A9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA39760BE7A5967EE
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-05-09T12:42:05.529Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected annotation"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGEEF9DEEAAE7BA6C8
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:31.134Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23654  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23654" ;
         adm:adminAbout      bdr:MW23654 ;
-        adm:facetIndex      204 ;
-        adm:logEntry        bda:LGEEF9DEEAAE7BA6C8 ;
+        adm:facetIndex      216 ;
+        adm:gitPath         "ef/MW23654.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23654 ;
+        adm:logEntry        bda:LG45915A5EBE8B089E , bda:LG63A3C57CB8DB00A9 , bda:LGA39760BE7A5967EE , bda:LGEEF9DEEAAE7BA6C8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL090317738830B458
         a                   :ContentLocation ;
@@ -734,7 +769,41 @@ bdg:MW23654 {
         :contentLocationPage  173 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23654  :hasPart   bdr:MW23654_1E22F0 , bdr:MW23654_1F333D , bdr:MW23654_EBDA27 ;
+    bdr:EVDA734061A5BDEE84
+        a                   :PublishedEvent ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:ID99CAFD0DFC06B4FB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .Y36 1982" .
+    
+    bdr:IDBB72AE7AE0623E75
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82902180" .
+    
+    bdr:IDEC79A9254E12554D
+        a                   bdr:HollisId ;
+        rdf:value           "014259019" .
+    
+    bdr:MW23654  a          :Instance ;
+        skos:altLabel       "collected writing[s] (gsun 'bum) of rgyal-ba yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID99CAFD0DFC06B4FB , bdr:IDBB72AE7AE0623E75 , bdr:IDEC79A9254E12554D ;
+        :biblioNote         "reproduction of three volumes of the writings of the stod 'brug-pa dkar-brgyud-pa master from rta-mgo monastery in bhutan"@en ;
+        :hasPart            bdr:MW23654_1E22F0 , bdr:MW23654_1F333D , bdr:MW23654_EBDA27 ;
+        :hasTitle           bdr:TT6EDA0EC4C3709B9F , bdr:TTAF8AF743EE0CD626 ;
+        :instanceEvent      bdr:EVDA734061A5BDEE84 ;
+        :instanceHasReproduction  bdr:W23654 ;
+        :instanceOf         bdr:WA1KG17449 ;
+        :isRoot             true ;
+        :note               bdr:NTB0C5C3705DFB0D6F ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tango, thimphu, bhutan"@en ;
+        :publisherName      "tango monastic community"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23654_030AC0
@@ -2169,6 +2238,10 @@ bdg:MW23654 {
         :partTreeIndex      "1.23" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTB0C5C3705DFB0D6F
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2387-2389"@en .
+    
     bdr:TT062BDB5EFDE6B6E6
         a                   :Title ;
         rdfs:label          "ka2)_lcags dang bral ba gnad kyi gdams pa/"@bo-x-ewts .
@@ -2337,6 +2410,10 @@ bdg:MW23654 {
         a                   :Title ;
         rdfs:label          "ri chos brgyud tshul gyi lo rgyus/"@bo-x-ewts .
     
+    bdr:TT6EDA0EC4C3709B9F
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected writing[s] (gsun 'bum) of rgyal-ba yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed .
+    
     bdr:TT71A9D7B496B7C84E
         a                   :Title ;
         rdfs:label          "kha2)_rlung gi gnad/"@bo-x-ewts .
@@ -2444,6 +2521,10 @@ bdg:MW23654 {
     bdr:TTAF45FCF9B4775FDF
         a                   :Title ;
         rdfs:label          "bar ngo 'phrang sgrol gyi gzhung gdam pa/"@bo-x-ewts .
+    
+    bdr:TTAF8AF743EE0CD626
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts .
     
     bdr:TTAFCC4249C54D6F16
         a                   :Title ;

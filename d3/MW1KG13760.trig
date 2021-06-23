@@ -18,14 +18,39 @@ bdg:MW1KG13760 {
         adm:logDate         "2019-08-28T11:50:13.999Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGDC2D3CD35621D8F0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-07T11:51:26.32Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG13760  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG13760" ;
         adm:adminAbout      bdr:MW1KG13760 ;
-        adm:facetIndex      112 ;
-        adm:logEntry        bda:LG2097739162ECE28E ;
+        adm:facetIndex      123 ;
+        adm:gitPath         "d3/MW1KG13760.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13760 ;
+        adm:logEntry        bda:LG2097739162ECE28E , bda:LGDC2D3CD35621D8F0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02D867CEF8E36DF4
         a                   :ContentLocation ;
@@ -412,7 +437,38 @@ bdg:MW1KG13760 {
         :contentLocationPage  144 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG13760  :hasPart  bdr:MW1KG13760_186CF6 , bdr:MW1KG13760_D6D917 ;
+    bdr:EVF34B6C9DC9EE5FF0
+        a                   :PublishedEvent ;
+        :onYear             "2011"^^xsd:gYear .
+    
+    bdr:IDDEDA669AE63BCC88
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542109767" .
+    
+    bdr:IDEC18F18F28038BD2
+        a                   bdr:HollisId ;
+        rdf:value           "014256055" .
+    
+    bdr:MW1KG13760  a       :Instance ;
+        skos:altLabel       "阿嘉 雍曾洛桑董智文集"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/_dbyangs can dga' ba'i blo gros/ (glog klad par ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDEDA669AE63BCC88 , bdr:IDEC18F18F28038BD2 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG13760_186CF6 , bdr:MW1KG13760_D6D917 ;
+        :hasTitle           bdr:TT1F87F3660F6FA5CF , bdr:TT75D64D1C314B5AEA , bdr:TT8866873C5FA54541 , bdr:TTA3FB53845FB15841 ;
+        :instanceEvent      bdr:EVF34B6C9DC9EE5FF0 ;
+        :instanceHasReproduction  bdr:IE1KG13760 , bdr:W1KG13760 ;
+        :instanceOf         bdr:WA1986 ;
+        :isRoot             true ;
+        :note               bdr:NT8720F978FA2A05D0 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG13760_023926
@@ -1204,6 +1260,10 @@ bdg:MW1KG13760 {
         :partTreeIndex      "2.13" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT8720F978FA2A05D0
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
     bdr:TT008D815786D860B9
         a                   :Title ;
         rdfs:label          "dbu ma'i thal bzlog gi brjed byang tshigs bcad ma/"@bo-x-ewts .
@@ -1247,6 +1307,10 @@ bdg:MW1KG13760 {
     bdr:TT1E1D846999254E2A
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TT1F87F3660F6FA5CF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "阿嘉 雍曾洛桑董智文集"@zh-hans .
     
     bdr:TT2562AC3472216CDD
         a                   :Title ;
@@ -1320,6 +1384,10 @@ bdg:MW1KG13760 {
         a                   :Title ;
         rdfs:label          "nges don gyi lta ba la bag chags 'jog tshul dang /_gsung 'thor bu'i skor/"@bo-x-ewts .
     
+    bdr:TT75D64D1C314B5AEA
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dbyangs can dga' ba'i blo gros/ (glog klad par ma/)"@bo-x-ewts .
+    
     bdr:TT776C1953BA5FA93A
         a                   :Title ;
         rdfs:label          "'phags pa brgyad stong ba'i 'grel chen rgyan snang las btus pa'i nyer mkho mdo don lta ba'i mig 'byed/"@bo-x-ewts .
@@ -1331,6 +1399,10 @@ bdg:MW1KG13760 {
     bdr:TT7F898BC0ADEC0FEE
         a                   :Title ;
         rdfs:label          "'phags pa 'da' ga ye shes zhes bya ba theg pa chen po'i mdo 'grel lam bzang gsal ba'i sgron me/"@bo-x-ewts .
+    
+    bdr:TT8866873C5FA54541
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "a jia yong zeng luo sang dong zhi wen ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TT90C1394BD62741BC
         a                   :Title ;
@@ -1355,6 +1427,10 @@ bdg:MW1KG13760 {
     bdr:TT98B544B9DC29E9B5
         a                   :Title ;
         rdfs:label          "'grel pa bzhi sbrag gi bshad lung skabs kyi gsung bshad 'ga' zhig zin bris su bkod pa/"@bo-x-ewts .
+    
+    bdr:TTA3FB53845FB15841
+        a                   :TitlePageTitle ;
+        rdfs:label          "a kyA yongs 'dzin gyi bka' 'bum/"@bo-x-ewts .
     
     bdr:TTA73704574B45F927
         a                   :Title ;

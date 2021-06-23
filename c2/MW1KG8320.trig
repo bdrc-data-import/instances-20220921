@@ -18,6 +18,12 @@ bdg:MW1KG8320 {
         adm:logDate         "2014-08-21T16:38:44.349Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG44CB0AA9BDB48490
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-01-05T16:14:26.463Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG4F44196831C357E5
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2017-07-11T16:02:39.015Z"^^xsd:dateTime ;
@@ -36,14 +42,39 @@ bdg:MW1KG8320 {
         adm:logMessage      "added t#"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGFEEFBAEB14687634
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-09T12:09:40.189Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG8320  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG8320" ;
         adm:adminAbout      bdr:MW1KG8320 ;
-        adm:facetIndex      838 ;
-        adm:logEntry        bda:LG312F546CFA688FAB , bda:LG4F44196831C357E5 , bda:LG73CD25A0C956E2C3 , bda:LGD40C31D3A55A462E ;
+        adm:facetIndex      848 ;
+        adm:gitPath         "c2/MW1KG8320.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG8320 ;
+        adm:logEntry        bda:LG312F546CFA688FAB , bda:LG44CB0AA9BDB48490 , bda:LG4F44196831C357E5 , bda:LG73CD25A0C956E2C3 , bda:LGD40C31D3A55A462E , bda:LGFEEFBAEB14687634 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0012E58346FC8F24
         a                   :ContentLocation ;
@@ -2975,7 +3006,40 @@ bdg:MW1KG8320 {
         :contentLocationPage  230 ;
         :contentLocationVolume  9 .
     
-    bdr:MW1KG8320  :hasPart  bdr:MW1KG8320_579B0C , bdr:MW1KG8320_79365D , bdr:MW1KG8320_A2B317 , bdr:MW1KG8320_C26B65 , bdr:MW1KG8320_CB3A86 ;
+    bdr:EVD6903F9CFC1894D0
+        a                   :PublishedEvent ;
+        :notAfter           "2010"^^xsd:gYear ;
+        :notBefore          "2009"^^xsd:gYear .
+    
+    bdr:ID768AABFD7C7F1756
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787802532724 (sets)" .
+    
+    bdr:ID931CD8909C0FDCB3
+        a                   bdr:HollisId ;
+        rdf:value           "014257387" .
+    
+    bdr:MW1KG8320  a        :Instance , :SerialInstance ;
+        skos:altLabel       "艾旺文集"@zh-hans ;
+        skos:prefLabel      "e waM bka' 'bum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID768AABFD7C7F1756 , bdr:ID931CD8909C0FDCB3 ;
+        :authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG8320_579B0C , bdr:MW1KG8320_79365D , bdr:MW1KG8320_A2B317 , bdr:MW1KG8320_C26B65 , bdr:MW1KG8320_CB3A86 ;
+        :hasTitle           bdr:TT2556C114764954A6 , bdr:TT9BA9717B4606028B , bdr:TTE82787379CA1B858 ;
+        :instanceEvent      bdr:EVD6903F9CFC1894D0 ;
+        :instanceHasReproduction  bdr:W1KG8320 ;
+        :instanceOf         bdr:WA1KG8320 ;
+        :isRoot             true ;
+        :numberOfVolumes    20 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS2DB4577 ;
+        :seriesNumber       "132-151" ;
+        :workExtentStatement  "20 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG8320_0043EB
@@ -9185,6 +9249,10 @@ bdg:MW1KG8320 {
         a                   :Title ;
         rdfs:label          "sgrub thabs brgya rtsa nas bshad pa'i lha tshogs rnams kyi mngon rtogs rjes gnang gi cho ga dang bcas pa'i tho yig mun sel sgron me/"@bo-x-ewts .
     
+    bdr:TT2556C114764954A6
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "艾旺文集"@zh-hans .
+    
     bdr:TT2563DFE0F26AD55F
         a                   :Title ;
         rdfs:label          "rgyud gsum gnod 'joms gyi 'grel ba/"@bo-x-ewts .
@@ -9973,6 +10041,10 @@ bdg:MW1KG8320 {
         a                   :Title ;
         rdfs:label          "dpal gshin rje gshed dmar po lha lnga'i dkyil 'khor gyi bkra shis kyi tshigs su bcad pa/"@bo-x-ewts .
     
+    bdr:TT9BA9717B4606028B
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ai wang wen ji"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT9C1687D78212A0EC
         a                   :Title ;
         rdfs:label          "bkra shis rin chen pa la bstod pa/"@bo-x-ewts .
@@ -10420,6 +10492,10 @@ bdg:MW1KG8320 {
     bdr:TTE67917763BB4F13B
         a                   :Title ;
         rdfs:label          "sa bzang bsod nams dpal gyi dris lan sogs dris lan gyi skor/"@bo-x-ewts .
+    
+    bdr:TTE82787379CA1B858
+        a                   :Title ;
+        rdfs:label          "e waM bka' 'bum/"@bo-x-ewts .
     
     bdr:TTE8745F06C04A7333
         a                   :Title ;

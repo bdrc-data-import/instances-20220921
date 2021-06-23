@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23710 {
+    bda:LG7033812DB571FFAC
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-12T15:21:35.807Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG9C2969624DECBD64
         a                   adm:InitialOutlineData ;
         adm:logDate         "2008-10-25T12:53:17.703Z"^^xsd:dateTime ;
@@ -24,20 +30,43 @@ bdg:MW23710 {
         adm:logMessage      "changed isOutlineOf to W23710"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGCBC29EA84000C9BE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGDCD8E52491A1F75B
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-09-18T16:08:20.556Z"^^xsd:dateTime ;
         adm:logMessage      "added T225 (chos pyod)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23710  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS129736" ;
         adm:adminAbout      bdr:MW23710 ;
-        adm:facetIndex      38 ;
-        adm:logEntry        bda:LG9C2969624DECBD64 , bda:LGB9D01B48342C85CB , bda:LGDCD8E52491A1F75B ;
+        adm:facetIndex      46 ;
+        adm:gitPath         "b3/MW23710.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23710 ;
+        adm:logEntry        bda:LG7033812DB571FFAC , bda:LG9C2969624DECBD64 , bda:LGB9D01B48342C85CB , bda:LGCBC29EA84000C9BE , bda:LGDCD8E52491A1F75B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeGterChos .
+        adm:outlineType     bda:OutlineTypeGterChos ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0B1E9EBF1A31B0E5
         a                   :ContentLocation ;
@@ -141,7 +170,24 @@ bdg:MW23710 {
         :contentLocationInstance  bdr:W23710 ;
         :contentLocationPage  429 .
     
-    bdr:MW23710  :hasPart   bdr:MW23710_0801D0 , bdr:MW23710_1D7088 , bdr:MW23710_1D88C4 , bdr:MW23710_1E7A2E , bdr:MW23710_230C74 , bdr:MW23710_4C5391 , bdr:MW23710_5513BA , bdr:MW23710_7431EB , bdr:MW23710_A21448 , bdr:MW23710_B5502E , bdr:MW23710_CC8F8C , bdr:MW23710_CF7CFA , bdr:MW23710_D3350E , bdr:MW23710_E19844 , bdr:MW23710_E849DF , bdr:MW23710_EB4F0B , bdr:MW23710_F8BB38 ;
+    bdr:ID72FADE925B32B6A6
+        a                   bdr:HollisId ;
+        rdf:value           "014259056" .
+    
+    bdr:MW23710  a          :Instance ;
+        skos:prefLabel      "bar do thos grol/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID72FADE925B32B6A6 ;
+        :hasPart            bdr:MW23710_0801D0 , bdr:MW23710_1D7088 , bdr:MW23710_1D88C4 , bdr:MW23710_1E7A2E , bdr:MW23710_230C74 , bdr:MW23710_4C5391 , bdr:MW23710_5513BA , bdr:MW23710_7431EB , bdr:MW23710_A21448 , bdr:MW23710_B5502E , bdr:MW23710_CC8F8C , bdr:MW23710_CF7CFA , bdr:MW23710_D3350E , bdr:MW23710_E19844 , bdr:MW23710_E849DF , bdr:MW23710_EB4F0B , bdr:MW23710_F8BB38 ;
+        :hasTitle           bdr:TT522BDEBA9EB643F3 , bdr:TT9E0B9E4DB9471501 ;
+        :instanceHasReproduction  bdr:W23710 ;
+        :instanceOf         bdr:WA23710 ;
+        :isRoot             true ;
+        :note               bdr:NT30DE07ECD1CBD769 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "549 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23710_0801D0
@@ -391,6 +437,10 @@ bdg:MW23710 {
         :partTreeIndex      "07" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT30DE07ECD1CBD769
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 0874"@en .
+    
     bdr:TT0B8AC5473EA6E8E7
         a                   :Title ;
         rdfs:label          "bar do'i smon lam 'jigs skyobs ma (ta)"@bo-x-ewts .
@@ -398,6 +448,10 @@ bdg:MW23710 {
     bdr:TT44EFFA2903BEE35B
         a                   :Title ;
         rdfs:label          "bar do 'phrang sgrol gyi smon lam (cha)"@bo-x-ewts .
+    
+    bdr:TT522BDEBA9EB643F3
+        a                   :Title ;
+        rdfs:label          "bar do thos grol/"@bo-x-ewts .
     
     bdr:TT53B8468A0D401912
         a                   :Title ;
@@ -410,6 +464,10 @@ bdg:MW23710 {
     bdr:TT8CCE50AE64EF5DBE
         a                   :Title ;
         rdfs:label          "bar do'i rtsa tshig (ca)"@bo-x-ewts .
+    
+    bdr:TT9E0B9E4DB9471501
+        a                   :TitlePageTitle ;
+        rdfs:label          "zab chos zhi khro dgongs pa rang grol las thos grol skor/"@bo-x-ewts .
     
     bdr:TTAA5594379C78F9F5
         a                   :Title ;

@@ -18,20 +18,46 @@ bdg:MW1GS53994 {
         adm:logMessage      "image number added"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGBF0DE4D3BFA2B1BE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-07-19T13:23:14.496Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGDD310CB738530A91
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-06-08T02:19:29.671Z"^^xsd:dateTime ;
         adm:logMessage      "checkin"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS53994  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS53997" ;
         adm:adminAbout      bdr:MW1GS53994 ;
-        adm:facetIndex      19 ;
-        adm:logEntry        bda:LG7AFE7A36BBD67452 , bda:LGDD310CB738530A91 ;
+        adm:facetIndex      25 ;
+        adm:gitPath         "1c/MW1GS53994.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS53994 ;
+        adm:logEntry        bda:LG7AFE7A36BBD67452 , bda:LGBF0DE4D3BFA2B1BE , bda:LGDD310CB738530A91 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0A7DC82F222D7CFE
         a                   :ContentLocation ;
@@ -123,7 +149,28 @@ bdg:MW1GS53994 {
         :contentLocationInstance  bdr:W1GS53994 ;
         :contentLocationPage  26 .
     
-    bdr:MW1GS53994  :hasPart  bdr:MW1GS53994_23B199 , bdr:MW1GS53994_766937 , bdr:MW1GS53994_977B13 , bdr:MW1GS53994_9BC044 , bdr:MW1GS53994_9E2FD8 , bdr:MW1GS53994_D5E1CB ;
+    bdr:EVB183C39634AE9791
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID2D639CC6D88B63BC
+        a                   bdr:HollisId ;
+        rdf:value           "014255476" .
+    
+    bdr:MW1GS53994  a       :Instance ;
+        skos:prefLabel      "khams li thang gi lo rgyus dang srol rgyun rig gnas skor gyi ngo sprod bsdus pa nor bu'i do shal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2D639CC6D88B63BC ;
+        :authorshipStatement  "ltag o rgyan chos 'phel gyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS53994_23B199 , bdr:MW1GS53994_766937 , bdr:MW1GS53994_977B13 , bdr:MW1GS53994_9BC044 , bdr:MW1GS53994_9E2FD8 , bdr:MW1GS53994_D5E1CB ;
+        :hasTitle           bdr:TT0004D6276E0EA595 ;
+        :instanceEvent      bdr:EVB183C39634AE9791 ;
+        :instanceHasReproduction  bdr:W1GS53994 ;
+        :instanceOf         bdr:WA1GS53994 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "215 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS53994_09ED80
@@ -308,6 +355,10 @@ bdg:MW1GS53994 {
         :partOf             bdr:MW1GS53994_9E2FD8 ;
         :partTreeIndex      "2.4" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT0004D6276E0EA595
+        a                   :Title ;
+        rdfs:label          "khams li thang gi lo rgyus dang srol rgyun rig gnas skor gyi ngo sprod bsdus pa nor bu'i do shal/"@bo-x-ewts .
     
     bdr:TTE0F7894911490C45
         a                   :TitlePageTitle ;

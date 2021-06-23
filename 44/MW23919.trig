@@ -18,6 +18,10 @@ bdg:MW23919 {
         adm:logMessage      "Replaced T00JR140 with T2210"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LG0CD64C984DE5C84D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG128E00E464E163C3
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-11-09T12:39:06.417Z"^^xsd:dateTime ;
@@ -59,6 +63,12 @@ bdg:MW23919 {
         adm:logMessage      "pod dang po sogs bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGD1403F989CDA5AA8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T10:22:37.104Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGD407AE900BFE4ABF
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-12-01T12:34:45.865Z"^^xsd:dateTime ;
@@ -77,14 +87,33 @@ bdg:MW23919 {
         adm:logMessage      "editing"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23919  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1CN46228" ;
         adm:adminAbout      bdr:MW23919 ;
-        adm:facetIndex      303 ;
-        adm:logEntry        bda:LG08D7F56AE44E967A , bda:LG128E00E464E163C3 , bda:LG4C9281F11046583A , bda:LG608BD48169DCBBD5 , bda:LG8B55AD041FF92DDC , bda:LG952FC720B1787025 , bda:LGAE50566D1FDA3BC4 , bda:LGAFA174A59E729209 , bda:LGD407AE900BFE4ABF , bda:LGF5D66B9218E66488 , bda:LGFE5AB5AEC6A61FCD ;
+        adm:facetIndex      317 ;
+        adm:gitPath         "44/MW23919.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23919 ;
+        adm:logEntry        bda:LG08D7F56AE44E967A , bda:LG0CD64C984DE5C84D , bda:LG128E00E464E163C3 , bda:LG4C9281F11046583A , bda:LG608BD48169DCBBD5 , bda:LG8B55AD041FF92DDC , bda:LG952FC720B1787025 , bda:LGAE50566D1FDA3BC4 , bda:LGAFA174A59E729209 , bda:LGD1403F989CDA5AA8 , bda:LGD407AE900BFE4ABF , bda:LGF5D66B9218E66488 , bda:LGFE5AB5AEC6A61FCD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chungdak nangpa with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL004799CF67EB75D6
         a                   :ContentLocation ;
@@ -804,7 +833,45 @@ bdg:MW23919 {
         :contentLocationPage  413 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23919  :hasPart   bdr:MW23919_540A32 , bdr:MW23919_89CA8F , bdr:MW23919_A17A80 , bdr:MW23919_AD2105 ;
+    bdr:EV98D5CF31D6ACC5E4
+        a                   :PublishedEvent ;
+        :onYear             "1976"^^xsd:gYear .
+    
+    bdr:ID49B275869992EE37
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-125" .
+    
+    bdr:ID6EFB5663ECA87E73
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7680 .T46 1976" .
+    
+    bdr:IDCEB92F8422580C65
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77900723" .
+    
+    bdr:IDE8BBD7B28FDABD4C
+        a                   bdr:HollisId ;
+        rdf:value           "014259229" .
+    
+    bdr:MW23919  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of thang stong rgyal po"@en ;
+        skos:prefLabel      "gsung 'bum/_thang stong rgyal po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID49B275869992EE37 , bdr:ID6EFB5663ECA87E73 , bdr:IDCEB92F8422580C65 , bdr:IDE8BBD7B28FDABD4C ;
+        :biblioNote         "reproduced from a collection of rare manuscripts of the tradition"@en ;
+        :hasPart            bdr:MW23919_540A32 , bdr:MW23919_89CA8F , bdr:MW23919_A17A80 , bdr:MW23919_AD2105 ;
+        :hasTitle           bdr:TT10C37161E7AC5F38 , bdr:TT31B6560DB8FDB31E , bdr:TT5A6353001AFF7758 , bdr:TTB6B49F9D5451BF5D ;
+        :instanceEvent      bdr:EV98D5CF31D6ACC5E4 ;
+        :instanceHasReproduction  bdr:W23919 ;
+        :instanceOf         bdr:WA23918 ;
+        :isRoot             true ;
+        :note               bdr:NTFE17D615EBAB939C ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "kunsang topgey"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23919_0194F9
@@ -2343,6 +2410,10 @@ bdg:MW23919 {
         :partTreeIndex      "4.1.2" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTFE17D615EBAB939C
+        a                   :Note ;
+        :noteText           "-3512."@en .
+    
     bdr:TT00125B2E410A64D1
         a                   :Title ;
         rdfs:label          "rdo rje phag mo'i zab dbang gi dbang chog rje btsun gshongs chen pas mdzad pa/ (da)"@bo-x-ewts .
@@ -2366,6 +2437,10 @@ bdg:MW23919 {
     bdr:TT0B55A0B94D70CD72
         a                   :TitlePageTitle ;
         rdfs:label          "rnal 'byor gyi dbang phyug ri khed bya btang ba'i zhabs brtan 'chi med rdo rje'i rgya mdud/"@bo-x-ewts .
+    
+    bdr:TT10C37161E7AC5F38
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of thang stong rgyal po"@en .
     
     bdr:TT1210BF15DF66A0A0
         a                   :TitlePageTitle ;
@@ -2479,6 +2554,10 @@ bdg:MW23919 {
         a                   :TitlePageTitle ;
         rdfs:label          "ma gcig gsang spyod snyan brgyud las/ gnyan khrod brgya rtsa'i sgrub khog dang 'brel ba'i lam khyer nyer lnga /"@bo-x-ewts .
     
+    bdr:TT31B6560DB8FDB31E
+        a                   :Subtitle ;
+        rdfs:label          "ma gcig gsang spyod kyi snyan brgyud/"@bo-x-ewts .
+    
     bdr:TT325BE1A62B087921
         a                   :TitlePageTitle ;
         rdfs:label          "sprang po skyabs mgon zhi ba'i blo gros kyi rnam thar gsol 'debs/"@bo-x-ewts .
@@ -2590,6 +2669,10 @@ bdg:MW23919 {
     bdr:TT59A29301D1832EDA
         a                   :Title ;
         rdfs:label          "sna tshogs dmigs pa'i lde kha bsgyur ba/ (pa)"@bo-x-ewts .
+    
+    bdr:TT5A6353001AFF7758
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_thang stong rgyal po/"@bo-x-ewts .
     
     bdr:TT5B968F160527FC7F
         a                   :TitlePageTitle ;
@@ -2890,6 +2973,10 @@ bdg:MW23919 {
     bdr:TTB53201F0BB28918A
         a                   :TitlePageTitle ;
         rdfs:label          "si tu bcu pa chos kyi rgya mtsho'i rnam thar gsol 'debs shin tu bsdus pa/"@bo-x-ewts .
+    
+    bdr:TTB6B49F9D5451BF5D
+        a                   :OtherTitle ;
+        rdfs:label          "grub mchog rgyal po thang stong pa'i zab gter chos mdzod rin po che/"@bo-x-ewts .
     
     bdr:TTB6D79ACEE205BFA6
         a                   :TitlePageTitle ;

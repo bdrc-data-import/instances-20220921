@@ -22,14 +22,37 @@ bdg:MW22358 {
         adm:logDate         "2010-08-16T11:41:48.417Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGE0BC186149412B49
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22358  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS5586" ;
         adm:adminAbout      bdr:MW22358 ;
-        adm:facetIndex      13 ;
-        adm:logEntry        bda:LG53E1052EB3F6BBD0 , bda:LG81C67209032D117F ;
+        adm:facetIndex      23 ;
+        adm:gitPath         "13/MW22358.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22358 ;
+        adm:logEntry        bda:LG53E1052EB3F6BBD0 , bda:LG81C67209032D117F , bda:LGE0BC186149412B49 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0703D9329BAA1225
         a                   :ContentLocation ;
@@ -61,7 +84,36 @@ bdg:MW22358 {
         :contentLocationInstance  bdr:W22358 ;
         :contentLocationPage  25 .
     
-    bdr:MW22358  :hasPart   bdr:MW22358_1041C7 , bdr:MW22358_5099DD , bdr:MW22358_543D26 , bdr:MW22358_B02CE7 , bdr:MW22358_E9C19F ;
+    bdr:EV1142220A02CC0FFF
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID390AE030C081FFCF
+        a                   bdr:HollisId ;
+        rdf:value           "014258760" .
+    
+    bdr:IDB9DEC01AD87FEA61
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "962450615X" .
+    
+    bdr:MW22358  a          :Instance ;
+        skos:altLabel       "laguo jiumeichenleijiacuo zhuan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rje bla kho 'jigs med 'phrin las rgya mtsho'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID390AE030C081FFCF , bdr:IDB9DEC01AD87FEA61 ;
+        :authorshipStatement  "yongs 'dzin blo bzang mkhas grub rgya mtshos brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW22358_1041C7 , bdr:MW22358_5099DD , bdr:MW22358_543D26 , bdr:MW22358_B02CE7 , bdr:MW22358_E9C19F ;
+        :hasTitle           bdr:TT0E21A6CE696EF07C , bdr:TT4ACD332E79F94592 , bdr:TTB3C8FA78C3869AFB , bdr:TTF757A6DCEBAE9857 ;
+        :illustrations      "port." ;
+        :instanceEvent      bdr:EV1142220A02CC0FFF ;
+        :instanceHasReproduction  bdr:W22358 ;
+        :instanceOf         bdr:WA22358 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then ma dpe skrun kung si/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "257 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22358_1041C7
@@ -137,6 +189,14 @@ bdg:MW22358 {
         a                   :TitlePageTitle ;
         rdfs:label          "sku tshe 'di'i rnam par thar ba rgyas par bshad pa/"@bo-x-ewts .
     
+    bdr:TT0E21A6CE696EF07C
+        a                   :Title ;
+        rdfs:label          "rje bla kho 'jigs med 'phrin las rgya mtsho'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TT4ACD332E79F94592
+        a                   :ColophonTitle ;
+        rdfs:label          "laguo jiumeichenleijiacuo zhuan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TTA9BB81D9CEFF91C4
         a                   :TitlePageTitle ;
         rdfs:label          "mchod par brjod pa dang rtsom par dam bca' ba/"@bo-x-ewts .
@@ -145,6 +205,10 @@ bdg:MW22358 {
         a                   :TitlePageTitle ;
         rdfs:label          "sngon byung gi rnam par thar ba mdor bsdus te bstan pa/"@bo-x-ewts .
     
+    bdr:TTB3C8FA78C3869AFB
+        a                   :TitlePageTitle ;
+        rdfs:label          "dus gsum rgyal ba'i spyi gzugs mkhan chen rdo rje 'chang rje btsun 'jigs med 'phrin las rgya mtsho dpal bzang po'i zhal snga nas kyi rnam par thar pa ngo mtshar dad pa'i pad mo bzhad pa'i nyin byed/"@bo-x-ewts .
+    
     bdr:TTB60985410E5857D9
         a                   :TitlePageTitle ;
         rdfs:label          "dkar chag"@bo-x-ewts .
@@ -152,4 +216,8 @@ bdg:MW22358 {
     bdr:TTD005237767F4A0D6
         a                   :TitlePageTitle ;
         rdfs:label          "de dag gi don bsdu ba/"@bo-x-ewts .
+    
+    bdr:TTF757A6DCEBAE9857
+        a                   :CoverTitle ;
+        rdfs:label          "blo kho 'jigs med 'phrin las rgya mtsho'i rnam thar/"@bo-x-ewts .
 }

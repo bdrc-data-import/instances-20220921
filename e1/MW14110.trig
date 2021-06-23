@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW14110 {
+    bda:LG2269D8572EDA3F61
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8C675701B9506A51
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-12T13:51:05.616Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGB69739B13D896E50
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-06-08T01:35:18.937Z"^^xsd:dateTime ;
         adm:logMessage      "checkin"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW14110  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS148033" ;
         adm:adminAbout      bdr:MW14110 ;
-        adm:facetIndex      115 ;
-        adm:logEntry        bda:LGB69739B13D896E50 ;
+        adm:facetIndex      128 ;
+        adm:gitPath         "e1/MW14110.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW14110 ;
+        adm:logEntry        bda:LG2269D8572EDA3F61 , bda:LG8C675701B9506A51 , bda:LGB69739B13D896E50 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00460203EBEC8693
         a                   :ContentLocation ;
@@ -277,6 +306,10 @@ bdg:MW14110 {
         :contentLocationInstance  bdr:W14110 ;
         :contentLocationPage  126 .
     
+    bdr:EVD9C5496C1002A122
+        a                   :PublishedEvent ;
+        :onYear             "1976"^^xsd:gYear .
+    
     bdr:ID04A98E6B5A9BDA1E
         a                   bdr:RefIsIAO ;
         rdf:value           "313-6" .
@@ -333,9 +366,17 @@ bdg:MW14110 {
         a                   bdr:RefIsIAO ;
         rdf:value           "350" .
     
+    bdr:ID6589E76B52505552
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-1614" .
+    
     bdr:ID6B7100B5DA0F0CCD
         a                   bdr:RefIsIAO ;
         rdf:value           "313-16" .
+    
+    bdr:ID6FB773D0AF91FAB0
+        a                   bdr:HollisId ;
+        rdf:value           "014254704" .
     
     bdr:ID77297D4512C20376
         a                   bdr:RefIsIAO ;
@@ -353,6 +394,10 @@ bdg:MW14110 {
         a                   bdr:RefIsIAO ;
         rdf:value           "313-10" .
     
+    bdr:ID8BAFF55BFAB53C06
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .B563 1976" .
+    
     bdr:ID9625036621FD9CF8
         a                   bdr:RefIsIAO ;
         rdf:value           "313-2" .
@@ -360,6 +405,10 @@ bdg:MW14110 {
     bdr:ID9E98A39417C1ADBE
         a                   bdr:RefIsIAO ;
         rdf:value           "350-4" .
+    
+    bdr:ID9F04B369E54C150E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77902293" .
     
     bdr:IDAB60D3D50F0D23E3
         a                   bdr:RefIsIAO ;
@@ -381,7 +430,24 @@ bdg:MW14110 {
         a                   bdr:RefIsIAO ;
         rdf:value           "313-12" .
     
-    bdr:MW14110  :hasPart   bdr:MW14110_D6E097 , bdr:MW14110_DE32E3 ;
+    bdr:MW14110  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang thugs rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6589E76B52505552 , bdr:ID6FB773D0AF91FAB0 , bdr:ID8BAFF55BFAB53C06 , bdr:ID9F04B369E54C150E ;
+        :biblioNote         "reproduced from tracings of prints from the ra-che thog ... prints"@en ;
+        :hasPart            bdr:MW14110_D6E097 , bdr:MW14110_DE32E3 ;
+        :hasTitle           bdr:TT2F8A4BDB35D15F5F , bdr:TT82E6B5EED41ED601 , bdr:TT9E93DF0858522F3A ;
+        :instanceEvent      bdr:EVD9C5496C1002A122 ;
+        :instanceHasReproduction  bdr:W14110 ;
+        :instanceOf         bdr:WA14110 ;
+        :isRoot             true ;
+        :note               bdr:NT8FF9DD9E66E15545 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "don 'grub rdo rje"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW14110_015F6F
@@ -1042,6 +1108,10 @@ bdg:MW14110 {
         :partTreeIndex      "2.6.08" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT8FF9DD9E66E15545
+        a                   :Note ;
+        :noteText           "printed version in one volume from the ra mo che thog printery described by lokesh chandra \n\none volume manuscript in the polala collection (ka-chi)\n\nthe two volume biography of the mtsho smon gling ngag dbang tshul khrims (1721-1791) is a se ra bshad sgrub gling print. although written by blo bzang thugs rje is not regarded as a part of the gsung 'bum"@en .
+    
     bdr:TT01D0974A51867B18
         a                   :TitlePageTitle ;
         rdfs:label          "skal pa dang ldan pa'i gang zag thar pa dang thams cad mkhyen par 'khrid pa'i thabs zab mo byang chub lam gyi rim pa'i sngon 'gro sbyor ba'i chos drug nyams su len tshul 'don sgrigs su bkod pa 9"@bo-x-ewts .
@@ -1077,6 +1147,10 @@ bdg:MW14110 {
     bdr:TT2E9F01C936DD6C86
         a                   :Title ;
         rdfs:label          "mgon po'i spos sbyor bya ba'i man ngag gsal bar bkod pa/"@bo-x-ewts .
+    
+    bdr:TT2F8A4BDB35D15F5F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang thugs rje/"@bo-x-ewts .
     
     bdr:TT37BC2E444A11D57A
         a                   :Title ;
@@ -1150,6 +1224,10 @@ bdg:MW14110 {
         a                   :TitlePageTitle ;
         rdfs:label          "lo gyon ril bu'i sbyang thabs dang/ de'i las tshogs nas byung ba'i ril sgrub gzhan yang nyer mkho 'ga' zhig bcas (lo gyon/ 'pho ba/ keg rtsis/ rab bshad)"@bo-x-ewts .
     
+    bdr:TT82E6B5EED41ED601
+        a                   :OtherTitle ;
+        rdfs:label          "thub bstan yongs rdzogs kyi bdag po rje btsun blo bzang thugs rje dpal bzang po'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT83B49157EBC05685
         a                   :Title ;
         rdfs:label          "rab gnas chen po'i skabs kyi bshad pa bya tshul 'dod rgu'i dpal ster (ba) (rab gnas)"@bo-x-ewts .
@@ -1157,6 +1235,10 @@ bdg:MW14110 {
     bdr:TT8F74A1D8F797DD97
         a                   :Title ;
         rdfs:label          "rje bla ma sman khang pa'i dag snang dmigs brtse ma'i sgo nas char 'bebs dang sad bsrung 'khor lo sgrub tshul (ca) (char 'bebs)"@bo-x-ewts .
+    
+    bdr:TT9E93DF0858522F3A
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mkhyen rab yon tan rgya mtsho/"@bo-x-ewts .
     
     bdr:TTA366889CAB42B5C2
         a                   :Title ;

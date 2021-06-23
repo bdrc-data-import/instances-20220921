@@ -12,20 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM968 {
+    bda:LG3FC775DB429711D6
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-16T09:18:31.638Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC7D229AF993D1FCA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGE1FDB77E97076FD3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-26T10:32:08.219Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM5585ED5E  a     adm:InitialDataImport ;
         adm:logDate         "2020-03-30T08:07:54.397Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM968"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM968  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG1650" ;
         adm:adminAbout      bdr:MW1NLM968 ;
-        adm:facetIndex      18 ;
-        adm:logEntry        bda:LGIM5585ED5E ;
+        adm:facetIndex      26 ;
+        adm:gitPath         "a7/MW1NLM968.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM968 ;
+        adm:logEntry        bda:LG3FC775DB429711D6 , bda:LGC7D229AF993D1FCA , bda:LGE1FDB77E97076FD3 , bda:LGIM5585ED5E , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNotAssigned .
+        adm:outlineType     bda:OutlineTypeNotAssigned ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1972C644952B2549
         a                   :ContentLocation ;
@@ -83,7 +119,19 @@ bdg:MW1NLM968 {
         :contentLocationPage  27 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM968  :hasPart  bdr:MW1NLM968_14852D , bdr:MW1NLM968_3496EF , bdr:MW1NLM968_572D6E , bdr:MW1NLM968_5F4965 , bdr:MW1NLM968_8688BE , bdr:MW1NLM968_9637C3 , bdr:MW1NLM968_9AC70A , bdr:MW1NLM968_D6FE8E ;
+    bdr:MW1NLM968  a        :Instance ;
+        skos:prefLabel      "thugs rje chen po phyi sgrub yid bzhin nor bu'am ngan song kun sgrol gyi byin rlabs bya tshul sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "27.5x8.5" ;
+        :hasPart            bdr:MW1NLM968_14852D , bdr:MW1NLM968_3496EF , bdr:MW1NLM968_572D6E , bdr:MW1NLM968_5F4965 , bdr:MW1NLM968_8688BE , bdr:MW1NLM968_9637C3 , bdr:MW1NLM968_9AC70A , bdr:MW1NLM968_D6FE8E ;
+        :hasTitle           bdr:TT12C8A55543E6B9D6 ;
+        :instanceHasReproduction  bdr:W1NLM968 ;
+        :instanceOf         bdr:WA1NLM968 ;
+        :isRoot             true ;
+        :note               bdr:NT43BD749AE9311319 , bdr:NTF9C79DF0DC84040C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "11 ff., 2 ff., 6 ff., 28 ff., 18 ff., 12 ff. end folio missing" ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM968_14852D
@@ -195,6 +243,18 @@ bdg:MW1NLM968 {
         :partOf             bdr:MW1NLM968 ;
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT43BD749AE9311319
+        a                   :Note ;
+        :noteText           "nlmId: M0058881"@en .
+    
+    bdr:NTF9C79DF0DC84040C
+        a                   :Note ;
+        :noteText           "missingPages: M0058881-007 [10,11th pages are printed on the same page, 12,13th pages as well], M0058881-008 [Final pages are missing 13A] Image"@en .
+    
+    bdr:TT12C8A55543E6B9D6
+        a                   :Title ;
+        rdfs:label          "thugs rje chen po phyi sgrub yid bzhin nor bu'am ngan song kun sgrol gyi byin rlabs bya tshul sogs/"@bo-x-ewts .
     
     bdr:TT2F193CCE0D5C2D66
         a                   :Title ;

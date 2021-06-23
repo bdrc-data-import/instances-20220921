@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1GS91831 {
+    bda:LG5E2CDBC58C02390F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-02-17T21:18:48.234Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG8021CFBC5E82789F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2019-05-08T14:38:01.911Z"^^xsd:dateTime ;
@@ -30,14 +36,38 @@ bdg:MW1GS91831 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGECFA219B775E8CDC
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-02-19T10:52:25.116Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS91831  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS91832" ;
         adm:adminAbout      bdr:MW1GS91831 ;
-        adm:facetIndex      68 ;
-        adm:logEntry        bda:LG8021CFBC5E82789F , bda:LG803BCDB72F7E0125 , bda:LG8D5D488C800B57C4 ;
+        adm:facetIndex      79 ;
+        adm:gitPath         "bc/MW1GS91831.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS91831 ;
+        adm:logEntry        bda:LG5E2CDBC58C02390F , bda:LG8021CFBC5E82789F , bda:LG803BCDB72F7E0125 , bda:LG8D5D488C800B57C4 , bda:LGECFA219B775E8CDC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL025B14EE641BD5E6
         a                   :ContentLocation ;
@@ -487,7 +517,45 @@ bdg:MW1GS91831 {
         :contentLocationPage  10 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1GS91831  :hasPart  bdr:MW1GS91831_0C8873 , bdr:MW1GS91831_4F74A0 , bdr:MW1GS91831_520CA7 , bdr:MW1GS91831_636633 , bdr:MW1GS91831_6B9664 , bdr:MW1GS91831_6F6B6E , bdr:MW1GS91831_771978 , bdr:MW1GS91831_94A881 , bdr:MW1GS91831_C86634 , bdr:MW1GS91831_E547E4 ;
+    bdr:EVB97D4DE795DFDDDE
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID0F5B3A6E7BC03360
+        a                   bdr:HollisId ;
+        rdf:value           "014255552" .
+    
+    bdr:ID2DD122288E990C65
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002298682" .
+    
+    bdr:ID5C5D46FF2034C351
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890323" .
+    
+    bdr:IDDB469B2E8F2C9114
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7670.2 .B76 2001" .
+    
+    bdr:MW1GS91831  a       :Instance , :SerialInstance ;
+        skos:altLabel       "xin jiu gadang shi ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bka' gdams gsar rnying gi chos 'byung yid kyi mdzes rgyan/（bod ljongs bod yig dpe rnying dpe skrun khang /）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0F5B3A6E7BC03360 , bdr:ID2DD122288E990C65 , bdr:ID5C5D46FF2034C351 , bdr:IDDB469B2E8F2C9114 ;
+        :authorshipStatement  "paN chen bsod nams grags pa/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS91831_0C8873 , bdr:MW1GS91831_4F74A0 , bdr:MW1GS91831_520CA7 , bdr:MW1GS91831_636633 , bdr:MW1GS91831_6B9664 , bdr:MW1GS91831_6F6B6E , bdr:MW1GS91831_771978 , bdr:MW1GS91831_94A881 , bdr:MW1GS91831_C86634 , bdr:MW1GS91831_E547E4 ;
+        :hasTitle           bdr:TTA9FF19E1C6A7A6BD , bdr:TTE05851E0CDB5F6CB ;
+        :instanceEvent      bdr:EVB97D4DE795DFDDDE ;
+        :instanceHasReproduction  bdr:W1GS91831 ;
+        :instanceOf         bdr:WA1GS91831 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "36" ;
+        :workExtentStatement  "5, 4, 207 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS91831_0481C8
@@ -1263,4 +1331,12 @@ bdg:MW1GS91831 {
         :partOf             bdr:MW1GS91831_6B9664 ;
         :partTreeIndex      "07.4" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTA9FF19E1C6A7A6BD
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xin jiu gadang shi ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE05851E0CDB5F6CB
+        a                   :Title ;
+        rdfs:label          "bka' gdams gsar rnying gi chos 'byung yid kyi mdzes rgyan/（bod ljongs bod yig dpe rnying dpe skrun khang /）"@bo-x-ewts .
 }

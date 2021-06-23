@@ -12,20 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2CZ6238 {
+    bda:LG41AD0590E4BA4BE6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-11-26T14:37:55.843Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGA968CDC3D9182DA5
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-04-27T12:36:05.51Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2CZ6238  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD103069" ;
         adm:adminAbout      bdr:MW2CZ6238 ;
-        adm:facetIndex      15 ;
-        adm:logEntry        bda:LGA968CDC3D9182DA5 ;
+        adm:facetIndex      26 ;
+        adm:gitPath         "87/MW2CZ6238.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ6238 ;
+        adm:logEntry        bda:LG41AD0590E4BA4BE6 , bda:LGA968CDC3D9182DA5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL7FD5281021445C56
         a                   :ContentLocation ;
@@ -75,7 +100,42 @@ bdg:MW2CZ6238 {
         :contentLocationInstance  bdr:W2CZ6238 ;
         :contentLocationPage  5 .
     
-    bdr:MW2CZ6238  :hasPart  bdr:MW2CZ6238_23812C , bdr:MW2CZ6238_2AC705 , bdr:MW2CZ6238_86DFD8 ;
+    bdr:EVA142115D5EB68E1A
+        a                   :PublishedEvent ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:ID27C1F84EE305E181
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "780890153" .
+    
+    bdr:ID78F11311DD9B9DC2
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6450.C6 R64 1992" .
+    
+    bdr:ID80D1F0F8B4370A50
+        a                   bdr:HollisId ;
+        rdf:value           "014260155" .
+    
+    bdr:IDCECE8AD326C3E092
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001417542" .
+    
+    bdr:MW2CZ6238  a        :Instance ;
+        skos:prefLabel      "ri bo rtse lnga'i gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID27C1F84EE305E181 , bdr:ID78F11311DD9B9DC2 , bdr:ID80D1F0F8B4370A50 , bdr:IDCECE8AD326C3E092 ;
+        :hasPart            bdr:MW2CZ6238_23812C , bdr:MW2CZ6238_2AC705 , bdr:MW2CZ6238_86DFD8 ;
+        :hasTitle           bdr:TT10A3B38493680C91 , bdr:TT6CA83C19D8C2133A ;
+        :instanceEvent      bdr:EVA142115D5EB68E1A ;
+        :instanceHasReproduction  bdr:W2CZ6238 ;
+        :instanceOf         bdr:WA2CZ6238 ;
+        :isRoot             true ;
+        :note               bdr:NT2CF8AB8EB389DDE0 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang gis bskrun/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "104 [i.e. 208] p. ; 10 x 53 cm." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2CZ6238_04EC5E
@@ -184,6 +244,14 @@ bdg:MW2CZ6238 {
         :partTreeIndex      "2.3" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT2CF8AB8EB389DDE0
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiff ans pdf files"@en .
+    
+    bdr:TT10A3B38493680C91
+        a                   :Title ;
+        rdfs:label          "ri bo rtse lnga'i gnas yig"@bo-x-ewts .
+    
     bdr:TT197BDF62A002A641
         a                   :Title ;
         rdfs:label          "ri bo dwangs bsil lam rgya nag ri bo rtse lnga'i gnas yig dkar chag gi dpe skrun gsal bshad/"@bo-x-ewts .
@@ -191,6 +259,10 @@ bdg:MW2CZ6238 {
     bdr:TT58D72401E98B19EE
         a                   :OtherTitle ;
         rdfs:label          "ri bo rtse lnga'i gnas bshad/"@bo-x-ewts .
+    
+    bdr:TT6CA83C19D8C2133A
+        a                   :TitlePageTitle ;
+        rdfs:label          "zhing mchog ri bo dwangs bsil gyi gnas bshad dad pa'i pad+mo rgyas byed ngo mtshar nyi ma'i snang ba/"@bo-x-ewts .
     
     bdr:TT86607566866B6559
         a                   :TitlePageTitle ;

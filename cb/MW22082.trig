@@ -47,6 +47,10 @@ bdg:MW22082 {
         adm:logDate         "2012-10-02T15:13:28.908Z"^^xsd:dateTime ;
         adm:logMessage      "added T1634 (lo glud) uncontrolled topic"@en .
     
+    bda:LGCBCD48115236B67E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGCF22EE40FE740822
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2017-06-09T16:32:13.856Z"^^xsd:dateTime ;
@@ -64,14 +68,46 @@ bdg:MW22082 {
         adm:logDate         "2012-11-02T11:28:32.921Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22082  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O22082" ;
         adm:adminAbout      bdr:MW22082 ;
-        adm:facetIndex      754 ;
-        adm:logEntry        bda:LG19C9DEF525C7E007 , bda:LG263464492C3E0942 , bda:LG3AE5DA70E3834CB3 , bda:LG5F1B0475BA76297C , bda:LGADC2C4BE220CCA25 , bda:LGB0FADEA76ADC369F , bda:LGCF22EE40FE740822 , bda:LGCF924A24E2E5DA70 , bda:LGF4C85066D6C16553 ;
+        adm:facetIndex      769 ;
+        adm:gitPath         "cb/MW22082.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22082 ;
+        adm:logEntry        bda:LG19C9DEF525C7E007 , bda:LG263464492C3E0942 , bda:LG3AE5DA70E3834CB3 , bda:LG5F1B0475BA76297C , bda:LGADC2C4BE220CCA25 , bda:LGB0FADEA76ADC369F , bda:LGCBCD48115236B67E , bda:LGCF22EE40FE740822 , bda:LGCF924A24E2E5DA70 , bda:LGF4C85066D6C16553 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Tserings Wangdag and Dhondup via TBRC Convert2Outline version: 1.4.2"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL000F602B5EB05652
         a                   :ContentLocation ;
@@ -2677,7 +2713,43 @@ bdg:MW22082 {
         :contentLocationPage  5 ;
         :contentLocationVolume  1 .
     
-    bdr:MW22082  :hasPart   bdr:MW22082_14CE67 , bdr:MW22082_204D4B , bdr:MW22082_43AB6E , bdr:MW22082_6565C0 , bdr:MW22082_66C5E8 , bdr:MW22082_79AD8B , bdr:MW22082_8E8DF1 , bdr:MW22082_9B6302 , bdr:MW22082_A7E590 , bdr:MW22082_B23D96 , bdr:MW22082_B708D3 , bdr:MW22082_D545B7 , bdr:MW22082_D8A571 , bdr:MW22082_E49AE8 , bdr:MW22082_F7EE45 ;
+    bdr:EV35E9B92EBE390ECD
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID212B4669E1F152F1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99939121" .
+    
+    bdr:ID467DBA2C3F5BEB0E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .C46 1999" .
+    
+    bdr:ID8BB3CEB35F02F49D
+        a                   bdr:HollisId ;
+        rdf:value           "014258611" .
+    
+    bdr:IDD847E06E3B7F6905
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008512776-0" .
+    
+    bdr:MW22082  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum of kun mkhyen rig-pa-'dzin-pa chen po chos-kyi-grags-pa"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_chos kyi grags pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID212B4669E1F152F1 , bdr:ID467DBA2C3F5BEB0E , bdr:ID8BB3CEB35F02F49D , bdr:IDD847E06E3B7F6905 ;
+        :hasPart            bdr:MW22082_14CE67 , bdr:MW22082_204D4B , bdr:MW22082_43AB6E , bdr:MW22082_6565C0 , bdr:MW22082_66C5E8 , bdr:MW22082_79AD8B , bdr:MW22082_8E8DF1 , bdr:MW22082_9B6302 , bdr:MW22082_A7E590 , bdr:MW22082_B23D96 , bdr:MW22082_B708D3 , bdr:MW22082_D545B7 , bdr:MW22082_D8A571 , bdr:MW22082_E49AE8 , bdr:MW22082_F7EE45 ;
+        :hasTitle           bdr:TT57C393889EB87518 , bdr:TTC6EB3E8A2AF467E0 , bdr:TTDA9642CE27E79FD0 , bdr:TTEDC623D71B85B0C9 ;
+        :instanceEvent      bdr:EV35E9B92EBE390ECD ;
+        :instanceHasReproduction  bdr:IE22082 , bdr:W22082 ;
+        :instanceOf         bdr:WA22082 ;
+        :isRoot             true ;
+        :note               bdr:NTE5B5102EF3EFBC6A ;
+        :numberOfVolumes    15 ;
+        :publisherLocation  "kulhan"@en ;
+        :publisherName      "drikung kagyu institute"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "15 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22082_0091D1
@@ -8033,6 +8105,10 @@ bdg:MW22082 {
         :partTreeIndex      "02.06" ;
         :partType           bdr:PartTypeTableOfContent .
     
+    bdr:NTE5B5102EF3EFBC6A
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 2180-2194."@en .
+    
     bdr:TT01408C9CA55BE22F
         a                   :Title ;
         rdfs:label          "rin chen ril nag chen mo'i zin bris brtan g.yo'i bcud bsdus mkhas pa dga'"@bo-x-ewts .
@@ -8488,6 +8564,10 @@ bdg:MW22082 {
     bdr:TT56B42FF1FA173420
         a                   :Title ;
         rdfs:label          "zab lam nA ro'i chos drug gi bka' bab nyams dang rtogs pa byin rlabs kyi bla ma brgyad pa'i gsol 'debs dad pa'i lang tsho/"@bo-x-ewts .
+    
+    bdr:TT57C393889EB87518
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_chos kyi grags pa/"@bo-x-ewts .
     
     bdr:TT580BE48B6AA7CD40
         a                   :Title ;
@@ -9201,6 +9281,10 @@ bdg:MW22082 {
         a                   :Title ;
         rdfs:label          "rin chen grang sbyor ril nag gi sngon byung gleng gzhi/"@bo-x-ewts .
     
+    bdr:TTC6EB3E8A2AF467E0
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum of kun mkhyen rig-pa-'dzin-pa chen po chos-kyi-grags-pa"@en-x-mixed .
+    
     bdr:TTC7A2BEFB27AD0A53
         a                   :Title ;
         rdfs:label          "'jam dpal gshin rje'i gshed dpa' bo 'bru gcig pa'i sgrub thabs/"@bo-x-ewts .
@@ -9329,6 +9413,10 @@ bdg:MW22082 {
         a                   :Title ;
         rdfs:label          "rje btsun sa skya pa'i phyag bzhes dkar cha bzhi/_bar do cha bzhi/_klu gtor bsdus pa bcas/"@bo-x-ewts .
     
+    bdr:TTDA9642CE27E79FD0
+        a                   :CoverTitle ;
+        rdfs:label          "kun mkhyen rig pa 'dzin pa chen po chos kyi grags pa'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TTDAD81436153B7F06
         a                   :Title ;
         rdfs:label          "bla ma'i rnal 'byor nyung ngur gdams pa rnams/"@bo-x-ewts .
@@ -9444,6 +9532,10 @@ bdg:MW22082 {
     bdr:TTED7557EB26604507
         a                   :Title ;
         rdfs:label          "chos drug dril ba'i gdams pa/"@bo-x-ewts .
+    
+    bdr:TTEDC623D71B85B0C9
+        a                   :CoverTitle ;
+        rdfs:label          "The collected works (gsuṅ ʼbum) of kun mkhyen Rig-pa-ʼdzin-pa chen po Chos-kyi-grags-pa."@en-x-mixed .
     
     bdr:TTEE960BB942990471
         a                   :Title ;

@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30435 {
+    bda:LG0F1DDECB7ED9F200
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG43AED648D1F2B493
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-03-02T12:56:05.227Z"^^xsd:dateTime ;
+        adm:logMessage      "note sogs gsar du bcug"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG65057E6EE40B24D5
         a                   adm:InitialOutlineData ;
         adm:logDate         "2008-02-25T15:28:22.723Z"^^xsd:dateTime ;
@@ -36,14 +46,39 @@ bdg:MW30435 {
         adm:logMessage      "completed outline"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30435  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS94370" ;
         adm:adminAbout      bdr:MW30435 ;
-        adm:facetIndex      160 ;
-        adm:logEntry        bda:LG65057E6EE40B24D5 , bda:LGC88127EDE679430F , bda:LGD9699343A88F9075 , bda:LGE00E78D846DB53AC ;
+        adm:facetIndex      174 ;
+        adm:gitPath         "72/MW30435.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30435 ;
+        adm:logEntry        bda:LG0F1DDECB7ED9F200 , bda:LG43AED648D1F2B493 , bda:LG65057E6EE40B24D5 , bda:LGC88127EDE679430F , bda:LGD9699343A88F9075 , bda:LGE00E78D846DB53AC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0261187E76C8D53D
         a                   :ContentLocation ;
@@ -940,7 +975,47 @@ bdg:MW30435 {
         :contentLocationInstance  bdr:W30435 ;
         :contentLocationPage  168 .
     
-    bdr:MW30435  :hasPart   bdr:MW30435_47EA13 , bdr:MW30435_6A04CB , bdr:MW30435_7E2011 , bdr:MW30435_987BD0 , bdr:MW30435_A517F4 , bdr:MW30435_C25AEB , bdr:MW30435_CA4328 , bdr:MW30435_EC81E6 , bdr:MW30435_FB820E , bdr:MW30435_FC9197 ;
+    bdr:EV3B3202CD1BFDFB0F
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID50940300005F5C12
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006554360" .
+    
+    bdr:ID8563DA296C7814C1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105073756" .
+    
+    bdr:ID8BC07A6BB808501C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .J55 2005" .
+    
+    bdr:IDB8416448280CDE45
+        a                   bdr:HollisId ;
+        rdf:value           "014260784" .
+    
+    bdr:MW30435  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "zhang bod gso rig dga' ston rol pa'i rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID50940300005F5C12 , bdr:ID8563DA296C7814C1 , bdr:ID8BC07A6BB808501C , bdr:IDB8416448280CDE45 ;
+        :authorshipStatement  "'tso byed 'jigs med nam mkha' rdo rje/"@bo-x-ewts ;
+        :contentLocationStatement  "TBRC Library: Editor's Room" ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW30435_47EA13 , bdr:MW30435_6A04CB , bdr:MW30435_7E2011 , bdr:MW30435_987BD0 , bdr:MW30435_A517F4 , bdr:MW30435_C25AEB , bdr:MW30435_CA4328 , bdr:MW30435_EC81E6 , bdr:MW30435_FB820E , bdr:MW30435_FC9197 ;
+        :hasTitle           bdr:TT6391CCF0F095279B , bdr:TTAE83AAF56263DD42 ;
+        :instanceEvent      bdr:EV3B3202CD1BFDFB0F ;
+        :instanceHasReproduction  bdr:W30435 ;
+        :instanceOf         bdr:WA30435 ;
+        :isRoot             true ;
+        :note               bdr:NT183F49DA3EA41018 , bdr:NTD2CA83E588218FD2 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1017462 ;
+        :seriesNumber       "022" ;
+        :workExtentStatement  "3, 4, 2, 7, 770 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30435_036436
@@ -2747,6 +2822,14 @@ bdg:MW30435 {
         :partTreeIndex      "06.082" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT183F49DA3EA41018
+        a                   :Note ;
+        :noteText           "contents: dga' ston rol pa'i rgya.--gso rig 'bum rgyun kun gyi gces btus 'chi bdag zhags gcod bde ba'i dbugs 'byin.--gso rig sman gyi lag len bzo thabs pa tra'i 'phrul 'khor gsal byed nyi ma'i dkyil 'khor.--'phros don.--tshe rig rgyud 'bum bye ba'i yang bcud zur rgyan nyer mkho dpag bsam lon shing bzang po.--"@en .
+    
+    bdr:NTD2CA83E588218FD2
+        a                   :Note ;
+        :noteText           "tbrc holds inkprint copy and digitally scanned images, tiffs and pdf files;"@en .
+    
     bdr:TT018BC981FEC79960
         a                   :Title ;
         rdfs:label          "gso rig sman gyi lag len bzo thabs pa tra'i 'phrul 'khor gsal byed nyi ma'i dkyil 'khor/"@bo-x-ewts .
@@ -2763,6 +2846,10 @@ bdg:MW30435 {
         a                   :Title ;
         rdfs:label          "dga' ston rol pa'i rgyan/"@bo-x-ewts .
     
+    bdr:TT6391CCF0F095279B
+        a                   :Title ;
+        rdfs:label          "zhang bod gso rig dga' ston rol pa'i rgyan/"@bo-x-ewts .
+    
     bdr:TT755636D033C8AEF3
         a                   :Title ;
         rdfs:label          "gso rig 'bum rgyud kun gyi gces btus 'chi bdag zhags gcod bde ba'i dbugs 'byin/"@bo-x-ewts .
@@ -2770,4 +2857,8 @@ bdg:MW30435 {
     bdr:TT7D2EEDDC564DD959
         a                   :Title ;
         rdfs:label          "'phros don/"@bo-x-ewts .
+    
+    bdr:TTAE83AAF56263DD42
+        a                   :TitlePageTitle ;
+        rdfs:label          "gso rig rgyud 'bum bye ba'i yang snying 'gro kun 'byung 'khrugs nad kyi zug rngu'i gdung ba kun sel sman sbyor stong rtsa phan bde dpyid kyi dga' ston rol pa'i rgyan/"@bo-x-ewts .
 }

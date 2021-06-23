@@ -66,14 +66,49 @@ bdg:MW6799 {
         adm:logMessage      "corrected errors in vols. 1 and 4; marked released"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGE0B2228708762F09
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGECD6B0877312A705
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-20T12:55:38.174Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW6799  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O01CT0041" ;
         adm:adminAbout      bdr:MW6799 ;
-        adm:facetIndex      401 ;
-        adm:logEntry        bda:LG31F5D2F5E14B0AF8 , bda:LG3C87FFEEA9681861 , bda:LG41F6FF40E39C9990 , bda:LG6EB83BCA7840B3D0 , bda:LG835BCDB855F0DF46 , bda:LGB0DDD766A067B231 , bda:LGBCCB04C207784852 , bda:LGCE556BA5F6891548 , bda:LGDCD75C1F6E7A1B5F ;
+        adm:facetIndex      414 ;
+        adm:gitPath         "fe/MW6799.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW6799 ;
+        adm:logEntry        bda:LG31F5D2F5E14B0AF8 , bda:LG3C87FFEEA9681861 , bda:LG41F6FF40E39C9990 , bda:LG6EB83BCA7840B3D0 , bda:LG835BCDB855F0DF46 , bda:LGB0DDD766A067B231 , bda:LGBCCB04C207784852 , bda:LGCE556BA5F6891548 , bda:LGDCD75C1F6E7A1B5F , bda:LGE0B2228708762F09 , bda:LGECD6B0877312A705 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeGsungBum .
+        adm:outlineType     bda:OutlineTypeGsungBum ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01DB1FF6CA20FF57
         a                   :ContentLocation ;
@@ -1118,7 +1153,43 @@ bdg:MW6799 {
         :contentLocationPage  541 ;
         :contentLocationVolume  5 .
     
-    bdr:MW6799  :hasPart    bdr:MW6799_1DA1E5 , bdr:MW6799_2165A2 , bdr:MW6799_6759E3 , bdr:MW6799_80F40D , bdr:MW6799_CFFE35 , bdr:MW6799_D8EEBC , bdr:MW6799_E16EC1 , bdr:MW6799_FD9EB7 ;
+    bdr:EVC0D56DF7090CC272
+        a                   :PublishedEvent ;
+        :notAfter           "1985"^^xsd:gYear ;
+        :notBefore          "1975"^^xsd:gYear .
+    
+    bdr:ID7D1414AD1728CAE3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75904498" .
+    
+    bdr:IDC85295112A9FB623
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7564 .N33 1975" .
+    
+    bdr:IDFA7F4A7D49454A88
+        a                   bdr:HollisId ;
+        rdf:value           "014261025" .
+    
+    bdr:MW6799  a           :Instance ;
+        skos:altLabel       "the collected works of lcan-lun pandi ta nag-dban-blo-bzan-bstan-pa'i-rgyal-mtshan"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7D1414AD1728CAE3 , bdr:IDC85295112A9FB623 , bdr:IDFA7F4A7D49454A88 ;
+        :biblioNote         "in the delhi reprint of the gsung 'bum of ngag dbang blo bzang bstan pa'i rgyal mtshan; reproduced from a rare set of the a-ba-ga bsod-nams-kun-sdud-glin blocks"@en ;
+        :hasPart            bdr:MW6799_1DA1E5 , bdr:MW6799_2165A2 , bdr:MW6799_6759E3 , bdr:MW6799_80F40D , bdr:MW6799_CFFE35 , bdr:MW6799_D8EEBC , bdr:MW6799_E16EC1 , bdr:MW6799_FD9EB7 ;
+        :hasSourcePrintery  bdr:G3JT12536 ;
+        :hasTitle           bdr:TT26A98216146DB01F , bdr:TT3B1229A119A472D2 , bdr:TT95813CD460552974 ;
+        :instanceEvent      bdr:EVC0D56DF7090CC272 ;
+        :instanceHasReproduction  bdr:W6799 ;
+        :instanceOf         bdr:WA1KG1338 ;
+        :isRoot             true ;
+        :note               bdr:NTC2CE32868F802A68 ;
+        :numberOfVolumes    8 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "mongolian lama gurudeva"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "8 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW6799_006032
@@ -3299,6 +3370,10 @@ bdg:MW6799 {
         a                   :Note ;
         :noteText           "method for conferring the initiation of the nine-deity mandala of hayagriva in the form yang gsang khros pa; written in 1810 at bsod nams kun sdud gling with blo bzang chos dar as scribe" .
     
+    bdr:NTC2CE32868F802A68
+        a                   :Note ;
+        :noteText           "-3038\n\ntbrc also holds  a copy of the lhasa reprint \n6 + 1 v.\n6+1 volume printed gsung 'bum described in mhtl. This gsung 'bum was printed from blocks preserved at bsod-nams-kun-sdud-gling in the abaGa banner of the cuGulGan league.\ncopies:\ngandang monastery, state library of ulan bator, national library of beijing\nno. 18 in series one of the bod brgyud nang bstan dpyad gzhi yig rigs = historical materials of tibetan buddhism, published by the krung go'i then cin dpe rnying dpar skrun khang. number of volumes of this gsung 'bum in these 80 volumes unknown.\nexample of gsung 'bum  in 7 printed volumes in the potala collection."@en .
+    
     bdr:TT026F5F563855843A
         a                   :Title ;
         rdfs:label          "dmag zor rgyal mo'i brgyud 'debs/"@bo-x-ewts .
@@ -3447,6 +3522,10 @@ bdg:MW6799 {
         a                   :TitlePageTitle ;
         rdfs:label          "rje btsun 'jam dbyangs dkar po'i sgrub thabs dang rjes gnang gi cho ga blo gsal yongs kyi snying nor/"@bo-x-ewts .
     
+    bdr:TT26A98216146DB01F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
     bdr:TT26E7C9CC93A29446
         a                   :Title ;
         rdfs:label          "phyag rdor gyi sgrub thabs dang don dam sems bskyed kyi rjes gnang gi cho ga gsang bdag dgyes pa'i mchod sprin dngos grub mchog stsol/"@bo-x-ewts .
@@ -3530,6 +3609,10 @@ bdg:MW6799 {
     bdr:TT37B4D36AC7F35F74
         a                   :Title ;
         rdfs:label          "gshin rje chos kyi rgyal po'i rgyas pa'i gtor sgrub kyi cho ga dgos 'dod kun stsol yid bzhin gyi nor bu 'bar ba/"@bo-x-ewts .
+    
+    bdr:TT3B1229A119A472D2
+        a                   :CoverTitle ;
+        rdfs:label          "ngag dbang blo bzang bstan pa'i rgyal mtshan gyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TT3E1EBE7A483AA153
         a                   :TitlePageTitle ;
@@ -3858,6 +3941,10 @@ bdg:MW6799 {
     bdr:TT9520B4FEA3D1B679
         a                   :TitlePageTitle ;
         rdfs:label          "chos sde chen po dge 'phel dga' ldan chos mdzod gling gi smon lam chen mo'i bca' yig rab gsal nor bu'i me long /"@bo-x-ewts .
+    
+    bdr:TT95813CD460552974
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works of lcan-lun pandi ta nag-dban-blo-bzan-bstan-pa'i-rgyal-mtshan"@en-x-mixed .
     
     bdr:TT96EC6D560314A5D3
         a                   :TitlePageTitle ;

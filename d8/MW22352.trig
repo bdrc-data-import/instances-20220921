@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22352 {
+    bda:LG0DABB842E4F2DECF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG10133CFA9234803E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-10-03T13:01:41.908Z"^^xsd:dateTime ;
@@ -56,14 +60,39 @@ bdg:MW22352 {
         adm:logDate         "2012-11-02T10:55:54.646Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGD7D2CC5C7E0A84C3
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-01T12:53:57.023Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22352  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD76581" ;
         adm:adminAbout      bdr:MW22352 ;
-        adm:facetIndex      819 ;
-        adm:logEntry        bda:LG10133CFA9234803E , bda:LG18E04512A6E0FEF7 , bda:LG20EA74FF2F254D2D , bda:LG34E585215F23E06C , bda:LG353E8178454E45C7 , bda:LG43222B0F02653C4F , bda:LG95FCA2118902F9A3 , bda:LGBCD6461F0F0DFFC6 ;
+        adm:facetIndex      827 ;
+        adm:gitPath         "d8/MW22352.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22352 ;
+        adm:logEntry        bda:LG0DABB842E4F2DECF , bda:LG10133CFA9234803E , bda:LG18E04512A6E0FEF7 , bda:LG20EA74FF2F254D2D , bda:LG34E585215F23E06C , bda:LG353E8178454E45C7 , bda:LG43222B0F02653C4F , bda:LG95FCA2118902F9A3 , bda:LGBCD6461F0F0DFFC6 , bda:LGD7D2CC5C7E0A84C3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; created with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0075710E29FD21EA
         a                   :ContentLocation ;
@@ -2786,8 +2815,35 @@ bdg:MW22352 {
         :contentLocationPage  97 ;
         :contentLocationVolume  1 .
     
-    bdr:MW22352  :hasPart   bdr:MW22352_320A99 , bdr:MW22352_E1A0EC ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EVE92A067C6FB4A08B
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:IDAEB9FCAC698FD6CC
+        a                   bdr:HollisId ;
+        rdf:value           "014258755" .
+    
+    bdr:MW22352  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang 'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAEB9FCAC698FD6CC ;
+        :biblioNote         "impressions from blocks preserved at sku 'bum byams pa gling"@en ;
+        :hasPart            bdr:MW22352_320A99 , bdr:MW22352_E1A0EC ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TTD599B11F127E9BFB ;
+        :instanceEvent      bdr:EVE92A067C6FB4A08B ;
+        :instanceHasReproduction  bdr:W22352 ;
+        :instanceOf         bdr:WA22352 ;
+        :isRoot             true ;
+        :note               bdr:NTE22F9D74A2AC8043 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[sku 'bum ]"@en ;
+        :publisherName      "sku 'bum byams pa gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v., 85 sections" ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workPrintery       "sku 'bum byams pa gling /"@bo-x-ewts .
     
     bdr:MW22352_003358
         a                   :Instance ;
@@ -8294,6 +8350,10 @@ bdg:MW22352 {
         :partTreeIndex      "1.12" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTE22F9D74A2AC8043
+        a                   :Note ;
+        :noteText           "tbrc holds scans tiffs and pdf files, tbrc volume numbers 2507-2508"@en .
+    
     bdr:TT00D8BC2E4CAE30B6
         a                   :Title ;
         rdfs:label          "jib hu lang thu'i gzhi bdag dpal ldan rdo rje la bsang mchod 'bul tshul lha chen dgyes bskyed/"@bo-x-ewts .
@@ -9689,6 +9749,10 @@ bdg:MW22352 {
     bdr:TTD37D6C0004E94E8F
         a                   :Title ;
         rdfs:label          "tshe sgrub zhag bdun ma'i man ngag"@bo-x-ewts .
+    
+    bdr:TTD599B11F127E9BFB
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang 'jam dbyangs rgya mtsho/"@bo-x-ewts .
     
     bdr:TTD5C774A942E141E4
         a                   :Title ;

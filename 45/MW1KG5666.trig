@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG5666 {
+    bda:LG35D38D459AD65861
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-07-19T14:49:22.692Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG898D1F9D0B600B30
         a                   adm:InitialOutlineData ;
         adm:logDate         "2011-06-15T12:43:00.607Z"^^xsd:dateTime ;
@@ -30,14 +36,33 @@ bdg:MW1KG5666 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG5666  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2CN2673" ;
         adm:adminAbout      bdr:MW1KG5666 ;
-        adm:facetIndex      32 ;
-        adm:logEntry        bda:LG898D1F9D0B600B30 , bda:LG9FE87DDD4926D7E6 , bda:LGF6246CCDE2CFD09F ;
+        adm:facetIndex      43 ;
+        adm:gitPath         "45/MW1KG5666.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5666 ;
+        adm:logEntry        bda:LG35D38D459AD65861 , bda:LG898D1F9D0B600B30 , bda:LG9FE87DDD4926D7E6 , bda:LGF6246CCDE2CFD09F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Chungdak Nangpa"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL137A95E2C32007A1
         a                   :ContentLocation ;
@@ -141,7 +166,26 @@ bdg:MW1KG5666 {
         :contentLocationInstance  bdr:W1KG5666 ;
         :contentLocationPage  18 .
     
-    bdr:MW1KG5666  :hasPart  bdr:MW1KG5666_0AFB78 , bdr:MW1KG5666_2875F3 , bdr:MW1KG5666_7693F3 , bdr:MW1KG5666_9FDFBA , bdr:MW1KG5666_DF81DA , bdr:MW1KG5666_E01762 ;
+    bdr:ID82656011DA0EC1A9
+        a                   bdr:HollisId ;
+        rdf:value           "014257177" .
+    
+    bdr:MW1KG5666  a        :Instance ;
+        skos:prefLabel      "legs sbyar dang mar me smon lam/"@bo-x-ewts , "sanskrit prayers and the marme monlam"@en , "samksiptapranidhanapatham"@sa-alalc97 , "qi yuan fa hui fan wen yu dian deng qi yuan wen"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID82656011DA0EC1A9 ;
+        :biblioNote         "printed from computerized input"@en ;
+        :hasPart            bdr:MW1KG5666_0AFB78 , bdr:MW1KG5666_2875F3 , bdr:MW1KG5666_7693F3 , bdr:MW1KG5666_9FDFBA , bdr:MW1KG5666_DF81DA , bdr:MW1KG5666_E01762 ;
+        :hasTitle           bdr:TT40D09A76884F288B , bdr:TT573092C32F3E492C , bdr:TT82FBDA2655F2A102 , bdr:TTB333CFD415F63E67 , bdr:TTB8D6A9FEF50D4C83 , bdr:TTF674C30EAD34B376 ;
+        :instanceHasReproduction  bdr:W1KG5666 ;
+        :instanceOf         bdr:WA1KG5666 ;
+        :isRoot             true ;
+        :note               bdr:NT9009D54F4EB45906 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "drophen tsuglak petunkhang (altruism publications)"@en ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
+        :workExtentStatement  "74 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG5666_0AFB78
@@ -389,17 +433,33 @@ bdg:MW1KG5666 {
         :partTreeIndex      "3.2" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT9009D54F4EB45906
+        a                   :Note ;
+        :noteText           "written in sanskrit, tibetan, english, chinese and korean"@en .
+    
     bdr:TT233629729CAA060D
         a                   :Title ;
         rdfs:label          "梵文祈愿偈颂"@zh-hans .
+    
+    bdr:TT40D09A76884F288B
+        a                   :OtherTitle ;
+        rdfs:label          "qi yuan fa hui fan wen yu dian deng qi yuan wen"@zh-latn-pinyin-x-ndia .
     
     bdr:TT4219775B5AE38B0C
         a                   :Title ;
         rdfs:label          "'gro don mkha' khyab ma/"@bo-x-ewts .
     
+    bdr:TT573092C32F3E492C
+        a                   :Title ;
+        rdfs:label          "legs sbyar dang mar me smon lam/"@bo-x-ewts .
+    
     bdr:TT68BB554ADD7CFB32
         a                   :Title ;
         rdfs:label          "all-pervading benefit for beings"@en .
+    
+    bdr:TT82FBDA2655F2A102
+        a                   :OtherTitle ;
+        rdfs:label          "saMk+Ship+tapraNid+hAnapATham/"@bo-x-ewts .
     
     bdr:TT8B6D91425C091932
         a                   :Title ;
@@ -408,6 +468,14 @@ bdg:MW1KG5666 {
     bdr:TT9E53761514B85897
         a                   :Title ;
         rdfs:label          "smon lam zhal 'don bsdus pa/"@bo-x-ewts .
+    
+    bdr:TTB333CFD415F63E67
+        a                   :OtherTitle ;
+        rdfs:label          "sanskrit prayers and the marme monlam"@en .
+    
+    bdr:TTB8D6A9FEF50D4C83
+        a                   :OtherTitle ;
+        rdfs:label          "祈愿法会梵文与点灯祈愿文"@zh-hans .
     
     bdr:TTBB1BEF9215BF79DC
         a                   :Title ;
@@ -432,4 +500,8 @@ bdg:MW1KG5666 {
     bdr:TTEAA70E4B178F43A7
         a                   :Title ;
         rdfs:label          "saMk+Ship+tapraNid+hAnapATham/"@bo-x-ewts .
+    
+    bdr:TTF674C30EAD34B376
+        a                   :OtherTitle ;
+        rdfs:label          "samksiptapranidhanapatham"@sa-alalc97 .
 }

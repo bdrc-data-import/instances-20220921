@@ -18,6 +18,10 @@ bdg:MW21994 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG3B467735C0D04D74
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG6886F3EA2AD20A12
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-04-14T09:15:05.93Z"^^xsd:dateTime ;
@@ -40,14 +44,33 @@ bdg:MW21994 {
         adm:logMessage      "topic changed"@en ;
         adm:logWho          bdu:U00013 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21994  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB96878" ;
         adm:adminAbout      bdr:MW21994 ;
-        adm:facetIndex      93 ;
-        adm:logEntry        bda:LG2C9353523BC0ABF7 , bda:LG6886F3EA2AD20A12 , bda:LG73F5D58183A11C93 , bda:LGBA459B5ABDB36412 , bda:LGF37BB5517A763E28 ;
+        adm:facetIndex      105 ;
+        adm:gitPath         "d3/MW21994.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21994 ;
+        adm:logEntry        bda:LG2C9353523BC0ABF7 , bda:LG3B467735C0D04D74 , bda:LG6886F3EA2AD20A12 , bda:LG73F5D58183A11C93 , bda:LGBA459B5ABDB36412 , bda:LGF37BB5517A763E28 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL048A77B64824B06F
         a                   :ContentLocation ;
@@ -350,7 +373,46 @@ bdg:MW21994 {
         :contentLocationPage  337 ;
         :contentLocationVolume  1 .
     
-    bdr:MW21994  :hasPart   bdr:MW21994_241D99 , bdr:MW21994_32ED42 , bdr:MW21994_9388C3 , bdr:MW21994_D324FB ;
+    bdr:EV07B7D5E79B65E7FE
+        a                   :PublishedEvent ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:ID3FC46586F284C586
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754200431X" .
+    
+    bdr:ID42E67851A04991FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915590" .
+    
+    bdr:ID86323D889641F4C8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ582 .B56 1993" .
+    
+    bdr:IDC85D2578D048A02B
+        a                   bdr:HollisId ;
+        rdf:value           "014258542" .
+    
+    bdr:MW21994  a          :Instance ;
+        skos:altLabel       "meng ku fo chiao yuan liu"@zh-latn-wadegile ;
+        skos:prefLabel      "chen po hor gyi yul du dam pa'i chos ji ltar byung ba'i bshad pa rgyal ba'i bstan pa rin po che gsal bar byed pa'i sgron me/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3FC46586F284C586 , bdr:ID42E67851A04991FA , bdr:ID86323D889641F4C8 , bdr:IDC85D2578D048A02B ;
+        :authorshipStatement  "'jigs med rig pa'i rdo rjes brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW21994_241D99 , bdr:MW21994_32ED42 , bdr:MW21994_9388C3 , bdr:MW21994_D324FB ;
+        :hasTitle           bdr:TT116446E090CB86DC , bdr:TT192AF1F483538B79 , bdr:TTFBE68BEBDBC7D909 ;
+        :instanceEvent      bdr:EV07B7D5E79B65E7FE ;
+        :instanceHasReproduction  bdr:W21994 ;
+        :instanceOf         bdr:WA21994 ;
+        :isRoot             true ;
+        :note               bdr:NT755A828C6D9EF9BB ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS20443 ;
+        :workExtentStatement  "3, 364 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21994_0B5C0D
@@ -964,6 +1026,10 @@ bdg:MW21994 {
         :workGenre          bdr:T3 ;
         :workIsAbout        bdr:P999 .
     
+    bdr:NT755A828C6D9EF9BB
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images for preservation; not for distribution for copyright considerations\n4203"@en .
+    
     bdr:TT01DD9954B74B1E36
         a                   :Title ;
         rdfs:label          "rtses thang khana zur ngag dbang shes rab/"@bo-x-ewts .
@@ -979,6 +1045,14 @@ bdg:MW21994 {
     bdr:TT10C51B2D05752D30
         a                   :Title ;
         rdfs:label          "'jam mgon rgyal ba gnyis pa'i bstan pa hor yul du dar bar mdzad pa po rgyal dbang gsum pa bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TT116446E090CB86DC
+        a                   :Title ;
+        rdfs:label          "chen po hor gyi yul du dam pa'i chos ji ltar byung ba'i bshad pa rgyal ba'i bstan pa rin po che gsal bar byed pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:TT192AF1F483538B79
+        a                   :TitlePageTitle ;
+        rdfs:label          "hor gyi chos 'byung /"@bo-x-ewts .
     
     bdr:TT3179C9F62C772D09
         a                   :Title ;
@@ -1139,4 +1213,8 @@ bdg:MW21994 {
     bdr:TTFBC6C82E10DAF6C6
         a                   :Title ;
         rdfs:label          "rgyal dbang lnga pa blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TTFBE68BEBDBC7D909
+        a                   :Title ;
+        rdfs:label          "meng ku fo chiao yuan liu"@zh-latn-wadegile .
 }

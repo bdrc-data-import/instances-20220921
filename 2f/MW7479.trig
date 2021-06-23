@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW7479 {
+    bda:LG00EA7D50F002A1FF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG0C8154CC36FF4DC7
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-05-11T16:30:41.57Z"^^xsd:dateTime ;
@@ -34,14 +38,46 @@ bdg:MW7479 {
         adm:logDate         "2010-04-30T15:56:58.024Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW7479  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94833" ;
         adm:adminAbout      bdr:MW7479 ;
-        adm:facetIndex      24 ;
-        adm:logEntry        bda:LG0C8154CC36FF4DC7 , bda:LG5D0538249A2D6098 , bda:LG7A4A0647F2CDF952 , bda:LG94D11E517BB53510 ;
+        adm:facetIndex      40 ;
+        adm:gitPath         "2f/MW7479.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7479 ;
+        adm:logEntry        bda:LG00EA7D50F002A1FF , bda:LG0C8154CC36FF4DC7 , bda:LG5D0538249A2D6098 , bda:LG7A4A0647F2CDF952 , bda:LG94D11E517BB53510 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL21095D5DE7961B70
         a                   :ContentLocation ;
@@ -97,7 +133,48 @@ bdg:MW7479 {
         :contentLocationInstance  bdr:W7479 ;
         :contentLocationPage  14 .
     
-    bdr:MW7479  :hasPart    bdr:MW7479_0CD5D9 , bdr:MW7479_1C1566 , bdr:MW7479_3112B0 , bdr:MW7479_4DEB6E , bdr:MW7479_534C6D , bdr:MW7479_99FDF4 ;
+    bdr:EV25C54191AE9EAEE3
+        a                   :PublishedEvent ;
+        :onYear             "1998"^^xsd:gYear .
+    
+    bdr:ID1605C2D08EDEF19C
+        a                   bdr:HollisId ;
+        rdf:value           "014261039" .
+    
+    bdr:ID6B72DAA8DC5EA278
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ966.I32965 J54 1998" .
+    
+    bdr:ID6D9E9A60D33AB667
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540919213" .
+    
+    bdr:ID740103130268B659
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008174778-0" .
+    
+    bdr:IDE22BD1F2FBEEF46E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99933416" .
+    
+    bdr:MW7479  a           :Instance ;
+        skos:altLabel       "ʼJigs-med-gliṅ-paʼi rnam thar /ʼJigs-med-gliṅ-pas mdzad."@en-x-mixed , "chi mei ling pa chuan"@zh-latn-wadegile ;
+        skos:prefLabel      "'jigs med gling pa'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1605C2D08EDEF19C , bdr:ID6B72DAA8DC5EA278 , bdr:ID6D9E9A60D33AB667 , bdr:ID740103130268B659 , bdr:IDE22BD1F2FBEEF46E ;
+        :authorshipStatement  "'jigs med gling pas mdzad/"@bo-x-ewts ;
+        :hasPart            bdr:MW7479_0CD5D9 , bdr:MW7479_1C1566 , bdr:MW7479_3112B0 , bdr:MW7479_4DEB6E , bdr:MW7479_534C6D , bdr:MW7479_99FDF4 ;
+        :hasTitle           bdr:TT453576D60B1D2823 , bdr:TT52BD5CB46D781556 , bdr:TTDA52651EBE6AB885 , bdr:TTF97B87615B0FE6C5 ;
+        :instanceEvent      bdr:EV25C54191AE9EAEE3 ;
+        :instanceHasReproduction  bdr:IE7479 , bdr:W7479 ;
+        :instanceOf         bdr:WA4CZ1260 ;
+        :isRoot             true ;
+        :note               bdr:NT509BAB2AA711503D ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 504 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW7479_0CD5D9
@@ -221,9 +298,17 @@ bdg:MW7479 {
         :partTreeIndex      "3.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT509BAB2AA711503D
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images for preservation purposes; not to be distributed\n4260"@en .
+    
     bdr:TT2A6C83B1D78B9521
         a                   :Title ;
         rdfs:label          "dpe skrun gsal bshad/"@bo-x-ewts .
+    
+    bdr:TT453576D60B1D2823
+        a                   :ColophonTitle ;
+        rdfs:label          "chi mei ling pa chuan"@zh-latn-wadegile .
     
     bdr:TT4DDA13D58590DB54
         a                   :Title ;
@@ -232,6 +317,10 @@ bdg:MW7479 {
     bdr:TT5274506D6E029692
         a                   :TitlePageTitle ;
         rdfs:label          "yul lho rgyud du byung ba'i rdzogs chen pa rang byung rdo rje mkhyen brtse'i 'od zer gyi rnam par thar pa legs byas yongs 'du'i snye ma/"@bo-x-ewts .
+    
+    bdr:TT52BD5CB46D781556
+        a                   :Title ;
+        rdfs:label          "'jigs med gling pa'i rnam thar/"@bo-x-ewts .
     
     bdr:TT53914E820A0E6014
         a                   :Title ;
@@ -257,7 +346,15 @@ bdg:MW7479 {
         a                   :Title ;
         rdfs:label          "rdzogs chen pa rang byung rdo rje'i don gyi rnam thar do ha'i rgyan/"@bo-x-ewts .
     
+    bdr:TTDA52651EBE6AB885
+        a                   :TitlePageTitle ;
+        rdfs:label          "yul lho rgyud du byung ba'i rdzogs chen pa rang byung rdo rje mkhyen brtse'i 'od zer gyi rnam par thar pa legs byas yongs 'du'i snye ma/"@bo-x-ewts .
+    
     bdr:TTF2566B663B563E17
         a                   :Title ;
         rdfs:label          "pad+ma dbang chen rol pa rtsal gyis mdzad pa'i rnam thar mjug mthud kyi skor/"@bo-x-ewts .
+    
+    bdr:TTF97B87615B0FE6C5
+        a                   :CoverTitle ;
+        rdfs:label          "ʼJigs-med-gliṅ-paʼi rnam thar /ʼJigs-med-gliṅ-pas mdzad."@en-x-mixed .
 }

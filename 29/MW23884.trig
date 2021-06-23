@@ -12,20 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23884 {
+    bda:LGCD60E024C70ECB1F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T16:53:48.284Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGDE0F88FF685EF6C1
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-07-08T11:45:56.609Z"^^xsd:dateTime ;
         adm:logMessage      "outline created"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGFACFF4D335C16FE7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23884  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS149733" ;
         adm:adminAbout      bdr:MW23884 ;
-        adm:facetIndex      8 ;
-        adm:logEntry        bda:LGDE0F88FF685EF6C1 ;
+        adm:facetIndex      20 ;
+        adm:gitPath         "29/MW23884.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23884 ;
+        adm:logEntry        bda:LGCD60E024C70ECB1F , bda:LGDE0F88FF685EF6C1 , bda:LGFACFF4D335C16FE7 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL26E15729324D0D89
         a                   :ContentLocation ;
@@ -45,7 +81,44 @@ bdg:MW23884 {
         :contentLocationInstance  bdr:W23884 ;
         :contentLocationPage  127 .
     
-    bdr:MW23884  :hasPart   bdr:MW23884_19C136 , bdr:MW23884_D8CF7B , bdr:MW23884_FD9A95 ;
+    bdr:EV450754D4F6BF0E24
+        a                   :PublishedEvent ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:ID327BD41401EA201F
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "002409852-3" .
+    
+    bdr:ID55440B1D9C7210A5
+        a                   bdr:HollisId ;
+        rdf:value           "014259200" .
+    
+    bdr:ID67B7039788B6816D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79902664" .
+    
+    bdr:IDAD2BC6EBF3B7F811
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950.T754 D7233 1969" .
+    
+    bdr:MW23884  a          :Instance ;
+        skos:altLabel       "Legs bśad sñiṅ poʾi dkaʾ ʾgrel bstan paʾi sgron me bźugs so."@en-x-mixed ;
+        skos:prefLabel      "legs bshad snying po'i dka' 'grel bstan pa'i sgron me/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID327BD41401EA201F , bdr:ID55440B1D9C7210A5 , bdr:ID67B7039788B6816D , bdr:IDAD2BC6EBF3B7F811 ;
+        :biblioNote         "At head of title: ser byes dpe mdzod"@en ;
+        :hasPart            bdr:MW23884_19C136 , bdr:MW23884_D8CF7B , bdr:MW23884_FD9A95 ;
+        :hasTitle           bdr:TT73C2AD6FD25B248C , bdr:TTCAB7F8AD85820CB3 ;
+        :instanceEvent      bdr:EV450754D4F6BF0E24 ;
+        :instanceHasReproduction  bdr:W23884 ;
+        :instanceOf         bdr:WA1AC225 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "rong tha mchog sprul rnam pa gnyis/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "124, 83, 271 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23884_19C136
@@ -101,7 +174,15 @@ bdg:MW23884 {
         a                   :Title ;
         rdfs:label          "dka' 'grel bstan pa'i sgron me thal 'gyur ba'i skor (dka' 'grel ga)"@bo-x-ewts .
     
+    bdr:TT73C2AD6FD25B248C
+        a                   :CoverTitle ;
+        rdfs:label          "Legs bśad sñiṅ poʾi dkaʾ ʾgrel bstan paʾi sgron me bźugs so."@en-x-mixed .
+    
     bdr:TT9D931E0AA19F9AC1
         a                   :Title ;
         rdfs:label          "legs bshad snying po'i dka' 'grel bstan pa'i sgron me (dka' 'grel ka)"@bo-x-ewts .
+    
+    bdr:TTCAB7F8AD85820CB3
+        a                   :Title ;
+        rdfs:label          "legs bshad snying po'i dka' 'grel bstan pa'i sgron me/"@bo-x-ewts .
 }

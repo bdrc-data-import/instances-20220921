@@ -36,6 +36,10 @@ bdg:MW23908 {
         adm:logMessage      "added T225 (chos spod)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LG1E761E1083295B89
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3DDE33929E0766AB
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-09-11T14:41:04.267Z"^^xsd:dateTime ;
@@ -48,14 +52,46 @@ bdg:MW23908 {
         adm:logMessage      "added T1GS129601 (rjes chog) uncontrolled subject"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGD4172E9D3864A913
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T10:22:31.629Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23908  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1010546" ;
         adm:adminAbout      bdr:MW23908 ;
-        adm:facetIndex      436 ;
-        adm:logEntry        bda:LG097B42533CA9E078 , bda:LG10ABF73A2B952B3B , bda:LG167124D019457D0F , bda:LG1A39DEF1708D4A87 , bda:LG3DDE33929E0766AB , bda:LGC8B19DCD0CFF74D7 ;
+        adm:facetIndex      449 ;
+        adm:gitPath         "54/MW23908.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23908 ;
+        adm:logEntry        bda:LG097B42533CA9E078 , bda:LG10ABF73A2B952B3B , bda:LG167124D019457D0F , bda:LG1A39DEF1708D4A87 , bda:LG1E761E1083295B89 , bda:LG3DDE33929E0766AB , bda:LGC8B19DCD0CFF74D7 , bda:LGD4172E9D3864A913 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03CA34ED977B4BDF
         a                   :ContentLocation ;
@@ -917,7 +953,43 @@ bdg:MW23908 {
         :contentLocationInstance  bdr:W23908 ;
         :contentLocationVolume  4 .
     
-    bdr:MW23908  :hasPart   bdr:MW23908_10F1A3 , bdr:MW23908_31A99D , bdr:MW23908_B7A5D3 , bdr:MW23908_E31F41 ;
+    bdr:EV73DED2DDC37D3E99
+        a                   :PublishedEvent ;
+        :notBefore          "1999"^^xsd:gYear .
+    
+    bdr:ID1FEE8667B5AA3E5B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99940084" .
+    
+    bdr:ID36702479B84AFEDB
+        a                   bdr:HollisId ;
+        rdf:value           "014259218" .
+    
+    bdr:ID4D8CA878A0373EEF
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008773930-5" .
+    
+    bdr:IDFF35A907A26EE2B5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .L46 1999" .
+    
+    bdr:MW23908  a          :Instance ;
+        skos:altLabel       "lho-brag mkhar-chu bdud-'joms-gling gi 'don cha'i skor"@en-x-mixed ;
+        skos:prefLabel      "lho brag mkhar chu bdud 'joms gling gi 'don cha'i skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1FEE8667B5AA3E5B , bdr:ID36702479B84AFEDB , bdr:ID4D8CA878A0373EEF , bdr:IDFF35A907A26EE2B5 ;
+        :hasPart            bdr:MW23908_10F1A3 , bdr:MW23908_31A99D , bdr:MW23908_B7A5D3 , bdr:MW23908_E31F41 ;
+        :hasTitle           bdr:TT0B9B9B1120C975FC , bdr:TT46984E1C585BFA70 , bdr:TT606107BBB2DA745B ;
+        :instanceEvent      bdr:EV73DED2DDC37D3E99 ;
+        :instanceHasReproduction  bdr:W23908 ;
+        :instanceOf         bdr:WA23908 ;
+        :isRoot             true ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "jakar dzong, bhutan"@en ;
+        :publisherName      "'brug bum-than lho-brag-mkhar-chu grwa tshan"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23908_009E1D
@@ -3364,6 +3436,10 @@ bdg:MW23908 {
         a                   :TitlePageTitle ;
         rdfs:label          "ta/"@bo-x-ewts .
     
+    bdr:TT0B9B9B1120C975FC
+        a                   :OtherTitle ;
+        rdfs:label          "lho-brag mkhar-chu bdud-'joms-gling gi 'don cha'i skor"@en-x-mixed .
+    
     bdr:TT0D16C1F5164D3569
         a                   :TitlePageTitle ;
         rdfs:label          "ba/"@bo-x-ewts .
@@ -3564,6 +3640,10 @@ bdg:MW23908 {
         a                   :Title ;
         rdfs:label          "bla rnal brgyud 'debs kha skong /"@bo-x-ewts .
     
+    bdr:TT46984E1C585BFA70
+        a                   :Title ;
+        rdfs:label          "lho brag mkhar chu bdud 'joms gling gi 'don cha'i skor/"@bo-x-ewts .
+    
     bdr:TT46C50F4A1AC89CAF
         a                   :TitlePageTitle ;
         rdfs:label          "kha/"@bo-x-ewts .
@@ -3679,6 +3759,10 @@ bdg:MW23908 {
     bdr:TT5EB7825049B67A6E
         a                   :Title ;
         rdfs:label          "rgyags brngan lha bsangs/"@bo-x-ewts .
+    
+    bdr:TT606107BBB2DA745B
+        a                   :CoverTitle ;
+        rdfs:label          "Lho-brag Mkhar-chu Bdud-ʾjoms-gliṅ gi ʾdon chaʾi skor =Lho-brag Mkhar-chhu Bdud-ʾjoms-gling gi ʾdon chhʾi [sic] skor."@en-x-mixed .
     
     bdr:TT619DE7C1A418EF82
         a                   :Title ;

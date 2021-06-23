@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1570 {
+    bda:LG2FAFE4B5ECC32621
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG3647F57F5D5BA883
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGD00FCF9F66FF9956
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-21T11:27:37.722Z"^^xsd:dateTime ;
+        adm:logMessage      "for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM72A6D112  a     adm:InitialDataImport ;
         adm:logDate         "2020-06-15T16:08:50.738Z"^^xsd:dateTime ;
         adm:logMessage      "final checked and released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1570"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1570  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ358055" ;
         adm:adminAbout      bdr:MW1NLM1570 ;
-        adm:facetIndex      27 ;
-        adm:logEntry        bda:LGIM72A6D112 ;
+        adm:facetIndex      33 ;
+        adm:gitPath         "43/MW1NLM1570.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1570 ;
+        adm:logEntry        bda:LG2FAFE4B5ECC32621 , bda:LG3647F57F5D5BA883 , bda:LGD00FCF9F66FF9956 , bda:LGIM72A6D112 , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0B3E856D8D9D974C
         a                   :ContentLocation ;
@@ -93,7 +122,19 @@ bdg:MW1NLM1570 {
         :contentLocationInstance  bdr:W1NLM1570 ;
         :contentLocationPage  133 .
     
-    bdr:MW1NLM1570  :hasPart  bdr:MW1NLM1570_3E6953 , bdr:MW1NLM1570_582E6D , bdr:MW1NLM1570_71DEDD , bdr:MW1NLM1570_9D0FC4 , bdr:MW1NLM1570_A39781 , bdr:MW1NLM1570_A71C72 , bdr:MW1NLM1570_B6646A , bdr:MW1NLM1570_CAF9F0 , bdr:MW1NLM1570_CB905E , bdr:MW1NLM1570_E49337 , bdr:MW1NLM1570_FE3A9A ;
+    bdr:MW1NLM1570  a       :Instance ;
+        skos:prefLabel      "dbu ma la 'jug pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "17.5x5.5" ;
+        :hasPart            bdr:MW1NLM1570_3E6953 , bdr:MW1NLM1570_582E6D , bdr:MW1NLM1570_71DEDD , bdr:MW1NLM1570_9D0FC4 , bdr:MW1NLM1570_A39781 , bdr:MW1NLM1570_A71C72 , bdr:MW1NLM1570_B6646A , bdr:MW1NLM1570_CAF9F0 , bdr:MW1NLM1570_CB905E , bdr:MW1NLM1570_E49337 , bdr:MW1NLM1570_FE3A9A ;
+        :hasTitle           bdr:TT29EE83545F5EDF46 ;
+        :instanceHasReproduction  bdr:W1NLM1570 ;
+        :instanceOf         bdr:WA1NLM1335 ;
+        :isRoot             true ;
+        :note               bdr:NTD8A283A0F4B74F61 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1NLM1570_3E6953
@@ -250,6 +291,10 @@ bdg:MW1NLM1570 {
         :partTreeIndex      "03" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTD8A283A0F4B74F61
+        a                   :Note ;
+        :noteText           "nlmId: M0059488"@en .
+    
     bdr:TT0B40EE6CF8BD4F47
         a                   :OtherTitle ;
         rdfs:label          "madhyamakavatara"@sa-x-ndia .
@@ -265,6 +310,10 @@ bdg:MW1NLM1570 {
     bdr:TT2552BB177333962F
         a                   :Title ;
         rdfs:label          "slob dpon pad+ma 'byung gnas kyi snyigs dus 'gro ba'i don du mdzad pa/"@bo-x-ewts .
+    
+    bdr:TT29EE83545F5EDF46
+        a                   :Title ;
+        rdfs:label          "dbu ma la 'jug pa sogs/"@bo-x-ewts .
     
     bdr:TT419592C7A6E9CDD7
         a                   :Title ;

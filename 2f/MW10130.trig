@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW10130 {
+    bda:LG4DB630A18AF57B5A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG5984939CCFE6E5B6
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-13T12:22:04.161Z"^^xsd:dateTime ;
@@ -40,14 +44,33 @@ bdg:MW10130 {
         adm:logMessage      "added a subject as topic"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW10130  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS3272" ;
         adm:adminAbout      bdr:MW10130 ;
-        adm:facetIndex      250 ;
-        adm:logEntry        bda:LG5984939CCFE6E5B6 , bda:LG6940872E96D9C065 , bda:LG925910ADF0C96529 , bda:LG97A70BB4D9AE01C7 , bda:LG9887B445870082CA ;
+        adm:facetIndex      260 ;
+        adm:gitPath         "2f/MW10130.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10130 ;
+        adm:logEntry        bda:LG4DB630A18AF57B5A , bda:LG5984939CCFE6E5B6 , bda:LG6940872E96D9C065 , bda:LG925910ADF0C96529 , bda:LG97A70BB4D9AE01C7 , bda:LG9887B445870082CA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL024C30EB7A85AED7
         a                   :ContentLocation ;
@@ -781,7 +804,40 @@ bdg:MW10130 {
         :contentLocationInstance  bdr:W10130 ;
         :contentLocationPage  104 .
     
-    bdr:MW10130  :hasPart   bdr:MW10130_17DA47 , bdr:MW10130_6180C6 , bdr:MW10130_A05F95 , bdr:MW10130_F2883A , bdr:MW10130_FADA8A ;
+    bdr:EV91CEC10A30634C18
+        a                   :PublishedEvent ;
+        :onOrAbout          "1986,1987printing" .
+    
+    bdr:ID94BC91DF21BCE3A8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "93927619" .
+    
+    bdr:IDD593AD3E339F9EAB
+        a                   bdr:HollisId ;
+        rdf:value           "014254595" .
+    
+    bdr:IDD7AB435D41A1BA58
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7576 .K86 1987" .
+    
+    bdr:MW10130  a          :Instance ;
+        skos:prefLabel      "ris med chos 'byung /（si khron mi rigs dpe skrun khang /）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID94BC91DF21BCE3A8 , bdr:IDD593AD3E339F9EAB , bdr:IDD7AB435D41A1BA58 ;
+        :authorshipStatement  "kun bzang rang grol gyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "ti 1 pan/"@bo-x-ewts ;
+        :hasPart            bdr:MW10130_17DA47 , bdr:MW10130_6180C6 , bdr:MW10130_A05F95 , bdr:MW10130_F2883A , bdr:MW10130_FADA8A ;
+        :hasTitle           bdr:TTE0D055A2527E88DA , bdr:TTFDFBBFB373988862 ;
+        :instanceEvent      bdr:EV91CEC10A30634C18 ;
+        :instanceHasReproduction  bdr:W10130 ;
+        :instanceOf         bdr:WA10130 ;
+        :isRoot             true ;
+        :note               bdr:NTA2D5E7B79568D07F ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5, 9, 193 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW10130_03450D
@@ -2637,6 +2693,10 @@ bdg:MW10130 {
         :partTreeIndex      "4.2.3.1.2.1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTA2D5E7B79568D07F
+        a                   :Note ;
+        :noteText           "Rgyal bstan grub mtha' ris med kyi chos 'byun mdor bsdus / Kun bzan grol gyis brtsams. -- Ti 1 pan. -- Ch~eng tu : Si khron Mi rigs Dpe skrun Khan, 1986 [i .e. 1987].\n5, 9, 193 p.\nChinese colophon title: Chiao p`ai yuan liu tsung shu.\nBQ7586 .K86 1987  93-927619.\nCopy: TBRC.\n\nRgyal bstan grub mtha' ris med kyi chos 'byun mdor bsdus yid ches dad pa'i sin rta : a brief history of the various religious traditions of Tibet which have contributed to the making of the Ris med movement / by Rag-mgo Mchog-sprul Thub-bstan-bsad-sgrub-rgya-mtsho (1890-1973), alias Padma-kun-bzan-rang-grol. -- Reproduced from a clear print from the eastern Tibetan blocks. -- Sonada, Darjeeling, W.B.: Konchhog Lhadrepa, 1985.\n157 p.\nBQ7576 .T48 1985  85-903868.\nCopy: TBRC.\nAuthorship incorrectly identified with Kun-bzang-rang-grol, 1916-1984."@en .
+    
     bdr:TT00E05FF7D15CA426
         a                   :TitlePageTitle ;
         rdfs:label          "smin gling gter chen dang lo chen/"@bo-x-ewts .
@@ -3089,6 +3149,10 @@ bdg:MW10130 {
         a                   :TitlePageTitle ;
         rdfs:label          "chos 'khor gyi dbye ba/"@bo-x-ewts .
     
+    bdr:TTE0D055A2527E88DA
+        a                   :Title ;
+        rdfs:label          "ris med chos 'byung /（si khron mi rigs dpe skrun khang /）"@bo-x-ewts .
+    
     bdr:TTE363160CEBD16963
         a                   :TitlePageTitle ;
         rdfs:label          "ris med dag snang sbyangs pa'i phan yon/"@bo-x-ewts .
@@ -3116,6 +3180,10 @@ bdg:MW10130 {
     bdr:TTFDEF92C121F95390
         a                   :TitlePageTitle ;
         rdfs:label          "srong btsan sgam po/"@bo-x-ewts .
+    
+    bdr:TTFDFBBFB373988862
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal bstan grub mtha' ris med kyi chos 'byung mdor bsdus/"@bo-x-ewts .
     
     bdr:TTFE06CE2414AECC07
         a                   :TitlePageTitle ;

@@ -12,11 +12,28 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23745 {
+    bda:LG0BC1ECA378F21944
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-09-27T00:25:24.418Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized catalog info"@en ;
+        adm:logWho          bdu:U00012 .
+    
     bda:LG1305D7EFAF176B36
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-06-08T01:48:20.062Z"^^xsd:dateTime ;
         adm:logMessage      "checkin"@en ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG1702C07D734E9D03
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T10:03:49.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG245EFD9BA66CEF2C
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-14T11:13:48.158Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
     
     bda:LG29A09DF6019A762D
         a                   adm:UpdateOutlineData ;
@@ -29,6 +46,10 @@ bdg:MW23745 {
         adm:logDate         "2014-02-21T11:10:20.063Z"^^xsd:dateTime ;
         adm:logMessage      "released forever"@en ;
         adm:logWho          bdu:U00017 .
+    
+    bda:LG7EE2265844F615FD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGC437C0072DA9179B
         a                   adm:UpdateOutlineData ;
@@ -53,14 +74,40 @@ bdg:MW23745 {
         adm:logMessage      "fixed listed error"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23745  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS135334" ;
         adm:adminAbout      bdr:MW23745 ;
-        adm:facetIndex      176 ;
-        adm:logEntry        bda:LG1305D7EFAF176B36 , bda:LG29A09DF6019A762D , bda:LG64B9BDC96B07C40E , bda:LGC437C0072DA9179B , bda:LGC8932E0322A29B4B , bda:LGD366933C78580A70 , bda:LGD7B5E321D35B7C99 ;
+        adm:facetIndex      191 ;
+        adm:gitPath         "35/MW23745.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23745 ;
+        adm:logEntry        bda:LG0BC1ECA378F21944 , bda:LG1305D7EFAF176B36 , bda:LG1702C07D734E9D03 , bda:LG245EFD9BA66CEF2C , bda:LG29A09DF6019A762D , bda:LG64B9BDC96B07C40E , bda:LG7EE2265844F615FD , bda:LGC437C0072DA9179B , bda:LGC8932E0322A29B4B , bda:LGD366933C78580A70 , bda:LGD7B5E321D35B7C99 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation: kelsang Lhamo finished the outline"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00D966BAD358031A
         a                   :ContentLocation ;
@@ -1129,7 +1176,41 @@ bdg:MW23745 {
         :contentLocationPage  368 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23745  :hasPart   bdr:MW23745_192F30 , bdr:MW23745_4EE1BC ;
+    bdr:EV8E4F5B91D619F430
+        a                   :PublishedEvent ;
+        :onYear             "1972"^^xsd:gYear .
+    
+    bdr:IDCC257333A98087F9
+        a                   bdr:HollisId ;
+        rdf:value           "014259087" .
+    
+    bdr:IDD2875A5AFFF7AE5A
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001585083-8" .
+    
+    bdr:IDFDD4F541B2CCF1CE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "72900793" .
+    
+    bdr:MW23745  a          :Instance ;
+        skos:altLabel       "a detailed account of the development of buddhism in tibet with special emphasis on the stag-lun bka'-brgyud-pa"@en-x-mixed ;
+        skos:prefLabel      "chos 'byung ngo mtshar rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCC257333A98087F9 , bdr:IDD2875A5AFFF7AE5A , bdr:IDFDD4F541B2CCF1CE ;
+        :hasPart            bdr:MW23745_192F30 , bdr:MW23745_4EE1BC ;
+        :hasTitle           bdr:TT79AD57FC5A7615CA , bdr:TTF7A6385EA763D2DE , bdr:TTFAB989E40F304C9B ;
+        :instanceEvent      bdr:EV8E4F5B91D619F430 ;
+        :instanceHasItem    bdr:ITW23745_001 , bdr:ITW23745_002 ;
+        :instanceHasReproduction  bdr:W23745 ;
+        :instanceOf         bdr:WA17276 ;
+        :isRoot             true ;
+        :note               bdr:NT7A5EEDB5E32B4EA9 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "palampur/"@bo-x-ewts ;
+        :publisherName      "sungrab nyamso gyunpel parkhang /"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23745_001B53
@@ -3044,6 +3125,10 @@ bdg:MW23745 {
         :partTreeIndex      "2.2.03" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT7A5EEDB5E32B4EA9
+        a                   :Note ;
+        :noteText           "being scanned in india, tbrc volume numbers 2578-2579"@en .
+    
     bdr:TT061BB6AEBD13E715
         a                   :Title ;
         rdfs:label          "stag lung bka' brgyud kyi rnam thar rgyas par bshad pa/ (nya)"@bo-x-ewts .
@@ -3076,6 +3161,10 @@ bdg:MW23745 {
         a                   :RunningTitle ;
         rdfs:label          "chos' byung ngo mtshar rgya mtsho'i sa bcad brgyad pa stag lung bka' brgyud kyi rnam thar rgyas pa bshad pa la dbyi shod ri bo che'i lo rgyus kha bskong ngo mtshar du ku la'i ba dan gsar pa/ (e)"@bo-x-ewts .
     
+    bdr:TT79AD57FC5A7615CA
+        a                   :CoverTitle ;
+        rdfs:label          "Chos ʼbyung Ngo mtshar rgya mtsho :a detailed account of the development of Buddhism in Tibet with special emphasis on the Stag-lung Bkaʼ-brgyud-pa /by Stag-lung-pa Ngag-dbang-rnam-rgyal and supplemented by Ngag-dbang-bstan-paʼi-nyi-ma ; edited by Khams-sprul Don-brgyud-nyi-ma."@en-x-mixed .
+    
     bdr:TT96EDA94C019B2A55
         a                   :Title ;
         rdfs:label          "bka' bsdu dang sku gsung thugs kyi rten ji ltar byung tshul/ (ga)"@bo-x-ewts .
@@ -3103,4 +3192,12 @@ bdg:MW23745 {
     bdr:TTD30C259A20055E1A
         a                   :Title ;
         rdfs:label          "stag lung bka' brgyud kyi rnam thar rgyas par bshad pa las stag lung ya thang rdo rjue gdan gyi gdan rabs phyis byon pa dag gi rnam thar kha skong / (da)"@bo-x-ewts .
+    
+    bdr:TTF7A6385EA763D2DE
+        a                   :TitlePageTitle ;
+        rdfs:label          "a detailed account of the development of buddhism in tibet with special emphasis on the stag-lun bka'-brgyud-pa"@en-x-mixed .
+    
+    bdr:TTFAB989E40F304C9B
+        a                   :Title ;
+        rdfs:label          "chos 'byung ngo mtshar rgya mtsho/"@bo-x-ewts .
 }

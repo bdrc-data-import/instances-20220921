@@ -42,6 +42,12 @@ bdg:MW20548 {
         adm:logMessage      "བཅོས"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG753B1DA7008560C3
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-21T12:18:03.479Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG7FC5B5CABB91CCC1
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-03-22T10:33:38.591Z"^^xsd:dateTime ;
@@ -60,14 +66,37 @@ bdg:MW20548 {
         adm:logMessage      "added is about person in vol. 1"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGD8A74921E5C05153
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20548  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS109585" ;
         adm:adminAbout      bdr:MW20548 ;
-        adm:facetIndex      1367 ;
-        adm:logEntry        bda:LG08344CE3ACF5AEFF , bda:LG10EB56C0F52C71BD , bda:LG45174508097D25FF , bda:LG45A74375CFF60FD7 , bda:LG71DAB331B6D20BE4 , bda:LG7FC5B5CABB91CCC1 , bda:LGB07A788EC9DA10A8 , bda:LGB73C7520A320648E ;
+        adm:facetIndex      1378 ;
+        adm:gitPath         "01/MW20548.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20548 ;
+        adm:logEntry        bda:LG08344CE3ACF5AEFF , bda:LG10EB56C0F52C71BD , bda:LG45174508097D25FF , bda:LG45A74375CFF60FD7 , bda:LG71DAB331B6D20BE4 , bda:LG753B1DA7008560C3 , bda:LG7FC5B5CABB91CCC1 , bda:LGB07A788EC9DA10A8 , bda:LGB73C7520A320648E , bda:LGD8A74921E5C05153 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith, added more node Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0087BEC2A723DF34
         a                   :ContentLocation ;
@@ -3944,6 +3973,11 @@ bdg:MW20548 {
         :contentLocationPage  606 ;
         :contentLocationVolume  5 .
     
+    bdr:EV07CB2FD834880E69
+        a                   :PublishedEvent ;
+        :notAfter           "1981"^^xsd:gYear ;
+        :notBefore          "1973"^^xsd:gYear .
+    
     bdr:ID019AB8057ACB119F
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6343" .
@@ -4224,6 +4258,10 @@ bdg:MW20548 {
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6397" .
     
+    bdr:ID70DD0AAECB45CACB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73901181" .
+    
     bdr:ID71D12D49CCEA1E1C
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6337" .
@@ -4315,6 +4353,10 @@ bdg:MW20548 {
     bdr:ID8C4A0582BF51DB97
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6318" .
+    
+    bdr:ID8EA0BD84366DE097
+        a                   bdr:HollisId ;
+        rdf:value           "014258201" .
     
     bdr:ID8F5FF73897EE0457
         a                   bdr:KaTenSiglaD ;
@@ -4624,7 +4666,26 @@ bdg:MW20548 {
         a                   bdr:KaTenSiglaD ;
         rdf:value           "6310" .
     
-    bdr:MW20548  :hasPart   bdr:MW20548_1DE810 , bdr:MW20548_5F041A , bdr:MW20548_6FA2FA , bdr:MW20548_79C67A , bdr:MW20548_C717CD , bdr:MW20548_D30DC4 , bdr:MW20548_EB2DF3 , bdr:MW20548_FA47B3 ;
+    bdr:MW20548  a          :Instance ;
+        skos:altLabel       "collected works (gsun 'bum) of dnul-chu dharmahadra"@en ;
+        skos:prefLabel      "gsung 'bum/_d+harma b+ha dra/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID70DD0AAECB45CACB , bdr:ID8EA0BD84366DE097 ;
+        :authorshipStatement  "reproduced from a manuscript copy traced from prints of the dnul-chu blocks by champa oser"@en ;
+        :hasPart            bdr:MW20548_1DE810 , bdr:MW20548_5F041A , bdr:MW20548_6FA2FA , bdr:MW20548_79C67A , bdr:MW20548_C717CD , bdr:MW20548_D30DC4 , bdr:MW20548_EB2DF3 , bdr:MW20548_FA47B3 ;
+        :hasSourcePrintery  bdr:G2CN10917 ;
+        :hasTitle           bdr:TT03A9560C0B9205F7 , bdr:TT71210EECC3450194 , bdr:TT9491CD478A4F94A2 ;
+        :instanceEvent      bdr:EV07CB2FD834880E69 ;
+        :instanceHasReproduction  bdr:W20548 ;
+        :instanceOf         bdr:WA1KG1657 ;
+        :isRoot             true ;
+        :note               bdr:NT70AAC81609319A0C ;
+        :numberOfVolumes    8 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "tibet house"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "8 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20548_015865
@@ -12758,6 +12819,10 @@ bdg:MW20548 {
         :partTreeIndex      "1.21.4" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT70AAC81609319A0C
+        a                   :Note ;
+        :noteText           "vols. 1-3 published by champa oser\n\ntbrc holds digital images, tiffs and pdf files\ntbrc volume numbers 1304-1311"@en .
+    
     bdr:TT000AA02DAD00183E
         a                   :Title ;
         rdfs:label          "'bras rtsis mdor bsdus/"@bo-x-ewts .
@@ -12805,6 +12870,10 @@ bdg:MW20548 {
     bdr:TT0370DB491B536148
         a                   :Title ;
         rdfs:label          "rnam sras sgom bzlas/"@bo-x-ewts .
+    
+    bdr:TT03A9560C0B9205F7
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected works (gsun 'bum) of dnul-chu dharmahadra"@en .
     
     bdr:TT03E1039E146715E8
         a                   :Title ;
@@ -13882,6 +13951,10 @@ bdg:MW20548 {
         a                   :Title ;
         rdfs:label          "lcags mkhar thig gi gdab tshul/"@bo-x-ewts .
     
+    bdr:TT71210EECC3450194
+        a                   :OtherTitle ;
+        rdfs:label          "dngul chu d+harma b+ha dra'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT72264FCCC5C7495B
         a                   :TitlePageTitle ;
         rdfs:label          "rje btsun bla ma thams cad mkhyen pa d+harma b+ha dra dpal bzang po'i gsung 'bum ca pa'i dkar chag"@bo-x-ewts .
@@ -14245,6 +14318,10 @@ bdg:MW20548 {
     bdr:TT94810A013201E09A
         a                   :Title ;
         rdfs:label          "dus 'khor lhan skyes kyi bsgom bzlas/"@bo-x-ewts .
+    
+    bdr:TT9491CD478A4F94A2
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_d+harma b+ha dra/"@bo-x-ewts .
     
     bdr:TT94A33EF777BAB74F
         a                   :Title ;

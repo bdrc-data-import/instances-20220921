@@ -12,20 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM333 {
+    bda:LG541FBABAB1B0E28F
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-08-26T15:23:02.85Z"^^xsd:dateTime ;
+        adm:logMessage      "FULL CATALOGED"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG61C65D8DB641D771
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG670E5E4394D2A82C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-09T11:43:58.829Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDEE69221500A6F68
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-16T16:19:38.53Z"^^xsd:dateTime ;
+        adm:logMessage      "release"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM333"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIM75A944DA  a     adm:InitialDataImport ;
         adm:logDate         "2019-12-16T16:18:27.441Z"^^xsd:dateTime ;
         adm:logMessage      "new outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM333  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ355534" ;
         adm:adminAbout      bdr:MW1NLM333 ;
-        adm:facetIndex      8 ;
-        adm:logEntry        bda:LGIM75A944DA ;
+        adm:facetIndex      18 ;
+        adm:gitPath         "08/MW1NLM333.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM333 ;
+        adm:logEntry        bda:LG541FBABAB1B0E28F , bda:LG61C65D8DB641D771 , bda:LG670E5E4394D2A82C , bda:LGDEE69221500A6F68 , bda:LGIM48AAB853 , bda:LGIM75A944DA , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL7D5DD172AFA5A09B
         a                   :ContentLocation ;
@@ -39,7 +81,19 @@ bdg:MW1NLM333 {
         :contentLocationInstance  bdr:W1NLM333 ;
         :contentLocationPage  463 .
     
-    bdr:MW1NLM333  :hasPart  bdr:MW1NLM333_0C0DA0 , bdr:MW1NLM333_982253 ;
+    bdr:MW1NLM333  a        :Instance ;
+        skos:prefLabel      "rgyal po ki si nas bi kra mi ji ta'i khri la bzhugs pa'i phyir du shing mi'i dang po mahA kA la nas bzung ste shing mi so gnyis pa'i bar du phan tshun smra ba'i lo rgyus/"@bo-x-ewts ;
+        :dimensionsStatement  "35.5x11" ;
+        :hasPart            bdr:MW1NLM333_0C0DA0 , bdr:MW1NLM333_982253 ;
+        :hasTitle           bdr:TT0956DF244CB440AF , bdr:TTE791FF211ACB170E ;
+        :instanceHasReproduction  bdr:W1NLM333 ;
+        :instanceOf         bdr:WA1NLM332 ;
+        :isRoot             true ;
+        :note               bdr:NTA1699E171BC05890 , bdr:NTCE9F1799C6DAD051 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "1 v. 231 ff. 168 ff. marked ka &ga" ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM333_0C0DA0
@@ -70,6 +124,18 @@ bdg:MW1NLM333 {
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTA1699E171BC05890
+        a                   :Note ;
+        :noteText           "missingPages: M0058246-001 [Missing page from 155A-155B] Image 309, 310"@en .
+    
+    bdr:NTCE9F1799C6DAD051
+        a                   :Note ;
+        :noteText           "nlmId: M0058246"@en .
+    
+    bdr:TT0956DF244CB440AF
+        a                   :Title ;
+        rdfs:label          "rgyal po ki si nas bi kra mi ji ta'i khri la bzhugs pa'i phyir du shing mi'i dang po mahA kA la nas bzung ste shing mi so gnyis pa'i bar du phan tshun smra ba'i lo rgyus/"@bo-x-ewts .
+    
     bdr:TT2BA60D6FD6C64E30
         a                   :Title ;
         rdfs:label          "shing mi'i dang po mahA kA la nas bzung ste shing mi so gnyis pa'i bar du phan tshun smra ba'i lo rgyus/"@bo-x-ewts .
@@ -85,4 +151,8 @@ bdg:MW1NLM333 {
     bdr:TTD9DBEC6BEE3FF220
         a                   :TitlePageTitle ;
         rdfs:label          "rje rgyal po ki si nas bi kra mi ji ta'i khri la bzhugs pa'i phyir du shing mi'i dang po mahA kA la nas bzung ste shing mi so gnyis pa'i bar du phan tshun smra ba'i lo rgyus/"@bo-x-ewts .
+    
+    bdr:TTE791FF211ACB170E
+        a                   :OtherTitle ;
+        rdfs:label          "rje rgyal po chen po ki si nas bi kra mi ji ta'i khri la bzhugs pa'i phyir du shing mi'i dang po mahA kA la nas bzung ste shing mi so gnyis pa'i bar du phan tshun smra ba'i lo rgyus/"@bo-x-ewts .
 }

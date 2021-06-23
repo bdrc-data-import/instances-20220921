@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20905 {
+    bda:LG95C27F905884AF16
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGD847EF2B4A70E7F8
         a                   adm:InitialOutlineData ;
         adm:logDate         "2006-09-22T11:53:57.375Z"^^xsd:dateTime ;
         adm:logMessage      "new outline added"@en .
+    
+    bda:LGE6FA9FCBCC1295C8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-10T09:31:06.809Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGEC11435D1CAB15BB
         a                   adm:UpdateOutlineData ;
@@ -23,15 +33,47 @@ bdg:MW20905 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20905  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1010095" ;
         :note               bdr:NT4912A282E93405F9 ;
         adm:adminAbout      bdr:MW20905 ;
-        adm:facetIndex      13 ;
-        adm:logEntry        bda:LGD847EF2B4A70E7F8 , bda:LGEC11435D1CAB15BB ;
+        adm:facetIndex      28 ;
+        adm:gitPath         "e2/MW20905.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20905 ;
+        adm:logEntry        bda:LG95C27F905884AF16 , bda:LGD847EF2B4A70E7F8 , bda:LGE6FA9FCBCC1295C8 , bda:LGEC11435D1CAB15BB , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1118B04241DFFD48
         a                   :ContentLocation ;
@@ -54,7 +96,45 @@ bdg:MW20905 {
         :contentLocationPage  102 ;
         :contentLocationVolume  4 .
     
-    bdr:MW20905  :hasPart   bdr:MW20905_15A7EC , bdr:MW20905_9C9A88 , bdr:MW20905_EB9C6D ;
+    bdr:EV06528D9D48C9A6BA
+        a                   :PublishedEvent ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:ID7816DEE950F68D94
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683.9.A2 B47 1974" .
+    
+    bdr:ID92577ABB57ADEDB6
+        a                   bdr:HollisId ;
+        rdf:value           "014258272" .
+    
+    bdr:IDAF7936E92DCBC245
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74901476" .
+    
+    bdr:IDF5E6ABBD6FBAF8D3
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001345794-2" .
+    
+    bdr:MW20905  a          :Instance ;
+        skos:altLabel       "biographies of the successive embodiments of the rgyal-dban 'brug-chen"@en-x-mixed ;
+        skos:prefLabel      "rgyal dbang 'brug chen dpag bsam dbang po dang mi pham dbang po'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7816DEE950F68D94 , bdr:ID92577ABB57ADEDB6 , bdr:IDAF7936E92DCBC245 , bdr:IDF5E6ABBD6FBAF8D3 ;
+        :biblioNote         "reproduced from original manuscripts and blockprints at the order of the ven. dookpa thoosay rinpoche"@en ;
+        :hasPart            bdr:MW20905_15A7EC , bdr:MW20905_9C9A88 , bdr:MW20905_EB9C6D ;
+        :hasTitle           bdr:TT3A6D9256C9DD32F0 , bdr:TT72918B317874E611 , bdr:TTC45D2C0B9B89B3A2 ;
+        :instanceEvent      bdr:EV06528D9D48C9A6BA ;
+        :instanceHasReproduction  bdr:W20905 ;
+        :instanceOf         bdr:WA20905 ;
+        :isRoot             true ;
+        :note               bdr:NT6EAACD9339809F77 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling, w.b."@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "v. 4 (only vol. printed)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20905_15A7EC
@@ -103,6 +183,14 @@ bdg:MW20905 {
         a                   :Note ;
         :noteText           "only volume 4 ever published"@en .
     
+    bdr:NT6EAACD9339809F77
+        a                   :Note ;
+        :noteText           "tbrc has digital scans, tiffs and pdf files\n0178."@en .
+    
+    bdr:TT3A6D9256C9DD32F0
+        a                   :CoverTitle ;
+        rdfs:label          "Biographies of the successive embodiments of the Rgyal-dbaṅ ʾBrug-chen."@en-x-mixed .
+    
     bdr:TT46E6E0B55EE4E670
         a                   :Title ;
         rdfs:label          "mi pham dbang po'i rnam thar 'phros cha tsam brjod pa gsang gsum gzhom med rdo rje'i zlos gar/"@bo-x-ewts .
@@ -111,9 +199,17 @@ bdg:MW20905 {
         a                   :TitlePageTitle ;
         rdfs:label          "rgyal dbang a dzi ten+dra'i rnam par thar pa kun tu bzang po'i yon tan gyi me long /"@bo-x-ewts .
     
+    bdr:TT72918B317874E611
+        a                   :TitlePageTitle ;
+        rdfs:label          "biographies of the successive embodiments of the rgyal-dban 'brug-chen"@en-x-mixed .
+    
     bdr:TTBA405C6459BC4496
         a                   :TitlePageTitle ;
         rdfs:label          "kun mkhyen dam pa ngag gi dbang phyug rdo rje can dngos mi pham dbang po'i rnam par thar pa 'phros cha tsam brjod pa gsang gsum gzhom med rdo rje'i zlos gar/"@bo-x-ewts .
+    
+    bdr:TTC45D2C0B9B89B3A2
+        a                   :Title ;
+        rdfs:label          "rgyal dbang 'brug chen dpag bsam dbang po dang mi pham dbang po'i rnam thar/"@bo-x-ewts .
     
     bdr:TTE2F0341183A3B287
         a                   :Title ;

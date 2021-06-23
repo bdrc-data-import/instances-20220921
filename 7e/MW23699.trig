@@ -23,20 +23,50 @@ bdg:MW23699 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGD114D05C3E1DA37F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGFD429F0DD4CA0A6E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-06-21T09:44:25.359Z"^^xsd:dateTime ;
         adm:logMessage      "proofread by egs"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23699  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ79" ;
         adm:adminAbout      bdr:MW23699 ;
-        adm:facetIndex      34 ;
-        adm:logEntry        bda:LG0A42F06F39AD1555 , bda:LG33C8A21EE44A7CD7 , bda:LGFD429F0DD4CA0A6E ;
+        adm:facetIndex      47 ;
+        adm:gitPath         "7e/MW23699.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23699 ;
+        adm:logEntry        bda:LG0A42F06F39AD1555 , bda:LG33C8A21EE44A7CD7 , bda:LGD114D05C3E1DA37F , bda:LGFD429F0DD4CA0A6E , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo ; at the behest of the Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0E0F6E0924968590
         a                   :ContentLocation ;
@@ -122,7 +152,44 @@ bdg:MW23699 {
         :contentLocationPage  504 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23699  :hasPart   bdr:MW23699_174D50 , bdr:MW23699_2ECF99 , bdr:MW23699_54AC83 , bdr:MW23699_7293D6 , bdr:MW23699_B0F753 , bdr:MW23699_C50E3D , bdr:MW23699_D132DE , bdr:MW23699_EE88E7 ;
+    bdr:EVC1DD8E6D39D35C3C
+        a                   :PublishedEvent ;
+        :onYear             "1972"^^xsd:gYear .
+    
+    bdr:ID2745974E81240499
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001462475-3" .
+    
+    bdr:ID4F1C44DB526E9613
+        a                   bdr:HollisId ;
+        rdf:value           "014259044" .
+    
+    bdr:ID7EC7EBF0CE7B6B35
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .G77 1972" .
+    
+    bdr:IDFA97D73C4E0B591D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "72908277" .
+    
+    bdr:MW23699  a          :Instance ;
+        skos:altLabel       "the collected works (gsun-bum) of gtsan-pa rgya-ras ye-ses-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ye shes rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2745974E81240499 , bdr:ID4F1C44DB526E9613 , bdr:ID7EC7EBF0CE7B6B35 , bdr:IDFA97D73C4E0B591D ;
+        :biblioNote         "reproduced from rare manuscripts and blockprints belonging to various lamas and notables of ladakh"@en ;
+        :hasPart            bdr:MW23699_174D50 , bdr:MW23699_2ECF99 , bdr:MW23699_54AC83 , bdr:MW23699_7293D6 , bdr:MW23699_B0F753 , bdr:MW23699_C50E3D , bdr:MW23699_D132DE , bdr:MW23699_EE88E7 ;
+        :hasTitle           bdr:TT6B366012AFC6BA44 , bdr:TT8F069BF977CDF9C1 , bdr:TTD5952A8AA2376EB6 ;
+        :instanceEvent      bdr:EVC1DD8E6D39D35C3C ;
+        :instanceHasReproduction  bdr:W23699 ;
+        :instanceOf         bdr:WA23699 ;
+        :isRoot             true ;
+        :note               bdr:NT9D200AD4B477C903 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "v.<1->" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23699_056114
@@ -298,6 +365,10 @@ bdg:MW23699 {
         :partTreeIndex      "7" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT9D200AD4B477C903
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 0848"@en .
+    
     bdr:TT188AD5AA561CDB2B
         a                   :TitlePageTitle ;
         rdfs:label          "chos rje rin po che gtsang pa rgya ras pa'i rnam thar mgur 'bum dang bcas pa shin tu rgyas pa/"@bo-x-ewts .
@@ -326,6 +397,10 @@ bdg:MW23699 {
         a                   :Title ;
         rdfs:label          "gtsang pa rgya ras kyi rnam thar/"@bo-x-ewts .
     
+    bdr:TT6B366012AFC6BA44
+        a                   :CoverTitle ;
+        rdfs:label          "The collected works (Gsuṅ-bum) of Gtsaṅ-pa Rgya-ras Ye-śes-rdo-rje."@en-x-mixed .
+    
     bdr:TT6C7B43D4EE02113B
         a                   :Title ;
         rdfs:label          "bla ma sgrub pa'i zhal gdams kun gsal dri med/"@bo-x-ewts .
@@ -338,6 +413,10 @@ bdg:MW23699 {
         a                   :Title ;
         rdfs:label          "bla ma'i ngo sprod rmus long mig 'byed/"@bo-x-ewts .
     
+    bdr:TT8F069BF977CDF9C1
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun-bum) of gtsan-pa rgya-ras ye-ses-rdo-rje"@en-x-mixed .
+    
     bdr:TT99B955255F5E9EEE
         a                   :Title ;
         rdfs:label          "bla ma phyi sgrub kyi stod 'grel/"@bo-x-ewts .
@@ -349,6 +428,10 @@ bdg:MW23699 {
     bdr:TTABBC8E5897C8D92A
         a                   :Title ;
         rdfs:label          "tshar gsum khug pa dbang gi gdams pa/"@bo-x-ewts .
+    
+    bdr:TTD5952A8AA2376EB6
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ye shes rdo rje/"@bo-x-ewts .
     
     bdr:TTE1358EA7935A4B4C
         a                   :Title ;

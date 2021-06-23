@@ -12,11 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG10237 {
+    bda:LG2430420612FC16B7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-07-27T15:31:19.075Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG789DFDC09C4DA743
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-12T13:50:29.477Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LGDE70071D2B1E8D45
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-27T15:59:28.058Z"^^xsd:dateTime ;
+        adm:logMessage      "addded print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGE95769617B6ABCA7
         a                   adm:UpdateOutlineData ;
@@ -30,14 +42,46 @@ bdg:MW1KG10237 {
         adm:logDate         "2014-02-12T10:49:45.592Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG10237  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG10237" ;
         adm:adminAbout      bdr:MW1KG10237 ;
-        adm:facetIndex      662 ;
-        adm:logEntry        bda:LG789DFDC09C4DA743 , bda:LGE95769617B6ABCA7 , bda:LGFF47C0D0555DBD59 ;
+        adm:facetIndex      679 ;
+        adm:gitPath         "56/MW1KG10237.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG10237 ;
+        adm:logEntry        bda:LG2430420612FC16B7 , bda:LG789DFDC09C4DA743 , bda:LGDE70071D2B1E8D45 , bda:LGE95769617B6ABCA7 , bda:LGFF47C0D0555DBD59 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL014AC2479F9EC45B
         a                   :ContentLocation ;
@@ -2342,7 +2386,51 @@ bdg:MW1KG10237 {
         :contentLocationPage  653 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG10237  :hasPart  bdr:MW1KG10237_2EB1C7 , bdr:MW1KG10237_B0667D ;
+    bdr:EV9CCCA23E4CF4295E
+        a                   :PublishedEvent ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:ID893CEE1CC0D2914B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001143333-7" .
+    
+    bdr:IDB7A62767EA59768D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ3340.S345 T3733 1974" .
+    
+    bdr:IDC8CFC60B227F54BB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "unk84004210" .
+    
+    bdr:IDCB7C17D294C5A207
+        a                   bdr:HollisId ;
+        rdf:value           "014255603" .
+    
+    bdr:IDDAD63AB14568B57A
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007424596-1" .
+    
+    bdr:MW1KG10237  a       :Instance , :SerialInstance ;
+        skos:altLabel       "sadhana-mala of the panchen lama bstan-pa'i ni-ma phyogs-las rnam-rgyal"@en-x-mixed ;
+        skos:prefLabel      "yi dam rgya mtsho'i sgrub thabs rin chen 'byung gnas kyi lhan thabs rin 'byung don gsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID893CEE1CC0D2914B , bdr:IDB7A62767EA59768D , bdr:IDC8CFC60B227F54BB , bdr:IDCB7C17D294C5A207 , bdr:IDDAD63AB14568B57A ;
+        :biblioNote         "reproduced by lokesh chandra from the collections of prof. raghu vira"@en , "pod 'di gnyis ni paN chen blo bzang dpal ldan bstan pa'i nyi ma'i gsung 'bum las pod ga pa dang nga pa gnyis zur du bton pa'o//" ;
+        :hasPart            bdr:MW1KG10237_2EB1C7 , bdr:MW1KG10237_B0667D ;
+        :hasSourcePrintery  bdr:G3JT12524 ;
+        :hasTitle           bdr:TT0C1E548F20985684 , bdr:TT46FEF9B20500D64D , bdr:TTE247799543F51E34 , bdr:TTF24B6333F055FD59 ;
+        :instanceEvent      bdr:EV9CCCA23E4CF4295E ;
+        :instanceHasReproduction  bdr:W1KG10237 ;
+        :instanceOf         bdr:WA1KG10237 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "international academy of indian culture"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09211 ;
+        :seriesNumber       "v. 210-211" ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG10237_010DBF
@@ -7046,6 +7134,10 @@ bdg:MW1KG10237 {
         a                   :Title ;
         rdfs:label          "phag mo ku rma pA dI/"@bo-x-ewts .
     
+    bdr:TT0C1E548F20985684
+        a                   :CoverTitle ;
+        rdfs:label          "Sadhana-mala of the Panchen Lama Bstan-paḥi-ñi-ma-phyogs-las-rnam-rgyal,entitled Yi-dam-rgya-mtshoḥi sgrub-thabs rin-chen-ḥbyuṅ-gnas-kyi lhan-thabs rin-ḥbyuṅ don gsal.Reproduced by Lokesh Chandra from the collections of Raghu Vira."@en-x-mixed .
+    
     bdr:TT0D7668F3B7A22145
         a                   :Title ;
         rdfs:label          "gtsug tor rnam rgyal phyag gnyis ma/"@bo-x-ewts .
@@ -7321,6 +7413,10 @@ bdg:MW1KG10237 {
     bdr:TT46DB62BACB36B6B5
         a                   :Title ;
         rdfs:label          "bdud mo re ma ti/"@bo-x-ewts .
+    
+    bdr:TT46FEF9B20500D64D
+        a                   :Title ;
+        rdfs:label          "yi dam rgya mtsho'i sgrub thabs rin chen 'byung gnas kyi lhan thabs rin 'byung don gsal/"@bo-x-ewts .
     
     bdr:TT477ACF74413F837A
         a                   :Title ;
@@ -8134,6 +8230,10 @@ bdg:MW1KG10237 {
         a                   :Title ;
         rdfs:label          "u rgyan sgrol ma gnas kyi dbang phyug ma/"@bo-x-ewts .
     
+    bdr:TTE247799543F51E34
+        a                   :CoverTitle ;
+        rdfs:label          "The Rin-lhan Sādhana-māla of Panchen Lama Bstan-paḥi-ñi-ma-phyogs-las-rnam-rgyal /edited by Lokesh Chandra."@en-x-mixed .
+    
     bdr:TTE2DA6C7373673044
         a                   :Title ;
         rdfs:label          "phyag brgyad sgrol ma/"@bo-x-ewts .
@@ -8225,6 +8325,10 @@ bdg:MW1KG10237 {
     bdr:TTF219F4DDF5F3162F
         a                   :Title ;
         rdfs:label          "'jam dpal nA ga rak+sha pa/"@bo-x-ewts .
+    
+    bdr:TTF24B6333F055FD59
+        a                   :TitlePageTitle ;
+        rdfs:label          "sadhana-mala of the panchen lama bstan-pa'i ni-ma phyogs-las rnam-rgyal"@en-x-mixed .
     
     bdr:TTF2C2365A14EF28DB
         a                   :Title ;

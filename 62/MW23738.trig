@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23738 {
+    bda:LG224435EA5DC08005
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T12:01:29.314Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG485815D8E562759D
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2018-07-12T09:36:32.435Z"^^xsd:dateTime ;
@@ -34,6 +40,10 @@ bdg:MW23738 {
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2018-07-02T15:33:31.276Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
+    
+    bda:LG653C1A691547426F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGAB4DCA36F0481B56
         a                   adm:UpdateOutlineData ;
@@ -59,15 +69,47 @@ bdg:MW23738 {
         adm:logMessage      "checkin"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23738  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS61561" ;
         :note               bdr:NTB0A9B4BE93770FF8 ;
         adm:adminAbout      bdr:MW23738 ;
-        adm:facetIndex      207 ;
-        adm:logEntry        bda:LG485815D8E562759D , bda:LG49C210D099E21CDD , bda:LG4F0F4CDE51BA1911 , bda:LG53AA1519964DDA8E , bda:LGAB4DCA36F0481B56 , bda:LGC4B5FF5B764AA214 , bda:LGE1D3779471584F1A , bda:LGED10C9E1713ED459 ;
+        adm:facetIndex      222 ;
+        adm:gitPath         "62/MW23738.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23738 ;
+        adm:logEntry        bda:LG224435EA5DC08005 , bda:LG485815D8E562759D , bda:LG49C210D099E21CDD , bda:LG4F0F4CDE51BA1911 , bda:LG53AA1519964DDA8E , bda:LG653C1A691547426F , bda:LGAB4DCA36F0481B56 , bda:LGC4B5FF5B764AA214 , bda:LGE1D3779471584F1A , bda:LGED10C9E1713ED459 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gene Smith and image and page number added by Lobsang Shastri"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0786957E410AD8CE
         a                   :ContentLocation ;
@@ -1176,7 +1218,49 @@ bdg:MW23738 {
         :contentLocationPage  438 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23738  :hasPart   bdr:MW23738_90CFC4 , bdr:MW23738_B39676 , bdr:MW23738_B4B369 , bdr:MW23738_B9084B ;
+    bdr:EV6D6A6FA278015F8E
+        a                   :PublishedEvent ;
+        :notAfter           "1985"^^xsd:gYear ;
+        :notBefore          "1980"^^xsd:gYear .
+    
+    bdr:ID31621885D32CE0A5
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011159918-0" .
+    
+    bdr:ID65B34D9DFC6AFC83
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5.R493 Z87 1980" .
+    
+    bdr:IDB05535DAAEE02132
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80901553" .
+    
+    bdr:IDCC5D63EA68FA9704
+        a                   bdr:HollisId ;
+        rdf:value           "014259080" .
+    
+    bdr:MW23738  a          :Instance , :SerialInstance ;
+        skos:altLabel       "mes po'i zal lun : a detailed commentary on the four tibetan medical tantras (rgyud bzi)"@en-x-mixed ;
+        skos:prefLabel      "mes po zhal lung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID31621885D32CE0A5 , bdr:ID65B34D9DFC6AFC83 , bdr:IDB05535DAAEE02132 , bdr:IDCC5D63EA68FA9704 ;
+        :biblioNote         "reproduced from prints from the lha-sa old zol dga'-ldan-phun-tshogs-glin blocks by o-rgyan rnam-rgyal"@en ;
+        :hasPart            bdr:MW23738_90CFC4 , bdr:MW23738_B39676 , bdr:MW23738_B4B369 , bdr:MW23738_B9084B ;
+        :hasSourcePrintery  bdr:G1PD129185 ;
+        :hasTitle           bdr:TT087B23D04296DF7C , bdr:TT4437320757C83AD9 , bdr:TT4E56E4186B87E846 ;
+        :instanceEvent      bdr:EV6D6A6FA278015F8E ;
+        :instanceHasReproduction  bdr:W23738 ;
+        :instanceOf         bdr:WA23738 ;
+        :isRoot             true ;
+        :note               bdr:NT7EBDEC59FB53EAE0 ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "t. s. tashigang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 100-103" ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23738_006378
@@ -3128,10 +3212,18 @@ bdg:MW23738 {
         :partTreeIndex      "3.19" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT7EBDEC59FB53EAE0
+        a                   :Note ;
+        :noteText           "-2559"@en .
+    
     bdr:NTB0A9B4BE93770FF8
         a                   :Note ;
         :noteSource         bdr:MW23738 ;
         :noteText           "mes po'i zhal lung /"@bo-x-ewts .
+    
+    bdr:TT087B23D04296DF7C
+        a                   :TitlePageTitle ;
+        rdfs:label          "mes po'i zal lun : a detailed commentary on the four tibetan medical tantras (rgyud bzi)"@en-x-mixed .
     
     bdr:TT1273F69B8BC7C670
         a                   :TitlePageTitle ;
@@ -3165,6 +3257,10 @@ bdg:MW23738 {
         a                   :TitlePageTitle ;
         rdfs:label          "gso thabs gnyis bstan pa'i le'u/"@bo-x-ewts .
     
+    bdr:TT4437320757C83AD9
+        a                   :Title ;
+        rdfs:label          "mes po zhal lung /"@bo-x-ewts .
+    
     bdr:TT45BB23BD46209F0E
         a                   :TitlePageTitle ;
         rdfs:label          "gnyen po cha dpyad bstan pa'i le'u/"@bo-x-ewts .
@@ -3172,6 +3268,10 @@ bdg:MW23738 {
     bdr:TT4D87E16EBE184BD9
         a                   :TitlePageTitle ;
         rdfs:label          "kha zas bsrung ba dang zas tshod ran par bza' ba'i le'u/"@bo-x-ewts .
+    
+    bdr:TT4E56E4186B87E846
+        a                   :CoverTitle ;
+        rdfs:label          "Mes poʼi źal luṅ :a detailed commentary on the four Tibetan medical tantras (Rgyud bźi) /by Zur-mkhar Blo-gros-rgyal-po (Legs-bśad-ʼtshol)"@en-x-mixed .
     
     bdr:TT5742CCCEE47C3A94
         a                   :Title ;

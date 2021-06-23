@@ -18,20 +18,49 @@ bdg:MW29902 {
         adm:logMessage      "adde subject"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG8F31E0E77C064E1E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGF3A57FE3126506B5
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-09-01T16:56:11.923Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29902  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB87071" ;
         adm:adminAbout      bdr:MW29902 ;
-        adm:facetIndex      70 ;
-        adm:logEntry        bda:LG05CD8EE0C004F26E , bda:LGF3A57FE3126506B5 ;
+        adm:facetIndex      82 ;
+        adm:gitPath         "73/MW29902.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29902 ;
+        adm:logEntry        bda:LG05CD8EE0C004F26E , bda:LG8F31E0E77C064E1E , bda:LGF3A57FE3126506B5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the generous support of the Dzongsar khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0D9B8B2914FB3138
         a                   :ContentLocation ;
@@ -387,7 +416,44 @@ bdg:MW29902 {
         :contentLocationInstance  bdr:W29902 ;
         :contentLocationPage  86 .
     
-    bdr:MW29902  :hasPart   bdr:MW29902_542949 , bdr:MW29902_63A093 , bdr:MW29902_82822F , bdr:MW29902_901C89 , bdr:MW29902_EA30D4 ;
+    bdr:EV924E0C7750722905
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID24E4E50C9B890FE1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005323059" .
+    
+    bdr:ID32899A87ED9894C4
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105062673" .
+    
+    bdr:ID4EC583DF15B98BDE
+        a                   bdr:HollisId ;
+        rdf:value           "014260111" .
+    
+    bdr:ID7D556B87FDECA57F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.4 .B63 2003 V. 19 BQ2167" .
+    
+    bdr:MW29902  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "dpal kye rdo rje'i rgyud kyi bshad pa bka'i brgya pa rin po che la gsol ba 'debs pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID24E4E50C9B890FE1 , bdr:ID32899A87ED9894C4 , bdr:ID4EC583DF15B98BDE , bdr:ID7D556B87FDECA57F ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW29902_542949 , bdr:MW29902_63A093 , bdr:MW29902_82822F , bdr:MW29902_901C89 , bdr:MW29902_EA30D4 ;
+        :hasTitle           bdr:TTA9E91ACD5D200968 , bdr:TTAD4E60A71682F63B , bdr:TTF64BA408F26E5B11 ;
+        :instanceEvent      bdr:EV924E0C7750722905 ;
+        :instanceHasReproduction  bdr:W29902 ;
+        :instanceOf         bdr:WA29902 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS26176 ;
+        :seriesNumber       "v. 19" ;
+        :workExtentStatement  "6, 14, 2, 497" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29902_025828
@@ -1146,6 +1212,14 @@ bdg:MW29902 {
         a                   :Title ;
         rdfs:label          "gleng gzhi/"@bo-x-ewts .
     
+    bdr:TTA9E91ACD5D200968
+        a                   :CoverTitle ;
+        rdfs:label          "rgyud 'grel/"@bo-x-ewts .
+    
+    bdr:TTAD4E60A71682F63B
+        a                   :Title ;
+        rdfs:label          "dpal kye rdo rje'i rgyud kyi bshad pa bka'i brgya pa rin po che la gsol ba 'debs pa/"@bo-x-ewts .
+    
     bdr:TTD1C66E8595044A97
         a                   :TitlePageTitle ;
         rdfs:label          "dpal kye'i rdo rje'i rtsa ba'i rgyud brtag pa gnyis pa'i rnam par bshad pa ma dag pa rnams 'joms par byed pa'i rnam par 'grel pa dag ldan zhes bya ba'i mchan gyi TIka gsang bdag rdo rje 'dzin pa'i dgongs rgyan/"@bo-x-ewts .
@@ -1153,4 +1227,8 @@ bdg:MW29902 {
     bdr:TTD69B1B3463EE6252
         a                   :Title ;
         rdfs:label          "kye rdo rje'i rgyud kyi bshad bka'i brgya pa'i gsol 'debs/"@bo-x-ewts .
+    
+    bdr:TTF64BA408F26E5B11
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal kye'i rdo rje'i rtsa ba'i rgyud brtag pa gnyis pa'i rnam par bshad pa ma dag pa rnams 'dzoms par byed pa'i rnam par 'grel pa dag ldan zhes bya ba'i mchan gyi TI ka gsang bdag rdo rje 'dzin pa'i dgongs rgyan/"@bo-x-ewts .
 }

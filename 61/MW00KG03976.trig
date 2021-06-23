@@ -30,6 +30,12 @@ bdg:MW00KG03976 {
         adm:logMessage      "Added T10MS14317 (dbang bskur)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LG390AB479172E4668
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-11-20T13:00:37.621Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and published first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG6DCFD637D29AAF01
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-05-04T11:25:56.739Z"^^xsd:dateTime ;
@@ -60,14 +66,33 @@ bdg:MW00KG03976 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00KG03976  a      adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2CZ10298" ;
         adm:adminAbout      bdr:MW00KG03976 ;
-        adm:facetIndex      490 ;
-        adm:logEntry        bda:LG30BC6FC058C7DF5F , bda:LG35A248F98FA867FD , bda:LG35CDB3773D747E35 , bda:LG6DCFD637D29AAF01 , bda:LG8F1D064E48CE8AE0 , bda:LG9D460E9EAE82B4F7 , bda:LGEC228ADB6F6FB9DC , bda:LGFCD8913538C48B20 ;
+        adm:facetIndex      498 ;
+        adm:gitPath         "61/MW00KG03976.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG03976 ;
+        adm:logEntry        bda:LG30BC6FC058C7DF5F , bda:LG35A248F98FA867FD , bda:LG35CDB3773D747E35 , bda:LG390AB479172E4668 , bda:LG6DCFD637D29AAF01 , bda:LG8F1D064E48CE8AE0 , bda:LG9D460E9EAE82B4F7 , bda:LGEC228ADB6F6FB9DC , bda:LGFCD8913538C48B20 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo; outline prepared with the gracious support of the Trace Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0045F9BF8557FBA9
         a                   :ContentLocation ;
@@ -1476,7 +1501,36 @@ bdg:MW00KG03976 {
         :contentLocationPage  58 ;
         :contentLocationVolume  3 .
     
-    bdr:MW00KG03976  :hasPart  bdr:MW00KG03976_63F6D7 , bdr:MW00KG03976_73238F , bdr:MW00KG03976_7EBE53 ;
+    bdr:EV1CED0084C6FB569C
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID505959C523F0C526
+        a                   bdr:HollisId ;
+        rdf:value           "014254447" .
+    
+    bdr:ID62578120D74FE7EB
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "97463915" .
+    
+    bdr:MW00KG03976  a      :Instance ;
+        skos:prefLabel      "gsung 'bum/_'jigs med phun tshogs 'byung gnas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID505959C523F0C526 , bdr:ID62578120D74FE7EB ;
+        :contentLocationStatement  "TBRC Library: Editor's Room, Case 3" ;
+        :editionStatement   "di 1 ben/"@bo-x-ewts ;
+        :hasPart            bdr:MW00KG03976_63F6D7 , bdr:MW00KG03976_73238F , bdr:MW00KG03976_7EBE53 ;
+        :hasTitle           bdr:TT0E4356D75A76C745 , bdr:TTA954490FF1CC47B9 ;
+        :illustrations      "ills" ;
+        :instanceEvent      bdr:EV1CED0084C6FB569C ;
+        :instanceHasReproduction  bdr:W00KG03976 ;
+        :instanceOf         bdr:WA00KG03976 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "xiang gang"@en ;
+        :publisherName      "xiang gang xin zhi chu ban she"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00KG03976_00DF5E
@@ -4683,6 +4737,10 @@ bdg:MW00KG03976 {
         a                   :Title ;
         rdfs:label          "'jam dpal zhi sgrub kyi cha lag blo 'phel ril bu sgrub thabs/"@bo-x-ewts .
     
+    bdr:TT0E4356D75A76C745
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos rje dam pa yid bzhin nor bu 'jigs med phun tshogs 'byung gnas dpal bzang po'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT0E6128C41EF4B97F
         a                   :Title ;
         rdfs:label          "'phagas pa'i khyad nor bzang po dri med tshul khrims la bsngags pa nyes spyod dagbyed bdud rtsi'i klung /"@bo-x-ewts .
@@ -5342,6 +5400,10 @@ bdg:MW00KG03976 {
     bdr:TTA90DEBFCA8AD0E0F
         a                   :Title ;
         rdfs:label          "yid bzhin dbang gi rgyal po'i gsol mchod dbang gi ru mtshom/"@bo-x-ewts .
+    
+    bdr:TTA954490FF1CC47B9
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'jigs med phun tshogs 'byung gnas/"@bo-x-ewts .
     
     bdr:TTAA049858749290C5
         a                   :Title ;

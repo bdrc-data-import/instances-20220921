@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30153 {
+    bda:LG5A15E0C023EDB652
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG718F31C032C6663D
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-10-09T09:26:07.839Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
+    
+    bda:LG78E766B381F3D05F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-02T16:48:56.323Z"^^xsd:dateTime ;
+        adm:logMessage      "added source printery and print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LG91F3E8BED07D9B25
         a                   adm:UpdateOutlineData ;
@@ -28,14 +38,39 @@ bdg:MW30153 {
         adm:logMessage      "edited and released"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30153  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS865" ;
         adm:adminAbout      bdr:MW30153 ;
-        adm:facetIndex      17 ;
-        adm:logEntry        bda:LG718F31C032C6663D , bda:LG91F3E8BED07D9B25 , bda:LGA770DAEB2C8BE822 ;
+        adm:facetIndex      29 ;
+        adm:gitPath         "26/MW30153.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30153 ;
+        adm:logEntry        bda:LG5A15E0C023EDB652 , bda:LG718F31C032C6663D , bda:LG78E766B381F3D05F , bda:LG91F3E8BED07D9B25 , bda:LGA770DAEB2C8BE822 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL211B118239DAABC9
         a                   :ContentLocation ;
@@ -81,7 +116,45 @@ bdg:MW30153 {
         :contentLocationInstance  bdr:W30153 ;
         :contentLocationVolume  1 .
     
-    bdr:MW30153  :hasPart   bdr:MW30153_61D34E , bdr:MW30153_A640B6 , bdr:MW30153_A822F1 , bdr:MW30153_B7E5E7 ;
+    bdr:EV693FB7E9F3F90CAD
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID4BB5946BA5608DD1
+        a                   bdr:HollisId ;
+        rdf:value           "014260662" .
+    
+    bdr:ID98FD83FF474CAD46
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7920 .B56 1983" .
+    
+    bdr:IDCD7D548710BAD68D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83903675" .
+    
+    bdr:MW30153  a          :Instance , :SerialInstance ;
+        skos:altLabel       "biographical writings recounting the lives of bla-chen dgons-pa-rab-gsal, bogdo chagan lama bkra-sis-rgya-mtsho, and thu'u-bkwan nag-dban-chos-kyi-rgya-mtsho"@en-x-mixed ;
+        skos:prefLabel      "bla chen dgongs pa rab gsal sogs kyi rnam thar khag gsum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4BB5946BA5608DD1 , bdr:ID98FD83FF474CAD46 , bdr:IDCD7D548710BAD68D ;
+        :authorshipStatement  "by the third thu'u-bkwan blo-bzan-chos-kyi-ni-ma"@en ;
+        :biblioNote         "reproduced from rare blockprints from the library of the venerable bandido khampo lama jambaldorjee gomboev, chairman of the central board of buddhists of the u.s.s.r"@en ;
+        :hasPart            bdr:MW30153_61D34E , bdr:MW30153_A640B6 , bdr:MW30153_A822F1 , bdr:MW30153_B7E5E7 ;
+        :hasSourcePrintery  bdr:G584 ;
+        :hasTitle           bdr:TT9457186CC29774C0 , bdr:TTF289DFF5FA40C979 ;
+        :instanceEvent      bdr:EV693FB7E9F3F90CAD ;
+        :instanceHasReproduction  bdr:W30153 ;
+        :instanceOf         bdr:WA30153 ;
+        :isRoot             true ;
+        :note               bdr:NT22CCB9298DEA18F7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "tibet house"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS30153 ;
+        :seriesNumber       "v. 2" ;
+        :workExtentStatement  "[48] p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30153_375B45
@@ -185,6 +258,10 @@ bdg:MW30153 {
         :partTreeIndex      "1.1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT22CCB9298DEA18F7
+        a                   :Note ;
+        :noteText           "series statement two: tibet house publications series ; 3"@en .
+    
     bdr:TT45FE1F95C7781D57
         a                   :Title ;
         rdfs:label          "grub pa'i dbang phyug ngag dbang chos kyi rgya mtsho'i rnam thar dpag bsam ljon bzang (rnam thar)"@bo-x-ewts .
@@ -201,6 +278,10 @@ bdg:MW30153 {
         a                   :Title ;
         rdfs:label          "bla chen byang chub sems dpa' dgongs pa rab gsal gyi rnam par thar pa mdo tsam gtam du brjod pa rin po che'i phreng mdzes (bla chen rnam thar)"@bo-x-ewts .
     
+    bdr:TT9457186CC29774C0
+        a                   :Title ;
+        rdfs:label          "bla chen dgongs pa rab gsal sogs kyi rnam thar khag gsum/"@bo-x-ewts .
+    
     bdr:TT95769293A1470017
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
@@ -208,4 +289,8 @@ bdg:MW30153 {
     bdr:TT9B1193F438616566
         a                   :Title ;
         rdfs:label          "sngon gleng ngo sprod/"@bo-x-ewts .
+    
+    bdr:TTF289DFF5FA40C979
+        a                   :TitlePageTitle ;
+        rdfs:label          "biographical writings recounting the lives of bla-chen dgons-pa-rab-gsal, bogdo chagan lama bkra-sis-rgya-mtsho, and thu'u-bkwan nag-dban-chos-kyi-rgya-mtsho"@en-x-mixed .
 }

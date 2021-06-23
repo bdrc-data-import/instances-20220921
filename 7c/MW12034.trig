@@ -18,6 +18,10 @@ bdg:MW12034 {
         adm:logMessage      "* publishes as a provisional"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG6FAD77F928B10203
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGA648F6B093650360
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-11-12T11:22:21.927Z"^^xsd:dateTime ;
@@ -29,14 +33,33 @@ bdg:MW12034 {
         adm:logMessage      "edited and released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW12034  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ2054" ;
         adm:adminAbout      bdr:MW12034 ;
-        adm:facetIndex      53 ;
-        adm:logEntry        bda:LG0641F717114AAA9A , bda:LGA648F6B093650360 , bda:LGB2087CE331E338E9 ;
+        adm:facetIndex      67 ;
+        adm:gitPath         "7c/MW12034.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW12034 ;
+        adm:logEntry        bda:LG0641F717114AAA9A , bda:LG6FAD77F928B10203 , bda:LGA648F6B093650360 , bda:LGB2087CE331E338E9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "kelsang lhamo with the generous support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL023BB630653A0605
         a                   :ContentLocation ;
@@ -176,7 +199,45 @@ bdg:MW12034 {
         :contentLocationInstance  bdr:W12034 ;
         :contentLocationPage  46 .
     
-    bdr:MW12034  :hasPart   bdr:MW12034_1E45AD , bdr:MW12034_310A11 , bdr:MW12034_482E81 , bdr:MW12034_7C1F47 ;
+    bdr:EVE223A9922664630D
+        a                   :PublishedEvent ;
+        :onYear             "1996"^^xsd:gYear .
+    
+    bdr:ID2CA9EEBAB0CFC8C0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542005421" .
+    
+    bdr:ID451A2F6D542D3921
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ942.L57 B56 1996" .
+    
+    bdr:ID488ED78791F76F3D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915907" .
+    
+    bdr:IDD92CED5A2F0DAAD2
+        a                   bdr:HollisId ;
+        rdf:value           "014254659" .
+    
+    bdr:MW12034  a          :Instance ;
+        skos:altLabel       "sai k'ang wa lo sang tan tseng chia ts'o chuan"@zh-latn-wadegile ;
+        skos:prefLabel      "blo bzang bstan 'dzin rgya mtsho'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2CA9EEBAB0CFC8C0 , bdr:ID451A2F6D542D3921 , bdr:ID488ED78791F76F3D , bdr:IDD92CED5A2F0DAAD2 ;
+        :authorshipStatement  "rnye blo bzang bstan pa'i rgyal mtshan and blo bzang bstan pa rgya mtshos brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW12034_1E45AD , bdr:MW12034_310A11 , bdr:MW12034_482E81 , bdr:MW12034_7C1F47 ;
+        :hasTitle           bdr:TT11345097C0512D28 , bdr:TT2F5245139A0ED422 , bdr:TTD9644253F00A02ED , bdr:TTE94540C5D342D8DB , bdr:TTFE599DB31916CB91 ;
+        :instanceEvent      bdr:EVE223A9922664630D ;
+        :instanceHasReproduction  bdr:W12034 ;
+        :instanceOf         bdr:WA12034 ;
+        :isRoot             true ;
+        :note               bdr:NTEDD811518E885DE6 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 250 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW12034_02FAAB
@@ -496,9 +557,17 @@ bdg:MW12034 {
         :partTreeIndex      "3.6" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTEDD811518E885DE6
+        a                   :Note ;
+        :noteText           "Reprinted from the Sku 'bum print.\nWritten at the behest of Blon-chos Ri-khrod-pa Bstan-'dzin-rgya-mtsho,  A-mdo Zhwa-dmar, A-lags Glang-rgya, Byang-btang-pa Dkon-mchog-blo-gros, Dge-slong Ngag-dbang-rgyal-mtshan, etc."@en .
+    
     bdr:TT05633EC5333B2766
         a                   :TitlePageTitle ;
         rdfs:label          "rigs dang dkyil 'khor rgya mtsho'i mnga' bdag rje gser khang pa blo bzang bstan 'dzin rgya mtsho'i zhal snga nas kyi rnam par thar pa mdo tsam brjod pa thams cad mkhyen par bgrod pa'i them skas/"@bo-x-ewts .
+    
+    bdr:TT11345097C0512D28
+        a                   :ColophonTitle ;
+        rdfs:label          "saikangwa luosangdanzengjiacuo zhuan"@zh-latn-pinyin-x-ndia .
     
     bdr:TT1976A42ADCDF7B20
         a                   :Title ;
@@ -511,6 +580,10 @@ bdg:MW12034 {
     bdr:TT279FA0FE5EF879F7
         a                   :Title ;
         rdfs:label          "mdo sngags zab chos du mas gdul bya'i re ba bskang ba dang / dgon chen bkra shis 'byung gnas sogs su sku gsung thugs kyi rten bzhengs pa/"@bo-x-ewts .
+    
+    bdr:TT2F5245139A0ED422
+        a                   :TitlePageTitle ;
+        rdfs:label          "rigs dang dkyil 'khor rgya mtsho'i mnga' bdag rje gser khang pa blo bzang bstan 'dzin rgya mtsho'i zhal snga nas kyi rnam par thar pa mdo tsam brjod pa thams cad mkhyen par bgrod pa'i them skas/"@bo-x-ewts .
     
     bdr:TT37D55B4D91611CBB
         a                   :Title ;
@@ -588,9 +661,17 @@ bdg:MW12034 {
         a                   :OtherTitle ;
         rdfs:label          "par bskun gsal bshad/"@bo-x-ewts .
     
+    bdr:TTD9644253F00A02ED
+        a                   :ColophonTitle ;
+        rdfs:label          "sai k'ang wa lo sang tan tseng chia ts'o chuan"@zh-latn-wadegile .
+    
     bdr:TTDAFB3A1FBE7607F6
         a                   :Title ;
         rdfs:label          "rang dgon bkra shis 'byung nas su mdo sngags kyi gzhung la sbyang pa/"@bo-x-ewts .
+    
+    bdr:TTE94540C5D342D8DB
+        a                   :CoverTitle ;
+        rdfs:label          "rje gser khang pa blo bzang bstan 'dzin rgya mtsho'i rnam thar/"@bo-x-ewts .
     
     bdr:TTF6D41F7CB4427C18
         a                   :Title ;
@@ -599,4 +680,8 @@ bdg:MW12034 {
     bdr:TTF884FC7C2A516BCA
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TTFE599DB31916CB91
+        a                   :Title ;
+        rdfs:label          "blo bzang bstan 'dzin rgya mtsho'i rnam thar/"@bo-x-ewts .
 }

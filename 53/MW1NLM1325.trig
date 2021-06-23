@@ -18,6 +18,30 @@ bdg:MW1NLM1325 {
         adm:logMessage      "fixed typos and released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG4CC7B07366BB9D45
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG7E8B649F855396DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-15T15:27:36.983Z"^^xsd:dateTime ;
+        adm:logMessage      "for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGC25D16E58D81AB75
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1325"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIM8B57F2B7  a     adm:InitialDataImport ;
         adm:logDate         "2020-04-17T15:30:18.433Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
@@ -28,10 +52,15 @@ bdg:MW1NLM1325 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356827" ;
         adm:adminAbout      bdr:MW1NLM1325 ;
-        adm:facetIndex      26 ;
-        adm:logEntry        bda:LG471F91014DFC1E28 , bda:LGIM8B57F2B7 ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "53/MW1NLM1325.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1325 ;
+        adm:logEntry        bda:LG471F91014DFC1E28 , bda:LG4CC7B07366BB9D45 , bda:LG7E8B649F855396DA , bda:LGC25D16E58D81AB75 , bda:LGIM15986367 , bda:LGIM8B57F2B7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL47D90BD7E34DB668
         a                   :ContentLocation ;
@@ -93,7 +122,19 @@ bdg:MW1NLM1325 {
         :contentLocationInstance  bdr:W1NLM1325 ;
         :contentLocationPage  59 .
     
-    bdr:MW1NLM1325  :hasPart  bdr:MW1NLM1325_41BAC2 , bdr:MW1NLM1325_70E827 , bdr:MW1NLM1325_77B2B6 , bdr:MW1NLM1325_782C43 , bdr:MW1NLM1325_85F68F , bdr:MW1NLM1325_955900 , bdr:MW1NLM1325_C7EE13 , bdr:MW1NLM1325_D1A946 , bdr:MW1NLM1325_E536C8 , bdr:MW1NLM1325_E8954F ;
+    bdr:MW1NLM1325  a       :Instance ;
+        skos:prefLabel      "yi dam sgrub skor/"@bo-x-ewts ;
+        :dimensionsStatement  "17x7" ;
+        :hasPart            bdr:MW1NLM1325_41BAC2 , bdr:MW1NLM1325_70E827 , bdr:MW1NLM1325_77B2B6 , bdr:MW1NLM1325_782C43 , bdr:MW1NLM1325_85F68F , bdr:MW1NLM1325_955900 , bdr:MW1NLM1325_C7EE13 , bdr:MW1NLM1325_D1A946 , bdr:MW1NLM1325_E536C8 , bdr:MW1NLM1325_E8954F ;
+        :hasTitle           bdr:TT00EEF7AF1BE32524 , bdr:TT228D39C3574C0548 ;
+        :instanceHasReproduction  bdr:W1NLM1325 ;
+        :instanceOf         bdr:WA1NLM1325 ;
+        :isRoot             true ;
+        :note               bdr:NT3227F9DD184537C7 , bdr:NT4B6DC0BBB7AD5C4C , bdr:NTAF80E2E74FAE9523 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1325_41BAC2
@@ -235,6 +276,26 @@ bdg:MW1NLM1325 {
         :partOf             bdr:MW1NLM1325 ;
         :partTreeIndex      "08" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT3227F9DD184537C7
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT4B6DC0BBB7AD5C4C
+        a                   :Note ;
+        :noteText           "missingPages: M0059243-009 [Missing page from 10A-10B] Image 149-150, M0059243-014 [Missing page from 8A-8B] Image 269-270 M0059243-017 [19,20th pages printed on the same page]"@en .
+    
+    bdr:NTAF80E2E74FAE9523
+        a                   :Note ;
+        :noteText           "nlmId: M0059243"@en .
+    
+    bdr:TT00EEF7AF1BE32524
+        a                   :Title ;
+        rdfs:label          "yi dam sgrub skor/"@bo-x-ewts .
+    
+    bdr:TT228D39C3574C0548
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos skyong dregs pa lcam sring gi mngon rtogs bskang bshags bstod bskul dang bcas pa/"@bo-x-ewts .
     
     bdr:TT2B8E0F5CE44E8B75
         a                   :Title ;

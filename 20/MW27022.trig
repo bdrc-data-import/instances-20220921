@@ -30,6 +30,10 @@ bdg:MW27022 {
         adm:logMessage      "fix number and Normalized"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG4EC3E8610AEF0342
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG5DA5324EFDF0B1B6
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2018-07-03T11:18:34.182Z"^^xsd:dateTime ;
@@ -59,14 +63,46 @@ bdg:MW27022 {
         adm:logMessage      "rechecked outline"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27022  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1014668" ;
         adm:adminAbout      bdr:MW27022 ;
-        adm:facetIndex      100 ;
-        adm:logEntry        bda:LG080070129DD82417 , bda:LG0C1A4A1550F39B49 , bda:LG3822842AADAE2E57 , bda:LG5DA5324EFDF0B1B6 , bda:LG923F925B51395530 , bda:LGB64C874426A15578 , bda:LGE578FAF8FF96B5E3 , bda:LGE5D230C4667C9846 ;
+        adm:facetIndex      116 ;
+        adm:gitPath         "20/MW27022.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27022 ;
+        adm:logEntry        bda:LG080070129DD82417 , bda:LG0C1A4A1550F39B49 , bda:LG3822842AADAE2E57 , bda:LG4EC3E8610AEF0342 , bda:LG5DA5324EFDF0B1B6 , bda:LG923F925B51395530 , bda:LGB64C874426A15578 , bda:LGE578FAF8FF96B5E3 , bda:LGE5D230C4667C9846 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0466BC3D9070C4DE
         a                   :ContentLocation ;
@@ -705,7 +741,49 @@ bdg:MW27022 {
         :contentLocationPage  177 ;
         :contentLocationVolume  1 .
     
-    bdr:MW27022  :hasPart   bdr:MW27022_2CC484 , bdr:MW27022_2F038A , bdr:MW27022_4953A1 , bdr:MW27022_5139C2 , bdr:MW27022_571AB4 , bdr:MW27022_58114B , bdr:MW27022_6624D8 , bdr:MW27022_8ABA6A , bdr:MW27022_8C4E08 , bdr:MW27022_9710A6 , bdr:MW27022_9CB949 , bdr:MW27022_BB5A99 , bdr:MW27022_C672A9 , bdr:MW27022_D07471 , bdr:MW27022_DEA8DE , bdr:MW27022_E40C7A , bdr:MW27022_EE3CAD ;
+    bdr:EVBB3FE263C4055C53
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID46E2C8E2009301D5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004310996" .
+    
+    bdr:ID5A59A2ACDF4A8B32
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009980722-X" .
+    
+    bdr:ID9C99902E84ED34AA
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105059974" .
+    
+    bdr:IDA79B20B2D9E2A998
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6349.C432 D636 2004" .
+    
+    bdr:IDCF7159432DF72058
+        a                   bdr:HollisId ;
+        rdf:value           "014259573" .
+    
+    bdr:MW27022  a          :Instance ;
+        skos:altLabel       "Gsaṅ chen sṅa ʾgyur bstan paʾi mṅaʾ bdag Dpal-yul Rnam-rgyal-byaṅ-chub-chos-gliṅ gi gdan rabs kyi byuṅ ba brjod pa pad ma dkar poʾi do śal źes bya ba bźugs so /Mu-po nas."@en-x-mixed , "baiyu si li shi yu xian zhuang yan jiu"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "dpal yul rnam rgyal byang chub chos gling /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID46E2C8E2009301D5 , bdr:ID5A59A2ACDF4A8B32 , bdr:ID9C99902E84ED34AA , bdr:IDA79B20B2D9E2A998 , bdr:IDCF7159432DF72058 ;
+        :authorshipStatement  "mu po nas/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW27022_2CC484 , bdr:MW27022_2F038A , bdr:MW27022_4953A1 , bdr:MW27022_5139C2 , bdr:MW27022_571AB4 , bdr:MW27022_58114B , bdr:MW27022_6624D8 , bdr:MW27022_8ABA6A , bdr:MW27022_8C4E08 , bdr:MW27022_9710A6 , bdr:MW27022_9CB949 , bdr:MW27022_BB5A99 , bdr:MW27022_C672A9 , bdr:MW27022_D07471 , bdr:MW27022_DEA8DE , bdr:MW27022_E40C7A , bdr:MW27022_EE3CAD ;
+        :hasTitle           bdr:TT5F062D30E463D266 , bdr:TTC320F02D825D306D , bdr:TTD3112AA78D3CAE94 , bdr:TTD71E9441FE6FD0B8 ;
+        :instanceEvent      bdr:EVBB3FE263C4055C53 ;
+        :instanceHasReproduction  bdr:W27022 ;
+        :instanceOf         bdr:WA27022 ;
+        :isRoot             true ;
+        :note               bdr:NTDFF311E66446BA21 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "6, 417 pp." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27022_0093B4
@@ -1721,4 +1799,24 @@ bdg:MW27022 {
         :partOf             bdr:MW27022_BB5A99 ;
         :partTreeIndex      "09.13" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:NTDFF311E66446BA21
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned imaes, tiffs and pdf files\nscanned for preservation purposes; not for distribution"@en .
+    
+    bdr:TT5F062D30E463D266
+        a                   :ColophonTitle ;
+        rdfs:label          "baiyu si li shi yu xian zhuang yan jiu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTC320F02D825D306D
+        a                   :Title ;
+        rdfs:label          "dpal yul rnam rgyal byang chub chos gling /"@bo-x-ewts .
+    
+    bdr:TTD3112AA78D3CAE94
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang chen snga 'gyur bstan pa'i mnga' bdag dpal yul rnam rgyal byang chub chos gling gi gdan rabs kyi byung ba brjod pa pad ma dkar po'i do shal/"@bo-x-ewts .
+    
+    bdr:TTD71E9441FE6FD0B8
+        a                   :CoverTitle ;
+        rdfs:label          "Gsaṅ chen sṅa ʾgyur bstan paʾi mṅaʾ bdag Dpal-yul Rnam-rgyal-byaṅ-chub-chos-gliṅ gi gdan rabs kyi byuṅ ba brjod pa pad ma dkar poʾi do śal źes bya ba bźugs so /Mu-po nas."@en-x-mixed .
 }

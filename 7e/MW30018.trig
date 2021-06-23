@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30018 {
+    bda:LG254B5031667BAF23
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-27T10:18:41.599Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LGB38DD9B62B446B26
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-10-13T12:16:39.195Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LGB982B80724828CED
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGC3B159EE27BE924D
         a                   adm:UpdateOutlineData ;
@@ -23,14 +33,39 @@ bdg:MW30018 {
         adm:logMessage      "zhus dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30018  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB87479" ;
         adm:adminAbout      bdr:MW30018 ;
-        adm:facetIndex      45 ;
-        adm:logEntry        bda:LGB38DD9B62B446B26 , bda:LGC3B159EE27BE924D ;
+        adm:facetIndex      61 ;
+        adm:gitPath         "7e/MW30018.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30018 ;
+        adm:logEntry        bda:LG254B5031667BAF23 , bda:LGB38DD9B62B446B26 , bda:LGB982B80724828CED , bda:LGC3B159EE27BE924D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0992AF58447BEE2A
         a                   :ContentLocation ;
@@ -134,7 +169,51 @@ bdg:MW30018 {
         :contentLocationInstance  bdr:W30018 ;
         :contentLocationPage  23 .
     
-    bdr:MW30018  :hasPart   bdr:MW30018_04DEBB , bdr:MW30018_18BF95 , bdr:MW30018_94D1E9 , bdr:MW30018_994A73 , bdr:MW30018_9A8701 , bdr:MW30018_AC4FEF , bdr:MW30018_D39D69 , bdr:MW30018_FD70D7 ;
+    bdr:CR08DB37C1DAFB1DE1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9469 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAEB18D4DFFDD8544
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID1E1E9800C8E8E720
+        a                   bdr:HollisId ;
+        rdf:value           "014260571" .
+    
+    bdr:ID55D7CA9973A75653
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004314766" .
+    
+    bdr:ID773A508E8AE4C590
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542009249" .
+    
+    bdr:IDEDF9E85B5148A0D1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7679.4 .B64 2004  VOL. 9 BQ6135" .
+    
+    bdr:MW30018  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "sdom gsum rgyan dang de'i rgya cher 'grel pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1E1E9800C8E8E720 , bdr:ID55D7CA9973A75653 , bdr:ID773A508E8AE4C590 , bdr:IDEDF9E85B5148A0D1 ;
+        :authorshipStatement  "['brug pa padma dkar pos mdzad] ; mkhan po dam chos zla bas bsgrigs."@bo-x-ewts ;
+        :creator            bdr:CR08DB37C1DAFB1DE1 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW30018_04DEBB , bdr:MW30018_18BF95 , bdr:MW30018_94D1E9 , bdr:MW30018_994A73 , bdr:MW30018_9A8701 , bdr:MW30018_AC4FEF , bdr:MW30018_D39D69 , bdr:MW30018_FD70D7 ;
+        :hasTitle           bdr:TT233E8649D733671C , bdr:TT2F794DC73E2F26EF , bdr:TT42F717836DA0442B , bdr:TT894DD973C4D5EC48 , bdr:TTFD34EBA99DC2A274 ;
+        :instanceEvent      bdr:EVAEB18D4DFFDD8544 ;
+        :instanceHasReproduction  bdr:IE30018 , bdr:W30018 ;
+        :instanceOf         bdr:WA30018 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS28983 ;
+        :seriesNumber       "v. 9" ;
+        :workExtentStatement  "8, 3, 2, 1, 950 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30018_04DEBB
@@ -379,6 +458,14 @@ bdg:MW30018 {
         a                   :ColophonTitle ;
         rdfs:label          "byang chub sems dpa'i tshul khrims bstan pa'i dbang gis byang chub sems dpa'i 'dul ba zhes bzhag pa gang rnam par bshad pa'i le'u gnyis pa'i rgya cher 'grel pa/"@bo-x-ewts .
     
+    bdr:TT233E8649D733671C
+        a                   :OtherTitle ;
+        rdfs:label          "sdom pa gsum gyi snying po bstan pa/"@bo-x-ewts .
+    
+    bdr:TT2F794DC73E2F26EF
+        a                   :OtherTitle ;
+        rdfs:label          "'dul ba kun las btus pa sdom pa gsum gyi rgyan ces bya ba'i rgya cher 'grel pa/"@bo-x-ewts .
+    
     bdr:TT319CE05D871F619B
         a                   :Title ;
         rdfs:label          "sdom gsum rgyan 'grel/"@bo-x-ewts .
@@ -386,6 +473,10 @@ bdg:MW30018 {
     bdr:TT3510B4B986A5A932
         a                   :TitlePageTitle ;
         rdfs:label          "'dul ba kun las btus pa sdom pa gsum gyi rgyan ces bya ba'i rgya cher 'grel pa/"@bo-x-ewts .
+    
+    bdr:TT42F717836DA0442B
+        a                   :OtherTitle ;
+        rdfs:label          "sdom pa gsum gyi rgyan ces bya ba'i bstan bcos/"@bo-x-ewts .
     
     bdr:TT44E3C00F8F7AF9E3
         a                   :Title ;
@@ -422,6 +513,10 @@ bdg:MW30018 {
     bdr:TT76D2FE2BE9D628AE
         a                   :ColophonTitle ;
         rdfs:label          "nyan thos kyi sdom pa/"@bo-x-ewts .
+    
+    bdr:TT894DD973C4D5EC48
+        a                   :Title ;
+        rdfs:label          "sdom gsum rgyan dang de'i rgya cher 'grel pa/"@bo-x-ewts .
     
     bdr:TT8BA89E4D0C57BDE8
         a                   :ColophonTitle ;
@@ -466,4 +561,8 @@ bdg:MW30018 {
     bdr:TTF73FE3AAD4C559C7
         a                   :OtherTitle ;
         rdfs:label          "so thar gyi sdom pa rnam par bshad pa ste/ le'u dang po'i rgya cher 'grel pa/"@bo-x-ewts .
+    
+    bdr:TTFD34EBA99DC2A274
+        a                   :CoverTitle ;
+        rdfs:label          "sdom gsum/"@bo-x-ewts .
 }

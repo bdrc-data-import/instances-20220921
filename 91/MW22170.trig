@@ -12,11 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22170 {
+    bda:LGBBA5895CB37047A7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC50A093EDF856935
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-12T13:50:31.153Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LGCD5BCB6D9F10F7D3
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-09-10T22:30:09.528Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted inProduct PR1COPYRIGHT"@en ;
+        adm:logWho          bdu:U00006 .
     
     bda:LGDF3F0FA78627B56B
         a                   adm:InitialOutlineDataImport ;
@@ -24,14 +34,40 @@ bdg:MW22170 {
         adm:logDate         "2014-02-12T10:49:46.359Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22170  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O22170" ;
         adm:adminAbout      bdr:MW22170 ;
-        adm:facetIndex      57 ;
-        adm:logEntry        bda:LGC50A093EDF856935 , bda:LGDF3F0FA78627B56B ;
+        adm:facetIndex      71 ;
+        adm:gitPath         "91/MW22170.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22170 ;
+        adm:logEntry        bda:LGBBA5895CB37047A7 , bda:LGC50A093EDF856935 , bda:LGCD5BCB6D9F10F7D3 , bda:LGDF3F0FA78627B56B , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL136624D513102E39
         a                   :ContentLocation ;
@@ -222,7 +258,49 @@ bdg:MW22170 {
         :contentLocationPage  360 ;
         :contentLocationVolume  2 .
     
-    bdr:MW22170  :hasPart   bdr:MW22170_A6D8F5 , bdr:MW22170_F0CD47 ;
+    bdr:EV748D59A9C52F2CAC
+        a                   :PublishedEvent ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:ID4A60C0E82CDE89A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98902331" .
+    
+    bdr:ID60D3D1FD115EAFF5
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008099125-4" .
+    
+    bdr:ID6684B19EB5B89D48
+        a                   bdr:HollisId ;
+        rdf:value           "014258675" .
+    
+    bdr:ID8CBABA49CEE1D5E0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ942.B573  G85 992" .
+    
+    bdr:IDBA73796AEE9F4CED
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542101390" .
+    
+    bdr:MW22170  a          :Instance ;
+        skos:altLabel       "Thuʾu-bkwan Chos-kyi-ñi-maʾi rtogs brjod padma dkar po /Guṅ-thaṅ Bstan-paʾi-sgron-mes mdzad."@en-x-mixed , "tu kuan lo sang ch'ueh chi ni ma chuan"@zh-latn-wadegile ;
+        skos:prefLabel      "thu'u bkwan chos kyi nyi ma'i rtogs brjod pad+ma dkar po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A60C0E82CDE89A9 , bdr:ID60D3D1FD115EAFF5 , bdr:ID6684B19EB5B89D48 , bdr:ID8CBABA49CEE1D5E0 , bdr:IDBA73796AEE9F4CED ;
+        :authorshipStatement  "gung thang bstan pa'i sgron mes mdzad ; gnya' gong dkon mchog tshe brtan gyis zhu dag byas/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22170_A6D8F5 , bdr:MW22170_F0CD47 ;
+        :hasTitle           bdr:TTB6B404B6E03FA851 , bdr:TTDDBF686728B86D1F , bdr:TTF87FE70921E01C1B ;
+        :instanceEvent      bdr:EV748D59A9C52F2CAC ;
+        :instanceHasItem    bdr:ITW22170_001 ;
+        :instanceHasReproduction  bdr:W22170 ;
+        :instanceOf         bdr:WA22170 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22170_0021E4
@@ -681,6 +759,10 @@ bdg:MW22170 {
         a                   :Title ;
         rdfs:label          "ka)tas thung dang stag lung dgon sogs su phebs nas bstan pa rgya cher spel tshul/"@bo-x-ewts .
     
+    bdr:TTB6B404B6E03FA851
+        a                   :Title ;
+        rdfs:label          "thu'u bkwan chos kyi nyi ma'i rtogs brjod pad+ma dkar po/"@bo-x-ewts .
+    
     bdr:TTC1F6B41132C07424
         a                   :Title ;
         rdfs:label          "le'u dang po/_sku bltams tshul gyi 'dab ma/"@bo-x-ewts .
@@ -693,6 +775,10 @@ bdg:MW22170 {
         a                   :Title ;
         rdfs:label          "le'u bcu bzhi pa/_gzugs sku'i bkod pa bsdus tshul dang /__gdung mchod kyi rim pa/__rnam thar gyi don bsdus pa'i 'dab ma/"@bo-x-ewts .
     
+    bdr:TTDDBF686728B86D1F
+        a                   :CoverTitle ;
+        rdfs:label          "Thuʾu-bkwan Chos-kyi-ñi-maʾi rtogs brjod padma dkar po /Guṅ-thaṅ Bstan-paʾi-sgron-mes mdzad."@en-x-mixed .
+    
     bdr:TTE90971A210DD3E40
         a                   :Title ;
         rdfs:label          "mchod par brjod pa dang rtsom par dam bca' ba/"@bo-x-ewts .
@@ -704,6 +790,10 @@ bdg:MW22170 {
     bdr:TTF17A44600118EE6D
         a                   :Title ;
         rdfs:label          "kha)rje kun mkhyen 'jigs med dbang bo ka mdor sku gshegs pas yul de la sogs par phebs nas 'phrin las spel tshul/"@bo-x-ewts .
+    
+    bdr:TTF87FE70921E01C1B
+        a                   :ColophonTitle ;
+        rdfs:label          "tu kuan lo sang ch'ueh chi ni ma chuan"@zh-latn-wadegile .
     
     bdr:TTF9B75EC1DF5D5208
         a                   :Title ;

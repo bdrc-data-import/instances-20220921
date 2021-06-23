@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW27932 {
+    bda:LG318FE58D01AEA90B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGBCE7F3AA633F42BF
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-09-06T11:11:00.694Z"^^xsd:dateTime ;
@@ -30,14 +34,33 @@ bdg:MW27932 {
         adm:logMessage      "fixed numbers problem and normalazed"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27932  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS57745" ;
         adm:adminAbout      bdr:MW27932 ;
-        adm:facetIndex      53 ;
-        adm:logEntry        bda:LGBCE7F3AA633F42BF , bda:LGE0D530E26E2488DB , bda:LGE71F35BEBA018E7C ;
+        adm:facetIndex      59 ;
+        adm:gitPath         "a1/MW27932.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27932 ;
+        adm:logEntry        bda:LG318FE58D01AEA90B , bda:LGBCE7F3AA633F42BF , bda:LGE0D530E26E2488DB , bda:LGE71F35BEBA018E7C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0938401FF7937057
         a                   :ContentLocation ;
@@ -333,7 +356,27 @@ bdg:MW27932 {
         :contentLocationInstance  bdr:W27932 ;
         :contentLocationPage  30 .
     
-    bdr:MW27932  :hasPart   bdr:MW27932_0AD28F , bdr:MW27932_12C9CA , bdr:MW27932_1BE55D , bdr:MW27932_20934A , bdr:MW27932_276FBC , bdr:MW27932_303386 , bdr:MW27932_35AE07 , bdr:MW27932_390BB8 , bdr:MW27932_48D944 , bdr:MW27932_516345 , bdr:MW27932_54D683 , bdr:MW27932_58F351 , bdr:MW27932_5A2B63 , bdr:MW27932_6DBF75 , bdr:MW27932_76848F , bdr:MW27932_82E0E3 , bdr:MW27932_86A7AB , bdr:MW27932_87B0B7 , bdr:MW27932_8D3537 , bdr:MW27932_95566E , bdr:MW27932_A66924 , bdr:MW27932_A6800A , bdr:MW27932_C7F7EC , bdr:MW27932_D33FE9 , bdr:MW27932_D54FAE ;
+    bdr:EV660422ECCDCA5836
+        a                   :PublishedEvent ;
+        :onYear             "2003"^^xsd:gYear .
+    
+    bdr:IDE29B438DF6108C49
+        a                   bdr:HollisId ;
+        rdf:value           "014259746" .
+    
+    bdr:MW27932  a          :Instance ;
+        skos:prefLabel      "stod mnga' ris sger rtse rdzong 'brong pa byang ma'i lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE29B438DF6108C49 ;
+        :hasPart            bdr:MW27932_0AD28F , bdr:MW27932_12C9CA , bdr:MW27932_1BE55D , bdr:MW27932_20934A , bdr:MW27932_276FBC , bdr:MW27932_303386 , bdr:MW27932_35AE07 , bdr:MW27932_390BB8 , bdr:MW27932_48D944 , bdr:MW27932_516345 , bdr:MW27932_54D683 , bdr:MW27932_58F351 , bdr:MW27932_5A2B63 , bdr:MW27932_6DBF75 , bdr:MW27932_76848F , bdr:MW27932_82E0E3 , bdr:MW27932_86A7AB , bdr:MW27932_87B0B7 , bdr:MW27932_8D3537 , bdr:MW27932_95566E , bdr:MW27932_A66924 , bdr:MW27932_A6800A , bdr:MW27932_C7F7EC , bdr:MW27932_D33FE9 , bdr:MW27932_D54FAE ;
+        :hasTitle           bdr:TTCFFDF071150A48B2 ;
+        :instanceEvent      bdr:EV660422ECCDCA5836 ;
+        :instanceHasReproduction  bdr:W27932 ;
+        :instanceOf         bdr:WA27932 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "127 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27932_0A2B4D
@@ -930,4 +973,8 @@ bdg:MW27932 {
         :partOf             bdr:MW27932_390BB8 ;
         :partTreeIndex      "22.9" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTCFFDF071150A48B2
+        a                   :Title ;
+        rdfs:label          "stod mnga' ris sger rtse rdzong 'brong pa byang ma'i lo rgyus/"@bo-x-ewts .
 }

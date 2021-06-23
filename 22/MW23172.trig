@@ -18,14 +18,43 @@ bdg:MW23172 {
         adm:logDate         "2019-08-28T11:50:30.312Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LG53B0081133986748
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6949A7D5AA64E708
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:47:56.467Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23172  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23172" ;
         adm:adminAbout      bdr:MW23172 ;
-        adm:facetIndex      148 ;
-        adm:logEntry        bda:LG41697CC18AA23D8A ;
+        adm:facetIndex      161 ;
+        adm:gitPath         "22/MW23172.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23172 ;
+        adm:logEntry        bda:LG41697CC18AA23D8A , bda:LG53B0081133986748 , bda:LG6949A7D5AA64E708 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL006BBC0414EB60C7
         a                   :ContentLocation ;
@@ -538,7 +567,45 @@ bdg:MW23172 {
         :contentLocationPage  161 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23172  :hasPart   bdr:MW23172_30B32F , bdr:MW23172_B18BA1 ;
+    bdr:EVBFD5B78649260E24
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID4FF9A63E8C8F5FF6
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2791" .
+    
+    bdr:ID5E4935490DB0C437
+        a                   bdr:HollisId ;
+        rdf:value           "014258813" .
+    
+    bdr:IDB1D375D464E5A7DE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7684 .D46 1985" .
+    
+    bdr:IDF24B5E88DA8D92D5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903695" .
+    
+    bdr:MW23172  a          :Instance ;
+        skos:altLabel       "collected writings of the 'bri-gun-pa hierarch dkon-mchog-rin-chen"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_dkon mchog rin chen/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4FF9A63E8C8F5FF6 , bdr:ID5E4935490DB0C437 , bdr:IDB1D375D464E5A7DE , bdr:IDF24B5E88DA8D92D5 ;
+        :biblioNote         "reproduced from one volume of the collected works of the scholar recently brought from 'bri-gun thel by the ven. yudra rinpoche"@en ;
+        :hasPart            bdr:MW23172_30B32F , bdr:MW23172_B18BA1 ;
+        :hasTitle           bdr:TT7DCC1181A0A9A5C4 , bdr:TT9483968F5C60B212 , bdr:TTA9AC040FB7FA8873 ;
+        :instanceEvent      bdr:EVBFD5B78649260E24 ;
+        :instanceHasReproduction  bdr:W23172 ;
+        :instanceOf         bdr:WA23172 ;
+        :isRoot             true ;
+        :note               bdr:NTB8D0CAEDE08CFAA1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "bir tibetan society"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "676 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23172_05BA29
@@ -1581,6 +1648,10 @@ bdg:MW23172 {
         :partTreeIndex      "2.28" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTB8D0CAEDE08CFAA1
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0378."@en .
+    
     bdr:TT014E3083C2510720
         a                   :Title ;
         rdfs:label          "(ya)_ne tso'i bstan bcos dri za'i glu dbyangs/____(ra)_mgon po 'khor lo lnga la'i lha khrid/_('di mi 'dug)"@bo-x-ewts .
@@ -1721,6 +1792,10 @@ bdg:MW23172 {
         a                   :Title ;
         rdfs:label          "'phags pa yang snying nor bu las/_rigs bdag 'chi med dbang por sgrub pa/_(da)"@bo-x-ewts .
     
+    bdr:TT7DCC1181A0A9A5C4
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected writings of the 'bri-gun-pa hierarch dkon-mchog-rin-chen"@en-x-mixed .
+    
     bdr:TT7E9FCB35DF1A1F03
         a                   :Title ;
         rdfs:label          "'phags pa yang snying nor bu las/_bka' gsung gi las phran pu tri'i me 'od/_(waM)"@bo-x-ewts .
@@ -1744,6 +1819,10 @@ bdg:MW23172 {
     bdr:TT9482F73DD0ED670F
         a                   :Title ;
         rdfs:label          "man ngag bdud rtsi thig pa las/_tshe sgrub 'chi bdag lag 'phrog"@bo-x-ewts .
+    
+    bdr:TT9483968F5C60B212
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dkon mchog rin chen/"@bo-x-ewts .
     
     bdr:TT97BB50B0D9B2CEE0
         a                   :Title ;
@@ -1772,6 +1851,10 @@ bdg:MW23172 {
     bdr:TTA96B83D893C8F261
         a                   :Title ;
         rdfs:label          "man ngag bdud rtsi thig pa las/_srog 'khor mngon spyod kyi rim pa/"@bo-x-ewts .
+    
+    bdr:TTA9AC040FB7FA8873
+        a                   :CoverTitle ;
+        rdfs:label          "rje dkon mchog rat+na 'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TTB379AC1F46677711
         a                   :Title ;

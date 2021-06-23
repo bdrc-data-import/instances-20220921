@@ -29,6 +29,12 @@ bdg:MW27313 {
         adm:logMessage      "added 9 G# as subject"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG47B767BB62C39F97
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T15:23:47.661Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat info and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG6157DD77EC63C140
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2011-03-18T14:52:28.807Z"^^xsd:dateTime ;
@@ -40,6 +46,15 @@ bdg:MW27313 {
         adm:logDate         "2011-03-26T07:27:55.858Z"^^xsd:dateTime ;
         adm:logMessage      "corrected audit log"@en ;
         adm:logWho          bdu:U00012 .
+    
+    bda:LG999D2B1A75E096FC
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-11-25T14:14:10.866Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGB4C59D8CC8C80C62
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGB82DE87AB5001E66
         a                   adm:InitialOutlineData ;
@@ -59,14 +74,33 @@ bdg:MW27313 {
         adm:logMessage      "added pagenation"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27313  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS5593" ;
         adm:adminAbout      bdr:MW27313 ;
-        adm:facetIndex      96 ;
-        adm:logEntry        bda:LG0607B4419CBA76A1 , bda:LG3185C7092E525223 , bda:LG3B7DA6A45F99E194 , bda:LG6157DD77EC63C140 , bda:LG90DEC6DB0CB3E23B , bda:LGB82DE87AB5001E66 , bda:LGDF47884F110CB62F , bda:LGFA2A1D196A9F3AE6 ;
+        adm:facetIndex      111 ;
+        adm:gitPath         "70/MW27313.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27313 ;
+        adm:logEntry        bda:LG0607B4419CBA76A1 , bda:LG3185C7092E525223 , bda:LG3B7DA6A45F99E194 , bda:LG47B767BB62C39F97 , bda:LG6157DD77EC63C140 , bda:LG90DEC6DB0CB3E23B , bda:LG999D2B1A75E096FC , bda:LGB4C59D8CC8C80C62 , bda:LGB82DE87AB5001E66 , bda:LGDF47884F110CB62F , bda:LGFA2A1D196A9F3AE6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of khyentse foudation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL07B2F78FCA8B3081
         a                   :ContentLocation ;
@@ -383,7 +417,54 @@ bdg:MW27313 {
         :contentLocationPage  126 ;
         :contentLocationVolume  1 .
     
-    bdr:MW27313  :hasPart   bdr:MW27313_90B72A , bdr:MW27313_C24B35 , bdr:MW27313_EFBE22 ;
+    bdr:CR75E91BE9BD3ADEB3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1166 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV916E9EB2EE9A5CC6
+        a                   :PublishedEvent ;
+        :onYear             "1990"^^xsd:gYear .
+    
+    bdr:ID3EB83D0B5C369961
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890021" .
+    
+    bdr:ID624E1B403B7DF3E9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95902159" .
+    
+    bdr:IDC2F70EEC3EAC9438
+        a                   bdr:HollisId ;
+        rdf:value           "014259610" .
+    
+    bdr:IDE1B3D34479F4D171
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7549 .D54 1990" .
+    
+    bdr:MW27313  a          :Instance , :SerialInstance ;
+        skos:altLabel       "格敦群培著作"@zh-hant ;
+        skos:prefLabel      "gsung 'bum/_dge 'dun chos 'phel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3EB83D0B5C369961 , bdr:ID624E1B403B7DF3E9 , bdr:IDC2F70EEC3EAC9438 , bdr:IDE1B3D34479F4D171 ;
+        :authorshipStatement  "dpe sgrig 'gan 'khur ba hor khang bsod nams dpal 'bar/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR75E91BE9BD3ADEB3 ;
+        :editionStatement   "par gzhi dang po/ par thengs gnyis pa/"@bo-x-ewts ;
+        :hasPart            bdr:MW27313_90B72A , bdr:MW27313_C24B35 , bdr:MW27313_EFBE22 ;
+        :hasTitle           bdr:TT14DE5EE15B5AB988 , bdr:TT4FA97654802B7A65 , bdr:TTA2C5540678DFEAEF , bdr:TTF9BBC930ADFE99D0 ;
+        :instanceEvent      bdr:EV916E9EB2EE9A5CC6 ;
+        :instanceHasReproduction  bdr:W27313 ;
+        :instanceOf         bdr:WA1KG4286 , bdr:WA27313 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "10-12" ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27313_09142F
@@ -1036,6 +1117,10 @@ bdg:MW27313 {
         a                   :TitlePageTitle ;
         rdfs:label          "bod chen po'i srid lugs dang 'brel ba'i rgyal rabs deb ther dkar po/"@bo-x-ewts .
     
+    bdr:TT14DE5EE15B5AB988
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dge 'dun chos 'phel/"@bo-x-ewts .
+    
     bdr:TT17C8D6B31B7879F0
         a                   :TitlePageTitle ;
         rdfs:label          "mu stegs kyi chos lugs/"@bo-x-ewts .
@@ -1063,6 +1148,10 @@ bdg:MW27313 {
     bdr:TT4F5AE4F150377405
         a                   :TitlePageTitle ;
         rdfs:label          "dge 'dun chos 'phel gyis bsgyur ba dang brtsam pa dngos su bzhugs yod med yongs kyi tho yig"@bo-x-ewts .
+    
+    bdr:TT4FA97654802B7A65
+        a                   :ColophonTitle ;
+        rdfs:label          "格敦群培著作"@zh-hant .
     
     bdr:TT5576917800E3799E
         a                   :TitlePageTitle ;
@@ -1127,6 +1216,10 @@ bdg:MW27313 {
     bdr:TTA1372B25E6E014D3
         a                   :TitlePageTitle ;
         rdfs:label          "dge 'dun chos 'phel gyi gsung rtsom/ deb dang po'i dkar chag"@bo-x-ewts .
+    
+    bdr:TTA2C5540678DFEAEF
+        a                   :TitlePageTitle ;
+        rdfs:label          "dge 'dun chos 'phel gyi gsung rtsom/"@bo-x-ewts .
     
     bdr:TTA7ED2809484DEE82
         a                   :TitlePageTitle ;
@@ -1195,4 +1288,8 @@ bdg:MW27313 {
     bdr:TTF21EC9803C854EB7
         a                   :TitlePageTitle ;
         rdfs:label          "sngon dang da lta'i bar yul so so'i yig rigs/"@bo-x-ewts .
+    
+    bdr:TTF9BBC930ADFE99D0
+        a                   :ColophonTitle ;
+        rdfs:label          "ge dun qun pei zhu suo"@zh-latn-pinyin-x-ndia .
 }

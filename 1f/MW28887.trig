@@ -18,14 +18,37 @@ bdg:MW28887 {
         adm:logDate         "2019-08-28T11:50:36.292Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGFD64F37F61976456
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28887  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O28887" ;
         adm:adminAbout      bdr:MW28887 ;
-        adm:facetIndex      82 ;
-        adm:logEntry        bda:LG060FD2E07313A01B ;
+        adm:facetIndex      93 ;
+        adm:gitPath         "1f/MW28887.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28887 ;
+        adm:logEntry        bda:LG060FD2E07313A01B , bda:LGFD64F37F61976456 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0903668438420BFB
         a                   :ContentLocation ;
@@ -307,7 +330,39 @@ bdg:MW28887 {
         :contentLocationPage  462 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28887  :hasPart   bdr:MW28887_090516 , bdr:MW28887_4ACBAF ;
+    bdr:EVC856E3B776FAF119
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID8ADF157394863D58
+        a                   bdr:HollisId ;
+        rdf:value           "014259821" .
+    
+    bdr:ID905B0544DA3F9B6B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540929804" .
+    
+    bdr:MW28887  a          :Instance , :SerialInstance ;
+        skos:altLabel       "ga ma ba qu ying duo ji wen ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rgyal ba'i dbang po skyabs rje karma pa sku phreng bcu ba chos dbyings rdo rje mchog gi gsung 'bum legs bshad nor bu'i gtsug rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8ADF157394863D58 , bdr:ID905B0544DA3F9B6B ;
+        :authorshipStatement  "mgo log khun gna' rtsom bya ba'i gzhung las khang gis 'tshol sdud dag sgrig byas/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW28887_090516 , bdr:MW28887_4ACBAF ;
+        :hasTitle           bdr:TT3188DBD65B56683E , bdr:TT4F3D5B2D937252D8 , bdr:TTE86D00238F11B884 , bdr:TTFAC66DAFEA487CF1 ;
+        :instanceEvent      bdr:EVC856E3B776FAF119 ;
+        :instanceHasReproduction  bdr:W28887 ;
+        :instanceOf         bdr:WA28887 ;
+        :isRoot             true ;
+        :note               bdr:NT38AE1D1772D6C6C4 ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG6199 ;
+        :seriesNumber       "v. 18-19" ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28887_090516
@@ -888,6 +943,10 @@ bdg:MW28887 {
         :partTreeIndex      "1.06" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT38AE1D1772D6C6C4
+        a                   :Note ;
+        :noteText           "-4923"@en .
+    
     bdr:TT000DCAAA41E4B441
         a                   :Title ;
         rdfs:label          "karma blo gros nor ldan mchog dga' zhes bya ba mos gus dang ldan/"@bo-x-ewts .
@@ -940,6 +999,10 @@ bdg:MW28887 {
         a                   :Title ;
         rdfs:label          "sa ga zla ba'i dus khyad par can la/"@bo-x-ewts .
     
+    bdr:TT3188DBD65B56683E
+        a                   :CoverTitle ;
+        rdfs:label          "rje karma bcu ba chos dbyings rdo rje'i gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT37D6BFF6956CB2A5
         a                   :Title ;
         rdfs:label          "dben gnas gnya' gnyis ri khrod du/"@bo-x-ewts .
@@ -951,6 +1014,10 @@ bdg:MW28887 {
     bdr:TT4B7E87A927DE2C27
         a                   :Title ;
         rdfs:label          "'du 'dzi'i blo sna brid de yun ring song /"@bo-x-ewts .
+    
+    bdr:TT4F3D5B2D937252D8
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_chos dbyings rdo rje/"@bo-x-ewts .
     
     bdr:TT53CE85DFFB26CB53
         a                   :Title ;
@@ -1043,6 +1110,14 @@ bdg:MW28887 {
     bdr:TTE20C8E9E11E0502B
         a                   :Title ;
         rdfs:label          "byang chub sems dpa'i rtogs brjod 'jo'i ba mo/"@bo-x-ewts .
+    
+    bdr:TTE86D00238F11B884
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal ba'i dbang po skyabs rje karma pa sku phreng bcu ba chos dbyings rdo rje mchog gi gsung 'bum legs bshad nor bu'i gtsug rgyan/"@bo-x-ewts .
+    
+    bdr:TTFAC66DAFEA487CF1
+        a                   :ColophonTitle ;
+        rdfs:label          "ga ma ba qu ying duo ji wen ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TTFF005E8D999AA1D1
         a                   :Title ;

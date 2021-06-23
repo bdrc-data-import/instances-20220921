@@ -28,19 +28,42 @@ bdg:MW21609 {
         adm:logDate         "2009-12-16T15:42:04.498Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LG6D4405AC67955065
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGE612BD810776BDE7
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-12T10:39:44.242Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21609  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS2585" ;
         adm:adminAbout      bdr:MW21609 ;
-        adm:facetIndex      51 ;
-        adm:logEntry        bda:LG2AA0D3A8A51A9480 , bda:LG475DB75B48FB26F5 , bda:LG4B8C397976BBC4F3 , bda:LGE612BD810776BDE7 ;
+        adm:facetIndex      63 ;
+        adm:gitPath         "92/MW21609.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21609 ;
+        adm:logEntry        bda:LG2AA0D3A8A51A9480 , bda:LG475DB75B48FB26F5 , bda:LG4B8C397976BBC4F3 , bda:LG6D4405AC67955065 , bda:LGE612BD810776BDE7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL11D457FFCAF1581E
         a                   :ContentLocation ;
@@ -180,7 +203,44 @@ bdg:MW21609 {
         :contentLocationInstance  bdr:W21609 ;
         :contentLocationPage  270 .
     
-    bdr:MW21609  :hasPart   bdr:MW21609_10086B , bdr:MW21609_38EF89 , bdr:MW21609_4C6D52 , bdr:MW21609_905CB1 , bdr:MW21609_A0AF4A ;
+    bdr:EVABCBCD56E2BDC61F
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID1205A63ACAD44D25
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105036756" .
+    
+    bdr:ID35F24E81C8A17AD6
+        a                   bdr:HollisId ;
+        rdf:value           "014258355" .
+    
+    bdr:IDE6315F9627CEF90D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ950.B355 D46 2001" .
+    
+    bdr:IDF34BB0E1CECA6105
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001417509" .
+    
+    bdr:MW21609  a          :Instance ;
+        skos:altLabel       "a-mang-pan-chi ta chuan"@zh-latn-wadegile ;
+        skos:prefLabel      "dbal mang paN+Di ta'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1205A63ACAD44D25 , bdr:ID35F24E81C8A17AD6 , bdr:IDE6315F9627CEF90D , bdr:IDF34BB0E1CECA6105 ;
+        :authorshipStatement  "brag dgon pa dkon mchog bstan pa rab rgyas kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW21609_10086B , bdr:MW21609_38EF89 , bdr:MW21609_4C6D52 , bdr:MW21609_905CB1 , bdr:MW21609_A0AF4A ;
+        :hasTitle           bdr:TT215E9E1403E687EA , bdr:TT9CD493C1B08772D4 , bdr:TTF008C6E677128A13 , bdr:TTFAC12C9A6AA7EAFD ;
+        :instanceEvent      bdr:EVABCBCD56E2BDC61F ;
+        :instanceHasReproduction  bdr:W21609 ;
+        :instanceOf         bdr:WA21609 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 597 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21609_07038E
@@ -542,6 +602,10 @@ bdg:MW21609 {
         a                   :TitlePageTitle ;
         rdfs:label          "bdun pa/ thun mong rig gnas dang dbang lung rjes bka' bcas chos kyi gdams pa legs par mnos te yon tan thams cad kyi gzhi rten du gyur pa'i tshul/"@bo-x-ewts .
     
+    bdr:TT215E9E1403E687EA
+        a                   :Title ;
+        rdfs:label          "dbal mang paN+Di ta'i rnam thar/"@bo-x-ewts .
+    
     bdr:TT22B85C627A4BCB8B
         a                   :TitlePageTitle ;
         rdfs:label          "bcu gcig pa/ tshogs chen gyi khris bzhugs te lung chos sde snod gsum gyi 'chad nyan dang 'grigs lam dam 'dzin gnang ba sogs bstan pa la zhabs tog zhus tshul/"@bo-x-ewts .
@@ -586,6 +650,10 @@ bdg:MW21609 {
         a                   :TitlePageTitle ;
         rdfs:label          "dgu pa/ lha ldan chos sar phyin te 7kun gzigs rgyal ba rnam gnyis gtsos mthun 'gyur lha bla'i lung bstan las mchog sprul ngos 'dzin dang/ zab rgyas chos kyi dga' ston myangs tshul sogs bstan pa la bya ba byas tshul/"@bo-x-ewts .
     
+    bdr:TT9CD493C1B08772D4
+        a                   :ColophonTitle ;
+        rdfs:label          "amangbanzhi da zhuan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TTA5384B49C81FF2A7
         a                   :TitlePageTitle ;
         rdfs:label          "gnyis pa/ rigs rus cho 'brang gtsang mar skur bltams shing mthun 'gyur lha bla'i lung bstan la brten mchog sprul dam par ngos bzung ba'i skor/"@bo-x-ewts .
@@ -618,7 +686,15 @@ bdg:MW21609 {
         a                   :TitlePageTitle ;
         rdfs:label          "bzhi pa/ theg pa mchog gi dge ba'i bshes gnyen tshul bzhin bsten te/ sde snod kyi gzhung la gsan bsam rgya cher bzhes pa'i tshul/"@bo-x-ewts .
     
+    bdr:TTF008C6E677128A13
+        a                   :TitlePageTitle ;
+        rdfs:label          "yongs rdzogs bstan pa'i mnga' bdag rje btsun bla ma rdo rje 'chang dkon mchog rgyal mtshan dpal bzang po'i zhal snga nas kyi rnam par thar pa thar 'dod 'jug ngogs/"@bo-x-ewts .
+    
     bdr:TTF2DC4CC03FDB2019
         a                   :TitlePageTitle ;
         rdfs:label          "le'u gsum pa/ rten de la yon tan brnyes pa'i tshul/"@bo-x-ewts .
+    
+    bdr:TTFAC12C9A6AA7EAFD
+        a                   :ColophonTitle ;
+        rdfs:label          "a-mang-pan-chi ta chuan"@zh-latn-wadegile .
 }

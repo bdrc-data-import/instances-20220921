@@ -12,20 +12,55 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW24822 {
+    bda:LG0BA8763A75FDCA4E
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-09-02T10:58:43.94Z"^^xsd:dateTime ;
+        adm:logMessage      "changed topic selection"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG12C44E4D058EA2AA
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-05-31T17:24:00.55Z"^^xsd:dateTime ;
         adm:logMessage      "added annotation to work and completion of outline"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG4F8E4D7244F499BD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-04T15:18:56.118Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, author, editor,add biblio title, pub info, and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGF574AB6220F42B47
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW24822  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS47298" ;
         adm:adminAbout      bdr:MW24822 ;
-        adm:facetIndex      30 ;
-        adm:logEntry        bda:LG12C44E4D058EA2AA ;
+        adm:facetIndex      42 ;
+        adm:gitPath         "63/MW24822.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24822 ;
+        adm:logEntry        bda:LG0BA8763A75FDCA4E , bda:LG12C44E4D058EA2AA , bda:LG4F8E4D7244F499BD , bda:LGF574AB6220F42B47 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL065097F6B1F14401
         a                   :ContentLocation ;
@@ -147,7 +182,43 @@ bdg:MW24822 {
         :contentLocationInstance  bdr:W24822 ;
         :contentLocationPage  127 .
     
-    bdr:MW24822  :hasPart   bdr:MW24822_0F8FD8 , bdr:MW24822_81B42C , bdr:MW24822_C0235B ;
+    bdr:CR950E93CFA55F6BE1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6598 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV5B52372577A9C739
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID36813F354D68AC03
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223014241" .
+    
+    bdr:ID647A0C0E3E7A8473
+        a                   bdr:HollisId ;
+        rdf:value           "014259358" .
+    
+    bdr:MW24822  a          :Instance ;
+        skos:altLabel       "shen shan sheng hu zhi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gangs ti se dang ma pham g.yu mtsho'i gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36813F354D68AC03 , bdr:ID647A0C0E3E7A8473 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR950E93CFA55F6BE1 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW24822_0F8FD8 , bdr:MW24822_81B42C , bdr:MW24822_C0235B ;
+        :hasTitle           bdr:TT1C4D57AF42D16646 , bdr:TT2CD11FC721D1C79E , bdr:TT7D53BC3AE5408FD2 ;
+        :instanceEvent      bdr:EV5B52372577A9C739 ;
+        :instanceHasReproduction  bdr:W24822 ;
+        :instanceOf         bdr:WA24822 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "203 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW24822_0F8FD8
@@ -410,6 +481,14 @@ bdg:MW24822 {
         :partTreeIndex      "3.7" ;
         :partType           bdr:PartTypeText .
     
+    bdr:TT1C4D57AF42D16646
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs dkar ti se dang ma pham g.yu mtsho'i gnas yig bstod glu'i mgrin dbyangs/"@bo-x-ewts .
+    
+    bdr:TT2CD11FC721D1C79E
+        a                   :Title ;
+        rdfs:label          "gangs ti se dang ma pham g.yu mtsho'i gnas yig"@bo-x-ewts .
+    
     bdr:TT387C43A258DB329F
         a                   :Title ;
         rdfs:label          "gnas pre ta pu ri yi lam yig zhogs pa'i skya rengs/"@bo-x-ewts .
@@ -417,6 +496,10 @@ bdg:MW24822 {
     bdr:TT4BE53CEE244D7751
         a                   :Title ;
         rdfs:label          "gangs ri'i gsol 'debs byin rlabs char 'bebs/"@bo-x-ewts .
+    
+    bdr:TT7D53BC3AE5408FD2
+        a                   :ColophonTitle ;
+        rdfs:label          "shen shan sheng hu zhi"@zh-latn-pinyin-x-ndia .
     
     bdr:TT87E9E1CA4900116F
         a                   :Title ;

@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1970 {
+    bda:LGA8FF4334117E272C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGC7D673FEFD71E947
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGCC35BB6B2A880EE3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-06T13:26:41.546Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM2F88FF75  a     adm:InitialDataImport ;
         adm:logDate         "2021-01-06T15:43:10.92Z"^^xsd:dateTime ;
         adm:logMessage      "full catalog and released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1970"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1970  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ364467" ;
         adm:adminAbout      bdr:MW1NLM1970 ;
-        adm:facetIndex      31 ;
-        adm:logEntry        bda:LGIM2F88FF75 ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "2e/MW1NLM1970.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1970 ;
+        adm:logEntry        bda:LGA8FF4334117E272C , bda:LGC7D673FEFD71E947 , bda:LGCC35BB6B2A880EE3 , bda:LGIM2F88FF75 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1FC3FAFE09CDE3ED
         a                   :ContentLocation ;
@@ -105,7 +134,19 @@ bdg:MW1NLM1970 {
         :contentLocationInstance  bdr:W1NLM1970 ;
         :contentLocationPage  1 .
     
-    bdr:MW1NLM1970  :hasPart  bdr:MW1NLM1970_28C65D , bdr:MW1NLM1970_2D1EEF , bdr:MW1NLM1970_35E109 , bdr:MW1NLM1970_5EFDD1 , bdr:MW1NLM1970_633831 , bdr:MW1NLM1970_68F6D0 , bdr:MW1NLM1970_7C7201 , bdr:MW1NLM1970_8DCB12 , bdr:MW1NLM1970_908820 , bdr:MW1NLM1970_ABFFA7 , bdr:MW1NLM1970_B6ABC4 , bdr:MW1NLM1970_CC231B , bdr:MW1NLM1970_D36424 ;
+    bdr:MW1NLM1970  a       :Instance ;
+        skos:prefLabel      "sman bla bsdus pa'i kha skong sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "18.5x7" ;
+        :hasPart            bdr:MW1NLM1970_28C65D , bdr:MW1NLM1970_2D1EEF , bdr:MW1NLM1970_35E109 , bdr:MW1NLM1970_5EFDD1 , bdr:MW1NLM1970_633831 , bdr:MW1NLM1970_68F6D0 , bdr:MW1NLM1970_7C7201 , bdr:MW1NLM1970_8DCB12 , bdr:MW1NLM1970_908820 , bdr:MW1NLM1970_ABFFA7 , bdr:MW1NLM1970_B6ABC4 , bdr:MW1NLM1970_CC231B , bdr:MW1NLM1970_D36424 ;
+        :hasTitle           bdr:TTAF8885E827AAC324 ;
+        :instanceHasReproduction  bdr:W1NLM1970 ;
+        :instanceOf         bdr:WA1NLM1970 ;
+        :isRoot             true ;
+        :note               bdr:NT5701132C44FB3507 , bdr:NT6AD8A759F87786F9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1970_28C65D
@@ -290,6 +331,14 @@ bdg:MW1NLM1970 {
         :partTreeIndex      "07" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT5701132C44FB3507
+        a                   :Note ;
+        :noteText           "nlmId: M0059888"@en .
+    
+    bdr:NT6AD8A759F87786F9
+        a                   :Note ;
+        :noteText           "missingPages: M0059888-004 [Missing page from 4A-4B] Image 51, 52"@en .
+    
     bdr:TT1C415B8E9AD0325D
         a                   :Title ;
         rdfs:label          "myur byon smon tshig myur du 'jug ma/"@bo-x-ewts .
@@ -325,6 +374,10 @@ bdg:MW1NLM1970 {
     bdr:TTA8F462ECAEF2C154
         a                   :TitlePageTitle ;
         rdfs:label          "rje btsun sgrol ma la brten nas phyag dang mchod pa 'bul tshul/"@bo-x-ewts .
+    
+    bdr:TTAF8885E827AAC324
+        a                   :Title ;
+        rdfs:label          "sman bla bsdus pa'i kha skong sogs/"@bo-x-ewts .
     
     bdr:TTB3586C02417EAB41
         a                   :Title ;

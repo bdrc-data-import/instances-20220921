@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29013 {
+    bda:LG355DAD8B155690B7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGD3FF978AA6EDDF48
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-03T15:56:42.593Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat , pub info and changed topics"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGDB612B8EC3A26894
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-16T16:12:51.907Z"^^xsd:dateTime ;
@@ -22,14 +32,33 @@ bdg:MW29013 {
         adm:logDate         "2010-08-12T10:42:49.607Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29013  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS2610" ;
         adm:adminAbout      bdr:MW29013 ;
-        adm:facetIndex      33 ;
-        adm:logEntry        bda:LGDB612B8EC3A26894 , bda:LGE0A5AB88AE787FD4 ;
+        adm:facetIndex      44 ;
+        adm:gitPath         "24/MW29013.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29013 ;
+        adm:logEntry        bda:LG355DAD8B155690B7 , bda:LGD3FF978AA6EDDF48 , bda:LGDB612B8EC3A26894 , bda:LGE0A5AB88AE787FD4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0807F512C0C7A522
         a                   :ContentLocation ;
@@ -121,7 +150,47 @@ bdg:MW29013 {
         :contentLocationInstance  bdr:W29013 ;
         :contentLocationPage  64 .
     
-    bdr:MW29013  :hasPart   bdr:MW29013_05B075 , bdr:MW29013_335410 , bdr:MW29013_374BC8 , bdr:MW29013_429214 , bdr:MW29013_456739 , bdr:MW29013_660881 , bdr:MW29013_8310E8 , bdr:MW29013_8759AA , bdr:MW29013_CF49A3 , bdr:MW29013_D213D5 , bdr:MW29013_EBC087 , bdr:MW29013_F599DB ;
+    bdr:EV5BCC8F8ADFC67F54
+        a                   :PublishedEvent ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:ID763B0D86414B7A3D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915833" .
+    
+    bdr:ID784829CE50AB631B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7940 .Y2917 1992" .
+    
+    bdr:ID97614FE63F6B2610
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223003979" .
+    
+    bdr:IDAB1E2E21DAD2FC99
+        a                   bdr:HollisId ;
+        rdf:value           "014259879" .
+    
+    bdr:MW29013  a          :Instance ;
+        skos:altLabel       "banchan e erdeni zhuan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "paN chen sku phreng rim byon gyi mdzad rnam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID763B0D86414B7A3D , bdr:ID784829CE50AB631B , bdr:ID97614FE63F6B2610 , bdr:IDAB1E2E21DAD2FC99 ;
+        :authorshipStatement  "yA han krang gis brtsams ; blo bzang phun tshogs dang rta mgrin 'brug grags kyis bod yig tu bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW29013_05B075 , bdr:MW29013_335410 , bdr:MW29013_374BC8 , bdr:MW29013_429214 , bdr:MW29013_456739 , bdr:MW29013_660881 , bdr:MW29013_8310E8 , bdr:MW29013_8759AA , bdr:MW29013_CF49A3 , bdr:MW29013_D213D5 , bdr:MW29013_EBC087 , bdr:MW29013_F599DB ;
+        :hasTitle           bdr:TT1892DE6AE41F921A , bdr:TT91A54C9F5E163E0B ;
+        :illustrations      "[20] p. of ill." ;
+        :instanceEvent      bdr:EV5BCC8F8ADFC67F54 ;
+        :instanceHasReproduction  bdr:W29013 ;
+        :instanceOf         bdr:WA29013 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "15, 899 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29013_05B075
@@ -365,6 +434,10 @@ bdg:MW29013 {
         a                   :TitlePageTitle ;
         rdfs:label          "le'u bzhi pa/ paN chen sku phreng drug pa dpal ldan ye shes/"@bo-x-ewts .
     
+    bdr:TT1892DE6AE41F921A
+        a                   :Title ;
+        rdfs:label          "paN chen sku phreng rim byon gyi mdzad rnam/"@bo-x-ewts .
+    
     bdr:TT3DFD0E6D2FF9BD4A
         a                   :TitlePageTitle ;
         rdfs:label          "deb 'di 'bri skabs dpyad gzhir lta myong ba'i rtsom deb dang ched rtsom gyi dkar chag"@bo-x-ewts .
@@ -388,6 +461,10 @@ bdg:MW29013 {
     bdr:TT727D6468299F0BCB
         a                   :TitlePageTitle ;
         rdfs:label          "(gnyis) paN chen sku phreng gnyis pa bsod nams phyogs glang /"@bo-x-ewts .
+    
+    bdr:TT91A54C9F5E163E0B
+        a                   :ColophonTitle ;
+        rdfs:label          "banchan e erdeni zhuan"@zh-latn-pinyin-x-ndia .
     
     bdr:TTCDAE9A0C84685F9F
         a                   :TitlePageTitle ;

@@ -22,20 +22,43 @@ bdg:MW665 {
         adm:logDate         "2010-04-30T15:57:00.533Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG79FB3E9FE84E9386
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG95A63DF73E5761FE
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-13T12:14:13.812Z"^^xsd:dateTime ;
         adm:logMessage      "zhu dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW665  a            adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB95446" ;
         adm:adminAbout      bdr:MW665 ;
-        adm:facetIndex      36 ;
-        adm:logEntry        bda:LG0A3B305B35BB3DA1 , bda:LG458FC258A01AAD28 , bda:LG95A63DF73E5761FE ;
+        adm:facetIndex      47 ;
+        adm:gitPath         "d5/MW665.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW665 ;
+        adm:logEntry        bda:LG0A3B305B35BB3DA1 , bda:LG458FC258A01AAD28 , bda:LG79FB3E9FE84E9386 , bda:LG95A63DF73E5761FE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL17FC2AE430254089
         a                   :ContentLocation ;
@@ -121,7 +144,37 @@ bdg:MW665 {
         :contentLocationInstance  bdr:W665 ;
         :contentLocationPage  18 .
     
-    bdr:MW665  :hasPart     bdr:MW665_BF9C0A , bdr:MW665_E341BC ;
+    bdr:EV9F1680EFBD8E9A91
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID7C65D7F3A89AA0DA
+        a                   bdr:HollisId ;
+        rdf:value           "014261021" .
+    
+    bdr:IDB987F872012D6D65
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624509026" .
+    
+    bdr:MW665  a            :Instance ;
+        skos:altLabel       "shi liang lun shu jie"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "tshad ma rnam 'grel gyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7C65D7F3A89AA0DA , bdr:IDB987F872012D6D65 ;
+        :authorshipStatement  "rgyal tshab dar ma rin chen gyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW665_BF9C0A , bdr:MW665_E341BC ;
+        :hasTitle           bdr:TT881F70FD41371B11 , bdr:TTD3EBAC38B615C9FA , bdr:TTD4385710514B5693 , bdr:TTF9E4300470B66CD2 ;
+        :instanceEvent      bdr:EV9F1680EFBD8E9A91 ;
+        :instanceHasReproduction  bdr:W665 ;
+        :instanceOf         bdr:WA665 ;
+        :isRoot             true ;
+        :note               bdr:NTA332E1DE475D2DBB ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun kung zi"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 538 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW665_08DEAA  a     :Instance ;
@@ -298,6 +351,10 @@ bdg:MW665 {
         :partTreeIndex      "2.4.2.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTA332E1DE475D2DBB
+        a                   :Note ;
+        :noteText           "other edition:\n436 ff. in vol. 6 of the 8 vol. collected works in the Potala collection.\n\"'di ni dge lugs pa'i tshad ma'i gzhung la sbyor ba mtha' dag gi rang lugs su 'dzin\"\n436 ff. in vol. cha of the  8 vol. New Zhol Par-khang  edition of the collected works of Rgyal-tshab Rje Dar-ma-rin-chen.\nTOH 5450."@en .
+    
     bdr:TT26FA8745CC2702BB
         a                   :Title ;
         rdfs:label          "mngon sum gyi le'u'i 'grel pa/"@bo-x-ewts .
@@ -334,6 +391,10 @@ bdg:MW665 {
         a                   :TitlePageTitle ;
         rdfs:label          "rang don rjes su dpag pa gtan la 'bebs pa'i le'u'i 'grel pa/"@bo-x-ewts .
     
+    bdr:TT881F70FD41371B11
+        a                   :CoverTitle ;
+        rdfs:label          "rnam 'grel thar lam gsal byed/"@bo-x-ewts .
+    
     bdr:TTA11150534225E922
         a                   :OtherTitle ;
         rdfs:label          "gzhan don gyi rjes su dpag pa'i le'u'i 'grel pa/"@bo-x-ewts .
@@ -358,6 +419,14 @@ bdg:MW665 {
         a                   :Title ;
         rdfs:label          "bshad pa la 'jug pa/"@bo-x-ewts .
     
+    bdr:TTD3EBAC38B615C9FA
+        a                   :Title ;
+        rdfs:label          "tshad ma rnam 'grel gyi rnam bshad/"@bo-x-ewts .
+    
+    bdr:TTD4385710514B5693
+        a                   :TitlePageTitle ;
+        rdfs:label          "tshad ma rnam 'grel gyi tshig le'ur byas pa'i rnam bshad thar lam phyin ci ma log par gsal bar byed pa/"@bo-x-ewts .
+    
     bdr:TTE194CFC598EE7131
         a                   :Title ;
         rdfs:label          "mtshan don dang 'gyur phyag"@bo-x-ewts .
@@ -369,4 +438,8 @@ bdg:MW665 {
     bdr:TTF9954EECB652FB78
         a                   :Title ;
         rdfs:label          "mchod brjod dang rtsom par dam bca' ba/"@bo-x-ewts .
+    
+    bdr:TTF9E4300470B66CD2
+        a                   :ColophonTitle ;
+        rdfs:label          "shi liang lun shu jie"@zh-latn-pinyin-x-ndia .
 }

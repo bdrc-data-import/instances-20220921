@@ -12,11 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG4280 {
+    bda:LG0AE4848BD551872F
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-05-22T10:29:11.012Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG54992F7AF92AACB0
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
         adm:logDate         "2013-08-15T11:07:04.494Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
+    
+    bda:LG565F81C72CB38797
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-22T11:46:22.893Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGEDBAE667B266DB42
         a                   adm:UpdateOutlineData ;
@@ -24,14 +36,39 @@ bdg:MW1KG4280 {
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGF7E84E07AE5A6345
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-10T12:18:22.07Z"^^xsd:dateTime ;
+        adm:logMessage      "first released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG4280  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG4280" ;
         adm:adminAbout      bdr:MW1KG4280 ;
-        adm:facetIndex      600 ;
-        adm:logEntry        bda:LG54992F7AF92AACB0 , bda:LGEDBAE667B266DB42 ;
+        adm:facetIndex      609 ;
+        adm:gitPath         "e0/MW1KG4280.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4280 ;
+        adm:logEntry        bda:LG0AE4848BD551872F , bda:LG54992F7AF92AACB0 , bda:LG565F81C72CB38797 , bda:LGEDBAE667B266DB42 , bda:LGF7E84E07AE5A6345 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL010D6193531B3D40
         a                   :ContentLocation ;
@@ -2112,7 +2149,32 @@ bdg:MW1KG4280 {
         :contentLocationPage  762 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG4280  :hasPart  bdr:MW1KG4280_AB7500 , bdr:MW1KG4280_B7681A , bdr:MW1KG4280_F25FC6 ;
+    bdr:EV71928A3F67D5056C
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID85F98E9B69F677E2
+        a                   bdr:HollisId ;
+        rdf:value           "014256885" .
+    
+    bdr:MW1KG4280  a        :Instance ;
+        skos:prefLabel      "gsung 'bum/_pad+ma nyin byed dbang po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID85F98E9B69F677E2 ;
+        :biblioNote         "reproduced from the blocks carved at palpung monastery in kham"@en ;
+        :hasPart            bdr:MW1KG4280_AB7500 , bdr:MW1KG4280_B7681A , bdr:MW1KG4280_F25FC6 ;
+        :hasSourcePrintery  bdr:G3JT12497 ;
+        :hasTitle           bdr:TT7168B8733D71CFD3 , bdr:TT7E2F0DF1B7A0DD47 ;
+        :instanceEvent      bdr:EV71928A3F67D5056C ;
+        :instanceHasReproduction  bdr:IE1KG4280 , bdr:W1KG4280 ;
+        :instanceOf         bdr:WA00EGS1016963 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "upper bhattu, distt. kangra, h.p."@en ;
+        :publisherName      "dpal spungs gsung rab nyams gso khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v. (om, ah, hung)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG4280_0060DD
@@ -6798,6 +6860,10 @@ bdg:MW1KG4280 {
         a                   :Title ;
         rdfs:label          "'dzi sgar rin po che bka' brgyud phrin las rnam rgyal gyi sprul sku myur 'byon gyi gsol 'debs/"@bo-x-ewts .
     
+    bdr:TT7168B8733D71CFD3
+        a                   :TitlePageTitle ;
+        rdfs:label          "si tu pad+ma nyin byed kyi bka' 'bum/"@bo-x-ewts .
+    
     bdr:TT71D511CE594C398A
         a                   :Title ;
         rdfs:label          "rgyal ba rgya mtsho'i lha dgu'i bdag bskyed rgyun khyer nges lam snying po'i don ston/"@bo-x-ewts .
@@ -6877,6 +6943,10 @@ bdg:MW1KG4280 {
     bdr:TT7E043F5450209E12
         a                   :Title ;
         rdfs:label          "rje btsun chos mgon gyi mchog sprul myur 'byon gsol 'debs/"@bo-x-ewts .
+    
+    bdr:TT7E2F0DF1B7A0DD47
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_pad+ma nyin byed dbang po/"@bo-x-ewts .
     
     bdr:TT7E914989A674C3E9
         a                   :Title ;

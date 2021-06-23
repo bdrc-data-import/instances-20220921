@@ -12,17 +12,32 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29516 {
+    bda:LG080E33BB94098F7D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3A8F495A966A01A6
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2007-12-18T13:47:24.166Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG78C4636E55BBE368
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-09-28T04:24:31.206Z"^^xsd:dateTime ;
+        adm:logMessage      "added Work to CTC 12"@en ;
+        adm:logWho          bdu:U00006 .
+    
     bda:LGA587A8EA3F4800D6
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2007-12-18T12:01:11.619Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LGD33900ABC7A2E187
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-01-24T14:25:37.672Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
     
     bda:LGF3090501972F09D1
         a                   adm:UpdateOutlineData ;
@@ -35,14 +50,33 @@ bdg:MW29516 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29516  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB6086" ;
         adm:adminAbout      bdr:MW29516 ;
-        adm:facetIndex      25 ;
-        adm:logEntry        bda:LG3A8F495A966A01A6 , bda:LGA587A8EA3F4800D6 , bda:LGF3090501972F09D1 , bda:LGF95851205C37B454 ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "e0/MW29516.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29516 ;
+        adm:logEntry        bda:LG080E33BB94098F7D , bda:LG3A8F495A966A01A6 , bda:LG78C4636E55BBE368 , bda:LGA587A8EA3F4800D6 , bda:LGD33900ABC7A2E187 , bda:LGF3090501972F09D1 , bda:LGF95851205C37B454 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Dega Bumu"@en ;
-        adm:outlineType     bda:OutlineTypeNotAssigned .
+        adm:outlineType     bda:OutlineTypeNotAssigned ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0230DAB16161934A
         a                   :ContentLocation ;
@@ -134,7 +168,39 @@ bdg:MW29516 {
         :contentLocationInstance  bdr:W29516 ;
         :contentLocationPage  74 .
     
-    bdr:MW29516  :hasPart   bdr:MW29516_07F0DD , bdr:MW29516_50D8A2 , bdr:MW29516_7D91F9 , bdr:MW29516_9E431B , bdr:MW29516_D2DAC4 ;
+    bdr:EVAD277D6AD400B3A2
+        a                   :PublishedEvent ;
+        :onYear             "2003"^^xsd:gYear .
+    
+    bdr:ID1E27E4E8597A3370
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890390" .
+    
+    bdr:ID2FD86121426E1FDB
+        a                   bdr:HollisId ;
+        rdf:value           "014260018" .
+    
+    bdr:MW29516  a          :Instance , :SerialInstance ;
+        skos:altLabel       "xia er ba sh ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "shar pa'i chos 'byung dang mes rabs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1E27E4E8597A3370 , bdr:ID2FD86121426E1FDB ;
+        :authorshipStatement  "shar pa sangs rgyas bstan 'dzin/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW29516_07F0DD , bdr:MW29516_50D8A2 , bdr:MW29516_7D91F9 , bdr:MW29516_9E431B , bdr:MW29516_D2DAC4 ;
+        :hasTitle           bdr:TT1A8606DC50BD505B , bdr:TTEDFA28A93BD67F29 ;
+        :instanceEvent      bdr:EVAD277D6AD400B3A2 ;
+        :instanceHasItem    bdr:ITW29516_001 ;
+        :instanceHasReproduction  bdr:W29516 ;
+        :instanceOf         bdr:WA1KG9412 , bdr:WA29516 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "38" ;
+        :workExtentStatement  "6, 163p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29516_07F0DD
@@ -328,6 +394,10 @@ bdg:MW29516 {
         :partTreeIndex      "5.2" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:TT1A8606DC50BD505B
+        a                   :Title ;
+        rdfs:label          "shar pa'i chos 'byung dang mes rabs/"@bo-x-ewts .
+    
     bdr:TT42FC77F8E8A5CC4A
         a                   :Title ;
         rdfs:label          "'jig rten chags tshad mdo tsam brjod pa'i sgo nas pha mes kyi byung rabs gsal dag khungs ldan rim par bkod pa/"@bo-x-ewts .
@@ -339,6 +409,10 @@ bdg:MW29516 {
     bdr:TT90D7D727F0F8965D
         a                   :Title ;
         rdfs:label          "jo glang gangs rgyud shar pa sangs rgyas bstan 'dzin gyi rnam thar mdor bsdus sgro skur bral ba'i bden gtam/"@bo-x-ewts .
+    
+    bdr:TTEDFA28A93BD67F29
+        a                   :ColophonTitle ;
+        rdfs:label          "xia er ba sh ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TTFD16D7E38D827497
         a                   :Title ;

@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1GS55180 {
+    bda:LG29FB6D8A2636B2E4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-08-15T14:56:52.443Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGE469124A32C85DE3
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-11-24T11:24:24.231Z"^^xsd:dateTime ;
@@ -24,14 +30,33 @@ bdg:MW1GS55180 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS55180  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS55182" ;
         adm:adminAbout      bdr:MW1GS55180 ;
-        adm:facetIndex      256 ;
-        adm:logEntry        bda:LGE469124A32C85DE3 , bda:LGF3322382575BE233 ;
+        adm:facetIndex      263 ;
+        adm:gitPath         "af/MW1GS55180.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS55180 ;
+        adm:logEntry        bda:LG29FB6D8A2636B2E4 , bda:LGE469124A32C85DE3 , bda:LGF3322382575BE233 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined through the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0133F437AC27F773
         a                   :ContentLocation ;
@@ -1527,7 +1552,37 @@ bdg:MW1GS55180 {
         :contentLocationInstance  bdr:W1GS55180 ;
         :contentLocationPage  149 .
     
-    bdr:MW1GS55180  :hasPart  bdr:MW1GS55180_11EB3D , bdr:MW1GS55180_29D479 , bdr:MW1GS55180_53B297 , bdr:MW1GS55180_6DE285 , bdr:MW1GS55180_6E4060 , bdr:MW1GS55180_724ED6 , bdr:MW1GS55180_F07CCD ;
+    bdr:EV9752FED873C1F36C
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID676859CC3951E22B
+        a                   bdr:HollisId ;
+        rdf:value           "014255481" .
+    
+    bdr:ID739B6BE8CC8F82EF
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787540933630" .
+    
+    bdr:MW1GS55180  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "rgyun spyod bod sman thang phye ril bu gsum gyi sbyor sde dang lag len gyi skor brjod pa kun phan bdud rtsi'i chu rgyun/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID676859CC3951E22B , bdr:ID739B6BE8CC8F82EF ;
+        :authorshipStatement  "tshe khos brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS55180_11EB3D , bdr:MW1GS55180_29D479 , bdr:MW1GS55180_53B297 , bdr:MW1GS55180_6DE285 , bdr:MW1GS55180_6E4060 , bdr:MW1GS55180_724ED6 , bdr:MW1GS55180_F07CCD ;
+        :hasTitle           bdr:TTC02AC9D2F0B794F6 ;
+        :instanceEvent      bdr:EV9752FED873C1F36C ;
+        :instanceHasReproduction  bdr:W1GS55180 ;
+        :instanceOf         bdr:WA1GS55180 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[khreng tu'u]"@en ;
+        :publisherName      "si khron dpe skrun tshogs pa, si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC355 ;
+        :seriesNumber       "1" ;
+        :workExtentStatement  "4, 1, 284 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS55180_01C427
@@ -4532,6 +4587,10 @@ bdg:MW1GS55180 {
     bdr:TTB25282F1B1B93A2C
         a                   :Title ;
         rdfs:label          "rin chen rigs gtong thabs rags tsam bshad pa/"@bo-x-ewts .
+    
+    bdr:TTC02AC9D2F0B794F6
+        a                   :Title ;
+        rdfs:label          "rgyun spyod bod sman thang phye ril bu gsum gyi sbyor sde dang lag len gyi skor brjod pa kun phan bdud rtsi'i chu rgyun/"@bo-x-ewts .
     
     bdr:TTCC738B91147BF7D6
         a                   :Title ;

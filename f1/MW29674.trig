@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29674 {
+    bda:LG04E1C88566CF3565
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG0610CFE98586EC2D
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-11T11:09:18.313Z"^^xsd:dateTime ;
@@ -28,14 +32,33 @@ bdg:MW29674 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29674  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS885" ;
         adm:adminAbout      bdr:MW29674 ;
-        adm:facetIndex      66 ;
-        adm:logEntry        bda:LG0610CFE98586EC2D , bda:LG2EFDDA376432020D , bda:LGE57F471F12D4E7A2 ;
+        adm:facetIndex      72 ;
+        adm:gitPath         "f1/MW29674.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29674 ;
+        adm:logEntry        bda:LG04E1C88566CF3565 , bda:LG0610CFE98586EC2D , bda:LG2EFDDA376432020D , bda:LGE57F471F12D4E7A2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Lobsang Shastri : created with the generous support of Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0AF2177FDAB65EE9
         a                   :ContentLocation ;
@@ -254,7 +277,29 @@ bdg:MW29674 {
         :contentLocationPage  19 ;
         :contentLocationVolume  1 .
     
-    bdr:MW29674  :hasPart   bdr:MW29674_A869D8 ;
+    bdr:EVA16FF553568F98A6
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID35FA1B1E0178ABBE
+        a                   bdr:HollisId ;
+        rdf:value           "014260081" .
+    
+    bdr:MW29674  a          :Instance ;
+        skos:prefLabel      "dge sbyong gi 'bras bu bzhi'i skor la dpyad pa blo ldan yid kyi 'khri shing /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID35FA1B1E0178ABBE ;
+        :hasPart            bdr:MW29674_A869D8 ;
+        :hasTitle           bdr:TTE660911FEA80F103 ;
+        :instanceEvent      bdr:EVA16FF553568F98A6 ;
+        :instanceHasReproduction  bdr:W29674 ;
+        :instanceOf         bdr:WA29674 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bylakuppe], karnataka"@en ;
+        :publisherName      "namdrolig monastic jr. high school"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 28 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29674_05B882
@@ -801,6 +846,10 @@ bdg:MW29674 {
     bdr:TTDE92D05AE43F6634
         a                   :Title ;
         rdfs:label          "phyir mi 'ong 'bras gnas spyir bstan pa/"@bo-x-ewts .
+    
+    bdr:TTE660911FEA80F103
+        a                   :Title ;
+        rdfs:label          "dge sbyong gi 'bras bu bzhi'i skor la dpyad pa blo ldan yid kyi 'khri shing /"@bo-x-ewts .
     
     bdr:TTE69B9480152E9B7C
         a                   :Title ;

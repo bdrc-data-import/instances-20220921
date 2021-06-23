@@ -12,11 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2DB4618 {
+    bda:LG25B7CDD73B53E6D7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-12-12T10:45:51.265Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LG44DB9B0DC47F11B7
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-11-20T22:30:47.357Z"^^xsd:dateTime ;
         adm:logMessage      "removed location elements from root"@en ;
         adm:logWho          bdu:U00012 .
+    
+    bda:LG4D49DC103ED06EFE
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-04T09:14:02.357Z"^^xsd:dateTime ;
+        adm:logMessage      "added Lc Call number and LCCN"@en ;
+        adm:logWho          bdu:U00003 .
     
     bda:LG6204FEF861050822
         a                   adm:UpdateOutlineData ;
@@ -29,6 +41,12 @@ bdg:MW2DB4618 {
         adm:logDate         "2008-11-17T11:36:02.682Z"^^xsd:dateTime ;
         adm:logMessage      "revised"@en ;
         adm:logWho          bdu:U00020 .
+    
+    bda:LG88D12CB4397F651B
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-12-12T10:53:18.218Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00003 .
     
     bda:LGC42AE1D05FE29143
         a                   adm:UpdateOutlineData ;
@@ -47,14 +65,46 @@ bdg:MW2DB4618 {
         adm:logDate         "2008-11-20T22:32:43.434Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00012 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2DB4618  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2MS1976" ;
         adm:adminAbout      bdr:MW2DB4618 ;
-        adm:facetIndex      92 ;
-        adm:logEntry        bda:LG44DB9B0DC47F11B7 , bda:LG6204FEF861050822 , bda:LG7F81A1F3E47EDE49 , bda:LGC42AE1D05FE29143 , bda:LGD200E4F33D87ED80 , bda:LGE98DFC68A91C8BCB ;
+        adm:facetIndex      109 ;
+        adm:gitPath         "6d/MW2DB4618.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2DB4618 ;
+        adm:logEntry        bda:LG25B7CDD73B53E6D7 , bda:LG44DB9B0DC47F11B7 , bda:LG4D49DC103ED06EFE , bda:LG6204FEF861050822 , bda:LG7F81A1F3E47EDE49 , bda:LG88D12CB4397F651B , bda:LGC42AE1D05FE29143 , bda:LGD200E4F33D87ED80 , bda:LGE98DFC68A91C8BCB , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Michael R. Sheehy"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL039BCD24456347FC
         a                   :ContentLocation ;
@@ -566,7 +616,51 @@ bdg:MW2DB4618 {
         :contentLocationInstance  bdr:W2DB4618 ;
         :contentLocationPage  156 .
     
-    bdr:MW2DB4618  :hasPart  bdr:MW2DB4618_11589F , bdr:MW2DB4618_2CDE44 , bdr:MW2DB4618_770985 , bdr:MW2DB4618_790D49 , bdr:MW2DB4618_7F3EA6 , bdr:MW2DB4618_EB39F8 , bdr:MW2DB4618_F0E870 ;
+    bdr:EV8CA05A0B506A3ECD
+        a                   :PublishedEvent ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:ID035EFBDBBDF7DFD6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4140 .S22 2007" .
+    
+    bdr:ID2687A5772AFAAA66
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2007431976" .
+    
+    bdr:ID3AE54C8253482506
+        a                   bdr:HollisId ;
+        rdf:value           "014260536" .
+    
+    bdr:ID96DA06E20802F3A0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105081707" .
+    
+    bdr:IDEAB21FEB0BE062F9
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011305308-8" .
+    
+    bdr:MW2DB4618  a        :Instance , :SerialInstance ;
+        skos:altLabel       "Dris lan blaṅ dor rab gsal snaṅ baʼi gźuṅ rnam par dag paʼi yi ge luṅ daṅ mthun pa bźugs so /Sa-bzaṅ Ma-ti Paṇ-chen Blo-gros-rgyal-mtshan gyis brtsams ; [gtso sgrig pa, Ṅag-dbaṅ-kun-dgaʼ-ʼjam-dbyaṅs-blo-gros]."@en-x-mixed , "jue nang qu she ming shi wen da"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "blang dor rab gsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID035EFBDBBDF7DFD6 , bdr:ID2687A5772AFAAA66 , bdr:ID3AE54C8253482506 , bdr:ID96DA06E20802F3A0 , bdr:IDEAB21FEB0BE062F9 ;
+        :authorshipStatement  "sa bzang ma ti paN chen blo gros rgyal mtsan gyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW2DB4618_11589F , bdr:MW2DB4618_2CDE44 , bdr:MW2DB4618_770985 , bdr:MW2DB4618_790D49 , bdr:MW2DB4618_7F3EA6 , bdr:MW2DB4618_EB39F8 , bdr:MW2DB4618_F0E870 ;
+        :hasTitle           bdr:TT06B2C4040D421C41 , bdr:TT16E66834577E09EF , bdr:TT29450E8C58E640CC , bdr:TT9B4015FC1C3BF036 ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EV8CA05A0B506A3ECD ;
+        :instanceHasReproduction  bdr:W2DB4618 ;
+        :instanceOf         bdr:WA2DB4618 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG9015 ;
+        :seriesNumber       "8" ;
+        :workExtentStatement  "2, 4, 4, 5, 431 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2DB4618_01BBFE
@@ -1528,4 +1622,20 @@ bdg:MW2DB4618 {
         :partOf             bdr:MW2DB4618_4F5A92 ;
         :partTreeIndex      "6.2.2.2.2.3.7" ;
         :partType           bdr:PartTypeSection .
+    
+    bdr:TT06B2C4040D421C41
+        a                   :Title ;
+        rdfs:label          "blang dor rab gsal/"@bo-x-ewts .
+    
+    bdr:TT16E66834577E09EF
+        a                   :ColophonTitle ;
+        rdfs:label          "jue nang qu she ming shi wen da"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT29450E8C58E640CC
+        a                   :CoverTitle ;
+        rdfs:label          "Dris lan blaṅ dor rab gsal snaṅ baʼi gźuṅ rnam par dag paʼi yi ge luṅ daṅ mthun pa bźugs so /Sa-bzaṅ Ma-ti Paṇ-chen Blo-gros-rgyal-mtshan gyis brtsams ; [gtso sgrig pa, Ṅag-dbaṅ-kun-dgaʼ-ʼjam-dbyaṅs-blo-gros]."@en-x-mixed .
+    
+    bdr:TT9B4015FC1C3BF036
+        a                   :TitlePageTitle ;
+        rdfs:label          "dris lan blang dor rab gsal snang ba'i gzhung rnam par dag pa'i yi ge lung dang mthun pa/"@bo-x-ewts .
 }

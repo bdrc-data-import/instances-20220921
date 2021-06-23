@@ -12,20 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW18134 {
+    bda:LG01B7301569D29491
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-11T13:58:23.996Z"^^xsd:dateTime ;
+        adm:logMessage      "added lc call number and lccn"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LG1850E61DB04C0192
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-08T13:04:25.547Z"^^xsd:dateTime ;
+        adm:logMessage      "added lo rgyus rig gnas as genre"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG3FBFF68C1306E240
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC6ACD71874FE0A3E
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-02T15:04:46.243Z"^^xsd:dateTime ;
         adm:logMessage      "annotation added and typo corrected"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGD45A672ECCEDAF68
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-04-24T09:56:49.401Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW18134  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2GS3" ;
         adm:adminAbout      bdr:MW18134 ;
-        adm:facetIndex      103 ;
-        adm:logEntry        bda:LGC6ACD71874FE0A3E ;
+        adm:facetIndex      119 ;
+        adm:gitPath         "fd/MW18134.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW18134 ;
+        adm:logEntry        bda:LG01B7301569D29491 , bda:LG1850E61DB04C0192 , bda:LG3FBFF68C1306E240 , bda:LGC6ACD71874FE0A3E , bda:LGD45A672ECCEDAF68 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL051C03D097FBCE12
         a                   :ContentLocation ;
@@ -560,7 +600,40 @@ bdg:MW18134 {
         :contentLocationInstance  bdr:W18134 ;
         :contentLocationVolume  2 .
     
-    bdr:MW18134  :hasPart   bdr:MW18134_6F9BB3 , bdr:MW18134_8FADCD ;
+    bdr:EV0E3C369E4F705D89
+        a                   :PublishedEvent ;
+        :notAfter           "1997"^^xsd:gYear ;
+        :notBefore          "1995"^^xsd:gYear .
+    
+    bdr:ID0A47B250A1258D58
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542103784 (v. 1)" .
+    
+    bdr:IDD20DF268034B1380
+        a                   bdr:HollisId ;
+        rdf:value           "014254810" .
+    
+    bdr:MW18134  a          :Instance ;
+        skos:altLabel       "the brief history of upper kham, eastern tibet"@en , "康木朵简史"@zh-hans ;
+        skos:prefLabel      "khams stod lo rgyus thor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0A47B250A1258D58 , bdr:IDD20DF268034B1380 ;
+        :authorshipStatement  "ldan ma 'jam dbyangs tshul khrims kyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW18134_6F9BB3 , bdr:MW18134_8FADCD ;
+        :hasTitle           bdr:TT6AFEBAF2CB03AD4D , bdr:TT736F55B03D9E27E5 , bdr:TT8E601BEB67CED3A1 , bdr:TTAC99ED52E448EFE1 , bdr:TTE0B5435A46DCFE61 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV0E3C369E4F705D89 ;
+        :instanceHasReproduction  bdr:W18134 ;
+        :instanceOf         bdr:WA18134 ;
+        :isRoot             true ;
+        :note               bdr:NT428AC307077C5640 , bdr:NTB6B92675483FDB7B ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW18134_0BFF9A
@@ -1764,4 +1837,32 @@ bdg:MW18134 {
         :partOf             bdr:MW18134_8FADCD ;
         :partTreeIndex      "1.25" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:NT428AC307077C5640
+        a                   :Note ;
+        :noteText           "Released from copyright by the author.  Verbal to Jeff Wallman November 11, 2015"@en .
+    
+    bdr:NTB6B92675483FDB7B
+        a                   :Note ;
+        :noteText           "historical writings on the upper khams (sga) , now yushu prefecture of qinghai province\n\nvol. 2 isbn: 7542105590"@en .
+    
+    bdr:TT6AFEBAF2CB03AD4D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "康木朵简史"@zh-hans .
+    
+    bdr:TT736F55B03D9E27E5
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "kang mu duo jian shi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT8E601BEB67CED3A1
+        a                   :Title ;
+        rdfs:label          "khams stod lo rgyus thor bsdus/"@bo-x-ewts .
+    
+    bdr:TTAC99ED52E448EFE1
+        a                   :TitlePageTitle ;
+        rdfs:label          "khams stod kyi lo rgyus thor bsdus su bkod pa gangs phrug bsu ba'i shing rta/"@bo-x-ewts .
+    
+    bdr:TTE0B5435A46DCFE61
+        a                   :OtherTitle ;
+        rdfs:label          "the brief history of upper kham, eastern tibet"@en .
 }

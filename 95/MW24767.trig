@@ -18,20 +18,55 @@ bdg:MW24767 {
         adm:logMessage      "edited title and creator"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG50F03ACEED5904D5
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-07T16:38:53.632Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC49CAB8CAF3C2D91
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGDBBA63F2B3037DFC
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-01-05T15:33:57.211Z"^^xsd:dateTime ;
         adm:logMessage      "made individual outline"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW24767  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2MS9223" ;
         adm:adminAbout      bdr:MW24767 ;
-        adm:facetIndex      27 ;
-        adm:logEntry        bda:LG2E421DFA3D24EB29 , bda:LGDBBA63F2B3037DFC ;
+        adm:facetIndex      41 ;
+        adm:gitPath         "95/MW24767.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24767 ;
+        adm:logEntry        bda:LG2E421DFA3D24EB29 , bda:LG50F03ACEED5904D5 , bda:LGC49CAB8CAF3C2D91 , bda:LGDBBA63F2B3037DFC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "urgyen urgyen. published by michael sheehy."@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL149189C7D1B69505
         a                   :ContentLocation ;
@@ -89,7 +124,48 @@ bdg:MW24767 {
         :contentLocationPage  1 ;
         :contentLocationVolume  2 .
     
-    bdr:MW24767  :hasPart   bdr:MW24767_160989 , bdr:MW24767_233455 , bdr:MW24767_E68008 ;
+    bdr:EV821AEBAA012EAE0E
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID270053A7CCBB77A5
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib2906" .
+    
+    bdr:ID59D7C4A74D796A5C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.4 .S23 1985B" .
+    
+    bdr:IDB0CE3866AF2FD681
+        a                   bdr:HollisId ;
+        rdf:value           "014259353" .
+    
+    bdr:IDF0D4C49A26CE55F0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85905126" .
+    
+    bdr:MW24767  a          :Instance , :SerialInstance ;
+        skos:altLabel       "lam 'bras gzung rdo rje'i tshig rkang gi rnam 'grel bcu gcig : commentaries of sa-chen kun-dga'-snin-po (1092-1158) on the root text of the lam 'bras system written at the behest of various disciples"@en ;
+        skos:prefLabel      "lam 'bras gzhung rdo rje'i tshig rkang gi rnam 'grel bcu gcig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID270053A7CCBB77A5 , bdr:ID59D7C4A74D796A5C , bdr:IDB0CE3866AF2FD681 , bdr:IDF0D4C49A26CE55F0 ;
+        :biblioNote         "reproduced from a set of prints from the sde-dge dgon-chen blocks"@en ;
+        :hasPart            bdr:MW24767_160989 , bdr:MW24767_233455 , bdr:MW24767_E68008 ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT6CFFC9D1C8525C34 , bdr:TT928554D62B4C5964 , bdr:TTFDDDB4721F45BAAE ;
+        :instanceEvent      bdr:EV821AEBAA012EAE0E ;
+        :instanceHasReproduction  bdr:W24767 ;
+        :instanceOf         bdr:WA24767 ;
+        :isRoot             true ;
+        :note               bdr:NT012115A467295DF7 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dehra dun, u.p."@en ;
+        :publisherName      "sakya centre"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS23648 ;
+        :seriesNumber       "v. 28-30" ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW24767_009088
@@ -245,6 +321,10 @@ bdg:MW24767 {
         :partTreeIndex      "2" ;
         :partType           bdr:PartTypeVolume .
     
+    bdr:NT012115A467295DF7
+        a                   :Note ;
+        :noteText           "-3854"@en .
+    
     bdr:TT0E6AD7E6CEC9857B
         a                   :TitlePageTitle ;
         rdfs:label          "gzhung rdo rje'i tshig rkang gi 'grel pa rnal 'byor dbang phyug dpal sa skya pa chen po la khams pa sga theng gis zhus pa/"@bo-x-ewts .
@@ -269,9 +349,17 @@ bdg:MW24767 {
         a                   :Title ;
         rdfs:label          "rdor rje tshig rkang gi 'grel pa bande gshen rje mas zhus pa/"@bo-x-ewts .
     
+    bdr:TT6CFFC9D1C8525C34
+        a                   :Title ;
+        rdfs:label          "lam 'bras gzhung rdo rje'i tshig rkang gi rnam 'grel bcu gcig"@bo-x-ewts .
+    
     bdr:TT77002197629392EC
         a                   :Title ;
         rdfs:label          "rdor rje tshig rkang gi 'grel pa jo mo 'a 'u mas zhus pa/"@bo-x-ewts .
+    
+    bdr:TT928554D62B4C5964
+        a                   :TitlePageTitle ;
+        rdfs:label          "lam 'bras gzung rdo rje'i tshig rkang gi rnam 'grel bcu gcig : commentaries of sa-chen kun-dga'-snin-po (1092-1158) on the root text of the lam 'bras system written at the behest of various disciples"@en .
     
     bdr:TTA89850E8ACC23B52
         a                   :TitlePageTitle ;
@@ -308,4 +396,8 @@ bdg:MW24767 {
     bdr:TTF278AE14C4365016
         a                   :Title ;
         rdfs:label          "rdor rje tshig rkang gi 'grel pa klog skya dbang phyug grags kyis zhus pa/"@bo-x-ewts .
+    
+    bdr:TTFDDDB4721F45BAAE
+        a                   :OtherTitle ;
+        rdfs:label          "rnam 'grel bcu gcig"@bo-x-ewts .
 }

@@ -12,20 +12,61 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW27923 {
+    bda:LG11C18B10F50A2422
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-15T11:49:04.07Z"^^xsd:dateTime ;
+        adm:logMessage      "added chos skor as genre"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG3348587DB32FDDF6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG3A1B8300BA74A971
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-06-06T16:45:20.839Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed LC classification"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGD8C7926A61318F3F
         a                   adm:InitialOutlineData ;
         adm:logDate         "2008-11-13T14:34:31.263Z"^^xsd:dateTime ;
         adm:logMessage      "outline created"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGDA4949A857E8CB24
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-11T16:35:13.893Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27923  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS134942" ;
         adm:adminAbout      bdr:MW27923 ;
-        adm:facetIndex      91 ;
-        adm:logEntry        bda:LGD8C7926A61318F3F ;
+        adm:facetIndex      103 ;
+        adm:gitPath         "b9/MW27923.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27923 ;
+        adm:logEntry        bda:LG11C18B10F50A2422 , bda:LG3348587DB32FDDF6 , bda:LG3A1B8300BA74A971 , bda:LGD8C7926A61318F3F , bda:LGDA4949A857E8CB24 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeGterChos .
+        adm:outlineType     bda:OutlineTypeGterChos ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0057505686227324
         a                   :ContentLocation ;
@@ -309,7 +350,41 @@ bdg:MW27923 {
         :contentLocationInstance  bdr:W27923 ;
         :contentLocationPage  291 .
     
-    bdr:MW27923  :hasPart   bdr:MW27923_1231E5 , bdr:MW27923_1AB1C4 , bdr:MW27923_21F86C , bdr:MW27923_26A336 , bdr:MW27923_66B27E , bdr:MW27923_AC3B1E ;
+    bdr:EVC2FC62084A17B1C5
+        a                   :PublishedEvent ;
+        :onYear             "1976"^^xsd:gYear .
+    
+    bdr:ID23CFDF00EDF0AADB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "unk85020444" .
+    
+    bdr:ID52AF0D3D59762551
+        a                   bdr:HollisId ;
+        rdf:value           "014259740" .
+    
+    bdr:IDB2F55B09A27BA516
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4860.Y34 T534" .
+    
+    bdr:MW27923  a          :Instance ;
+        skos:altLabel       "revealed teachings of a cycle of practice focussing upon yamantaka"@en ;
+        skos:prefLabel      "'jam dpal gshin rje dregs pa 'joms byed kyi chos skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID23CFDF00EDF0AADB , bdr:ID52AF0D3D59762551 , bdr:IDB2F55B09A27BA516 ;
+        :biblioNote         "reproduced from a tracing from a print of the wood blocks curved and preserved at mindroling monastery"@en ;
+        :hasPart            bdr:MW27923_1231E5 , bdr:MW27923_1AB1C4 , bdr:MW27923_21F86C , bdr:MW27923_26A336 , bdr:MW27923_66B27E , bdr:MW27923_AC3B1E ;
+        :hasSourcePrintery  bdr:G2CN10887 ;
+        :hasTitle           bdr:TT834EEF2BACCCC946 , bdr:TTD7236D6C1DF8C5EE ;
+        :instanceEvent      bdr:EVC2FC62084A17B1C5 ;
+        :instanceHasReproduction  bdr:W27923 ;
+        :instanceOf         bdr:WA27923 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dehra dun"@en ;
+        :publisherName      "d.g. khochhen tulku"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "445 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27923_01BD00
@@ -1075,6 +1150,10 @@ bdg:MW27923 {
         a                   :Title ;
         rdfs:label          "gshin rje dregs pa 'joms byed las: dam sri mnan pa (tsha) (sri mnan)"@bo-x-ewts .
     
+    bdr:TT834EEF2BACCCC946
+        a                   :Title ;
+        rdfs:label          "'jam dpal gshin rje dregs pa 'joms byed kyi chos skor/"@bo-x-ewts .
+    
     bdr:TT8AC37BF7EEDE2B57
         a                   :Title ;
         rdfs:label          "dkyil 'khor gyi mthong ba bstan pa (je) (dbang chog)"@bo-x-ewts .
@@ -1130,6 +1209,10 @@ bdg:MW27923 {
     bdr:TTD5DC931EF8ED0BB8
         a                   :Title ;
         rdfs:label          "'jam dpal gshin rje'i gshed po'i bsnyen yig 'dod 'jo'i bum bzang (sha) (bsnyen yig)"@bo-x-ewts .
+    
+    bdr:TTD7236D6C1DF8C5EE
+        a                   :OtherTitle ;
+        rdfs:label          "revealed teachings of a cycle of practice focussing upon yamantaka"@en .
     
     bdr:TTE23470E9256E497A
         a                   :Title ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23607 {
+    bda:LG3C6915BFC755673B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC771A56ED52D8E01
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-12T13:50:32.04Z"^^xsd:dateTime ;
@@ -24,14 +28,46 @@ bdg:MW23607 {
         adm:logDate         "2014-02-12T10:49:46.748Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23607  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23607" ;
         adm:adminAbout      bdr:MW23607 ;
-        adm:facetIndex      19 ;
-        adm:logEntry        bda:LGC771A56ED52D8E01 , bda:LGEE2EAC5349381DFA ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "be/MW23607.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23607 ;
+        adm:logEntry        bda:LG3C6915BFC755673B , bda:LGC771A56ED52D8E01 , bda:LGEE2EAC5349381DFA , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL066FDAA06970F78B
         a                   :ContentLocation ;
@@ -89,7 +125,47 @@ bdg:MW23607 {
         :contentLocationPage  151 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23607  :hasPart   bdr:MW23607_87605F , bdr:MW23607_A6A4C3 ;
+    bdr:EV67F723F2CFA2F48D
+        a                   :PublishedEvent ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:ID265F01FE4293CA13
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.6 .Z43 2001" .
+    
+    bdr:ID5DC54C411C0DEB7C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001362404" .
+    
+    bdr:ID6E58B8D7B7719C33
+        a                   bdr:HollisId ;
+        rdf:value           "014258982" .
+    
+    bdr:ID832C961624137098
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "8174720470" .
+    
+    bdr:ID88EDE7C2FEF642F1
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008917337-6" .
+    
+    bdr:MW23607  a          :Instance ;
+        skos:altLabel       "zhe chen lugs srol cho ga'i lag len skor : a set unique manuals for the rituals in use at zhechn tennyi dargyeling monasteries, in accordance to the mindroling tradition the nyingmapa school tibetan buddhism"@en-x-mixed ;
+        skos:prefLabel      "zhe chen lugs srol cho ga'i lag len skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID265F01FE4293CA13 , bdr:ID5DC54C411C0DEB7C , bdr:ID6E58B8D7B7719C33 , bdr:ID832C961624137098 , bdr:ID88EDE7C2FEF642F1 ;
+        :hasPart            bdr:MW23607_87605F , bdr:MW23607_A6A4C3 ;
+        :hasTitle           bdr:TT20FF980082B2E909 , bdr:TTC0E93E193B0132B2 , bdr:TTC320CC63F25BCED5 , bdr:TTDD5E974B7142FA36 ;
+        :instanceEvent      bdr:EV67F723F2CFA2F48D ;
+        :instanceHasReproduction  bdr:W23607 ;
+        :instanceOf         bdr:WA23607 ;
+        :isRoot             true ;
+        :note               bdr:NTEF4FD25A5297FE6B ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "shechen publications"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23607_0AA17C
@@ -223,6 +299,10 @@ bdg:MW23607 {
         :partTreeIndex      "1.2" ;
         :partType           bdr:PartTypeTableOfContent .
     
+    bdr:NTEF4FD25A5297FE6B
+        a                   :Note ;
+        :noteText           "being scanned in india 2283-2284."@en .
+    
     bdr:TT0829ECC7EF06B159
         a                   :Title ;
         rdfs:label          "bla ma gsang ba 'dus pa'i sgo nas spros bcas tshes bcu chen mo'i lag len dngos grub char 'bebs/"@bo-x-ewts .
@@ -230,6 +310,10 @@ bdg:MW23607 {
     bdr:TT09091ECAFE03A1E8
         a                   :Title ;
         rdfs:label          "sgrub chen bka' brgyad bde gshegs 'dus pa'i lag len gsal byed nyin mor byed pa'i 'od snang /"@bo-x-ewts .
+    
+    bdr:TT20FF980082B2E909
+        a                   :Title ;
+        rdfs:label          "zhe chen lugs srol cho ga'i lag len skor/"@bo-x-ewts .
     
     bdr:TT3EDA9E93766A41C7
         a                   :Title ;
@@ -250,6 +334,18 @@ bdg:MW23607 {
     bdr:TTA6EDAAA7BE14FA1D
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TTC0E93E193B0132B2
+        a                   :TitlePageTitle ;
+        rdfs:label          "zhe chen lugs srol cho ga'i lag len skor : a set unique manuals for the rituals in use at zhechn tennyi dargyeling monasteries, in accordance to the mindroling tradition the nyingmapa school tibetan buddhism"@en-x-mixed .
+    
+    bdr:TTC320CC63F25BCED5
+        a                   :TitlePageTitle ;
+        rdfs:label          "ze chen lugs srol cho ga'i lag len skor"@bo-alalc97 .
+    
+    bdr:TTDD5E974B7142FA36
+        a                   :CoverTitle ;
+        rdfs:label          "Źe-chen lugs srol cho gaʾi lag len skor =Zhe Chen lugs srol cho gaʾi lag len skor."@en-x-mixed .
     
     bdr:TTE4A26AB0453D8669
         a                   :Title ;

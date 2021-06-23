@@ -22,6 +22,12 @@ bdg:MW2DB25391 {
         adm:logDate         "2015-06-04T10:36:09.243Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00002 .
     
+    bda:LG7A786DF040E9C27B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-05-27T14:48:12.291Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LG7FB260E91D8580E4
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-06-23T09:25:51.585Z"^^xsd:dateTime ;
@@ -40,14 +46,33 @@ bdg:MW2DB25391 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2DB25391  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB82624" ;
         adm:adminAbout      bdr:MW2DB25391 ;
-        adm:facetIndex      65 ;
-        adm:logEntry        bda:LG2026201351206248 , bda:LG316D29F14920F9C8 , bda:LG7FB260E91D8580E4 , bda:LG91DFCB6F177B9484 , bda:LG9DD6ED0A6CD066D8 ;
+        adm:facetIndex      73 ;
+        adm:gitPath         "07/MW2DB25391.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2DB25391 ;
+        adm:logEntry        bda:LG2026201351206248 , bda:LG316D29F14920F9C8 , bda:LG7A786DF040E9C27B , bda:LG7FB260E91D8580E4 , bda:LG91DFCB6F177B9484 , bda:LG9DD6ED0A6CD066D8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL04887E03BB656AD1
         a                   :ContentLocation ;
@@ -393,7 +418,31 @@ bdg:MW2DB25391 {
         :contentLocationPage  61 ;
         :contentLocationVolume  1 .
     
-    bdr:MW2DB25391  :hasPart  bdr:MW2DB25391_D217C5 , bdr:MW2DB25391_E43DC8 ;
+    bdr:EV1E05B4C5B5143A94
+        a                   :PublishedEvent ;
+        :onYear             "1987"^^xsd:gYear .
+    
+    bdr:IDD12854DAC5D619DB
+        a                   bdr:HollisId ;
+        rdf:value           "014260460" .
+    
+    bdr:MW2DB25391  a       :Instance ;
+        skos:prefLabel      "brag g.yab bla dgon gyi lo rgyus/"@bo-x-ewts , "察雅政教历史概述"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD12854DAC5D619DB ;
+        :authorshipStatement  "pad ma dbang 'dus/ blo bzang chos ldan thun mong nas bsgrigs/"@bo-x-ewts ;
+        :hasPart            bdr:MW2DB25391_D217C5 , bdr:MW2DB25391_E43DC8 ;
+        :hasTitle           bdr:TT50AEC3C27189639F , bdr:TTF00D7F2ACA198F6F , bdr:TTF230527FB2FEE30B ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV1E05B4C5B5143A94 ;
+        :instanceHasReproduction  bdr:W2DB25391 ;
+        :instanceOf         bdr:WA2DB25391 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "chab mdo/"@bo-x-ewts ;
+        :publisherName      "chab mdo sa khul chab gros rig gnas lo rgyus dpyad gzhi'i rgyu cha 'tshol bsdud u yon lhan khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2DB25391_0499F1
@@ -1028,6 +1077,10 @@ bdg:MW2DB25391 {
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
     
+    bdr:TT50AEC3C27189639F
+        a                   :Title ;
+        rdfs:label          "brag g.yab bla dgon gyi lo rgyus/"@bo-x-ewts .
+    
     bdr:TT56565056CF50CDE2
         a                   :Title ;
         rdfs:label          "mdo khams brag g.yab bla dgon sogs kyi gna' deng byung ba brjod pa thog ma'i phyogs bsgrigs sos ka'i nyi ring 'phul ba'i gtam/(stod cha)"@bo-x-ewts .
@@ -1059,4 +1112,12 @@ bdg:MW2DB25391 {
     bdr:TTE2F2E9AE1316B542
         a                   :Title ;
         rdfs:label          "lo rgyus phyogs bsgrigs 'di dang gtso che'i 'brel ba yod pa'i gser tham dang yig rigs brag brkos sogs gna' rdzas khag gcig gi brnyan par bdams bkod/"@bo-x-ewts .
+    
+    bdr:TTF00D7F2ACA198F6F
+        a                   :ToCTitle ;
+        rdfs:label          "ca ya zheng jiao li shi gai shu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTF230527FB2FEE30B
+        a                   :OtherTitle ;
+        rdfs:label          "察雅政教历史概述"@zh-hans .
 }

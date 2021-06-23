@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW18609 {
+    bda:LG6C615D29897DBC38
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG824E34E0C2F3D4DA
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-01-25T10:05:09.484Z"^^xsd:dateTime ;
@@ -22,14 +26,33 @@ bdg:MW18609 {
         adm:logDate         "2010-08-13T14:34:51.679Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW18609  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS4714" ;
         adm:adminAbout      bdr:MW18609 ;
-        adm:facetIndex      27 ;
-        adm:logEntry        bda:LG824E34E0C2F3D4DA , bda:LGD8B70B51EB24308E ;
+        adm:facetIndex      36 ;
+        adm:gitPath         "74/MW18609.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW18609 ;
+        adm:logEntry        bda:LG6C615D29897DBC38 , bda:LG824E34E0C2F3D4DA , bda:LGD8B70B51EB24308E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL098A3EF3296A410A
         a                   :ContentLocation ;
@@ -103,7 +126,36 @@ bdg:MW18609 {
         :contentLocationInstance  bdr:W18609 ;
         :contentLocationPage  17 .
     
-    bdr:MW18609  :hasPart   bdr:MW18609_042225 , bdr:MW18609_15427A , bdr:MW18609_1CBB9B , bdr:MW18609_1D4D31 , bdr:MW18609_2C6AC6 , bdr:MW18609_2CCC4F , bdr:MW18609_65863B , bdr:MW18609_94B17C , bdr:MW18609_CEA7D2 , bdr:MW18609_DA8338 , bdr:MW18609_E17F3C , bdr:MW18609_F61A69 ;
+    bdr:EV5CF1D7ECFA8C833F
+        a                   :PublishedEvent ;
+        :onYear             "1988"^^xsd:gYear .
+    
+    bdr:ID72D328DE29A1E8E6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223001771" .
+    
+    bdr:IDA0C612CCDFE82279
+        a                   bdr:HollisId ;
+        rdf:value           "014254821" .
+    
+    bdr:MW18609  a          :Instance ;
+        skos:prefLabel      "yar lung jo bo'i chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID72D328DE29A1E8E6 , bdr:IDA0C612CCDFE82279 ;
+        :authorshipStatement  "shAkya rin chen sdes brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW18609_042225 , bdr:MW18609_15427A , bdr:MW18609_1CBB9B , bdr:MW18609_1D4D31 , bdr:MW18609_2C6AC6 , bdr:MW18609_2CCC4F , bdr:MW18609_65863B , bdr:MW18609_94B17C , bdr:MW18609_CEA7D2 , bdr:MW18609_DA8338 , bdr:MW18609_E17F3C , bdr:MW18609_F61A69 ;
+        :hasTitle           bdr:TT1ACEB9DB64730157 , bdr:TTB7446E42A7717720 ;
+        :instanceEvent      bdr:EV5CF1D7ECFA8C833F ;
+        :instanceHasReproduction  bdr:W18609 ;
+        :instanceOf         bdr:WA18609 ;
+        :isRoot             true ;
+        :note               bdr:NT59AE5E737633D859 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 2, 186 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW18609_042225
@@ -283,6 +335,10 @@ bdg:MW18609 {
         :partTreeIndex      "03" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT59AE5E737633D859
+        a                   :Note ;
+        :noteText           "A-khu Dpe tho MHTL 10828: Yar lung jo bo'i chos 'byung"@en .
+    
     bdr:TT04E34A707783F8F0
         a                   :TitlePageTitle ;
         rdfs:label          "drug pa/ bstan pa phyi dar ji ltar dar ba dang bka' gdams pa'i bstan pa bod du dar tshul skor/"@bo-x-ewts .
@@ -294,6 +350,10 @@ bdg:MW18609 {
     bdr:TT113965E24A9030AE
         a                   :TitlePageTitle ;
         rdfs:label          "brgyad pa/ sa skya'i gdung rgyud dang de dag gi mdzad pa'i skor/"@bo-x-ewts .
+    
+    bdr:TT1ACEB9DB64730157
+        a                   :OtherTitle ;
+        rdfs:label          "yar lung chos 'byung /"@bo-x-ewts .
     
     bdr:TT1D9813D866BB41C1
         a                   :TitlePageTitle ;
@@ -322,6 +382,10 @@ bdg:MW18609 {
     bdr:TTA965C7315AF2FC8A
         a                   :TitlePageTitle ;
         rdfs:label          "lnga pa/ hor gyi rgyal rabs dang des mtha' bzhi'i rgyal khams dbang du 'dus pa'i skor/"@bo-x-ewts .
+    
+    bdr:TTB7446E42A7717720
+        a                   :Title ;
+        rdfs:label          "yar lung jo bo'i chos 'byung /"@bo-x-ewts .
     
     bdr:TTCBD79D4C0EB7CB7F
         a                   :TitlePageTitle ;

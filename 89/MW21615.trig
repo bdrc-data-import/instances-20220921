@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21615 {
+    bda:LG054EC2996EA18D0A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-09T10:13:26.749Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, add author, editor, cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LG3286138500228B77
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-04-12T14:11:42.605Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LG58B67F3F8720B726
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LG6DB0D60C6936A036
         a                   adm:UpdateOutlineData ;
@@ -34,14 +44,40 @@ bdg:MW21615 {
         adm:logMessage      "restored"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21615  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB99221" ;
         adm:adminAbout      bdr:MW21615 ;
-        adm:facetIndex      73 ;
-        adm:logEntry        bda:LG3286138500228B77 , bda:LG6DB0D60C6936A036 , bda:LG830575C270785EF1 , bda:LG9191B2685AA6B2D4 ;
+        adm:facetIndex      84 ;
+        adm:gitPath         "89/MW21615.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21615 ;
+        adm:logEntry        bda:LG054EC2996EA18D0A , bda:LG3286138500228B77 , bda:LG58B67F3F8720B726 , bda:LG6DB0D60C6936A036 , bda:LG830575C270785EF1 , bda:LG9191B2685AA6B2D4 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL002CD30E4173E041
         a                   :ContentLocation ;
@@ -247,7 +283,42 @@ bdg:MW21615 {
         :contentLocationInstance  bdr:W21615 ;
         :contentLocationPage  13 .
     
-    bdr:MW21615  :hasPart   bdr:MW21615_04C2CD , bdr:MW21615_07E39E , bdr:MW21615_09EDF1 , bdr:MW21615_0FC0DA , bdr:MW21615_147D7B , bdr:MW21615_1EE6B5 , bdr:MW21615_1FB8BE , bdr:MW21615_2BEC30 , bdr:MW21615_2C1BE0 , bdr:MW21615_300652 , bdr:MW21615_31E01A , bdr:MW21615_3B882B , bdr:MW21615_3E5A90 , bdr:MW21615_3F4015 , bdr:MW21615_4D7A6B , bdr:MW21615_58C69D , bdr:MW21615_5AEBCC , bdr:MW21615_601A76 , bdr:MW21615_778F86 , bdr:MW21615_7AE1CD , bdr:MW21615_80A707 , bdr:MW21615_932530 , bdr:MW21615_A10FD8 , bdr:MW21615_AAC35E , bdr:MW21615_ADF56F , bdr:MW21615_AFF3AD , bdr:MW21615_B095A4 , bdr:MW21615_B4CC4E , bdr:MW21615_CC5FE3 , bdr:MW21615_CCBD1D , bdr:MW21615_D934A2 , bdr:MW21615_DCF6EF , bdr:MW21615_DDB26F , bdr:MW21615_E6FC15 ;
+    bdr:EVAFEF99E0C82E6569
+        a                   :PublishedEvent ;
+        :onOrAbout          "1991,1994" .
+    
+    bdr:ID65EEFECC5B7B4329
+        a                   bdr:HollisId ;
+        rdf:value           "014258360" .
+    
+    bdr:ID98FFC5A5A3163A27
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223000112" .
+    
+    bdr:IDF5F46251CBBC884F
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008097893-2" .
+    
+    bdr:MW21615  a          :Instance ;
+        skos:altLabel       "Pho-braṅ Po-ta-laʾi lo rgyus phyogs bsgrigs /Bod Raṅ-skyoṅ-ljoṅs Rig-dṅos Do-dam-u-yon-lhan-khaṅ gis bsgrigs."@en-x-mixed ;
+        skos:prefLabel      "pho brang po ta la'i lo rgyus phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID65EEFECC5B7B4329 , bdr:ID98FFC5A5A3163A27 , bdr:IDF5F46251CBBC884F ;
+        :authorshipStatement  "bod rang skyong ljongs rig dngos do dam u yon lhan khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :hasPart            bdr:MW21615_04C2CD , bdr:MW21615_07E39E , bdr:MW21615_09EDF1 , bdr:MW21615_0FC0DA , bdr:MW21615_147D7B , bdr:MW21615_1EE6B5 , bdr:MW21615_1FB8BE , bdr:MW21615_2BEC30 , bdr:MW21615_2C1BE0 , bdr:MW21615_300652 , bdr:MW21615_31E01A , bdr:MW21615_3B882B , bdr:MW21615_3E5A90 , bdr:MW21615_3F4015 , bdr:MW21615_4D7A6B , bdr:MW21615_58C69D , bdr:MW21615_5AEBCC , bdr:MW21615_601A76 , bdr:MW21615_778F86 , bdr:MW21615_7AE1CD , bdr:MW21615_80A707 , bdr:MW21615_932530 , bdr:MW21615_A10FD8 , bdr:MW21615_AAC35E , bdr:MW21615_ADF56F , bdr:MW21615_AFF3AD , bdr:MW21615_B095A4 , bdr:MW21615_B4CC4E , bdr:MW21615_CC5FE3 , bdr:MW21615_CCBD1D , bdr:MW21615_D934A2 , bdr:MW21615_DCF6EF , bdr:MW21615_DDB26F , bdr:MW21615_E6FC15 ;
+        :hasTitle           bdr:TT2E8C02DD1527DE12 , bdr:TT8E6F95836163166D ;
+        :instanceEvent      bdr:EVAFEF99E0C82E6569 ;
+        :instanceHasReproduction  bdr:W21615 ;
+        :instanceOf         bdr:WA21615 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "115 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21615_04C2CD
@@ -697,6 +768,10 @@ bdg:MW21615 {
         a                   :Title ;
         rdfs:label          "bar skabs su pho brang nyams rgud du phyin tshul/"@bo-x-ewts .
     
+    bdr:TT2E8C02DD1527DE12
+        a                   :CoverTitle ;
+        rdfs:label          "Pho-braṅ Po-ta-laʾi lo rgyus phyogs bsgrigs /Bod Raṅ-skyoṅ-ljoṅs Rig-dṅos Do-dam-u-yon-lhan-khaṅ gis bsgrigs."@en-x-mixed .
+    
     bdr:TT31BB53A04FF15C03
         a                   :Title ;
         rdfs:label          "bka' gdams 'khyil/"@bo-x-ewts .
@@ -772,6 +847,10 @@ bdg:MW21615 {
     bdr:TT8C2E162C1E8675F6
         a                   :Title ;
         rdfs:label          "spur rgyal btsan pos mnga' khongs gcig gyur byas tshul/"@bo-x-ewts .
+    
+    bdr:TT8E6F95836163166D
+        a                   :Title ;
+        rdfs:label          "pho brang po ta la'i lo rgyus phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TT91E4CBE6286FF25D
         a                   :Title ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW669 {
+    bda:LG0D114096BA73083A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3BCFC0B47033EB94
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-29T16:03:47.478Z"^^xsd:dateTime ;
@@ -23,14 +27,33 @@ bdg:MW669 {
         adm:logDate         "2010-01-28T14:30:39.796Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW669  a            adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB95646" ;
         adm:adminAbout      bdr:MW669 ;
-        adm:facetIndex      47 ;
-        adm:logEntry        bda:LG3BCFC0B47033EB94 , bda:LG65634FF31550D524 ;
+        adm:facetIndex      59 ;
+        adm:gitPath         "20/MW669.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW669 ;
+        adm:logEntry        bda:LG0D114096BA73083A , bda:LG3BCFC0B47033EB94 , bda:LG65634FF31550D524 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0B115C43A80C3848
         a                   :ContentLocation ;
@@ -175,7 +198,45 @@ bdg:MW669 {
         :contentLocationPage  11 ;
         :contentLocationVolume  1 .
     
-    bdr:MW669  :hasPart     bdr:MW669_1F560A , bdr:MW669_7710AA ;
+    bdr:EVD098C8F52BB1B8B8
+        a                   :PublishedEvent ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:ID5F4AB5B6B0F02144
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542101292" .
+    
+    bdr:ID6AF1DA997AD14916
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915751" .
+    
+    bdr:ID8D48A8DAD1A6B25A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ3300.P735 R48 1993" .
+    
+    bdr:IDB710BE6E833DD9B1
+        a                   bdr:HollisId ;
+        rdf:value           "014261022" .
+    
+    bdr:MW669  a            :Instance ;
+        skos:altLabel       "yin ming chung lun hsiang chieh"@zh-latn-wadegile ;
+        skos:prefLabel      "tshad ma rnam nges TIk chen/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5F4AB5B6B0F02144 , bdr:ID6AF1DA997AD14916 , bdr:ID8D48A8DAD1A6B25A , bdr:IDB710BE6E833DD9B1 ;
+        :authorshipStatement  "rgyal tshab dar maa rin chen gyis mdzad/"@bo-x-ewts ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :hasPart            bdr:MW669_1F560A , bdr:MW669_7710AA ;
+        :hasTitle           bdr:TT6CA6D1193AB54A9C , bdr:TT7F897AC58DBD6518 , bdr:TTB426C158CFBECBB7 ;
+        :instanceEvent      bdr:EVD098C8F52BB1B8B8 ;
+        :instanceHasReproduction  bdr:W669 ;
+        :instanceOf         bdr:WA669 ;
+        :isRoot             true ;
+        :note               bdr:NTDEC03C8779D2077D ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v. (3, 5, 1124 p)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW669_0089F6  a     :Instance ;
@@ -438,6 +499,10 @@ bdg:MW669 {
         :partTreeIndex      "1.1.3.2.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTDEC03C8779D2077D
+        a                   :Note ;
+        :noteText           "scanned for distribution purposes only; not for distribution\n4856-4857\n\nanother editions\n260 ff. in vol. 8 of the 8 vol. collected works in the Potala collection.\n260 ff. in vol. nya of the  8 vol. New Zhol Par-khang  edition of the collected works of Rgyal-tshab Rje Dar-ma-rin-chen.\nTOH 5454."@en .
+    
     bdr:TT0EDBE6E5680005CF
         a                   :Title ;
         rdfs:label          "dang po/ rtsom pa la 'jug pa'i yan lag"@bo-x-ewts .
@@ -478,9 +543,17 @@ bdg:MW669 {
         a                   :Title ;
         rdfs:label          "dpe skrun gsal bshad/"@bo-x-ewts .
     
+    bdr:TT6CA6D1193AB54A9C
+        a                   :ColophonTitle ;
+        rdfs:label          "yin ming chung lun hsiang chieh"@zh-latn-wadegile .
+    
     bdr:TT70B295D9D6D954F0
         a                   :Title ;
         rdfs:label          "brtsams pa mthar phyin pa'i yan lag"@bo-x-ewts .
+    
+    bdr:TT7F897AC58DBD6518
+        a                   :TitlePageTitle ;
+        rdfs:label          "bstan bcos tshad ma rnam nges kyi TIk chen dgongs pa rab gsal/"@bo-x-ewts .
     
     bdr:TT8BD3A22F0D80DF9E
         a                   :ColophonTitle ;
@@ -489,6 +562,10 @@ bdg:MW669 {
     bdr:TT99A896E37C0B504E
         a                   :Title ;
         rdfs:label          "dang po/ gzhal bya mngon gyur rtogs pa'i thabs/"@bo-x-ewts .
+    
+    bdr:TTB426C158CFBECBB7
+        a                   :Title ;
+        rdfs:label          "tshad ma rnam nges TIk chen/"@bo-x-ewts .
     
     bdr:TTC3CDEF0FDF0F0BB9
         a                   :Title ;

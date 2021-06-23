@@ -12,20 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM210 {
+    bda:LG4C9C74F01A068911
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG7ADB8085CF98BF25
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-24T17:35:59.498Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note of sponsor"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD17CC766A19F3476
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-29T11:21:09.845Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD3CDAFB06677DF39
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-03-20T16:44:10.349Z"^^xsd:dateTime ;
+        adm:logMessage      "Full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM210"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIMA2F04F14  a     adm:InitialDataImport ;
         adm:logDate         "2019-03-20T16:42:29.633Z"^^xsd:dateTime ;
         adm:logMessage      "New outline NLM"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM210  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ332164" ;
         adm:adminAbout      bdr:MW1NLM210 ;
-        adm:facetIndex      27 ;
-        adm:logEntry        bda:LGIMA2F04F14 ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "0c/MW1NLM210.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM210 ;
+        adm:logEntry        bda:LG4C9C74F01A068911 , bda:LG7ADB8085CF98BF25 , bda:LGD17CC766A19F3476 , bda:LGD3CDAFB06677DF39 , bda:LGIM48AAB853 , bda:LGIMA2F04F14 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1A3EC46EC8056536
         a                   :ContentLocation ;
@@ -93,7 +135,19 @@ bdg:MW1NLM210 {
         :contentLocationInstance  bdr:W1NLM210 ;
         :contentLocationPage  297 .
     
-    bdr:MW1NLM210  :hasPart  bdr:MW1NLM210_018E45 , bdr:MW1NLM210_1E1512 , bdr:MW1NLM210_38F687 , bdr:MW1NLM210_520751 , bdr:MW1NLM210_6D10B5 , bdr:MW1NLM210_767A13 , bdr:MW1NLM210_AF83C2 , bdr:MW1NLM210_BE0D38 , bdr:MW1NLM210_C9C3E1 , bdr:MW1NLM210_D5C5C5 , bdr:MW1NLM210_F45A37 ;
+    bdr:MW1NLM210  a        :Instance ;
+        skos:prefLabel      "'byung bzhi gtor ma'i gdams pa nyams su len tshul gsal bar bkod pa nam mkha'i rje chen sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "23x8" ;
+        :hasPart            bdr:MW1NLM210_018E45 , bdr:MW1NLM210_1E1512 , bdr:MW1NLM210_38F687 , bdr:MW1NLM210_520751 , bdr:MW1NLM210_6D10B5 , bdr:MW1NLM210_767A13 , bdr:MW1NLM210_AF83C2 , bdr:MW1NLM210_BE0D38 , bdr:MW1NLM210_C9C3E1 , bdr:MW1NLM210_D5C5C5 , bdr:MW1NLM210_F45A37 ;
+        :hasTitle           bdr:TT18B2E5AAA3CA1AAA ;
+        :instanceHasReproduction  bdr:W1NLM210 ;
+        :instanceOf         bdr:WA1NLM210 ;
+        :isRoot             true ;
+        :note               bdr:NT70A592C5E72BCC5C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM210_018E45
@@ -248,6 +302,14 @@ bdg:MW1NLM210 {
         :partOf             bdr:MW1NLM210 ;
         :partTreeIndex      "06" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT70A592C5E72BCC5C
+        a                   :Note ;
+        :noteText           "nlmId: M0058123"@en .
+    
+    bdr:TT18B2E5AAA3CA1AAA
+        a                   :Title ;
+        rdfs:label          "'byung bzhi gtor ma'i gdams pa nyams su len tshul gsal bar bkod pa nam mkha'i rje chen sogs/"@bo-x-ewts .
     
     bdr:TT19272A808B9A8426
         a                   :Title ;

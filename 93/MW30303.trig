@@ -18,20 +18,43 @@ bdg:MW30303 {
         adm:logMessage      "gsar du mgo btsugs"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG8A94899585262A0E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG8E347E4CD82D8C62
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2007-08-14T12:41:43.265Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30303  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB4487" ;
         adm:adminAbout      bdr:MW30303 ;
-        adm:facetIndex      96 ;
-        adm:logEntry        bda:LG2DFEF0205E4EAD07 , bda:LG8E347E4CD82D8C62 ;
+        adm:facetIndex      104 ;
+        adm:gitPath         "93/MW30303.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30303 ;
+        adm:logEntry        bda:LG2DFEF0205E4EAD07 , bda:LG8A94899585262A0E , bda:LG8E347E4CD82D8C62 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Dega Bumu"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL04105F7D3380920F
         a                   :ContentLocation ;
@@ -335,7 +358,31 @@ bdg:MW30303 {
         :contentLocationPage  933 ;
         :contentLocationVolume  3 .
     
-    bdr:MW30303  :hasPart   bdr:MW30303_3396E4 , bdr:MW30303_35C158 , bdr:MW30303_A41E3C ;
+    bdr:EVBABF03151E2301FA
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID8D90E496089FCA18
+        a                   bdr:HollisId ;
+        rdf:value           "014260723" .
+    
+    bdr:MW30303  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_dbang chen dgyes rab rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8D90E496089FCA18 ;
+        :biblioNote         "output from computer input"@en ;
+        :hasPart            bdr:MW30303_3396E4 , bdr:MW30303_35C158 , bdr:MW30303_A41E3C ;
+        :hasTitle           bdr:TT0788FF91E57562F9 , bdr:TT96B39C396F86C480 ;
+        :instanceEvent      bdr:EVBABF03151E2301FA ;
+        :instanceHasReproduction  bdr:W30303 ;
+        :instanceOf         bdr:WA30303 ;
+        :isRoot             true ;
+        :note               bdr:NTDCE924AAA89DA8B7 ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "[khreng tu'u?]"@en ;
+        :publisherName      "[lab dgon]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30303_03669E
@@ -987,6 +1034,10 @@ bdg:MW30303 {
         :partTreeIndex      "1.17" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTDCE924AAA89DA8B7
+        a                   :Note ;
+        :noteText           "the fourth volume, a history of lab monastery, has not been printed\n6059-6061"@en .
+    
     bdr:TT00B78E5877994D0F
         a                   :Title ;
         rdfs:label          "blo gros bstan rgyas nas bskul ngor bris pa'i gsol 'debs/"@bo-x-ewts .
@@ -998,6 +1049,10 @@ bdg:MW30303 {
     bdr:TT056127548B64FA05
         a                   :Title ;
         rdfs:label          "mkha' mgro'i rtags bstod sogs/"@bo-x-ewts .
+    
+    bdr:TT0788FF91E57562F9
+        a                   :CoverTitle ;
+        rdfs:label          "lab skyabs mgon dbang chen dgyes rab rdo rje'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TT160668FBBCEEEA34
         a                   :Title ;
@@ -1102,6 +1157,10 @@ bdg:MW30303 {
     bdr:TT936C6D523E7BB5AB
         a                   :Title ;
         rdfs:label          "sbyong rgyud rnam snang chen po'i dkyil 'khor du 'jug pa'i sta gon gyi cho ga"@bo-x-ewts .
+    
+    bdr:TT96B39C396F86C480
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dbang chen dgyes rab rdo rje/"@bo-x-ewts .
     
     bdr:TT9C0A4B7EDC6D0533
         a                   :Title ;

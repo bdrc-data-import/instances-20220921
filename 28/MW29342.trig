@@ -12,20 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29342 {
+    bda:LG452725688CA19C5B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGE9104B1D601FD7BC
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-07-08T13:28:51.875Z"^^xsd:dateTime ;
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29342  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS149738" ;
         adm:adminAbout      bdr:MW29342 ;
-        adm:facetIndex      11 ;
-        adm:logEntry        bda:LGE9104B1D601FD7BC ;
+        adm:facetIndex      22 ;
+        adm:gitPath         "28/MW29342.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29342 ;
+        adm:logEntry        bda:LG452725688CA19C5B , bda:LGE9104B1D601FD7BC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith ; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0DD8D0DEEB30B753
         a                   :ContentLocation ;
@@ -71,7 +94,41 @@ bdg:MW29342 {
         :contentLocationPage  41 ;
         :contentLocationVolume  1 .
     
-    bdr:MW29342  :hasPart   bdr:MW29342_5F972A , bdr:MW29342_AC42EF ;
+    bdr:EVBD8D2FDB49193F43
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID537A29C980470FD3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2165+" .
+    
+    bdr:ID9F2CB075A0DF01C2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "8190241125" .
+    
+    bdr:IDCD71C5D24BF2F439
+        a                   bdr:HollisId ;
+        rdf:value           "014259992" .
+    
+    bdr:MW29342  a          :Instance ;
+        skos:altLabel       "the detailed commentary on the great hevajra tantra"@en ;
+        skos:prefLabel      "dpal kye rdo rje zhes bya ba'i rgyud kyi rgyal po'i 'grel pa legs bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID537A29C980470FD3 , bdr:ID9F2CB075A0DF01C2 , bdr:IDCD71C5D24BF2F439 ;
+        :authorshipStatement  "by the great master dwags po pan chen bkra shis rnam rgyal (1513-1587)"@en ;
+        :biblioNote         "volume 2 has isbn: 81-902411-3-3"@en ;
+        :hasPart            bdr:MW29342_5F972A , bdr:MW29342_AC42EF ;
+        :hasTitle           bdr:TT05A3BF3CC951876C , bdr:TT8C0A1353372B0940 , bdr:TTD387FD09AC16FBD7 ;
+        :instanceEvent      bdr:EVBD8D2FDB49193F43 ;
+        :instanceHasReproduction  bdr:W29342 ;
+        :instanceOf         bdr:WA29342 ;
+        :isRoot             true ;
+        :note               bdr:NT0E54086B2FFAA024 ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "drikung kagyu publications"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29342_0367A9
@@ -162,6 +219,18 @@ bdg:MW29342 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeVolume .
     
+    bdr:NT0E54086B2FFAA024
+        a                   :Note ;
+        :noteText           "includes an introductory biography of dwags po bkra shis rnam rgyal:\nmnyam med sgam po pa chen po'i rnam rol khams gsum chos kyi rgyal po dwags po bkra shis rnam par rgyal ba'i rnam thar mdor bsdus\nv. 1\nwritten by one bzang po in 1662, probably one of the hierarchs of dwags lha sgam po\nand\na topical outline to the subjects treated in the text:\nkye rdor 'grel pa legs bshad nyi ma'i 'od zer gyi sa bcad kye rdor rab gsal\n\nthe set of 4 volumes has the isbn 81-902411-0-9 \n\ntbrc holds digitally scaned images, tiffs and pdf files\n5276-5277"@en .
+    
+    bdr:TT05A3BF3CC951876C
+        a                   :Title ;
+        rdfs:label          "dpal kye rdo rje zhes bya ba'i rgyud kyi rgyal po'i 'grel pa legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TT8C0A1353372B0940
+        a                   :Subtitle ;
+        rdfs:label          "the detailed commentary on the great hevajra tantra"@en .
+    
     bdr:TTA2C49FCC4D8B0D2A
         a                   :Title ;
         rdfs:label          "dpal kye'i rdo rje zhes bya ba'i rgyud kyi rgyal po'i 'grel ba legs bshad nyi ma'i 'od zer: brtags pa dang po (e)"@bo-x-ewts .
@@ -169,4 +238,8 @@ bdg:MW29342 {
     bdr:TTBA0AE7D0367C9EB4
         a                   :Title ;
         rdfs:label          "dpal kye'i rdo rje zhes bya ba'i rgyud kyi rgyal po'i 'grel pa legs bshad nyi ma'i 'od zer : glegs bam waM/"@bo-x-ewts .
+    
+    bdr:TTD387FD09AC16FBD7
+        a                   :OtherTitle ;
+        rdfs:label          "kye rdo rje zhes bya ba'i rgyud kyi rgyal po'i 'grel pa legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
 }

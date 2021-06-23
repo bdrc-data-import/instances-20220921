@@ -18,6 +18,10 @@ bdg:MW30073 {
         adm:logMessage      "reworked pagnination"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG11B683731F2AD1CF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG3CB88CF2D6F84F06
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-12-03T15:12:20.095Z"^^xsd:dateTime ;
@@ -36,14 +40,45 @@ bdg:MW30073 {
         adm:logMessage      "first published"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG8A9C2137873D172E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-10T10:13:04.251Z"^^xsd:dateTime ;
+        adm:logMessage      "added about P# and infos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30073  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS46832" ;
         adm:adminAbout      bdr:MW30073 ;
-        adm:facetIndex      49 ;
-        adm:logEntry        bda:LG10E13EFB9598DD0D , bda:LG3CB88CF2D6F84F06 , bda:LG77F79AE23A91046E , bda:LG7E663686D56DD501 ;
+        adm:facetIndex      61 ;
+        adm:gitPath         "c2/MW30073.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30073 ;
+        adm:logEntry        bda:LG10E13EFB9598DD0D , bda:LG11B683731F2AD1CF , bda:LG3CB88CF2D6F84F06 , bda:LG77F79AE23A91046E , bda:LG7E663686D56DD501 , bda:LG8A9C2137873D172E , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeCompositeVolume .
+        adm:outlineType     bda:OutlineTypeCompositeVolume ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL039BE9C1450E0839
         a                   :ContentLocation ;
@@ -183,7 +218,44 @@ bdg:MW30073 {
         :contentLocationInstance  bdr:W30073 ;
         :contentLocationPage  510 .
     
-    bdr:MW30073  :hasPart   bdr:MW30073_038B95 , bdr:MW30073_148D49 , bdr:MW30073_196F9E , bdr:MW30073_1C8A01 , bdr:MW30073_1F51DB , bdr:MW30073_2F79C9 , bdr:MW30073_54659F , bdr:MW30073_615118 , bdr:MW30073_62AD26 , bdr:MW30073_639E0A , bdr:MW30073_682B56 , bdr:MW30073_69AB4B , bdr:MW30073_8B366F , bdr:MW30073_A1B543 , bdr:MW30073_A6EFC4 , bdr:MW30073_AC0524 , bdr:MW30073_B697BC , bdr:MW30073_BFADED , bdr:MW30073_D2479B , bdr:MW30073_DCAA61 , bdr:MW30073_E55D35 , bdr:MW30073_F634D3 , bdr:MW30073_FE3D04 ;
+    bdr:EVB259E2FC537C4E64
+        a                   :PublishedEvent ;
+        :onYear             "2005"^^xsd:gYear .
+    
+    bdr:ID1EC5CAE3E22E5823
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ968.U62957 K865 2005" .
+    
+    bdr:ID26E2399BAD4D5D28
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005322250" .
+    
+    bdr:ID28DECBD8BAD2C727
+        a                   bdr:HollisId ;
+        rdf:value           "014260600" .
+    
+    bdr:IDAFECB787E71DF6FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105070749" .
+    
+    bdr:MW30073  a          :Instance ;
+        skos:prefLabel      "kun dga' grol mchog gi phyi nang gsang gsum gyi rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1EC5CAE3E22E5823 , bdr:ID26E2399BAD4D5D28 , bdr:ID28DECBD8BAD2C727 , bdr:IDAFECB787E71DF6FA ;
+        :authorshipStatement  "kun dga' grol mchog gis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW30073_038B95 , bdr:MW30073_148D49 , bdr:MW30073_196F9E , bdr:MW30073_1C8A01 , bdr:MW30073_1F51DB , bdr:MW30073_2F79C9 , bdr:MW30073_54659F , bdr:MW30073_615118 , bdr:MW30073_62AD26 , bdr:MW30073_639E0A , bdr:MW30073_682B56 , bdr:MW30073_69AB4B , bdr:MW30073_8B366F , bdr:MW30073_A1B543 , bdr:MW30073_A6EFC4 , bdr:MW30073_AC0524 , bdr:MW30073_B697BC , bdr:MW30073_BFADED , bdr:MW30073_D2479B , bdr:MW30073_DCAA61 , bdr:MW30073_E55D35 , bdr:MW30073_F634D3 , bdr:MW30073_FE3D04 ;
+        :hasTitle           bdr:TTE1B1516BD75238A7 , bdr:TTEE19277B7F15F5BA ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVB259E2FC537C4E64 ;
+        :instanceHasReproduction  bdr:W30073 ;
+        :instanceOf         bdr:WA30073 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 584 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30073_038B95
@@ -585,4 +657,12 @@ bdg:MW30073 {
     bdr:TTCD8B3DBC599B3B17
         a                   :Title ;
         rdfs:label          "rnam thar gyi dpe rdzi sngon rabs rjes dran/"@bo-x-ewts .
+    
+    bdr:TTE1B1516BD75238A7
+        a                   :Title ;
+        rdfs:label          "kun dga' grol mchog gi phyi nang gsang gsum gyi rnam thar/"@bo-x-ewts .
+    
+    bdr:TTEE19277B7F15F5BA
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun kun dga' grol mchog gi phyi nang gsang gsum gyi rnam thar/"@bo-x-ewts .
 }

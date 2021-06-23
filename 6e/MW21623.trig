@@ -28,14 +28,43 @@ bdg:MW21623 {
         adm:logDate         "2010-01-11T13:51:10.082Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGD88837D86C789E34
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21623  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD96463" ;
         adm:adminAbout      bdr:MW21623 ;
-        adm:facetIndex      24 ;
-        adm:logEntry        bda:LG53453B916F489A46 , bda:LG6A5EABBA098F998A , bda:LG89CA514BA4F5230B ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "6e/MW21623.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21623 ;
+        adm:logEntry        bda:LG53453B916F489A46 , bda:LG6A5EABBA098F998A , bda:LG89CA514BA4F5230B , bda:LGD88837D86C789E34 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL3D10BFC59C09CD96
         a                   :ContentLocation ;
@@ -85,7 +114,47 @@ bdg:MW21623 {
         :contentLocationInstance  bdr:W21623 ;
         :contentLocationPage  9 .
     
-    bdr:MW21623  :hasPart   bdr:MW21623_26D11A , bdr:MW21623_75400E , bdr:MW21623_DDB5E9 , bdr:MW21623_E4FC77 ;
+    bdr:EVE61ADB46D46D6A9A
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID1FD136E6DAAF1137
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ3235 .S66 1999" .
+    
+    bdr:ID2351B8C98D3EEC7C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949046" .
+    
+    bdr:ID597CE0F6C62DDCA7
+        a                   bdr:HollisId ;
+        rdf:value           "014258365" .
+    
+    bdr:IDC6F326E87B43A500
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542106511" .
+    
+    bdr:MW21623  a          :Instance , :SerialInstance ;
+        skos:altLabel       "chieh mao-lan-hua-wa yin ming chan shih"@zh-latn-wadegile ;
+        skos:prefLabel      "tshad ma rnam 'grel gyi le'u bzhi'i TI ka"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1FD136E6DAAF1137 , bdr:ID2351B8C98D3EEC7C , bdr:ID597CE0F6C62DDCA7 , bdr:IDC6F326E87B43A500 ;
+        :authorshipStatement  "gangs can skal bzang dpe tshogs rtsom sgrig pas bsgrigs ; dge 'dun blo bzang dang blo bzang dar rgyas gnyis kyis zhu dag byas/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW21623_26D11A , bdr:MW21623_75400E , bdr:MW21623_DDB5E9 , bdr:MW21623_E4FC77 ;
+        :hasTitle           bdr:TTCA104265EF7F5CD3 , bdr:TTCDEDF2F9233F78B1 , bdr:TTE6B48B906B7E3CB3 , bdr:TTF2CD8987304792B8 ;
+        :instanceEvent      bdr:EVE61ADB46D46D6A9A ;
+        :instanceHasReproduction  bdr:W21623 ;
+        :instanceOf         bdr:WA21623 ;
+        :isRoot             true ;
+        :note               bdr:NTD2907D569AE849F2 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS17635 ;
+        :seriesNumber       "spyi deb 6" ;
+        :workExtentStatement  "5, 794 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21623_2224A4
@@ -200,6 +269,10 @@ bdg:MW21623 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTD2907D569AE849F2
+        a                   :Note ;
+        :noteText           "preservation scanning for tbrc\nnot to be distributed for copyright considerations\n4218"@en .
+    
     bdr:TT261AF87926A28A91
         a                   :TitlePageTitle ;
         rdfs:label          "rje smon dpal bas mdzad pa'i le'u bzhi pa'i TIk+ka"@bo-x-ewts .
@@ -232,6 +305,14 @@ bdg:MW21623 {
         a                   :Title ;
         rdfs:label          "rnam 'grel le'u bzhi pa'i TIk+ka"@bo-x-ewts .
     
+    bdr:TTCA104265EF7F5CD3
+        a                   :ColophonTitle ;
+        rdfs:label          "chieh mao-lan-hua-wa yin ming chan shih"@zh-latn-wadegile .
+    
+    bdr:TTCDEDF2F9233F78B1
+        a                   :Title ;
+        rdfs:label          "tshad ma rnam 'grel gyi le'u bzhi'i TI ka"@bo-x-ewts .
+    
     bdr:TTCF84FABF6C1D85EE
         a                   :Title ;
         rdfs:label          "gangs can skal bzang dpe tshogs par skrun zhu ba'i sngon 'gro'i gsal bshad/"@bo-x-ewts .
@@ -240,6 +321,10 @@ bdg:MW21623 {
         a                   :Title ;
         rdfs:label          "rje smon lam dpal ba'i rnam 'grel mtha' dpyod chen mo/"@bo-x-ewts .
     
+    bdr:TTE6B48B906B7E3CB3
+        a                   :ColophonTitle ;
+        rdfs:label          "jie maolanhuawa yin ming zhan shi"@zh-latn-pinyin-x-ndia .
+    
     bdr:TTEA0E183E5970B069
         a                   :TitlePageTitle ;
         rdfs:label          "rje smon dpal bas mdzad pa'i le'u dang po'i TIk+ka"@bo-x-ewts .
@@ -247,4 +332,8 @@ bdg:MW21623 {
     bdr:TTF22E062C2B73456A
         a                   :Title ;
         rdfs:label          "rnam 'grel le'u gnyis pa'i TIk+ka"@bo-x-ewts .
+    
+    bdr:TTF2CD8987304792B8
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje smon lam dpal ba'i rnam 'grel mtha' dpyod chen mo/"@bo-x-ewts .
 }

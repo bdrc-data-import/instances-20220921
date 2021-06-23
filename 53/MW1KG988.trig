@@ -18,6 +18,24 @@ bdg:MW1KG988 {
         adm:logMessage      "fixed pagination error"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG17CA2D1AB1F1C795
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-13T08:47:01.773Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG2FBABC0ACC694294
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-11-17T12:40:54.304Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG4A15F9F144D9AAF3
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-25T14:58:45.642Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG809BA9B8F1E41FFE
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-18T11:50:32.955Z"^^xsd:dateTime ;
@@ -30,14 +48,33 @@ bdg:MW1KG988 {
         adm:logDate         "2013-08-07T09:18:39.784Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG988  a         adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG988" ;
         adm:adminAbout      bdr:MW1KG988 ;
-        adm:facetIndex      293 ;
-        adm:logEntry        bda:LG150C003016FB646A , bda:LG809BA9B8F1E41FFE , bda:LGFEF61959CACF6261 ;
+        adm:facetIndex      304 ;
+        adm:gitPath         "53/MW1KG988.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG988 ;
+        adm:logEntry        bda:LG150C003016FB646A , bda:LG17CA2D1AB1F1C795 , bda:LG2FBABC0ACC694294 , bda:LG4A15F9F144D9AAF3 , bda:LG809BA9B8F1E41FFE , bda:LGFEF61959CACF6261 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0010848538CC1153
         a                   :ContentLocation ;
@@ -1033,8 +1070,35 @@ bdg:MW1KG988 {
         :contentLocationPage  27 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG988  :hasPart  bdr:MW1KG988_07A465 , bdr:MW1KG988_2D3442 , bdr:MW1KG988_64320B , bdr:MW1KG988_F6AD65 ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EV6CF49A9C025AB9E3
+        a                   :PublishedEvent ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:ID75CC8243D637EA7A
+        a                   bdr:HollisId ;
+        rdf:value           "014257647" .
+    
+    bdr:MW1KG988  a         :Instance ;
+        skos:altLabel       "the collected liturgical texts of stag lung brag"@en ;
+        skos:prefLabel      "stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID75CC8243D637EA7A ;
+        :biblioNote         "reproduced from a set of the stag lung brag prints"@en ;
+        :hasPart            bdr:MW1KG988_07A465 , bdr:MW1KG988_2D3442 , bdr:MW1KG988_64320B , bdr:MW1KG988_F6AD65 ;
+        :hasSourcePrintery  bdr:G2CN10923 ;
+        :hasTitle           bdr:TT115BE87871552D97 , bdr:TT2F2D0C58006D378E , bdr:TTCE4C6813677A3122 , bdr:TTD8920D63FCFDEEEB ;
+        :instanceEvent      bdr:EV6CF49A9C025AB9E3 ;
+        :instanceHasReproduction  bdr:W1KG988 ;
+        :instanceOf         bdr:WA1KG988 ;
+        :isRoot             true ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi/"@bo-x-ewts ;
+        :publisherName      "ngawang sopa/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4 v." ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workPrintery       "lakshmi printing works, lal kuan, delhi"@en .
     
     bdr:MW1KG988_01671E
         a                   :Instance ;
@@ -3081,6 +3145,10 @@ bdg:MW1KG988 {
         a                   :Title ;
         rdfs:label          "thang lha/__rdor legs/_dpal drag___rgyal btsan/__shugs ldan/__klu/__jo bo rgyal mtshan rnams kyi gsol mchod/(tsha)"@bo-x-ewts .
     
+    bdr:TT115BE87871552D97
+        a                   :OtherTitle ;
+        rdfs:label          "the collected liturgical texts of stag lung brag"@en .
+    
     bdr:TT1203F74121CE3D5A
         a                   :Title ;
         rdfs:label          "sgrol ma maN+Dal bzhi pa'i cho ga'i lag len dang man ngag gi gnad gsal bar bkod pa bdud rtsi'i bum bzang /(cha)"@bo-x-ewts .
@@ -3148,6 +3216,10 @@ bdg:MW1KG988 {
     bdr:TT2EACBF39E114D58B
         a                   :Title ;
         rdfs:label          "smon lam bdun cu pa/"@bo-x-ewts .
+    
+    bdr:TT2F2D0C58006D378E
+        a                   :Title ;
+        rdfs:label          "stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts .
     
     bdr:TT2FE05774738E77A3
         a                   :Title ;
@@ -3553,6 +3625,10 @@ bdg:MW1KG988 {
         a                   :Title ;
         rdfs:label          "klu'i gsol mchod/"@bo-x-ewts .
     
+    bdr:TTCE4C6813677A3122
+        a                   :TitlePageTitle ;
+        rdfs:label          "dgon gsas stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts .
+    
     bdr:TTD29DB43F23962158
         a                   :ColophonTitle ;
         rdfs:label          "bstod pa legs byas yongs 'dus snye ma/"@bo-x-ewts .
@@ -3564,6 +3640,10 @@ bdg:MW1KG988 {
     bdr:TTD7DDE631044A74C6
         a                   :Title ;
         rdfs:label          "thub pa'i dbang po'i bstod pa skabs gsum pa/"@bo-x-ewts .
+    
+    bdr:TTD8920D63FCFDEEEB
+        a                   :OtherTitle ;
+        rdfs:label          "the ollected ritual texts used in the stag lung brag bsam gtan gling monastery/"@bo-x-ewts .
     
     bdr:TTDA1450F2564DBC00
         a                   :Title ;

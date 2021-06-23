@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29252 {
+    bda:LG15D43D1239496E68
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG25B765AEC06CCD57
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-12T13:43:55.788Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGC3A19762906F3B64
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-07-18T10:15:08.906Z"^^xsd:dateTime ;
@@ -24,15 +34,41 @@ bdg:MW29252 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29252  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS151641" ;
         :note               bdr:NTAC56D409B2677E73 ;
         adm:adminAbout      bdr:MW29252 ;
-        adm:facetIndex      11 ;
-        adm:logEntry        bda:LGC3A19762906F3B64 , bda:LGFC196B55677708C4 ;
+        adm:facetIndex      27 ;
+        adm:gitPath         "f6/MW29252.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29252 ;
+        adm:logEntry        bda:LG15D43D1239496E68 , bda:LG25B765AEC06CCD57 , bda:LGC3A19762906F3B64 , bda:LGFC196B55677708C4 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL48E8E6F1FB04CDAB
         a                   :ContentLocation ;
@@ -52,7 +88,47 @@ bdg:MW29252 {
         :contentLocationInstance  bdr:W29252 ;
         :contentLocationPage  243 .
     
-    bdr:MW29252  :hasPart   bdr:MW29252_079846 , bdr:MW29252_686906 , bdr:MW29252_BE1C57 ;
+    bdr:EV1A1B3F9004F1E882
+        a                   :PublishedEvent ;
+        :onYear             "1977"^^xsd:gYear .
+    
+    bdr:ID121CE347DEA2F0DC
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7610 .T47 1977" .
+    
+    bdr:ID1B1233BF656DED31
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001935091-0" .
+    
+    bdr:ID5179604AB5395E19
+        a                   bdr:HollisId ;
+        rdf:value           "014259965" .
+    
+    bdr:ID6B2CB07AE40096A0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "78900539" .
+    
+    bdr:MW29252  a          :Instance ;
+        skos:altLabel       "heresy and intersectarian relations in tibet"@en ;
+        skos:prefLabel      "pha bong kha pa'i slob ma'i dgag lan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID121CE347DEA2F0DC , bdr:ID1B1233BF656DED31 , bdr:ID5179604AB5395E19 , bdr:ID6B2CB07AE40096A0 ;
+        :authorshipStatement  "by ldan-ma blo-bzan-rdo-rje and others"@en ;
+        :biblioNote         "reproduced from prints from the pha-bon-kha bkra-sis-chos-glin blocks from the library of gro-mo dge-bses rin-po-che"@en ;
+        :hasPart            bdr:MW29252_079846 , bdr:MW29252_686906 , bdr:MW29252_BE1C57 ;
+        :hasSourcePrintery  bdr:G3JT12572 ;
+        :hasTitle           bdr:TT072D6C824F5F8FF7 , bdr:TT3B92EEA315D15E4D , bdr:TTBC5D5640FDDD0767 , bdr:TTE07691EC0E046D4B , bdr:TTE844A3BED6AD06FD ;
+        :instanceEvent      bdr:EV1A1B3F9004F1E882 ;
+        :instanceHasReproduction  bdr:W29252 ;
+        :instanceOf         bdr:WA29252 ;
+        :isRoot             true ;
+        :note               bdr:NT8092FB4A924B89E7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang topgay"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "[163] p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29252_079846
@@ -102,9 +178,21 @@ bdg:MW29252 {
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT8092FB4A924B89E7
+        a                   :Note ;
+        :noteText           ". 5248"@en .
+    
     bdr:NTAC56D409B2677E73
         a                   :Note ;
         :noteText           "these prints from pha bong kha bkra shis chos gling were from the library of the ven. gro mo dge bshes rin po che. All three were from blocks carved during the late 1940s and prints from all three are reasonably rare. Unfortunately gro mo dge bshes rin po che's set is missing the 61 folia dris lan skor which comprises a continuation of the first text reproduced in this volume"@en .
+    
+    bdr:TT072D6C824F5F8FF7
+        a                   :SpineTitle ;
+        rdfs:label          "pha-bon-kha-pa & intersectarian relations in tibet"@en-x-mixed .
+    
+    bdr:TT3B92EEA315D15E4D
+        a                   :Title ;
+        rdfs:label          "pha bong kha pa'i slob ma'i dgag lan/"@bo-x-ewts .
     
     bdr:TT5E0EAD583F3C3B2A
         a                   :Title ;
@@ -118,7 +206,19 @@ bdg:MW29252 {
         a                   :TitlePageTitle ;
         rdfs:label          "rje thams cad mkhyen pa shar tsong kha pa blo bzang grags pa'i dpal gyi ngang tshul mdo tsam brjod pa dad pa'i pad ma rgyas par byed pa'i bstod tshig nyi ma zhes bya ba sa skya pa'i paN chen gtsang stag tshang lo tsA bas mdzad pa sogs rje'i bstod tshogs kyi skor 'ga' zhig phyogs gcig tu bkod pa (rje bstod)"@bo-x-ewts .
     
+    bdr:TTBC5D5640FDDD0767
+        a                   :TitlePageTitle ;
+        rdfs:label          "three texts reflecting the views of pha-bon-kha-pa bde-chen-snin-po on the questions of heresies and intersectarian relations in tibet"@en .
+    
     bdr:TTD84987276CB3A56A
         a                   :Title ;
         rdfs:label          "skyabs rje pha bong kha pa chab mdor bzhugs skabs snyan sgron du gsol zer ba'i yig rdzus kyi dpyad don mchan bus bkrol ba dpyod ldan bzhin 'dzum dgod pa'i thal skad rnga chen bskul ba'i dbyu gu (dpyad don)"@bo-x-ewts .
+    
+    bdr:TTE07691EC0E046D4B
+        a                   :CoverTitle ;
+        rdfs:label          "Three texts reflecting the views of Pha-boṅ-kha-pa Bde-chen-sñiṅ-po on the questions of heresies and intersectarian relations in Tibet /by Ldan-ma Blo-bzaṅ-rdo-rje and others."@en-x-mixed .
+    
+    bdr:TTE844A3BED6AD06FD
+        a                   :CoverTitle ;
+        rdfs:label          "heresy and intersectarian relations in tibet"@en .
 }

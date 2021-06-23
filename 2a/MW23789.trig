@@ -12,11 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23789 {
+    bda:LG1E5B251EECF071B1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG345FC5A80C7996DC
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-07-10T16:38:55.846Z"^^xsd:dateTime ;
         adm:logMessage      "outline first published"@en ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG355CF3D7C6D59147
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T11:08:35.17Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LG8EC2426BD9822F95
         a                   adm:UpdateOutlineData ;
@@ -36,15 +46,35 @@ bdg:MW23789 {
         adm:logMessage      "Added T1696 (chos brgyad mgo snyoms)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23789  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS44190" ;
         :note               bdr:NTD198A7F264BBA431 ;
         adm:adminAbout      bdr:MW23789 ;
-        adm:facetIndex      98 ;
-        adm:logEntry        bda:LG345FC5A80C7996DC , bda:LG8EC2426BD9822F95 , bda:LGAFA49E8B9D7EA3FF , bda:LGEDC8A4A107477793 ;
+        adm:facetIndex      109 ;
+        adm:gitPath         "2a/MW23789.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23789 ;
+        adm:logEntry        bda:LG1E5B251EECF071B1 , bda:LG345FC5A80C7996DC , bda:LG355CF3D7C6D59147 , bda:LG8EC2426BD9822F95 , bda:LGAFA49E8B9D7EA3FF , bda:LGEDC8A4A107477793 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined through the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL087FC16870D6442B
         a                   :ContentLocation ;
@@ -371,7 +401,41 @@ bdg:MW23789 {
         :contentLocationPage  247 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23789  :hasPart   bdr:MW23789_046395 , bdr:MW23789_4A817C ;
+    bdr:EV7E230D0AC8156AFE
+        a                   :PublishedEvent ;
+        :notBefore          "1972"^^xsd:gYear .
+    
+    bdr:ID5092B8B456A66E89
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "72906726" .
+    
+    bdr:ID62105CF89FC0C8B1
+        a                   bdr:HollisId ;
+        rdf:value           "014259128" .
+    
+    bdr:IDA6CB50CDC03487E1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .R46 1972" .
+    
+    bdr:MW23789  a          :Instance ;
+        skos:altLabel       "the collected works (gsun-'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5092B8B456A66E89 , bdr:ID62105CF89FC0C8B1 , bdr:IDA6CB50CDC03487E1 ;
+        :biblioNote         "volume 5 - published by the sungrab nyamso gyunphel parkhang, tibetan craft community, palampur, h.p. reproduced from rare manuscripts belonging to the stag-tshan-ras-pa bla-bran of hemis"@en ;
+        :hasPart            bdr:MW23789_046395 , bdr:MW23789_4A817C ;
+        :hasTitle           bdr:TT00455D830427D3E5 , bdr:TTAD6B4D146B347304 ;
+        :instanceEvent      bdr:EV7E230D0AC8156AFE ;
+        :instanceHasReproduction  bdr:W23789 ;
+        :instanceOf         bdr:WA23661 ;
+        :isRoot             true ;
+        :note               bdr:NTFDCB721BFC4A50A7 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23789_019344
@@ -1058,6 +1122,14 @@ bdg:MW23789 {
         a                   :Note ;
         :noteText           "volumes 1-3 missing from the collection found at ths stag tshang ras pa bla brang of hemis"@en .
     
+    bdr:NTFDCB721BFC4A50A7
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files of v. 4 and 5,  tbrc volume numbers 0853-0854"@en .
+    
+    bdr:TT00455D830427D3E5
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts .
+    
     bdr:TT051082C2926761B1
         a                   :Title ;
         rdfs:label          "khrid chen brgyad kyi rtsa ba (thi)"@bo-x-ewts .
@@ -1185,6 +1257,10 @@ bdg:MW23789 {
     bdr:TTA9D712FC353C7A02
         a                   :Title ;
         rdfs:label          "zhal gdams gnad kyi them chung gi dum bu (ma)"@bo-x-ewts .
+    
+    bdr:TTAD6B4D146B347304
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun-'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed .
     
     bdr:TTB4EA3206121C9041
         a                   :Title ;

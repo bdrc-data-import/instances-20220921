@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG07619 {
+    bda:LG0CFE7FD2D6CC91ED
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-03-31T16:24:42.468Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGC80B9B4E8C8DFAA4
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-07-16T15:39:29.502Z"^^xsd:dateTime ;
@@ -23,14 +29,33 @@ bdg:MW00KG07619 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00KG07619  a      adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD104950" ;
         adm:adminAbout      bdr:MW00KG07619 ;
-        adm:facetIndex      69 ;
-        adm:logEntry        bda:LGC80B9B4E8C8DFAA4 , bda:LGDC3F283D232E2A50 ;
+        adm:facetIndex      76 ;
+        adm:gitPath         "9e/MW00KG07619.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG07619 ;
+        adm:logEntry        bda:LG0CFE7FD2D6CC91ED , bda:LGC80B9B4E8C8DFAA4 , bda:LGDC3F283D232E2A50 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01DBF3A5B61770D5
         a                   :ContentLocation ;
@@ -222,7 +247,29 @@ bdg:MW00KG07619 {
         :contentLocationInstance  bdr:W00KG07619 ;
         :contentLocationPage  295 .
     
-    bdr:MW00KG07619  :hasPart  bdr:MW00KG07619_0FB7F6 , bdr:MW00KG07619_28C8D7 , bdr:MW00KG07619_9BE316 , bdr:MW00KG07619_9DF7FA , bdr:MW00KG07619_A98C1F , bdr:MW00KG07619_CA91F2 , bdr:MW00KG07619_F6A1EE ;
+    bdr:EVC5DF618C5F3BD94C
+        a                   :PublishedEvent ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:ID3AB160E937331448
+        a                   bdr:HollisId ;
+        rdf:value           "014254498" .
+    
+    bdr:MW00KG07619  a      :Instance ;
+        skos:prefLabel      "skye ba snga phyi'i rnam gzhag dang lugs gnyis gsal ba'i me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3AB160E937331448 ;
+        :hasPart            bdr:MW00KG07619_0FB7F6 , bdr:MW00KG07619_28C8D7 , bdr:MW00KG07619_9BE316 , bdr:MW00KG07619_9DF7FA , bdr:MW00KG07619_A98C1F , bdr:MW00KG07619_CA91F2 , bdr:MW00KG07619_F6A1EE ;
+        :hasTitle           bdr:TT6AB5305B7655DF10 , bdr:TT9E15422F15486620 ;
+        :instanceEvent      bdr:EVC5DF618C5F3BD94C ;
+        :instanceHasReproduction  bdr:W00KG07619 ;
+        :instanceOf         bdr:WA00KG07619 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bla rung sgar?]"@en ;
+        :publisherName      "[bla rung theg gsum chos gling?]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 404 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00KG07619_0716E7
@@ -702,6 +749,10 @@ bdg:MW00KG07619 {
         a                   :TitlePageTitle ;
         rdfs:label          "sa paN mkhas 'jug gi gsar 'grel 'chad rtsom gsal ba'i me long la cung zad dpyad pa bden rdzun gsal ba'i sgron me/"@bo-x-ewts .
     
+    bdr:TT6AB5305B7655DF10
+        a                   :Title ;
+        rdfs:label          "skye ba snga phyi'i rnam gzhag dang lugs gnyis gsal ba'i me long /"@bo-x-ewts .
+    
     bdr:TT78A6D2BF28635038
         a                   :Title ;
         rdfs:label          "lnga pa dmangs khrod du dam pa'i chos kyi shes yon khyab brdal du gtong rgyu/"@bo-x-ewts .
@@ -725,6 +776,10 @@ bdg:MW00KG07619 {
     bdr:TT9B499B2ACD878849
         a                   :Title ;
         rdfs:label          "bdun pa rig pa gsar ba la slob sbyong bya rgyu/"@bo-x-ewts .
+    
+    bdr:TT9E15422F15486620
+        a                   :OtherTitle ;
+        rdfs:label          "skye ba snga phyi'i rnam gzhag srid pa gsal ba'i me long /"@bo-x-ewts .
     
     bdr:TTA51B200C2C14926E
         a                   :Title ;

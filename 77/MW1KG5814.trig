@@ -18,6 +18,12 @@ bdg:MW1KG5814 {
         adm:logDate         "2014-12-15T15:59:24.481Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG7E9C89A67254B5FD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-08-24T14:13:33.297Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGAD57D34F5FD42D19
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2015-09-25T10:23:33.678Z"^^xsd:dateTime ;
@@ -30,14 +36,33 @@ bdg:MW1KG5814 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG5814  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG5814" ;
         adm:adminAbout      bdr:MW1KG5814 ;
-        adm:facetIndex      312 ;
-        adm:logEntry        bda:LG345365ED6CBAD335 , bda:LGAD57D34F5FD42D19 , bda:LGB4ABFAC2DEBD7184 ;
+        adm:facetIndex      318 ;
+        adm:gitPath         "77/MW1KG5814.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5814 ;
+        adm:logEntry        bda:LG345365ED6CBAD335 , bda:LG7E9C89A67254B5FD , bda:LGAD57D34F5FD42D19 , bda:LGB4ABFAC2DEBD7184 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "kelsang via TBRC Convert2Outline version: 1.5.6"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0030FCB7A3506ADD
         a                   :ContentLocation ;
@@ -1089,7 +1114,30 @@ bdg:MW1KG5814 {
         :contentLocationPage  73 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG5814  :hasPart  bdr:MW1KG5814_34A9D3 , bdr:MW1KG5814_E08B5D ;
+    bdr:EVC2F176C308F92036
+        a                   :PublishedEvent ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:IDCA3ABC7C29B7769C
+        a                   bdr:HollisId ;
+        rdf:value           "014257203" .
+    
+    bdr:MW1KG5814  a        :Instance ;
+        skos:prefLabel      "shes rab sgron me'i 'od snang /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCA3ABC7C29B7769C ;
+        :biblioNote         "printed from computerized input"@en ;
+        :hasPart            bdr:MW1KG5814_34A9D3 , bdr:MW1KG5814_E08B5D ;
+        :hasTitle           bdr:TT52754FA5B26412EA ;
+        :illustrations      "ill. (col. plate)" ;
+        :instanceEvent      bdr:EVC2F176C308F92036 ;
+        :instanceHasReproduction  bdr:W1KG5814 ;
+        :instanceOf         bdr:WA1KG5814 ;
+        :isRoot             true ;
+        :numberOfVolumes    2 ;
+        :publisherName      "[khang sar jo nang dgon bshad grwa mdo sngags thos bsam gling]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG5814_01936E
@@ -3463,6 +3511,10 @@ bdg:MW1KG5814 {
     bdr:TT515767EBAFC4D6CE
         a                   :Title ;
         rdfs:label          "'gyur med rgya mtsho'i zhabs brtan gsol 'debs/"@bo-x-ewts .
+    
+    bdr:TT52754FA5B26412EA
+        a                   :Title ;
+        rdfs:label          "shes rab sgron me'i 'od snang /"@bo-x-ewts .
     
     bdr:TT52CF4B82584EE8B0
         a                   :TitlePageTitle ;

@@ -29,20 +29,50 @@ bdg:MW1KG1804 {
         adm:logDate         "2010-04-30T15:57:13.532Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGB6A88D0E7D8C8617
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-04-06T12:40:05.257Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCD0ECD287E9A4C13
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-03-24T12:40:43.173Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGD5E2371314D05974
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-09-21T12:06:14.635Z"^^xsd:dateTime ;
         adm:logMessage      "zhu dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG1804  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB99313" ;
         adm:adminAbout      bdr:MW1KG1804 ;
-        adm:facetIndex      120 ;
-        adm:logEntry        bda:LG6D9C95FC008DF1DA , bda:LG81578185823A2736 , bda:LGA7E71D4E51D10B02 , bda:LGD5E2371314D05974 ;
+        adm:facetIndex      130 ;
+        adm:gitPath         "f9/MW1KG1804.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1804 ;
+        adm:logEntry        bda:LG6D9C95FC008DF1DA , bda:LG81578185823A2736 , bda:LGA7E71D4E51D10B02 , bda:LGB6A88D0E7D8C8617 , bda:LGCD0ECD287E9A4C13 , bda:LGD5E2371314D05974 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01D04F758599A1F9
         a                   :ContentLocation ;
@@ -380,7 +410,38 @@ bdg:MW1KG1804 {
         :contentLocationInstance  bdr:W1KG1804 ;
         :contentLocationPage  118 .
     
-    bdr:MW1KG1804  :hasPart  bdr:MW1KG1804_1DB2C7 , bdr:MW1KG1804_268986 , bdr:MW1KG1804_283C3E , bdr:MW1KG1804_3A8892 , bdr:MW1KG1804_76E684 , bdr:MW1KG1804_8E8EEC ;
+    bdr:EV0184AAF7DB2AC87C
+        a                   :PublishedEvent ;
+        :onYear             "2008"^^xsd:gYear .
+    
+    bdr:ID4A5D65F77730EEF3
+        a                   bdr:HollisId ;
+        rdf:value           "014256552" .
+    
+    bdr:ID627C885AD9ACB4B2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223025409" .
+    
+    bdr:MW1KG1804  a        :Instance , :SerialInstance ;
+        skos:altLabel       "jie da lama pu xi yun pu xi heng he zhi liu he ji ming jing"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "dpyal gyi gdung rabs za ra tshags dang gang gA'i chu rgyun gnyis gcig tu bris pa kun gsal me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A5D65F77730EEF3 , bdr:ID627C885AD9ACB4B2 ;
+        :authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG1804_1DB2C7 , bdr:MW1KG1804_268986 , bdr:MW1KG1804_283C3E , bdr:MW1KG1804_3A8892 , bdr:MW1KG1804_76E684 , bdr:MW1KG1804_8E8EEC ;
+        :hasTitle           bdr:TT3D0385248D89B8A2 , bdr:TT7D292007671F9D66 , bdr:TT8B129CCA7277BD25 ;
+        :instanceEvent      bdr:EV0184AAF7DB2AC87C ;
+        :instanceHasReproduction  bdr:IE1KG1804 , bdr:W1KG1804 ;
+        :instanceOf         bdr:WA1KG1804 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC377 ;
+        :seriesNumber       "6" ;
+        :workExtentStatement  "3, 3, 5, 1, 118 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG1804_01E1FC
@@ -1169,6 +1230,10 @@ bdg:MW1KG1804 {
         a                   :Title ;
         rdfs:label          "rten 'brel khyad 'phags kyi che ba/"@bo-x-ewts .
     
+    bdr:TT3D0385248D89B8A2
+        a                   :TitlePageTitle ;
+        rdfs:label          "bla chen dpyal gyi gdung rabs rin po che'i za ra tshags zhes bya ba dang/ gdung rabs gang gA'i chu rgyun gnyis glegs bam gcig tu bris pa las/ kun gsal me long che ba bcu ldan/"@bo-x-ewts .
+    
     bdr:TT432F6D7AD7EA02ED
         a                   :OtherTitle ;
         rdfs:label          "bla ma 'phags pa dpal/"@bo-x-ewts .
@@ -1229,6 +1294,10 @@ bdg:MW1KG1804 {
         a                   :Title ;
         rdfs:label          "dpyal ston yon tan shes rab/"@bo-x-ewts .
     
+    bdr:TT7D292007671F9D66
+        a                   :Title ;
+        rdfs:label          "dpyal gyi gdung rabs za ra tshags dang gang gA'i chu rgyun gnyis gcig tu bris pa kun gsal me long /"@bo-x-ewts .
+    
     bdr:TT80B028B8828DFCF9
         a                   :Title ;
         rdfs:label          "'khon gdus ba gzhon nu ye shes/"@bo-x-ewts .
@@ -1240,6 +1309,10 @@ bdg:MW1KG1804 {
     bdr:TT891456AA4FB2142F
         a                   :Title ;
         rdfs:label          "kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TT8B129CCA7277BD25
+        a                   :ColophonTitle ;
+        rdfs:label          "jie da lama pu xi yun pu xi heng he zhi liu he ji ming jing"@zh-latn-pinyin-x-ndia .
     
     bdr:TT9322DA3AD0F394BC
         a                   :Title ;

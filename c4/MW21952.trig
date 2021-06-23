@@ -18,11 +18,21 @@ bdg:MW21952 {
         adm:logDate         "2013-09-19T13:41:23.252Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG68D919688D940DF1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGA69D325A56773A13
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-09-19T14:31:03.037Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LGC0BEA76D2778D4D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:25.339Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGF746C7FFEE51449A
         a                   adm:UpdateOutlineData ;
@@ -30,14 +40,33 @@ bdg:MW21952 {
         adm:logMessage      "changed image number"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21952  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O21952" ;
         adm:adminAbout      bdr:MW21952 ;
-        adm:facetIndex      398 ;
-        adm:logEntry        bda:LG52F090F018967A8D , bda:LGA69D325A56773A13 , bda:LGF746C7FFEE51449A ;
+        adm:facetIndex      409 ;
+        adm:gitPath         "c4/MW21952.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21952 ;
+        adm:logEntry        bda:LG52F090F018967A8D , bda:LG68D919688D940DF1 , bda:LGA69D325A56773A13 , bda:LGC0BEA76D2778D4D2 , bda:LGF746C7FFEE51449A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL002EF48B847BE50B
         a                   :ContentLocation ;
@@ -1418,7 +1447,41 @@ bdg:MW21952 {
         :contentLocationPage  685 ;
         :contentLocationVolume  2 .
     
-    bdr:MW21952  :hasPart   bdr:MW21952_347B39 , bdr:MW21952_C3D0D4 ;
+    bdr:EV8561ED89998BAB95
+        a                   :PublishedEvent ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:ID6EF08A9F5F7E0089
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .G774 1985" .
+    
+    bdr:ID7B92539A62884C83
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902140" .
+    
+    bdr:IDC0B5B87054791A67
+        a                   bdr:HollisId ;
+        rdf:value           "014258514" .
+    
+    bdr:MW21952  a          :Instance ;
+        skos:altLabel       "bka' brgyad gsan ba yongs rdzogs kyi sgrub skor : a collection of texts from the famed revelations of gu-ru chos-kyi-dban-phyug as used in the great sgrub-chen in dpal-yul and affiliates"@en-x-mixed ;
+        skos:prefLabel      "bka' brgyad gsang ba yongs rdzogs yi sgrub skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EF08A9F5F7E0089 , bdr:ID7B92539A62884C83 , bdr:IDC0B5B87054791A67 ;
+        :biblioNote         "reproduced from the manuscript set from dar-than monastery in mgo-log"@en ;
+        :hasPart            bdr:MW21952_347B39 , bdr:MW21952_C3D0D4 ;
+        :hasTitle           bdr:TT12D3A922E336A7BB , bdr:TT5094BAE8DC66FAE1 ;
+        :instanceEvent      bdr:EV8561ED89998BAB95 ;
+        :instanceHasReproduction  bdr:W21952 ;
+        :instanceOf         bdr:WA21952 ;
+        :isRoot             true ;
+        :note               bdr:NTD80D951ADD2DE628 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "byllakuppe"@en ;
+        :publisherName      "pema norbu rinpoche"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "2 v. (v. 2 only)" ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21952_00F7C0
@@ -4178,6 +4241,10 @@ bdg:MW21952 {
         :partTreeIndex      "1.061" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTD80D951ADD2DE628
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files, tbrc volume numbers 1981-1982"@en .
+    
     bdr:TT003E7FDF716B1D0F
         a                   :Title ;
         rdfs:label          "bka' brgyad khro rol las rjes kyi bya ba'i kha 'phang lhan thabs/"@bo-x-ewts .
@@ -4233,6 +4300,10 @@ bdg:MW21952 {
     bdr:TT11BA00D6F345D6A0
         a                   :Title ;
         rdfs:label          "gzhi bstod shin tu bsdus pa/"@bo-x-ewts .
+    
+    bdr:TT12D3A922E336A7BB
+        a                   :Title ;
+        rdfs:label          "bka' brgyad gsang ba yongs rdzogs yi sgrub skor/"@bo-x-ewts .
     
     bdr:TT1406C280A6345C65
         a                   :Title ;
@@ -4425,6 +4496,10 @@ bdg:MW21952 {
     bdr:TT4FB5663484F79D12
         a                   :Title ;
         rdfs:label          "bka' brgyad gsang ba yongs rdzogs las/_bsgrub pa spyi'i kha bskong las byang nyams len gyi 'phyang /"@bo-x-ewts .
+    
+    bdr:TT5094BAE8DC66FAE1
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' brgyad gsan ba yongs rdzogs kyi sgrub skor : a collection of texts from the famed revelations of gu-ru chos-kyi-dban-phyug as used in the great sgrub-chen in dpal-yul and affiliates"@en-x-mixed .
     
     bdr:TT52328F2469F2E98B
         a                   :Title ;

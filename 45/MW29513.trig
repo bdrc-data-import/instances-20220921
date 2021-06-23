@@ -17,6 +17,10 @@ bdg:MW29513 {
         adm:logDate         "2011-03-09T09:12:15.571Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00013 .
     
+    bda:LG176FF110CAB05208
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG251EF80899559F9F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-10-05T12:10:15.498Z"^^xsd:dateTime ;
@@ -51,14 +55,40 @@ bdg:MW29513 {
         adm:logDate         "2011-02-04T09:57:01.658Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00013 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW29513  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3JT3512" ;
         adm:adminAbout      bdr:MW29513 ;
-        adm:facetIndex      782 ;
-        adm:logEntry        bda:LG125C6904B5C0328C , bda:LG251EF80899559F9F , bda:LG70AEEE52135C1BF8 , bda:LG7787140A80F4C501 , bda:LGC0A5FFAE4906C9E8 , bda:LGE6F15112F2BA8423 , bda:LGFE14C816565F0A83 ;
+        adm:facetIndex      796 ;
+        adm:gitPath         "45/MW29513.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29513 ;
+        adm:logEntry        bda:LG125C6904B5C0328C , bda:LG176FF110CAB05208 , bda:LG251EF80899559F9F , bda:LG70AEEE52135C1BF8 , bda:LG7787140A80F4C501 , bda:LGC0A5FFAE4906C9E8 , bda:LGE6F15112F2BA8423 , bda:LGFE14C816565F0A83 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Jigme Namgyal; created with the generous support of the Khyentse Foundation."@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0060966E80D67F37
         a                   :ContentLocation ;
@@ -2622,7 +2652,47 @@ bdg:MW29513 {
         :contentLocationPage  262 ;
         :contentLocationVolume  3 .
     
-    bdr:MW29513  :hasPart   bdr:MW29513_24F485 , bdr:MW29513_2D8141 , bdr:MW29513_3890F6 , bdr:MW29513_A71634 , bdr:MW29513_EFAE5F ;
+    bdr:EV8B9D093B98B10573
+        a                   :PublishedEvent ;
+        :onYear             "2005"^^xsd:gYear .
+    
+    bdr:ID4EB58EFF45654719
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005389055" .
+    
+    bdr:IDB50A701A99CB70C4
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "010199486-9" .
+    
+    bdr:IDD5873407B912D6DD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105070048" .
+    
+    bdr:IDDD40338292F795E3
+        a                   bdr:HollisId ;
+        rdf:value           "014260015" .
+    
+    bdr:MW29513  a          :Instance ;
+        skos:altLabel       "Skyabs rje Khaṅ-sar Rin-po-che Dbon-sprul Bstan-paʼi-dbaṅ-phyug gi gsuṅ ʼbum bźugs so."@en-x-mixed , "康萨尔·丹贝旺旭文集(全套)(藏文)"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/_bstan pa'i dbang phyug (khang sar)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4EB58EFF45654719 , bdr:IDB50A701A99CB70C4 , bdr:IDD5873407B912D6DD , bdr:IDDD40338292F795E3 ;
+        :authorshipStatement  "rtsom sgrig mkhan, gtsang rigs skal bzang rnam 'dren/"@bo-x-ewts ;
+        :biblioNote         "v. 2: 7-105-07005-6 v. 3: 7-105-07006-4 v. 4: 7-105-07007-2 v. 5: 7-105-70008-0"@en ;
+        :contentLocationStatement  "TBRC Library: Editor's Room, Case 3" ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW29513_24F485 , bdr:MW29513_2D8141 , bdr:MW29513_3890F6 , bdr:MW29513_A71634 , bdr:MW29513_EFAE5F ;
+        :hasTitle           bdr:TT12AA18B04D5FA6EC , bdr:TT51A98D007F20E2C8 , bdr:TT6CD56640BAD792BB , bdr:TTE802FEC3B30BC018 ;
+        :instanceEvent      bdr:EV8B9D093B98B10573 ;
+        :instanceHasReproduction  bdr:W29513 ;
+        :instanceOf         bdr:WA1KG15471 ;
+        :isRoot             true ;
+        :note               bdr:NT2CF25D279ED4D205 ;
+        :numberOfVolumes    5 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29513_013700
@@ -7734,6 +7804,10 @@ bdg:MW29513 {
         :partTreeIndex      "1.11.06" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT2CF25D279ED4D205
+        a                   :Note ;
+        :noteText           "-6014"@en .
+    
     bdr:TT008AA509B4F5122D
         a                   :TitlePageTitle ;
         rdfs:label          "beg tse'i gsol bsdus/"@bo-x-ewts .
@@ -7889,6 +7963,10 @@ bdg:MW29513 {
     bdr:TT127EC35598E49404
         a                   :TitlePageTitle ;
         rdfs:label          "chos dbyings rin po che'i mdzod kyi 'bru 'grel 'od gsal thig le nyag gcig"@bo-x-ewts .
+    
+    bdr:TT12AA18B04D5FA6EC
+        a                   :TitlePageTitle ;
+        rdfs:label          "skyabs rje khang sar bstan pa'i dbang phyug gi gsung 'bum/"@bo-x-ewts .
     
     bdr:TT134821D331FAF6C3
         a                   :TitlePageTitle ;
@@ -8282,6 +8360,10 @@ bdg:MW29513 {
         a                   :TitlePageTitle ;
         rdfs:label          "bstod pa/"@bo-x-ewts .
     
+    bdr:TT51A98D007F20E2C8
+        a                   :CoverTitle ;
+        rdfs:label          "Skyabs rje Khaṅ-sar Rin-po-che Dbon-sprul Bstan-paʼi-dbaṅ-phyug gi gsuṅ ʼbum bźugs so."@en-x-mixed .
+    
     bdr:TT51B68F40938D7061
         a                   :TitlePageTitle ;
         rdfs:label          "rdzogs chen smon lam/"@bo-x-ewts .
@@ -8481,6 +8563,10 @@ bdg:MW29513 {
     bdr:TT6C7DDD7B5CFCC98D
         a                   :TitlePageTitle ;
         rdfs:label          "khang sar bstan pa'i dbang phyug gi gsung 'bum deb lnga pa'i sngon du 'gro ba'i gtam/"@bo-x-ewts .
+    
+    bdr:TT6CD56640BAD792BB
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan pa'i dbang phyug (khang sar)"@bo-x-ewts .
     
     bdr:TT6CF71F2B04B64108
         a                   :TitlePageTitle ;
@@ -9193,6 +9279,10 @@ bdg:MW29513 {
     bdr:TTE7BB88D8D6A9119A
         a                   :TitlePageTitle ;
         rdfs:label          "chags med bde smon gyi 'bru 'grel gyi mtshan don dang / mchod par brjod pa/ brtsam par dam bca' ba/"@bo-x-ewts .
+    
+    bdr:TTE802FEC3B30BC018
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "康萨尔·丹贝旺旭文集(全套)(藏文)"@zh-hans .
     
     bdr:TTE85ADB9DE824D426
         a                   :TitlePageTitle ;

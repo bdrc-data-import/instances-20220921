@@ -18,6 +18,10 @@ bdg:MW28810 {
         adm:logMessage      "changed P#"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG291EC5B636557A61
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG9898A0240526A205
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-08-30T16:21:49.945Z"^^xsd:dateTime ;
@@ -57,14 +61,41 @@ bdg:MW28810 {
         adm:logMessage      "added T225 (chos pyod)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28810  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2LS8" ;
         adm:adminAbout      bdr:MW28810 ;
-        adm:facetIndex      279 ;
-        adm:logEntry        bda:LG1E6416015EB674B4 , bda:LG9898A0240526A205 , bda:LGA2194E6EAE9645B9 , bda:LGAA3D7CBEC27002D4 , bda:LGC3A02C7E155340B8 , bda:LGDB779B645A8FE0E1 , bda:LGDD675DE1A67DF55B , bda:LGE9248DA09CC68855 ;
+        adm:facetIndex      291 ;
+        adm:gitPath         "9a/MW28810.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28810 ;
+        adm:logEntry        bda:LG1E6416015EB674B4 , bda:LG291EC5B636557A61 , bda:LG9898A0240526A205 , bda:LGA2194E6EAE9645B9 , bda:LGAA3D7CBEC27002D4 , bda:LGC3A02C7E155340B8 , bda:LGDB779B645A8FE0E1 , bda:LGDD675DE1A67DF55B , bda:LGE9248DA09CC68855 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL007BB43DD8A5AA28
         a                   :ContentLocation ;
@@ -1014,7 +1045,47 @@ bdg:MW28810 {
         :contentLocationPage  196 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28810  :hasPart   bdr:MW28810_8C647B , bdr:MW28810_BBD48D ;
+    bdr:EV43F09611600C897A
+        a                   :PublishedEvent ;
+        :onYear             "2003"^^xsd:gYear .
+    
+    bdr:ID702223461232E4DD
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6349.S485 B77 2003" .
+    
+    bdr:IDD8DD19C5CD381D17
+        a                   bdr:HollisId ;
+        rdf:value           "014259781" .
+    
+    bdr:IDEB91F65D1C3AE3D1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003322538" .
+    
+    bdr:IDFEFAE0175F9395EC
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009769881-4" .
+    
+    bdr:MW28810  a          :Instance , :SerialInstance ;
+        skos:altLabel       "Chos sde chen po dpal ldan ʾBras-spuṅs Bkra-śis-sgo-maṅ Grwā-tshaṅ gi chos ʾbyuṅ dun gʾyas su ʾkhyil baʾi sgra dbyaṅs źes bya ba bźugs so /Bstan-pa-bstan-ʾdzin."@en-x-mixed ;
+        skos:prefLabel      "chos sde chen po dpal ldan 'bras spungs bkra shis sgo mang grwa tshang gi chos 'byung dung g.yas su 'khyil ba'i sgra dbyangs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID702223461232E4DD , bdr:IDD8DD19C5CD381D17 , bdr:IDEB91F65D1C3AE3D1 , bdr:IDFEFAE0175F9395EC ;
+        :authorshipStatement  "bstan pa bstan 'dzin/"@bo-x-ewts ;
+        :hasPart            bdr:MW28810_8C647B , bdr:MW28810_BBD48D ;
+        :hasTitle           bdr:TT1BBC641147B3185E , bdr:TTDA5C8E6475617A28 ;
+        :illustrations      "ill. (chiefly colored)" ;
+        :instanceEvent      bdr:EV43F09611600C897A ;
+        :instanceHasReproduction  bdr:W28810 ;
+        :instanceOf         bdr:WA28810 ;
+        :isRoot             true ;
+        :note               bdr:NT8CA9DD7FECDFF082 ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "mundgod, distt. north kanara, karnataka"@en ;
+        :publisherName      "dpal ldan 'bras spungs bkra shis sgo mang dpe mdzod khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS28809 ;
+        :seriesNumber       "deb phreng 37-38" ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28810_05BBBA
@@ -2929,6 +3000,10 @@ bdg:MW28810 {
         :partTreeIndex      "1.1.04" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT8CA9DD7FECDFF082
+        a                   :Note ;
+        :noteText           "-4645"@en .
+    
     bdr:TT012138DCAF33AA13
         a                   :TitlePageTitle ;
         rdfs:label          "khri chen nam mkha' bzang po/ (zam tsha gser khri)"@bo-x-ewts .
@@ -2984,6 +3059,10 @@ bdg:MW28810 {
     bdr:TT1A356D0A2B2A0BAE
         a                   :TitlePageTitle ;
         rdfs:label          "gung ru tshul bzang nas/ gdan rabs bcu drug pa/ co ne phyogs las rnam rgyal bar/"@bo-x-ewts .
+    
+    bdr:TT1BBC641147B3185E
+        a                   :Title ;
+        rdfs:label          "chos sde chen po dpal ldan 'bras spungs bkra shis sgo mang grwa tshang gi chos 'byung dung g.yas su 'khyil ba'i sgra dbyangs/"@bo-x-ewts .
     
     bdr:TT1CDA80CC6B0E1A87
         a                   :TitlePageTitle ;
@@ -3400,6 +3479,10 @@ bdg:MW28810 {
     bdr:TTDA09AD6267DB1CC6
         a                   :TitlePageTitle ;
         rdfs:label          "sum pa ye shes dpal 'byor/"@bo-x-ewts .
+    
+    bdr:TTDA5C8E6475617A28
+        a                   :CoverTitle ;
+        rdfs:label          "Chos sde chen po dpal ldan ʾBras-spuṅs Bkra-śis-sgo-maṅ Grwā-tshaṅ gi chos ʾbyuṅ dun gʾyas su ʾkhyil baʾi sgra dbyaṅs źes bya ba bźugs so /Bstan-pa-bstan-ʾdzin."@en-x-mixed .
     
     bdr:TTDB40A794E92757C3
         a                   :TitlePageTitle ;

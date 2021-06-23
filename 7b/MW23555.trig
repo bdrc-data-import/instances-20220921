@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23555 {
+    bda:LG075B0B55B0BAD4A5
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-05T12:47:54.475Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG4225FBECC8D6368A
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-09-05T19:09:23.354Z"^^xsd:dateTime ;
@@ -24,14 +30,37 @@ bdg:MW23555 {
         adm:logDate         "2013-09-05T17:08:53.184Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG4BD16120F04733FA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23555  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23555" ;
         adm:adminAbout      bdr:MW23555 ;
-        adm:facetIndex      131 ;
-        adm:logEntry        bda:LG4225FBECC8D6368A , bda:LG49FA6CD9C90BCCCA ;
+        adm:facetIndex      140 ;
+        adm:gitPath         "7b/MW23555.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23555 ;
+        adm:logEntry        bda:LG075B0B55B0BAD4A5 , bda:LG4225FBECC8D6368A , bda:LG49FA6CD9C90BCCCA , bda:LG4BD16120F04733FA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0244FCA0B0634170
         a                   :ContentLocation ;
@@ -481,8 +510,36 @@ bdg:MW23555 {
         :contentLocationPage  606 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23555  :hasPart   bdr:MW23555_3F40D8 , bdr:MW23555_4EB104 ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EV66494E8A027AAB06
+        a                   :PublishedEvent ;
+        :notBefore          "0199"^^xsd:gYear .
+    
+    bdr:IDC10CB4BA614FD3A4
+        a                   bdr:HollisId ;
+        rdf:value           "014258958" .
+    
+    bdr:MW23555  a          :Instance ;
+        skos:altLabel       "collected miscellaneous writings (gsun thor bu or rgyal-ba klon-chen rab-'byams-pa"@en-x-mixed ;
+        skos:prefLabel      "gsung thor bu/_dri med 'od zer/ (a 'dzom par ma/ sgang tog tu bskyar par brgyab pa/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC10CB4BA614FD3A4 ;
+        :biblioNote         "printed from the a-'dzom chos-sgar blocks"@en ;
+        :hasPart            bdr:MW23555_3F40D8 , bdr:MW23555_4EB104 ;
+        :hasSourcePrintery  bdr:G3JT12503 ;
+        :hasTitle           bdr:TT0F28502F788E97CA , bdr:TT5AAB9E3B6AFC8628 ;
+        :instanceEvent      bdr:EV66494E8A027AAB06 ;
+        :instanceHasReproduction  bdr:W23555 ;
+        :instanceOf         bdr:WA12829 ;
+        :isRoot             true ;
+        :note               bdr:NTF71D8E8E102FB912 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "tadong, gangtok"@en ;
+        :publisherName      "pema thinley"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workPrintery       "sikkim national press/"@bo-x-ewts .
     
     bdr:MW23555_0049AF
         a                   :Instance ;
@@ -1396,6 +1453,10 @@ bdg:MW23555 {
         :partTreeIndex      "2.08" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTF71D8E8E102FB912
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans, tiffs and pdf files, tbrc volume numbers 2130-2131."@en .
+    
     bdr:TT0680CF41F88B9D14
         a                   :Title ;
         rdfs:label          "PREFACE"@en .
@@ -1403,6 +1464,10 @@ bdg:MW23555 {
     bdr:TT0EFCDA93A2387145
         a                   :Title ;
         rdfs:label          "rdzogs pa chen po mnyam nyid rang grol gyi don khrid rin chen snyingapo zhes bya ba shin tu gsal/"@bo-x-ewts .
+    
+    bdr:TT0F28502F788E97CA
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/_dri med 'od zer/ (a 'dzom par ma/ sgang tog tu bskyar par brgyab pa/)"@bo-x-ewts .
     
     bdr:TT123D75C6836CA64A
         a                   :Title ;
@@ -1455,6 +1520,10 @@ bdg:MW23555 {
     bdr:TT4E03CBCD949360D1
         a                   :Title ;
         rdfs:label          "rtsa ba gsum la gdung sems kyi gsol 'debs smon lam/"@bo-x-ewts .
+    
+    bdr:TT5AAB9E3B6AFC8628
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected miscellaneous writings (gsun thor bu or rgyal-ba klon-chen rab-'byams-pa"@en-x-mixed .
     
     bdr:TT5BBA0AC75B4E8C84
         a                   :Title ;

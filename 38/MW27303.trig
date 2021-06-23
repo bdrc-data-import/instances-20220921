@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW27303 {
+    bda:LG28C97D15020A2770
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG4E228929899A0611
         a                   adm:InitialOutlineData ;
         adm:logDate         "2007-12-27T16:31:46.292Z"^^xsd:dateTime ;
@@ -24,14 +28,33 @@ bdg:MW27303 {
         adm:logMessage      "changed image number"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27303  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS75816" ;
         adm:adminAbout      bdr:MW27303 ;
-        adm:facetIndex      94 ;
-        adm:logEntry        bda:LG4E228929899A0611 , bda:LGABF04EC2F2C293E6 ;
+        adm:facetIndex      105 ;
+        adm:gitPath         "38/MW27303.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27303 ;
+        adm:logEntry        bda:LG28C97D15020A2770 , bda:LG4E228929899A0611 , bda:LGABF04EC2F2C293E6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith ; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01EFB353C2F1904F
         a                   :ContentLocation ;
@@ -558,7 +581,45 @@ bdg:MW27303 {
         :agent              bdr:P559 ;
         :role               bdr:R0ER0015 .
     
-    bdr:MW27303  :hasPart   bdr:MW27303_17E037 , bdr:MW27303_1EE388 , bdr:MW27303_612282 , bdr:MW27303_889F86 ;
+    bdr:EVE2766BCE5240E2EE
+        a                   :PublishedEvent ;
+        :onYear             "1997"^^xsd:gYear .
+    
+    bdr:ID05219D9A4E45BC97
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98904657" .
+    
+    bdr:ID7FE8F3833BF39194
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540916648" .
+    
+    bdr:ID849A36829FD60FEE
+        a                   bdr:HollisId ;
+        rdf:value           "014259600" .
+    
+    bdr:IDEE90A50BDD0C3E7C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7682.9.A2 K27 1997" .
+    
+    bdr:MW27303  a          :Instance ;
+        skos:altLabel       "gama gaju shi tu yu babang si"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "kaM tshang yab sras dang dpal spungs dgon pa'i lo rgyus ngo mtshar dad pa'i pad+ma rgyas byed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05219D9A4E45BC97 , bdr:ID7FE8F3833BF39194 , bdr:ID849A36829FD60FEE , bdr:IDEE90A50BDD0C3E7C ;
+        :authorshipStatement  "karma rgyal mtshan/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW27303_17E037 , bdr:MW27303_1EE388 , bdr:MW27303_612282 , bdr:MW27303_889F86 ;
+        :hasTitle           bdr:TT2850E8FC67A80160 , bdr:TT423DC4CA69F1E3D8 ;
+        :instanceEvent      bdr:EVE2766BCE5240E2EE ;
+        :instanceHasReproduction  bdr:IE27303 , bdr:W27303 ;
+        :instanceOf         bdr:WA27303 ;
+        :isRoot             true ;
+        :note               bdr:NTD2F6FE01A7CF9853 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu/"@bo-x-ewts ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 310 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27303_00AD7C
@@ -1621,9 +1682,21 @@ bdg:MW27303 {
         :partTreeIndex      "2.10.3" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTD2F6FE01A7CF9853
+        a                   :Note ;
+        :noteText           "tbrc holds preservation digital scans; because of copyright restrictions cannot be distributed\n4276"@en .
+    
     bdr:TT2121955DEE2C6663
         a                   :Title ;
         rdfs:label          "rje btsun bla ma si tu chos kyi 'byung gnas kyi rnam thar dad pa'i sa bon skyed pa'i bdud rtsi'i zim char (2)"@bo-x-ewts .
+    
+    bdr:TT2850E8FC67A80160
+        a                   :ColophonTitle ;
+        rdfs:label          "gama gaju shi tu yu babang si"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT423DC4CA69F1E3D8
+        a                   :Title ;
+        rdfs:label          "kaM tshang yab sras dang dpal spungs dgon pa'i lo rgyus ngo mtshar dad pa'i pad+ma rgyas byed/"@bo-x-ewts .
     
     bdr:TTA46CEC1A8D437253
         a                   :Title ;

@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1044 {
+    bda:LG00C49970CD4BDB73
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T13:54:50.166Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG0C9416300A17AEB0
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-19T14:16:33.678Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG7EC0604A62A2CB84
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
     bda:LGIME50EDD1E  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-19T14:25:14.344Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1044"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1044  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG2640" ;
         adm:adminAbout      bdr:MW1NLM1044 ;
-        adm:facetIndex      11 ;
-        adm:logEntry        bda:LGIME50EDD1E ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "c6/MW1NLM1044.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1044 ;
+        adm:logEntry        bda:LG00C49970CD4BDB73 , bda:LG0C9416300A17AEB0 , bda:LG7EC0604A62A2CB84 , bda:LGIME50EDD1E , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL2A79D30551BCE1F4
         a                   :ContentLocation ;
@@ -62,7 +91,19 @@ bdg:MW1NLM1044 {
         :contentLocationPage  73 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM1044  :hasPart  bdr:MW1NLM1044_0E81F5 , bdr:MW1NLM1044_617702 , bdr:MW1NLM1044_62FD2F , bdr:MW1NLM1044_6863BB , bdr:MW1NLM1044_A75C38 ;
+    bdr:MW1NLM1044  a       :Instance ;
+        skos:prefLabel      "mkhas grub thams cad mkhyen ba'i rnam thar bsdus pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "49x6.5" ;
+        :hasPart            bdr:MW1NLM1044_0E81F5 , bdr:MW1NLM1044_617702 , bdr:MW1NLM1044_62FD2F , bdr:MW1NLM1044_6863BB , bdr:MW1NLM1044_A75C38 ;
+        :hasTitle           bdr:TT0562A44F8BB61758 ;
+        :instanceHasReproduction  bdr:W1NLM1044 ;
+        :instanceOf         bdr:WA1NLM1044 ;
+        :isRoot             true ;
+        :note               bdr:NT940A4C2398C27AA1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "13 ff., 21 ff.,3 ff., 14 ff., 8 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1044_0E81F5
@@ -133,6 +174,14 @@ bdg:MW1NLM1044 {
         :partOf             bdr:MW1NLM1044 ;
         :partTreeIndex      "5" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT940A4C2398C27AA1
+        a                   :Note ;
+        :noteText           "nlmId: M0058957"@en .
+    
+    bdr:TT0562A44F8BB61758
+        a                   :Title ;
+        rdfs:label          "mkhas grub thams cad mkhyen ba'i rnam thar bsdus pa sogs/"@bo-x-ewts .
     
     bdr:TT129D5120531F8D5B
         a                   :Title ;

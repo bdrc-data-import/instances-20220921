@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20826 {
+    bda:LG403D65DDFDABE2F1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG88848C680B847666
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2019-04-16T16:55:11.613Z"^^xsd:dateTime ;
@@ -29,14 +33,33 @@ bdg:MW20826 {
         adm:logMessage      "zhus dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20826  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB99559" ;
         adm:adminAbout      bdr:MW20826 ;
-        adm:facetIndex      40 ;
-        adm:logEntry        bda:LG88848C680B847666 , bda:LG895360EB79FADB28 , bda:LGBE68174918B2B536 ;
+        adm:facetIndex      46 ;
+        adm:gitPath         "5f/MW20826.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20826 ;
+        adm:logEntry        bda:LG403D65DDFDABE2F1 , bda:LG88848C680B847666 , bda:LG895360EB79FADB28 , bda:LGBE68174918B2B536 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL019B94AEEFE6B44E
         a                   :ContentLocation ;
@@ -122,7 +145,30 @@ bdg:MW20826 {
         :contentLocationInstance  bdr:W20826 ;
         :contentLocationPage  331 .
     
-    bdr:MW20826  :hasPart   bdr:MW20826_3FEB0F , bdr:MW20826_4AC6E5 , bdr:MW20826_4E1D9D , bdr:MW20826_706425 , bdr:MW20826_ABB5A4 , bdr:MW20826_C4885E , bdr:MW20826_CD872A ;
+    bdr:EV93EBDFE510C1B13F
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID8AB2EFF39D3170DF
+        a                   bdr:HollisId ;
+        rdf:value           "014258233" .
+    
+    bdr:MW20826  a          :Instance ;
+        skos:prefLabel      "thang yig gsar rnying las byung ba'i bod chen po'i srid lugs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8AB2EFF39D3170DF ;
+        :authorshipStatement  "don grub rgyal dang khrin chin dbyin gnyis kys bsgyur/"@bo-x-ewts ;
+        :hasPart            bdr:MW20826_3FEB0F , bdr:MW20826_4AC6E5 , bdr:MW20826_4E1D9D , bdr:MW20826_706425 , bdr:MW20826_ABB5A4 , bdr:MW20826_C4885E , bdr:MW20826_CD872A ;
+        :hasTitle           bdr:TT62937E978FA944B5 ;
+        :instanceEvent      bdr:EV93EBDFE510C1B13F ;
+        :instanceHasReproduction  bdr:W20826 ;
+        :instanceOf         bdr:WA20826 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "7, 402 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20826_195EB2
@@ -357,6 +403,10 @@ bdg:MW20826 {
     bdr:TT5FEC403555530F44
         a                   :OtherTitle ;
         rdfs:label          "thu b+hod kyi stod cha/"@bo-x-ewts .
+    
+    bdr:TT62937E978FA944B5
+        a                   :Title ;
+        rdfs:label          "thang yig gsar rnying las byung ba'i bod chen po'i srid lugs/"@bo-x-ewts .
     
     bdr:TT6FBEBBD69711BC15
         a                   :OtherTitle ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22294 {
+    bda:LG241BE501DF882919
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC7B31840123FDDFD
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-01-25T09:51:17.929Z"^^xsd:dateTime ;
@@ -22,14 +26,33 @@ bdg:MW22294 {
         adm:logDate         "2010-01-28T10:31:54.647Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW22294  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB95395" ;
         adm:adminAbout      bdr:MW22294 ;
-        adm:facetIndex      26 ;
-        adm:logEntry        bda:LGC7B31840123FDDFD , bda:LGDBD6B4156BD14F33 ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "61/MW22294.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22294 ;
+        adm:logEntry        bda:LG241BE501DF882919 , bda:LGC7B31840123FDDFD , bda:LGDBD6B4156BD14F33 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03492162AC007538
         a                   :ContentLocation ;
@@ -95,7 +118,46 @@ bdg:MW22294 {
         :contentLocationInstance  bdr:W22294 ;
         :contentLocationPage  274 .
     
-    bdr:MW22294  :hasPart   bdr:MW22294_140FEE , bdr:MW22294_157D43 , bdr:MW22294_1B462A , bdr:MW22294_1DA060 , bdr:MW22294_3381CB , bdr:MW22294_363562 , bdr:MW22294_483E53 , bdr:MW22294_66249B , bdr:MW22294_817173 , bdr:MW22294_998E34 , bdr:MW22294_CCB3C9 ;
+    bdr:EV5F3919B9A24DA17E
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID254977BF44765326
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001417019" .
+    
+    bdr:ID7EF9E68BB61DC1BA
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BC25 .B453 2000" .
+    
+    bdr:ID830732AE2B913AD6
+        a                   bdr:HollisId ;
+        rdf:value           "014258720" .
+    
+    bdr:IDEFA6B7FA3A5B0F7A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105036710" .
+    
+    bdr:MW22294  a          :Instance ;
+        skos:altLabel       "yin ming zhong guan shi nan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bsdus tshad dbu gsum gyi dka' 'grel legs bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID254977BF44765326 , bdr:ID7EF9E68BB61DC1BA , bdr:ID830732AE2B913AD6 , bdr:IDEFA6B7FA3A5B0F7A ;
+        :authorshipStatement  "mkhan po bkra shis bstan pa rab rgyas kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW22294_140FEE , bdr:MW22294_157D43 , bdr:MW22294_1B462A , bdr:MW22294_1DA060 , bdr:MW22294_3381CB , bdr:MW22294_363562 , bdr:MW22294_483E53 , bdr:MW22294_66249B , bdr:MW22294_817173 , bdr:MW22294_998E34 , bdr:MW22294_CCB3C9 ;
+        :hasTitle           bdr:TT9198FCDD38AA8AC7 , bdr:TTBEB6C486510ECC20 , bdr:TTE59188F28C5CC5CF ;
+        :illustrations      "col.ill." ;
+        :instanceEvent      bdr:EV5F3919B9A24DA17E ;
+        :instanceHasReproduction  bdr:W22294 ;
+        :instanceOf         bdr:WA22294 ;
+        :isRoot             true ;
+        :note               bdr:NTDF6BFABB0ACA8A4D ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 1, 270 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW22294_140FEE
@@ -249,6 +311,10 @@ bdg:MW22294 {
         :partTreeIndex      "06" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTDF6BFABB0ACA8A4D
+        a                   :Note ;
+        :noteText           "preservation scanning only; not for distribution\n4696"@en .
+    
     bdr:TT0B38DAA0DB4BDE89
         a                   :Title ;
         rdfs:label          "dpal ldan 'brug pa'i bstan pa dang mjal ba'i smon lam ye shes TA ki dgyes glu/"@bo-x-ewts .
@@ -277,6 +343,10 @@ bdg:MW22294 {
         a                   :Title ;
         rdfs:label          "sku par/"@bo-x-ewts .
     
+    bdr:TT9198FCDD38AA8AC7
+        a                   :Title ;
+        rdfs:label          "bsdus tshad dbu gsum gyi dka' 'grel legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+    
     bdr:TT974D908EE63D9D49
         a                   :Title ;
         rdfs:label          "slob ma la phan pa'i gtam ma bskul lha'i rnga sgra/"@bo-x-ewts .
@@ -293,7 +363,15 @@ bdg:MW22294 {
         a                   :Title ;
         rdfs:label          "bsdus rigs gsal ba'i nyin byed las rigs lam chen po'i rnam bshad/"@bo-x-ewts .
     
+    bdr:TTBEB6C486510ECC20
+        a                   :ColophonTitle ;
+        rdfs:label          "yin ming zhong guan shi nan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TTE46BD0A212A9D428
         a                   :Title ;
         rdfs:label          "bsdus tshad dbu gsum gyi dka' 'grel legs bshad nyi ma'i 'od zer gyi gnad don ngo sprod rab gsal shel gyi me long /"@bo-x-ewts .
+    
+    bdr:TTE59188F28C5CC5CF
+        a                   :ColophonTitle ;
+        rdfs:label          "yin ming chung kuan shih nan"@zh-latn-wadegile .
 }

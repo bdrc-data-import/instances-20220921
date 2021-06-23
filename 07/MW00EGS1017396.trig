@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1017396 {
+    bda:LG1A0D63AD43E5D72F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-01-30T04:00:31Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGB0155F737C57EAD9
         a                   adm:InitialOutlineData ;
         adm:logDate         "2008-06-05T17:00:40.012Z"^^xsd:dateTime ;
@@ -24,15 +29,34 @@ bdg:MW00EGS1017396 {
         adm:logMessage      "typo corrected"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1017396
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS105620" ;
         adm:adminAbout      bdr:MW00EGS1017396 ;
-        adm:facetIndex      107 ;
-        adm:logEntry        bda:LGB0155F737C57EAD9 , bda:LGF5F3229B05038FCD ;
+        adm:facetIndex      117 ;
+        adm:gitPath         "07/MW00EGS1017396.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1017396 ;
+        adm:logEntry        bda:LG1A0D63AD43E5D72F , bda:LGB0155F737C57EAD9 , bda:LGF5F3229B05038FCD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03EA5011CBCA1495
         a                   :ContentLocation ;
@@ -657,8 +681,41 @@ bdg:MW00EGS1017396 {
         :contentLocationInstance  bdr:W00EGS1017396 ;
         :contentLocationPage  30 .
     
+    bdr:EVA798A98A3135508F
+        a                   :PublishedEvent ;
+        :onYear             "2005"^^xsd:gYear .
+    
+    bdr:ID7374168DBD21E358
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105072059" .
+    
+    bdr:ID7A87DFD57991F95B
+        a                   bdr:HollisId ;
+        rdf:value           "014254012" .
+    
+    bdr:IDA148B66A18E6242D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006310415" .
+    
     bdr:MW00EGS1017396
+        a                   :Instance ;
+        skos:prefLabel      "reb gong seng+ge gshong gi lo rgyus gangs ri'i chu rgyun/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7374168DBD21E358 , bdr:ID7A87DFD57991F95B , bdr:IDA148B66A18E6242D ;
+        :authorshipStatement  "reb gong pa 'jigs med bsam grub kyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasPart            bdr:MW00EGS1017396_0C2670 , bdr:MW00EGS1017396_33B4D3 , bdr:MW00EGS1017396_668AD7 , bdr:MW00EGS1017396_8C8CF8 , bdr:MW00EGS1017396_D8EB0A , bdr:MW00EGS1017396_E31AB9 ;
+        :hasTitle           bdr:TT4D84C72D58D7ECCA , bdr:TTA7E34A7BAC5585D9 , bdr:TTC979B0C2534EAA0A ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVA798A98A3135508F ;
+        :instanceHasReproduction  bdr:W00EGS1017396 ;
+        :instanceOf         bdr:WA00EGS1017396 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "9, 345 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1017396_008BF3
@@ -1926,4 +1983,16 @@ bdg:MW00EGS1017396 {
         :partOf             bdr:MW00EGS1017396_BA3C93 ;
         :partTreeIndex      "3.11.4.1" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT4D84C72D58D7ECCA
+        a                   :SpineTitle ;
+        rdfs:label          "reb gong seng+ge gshong gi ll rgyus gangs ri'i chu rgyun/"@bo-x-ewts .
+    
+    bdr:TTA7E34A7BAC5585D9
+        a                   :TitlePageTitle ;
+        rdfs:label          "mdo smad a mdo reb gong gser mo ljongs kyi nang tshan seng+ge gshong gi mes po rnams kyi mched khungs dang de'i bzo rtsall bcas gsal bar bshad pa gangs ri'i chu rgyun/"@bo-x-ewts .
+    
+    bdr:TTC979B0C2534EAA0A
+        a                   :Title ;
+        rdfs:label          "reb gong seng+ge gshong gi lo rgyus gangs ri'i chu rgyun/"@bo-x-ewts .
 }

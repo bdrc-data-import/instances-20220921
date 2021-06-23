@@ -12,20 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1456 {
+    bda:LG1A7DD725E06215E7
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG767BB6A984956F44
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T18:16:38.088Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM13052B88  a     adm:InitialDataImport ;
         adm:logDate         "2021-03-01T18:17:49.626Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1456"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1456  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG222121" ;
         adm:adminAbout      bdr:MW1NLM1456 ;
-        adm:facetIndex      16 ;
-        adm:logEntry        bda:LGIM13052B88 ;
+        adm:facetIndex      22 ;
+        adm:gitPath         "8b/MW1NLM1456.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1456 ;
+        adm:logEntry        bda:LG1A7DD725E06215E7 , bda:LG767BB6A984956F44 , bda:LGIM13052B88 , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL08D4FA299FED083B
         a                   :ContentLocation ;
@@ -69,7 +92,19 @@ bdg:MW1NLM1456 {
         :contentLocationInstance  bdr:W1NLM1456 ;
         :contentLocationPage  129 .
     
-    bdr:MW1NLM1456  :hasPart  bdr:MW1NLM1456_658A55 , bdr:MW1NLM1456_7545BE , bdr:MW1NLM1456_77573B , bdr:MW1NLM1456_8A0400 , bdr:MW1NLM1456_B89970 , bdr:MW1NLM1456_E13AD9 , bdr:MW1NLM1456_EDE2DA ;
+    bdr:MW1NLM1456  a       :Instance ;
+        skos:prefLabel      "byang chub lam gyi rim pa la blo sbyong ba la thog mar blo sbyong ba chos kyi sgo 'byed sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "47x6.5" ;
+        :hasPart            bdr:MW1NLM1456_658A55 , bdr:MW1NLM1456_7545BE , bdr:MW1NLM1456_77573B , bdr:MW1NLM1456_8A0400 , bdr:MW1NLM1456_B89970 , bdr:MW1NLM1456_E13AD9 , bdr:MW1NLM1456_EDE2DA ;
+        :hasTitle           bdr:TT6B1FE51328007740 ;
+        :instanceHasReproduction  bdr:W1NLM1456 ;
+        :instanceOf         bdr:WA1NLM1387 ;
+        :isRoot             true ;
+        :note               bdr:NTC6F78EB017FF2A61 , bdr:NTE6E17105569AEEC6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "64 ff., 61 ff. end folio missing, 31 ff., 13 ff., 19 ff., 41 ff., 20 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1456_658A55
@@ -170,6 +205,14 @@ bdg:MW1NLM1456 {
         :partTreeIndex      "7" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTC6F78EB017FF2A61
+        a                   :Note ;
+        :noteText           "nlmId: M0059374"@en .
+    
+    bdr:NTE6E17105569AEEC6
+        a                   :Note ;
+        :noteText           "missingPages: M0059374-001 [Missing page from 9A-9B] Image 17-18 M0059374-001 [Missing page from 57A-57B] Image 113-114                                                                               M0059374-002 [Final pages are missing 62A] Image 251 M0059374-004 [Missing page from 3A-3B] Image 318-319"@en .
+    
     bdr:TT2A6C76974C8F661E
         a                   :Title ;
         rdfs:label          "rten 'brel gyi rnam bzhag lung rigs bang mdzod/"@bo-x-ewts .
@@ -177,6 +220,10 @@ bdg:MW1NLM1456 {
     bdr:TT3AFE6A2DC2FE1C1F
         a                   :Title ;
         rdfs:label          "kun mkhyen 'jam dbyangs bzhad pa'i phar phyin gyi yig cha'i mchan 'grel gser gyi lde mig ces bya ba las skabs lnga pa la sogs pa'i skor/"@bo-x-ewts .
+    
+    bdr:TT6B1FE51328007740
+        a                   :Title ;
+        rdfs:label          "byang chub lam gyi rim pa la blo sbyong ba la thog mar blo sbyong ba chos kyi sgo 'byed sogs/"@bo-x-ewts .
     
     bdr:TT7F660DC8E43AB4AE
         a                   :Title ;

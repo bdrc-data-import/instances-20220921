@@ -12,20 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG11906 {
+    bda:LG087912C29D107FA7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T10:27:25.525Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG3047C916435B2268
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-02-14T14:52:32.43Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGBDC21E1C7C6370A0
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:09.621Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG11906  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG11906" ;
         adm:adminAbout      bdr:MW1KG11906 ;
-        adm:facetIndex      18 ;
-        adm:logEntry        bda:LGBDC21E1C7C6370A0 ;
+        adm:facetIndex      29 ;
+        adm:gitPath         "e1/MW1KG11906.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG11906 ;
+        adm:logEntry        bda:LG087912C29D107FA7 , bda:LG3047C916435B2268 , bda:LGBDC21E1C7C6370A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1C4BC72D0B98223A
         a                   :ContentLocation ;
@@ -83,7 +114,41 @@ bdg:MW1KG11906 {
         :contentLocationPage  15 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1KG11906  :hasPart  bdr:MW1KG11906_087BAF , bdr:MW1KG11906_40C42A , bdr:MW1KG11906_9BA8EA , bdr:MW1KG11906_A91A59 , bdr:MW1KG11906_DD4064 , bdr:MW1KG11906_E02F6B , bdr:MW1KG11906_E59C1D , bdr:MW1KG11906_FEA58C ;
+    bdr:EVDFB20822ABC4ADCB
+        a                   :PublishedEvent ;
+        :onYear             "1977"^^xsd:gYear .
+    
+    bdr:ID3EB22B86A9D27CB3
+        a                   bdr:HollisId ;
+        rdf:value           "014255755" .
+    
+    bdr:ID6FB254C1493211A0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7695 .M5 1977" .
+    
+    bdr:ID7FB785491E044149
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77902412" .
+    
+    bdr:MW1KG11906  a       :Instance ;
+        skos:altLabel       "rare writings of 'jam-mgon 'ju mi-pham-rgya-mtsho"@en ;
+        skos:prefLabel      "bka' brgyad rnam bshad sogs 'jam mgon mi pham rin po che'i gsung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3EB22B86A9D27CB3 , bdr:ID6FB254C1493211A0 , bdr:ID7FB785491E044149 ;
+        :biblioNote         "reproduced from a manuscript collection from darjeeling by lama dodrup sangyay on behalf of chhentse rimpoche"@en ;
+        :hasPart            bdr:MW1KG11906_087BAF , bdr:MW1KG11906_40C42A , bdr:MW1KG11906_9BA8EA , bdr:MW1KG11906_A91A59 , bdr:MW1KG11906_DD4064 , bdr:MW1KG11906_E02F6B , bdr:MW1KG11906_E59C1D , bdr:MW1KG11906_FEA58C ;
+        :hasTitle           bdr:TT30C01500D0C7CCFB , bdr:TT805C75A8BA67FC19 ;
+        :instanceEvent      bdr:EVDFB20822ABC4ADCB ;
+        :instanceHasReproduction  bdr:W1KG11906 ;
+        :instanceOf         bdr:WA1KG11906 ;
+        :isRoot             true ;
+        :note               bdr:NTD26AA565A0B724FC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "paro"@en ;
+        :publisherName      "lama dodrup sangyay"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "610 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG11906_087BAF
@@ -196,6 +261,10 @@ bdg:MW1KG11906 {
         :partTreeIndex      "5" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTD26AA565A0B724FC
+        a                   :Note ;
+        :noteText           "in tibetan; preface in english"@en .
+    
     bdr:TT0A83AB5392A50E3C
         a                   :Title ;
         rdfs:label          "CONTENTS/"@bo-x-ewts .
@@ -203,6 +272,10 @@ bdg:MW1KG11906 {
     bdr:TT2E67B8BAD789E43D
         a                   :Title ;
         rdfs:label          "rdzas sna tshogs kyi sbyor thabs lag len ci rigs bstan pa shel gyi phreng ba/"@bo-x-ewts .
+    
+    bdr:TT30C01500D0C7CCFB
+        a                   :Title ;
+        rdfs:label          "bka' brgyad rnam bshad sogs 'jam mgon mi pham rin po che'i gsung /"@bo-x-ewts .
     
     bdr:TT4EF1648FDC46CE8D
         a                   :Title ;
@@ -215,6 +288,10 @@ bdg:MW1KG11906 {
     bdr:TT7EE646A926566276
         a                   :Title ;
         rdfs:label          "mkhyud spyad sna tshogs phyogs bsdus tsin+ta ma Ni/"@bo-x-ewts .
+    
+    bdr:TT805C75A8BA67FC19
+        a                   :TitlePageTitle ;
+        rdfs:label          "rare writings of 'jam-mgon 'ju mi-pham-rgya-mtsho"@en .
     
     bdr:TTAE37AB6B35A02285
         a                   :Title ;

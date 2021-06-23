@@ -18,20 +18,49 @@ bdg:MW28897 {
         adm:logDate         "2013-09-05T17:09:00.398Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG75602DECA7039450
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-12T11:13:47.161Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LGEB09BCBB2182D2AC
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-09-19T12:31:38.484Z"^^xsd:dateTime ;
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGFDD711BCF60EEAB3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28897  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O28897" ;
         adm:adminAbout      bdr:MW28897 ;
-        adm:facetIndex      131 ;
-        adm:logEntry        bda:LG0F7D207CA2AEFCDB , bda:LGEB09BCBB2182D2AC ;
+        adm:facetIndex      139 ;
+        adm:gitPath         "b2/MW28897.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28897 ;
+        adm:logEntry        bda:LG0F7D207CA2AEFCDB , bda:LG75602DECA7039450 , bda:LGEB09BCBB2182D2AC , bda:LGFDD711BCF60EEAB3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL088D220C03295361
         a                   :ContentLocation ;
@@ -481,8 +510,35 @@ bdg:MW28897 {
         :contentLocationPage  685 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28897  :hasPart   bdr:MW28897_703F10 , bdr:MW28897_A9EE75 ;
-        :workPagination     bdr:PaginationAbsolute .
+    bdr:EV983219C67F1CDB81
+        a                   :PublishedEvent ;
+        :onYear             "0199"^^xsd:gYear .
+    
+    bdr:IDAC682BC6DA05D357
+        a                   bdr:HollisId ;
+        rdf:value           "014259822" .
+    
+    bdr:MW28897  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang bstan pa rab rgyas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAC682BC6DA05D357 ;
+        :biblioNote         "blockprints from the rong bo dgon chen blocks"@en ;
+        :hasPart            bdr:MW28897_703F10 , bdr:MW28897_A9EE75 ;
+        :hasSourcePrintery  bdr:G3JT12498 ;
+        :hasTitle           bdr:TT8A7783B59DFC9C61 ;
+        :instanceEvent      bdr:EV983219C67F1CDB81 ;
+        :instanceHasReproduction  bdr:W28897 ;
+        :instanceOf         bdr:WA28897 ;
+        :isRoot             true ;
+        :note               bdr:NT8BC03EE7DD8B0185 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[rong bo]"@en ;
+        :publisherName      "[rong bo dgon chen]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
+        :workPagination     bdr:PaginationAbsolute ;
+        :workPrintery       "rong bo dgon chen/"@bo-x-ewts .
     
     bdr:MW28897_013307
         a                   :Instance ;
@@ -1402,6 +1458,10 @@ bdg:MW28897 {
         :partTreeIndex      "2.16" ;
         :partType           bdr:PartTypeTableOfContent .
     
+    bdr:NT8BC03EE7DD8B0185
+        a                   :Note ;
+        :noteText           "scanned from the set of 1949 blockprints from the rong bo dgon chen blocks, belonging to the latse library through the kindness of mr. pema bhum\n4821-4822"@en .
+    
     bdr:TT0207121B6D07D263
         a                   :Title ;
         rdfs:label          "ma Ni 'bum sgrub kyi ja gral du blo bzang bstan pa rab rgyas kyis nyams dgar bris pa/"@bo-x-ewts .
@@ -1565,6 +1625,10 @@ bdg:MW28897 {
     bdr:TT86E7065FD6CC6C1B
         a                   :Title ;
         rdfs:label          "nga) mkhas shing grub pa'i dbang phyug chen po rdo rje 'dzin pa blo bzang bstan pa rab rgyas dpal bzang po'i gsol 'debs smon lam dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TT8A7783B59DFC9C61
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang bstan pa rab rgyas/"@bo-x-ewts .
     
     bdr:TT9A21C8E0AD03CF5E
         a                   :Title ;

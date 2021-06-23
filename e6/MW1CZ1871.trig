@@ -18,6 +18,12 @@ bdg:MW1CZ1871 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG44479C3DAD6C2EF0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-17T14:50:27.89Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGB8A4D423C77CD64F
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-09-30T13:44:43Z"^^xsd:dateTime ;
@@ -30,14 +36,33 @@ bdg:MW1CZ1871 {
         adm:logMessage      "tshar"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1CZ1871  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD94164" ;
         adm:adminAbout      bdr:MW1CZ1871 ;
-        adm:facetIndex      123 ;
-        adm:logEntry        bda:LG023B56FCB4CFC128 , bda:LGB8A4D423C77CD64F , bda:LGFB65292F1884B5C0 ;
+        adm:facetIndex      130 ;
+        adm:gitPath         "e6/MW1CZ1871.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1CZ1871 ;
+        adm:logEntry        bda:LG023B56FCB4CFC128 , bda:LG44479C3DAD6C2EF0 , bda:LGB8A4D423C77CD64F , bda:LGFB65292F1884B5C0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00E1A210F67A93CA
         a                   :ContentLocation ;
@@ -513,7 +538,23 @@ bdg:MW1CZ1871 {
         :contentLocationInstance  bdr:W1CZ1871 ;
         :contentLocationPage  454 .
     
-    bdr:MW1CZ1871  :hasPart  bdr:MW1CZ1871_50D6EE , bdr:MW1CZ1871_6E8012 ;
+    bdr:ID4298A8E5DF020F9E
+        a                   bdr:HollisId ;
+        rdf:value           "014255260" .
+    
+    bdr:MW1CZ1871  a        :Instance ;
+        skos:prefLabel      "gsung thor bu/_ gzhon nu blo gros/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4298A8E5DF020F9E ;
+        :hasPart            bdr:MW1CZ1871_50D6EE , bdr:MW1CZ1871_6E8012 ;
+        :hasTitle           bdr:TT09200F2F9E7C6A61 , bdr:TT61F472C51EC86E3A ;
+        :instanceHasReproduction  bdr:W1CZ1871 ;
+        :instanceOf         bdr:WA1CZ1871 ;
+        :isRoot             true ;
+        :note               bdr:NT366B6CB4D7D012DC ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "335 ff." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1CZ1871_04EF48
@@ -1560,9 +1601,17 @@ bdg:MW1CZ1871 {
         :partTreeIndex      "2.2.3" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT366B6CB4D7D012DC
+        a                   :Note ;
+        :noteText           "original manuscript is missing unknown number of folia at the end"@en .
+    
     bdr:TT0096E917FEA1E1F0
         a                   :Title ;
         rdfs:label          "bka' bcu pa yon tan rgya mtshan gyi zhus lan/"@bo-x-ewts .
+    
+    bdr:TT09200F2F9E7C6A61
+        a                   :OtherTitle ;
+        rdfs:label          "red mda' ba gzhon nu blo gros kyi gsung thor bu/"@bo-x-ewts .
     
     bdr:TT0B67354B82DA654F
         a                   :Title ;
@@ -1615,6 +1664,10 @@ bdg:MW1CZ1871 {
     bdr:TT5FE5C4949FFE8323
         a                   :Title ;
         rdfs:label          "dge bshes shes rab grags kyi dris lan/"@bo-x-ewts .
+    
+    bdr:TT61F472C51EC86E3A
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/_ gzhon nu blo gros/"@bo-x-ewts .
     
     bdr:TT63AEDA2FF9FB9A06
         a                   :Title ;

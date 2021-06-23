@@ -48,6 +48,16 @@ bdg:MW23504 {
         adm:logMessage      "published for first time"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGAB7B195FB6EAA95C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-05T12:38:26.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGAD7A216D4AA08780
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGDBDD97142E7B52A0
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-03-09T09:44:31.88Z"^^xsd:dateTime ;
@@ -60,14 +70,39 @@ bdg:MW23504 {
         adm:logMessage      "added sgrub thabs section dand gsung mgur section's contents"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23504  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1013837" ;
         adm:adminAbout      bdr:MW23504 ;
-        adm:facetIndex      301 ;
-        adm:logEntry        bda:LG06F424F910387510 , bda:LG0B03B54C6974A189 , bda:LG2089B9308CB8B922 , bda:LG441A14AE9A84249E , bda:LG747A26B1F9A4A6BF , bda:LGA38DE44D6B8EDA02 , bda:LGDBDD97142E7B52A0 , bda:LGE9A7B938C4A65B22 ;
+        adm:facetIndex      313 ;
+        adm:gitPath         "71/MW23504.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23504 ;
+        adm:logEntry        bda:LG06F424F910387510 , bda:LG0B03B54C6974A189 , bda:LG2089B9308CB8B922 , bda:LG441A14AE9A84249E , bda:LG747A26B1F9A4A6BF , bda:LGA38DE44D6B8EDA02 , bda:LGAB7B195FB6EAA95C , bda:LGAD7A216D4AA08780 , bda:LGDBDD97142E7B52A0 , bda:LGE9A7B938C4A65B22 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL039C2998ECB2F993
         a                   :ContentLocation ;
@@ -869,7 +904,42 @@ bdg:MW23504 {
         :contentLocationPage  135 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23504  :hasPart   bdr:MW23504_4A6DFA , bdr:MW23504_6D6B19 ;
+    bdr:EV84939AEC1869584E
+        a                   :PublishedEvent ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:ID1F359FEFAFF0E009
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .K57 1982" .
+    
+    bdr:ID35BB0152455862B7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82900984" .
+    
+    bdr:ID86494E945096563F
+        a                   bdr:HollisId ;
+        rdf:value           "014258944" .
+    
+    bdr:MW23504  a          :Instance ;
+        skos:altLabel       "collected miscellaneous writings (gsun thor bu) of rgyal-ba klon-chen rab-'byams-pa"@en-x-mixed ;
+        skos:prefLabel      "gsung thor bu/_dri med 'od zer/(sde dge par ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1F359FEFAFF0E009 , bdr:ID35BB0152455862B7 , bdr:ID86494E945096563F ;
+        :biblioNote         "reproduced from the xylographic prints from the sde-dge blocks at the order of h.h. dilgo khyentsey rinpoche"@en ;
+        :hasPart            bdr:MW23504_4A6DFA , bdr:MW23504_6D6B19 ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT99FAF4B8A4ADD338 , bdr:TTADD485E0D5817B73 ;
+        :instanceEvent      bdr:EV84939AEC1869584E ;
+        :instanceHasReproduction  bdr:W23504 ;
+        :instanceOf         bdr:WA12829 ;
+        :isRoot             true ;
+        :note               bdr:NT237F4015DBAF5E5A ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "paro, bhutan"@en ;
+        :publisherName      "lama ngodrup and sherab drimey"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23504_035B4C
@@ -2648,6 +2718,10 @@ bdg:MW23504 {
         :partTreeIndex      "2.4.3.12" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT237F4015DBAF5E5A
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 2074-2075."@en .
+    
     bdr:TT00BFA06AE3F4AE95
         a                   :OtherTitle ;
         rdfs:label          "nags tshal kun tu dga' ba'i zlos gar/"@bo-x-ewts .
@@ -3016,6 +3090,10 @@ bdg:MW23504 {
         a                   :Title ;
         rdfs:label          "dbyangs can ma'i sgrub thabs/"@bo-x-ewts .
     
+    bdr:TT99FAF4B8A4ADD338
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected miscellaneous writings (gsun thor bu) of rgyal-ba klon-chen rab-'byams-pa"@en-x-mixed .
+    
     bdr:TT9ACA4AC3278DC6ED
         a                   :Title ;
         rdfs:label          "ngang pa'i dris lan sprin gyi snying po/"@bo-x-ewts .
@@ -3087,6 +3165,10 @@ bdg:MW23504 {
     bdr:TTADB59A891EAF3836
         a                   :Title ;
         rdfs:label          "bstan bcos kyi dkar chag rin po che'i mdzod khang /"@bo-x-ewts .
+    
+    bdr:TTADD485E0D5817B73
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/_dri med 'od zer/(sde dge par ma/)"@bo-x-ewts .
     
     bdr:TTAF6F338AEF22E6AA
         a                   :Title ;

@@ -12,6 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG10241 {
+    bda:LGA3111177D8798288
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-11T15:22:35.169Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGAF7A8EC387028BED
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-07-28T11:47:15.527Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGB963B4A88EAF8F92
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -24,14 +36,46 @@ bdg:MW1KG10241 {
         adm:logMessage      "reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG10241  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG10241" ;
         adm:adminAbout      bdr:MW1KG10241 ;
-        adm:facetIndex      51 ;
-        adm:logEntry        bda:LGB963B4A88EAF8F92 , bda:LGFBC11BFB0AF5DF4E ;
+        adm:facetIndex      69 ;
+        adm:gitPath         "f8/MW1KG10241.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG10241 ;
+        adm:logEntry        bda:LGA3111177D8798288 , bda:LGAF7A8EC387028BED , bda:LGB963B4A88EAF8F92 , bda:LGFBC11BFB0AF5DF4E , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01492714F456C247
         a                   :ContentLocation ;
@@ -201,7 +245,49 @@ bdg:MW1KG10241 {
         :contentLocationPage  11 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG10241  :hasPart  bdr:MW1KG10241_6F4C16 , bdr:MW1KG10241_AC4CDB ;
+    bdr:EVC638536C6C6038C1
+        a                   :PublishedEvent ;
+        :onYear             "1971"^^xsd:gYear .
+    
+    bdr:ID0D3146802838B0FB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75926436" .
+    
+    bdr:ID19905388494BE2F7
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2177 .M56 1971" .
+    
+    bdr:ID5BF5C3B0F28CB81A
+        a                   bdr:PL480 ;
+        rdf:value           "pl480:i(sik)-tib-55" .
+    
+    bdr:ID7A8A576A828B5BE4
+        a                   bdr:HollisId ;
+        rdf:value           "014255604" .
+    
+    bdr:ID7F097EAA6B28BB2C
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001585037-4" .
+    
+    bdr:MW1KG10241  a       :Instance ;
+        skos:altLabel       "mi-pham on the kalacakra tantra : a reproduction of the two volumes from the collected works of 'jam-mgon 'ju mi-pham rgya-mtsho dealing with the cycle of the wheel of time"@en-x-mixed ;
+        skos:prefLabel      "'ju mi pham gyi gsung 'bum las dus 'khor gyi skor/(pod e -_waM/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0D3146802838B0FB , bdr:ID19905388494BE2F7 , bdr:ID5BF5C3B0F28CB81A , bdr:ID7A8A576A828B5BE4 , bdr:ID7F097EAA6B28BB2C ;
+        :biblioNote         "a reproduction of the two volumes from the collected works of 'jam mgon 'ju mi pham rgya mtsho dealing with the cycle of the wheel of time"@en ;
+        :hasPart            bdr:MW1KG10241_6F4C16 , bdr:MW1KG10241_AC4CDB ;
+        :hasTitle           bdr:TT200561DE650A1473 , bdr:TT5D9944D457068F72 , bdr:TT616D6EB23EA1CEB9 , bdr:TTD32AF7805BE72618 ;
+        :instanceEvent      bdr:EVC638536C6C6038C1 ;
+        :instanceHasReproduction  bdr:W1KG10241 ;
+        :instanceOf         bdr:WA1KG10241 ;
+        :isRoot             true ;
+        :note               bdr:NT072D044F47C9A227 , bdr:NT56EFB83EBACA1E3B ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "sonam topgay kazi"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG10241_1CA823
@@ -551,6 +637,14 @@ bdg:MW1KG10241 {
         :partTreeIndex      "1.10.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT072D044F47C9A227
+        a                   :Note ;
+        :noteText           "reproduced from texts from the library of dudjom rimpoche by sonam topgay kazi"@en .
+    
+    bdr:NT56EFB83EBACA1E3B
+        a                   :Note ;
+        :noteText           "contents:\nv. 1. dus 'khor sgrub skor -- dus 'khor bsdus rgyud and 'chad thabs -- dpal dus kyi 'khor lo'i rgyud kyi tshig don rab tu gsal byed rdo rje nyi ma'i snang ba. \nv. 2. dpal dus kyi 'khor lo'i rgyud kyi tshig don rab tu gsal byed rdo rje nyi ma'i snang ba."@en .
+    
     bdr:TT04783C37BB5FE864
         a                   :Title ;
         rdfs:label          "dus 'khor nang gi le'u'i 'grel pa/"@bo-x-ewts .
@@ -562,6 +656,10 @@ bdg:MW1KG10241 {
     bdr:TT06C126FDF8510133
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TT200561DE650A1473
+        a                   :TitlePageTitle ;
+        rdfs:label          "mi-pham on the kalacakra tantra : a reproduction of the two volumes from the collected works of 'jam-mgon 'ju mi-pham rgya-mtsho dealing with the cycle of the wheel of time"@en-x-mixed .
     
     bdr:TT2E9E3B86D51FC48B
         a                   :Title ;
@@ -583,9 +681,17 @@ bdg:MW1KG10241 {
         a                   :Title ;
         rdfs:label          "sde drug srung ma drug cu'i gtor 'bum/"@bo-x-ewts .
     
+    bdr:TT5D9944D457068F72
+        a                   :CoverTitle ;
+        rdfs:label          "mi-pham on the kalacakra"@en-x-mixed .
+    
     bdr:TT60BD054CDA522253
         a                   :Title ;
         rdfs:label          "dus 'khor dbang le'i 'grel pa/"@bo-x-ewts .
+    
+    bdr:TT616D6EB23EA1CEB9
+        a                   :CoverTitle ;
+        rdfs:label          "Mi-pham on the Kālacakra tantra :a reproduction of the two volumes from the collected works of ʾJam-mgon ʾJu Mi-pham-rgya-mtsho dealing with the cycle of the Wheel of Time."@en-x-mixed .
     
     bdr:TT62176A917AAEDE3A
         a                   :Title ;
@@ -622,6 +728,10 @@ bdg:MW1KG10241 {
     bdr:TTB54EC6256C79554B
         a                   :Title ;
         rdfs:label          "sgrub thabs kyi le'u/"@bo-x-ewts .
+    
+    bdr:TTD32AF7805BE72618
+        a                   :Title ;
+        rdfs:label          "'ju mi pham gyi gsung 'bum las dus 'khor gyi skor/(pod e -_waM/)"@bo-x-ewts .
     
     bdr:TTD4F7868AF65DF821
         a                   :Title ;

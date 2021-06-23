@@ -17,20 +17,51 @@ bdg:MW2DB4600 {
         adm:logDate         "2009-06-12T16:50:21.823Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGA7F0D2D9BF862E93
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-11-28T16:31:59.687Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LGADDA0173A564C2D0
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-01-18T10:59:41.263Z"^^xsd:dateTime ;
         adm:logMessage      "zhu dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGB5E39186FAEA03B9
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-28T16:47:22.812Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2DB4600  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD126714" ;
         adm:adminAbout      bdr:MW2DB4600 ;
-        adm:facetIndex      56 ;
-        adm:logEntry        bda:LG13017D397EAF463A , bda:LGADDA0173A564C2D0 ;
+        adm:facetIndex      65 ;
+        adm:gitPath         "32/MW2DB4600.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2DB4600 ;
+        adm:logEntry        bda:LG13017D397EAF463A , bda:LGA7F0D2D9BF862E93 , bda:LGADDA0173A564C2D0 , bda:LGB5E39186FAEA03B9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Paldor"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL037241EC24FE7426
         a                   :ContentLocation ;
@@ -179,7 +210,36 @@ bdg:MW2DB4600 {
         :contentLocationPage  495 ;
         :contentLocationVolume  1 .
     
-    bdr:MW2DB4600  :hasPart  bdr:MW2DB4600_171A88 , bdr:MW2DB4600_4291D9 , bdr:MW2DB4600_500A51 , bdr:MW2DB4600_581F80 , bdr:MW2DB4600_8BDC05 , bdr:MW2DB4600_A387C9 , bdr:MW2DB4600_CF22DD ;
+    bdr:EV0168FD6E9CD08533
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID03A0F2C9479853B1
+        a                   bdr:HollisId ;
+        rdf:value           "014260518" .
+    
+    bdr:IDFB11E6BFF8F90525
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800578836" .
+    
+    bdr:MW2DB4600  a        :Instance ;
+        skos:prefLabel      "rje tsong kha pa'i rnam thar chen mo/"@bo-x-ewts , "zong ka ba da shi zhuan"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID03A0F2C9479853B1 , bdr:IDFB11E6BFF8F90525 ;
+        :authorshipStatement  "cha har dge bshes blo bzang tshul khrims kyis brtshams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW2DB4600_171A88 , bdr:MW2DB4600_4291D9 , bdr:MW2DB4600_500A51 , bdr:MW2DB4600_581F80 , bdr:MW2DB4600_8BDC05 , bdr:MW2DB4600_A387C9 , bdr:MW2DB4600_CF22DD ;
+        :hasTitle           bdr:TT3CCDA447591EF78B , bdr:TTB1F510A90CBA8346 ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EV0168FD6E9CD08533 ;
+        :instanceHasReproduction  bdr:W2DB4600 ;
+        :instanceOf         bdr:WA2DB4600 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 513 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2DB4600_1305A4
@@ -509,6 +569,10 @@ bdg:MW2DB4600 {
         a                   :Title ;
         rdfs:label          "bsnyen rdzogs kyi sdom pa bzhes pa dang /_bka' dang bstan bcos kun la gzigs rtogs mdzad pa dang /_mkhas pa rnams la chos mang po gsungs pa dang /_'jam dpal dbyangs kyi zhal gzigs nas man ngag mang po mnos pa dang /_sngags phyogs la sbyangs nas mkhas par gyur pa dang /_zhar la bla ma dbu ma pa'i rnam thar zur tsam bcas brjod pa'i skabs ste bzhi pa/"@bo-x-ewts .
     
+    bdr:TT3CCDA447591EF78B
+        a                   :Title ;
+        rdfs:label          "rje tsong kha pa'i rnam thar chen mo/"@bo-x-ewts .
+    
     bdr:TT50078A0B10D4693B
         a                   :Title ;
         rdfs:label          "sku 'khrungs pa'i skabs dang/_gzhon nu'i dus kyi mdzad pa/_rab tu byung ba'i skabs brjod pa dang zhar la chos rje don grub rin chen pa'i rnam thar bcas bstan pa'i le'u ste gnyis pa/"@bo-x-ewts .
@@ -556,6 +620,10 @@ bdg:MW2DB4600 {
     bdr:TTAE470729EE7208D0
         a                   :Title ;
         rdfs:label          "rje tsong kha pa chen pos rjes su 'dzin pa'i smon lam/"@bo-x-ewts .
+    
+    bdr:TTB1F510A90CBA8346
+        a                   :ColophonTitle ;
+        rdfs:label          "zong ka ba da shi zhuan"@zh-latn-pinyin-x-ndia .
     
     bdr:TTB9AD76B0DE0C7205
         a                   :Title ;

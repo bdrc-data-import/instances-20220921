@@ -12,6 +12,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW13994 {
+    bda:LG125CE5CDF29C50A8
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-19T16:23:34.398Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LG2CD0DFF7CA47EDED
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.5.5" ;
@@ -23,14 +28,37 @@ bdg:MW13994 {
         adm:logDate         "2014-11-21T11:35:07.4Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGB1379316192A0C7E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW13994  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O13994" ;
         adm:adminAbout      bdr:MW13994 ;
-        adm:facetIndex      1257 ;
-        adm:logEntry        bda:LG2CD0DFF7CA47EDED , bda:LG973E297925BA5B06 ;
+        adm:facetIndex      1266 ;
+        adm:gitPath         "1d/MW13994.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW13994 ;
+        adm:logEntry        bda:LG125CE5CDF29C50A8 , bda:LG2CD0DFF7CA47EDED , bda:LG973E297925BA5B06 , bda:LGB1379316192A0C7E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL001D7446DCBEBEF7
         a                   :ContentLocation ;
@@ -4421,7 +4449,29 @@ bdg:MW13994 {
         :contentLocationPage  257 ;
         :contentLocationVolume  5 .
     
-    bdr:MW13994  :hasPart   bdr:MW13994_204952 , bdr:MW13994_2C1522 , bdr:MW13994_6031E3 , bdr:MW13994_B4A2C4 , bdr:MW13994_D89E4E ;
+    bdr:EVF8C0603BF13B95F3
+        a                   :PublishedEvent ;
+        :onYear             "0199"^^xsd:gYear .
+    
+    bdr:ID95FF078277FE8F82
+        a                   bdr:HollisId ;
+        rdf:value           "014254698" .
+    
+    bdr:MW13994  a          :Instance ;
+        skos:prefLabel      "bla ma zhang brtson 'grus grags pa'i gsung 'bum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID95FF078277FE8F82 ;
+        :hasPart            bdr:MW13994_204952 , bdr:MW13994_2C1522 , bdr:MW13994_6031E3 , bdr:MW13994_B4A2C4 , bdr:MW13994_D89E4E ;
+        :hasTitle           bdr:TT2E658766AB7B140D ;
+        :instanceEvent      bdr:EVF8C0603BF13B95F3 ;
+        :instanceHasReproduction  bdr:W13994 ;
+        :instanceOf         bdr:WA13994 ;
+        :isRoot             true ;
+        :note               bdr:NT1DF64EFF1E8F7F7B , bdr:NTCC2F8599BA21D22E ;
+        :numberOfVolumes    5 ;
+        :publisherName      "[kangding]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW13994_0134B3
@@ -13215,6 +13265,14 @@ bdg:MW13994 {
         :partTreeIndex      "3.2.1.18.2.08" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT1DF64EFF1E8F7F7B
+        a                   :Note ;
+        :noteText           "this is a lhasa reprint: 4 v. with bka' rgya ma lhasa reprint."@en .
+    
+    bdr:NTCC2F8599BA21D22E
+        a                   :Note ;
+        :noteText           "-3029"@en .
+    
     bdr:TT003C2CB1E944A08F
         a                   :Title ;
         rdfs:label          "be)_lha sa ma/_rdo rje chu 'thung zhes bya ba'i gdams ngag"@bo-x-ewts .
@@ -13666,6 +13724,10 @@ bdg:MW13994 {
     bdr:TT2E06D99FF9BA8681
         a                   :Title ;
         rdfs:label          "sangs rgyas kyi dgongs pa thun mongs ma yin pa'i glu/"@bo-x-ewts .
+    
+    bdr:TT2E658766AB7B140D
+        a                   :Title ;
+        rdfs:label          "bla ma zhang brtson 'grus grags pa'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TT2E704224158BB383
         a                   :Title ;

@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21145 {
+    bda:LG4335FD5FEB9EAF4E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG5DF4B84284CA7AE3
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-11-02T15:50:07.367Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
+    
+    bda:LGA13833AADF8D13AC
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-10T09:31:14.825Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGE666E9CFA757A30E
         a                   adm:UpdateOutlineData ;
@@ -23,14 +33,33 @@ bdg:MW21145 {
         adm:logMessage      "edited and released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW21145  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O8LS32" ;
         adm:adminAbout      bdr:MW21145 ;
-        adm:facetIndex      43 ;
-        adm:logEntry        bda:LG5DF4B84284CA7AE3 , bda:LGE666E9CFA757A30E ;
+        adm:facetIndex      55 ;
+        adm:gitPath         "57/MW21145.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21145 ;
+        adm:logEntry        bda:LG4335FD5FEB9EAF4E , bda:LG5DF4B84284CA7AE3 , bda:LGA13833AADF8D13AC , bda:LGE666E9CFA757A30E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL04A81F199EFB2B46
         a                   :ContentLocation ;
@@ -152,7 +181,45 @@ bdg:MW21145 {
         :contentLocationInstance  bdr:W21145 ;
         :contentLocationPage  473 .
     
-    bdr:MW21145  :hasPart   bdr:MW21145_2A2A53 , bdr:MW21145_7DE3FD , bdr:MW21145_CD78F8 , bdr:MW21145_DCD4D7 ;
+    bdr:EV6203D193B0E634EC
+        a                   :PublishedEvent ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:ID092FA55EED57CDD4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84900297" .
+    
+    bdr:ID0F870607F1A68864
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7920 .B44 1983" .
+    
+    bdr:ID313B4D67766F4520
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2466" .
+    
+    bdr:ID4AF82EF5B997BB88
+        a                   bdr:HollisId ;
+        rdf:value           "014258293" .
+    
+    bdr:MW21145  a          :Instance ;
+        skos:altLabel       "bde mchog snan brgyud biographies"@en ;
+        skos:prefLabel      "bde mchog snyan brgyud kyi rnam thar skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID092FA55EED57CDD4 , bdr:ID0F870607F1A68864 , bdr:ID313B4D67766F4520 , bdr:ID4AF82EF5B997BB88 ;
+        :biblioNote         "reproduction of a collection of rare manuscripts from the stag-sna monastery in ladakh"@en ;
+        :hasPart            bdr:MW21145_2A2A53 , bdr:MW21145_7DE3FD , bdr:MW21145_CD78F8 , bdr:MW21145_DCD4D7 ;
+        :hasTitle           bdr:TT740E06AF4A88BD78 , bdr:TTD362D36C9FA392F2 ;
+        :instanceEvent      bdr:EV6203D193B0E634EC ;
+        :instanceHasReproduction  bdr:W21145 ;
+        :instanceOf         bdr:WA21145 ;
+        :isRoot             true ;
+        :note               bdr:NT00B6B1D5B8B6F6C8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "514 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW21145_0F9FF6
@@ -452,6 +519,10 @@ bdg:MW21145 {
         :workGenre          bdr:T3 ;
         :workIsAbout        bdr:P5898 .
     
+    bdr:NT00B6B1D5B8B6F6C8
+        a                   :Note ;
+        :noteText           "tbrc holds set of digital scans, tiffs and pdf files.\n0838."@en .
+    
     bdr:TT1C8D8ECD386CD9C8
         a                   :TitlePageTitle ;
         rdfs:label          "rdo rje phag mo lha mo bco lnga ma'i mngon rtogs/ rdo rje phag mo lha mo bdun ma'i mngon rtogs/ rdo rje phag mo lha lnga ma'i mngon rtogs/"@bo-x-ewts .
@@ -492,6 +563,10 @@ bdg:MW21145 {
         a                   :TitlePageTitle ;
         rdfs:label          "ma gcig kun ldan ras ma'i lo rgyus/"@bo-x-ewts .
     
+    bdr:TT740E06AF4A88BD78
+        a                   :Title ;
+        rdfs:label          "bde mchog snyan brgyud kyi rnam thar skor/"@bo-x-ewts .
+    
     bdr:TT8F1AC8FA373AE1DF
         a                   :TitlePageTitle ;
         rdfs:label          "ma gcig ong jo'i rnam thar zur tsam/"@bo-x-ewts .
@@ -511,6 +586,10 @@ bdg:MW21145 {
     bdr:TTBF07B5A2293180ED
         a                   :TitlePageTitle ;
         rdfs:label          "ras chung snyan rgyud kyi bla brgyud rnam thar/"@bo-x-ewts .
+    
+    bdr:TTD362D36C9FA392F2
+        a                   :TitlePageTitle ;
+        rdfs:label          "bde mchog snan brgyud biographies"@en .
     
     bdr:TTDF53D2B2B8897D22
         a                   :TitlePageTitle ;

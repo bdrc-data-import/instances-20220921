@@ -18,6 +18,10 @@ bdg:MW27311 {
         adm:logMessage      "corrected typos"@en ;
         adm:logWho          bdu:U00009 .
     
+    bda:LG72AA3A81AA78ED17
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGA2B4BB8DEFCFFAA8
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-05T10:22:33.012Z"^^xsd:dateTime ;
@@ -34,14 +38,33 @@ bdg:MW27311 {
         adm:logDate         "2010-06-24T15:29:47.826Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW27311  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB102913" ;
         adm:adminAbout      bdr:MW27311 ;
-        adm:facetIndex      57 ;
-        adm:logEntry        bda:LG5A9673DF604E362F , bda:LGA2B4BB8DEFCFFAA8 , bda:LGC506B62D10A0B495 , bda:LGE206047A8354F330 ;
+        adm:facetIndex      67 ;
+        adm:gitPath         "38/MW27311.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27311 ;
+        adm:logEntry        bda:LG5A9673DF604E362F , bda:LG72AA3A81AA78ED17 , bda:LGA2B4BB8DEFCFFAA8 , bda:LGC506B62D10A0B495 , bda:LGE206047A8354F330 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0147DA248BA044AC
         a                   :ContentLocation ;
@@ -199,7 +222,41 @@ bdg:MW27311 {
         :contentLocationInstance  bdr:W27311 ;
         :contentLocationPage  144 .
     
-    bdr:MW27311  :hasPart   bdr:MW27311_30B421 , bdr:MW27311_3D25A4 , bdr:MW27311_467079 , bdr:MW27311_4EF37E , bdr:MW27311_55E268 , bdr:MW27311_66C3E1 , bdr:MW27311_EF4A50 , bdr:MW27311_F15111 ;
+    bdr:EV7672AF4482DCEBF6
+        a                   :PublishedEvent ;
+        :onOrAbout          "1981,1983printing" .
+    
+    bdr:ID391F7DCD09EDEFE9
+        a                   bdr:HollisId ;
+        rdf:value           "014259608" .
+    
+    bdr:ID5E535564E19758EE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .B548 1981" .
+    
+    bdr:IDA5A4E8BF3B86850B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85906565" .
+    
+    bdr:MW27311  a          :Instance ;
+        skos:altLabel       "lun hsi-tsang cheng chiao ho i chih tu"@zh-latn-wadegile ;
+        skos:prefLabel      "bod kyi chos srid zung 'brel skor bshad pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID391F7DCD09EDEFE9 , bdr:ID5E535564E19758EE , bdr:IDA5A4E8BF3B86850B ;
+        :authorshipStatement  "dung dkar blo bzang 'phrin las kyis brtsams pa/"@bo-x-ewts ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :hasPart            bdr:MW27311_30B421 , bdr:MW27311_3D25A4 , bdr:MW27311_467079 , bdr:MW27311_4EF37E , bdr:MW27311_55E268 , bdr:MW27311_66C3E1 , bdr:MW27311_EF4A50 , bdr:MW27311_F15111 ;
+        :hasTitle           bdr:TT56255AE67AFB95CA , bdr:TT74D1E9EE7DB673B6 ;
+        :instanceEvent      bdr:EV7672AF4482DCEBF6 ;
+        :instanceHasReproduction  bdr:W27311 ;
+        :instanceOf         bdr:WA21783 ;
+        :isRoot             true ;
+        :note               bdr:NTF9D8AC17A85DA19D ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3. 3, 149 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW27311_048BF9
@@ -548,6 +605,10 @@ bdg:MW27311 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTF9D8AC17A85DA19D
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n4312"@en .
+    
     bdr:TT0325BAAB3E1DF406
         a                   :Title ;
         rdfs:label          "rin spungs pa dang dge lugs pa'i bar gyi dmag 'khrug skor/"@bo-x-ewts .
@@ -588,6 +649,10 @@ bdg:MW27311 {
         a                   :Title ;
         rdfs:label          "phag mo gru pa'i dbang sgyur gral rim nang khul gyi dmag 'khrug skor/"@bo-x-ewts .
     
+    bdr:TT56255AE67AFB95CA
+        a                   :Title ;
+        rdfs:label          "bod kyi chos srid zung 'brel skor bshad pa/"@bo-x-ewts .
+    
     bdr:TT60BC67FB1CCB19D9
         a                   :Title ;
         rdfs:label          "en ke sis 'jar man gyi chos srid zung 'brel skor la gnang ba'i gsung rtsom dum bu/"@bo-x-ewts .
@@ -607,6 +672,10 @@ bdg:MW27311 {
     bdr:TT6F9888C435BF710C
         a                   :Title ;
         rdfs:label          "bod du sangs rgyas chos lugs thog mar dar skabs kyi dpal 'byor gnas tshul dang /_chab srid gnas tshul skor/"@bo-x-ewts .
+    
+    bdr:TT74D1E9EE7DB673B6
+        a                   :ColophonTitle ;
+        rdfs:label          "lun hsi-tsang cheng chiao ho i chih tu"@zh-latn-wadegile .
     
     bdr:TT7981A634C98C0B4E
         a                   :Title ;

@@ -12,6 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1361 {
+    bda:LG4EEFEBA33337F5B6
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG95DAF885E09316CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGAF858C2B72B672BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-23T12:00:59.715Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM15986367  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-02-03T15:34:16.94Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1361"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIM422EFABA  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-05T12:47:22.302Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -22,10 +46,15 @@ bdg:MW1NLM1361 {
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356985" ;
         adm:adminAbout      bdr:MW1NLM1361 ;
-        adm:facetIndex      16 ;
-        adm:logEntry        bda:LGIM422EFABA ;
+        adm:facetIndex      24 ;
+        adm:gitPath         "cc/MW1NLM1361.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1361 ;
+        adm:logEntry        bda:LG4EEFEBA33337F5B6 , bda:LG95DAF885E09316CD , bda:LGAF858C2B72B672BB , bda:LGIM15986367 , bda:LGIM422EFABA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1B2BA58CB943BA64
         a                   :ContentLocation ;
@@ -63,7 +92,21 @@ bdg:MW1NLM1361 {
         :contentLocationInstance  bdr:W1NLM1361 ;
         :contentLocationPage  1 .
     
-    bdr:MW1NLM1361  :hasPart  bdr:MW1NLM1361_4C5E64 , bdr:MW1NLM1361_670885 , bdr:MW1NLM1361_703B0F , bdr:MW1NLM1361_A19262 , bdr:MW1NLM1361_E03CA5 , bdr:MW1NLM1361_FFCEC9 ;
+    bdr:MW1NLM1361  a       :Instance ;
+        skos:prefLabel      "bsam gzugs kyi mtha' dpyod legs bshad mdzod kyi sgo 'byed sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "51x6" ;
+        :hasPart            bdr:MW1NLM1361_4C5E64 , bdr:MW1NLM1361_670885 , bdr:MW1NLM1361_703B0F , bdr:MW1NLM1361_A19262 , bdr:MW1NLM1361_E03CA5 , bdr:MW1NLM1361_FFCEC9 ;
+        :hasTitle           bdr:TTBC22470A4E6B8D47 ;
+        :instanceHasReproduction  bdr:W1NLM1361 ;
+        :instanceOf         bdr:WA1NLM1361 ;
+        :isRoot             true ;
+        :note               bdr:NTBB1CEBABA1407FF0 , bdr:NTBC3EF8FE0BAA83C8 , bdr:NTEABBF2485630974E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :publisherName      "dga' ldan bshad sgrub dar rgyas gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1361_4C5E64
@@ -150,6 +193,18 @@ bdg:MW1NLM1361 {
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTBB1CEBABA1407FF0
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NTBC3EF8FE0BAA83C8
+        a                   :Note ;
+        :noteText           "missingPages: M0059279-003 [Missing page from 7A-8B] Image 243-246 M0059279-003 [Final pages are missing 26A] Image 261"@en .
+    
+    bdr:NTEABBF2485630974E
+        a                   :Note ;
+        :noteText           "nlmId: M0059279"@en .
+    
     bdr:TT02D7AA56CB20C08B
         a                   :Title ;
         rdfs:label          "bslab pa yongs su sbyong ba gzhi gsum gyi cho ga la sogs pa blang dor gyi gnas rnams mdor bsdus pa/"@bo-x-ewts .
@@ -177,6 +232,10 @@ bdg:MW1NLM1361 {
     bdr:TTA9D578F8EE4D49B9
         a                   :Title ;
         rdfs:label          "stag phu'i sgrol ma'i brgyud 'debs dang smon lam bdud rtsi'i bum bzang /"@bo-x-ewts .
+    
+    bdr:TTBC22470A4E6B8D47
+        a                   :Title ;
+        rdfs:label          "bsam gzugs kyi mtha' dpyod legs bshad mdzod kyi sgo 'byed sogs/"@bo-x-ewts .
     
     bdr:TTCCBB8CB0E0013695
         a                   :Title ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23860 {
+    bda:LG07AF37DD84F23567
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG0C4C9BD6B07F8BE7
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-05-16T14:01:09.702Z"^^xsd:dateTime ;
@@ -27,6 +31,12 @@ bdg:MW23860 {
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2013-05-15T16:53:35.491Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LG2D80631DE57522EC
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T16:53:38.867Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LG41ED9692CE77D4CC
         a                   adm:UpdateOutlineData ;
@@ -62,14 +72,33 @@ bdg:MW23860 {
         adm:logDate         "2013-05-15T16:44:03.182Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23860  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23860" ;
         adm:adminAbout      bdr:MW23860 ;
-        adm:facetIndex      689 ;
-        adm:logEntry        bda:LG0C4C9BD6B07F8BE7 , bda:LG144BF33A2B2955C3 , bda:LG1B61E4C1C7790B67 , bda:LG41ED9692CE77D4CC , bda:LG71E51AB35F0A6817 , bda:LG7A6BD88526CF93CF , bda:LG84CC08A83F719815 , bda:LG9B606CC69F417555 , bda:LGB103DEF543C9A2EB ;
+        adm:facetIndex      697 ;
+        adm:gitPath         "26/MW23860.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23860 ;
+        adm:logEntry        bda:LG07AF37DD84F23567 , bda:LG0C4C9BD6B07F8BE7 , bda:LG144BF33A2B2955C3 , bda:LG1B61E4C1C7790B67 , bda:LG2D80631DE57522EC , bda:LG41ED9692CE77D4CC , bda:LG71E51AB35F0A6817 , bda:LG7A6BD88526CF93CF , bda:LG84CC08A83F719815 , bda:LG9B606CC69F417555 , bda:LGB103DEF543C9A2EB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert 2 Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0131CC78CEF67A99
         a                   :ContentLocation ;
@@ -2620,7 +2649,30 @@ bdg:MW23860 {
         :contentLocationPage  592 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23860  :hasPart   bdr:MW23860_59B366 , bdr:MW23860_61D487 , bdr:MW23860_625FE9 , bdr:MW23860_D19E90 ;
+    bdr:EVAAEBAC02106F11F8
+        a                   :PublishedEvent ;
+        :onYear             "1998"^^xsd:gYear .
+    
+    bdr:IDC78E6EE6AAE22D1C
+        a                   bdr:HollisId ;
+        rdf:value           "014259183" .
+    
+    bdr:MW23860  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_rdo rje rgyal po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC78E6EE6AAE22D1C ;
+        :biblioNote         "photocopy of a rather corrupt dbu can manuscript from china"@en ;
+        :hasPart            bdr:MW23860_59B366 , bdr:MW23860_61D487 , bdr:MW23860_625FE9 , bdr:MW23860_D19E90 ;
+        :hasTitle           bdr:TT9D4C1581869D39A1 ;
+        :instanceEvent      bdr:EVAAEBAC02106F11F8 ;
+        :instanceHasReproduction  bdr:W23860 ;
+        :instanceOf         bdr:WA1CZ688 ;
+        :isRoot             true ;
+        :note               bdr:NT7EAD64CA40C33558 ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23860_00C00B
@@ -7528,6 +7580,10 @@ bdg:MW23860 {
         :partTreeIndex      "2.46" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT7EAD64CA40C33558
+        a                   :Note ;
+        :noteText           "-3006"@en .
+    
     bdr:TT007C4D5B8CCAAE5B
         a                   :Title ;
         rdfs:label          "gdams pa gsal byed me long /"@bo-x-ewts .
@@ -8243,6 +8299,10 @@ bdg:MW23860 {
     bdr:TT9CAB0C36D678A536
         a                   :Title ;
         rdfs:label          "phag mo grub pa 'das nas zhus lan par phu pa dge slong blo gros seng ges brtsams pa/"@bo-x-ewts .
+    
+    bdr:TT9D4C1581869D39A1
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rdo rje rgyal po/"@bo-x-ewts .
     
     bdr:TT9DFBE57F5A78EF25
         a                   :Title ;

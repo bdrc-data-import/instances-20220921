@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1038 {
+    bda:LG4C7715CB2B25209C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG6A3D316D26459BAA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T13:44:46.01Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG99A13158E8D988D7
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-19T10:53:15.071Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM4F09C768  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-19T14:25:12.513Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1038"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1038  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG2638" ;
         adm:adminAbout      bdr:MW1NLM1038 ;
-        adm:facetIndex      12 ;
-        adm:logEntry        bda:LGIM4F09C768 ;
+        adm:facetIndex      18 ;
+        adm:gitPath         "b8/MW1NLM1038.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1038 ;
+        adm:logEntry        bda:LG4C7715CB2B25209C , bda:LG6A3D316D26459BAA , bda:LG99A13158E8D988D7 , bda:LGIM4F09C768 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0A277AF7B0F0CDE6
         a                   :ContentLocation ;
@@ -62,7 +91,19 @@ bdg:MW1NLM1038 {
         :contentLocationPage  1 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM1038  :hasPart  bdr:MW1NLM1038_0AB562 , bdr:MW1NLM1038_67BD47 , bdr:MW1NLM1038_7594BB , bdr:MW1NLM1038_9C035B , bdr:MW1NLM1038_CAA91E ;
+    bdr:MW1NLM1038  a       :Instance ;
+        skos:prefLabel      "'dul ba'i bslab pa yongs su sbyong ba'i thabs dbyar khas blang ba'i cho ga'i rnam bzhag sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "43.5x6.5" ;
+        :hasPart            bdr:MW1NLM1038_0AB562 , bdr:MW1NLM1038_67BD47 , bdr:MW1NLM1038_7594BB , bdr:MW1NLM1038_9C035B , bdr:MW1NLM1038_CAA91E ;
+        :hasTitle           bdr:TT8ED0F832907202C0 ;
+        :instanceHasReproduction  bdr:W1NLM1038 ;
+        :instanceOf         bdr:WA1NLM1038 ;
+        :isRoot             true ;
+        :note               bdr:NTE1FA271A826E5B3E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "18 ff., 9ff., 17 ff., 15 ff., 4 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1038_0AB562
@@ -134,6 +175,14 @@ bdg:MW1NLM1038 {
         :partOf             bdr:MW1NLM1038 ;
         :partTreeIndex      "1" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NTE1FA271A826E5B3E
+        a                   :Note ;
+        :noteText           "nlmId: M0058951"@en .
+    
+    bdr:TT8ED0F832907202C0
+        a                   :Title ;
+        rdfs:label          "'dul ba'i bslab pa yongs su sbyong ba'i thabs dbyar khas blang ba'i cho ga'i rnam bzhag sogs/"@bo-x-ewts .
     
     bdr:TTB09E028427A16395
         a                   :Title ;

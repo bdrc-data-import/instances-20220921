@@ -12,11 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23760 {
+    bda:LG0A7DE13338F23FA4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG89236CEBFCDB00FD
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2006-10-19T13:39:11.671Z"^^xsd:dateTime ;
         adm:logMessage      "corrected error in v. 3"@en ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGB06ED60ABF13347C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T12:33:32.173Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
     
     bda:LGDE4BD40B15A5922E
         a                   adm:InitialOutlineData ;
@@ -24,14 +34,33 @@ bdg:MW23760 {
         adm:logMessage      "first posted"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23760  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1015846" ;
         adm:adminAbout      bdr:MW23760 ;
-        adm:facetIndex      46 ;
-        adm:logEntry        bda:LG89236CEBFCDB00FD , bda:LGDE4BD40B15A5922E ;
+        adm:facetIndex      55 ;
+        adm:gitPath         "e4/MW23760.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23760 ;
+        adm:logEntry        bda:LG0A7DE13338F23FA4 , bda:LG89236CEBFCDB00FD , bda:LGB06ED60ABF13347C , bda:LGDE4BD40B15A5922E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL03065F4BF26BD782
         a                   :ContentLocation ;
@@ -184,7 +213,32 @@ bdg:MW23760 {
         :contentLocationPage  445 ;
         :contentLocationVolume  2 .
     
-    bdr:MW23760  :hasPart   bdr:MW23760_16CABB , bdr:MW23760_29AA6F , bdr:MW23760_2C5B36 ;
+    bdr:EV7DD4551C8712C8B6
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID7842481C974A5933
+        a                   bdr:HollisId ;
+        rdf:value           "014259101" .
+    
+    bdr:MW23760  a          :Instance ;
+        skos:altLabel       "nal gso skor gsum, ran grol skor gsum, and snags kyi spyi don; structured presentations of nyingmapa dzogchen theory and practice"@en-x-mixed ;
+        skos:prefLabel      "rdzogs pa chen po ngal gso skor gsum dang rang grol skor gsum bcas pod gsum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7842481C974A5933 ;
+        :biblioNote         "reprint of xylograph reproduction from a set of prints from the a-'dzom `brug-pa chos-sgar"@en ;
+        :hasPart            bdr:MW23760_16CABB , bdr:MW23760_29AA6F , bdr:MW23760_2C5B36 ;
+        :hasSourcePrintery  bdr:G3JT12503 ;
+        :hasTitle           bdr:TT23415306E7861F8C , bdr:TT290471E1EFCC7677 ;
+        :instanceEvent      bdr:EV7DD4551C8712C8B6 ;
+        :instanceHasReproduction  bdr:W23760 ;
+        :instanceOf         bdr:WA23760 ;
+        :isRoot             true ;
+        :note               bdr:NT1F4A9105306F5F33 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23760_037D17
@@ -502,6 +556,10 @@ bdg:MW23760 {
         :partTreeIndex      "1.02" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT1F4A9105306F5F33
+        a                   :Note ;
+        :noteText           "tbrc volume numbers 2628-2630"@en .
+    
     bdr:TT0CF086ADEB93A09E
         a                   :Title ;
         rdfs:label          "rdzogs pa chen po mnyam nyid rang grol gyi don khrid rin chen snying po/"@bo-x-ewts .
@@ -518,9 +576,17 @@ bdg:MW23760 {
         a                   :Title ;
         rdfs:label          "byang chub kyi sems kun byed rgyal po'i don khrid rin chen gru bo/"@bo-x-ewts .
     
+    bdr:TT23415306E7861F8C
+        a                   :TitlePageTitle ;
+        rdfs:label          "nal gso skor gsum, ran grol skor gsum, and snags kyi spyi don; structured presentations of nyingmapa dzogchen theory and practice"@en-x-mixed .
+    
     bdr:TT2378AA769EF20570
         a                   :Title ;
         rdfs:label          "rdzogs pa chen po sems nyid ngal gso'i 'grel pa shing rta chen po'i bsdus don gyi gnas rgya cher dbye ba pad+ma dkar po'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TT290471E1EFCC7677
+        a                   :Title ;
+        rdfs:label          "rdzogs pa chen po ngal gso skor gsum dang rang grol skor gsum bcas pod gsum/"@bo-x-ewts .
     
     bdr:TT4381F7D54B0F10F9
         a                   :Title ;

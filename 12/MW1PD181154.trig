@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD181154 {
+    bda:LG4C41E2A69A4F38CF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-12-18T05:37:03.492Z"^^xsd:dateTime ;
+        adm:logMessage      "new recaord"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG7E0C3F6547457F06
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2015-02-02T13:40:53.876Z"^^xsd:dateTime ;
@@ -24,14 +30,33 @@ bdg:MW1PD181154 {
         adm:logDate         "2015-02-02T11:12:44.842Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1PD181154  a      adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD181154" ;
         adm:adminAbout      bdr:MW1PD181154 ;
-        adm:facetIndex      19 ;
-        adm:logEntry        bda:LG7E0C3F6547457F06 , bda:LGF1A30F07806690C2 ;
+        adm:facetIndex      24 ;
+        adm:gitPath         "12/MW1PD181154.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD181154 ;
+        adm:logEntry        bda:LG4C41E2A69A4F38CF , bda:LG7E0C3F6547457F06 , bda:LGF1A30F07806690C2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL09DA813A6BB0BAAC
         a                   :ContentLocation ;
@@ -89,7 +114,24 @@ bdg:MW1PD181154 {
         :contentLocationPage  11 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1PD181154  :hasPart  bdr:MW1PD181154_0D6720 , bdr:MW1PD181154_1BCA32 , bdr:MW1PD181154_337FA1 , bdr:MW1PD181154_6BFC13 , bdr:MW1PD181154_86DD0B , bdr:MW1PD181154_9D180A , bdr:MW1PD181154_CB136D , bdr:MW1PD181154_FE0309 ;
+    bdr:IDCE84339D6C9CD99E
+        a                   bdr:HollisId ;
+        rdf:value           "014257746" .
+    
+    bdr:MW1PD181154  a      :Instance ;
+        skos:prefLabel      "snga 'gyur g.yag ze dgon gyi bka' ma'i sgrub mchod las/_sgyu 'phrul khro bo'i skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCE84339D6C9CD99E ;
+        :biblioNote         "g.yag ze dgon nas 'tshol bsdu byas/"@bo-x-ewts ;
+        :hasPart            bdr:MW1PD181154_0D6720 , bdr:MW1PD181154_1BCA32 , bdr:MW1PD181154_337FA1 , bdr:MW1PD181154_6BFC13 , bdr:MW1PD181154_86DD0B , bdr:MW1PD181154_9D180A , bdr:MW1PD181154_CB136D , bdr:MW1PD181154_FE0309 ;
+        :hasTitle           bdr:TT0CB3033E53F6E8A1 ;
+        :instanceHasReproduction  bdr:W1PD181154 ;
+        :instanceOf         bdr:WA1PD181154 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1PD181154_0D6720
@@ -203,6 +245,10 @@ bdg:MW1PD181154 {
         :partOf             bdr:MW1PD181154 ;
         :partTreeIndex      "6" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:TT0CB3033E53F6E8A1
+        a                   :Title ;
+        rdfs:label          "snga 'gyur g.yag ze dgon gyi bka' ma'i sgrub mchod las/_sgyu 'phrul khro bo'i skor/"@bo-x-ewts .
     
     bdr:TT2623A9261A69DC8F
         a                   :Title ;

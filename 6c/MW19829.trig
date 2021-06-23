@@ -22,10 +22,20 @@ bdg:MW19829 {
         adm:logDate         "2010-03-26T15:13:07.815Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG3F4C34FAB88E7F4B
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-01-13T15:09:14.167Z"^^xsd:dateTime ;
+        adm:logMessage      "added colophon and loc number"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG78E8233876EF88C9
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-04-22T10:19:45.717Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LG8695E0297A64304C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGFCB7A5891811C66F
         a                   adm:UpdateOutlineData ;
@@ -33,14 +43,33 @@ bdg:MW19829 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19829  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD101156" ;
         adm:adminAbout      bdr:MW19829 ;
-        adm:facetIndex      37 ;
-        adm:logEntry        bda:LG129CAFCC7455DEFB , bda:LG152AA1BB587BF387 , bda:LG78E8233876EF88C9 , bda:LGFCB7A5891811C66F ;
+        adm:facetIndex      48 ;
+        adm:gitPath         "6c/MW19829.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19829 ;
+        adm:logEntry        bda:LG129CAFCC7455DEFB , bda:LG152AA1BB587BF387 , bda:LG3F4C34FAB88E7F4B , bda:LG78E8233876EF88C9 , bda:LG8695E0297A64304C , bda:LGFCB7A5891811C66F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL004B80753DAC9240
         a                   :ContentLocation ;
@@ -138,7 +167,41 @@ bdg:MW19829 {
         :contentLocationInstance  bdr:W19829 ;
         :contentLocationPage  22 .
     
-    bdr:MW19829  :hasPart   bdr:MW19829_013523 , bdr:MW19829_873317 , bdr:MW19829_B6B342 ;
+    bdr:EVE1F2424F5C491323
+        a                   :PublishedEvent ;
+        :onYear             "1997"^^xsd:gYear .
+    
+    bdr:ID22E60BEDE264B0C6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97916068" .
+    
+    bdr:ID831A3CD7EDEF19E4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ960.A65 M46 1996" .
+    
+    bdr:IDEFB56AC9E09FBBF3
+        a                   bdr:HollisId ;
+        rdf:value           "014254903" .
+    
+    bdr:MW19829  a          :Instance ;
+        skos:altLabel       "贡嘎活佛传略"@zh-hans ;
+        skos:prefLabel      "'bo gangs dkar rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID22E60BEDE264B0C6 , bdr:ID831A3CD7EDEF19E4 , bdr:IDEFB56AC9E09FBBF3 ;
+        :authorshipStatement  "mi nyag mgon pos brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW19829_013523 , bdr:MW19829_873317 , bdr:MW19829_B6B342 ;
+        :hasTitle           bdr:TT537A0D74C2DCDD79 , bdr:TTAC24579A4ED813E3 , bdr:TTED45147620FE31EB ;
+        :instanceEvent      bdr:EVE1F2424F5C491323 ;
+        :instanceHasReproduction  bdr:W19829 ;
+        :instanceOf         bdr:WA19829 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 92 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW19829_013523
@@ -381,6 +444,10 @@ bdg:MW19829 {
         a                   :Title ;
         rdfs:label          "gleng gzhi/"@bo-x-ewts .
     
+    bdr:TT537A0D74C2DCDD79
+        a                   :ColophonTitle ;
+        rdfs:label          "贡嘎活佛传略"@zh-hans .
+    
     bdr:TT5DB4F81186E44E85
         a                   :Title ;
         rdfs:label          "gangs dkar bla ma'i mtshan gyi 'byung khungs dang sku rabs gong ma rnams kyi gnas tshul/"@bo-x-ewts .
@@ -405,6 +472,10 @@ bdg:MW19829 {
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
     
+    bdr:TTAC24579A4ED813E3
+        a                   :TitlePageTitle ;
+        rdfs:label          "'bo gangs dkar sprul sku'i rnam thar dad pa'i pad dkar/"@bo-x-ewts .
+    
     bdr:TTBECB8F9D32806ED0
         a                   :Title ;
         rdfs:label          "chos sgor zhugs shing thos bsam la 'bad pas mkhas pa'i go 'phang brnyes pa/"@bo-x-ewts .
@@ -416,4 +487,8 @@ bdg:MW19829 {
     bdr:TTE91190AE9D9B4DAF
         a                   :Title ;
         rdfs:label          "zur bkod/"@bo-x-ewts .
+    
+    bdr:TTED45147620FE31EB
+        a                   :Title ;
+        rdfs:label          "'bo gangs dkar rnam thar/"@bo-x-ewts .
 }

@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1268 {
+    bda:LG62C10F34D34B0E33
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-01T10:07:34.073Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGE20763EE13495200
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGE7A347DAC26927D1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
     bda:LGIM67B7A34A  a     adm:InitialDataImport ;
         adm:logDate         "2020-04-03T09:37:32.036Z"^^xsd:dateTime ;
         adm:logMessage      "fully catalog and released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1268"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1268  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ356510" ;
         adm:adminAbout      bdr:MW1NLM1268 ;
-        adm:facetIndex      23 ;
-        adm:logEntry        bda:LGIM67B7A34A ;
+        adm:facetIndex      32 ;
+        adm:gitPath         "e1/MW1NLM1268.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1268 ;
+        adm:logEntry        bda:LG62C10F34D34B0E33 , bda:LGE20763EE13495200 , bda:LGE7A347DAC26927D1 , bda:LGIM67B7A34A , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0EC0E368455F45E5
         a                   :ContentLocation ;
@@ -75,7 +104,19 @@ bdg:MW1NLM1268 {
         :contentLocationInstance  bdr:W1NLM1268 ;
         :contentLocationPage  105 .
     
-    bdr:MW1NLM1268  :hasPart  bdr:MW1NLM1268_05C02B , bdr:MW1NLM1268_07C01C , bdr:MW1NLM1268_07DA8F , bdr:MW1NLM1268_407489 , bdr:MW1NLM1268_5E8A6E , bdr:MW1NLM1268_7ECC85 , bdr:MW1NLM1268_8152ED , bdr:MW1NLM1268_D3BD21 ;
+    bdr:MW1NLM1268  a       :Instance ;
+        skos:prefLabel      "gsang ba 'dus pa'i bskyed rim gyi khrid yig dpal ldan sred rgyud stod pa'i zab chos rgyun ldan bla ma'i gsung zin bris sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "48x7" ;
+        :hasPart            bdr:MW1NLM1268_05C02B , bdr:MW1NLM1268_07C01C , bdr:MW1NLM1268_07DA8F , bdr:MW1NLM1268_407489 , bdr:MW1NLM1268_5E8A6E , bdr:MW1NLM1268_7ECC85 , bdr:MW1NLM1268_8152ED , bdr:MW1NLM1268_D3BD21 ;
+        :hasTitle           bdr:TT2BE456760F106C3C , bdr:TTC52FD1C7035D7299 ;
+        :instanceHasReproduction  bdr:W1NLM1268 ;
+        :instanceOf         bdr:WA1NLM1268 ;
+        :isRoot             true ;
+        :note               bdr:NT1C2027E458476538 , bdr:NT34DA4C576FF7228D , bdr:NT6B63602588600E7C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "1 v." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1268_05C02B
@@ -189,6 +230,18 @@ bdg:MW1NLM1268 {
         :partTreeIndex      "5" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT1C2027E458476538
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT34DA4C576FF7228D
+        a                   :Note ;
+        :noteText           "missingPages: M0059186-004 [Final pages are missing 15B] Image 216, M0059186-005 [Page 5 double numbered] Image 225-228, M0059186-007 [Final pages are missing 3A] Image 289"@en .
+    
+    bdr:NT6B63602588600E7C
+        a                   :Note ;
+        :noteText           "nlmId: M0059186"@en .
+    
     bdr:TT0CD647C6961B6CFA
         a                   :Title ;
         rdfs:label          "gsang ba 'dus pa'i bskyed rim gyi khrid yig dpal ldan sred rgyud stod pa'i zab chos rgyun ldan bla ma'i gsung zin bris/"@bo-x-ewts .
@@ -200,6 +253,10 @@ bdg:MW1NLM1268 {
     bdr:TT256BF7BC4C70E4C8
         a                   :TitlePageTitle ;
         rdfs:label          "rdo rje rnal 'byor ma'i bka' srung dpa' bo dur khrod bdag po'i gtor chog dang rjes gnang bya tshul las gzhi lhun grub/"@bo-x-ewts .
+    
+    bdr:TT2BE456760F106C3C
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyud thams cad kyi rgyal po dpal gsang ba 'dus pa'i bskyed rim gyi khrid yig dpal ldan sred rgyud stod pa'i zab chos rgyun ldan bla ma'i gsung zin bris/"@bo-x-ewts .
     
     bdr:TT387F42AFF3FA7491
         a                   :TitlePageTitle ;
@@ -240,4 +297,8 @@ bdg:MW1NLM1268 {
     bdr:TTA988D76E06741318
         a                   :Title ;
         rdfs:label          "dur khrod bdag po'i gtor chog dang rjes gnang bya tshul las gzhi lhun grub/"@bo-x-ewts .
+    
+    bdr:TTC52FD1C7035D7299
+        a                   :Title ;
+        rdfs:label          "gsang ba 'dus pa'i bskyed rim gyi khrid yig dpal ldan sred rgyud stod pa'i zab chos rgyun ldan bla ma'i gsung zin bris sogs/"@bo-x-ewts .
 }

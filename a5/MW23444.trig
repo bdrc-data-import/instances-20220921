@@ -42,14 +42,56 @@ bdg:MW23444 {
         adm:logMessage      "first publication"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGDC7B541784571CC2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-23T10:16:53.925Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGE3CC5DB0F74EAEDD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23444  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O00EGS1010507" ;
         adm:adminAbout      bdr:MW23444 ;
-        adm:facetIndex      117 ;
-        adm:logEntry        bda:LG00A87BD1A6AA7C44 , bda:LG057603F271B0B61D , bda:LG23D970C04A0D4960 , bda:LG5152D6FAAC6C8096 , bda:LGBF895CE5F4933E18 ;
+        adm:facetIndex      133 ;
+        adm:gitPath         "a5/MW23444.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23444 ;
+        adm:logEntry        bda:LG00A87BD1A6AA7C44 , bda:LG057603F271B0B61D , bda:LG23D970C04A0D4960 , bda:LG5152D6FAAC6C8096 , bda:LGBF895CE5F4933E18 , bda:LGDC7B541784571CC2 , bda:LGE3CC5DB0F74EAEDD , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL09102BBC325CE6E1
         a                   :ContentLocation ;
@@ -451,7 +493,44 @@ bdg:MW23444 {
         :agent              bdr:P7577 ;
         :role               bdr:R0ER0015 .
     
-    bdr:MW23444  :hasPart   bdr:MW23444_8A5BB4 , bdr:MW23444_F7A3CC ;
+    bdr:EVE5DC225CF9A4B1BB
+        a                   :PublishedEvent ;
+        :onYear             "1976"^^xsd:gYear .
+    
+    bdr:ID4040839A52919F07
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7679 .S47 1976" .
+    
+    bdr:ID4E0FAB5AA29BE273
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001955817-1" .
+    
+    bdr:IDF1E40C05C8F6C5B7
+        a                   bdr:HollisId ;
+        rdf:value           "014258918" .
+    
+    bdr:IDFC951C130B0A36FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75905460" .
+    
+    bdr:MW23444  a          :Instance ;
+        skos:altLabel       "collected works (gsun 'bum) of sgam-po-pa bsod-nams-rin-chen"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_sgam po pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4040839A52919F07 , bdr:ID4E0FAB5AA29BE273 , bdr:IDF1E40C05C8F6C5B7 , bdr:IDFC951C130B0A36FA ;
+        :hasPart            bdr:MW23444_8A5BB4 , bdr:MW23444_F7A3CC ;
+        :hasTitle           bdr:TT5B0A6255213256D7 , bdr:TTD529B8B80C0977AD , bdr:TTDFD8D9E9516315E8 , bdr:TTF2884FB8754903CA ;
+        :instanceEvent      bdr:EVE5DC225CF9A4B1BB ;
+        :instanceHasReproduction  bdr:W23444 ;
+        :instanceOf         bdr:WA22393 ;
+        :isRoot             true ;
+        :note               bdr:NTDBDF17D2F125783F ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "shashin"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23444_031E76
@@ -1222,6 +1301,10 @@ bdg:MW23444 {
         :partTreeIndex      "2.07" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTDBDF17D2F125783F
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and TIF files, tbrc volume numbers 1987-1988."@en .
+    
     bdr:TT0663267DA5FF06EA
         a                   :Title ;
         rdfs:label          "dus gsum mkhyen pa'i zhu lan (tha)"@bo-x-ewts .
@@ -1297,6 +1380,10 @@ bdg:MW23444 {
     bdr:TT5921CC74203676C4
         a                   :Title ;
         rdfs:label          "nyams len mdor bsdus gnad kyi gzer gsang /"@bo-x-ewts .
+    
+    bdr:TT5B0A6255213256D7
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected works (gsun 'bum) of sgam-po-pa bsod-nams-rin-chen"@en-x-mixed .
     
     bdr:TT61AB2A07A28A4B1C
         a                   :Title ;
@@ -1398,6 +1485,10 @@ bdg:MW23444 {
         a                   :Title ;
         rdfs:label          "bka' tshoms dang phyag rgya chen po lnga ldan/ lam mchog rin chen 'phreng ba/ chos bzhi mdor bsdus/ nyams len mdor bsdus/ gnad kyi gzer gsang/ zhal gdams gsang mdzod ma/ DoM b+hi pa'i gtum mo/ 'khrul 'khor gyi gtum mo/ bar do'i gdams pa/ 'pho ba'i zhal gdams (khi)"@bo-x-ewts .
     
+    bdr:TTD529B8B80C0977AD
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_sgam po pa/"@bo-x-ewts .
+    
     bdr:TTD7312708F323DA55
         a                   :Title ;
         rdfs:label          "'pho ba'i gdams pa/"@bo-x-ewts .
@@ -1405,6 +1496,10 @@ bdg:MW23444 {
     bdr:TTDE20D9037A0182B4
         a                   :Title ;
         rdfs:label          "mdo sngags kyi bsgom don bsdus pa dang skal ldan jo mo la gdams pa (sa)"@bo-x-ewts .
+    
+    bdr:TTDFD8D9E9516315E8
+        a                   :CoverTitle ;
+        rdfs:label          "Collected works (gsuṅ ʾbum) of Sgam-po-pa Bsod-nams-rin-chen."@en-x-mixed .
     
     bdr:TTE26FEE0197473A62
         a                   :Title ;
@@ -1417,6 +1512,10 @@ bdg:MW23444 {
     bdr:TTEB15109CF8353DFD
         a                   :Title ;
         rdfs:label          "tshogs chos legs mdzes ma (ca)"@bo-x-ewts .
+    
+    bdr:TTF2884FB8754903CA
+        a                   :OtherTitle ;
+        rdfs:label          "gsung 'bum/_bsod nams rin chen/"@bo-x-ewts .
     
     bdr:TTF85465615F02EC20
         a                   :Title ;

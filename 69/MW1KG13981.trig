@@ -12,20 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG13981 {
+    bda:LG3E1DF5A6486D1236
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-17T13:40:10.141Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG4694C8F997B69CB6
         a                   adm:InitialOutlineDataImport ;
         adm:logAgent        "Convert2Outline version 1.8.0" ;
         adm:logDate         "2019-08-28T11:50:14.352Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00053 .
     
+    bda:LGAB10A5D642F66E23
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-17T12:31:03.178Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1KG13981  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG13981" ;
         adm:adminAbout      bdr:MW1KG13981 ;
-        adm:facetIndex      222 ;
-        adm:logEntry        bda:LG4694C8F997B69CB6 ;
+        adm:facetIndex      237 ;
+        adm:gitPath         "69/MW1KG13981.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13981 ;
+        adm:logEntry        bda:LG3E1DF5A6486D1236 , bda:LG4694C8F997B69CB6 , bda:LGAB10A5D642F66E23 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Provided by Esukhia ; via TBRC Convert2OutlineXml version 1.8.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02BE141F442FD725
         a                   :ContentLocation ;
@@ -797,7 +834,46 @@ bdg:MW1KG13981 {
         :contentLocationPage  207 ;
         :contentLocationVolume  2 .
     
-    bdr:MW1KG13981  :hasPart  bdr:MW1KG13981_19C129 , bdr:MW1KG13981_632730 , bdr:MW1KG13981_D11437 , bdr:MW1KG13981_D579FC , bdr:MW1KG13981_DBF8F2 , bdr:MW1KG13981_F6A3B9 ;
+    bdr:EV27D4B277DECFAD0F
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID0BBBDAD6458E2D61
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3735 .L45 2006" .
+    
+    bdr:ID51EB819C71E1DE5E
+        a                   bdr:HollisId ;
+        rdf:value           "014256088" .
+    
+    bdr:ID893E3C9F57370ABB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006348488" .
+    
+    bdr:IDFF3377C56E88567F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542012150 (v. 1)\n754201210x (v. 2)\n7542012134 (v. 3)\n7542012126 (v. 4)\n7542012169 (v. 5)\n7542012142 (v. 6)" .
+    
+    bdr:MW1KG13981  a       :Instance ;
+        skos:altLabel       "藏族格言大观"@zh-hans ;
+        skos:prefLabel      "legs bshad bstan bcos phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0BBBDAD6458E2D61 , bdr:ID51EB819C71E1DE5E , bdr:ID893E3C9F57370ABB , bdr:IDFF3377C56E88567F ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1KG13981_19C129 , bdr:MW1KG13981_632730 , bdr:MW1KG13981_D11437 , bdr:MW1KG13981_D579FC , bdr:MW1KG13981_DBF8F2 , bdr:MW1KG13981_F6A3B9 ;
+        :hasTitle           bdr:TT2EBB6A57CDFC15B8 , bdr:TT440F13457EE55DDD , bdr:TT6ED6B5FD0DF28D15 ;
+        :instanceEvent      bdr:EV27D4B277DECFAD0F ;
+        :instanceHasReproduction  bdr:W1KG13981 ;
+        :instanceOf         bdr:WA1KG13981 ;
+        :isRoot             true ;
+        :note               bdr:NT10CCB973BB6640EB , bdr:NT6C617EA3ED33EAC7 ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "6 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1KG13981_049289
@@ -2401,6 +2477,14 @@ bdg:MW1KG13981 {
         :partTreeIndex      "2.22" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT10CCB973BB6640EB
+        a                   :Note ;
+        :noteText           "v. 1. zhal gdams kyi skor / slob dpon klu sgrub sogs kyis brtsams/\nv. 2. sa skya legs bshad / rtsa ba sa paN kun dga' rgyal mtshan dang 'grel ba bsod nams ming cen gyis brtsams/\nv. 3. dge ldan legs bshad / rtsa ba bsod nams grags pa dang 'grel ba a kyaA yongs 'dzin blo bzang don grub kyis brtsams/\n v. 4. bstan bcos kyi skor / gung thang bstan pa'i sgron me sogs kyis brtsams/\n v. 5. rgyal po lugs kyi bstan bcos / 'Ju mi pham 'jam dbyangs rnam rgyal rgya mtshos brtsams/\nv. 6. bslab bya'i skor / rje tsong kha pa sogs kyis brtsams/"@en .
+    
+    bdr:NT6C617EA3ED33EAC7
+        a                   :Note ;
+        :noteText           "krung go'i bod rig pa'i zhib 'jug lte gnas dbu brnyes nas lo nyi shu 'khor bar legs skyes su phul/"@bo-x-ewts .
+    
     bdr:TT001701685AF95099
         a                   :Title ;
         rdfs:label          "lugs kyi bstan bcos skye bo gso ba'i thigs pa/"@bo-x-ewts .
@@ -2489,6 +2573,10 @@ bdg:MW1KG13981 {
         a                   :Title ;
         rdfs:label          "bslab bya rin chen phreng mdzes/"@bo-x-ewts .
     
+    bdr:TT2EBB6A57CDFC15B8
+        a                   :Title ;
+        rdfs:label          "legs bshad bstan bcos phyogs bsgrigs/"@bo-x-ewts .
+    
     bdr:TT32C33CACBA9D6C62
         a                   :Title ;
         rdfs:label          "bod la slob gnyer du song ba rnams la bslab bya byas pa mu thi la'i phreng ba/"@bo-x-ewts .
@@ -2512,6 +2600,10 @@ bdg:MW1KG13981 {
     bdr:TT4355732BF50B4280
         a                   :Title ;
         rdfs:label          "legs bshad bstan bcos phyogs bsgrigs la 'jug pa'i sngon 'gro'i gtam/"@bo-x-ewts .
+    
+    bdr:TT440F13457EE55DDD
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏族格言大观"@zh-hans .
     
     bdr:TT4553786962B02463
         a                   :Title ;
@@ -2588,6 +2680,10 @@ bdg:MW1KG13981 {
     bdr:TT6DAE859E62CB8D36
         a                   :Title ;
         rdfs:label          "bslab bya nyin mo'i snang ba/"@bo-x-ewts .
+    
+    bdr:TT6ED6B5FD0DF28D15
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang zu ge yan da guan"@zh-latn-pinyin-x-ndia .
     
     bdr:TT707B490DE3E25A95
         a                   :Title ;

@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW19255 {
+    bda:LG1A6B2A9830793E9C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG56EAECAB2A55B7FD
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-28T10:57:49.591Z"^^xsd:dateTime ;
@@ -28,14 +32,39 @@ bdg:MW19255 {
         adm:logDate         "2009-12-18T11:27:10.029Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19255  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94596" ;
         adm:adminAbout      bdr:MW19255 ;
-        adm:facetIndex      26 ;
-        adm:logEntry        bda:LG56EAECAB2A55B7FD , bda:LG6ED2D5EE030F8C4D , bda:LGF6450B9569255F96 ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "5a/MW19255.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19255 ;
+        adm:logEntry        bda:LG1A6B2A9830793E9C , bda:LG56EAECAB2A55B7FD , bda:LG6ED2D5EE030F8C4D , bda:LGF6450B9569255F96 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02389F638D2E7E54
         a                   :ContentLocation ;
@@ -103,7 +132,45 @@ bdg:MW19255 {
         :contentLocationInstance  bdr:W19255 ;
         :contentLocationPage  282 .
     
-    bdr:MW19255  :hasPart   bdr:MW19255_03EA84 , bdr:MW19255_30EE49 , bdr:MW19255_50221C , bdr:MW19255_8C6D94 , bdr:MW19255_8E5456 , bdr:MW19255_A17E10 , bdr:MW19255_A2A2BB , bdr:MW19255_B2A052 , bdr:MW19255_B90D4C , bdr:MW19255_C4E7A8 , bdr:MW19255_D7ABB7 ;
+    bdr:EVE9BE1EFFB84C03BC
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID0F219F620C7668A9
+        a                   bdr:HollisId ;
+        rdf:value           "014254841" .
+    
+    bdr:ID34C4BAFD7B79ADD1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97916100" .
+    
+    bdr:ID3A8094C330FEF091
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6349.S55 S53 1995" .
+    
+    bdr:IDDF90850C2481989A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542103326" .
+    
+    bdr:MW19255  a          :Instance ;
+        skos:prefLabel      "shis tshang dgon gsar gyi gdan rabs dkar chag g.yas 'khyil dung gi rang sgra/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0F219F620C7668A9 , bdr:ID34C4BAFD7B79ADD1 , bdr:ID3A8094C330FEF091 , bdr:IDDF90850C2481989A ;
+        :authorshipStatement  "cha ris skal bzang thogs med kyis brtsams/"@bo-x-ewts ;
+        :contentLocationStatement  "TBRC Library: Smith Room" ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW19255_03EA84 , bdr:MW19255_30EE49 , bdr:MW19255_50221C , bdr:MW19255_8C6D94 , bdr:MW19255_8E5456 , bdr:MW19255_A17E10 , bdr:MW19255_A2A2BB , bdr:MW19255_B2A052 , bdr:MW19255_B90D4C , bdr:MW19255_C4E7A8 , bdr:MW19255_D7ABB7 ;
+        :hasTitle           bdr:TT387F7A575606CC07 , bdr:TTFBBDDDE0A4AFF433 ;
+        :instanceEvent      bdr:EVE9BE1EFFB84C03BC ;
+        :instanceHasReproduction  bdr:W19255 ;
+        :instanceOf         bdr:WA19255 ;
+        :isRoot             true ;
+        :note               bdr:NTA22074DB19BAA4FD ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "561 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW19255_03EA84
@@ -249,6 +316,10 @@ bdg:MW19255 {
         :partTreeIndex      "09" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTA22074DB19BAA4FD
+        a                   :Note ;
+        :noteText           "account of the monastery of shis tshang dgon gsar, an affiliate of bla brang bkra shis 'khyil"@en .
+    
     bdr:TT043B908918211400
         a                   :Title ;
         rdfs:label          "chos sde chen po'i gnas kyi bkod pa/"@bo-x-ewts .
@@ -256,6 +327,10 @@ bdg:MW19255 {
     bdr:TT146474F0B3A6E9B4
         a                   :Title ;
         rdfs:label          "dgon phran dag gcig sdus byas nas bshad sgrub kyi srol tshugs tshul/"@bo-x-ewts .
+    
+    bdr:TT387F7A575606CC07
+        a                   :Title ;
+        rdfs:label          "shis tshang dgon gsar gyi gdan rabs dkar chag g.yas 'khyil dung gi rang sgra/"@bo-x-ewts .
     
     bdr:TT3C5953EA9F541F1D
         a                   :Title ;
@@ -292,4 +367,8 @@ bdg:MW19255 {
     bdr:TTEA7AD7E208E8235B
         a                   :Title ;
         rdfs:label          "chos sde chen po phyag 'debs mdzad pa bo'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TTFBBDDDE0A4AFF433
+        a                   :CoverTitle ;
+        rdfs:label          "chos sde chen po shis tshang dgon gsar gyi gdan rabs dkar chag"@bo-x-ewts .
 }

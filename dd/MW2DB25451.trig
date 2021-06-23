@@ -18,14 +18,51 @@ bdg:MW2DB25451 {
         adm:logMessage      "published again"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGB31575F25929E917
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-17T11:44:30.725Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGDAF7EF13A65B27DE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-04T15:50:30.681Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGF94675AE096C5A1E
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-18T11:12:39.883Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW2DB25451  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS108378" ;
         adm:adminAbout      bdr:MW2DB25451 ;
-        adm:facetIndex      36 ;
-        adm:logEntry        bda:LG63D3EA4E86EE6686 ;
+        adm:facetIndex      45 ;
+        adm:gitPath         "dd/MW2DB25451.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2DB25451 ;
+        adm:logEntry        bda:LG63D3EA4E86EE6686 , bda:LGB31575F25929E917 , bda:LGDAF7EF13A65B27DE , bda:LGF94675AE096C5A1E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL072B70D91AC79310
         a                   :ContentLocation ;
@@ -230,7 +267,31 @@ bdg:MW2DB25451 {
         :contentLocationInstance  bdr:W2DB25451 ;
         :contentLocationPage  17 .
     
-    bdr:MW2DB25451  :hasPart  bdr:MW2DB25451_24EC4F , bdr:MW2DB25451_5833E2 , bdr:MW2DB25451_6CEF41 , bdr:MW2DB25451_845D97 , bdr:MW2DB25451_A54DF0 , bdr:MW2DB25451_BDB538 ;
+    bdr:EV2E8451118C6AF23F
+        a                   :PublishedEvent ;
+        :onYear             "0200"^^xsd:gYear .
+    
+    bdr:IDD482E551857E4406
+        a                   bdr:HollisId ;
+        rdf:value           "014260479" .
+    
+    bdr:MW2DB25451  a       :Instance ;
+        skos:prefLabel      "bdud shul 'khyoms bza'i lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD482E551857E4406 ;
+        :authorshipStatement  "thub bstan rgya mtshos brtsams/ mtsho sngon nang bstan rig gnas sgyu rtsal lte gnas zhabs zhu khang nas bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW2DB25451_24EC4F , bdr:MW2DB25451_5833E2 , bdr:MW2DB25451_6CEF41 , bdr:MW2DB25451_845D97 , bdr:MW2DB25451_A54DF0 , bdr:MW2DB25451_BDB538 ;
+        :hasTitle           bdr:TT04DF6F932A858989 , bdr:TT41AE2C9C57C256B8 ;
+        :instanceEvent      bdr:EV2E8451118C6AF23F ;
+        :instanceHasReproduction  bdr:W2DB25451 ;
+        :instanceOf         bdr:WA2DB25451 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[zi ling]"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS2DB25433 ;
+        :workExtentStatement  "4, 105 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW2DB25451_0043A1
@@ -647,4 +708,12 @@ bdg:MW2DB25451 {
         :partOf             bdr:MW2DB25451_BDB538 ;
         :partTreeIndex      "5.1" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT04DF6F932A858989
+        a                   :Title ;
+        rdfs:label          "bdud shul 'khyoms bza'i lo rgyus/"@bo-x-ewts .
+    
+    bdr:TT41AE2C9C57C256B8
+        a                   :TitlePageTitle ;
+        rdfs:label          "bdud shul 'khyoms bza'i tsho ba brgyad kyi lo rgyus sa bon tsam du bkod pa mthong thos gser gyi thang ma/"@bo-x-ewts .
 }

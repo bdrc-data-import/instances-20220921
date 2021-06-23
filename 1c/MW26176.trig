@@ -18,6 +18,10 @@ bdg:MW26176 {
         adm:logMessage      "fixed number problem and normalazed"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG4DB4F0320BBF6E40
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG5B42BAF302FF8867
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-08-14T14:09:52.573Z"^^xsd:dateTime ;
@@ -36,14 +40,39 @@ bdg:MW26176 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW26176  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB86629" ;
         adm:adminAbout      bdr:MW26176 ;
-        adm:facetIndex      99 ;
-        adm:logEntry        bda:LG4BC7AB90E09853E1 , bda:LG5B42BAF302FF8867 , bda:LGAC395C75EBAA609C , bda:LGB71D841C2DB4A48D ;
+        adm:facetIndex      113 ;
+        adm:gitPath         "1c/MW26176.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26176 ;
+        adm:logEntry        bda:LG4BC7AB90E09853E1 , bda:LG4DB4F0320BBF6E40 , bda:LG5B42BAF302FF8867 , bda:LGAC395C75EBAA609C , bda:LGB71D841C2DB4A48D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the generous support of the Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02161264E67303EC
         a                   :ContentLocation ;
@@ -357,7 +386,47 @@ bdg:MW26176 {
         :contentLocationInstance  bdr:W26176 ;
         :contentLocationPage  61 .
     
-    bdr:MW26176  :hasPart   bdr:MW26176_7A3B1C , bdr:MW26176_7BB869 , bdr:MW26176_8BF0F7 , bdr:MW26176_9B55E2 , bdr:MW26176_DBD163 ;
+    bdr:EVC8742913385255C4
+        a                   :PublishedEvent ;
+        :onYear             "2003"^^xsd:gYear .
+    
+    bdr:ID0DC4C893A4C43336
+        a                   bdr:HollisId ;
+        rdf:value           "014259518" .
+    
+    bdr:ID9DB52CFFDFDF9DA3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105055413" .
+    
+    bdr:IDDF478E5EE7B9C1B3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.4 .B63 2003 V. 13 BQ2910.M365" .
+    
+    bdr:IDEDB17BC951198C1F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005323052" .
+    
+    bdr:MW26176  a          :Instance , :SerialInstance ;
+        skos:altLabel       "zhongguan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "dbu ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0DC4C893A4C43336 , bdr:ID9DB52CFFDFDF9DA3 , bdr:IDDF478E5EE7B9C1B3 , bdr:IDEDB17BC951198C1F ;
+        :authorshipStatement  "red mda' ba gzhon nu blo gros dang kun mkhyen go ram bsod nams seng ges mdzad/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW26176_7A3B1C , bdr:MW26176_7BB869 , bdr:MW26176_8BF0F7 , bdr:MW26176_9B55E2 , bdr:MW26176_DBD163 ;
+        :hasTitle           bdr:TT700D3A495D942185 , bdr:TT9575E9282DC6F95F , bdr:TTC3FA6F022F26FD43 , bdr:TTE89DA72F063C5A3C ;
+        :instanceEvent      bdr:EVC8742913385255C4 ;
+        :instanceHasReproduction  bdr:W26176 ;
+        :instanceOf         bdr:WA26176 ;
+        :isRoot             true ;
+        :note               bdr:NT54D1C516AD40141D ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin ; zi ling /"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang ; mtsho sngon mi rigs dpe skurn khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS26176 ;
+        :seriesNumber       "v. 13" ;
+        :workExtentStatement  "5, 14, 3, 516 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW26176_02B636
@@ -1041,6 +1110,10 @@ bdg:MW26176 {
         :partTreeIndex      "4.2.2.1.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT54D1C516AD40141D
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images, tiffs and pdf fles; scanned for presrvation purposes only; not for distribution\n5730\n\ncontents: dbu ma la 'jug pa'i rnam bshad de kho na nyid gsal ba'i sgron ma / red mda' ba gzhon nu blo gros. -- dbu ma la 'jug pa'i dkyus kyi sa bcad pa dang gzhung so so'i dka' ba'i gnas la dpyad pa lta ba ngan sel / go rams pa bsod nams seng+ge"@en .
+    
     bdr:TT031BB69A7FB57C91
         a                   :Title ;
         rdfs:label          "bstan 'chos kyi 'brel ba/"@bo-x-ewts .
@@ -1097,6 +1170,10 @@ bdg:MW26176 {
         a                   :Title ;
         rdfs:label          "phar phyin lhag pa'i sgo nas so so'i ngo bo bshad pa/"@bo-x-ewts .
     
+    bdr:TT700D3A495D942185
+        a                   :ColophonTitle ;
+        rdfs:label          "zhongguan"@zh-latn-pinyin-x-ndia .
+    
     bdr:TT7724958505DFE600
         a                   :Title ;
         rdfs:label          "dbu ma la 'jug pa'i gzhung gi don/"@bo-x-ewts .
@@ -1133,6 +1210,10 @@ bdg:MW26176 {
         a                   :Title ;
         rdfs:label          "rgyu'i gnas skabs kyi sa bcu/"@bo-x-ewts .
     
+    bdr:TT9575E9282DC6F95F
+        a                   :Title ;
+        rdfs:label          "dbu ma la 'jug pa'i dkyus kyi sa bcad pa lta ba ngan sel/"@bo-x-ewts .
+    
     bdr:TT9973AE33FEF3C40B
         a                   :Title ;
         rdfs:label          "shing rta chen po rnams kyis ji ltar bkral ba'i tshul/"@bo-x-ewts .
@@ -1165,6 +1246,10 @@ bdg:MW26176 {
         a                   :Title ;
         rdfs:label          "de bzhin gshegs pas chos kyi 'khor lo ji ltar bskor ba'i tshul/"@bo-x-ewts .
     
+    bdr:TTC3FA6F022F26FD43
+        a                   :Title ;
+        rdfs:label          "dbu ma/"@bo-x-ewts .
+    
     bdr:TTC7246753C43BD4EF
         a                   :Title ;
         rdfs:label          "gsung rab de nyid sdud par byed pa rnams kyis ji ltar bsdus pa'i tshul/"@bo-x-ewts .
@@ -1196,6 +1281,10 @@ bdg:MW26176 {
     bdr:TTE6CB03B4CC322982
         a                   :Title ;
         rdfs:label          "rnam grangs lhag pa'i sgo nas sa'i yon tan bstan pa/"@bo-x-ewts .
+    
+    bdr:TTE89DA72F063C5A3C
+        a                   :OtherTitle ;
+        rdfs:label          "dbu ma la 'jug pa'i rnam bshad de kho na nyied gsal ba'i sgron me/"@bo-x-ewts .
     
     bdr:TTEE8E556FAB222CDB
         a                   :Title ;

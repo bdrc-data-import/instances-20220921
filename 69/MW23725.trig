@@ -17,6 +17,16 @@ bdg:MW23725 {
         adm:logDate         "2012-10-05T12:47:28.095Z"^^xsd:dateTime ;
         adm:logMessage      "added T1647 (gnas chen byin 'bebs)"@en .
     
+    bda:LG277214AE4A112347
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T16:45:40.685Z"^^xsd:dateTime ;
+        adm:logMessage      "aded print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG4572A997BB6D529A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG8AD84FFF3EE76954
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-09-18T16:08:29.597Z"^^xsd:dateTime ;
@@ -41,14 +51,40 @@ bdg:MW23725 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23725  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS129912" ;
         adm:adminAbout      bdr:MW23725 ;
-        adm:facetIndex      104 ;
-        adm:logEntry        bda:LG13859FDCC7586E78 , bda:LG8AD84FFF3EE76954 , bda:LGB50354D310980123 , bda:LGB97F4B62D6081B79 , bda:LGC77F0BF5C269E9D1 ;
+        adm:facetIndex      118 ;
+        adm:gitPath         "69/MW23725.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23725 ;
+        adm:logEntry        bda:LG13859FDCC7586E78 , bda:LG277214AE4A112347 , bda:LG4572A997BB6D529A , bda:LG8AD84FFF3EE76954 , bda:LGB50354D310980123 , bda:LGB97F4B62D6081B79 , bda:LGC77F0BF5C269E9D1 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith: outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeGterChos .
+        adm:outlineType     bda:OutlineTypeGterChos ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL071743265762B661
         a                   :ContentLocation ;
@@ -396,7 +432,44 @@ bdg:MW23725 {
         :contentLocationPage  173 ;
         :contentLocationVolume  1 .
     
-    bdr:MW23725  :hasPart   bdr:MW23725_5FB790 , bdr:MW23725_9E5779 ;
+    bdr:EV01369C5D4EBD0D61
+        a                   :PublishedEvent ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:ID226C511DCB5731C3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79905078" .
+    
+    bdr:ID36FC0D23C69E291B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .K395 1979" .
+    
+    bdr:IDC7E292B0FAA3C767
+        a                   bdr:HollisId ;
+        rdf:value           "014259068" .
+    
+    bdr:IDE206F0536F848CDF
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011208467-2" .
+    
+    bdr:MW23725  a          :Instance ;
+        skos:altLabel       "zi khro dgons pa ran grol : a collection of the revelations of karma-glin-pa, with related liturgical texts according to the spiritual traditions followed in bhutan"@en-x-mixed ;
+        skos:prefLabel      "zhi khro dgongs pa rang grol/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID226C511DCB5731C3 , bdr:ID36FC0D23C69E291B , bdr:IDC7E292B0FAA3C767 , bdr:IDE206F0536F848CDF ;
+        :hasPart            bdr:MW23725_5FB790 , bdr:MW23725_9E5779 ;
+        :hasTitle           bdr:TT6EEEB6C2F88D0482 , bdr:TT942489C8B5CC0D39 , bdr:TT992F4B9DD53EB34F ;
+        :instanceEvent      bdr:EV01369C5D4EBD0D61 ;
+        :instanceHasReproduction  bdr:W23725 ;
+        :instanceOf         bdr:WA1KG12110 ;
+        :isRoot             true ;
+        :note               bdr:NT6D0C9ED68184E98C ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "kalimpong"@en ;
+        :publisherName      "mani dorji"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23725_0A2EDD
@@ -1118,6 +1191,10 @@ bdg:MW23725 {
         :partTreeIndex      "1.06" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT6D0C9ED68184E98C
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files\ntbrc volume numbers 2497-2498"@en .
+    
     bdr:TT00E17E3D6D097194
         a                   :Title ;
         rdfs:label          "zab chos zhi khro dgongs pa rang grol las: chos spyod bag chags rang grol (bag chags)"@bo-x-ewts .
@@ -1190,6 +1267,10 @@ bdg:MW23725 {
         a                   :Title ;
         rdfs:label          "zab chos zhi khro dgongs pa rang grol las: btags grol phung po rang grol gyi: don bsdus rang grol snying po (zhi khro btags grol)"@bo-x-ewts .
     
+    bdr:TT6EEEB6C2F88D0482
+        a                   :TitlePageTitle ;
+        rdfs:label          "zi khro dgons pa ran grol : a collection of the revelations of karma-glin-pa, with related liturgical texts according to the spiritual traditions followed in bhutan"@en-x-mixed .
+    
     bdr:TT766D1757CCAB2139
         a                   :Title ;
         rdfs:label          "bar do drug gi rtsa tshig (smon lam)"@bo-x-ewts .
@@ -1218,6 +1299,10 @@ bdg:MW23725 {
         a                   :Title ;
         rdfs:label          "zab chos zhi khro dgongs pa rang grol las: gsang sngags rdo rje theg pa'i chos spyod thun bzhi'i rnal 'byor sems nyid rang grol (kar gling chos spyod)"@bo-x-ewts .
     
+    bdr:TT942489C8B5CC0D39
+        a                   :CoverTitle ;
+        rdfs:label          "Źi khro Dgoṅs pa raṅ grol :a collection of the revelations of Karma-gliṅ-pa, with related liturgical texts according to the spiritual traditions followed in Bhutan."@en-x-mixed .
+    
     bdr:TT98C14FD736834754
         a                   :Title ;
         rdfs:label          "zhi khro dgongs pa rang grol gyi 'dzab bzlas tshangs pa'i sgra dbyangs 'khor 'das rang grol ('dzab bzlas)"@bo-x-ewts .
@@ -1225,6 +1310,10 @@ bdg:MW23725 {
     bdr:TT98F7FCBC30F737B4
         a                   :Title ;
         rdfs:label          "zab chos zhi khro dgongs pa rang grol las/ gnas 'dren 'gro drug rang grol 'khrigs su bkod pa (kar gling zhi khro gnas 'dren)"@bo-x-ewts .
+    
+    bdr:TT992F4B9DD53EB34F
+        a                   :Title ;
+        rdfs:label          "zhi khro dgongs pa rang grol/"@bo-x-ewts .
     
     bdr:TT9CACBE62CCBDE890
         a                   :Title ;

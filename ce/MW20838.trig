@@ -18,20 +18,49 @@ bdg:MW20838 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG999876E83151CBD4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9BB120AE454F4B4B
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-30T09:42:55.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LGCB4BD12865BE707F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-06T12:12:56.542Z"^^xsd:dateTime ;
         adm:logMessage      "zhu dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20838  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94661" ;
         adm:adminAbout      bdr:MW20838 ;
-        adm:facetIndex      38 ;
-        adm:logEntry        bda:LG588B8D2BB269A8BA , bda:LGCB4BD12865BE707F ;
+        adm:facetIndex      46 ;
+        adm:gitPath         "ce/MW20838.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20838 ;
+        adm:logEntry        bda:LG588B8D2BB269A8BA , bda:LG999876E83151CBD4 , bda:LG9BB120AE454F4B4B , bda:LGCB4BD12865BE707F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01BBE24A02DB69D4
         a                   :ContentLocation ;
@@ -213,7 +242,36 @@ bdg:MW20838 {
         :contentLocationInstance  bdr:W20838 ;
         :contentLocationPage  22 .
     
-    bdr:MW20838  :hasPart   bdr:MW20838_7709CE , bdr:MW20838_781FD2 , bdr:MW20838_860C8A , bdr:MW20838_88306A , bdr:MW20838_DE10E3 ;
+    bdr:EV589114B0F7FD3111
+        a                   :PublishedEvent ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:ID633419A7C3A04E03
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540911476" .
+    
+    bdr:IDC8371AA15CBABA86
+        a                   bdr:HollisId ;
+        rdf:value           "014258243" .
+    
+    bdr:MW20838  a          :Instance ;
+        skos:prefLabel      "rwa sgreng dgon pa'i dkar chag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID633419A7C3A04E03 , bdr:IDC8371AA15CBABA86 ;
+        :authorshipStatement  "lhun grub chos 'phel gyis bsgrigs/"@bo-x-ewts ;
+        :contentLocationStatement  "TBRC Library: Smith Room" ;
+        :hasPart            bdr:MW20838_7709CE , bdr:MW20838_781FD2 , bdr:MW20838_860C8A , bdr:MW20838_88306A , bdr:MW20838_DE10E3 ;
+        :hasTitle           bdr:TTEB5F978CABCA821F ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV589114B0F7FD3111 ;
+        :instanceHasReproduction  bdr:W20838 ;
+        :instanceOf         bdr:WA20838 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "10, 3, 212 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20838_111035
@@ -606,6 +664,10 @@ bdg:MW20838 {
         rdfs:label          "dkar chag"@bo-x-ewts .
     
     bdr:TTB4453434771134B7
+        a                   :Title ;
+        rdfs:label          "rwa sgreng dgon pa'i dkar chag"@bo-x-ewts .
+    
+    bdr:TTEB5F978CABCA821F
         a                   :Title ;
         rdfs:label          "rwa sgreng dgon pa'i dkar chag"@bo-x-ewts .
 }

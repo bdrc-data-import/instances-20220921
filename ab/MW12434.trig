@@ -30,19 +30,42 @@ bdg:MW12434 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG79F506A84C8A600F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG98F3C1A1D846793F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-09-16T15:10:45.945Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW12434  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD93041" ;
         adm:adminAbout      bdr:MW12434 ;
-        adm:facetIndex      110 ;
-        adm:logEntry        bda:LG4162F207F11F8934 , bda:LG4F8C7200E98B0EA7 , bda:LG60FD537FB095B037 , bda:LG98F3C1A1D846793F ;
+        adm:facetIndex      121 ;
+        adm:gitPath         "ab/MW12434.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW12434 ;
+        adm:logEntry        bda:LG4162F207F11F8934 , bda:LG4F8C7200E98B0EA7 , bda:LG60FD537FB095B037 , bda:LG79F506A84C8A600F , bda:LG98F3C1A1D846793F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0A4AC0A1FF48E873
         a                   :ContentLocation ;
@@ -356,7 +379,40 @@ bdg:MW12434 {
         :contentLocationInstance  bdr:W12434 ;
         :contentLocationPage  32 .
     
-    bdr:MW12434  :hasPart   bdr:MW12434_39A328 , bdr:MW12434_4B26ED , bdr:MW12434_9784CA , bdr:MW12434_D30067 , bdr:MW12434_E9B604 ;
+    bdr:EV979E739DA0F8F4FB
+        a                   :PublishedEvent ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:ID96AD1FB17BE9257D
+        a                   bdr:HollisId ;
+        rdf:value           "014254668" .
+    
+    bdr:IDA850E32DFDE8FF78
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ286 .T37 1994" .
+    
+    bdr:IDFB08636DBBD8DA3B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98900916" .
+    
+    bdr:MW12434  a          :Instance ;
+        skos:altLabel       "yin tu fo chiao shih"@zh-latn-wadegile ;
+        skos:prefLabel      "rgya gar chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID96AD1FB17BE9257D , bdr:IDA850E32DFDE8FF78 , bdr:IDFB08636DBBD8DA3B ;
+        :authorshipStatement  "tA ra nA thas brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW12434_39A328 , bdr:MW12434_4B26ED , bdr:MW12434_9784CA , bdr:MW12434_D30067 , bdr:MW12434_E9B604 ;
+        :hasTitle           bdr:TTB186DFD75B32DAAA , bdr:TTD8F89DE34ABDDC7C , bdr:TTDD55CC0560831EF0 ;
+        :instanceEvent      bdr:EV979E739DA0F8F4FB ;
+        :instanceHasReproduction  bdr:W12434 ;
+        :instanceOf         bdr:WA00CHZ0103343 ;
+        :isRoot             true ;
+        :note               bdr:NT520866F89200A651 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "5, 5, 345 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW12434_0AE41B
@@ -1039,6 +1095,10 @@ bdg:MW12434 {
         :partTreeIndex      "4.21" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NT520866F89200A651
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n4235\n\nanother edition\n143 ff. in vol. 16 of the 17 vol. gsung 'bum printed from blocks preserved at Rtag-brtan-phun-tshogs-gling.\nTOH 574.\nISMEO 136a-b-9.\nWritten at Brag-stod Chos-kyi-pho-brang."@en .
+    
     bdr:TT0730857AA42D8458
         a                   :Title ;
         rdfs:label          "nyer mkho'i sdom tshig"@bo-x-ewts .
@@ -1191,6 +1251,10 @@ bdg:MW12434 {
         a                   :Title ;
         rdfs:label          "bram ze sgra gcan 'dzin gyi dus kyi gtam ste/ bcu bzhi pa/"@bo-x-ewts .
     
+    bdr:TTB186DFD75B32DAAA
+        a                   :Title ;
+        rdfs:label          "rgya gar chos 'byung /"@bo-x-ewts .
+    
     bdr:TTB6EE5397B2A9A56D
         a                   :Title ;
         rdfs:label          "lho phyogs su chos dar ba'i rabs me tog phreng ba las 'byung ba'i gtam gyi skabs te/ zhe gcig pa/"@bo-x-ewts .
@@ -1227,6 +1291,10 @@ bdg:MW12434 {
         a                   :Title ;
         rdfs:label          "a mra pA la dang / hasti pA la dang / k+Sha n+ti pA'i dus skabs kyi gtam ste/ so lnga pa/"@bo-x-ewts .
     
+    bdr:TTD8F89DE34ABDDC7C
+        a                   :TitlePageTitle ;
+        rdfs:label          "dam pa'i chos rin po che 'phags pa'i yul du ji ltar dar ba'i tshul gsal ston dgos 'dod kun 'byung /"@bo-x-ewts .
+    
     bdr:TTD9F6713B8F154CA0
         a                   :Title ;
         rdfs:label          "rgyal po mya ngan med kyi lo rgyus kyi skabs te/ drug pa/"@bo-x-ewts .
@@ -1242,6 +1310,10 @@ bdg:MW12434 {
     bdr:TTDCD7F0736C5F48D6
         a                   :Title ;
         rdfs:label          "rgyal po sangs rgyas phyogs kyi bya ba'i mtha' ma dang / rgyal po karma tsan+d+ra'i dus skabs kyi gtam ste/ nyi shu rtsa gcig pa/"@bo-x-ewts .
+    
+    bdr:TTDD55CC0560831EF0
+        a                   :ColophonTitle ;
+        rdfs:label          "yin tu fo chiao shih"@zh-latn-wadegile .
     
     bdr:TTE8737FC016796628
         a                   :Title ;

@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1026 {
+    bda:LG531BA732196C2D5D
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-08T17:27:17.026Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCBE6C5DEA05F2857
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGE0FD20CD67112369
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T13:44:41.559Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIME3C129DF  a     adm:InitialDataImport ;
         adm:logDate         "2020-05-12T16:05:48.723Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1026"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1026  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG2554" ;
         adm:adminAbout      bdr:MW1NLM1026 ;
-        adm:facetIndex      14 ;
-        adm:logEntry        bda:LGIME3C129DF ;
+        adm:facetIndex      21 ;
+        adm:gitPath         "49/MW1NLM1026.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1026 ;
+        adm:logEntry        bda:LG531BA732196C2D5D , bda:LGCBE6C5DEA05F2857 , bda:LGE0FD20CD67112369 , bda:LGIME3C129DF , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL285C9D04B7012510
         a                   :ContentLocation ;
@@ -69,7 +98,19 @@ bdg:MW1NLM1026 {
         :contentLocationPage  124 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM1026  :hasPart  bdr:MW1NLM1026_5821D0 , bdr:MW1NLM1026_582F10 , bdr:MW1NLM1026_65E8D9 , bdr:MW1NLM1026_A50BA7 , bdr:MW1NLM1026_AAE3EB , bdr:MW1NLM1026_B627B5 ;
+    bdr:MW1NLM1026  a       :Instance ;
+        skos:prefLabel      "sa lam gyi rnam bzhag theg gsum mdzes rgyan sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "51x8" ;
+        :hasPart            bdr:MW1NLM1026_5821D0 , bdr:MW1NLM1026_582F10 , bdr:MW1NLM1026_65E8D9 , bdr:MW1NLM1026_A50BA7 , bdr:MW1NLM1026_AAE3EB , bdr:MW1NLM1026_B627B5 ;
+        :hasTitle           bdr:TT0669D3FF6C20539C ;
+        :instanceHasReproduction  bdr:W1NLM1026 ;
+        :instanceOf         bdr:WA1NLM1026 ;
+        :isRoot             true ;
+        :note               bdr:NT706B316521CE3DC1 , bdr:NT762A8B5615CDDD4B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "18 ff., 21 ff., 22 ff., 9 ff., 5 ff., 6 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1026_5821D0
@@ -155,6 +196,18 @@ bdg:MW1NLM1026 {
         :partOf             bdr:MW1NLM1026 ;
         :partTreeIndex      "5" ;
         :partType           bdr:PartTypeText .
+    
+    bdr:NT706B316521CE3DC1
+        a                   :Note ;
+        :noteText           "coverType: paper cover"@en .
+    
+    bdr:NT762A8B5615CDDD4B
+        a                   :Note ;
+        :noteText           "nlmId: M0058939"@en .
+    
+    bdr:TT0669D3FF6C20539C
+        a                   :Title ;
+        rdfs:label          "sa lam gyi rnam bzhag theg gsum mdzes rgyan sogs/"@bo-x-ewts .
     
     bdr:TT30F489FB57D5CD3E
         a                   :Title ;

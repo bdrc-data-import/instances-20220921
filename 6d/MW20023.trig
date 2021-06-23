@@ -23,6 +23,10 @@ bdg:MW20023 {
         adm:logDate         "2011-02-04T11:28:03.469Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00013 .
     
+    bda:LG41F83F82E752E3F6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG68FD7EE476F1EF81
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2011-03-11T13:02:29.738Z"^^xsd:dateTime ;
@@ -41,14 +45,39 @@ bdg:MW20023 {
         adm:logMessage      "Reviewed and released"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20023  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O3JT2983" ;
         adm:adminAbout      bdr:MW20023 ;
-        adm:facetIndex      132 ;
-        adm:logEntry        bda:LG023D6A9F3A293B79 , bda:LG2DC14DCD65D6FBFC , bda:LG68FD7EE476F1EF81 , bda:LG8D6AA11954570490 , bda:LGF3F096D4F38F5510 ;
+        adm:facetIndex      145 ;
+        adm:gitPath         "6d/MW20023.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20023 ;
+        adm:logEntry        bda:LG023D6A9F3A293B79 , bda:LG2DC14DCD65D6FBFC , bda:LG41F83F82E752E3F6 , bda:LG68FD7EE476F1EF81 , bda:LG8D6AA11954570490 , bda:LGF3F096D4F38F5510 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Jigme Namgyal; created with the generous support of the Khyentse Foundation."@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0401716F5460020D
         a                   :ContentLocation ;
@@ -428,7 +457,45 @@ bdg:MW20023 {
         :contentLocationInstance  bdr:W20023 ;
         :contentLocationPage  96 .
     
-    bdr:MW20023  :hasPart   bdr:MW20023_003F02 , bdr:MW20023_3C25B1 , bdr:MW20023_EA1A4A ;
+    bdr:EV4C6B4CFC797BD70A
+        a                   :PublishedEvent ;
+        :onYear             "1998"^^xsd:gYear .
+    
+    bdr:ID0AE362DEEA3B77DE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785.T48 D6 1998" .
+    
+    bdr:ID4E54B6DF3E02DF03
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99938595" .
+    
+    bdr:ID597CF645A17C0417
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542105833" .
+    
+    bdr:ID7AF76973E5BD9123
+        a                   bdr:HollisId ;
+        rdf:value           "014258005" .
+    
+    bdr:MW20023  a          :Instance ;
+        skos:altLabel       "wen hua shih yeh chung te tsang tsu wen chiao yu ko ch'eng"@zh-latn-wadegile ;
+        skos:prefLabel      "bod kyi rig gnas gong 'phel dang slob gso'i rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0AE362DEEA3B77DE , bdr:ID4E54B6DF3E02DF03 , bdr:ID597CF645A17C0417 , bdr:ID7AF76973E5BD9123 ;
+        :authorshipStatement  "dpal ldan nyi mas brtsams ; rgyal los bod yig tu sgyur/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW20023_003F02 , bdr:MW20023_3C25B1 , bdr:MW20023_EA1A4A ;
+        :hasTitle           bdr:TT25A3DEF60D8F4400 , bdr:TT4B5032CD3FA8974F , bdr:TTC4136098B6F45483 ;
+        :instanceEvent      bdr:EV4C6B4CFC797BD70A ;
+        :instanceHasReproduction  bdr:W20023 ;
+        :instanceOf         bdr:WA20023 ;
+        :isRoot             true ;
+        :note               bdr:NTC7722DA935CCDEFA ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "17, 5, 278 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20023_003F02
@@ -1278,6 +1345,10 @@ bdg:MW20023 {
         :partTreeIndex      "3.7.1.1" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTC7722DA935CCDEFA
+        a                   :Note ;
+        :noteText           "scanned for presentation purposes only; not for distribution\n4796"@en .
+    
     bdr:TT01C7E050DD848062
         a                   :TitlePageTitle ;
         rdfs:label          "bod kyi rig gnas gong 'phel dang slob gso'i rnam bshad/"@bo-x-ewts .
@@ -1305,6 +1376,10 @@ bdg:MW20023 {
     bdr:TT235D75641FE28C1F
         a                   :TitlePageTitle ;
         rdfs:label          "'os 'gan slob gso'i rgyu lam bsal nas bod yig gzhi rtsa bgyis te/ rgya yig kyang shes 'ongs pa'i khrid gzhi'i ma lag 'dzugs dgos/"@bo-x-ewts .
+    
+    bdr:TT25A3DEF60D8F4400
+        a                   :Title ;
+        rdfs:label          "bod kyi rig gnas gong 'phel dang slob gso'i rnam bshad/"@bo-x-ewts .
     
     bdr:TT262101532D3235B8
         a                   :TitlePageTitle ;
@@ -1337,6 +1412,10 @@ bdg:MW20023 {
     bdr:TT3C9C7399FE55F3B7
         a                   :TitlePageTitle ;
         rdfs:label          "bod rang gi srol rgyun rig gnas kyi bzang cha brgyud 'dzin byed dgos/"@bo-x-ewts .
+    
+    bdr:TT4B5032CD3FA8974F
+        a                   :ColophonTitle ;
+        rdfs:label          "wen hua shi ye zhong de zang zu yi wu jiao yu ke cheng"@zh-latn-pinyin-x-ndia .
     
     bdr:TT4E99E9DFD8197E17
         a                   :TitlePageTitle ;
@@ -1477,6 +1556,10 @@ bdg:MW20023 {
     bdr:TTBC5ED18C56116852
         a                   :TitlePageTitle ;
         rdfs:label          "grub 'bras bde blag tu thob pa'i slob grwa'i slob gso nges par du mi rigs de'i rig gnas kyi rmang gzhi'i steng 'dzugs dgos/"@bo-x-ewts .
+    
+    bdr:TTC4136098B6F45483
+        a                   :ColophonTitle ;
+        rdfs:label          "wen hua shih yeh chung te tsang tsu wen chiao yu ko ch'eng"@zh-latn-wadegile .
     
     bdr:TTCD9690232F032AFD
         a                   :TitlePageTitle ;

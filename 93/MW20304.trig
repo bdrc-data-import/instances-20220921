@@ -18,14 +18,43 @@ bdg:MW20304 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG255C74AA503B77F3
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-17T05:26:18.825Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted inProduct PR1COPYRIGHT"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGCE548EF295CE27F7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20304  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS139761" ;
         adm:adminAbout      bdr:MW20304 ;
-        adm:facetIndex      78 ;
-        adm:logEntry        bda:LG191F749805458C3F ;
+        adm:facetIndex      86 ;
+        adm:gitPath         "93/MW20304.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20304 ;
+        adm:logEntry        bda:LG191F749805458C3F , bda:LG255C74AA503B77F3 , bda:LGCE548EF295CE27F7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gracious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0642C13E456BFC64
         a                   :ContentLocation ;
@@ -483,7 +512,29 @@ bdg:MW20304 {
         :contentLocationInstance  bdr:W20304 ;
         :contentLocationPage  44 .
     
-    bdr:MW20304  :hasPart   bdr:MW20304_07A472 , bdr:MW20304_25AA7A , bdr:MW20304_2EFA34 , bdr:MW20304_42FDB2 , bdr:MW20304_4E20A6 , bdr:MW20304_F39CAD ;
+    bdr:EVB6F16432AF68ED2A
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:IDD69C903F57A0D85A
+        a                   bdr:HollisId ;
+        rdf:value           "014258108" .
+    
+    bdr:MW20304  a          :Instance ;
+        skos:prefLabel      "bla brang dgon pa'i lo rgyus mdor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD69C903F57A0D85A ;
+        :authorshipStatement  "srid gros kan lho bod rigs rang skyong khul bsang chu rdzong u yon lhan khang rig gnas lo rgyus dpyad gzhi'i yig rigs u yon lhan khang gis bsgrigs/"@bo-x-ewts ;
+        :hasPart            bdr:MW20304_07A472 , bdr:MW20304_25AA7A , bdr:MW20304_2EFA34 , bdr:MW20304_42FDB2 , bdr:MW20304_4E20A6 , bdr:MW20304_F39CAD ;
+        :hasTitle           bdr:TT80815B0D5DB4FC22 , bdr:TTB1708B39FC1A2E84 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVB6F16432AF68ED2A ;
+        :instanceHasReproduction  bdr:W20304 ;
+        :instanceOf         bdr:WA20304 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 5, 308 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20304_0052EC
@@ -1401,4 +1452,12 @@ bdg:MW20304 {
         :partOf             bdr:MW20304_07A472 ;
         :partTreeIndex      "3.12" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TT80815B0D5DB4FC22
+        a                   :Title ;
+        rdfs:label          "bla brang dgon pa'i lo rgyus mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TTB1708B39FC1A2E84
+        a                   :TitlePageTitle ;
+        rdfs:label          "bla brang dgon pa dga' ldan bshad sgrub dar rgyas bkra shis g.yas su 'khyil ba'i gling gi lo rgyus mdor bsdus/"@bo-x-ewts .
 }

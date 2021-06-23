@@ -35,6 +35,10 @@ bdg:MW23439 {
         adm:logDate         "2010-11-30T10:06:48.524Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGB919FBE9F2A57A76
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC6C0C35F9A73DB9E
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2018-10-03T16:29:28.039Z"^^xsd:dateTime ;
@@ -47,14 +51,39 @@ bdg:MW23439 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23439  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GC289" ;
         adm:adminAbout      bdr:MW23439 ;
-        adm:facetIndex      175 ;
-        adm:logEntry        bda:LG1DE2C68C3F1856EA , bda:LG63E5BD2C43406CA6 , bda:LG7AAE528D89AE42B4 , bda:LG87D37F6D66D7316B , bda:LGC6C0C35F9A73DB9E , bda:LGEACFFE32CEDBBD92 ;
+        adm:facetIndex      188 ;
+        adm:gitPath         "35/MW23439.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23439 ;
+        adm:logEntry        bda:LG1DE2C68C3F1856EA , bda:LG63E5BD2C43406CA6 , bda:LG7AAE528D89AE42B4 , bda:LG87D37F6D66D7316B , bda:LGB919FBE9F2A57A76 , bda:LGC6C0C35F9A73DB9E , bda:LGEACFFE32CEDBBD92 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Gabi Coura, with the help of the master's thesis of Dr. Ulrich Timme Kragh"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0A61AAC5B0E5C1BF
         a                   :ContentLocation ;
@@ -529,7 +558,38 @@ bdg:MW23439 {
         :agent              bdr:P1845 ;
         :role               bdr:R0ER0015 .
     
-    bdr:MW23439  :hasPart   bdr:MW23439_023168 , bdr:MW23439_5027BC , bdr:MW23439_79BE0F , bdr:MW23439_AD79D0 ;
+    bdr:EVC96F3D378CF44408
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID1B416EBC92911A30
+        a                   bdr:HollisId ;
+        rdf:value           "014258915" .
+    
+    bdr:ID733B90E8806441EF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001291452" .
+    
+    bdr:IDB05CAF223F64DC7A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .S5 2000" .
+    
+    bdr:MW23439  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_sgam po pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1B416EBC92911A30 , bdr:ID733B90E8806441EF , bdr:IDB05CAF223F64DC7A ;
+        :hasPart            bdr:MW23439_023168 , bdr:MW23439_5027BC , bdr:MW23439_79BE0F , bdr:MW23439_AD79D0 ;
+        :hasTitle           bdr:TT608077BB9648818B , bdr:TT75B8A89B0FD12007 , bdr:TTB06124503A642465 , bdr:TTED4C19FAE8D2AEDA ;
+        :instanceEvent      bdr:EVC96F3D378CF44408 ;
+        :instanceHasReproduction  bdr:W23439 ;
+        :instanceOf         bdr:WA22393 ;
+        :isRoot             true ;
+        :note               bdr:NTAD96F656D873B69D ;
+        :numberOfVolumes    4 ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "khenpo s. tenzin & lama t. namgyal"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23439_023168
@@ -1474,6 +1534,10 @@ bdg:MW23439 {
         :partTreeIndex      "3.03" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTAD96F656D873B69D
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume number 1747-1750."@en .
+    
     bdr:TT00BF61D798A42EEA
         a                   :Title ;
         rdfs:label          "tshogs chos bkra shis phun tshogs/"@bo-x-ewts .
@@ -1650,6 +1714,10 @@ bdg:MW23439 {
         a                   :Title ;
         rdfs:label          "rnal 'byor chos g.yung gi zhus lan/"@bo-x-ewts .
     
+    bdr:TT608077BB9648818B
+        a                   :OtherTitle ;
+        rdfs:label          "gsung 'bum/_bsod nams rin chen/"@bo-x-ewts .
+    
     bdr:TT624E4307E81EBF2B
         a                   :Title ;
         rdfs:label          "bar do gzhi bzhig gdams pa/"@bo-x-ewts .
@@ -1689,6 +1757,10 @@ bdg:MW23439 {
     bdr:TT74993DD641A68FFC
         a                   :Title ;
         rdfs:label          "phyag rgya chen po gsal byed kyi man ngag"@bo-x-ewts .
+    
+    bdr:TT75B8A89B0FD12007
+        a                   :TitlePageTitle ;
+        rdfs:label          "khams gsum chos kyi rgyal po mnyam med sgam po pa 'gro mgon bsod nams rin chen mchog gi gsung 'bum yid bzhin nor bu/"@bo-x-ewts .
     
     bdr:TT779038955C9D35C3
         a                   :Title ;
@@ -1794,6 +1866,10 @@ bdg:MW23439 {
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
     
+    bdr:TTB06124503A642465
+        a                   :RunningTitle ;
+        rdfs:label          "dwags po'i bka' 'bum/"@bo-x-ewts .
+    
     bdr:TTB13C4DD52B193510
         a                   :TitlePageTitle ;
         rdfs:label          "chos rje dwags po lha rje'i gsung / mar pa'i tshigs bcad brgyad ma'i 'grel pa/"@bo-x-ewts .
@@ -1845,6 +1921,10 @@ bdg:MW23439 {
     bdr:TTED35F6D1A2B916A5
         a                   :TitlePageTitle ;
         rdfs:label          "chos rje dwags po lha rje'i gsung / bka' tshoms dang phyag rgya chen po lnga ldan / lam mchog rin chen phreng ba / chos bzhi mdor bsdus / nyams len mdor bsdus / gnad kyi gzer gsang / zhal gdams gsang mdzod ma / DoM b+hi pa'i gtum mo / 'khrul 'khor gyi gtum mo / bar do'i gdams pa / 'pho ba'i zhal gdams bcas/"@bo-x-ewts .
+    
+    bdr:TTED4C19FAE8D2AEDA
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_sgam po pa/"@bo-x-ewts .
     
     bdr:TTF35B7D861017D787
         a                   :Title ;

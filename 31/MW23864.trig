@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23864 {
+    bda:LG04AD4454AAFD2605
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG2929CEE1E6D45184
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-09-18T16:26:15.517Z"^^xsd:dateTime ;
+        adm:logMessage      "changed name on bibliographic title"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG6FF816098114A799
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2012-04-20T16:03:32.159Z"^^xsd:dateTime ;
@@ -36,14 +46,33 @@ bdg:MW23864 {
         adm:logMessage      "added T1GS129601 (rjes chog)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23864  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23864" ;
         adm:adminAbout      bdr:MW23864 ;
-        adm:facetIndex      411 ;
-        adm:logEntry        bda:LG6FF816098114A799 , bda:LG839EB475539D5853 , bda:LG99E30504F73C956C , bda:LGFF259E69F4BE58E7 ;
+        adm:facetIndex      419 ;
+        adm:gitPath         "31/MW23864.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23864 ;
+        adm:logEntry        bda:LG04AD4454AAFD2605 , bda:LG2929CEE1E6D45184 , bda:LG6FF816098114A799 , bda:LG839EB475539D5853 , bda:LG99E30504F73C956C , bda:LGFF259E69F4BE58E7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Tsering Dondrup via TBRC Convert2Outline version: 1.4.0"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL008DA12C26DCB991
         a                   :ContentLocation ;
@@ -1410,7 +1439,30 @@ bdg:MW23864 {
         :contentLocationPage  489 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23864  :hasPart   bdr:MW23864_529EBB , bdr:MW23864_8E03B4 , bdr:MW23864_C4F90F ;
+    bdr:EVFCC01FF580F83CEB
+        a                   :PublishedEvent ;
+        :notBefore          "0199"^^xsd:gYear .
+    
+    bdr:IDE768A1B151FFEB8B
+        a                   bdr:HollisId ;
+        rdf:value           "014259187" .
+    
+    bdr:MW23864  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_bstan 'dzin 'phrin las 'jigs med chos kyi dbang phyug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE768A1B151FFEB8B ;
+        :hasPart            bdr:MW23864_529EBB , bdr:MW23864_8E03B4 , bdr:MW23864_C4F90F ;
+        :hasTitle           bdr:TT796DA1A8C9BA14C5 , bdr:TTE9C1737337B0B4DB ;
+        :instanceEvent      bdr:EVFCC01FF580F83CEB ;
+        :instanceHasReproduction  bdr:W23864 ;
+        :instanceOf         bdr:WA1KG11666 ;
+        :isRoot             true ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "*bkra shis lhun po/"@bo-x-ewts ;
+        :publisherName      "*bkra shis lhun po'i dgon/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23864_016978
@@ -4599,6 +4651,10 @@ bdg:MW23864 {
         a                   :Title ;
         rdfs:label          "spyi lo 1979 zla ba 8 tshes 21 nyin/ pe cin nas yongs 'dzin rgya yag rin po che mchog la phul ba/"@bo-x-ewts .
     
+    bdr:TT796DA1A8C9BA14C5
+        a                   :OtherTitle ;
+        rdfs:label          "paN chen sku phreng bcu pa bstan 'dzin 'phrin las 'jigs med chos kyi dbang phyug gi gsung 'bum/"@bo-x-ewts .
+    
     bdr:TT7A5AC044111DF3AB
         a                   :Title ;
         rdfs:label          "chu yos spyi lo 1963 zla ba 9 tshes 6 nyin/ skyabs mchog rgya yag rin po cher phul ba'i chab shog"@bo-x-ewts .
@@ -4958,6 +5014,10 @@ bdg:MW23864 {
     bdr:TTE8141D98E91D9D9B
         a                   :Title ;
         rdfs:label          "jo bo chen po'i bsangs mchod 'dod don lhun grub/"@bo-x-ewts .
+    
+    bdr:TTE9C1737337B0B4DB
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan 'dzin 'phrin las 'jigs med chos kyi dbang phyug"@bo-x-ewts .
     
     bdr:TTE9C69024E7F99123
         a                   :Title ;

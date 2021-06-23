@@ -18,6 +18,10 @@ bdg:MW28996 {
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LG399A59A848108138
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG6C05FCF4618D7F3F
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-01-11T16:44:33.246Z"^^xsd:dateTime ;
@@ -29,14 +33,33 @@ bdg:MW28996 {
         adm:logDate         "2010-01-11T16:07:54.58Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28996  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD87836" ;
         adm:adminAbout      bdr:MW28996 ;
-        adm:facetIndex      24 ;
-        adm:logEntry        bda:LG10A09A6DE1EC77C2 , bda:LG6C05FCF4618D7F3F , bda:LGE4D29BF8BD8280D9 ;
+        adm:facetIndex      38 ;
+        adm:gitPath         "69/MW28996.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28996 ;
+        adm:logEntry        bda:LG10A09A6DE1EC77C2 , bda:LG399A59A848108138 , bda:LG6C05FCF4618D7F3F , bda:LGE4D29BF8BD8280D9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; created with the generous support of Dzongsar Khyentse Foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL04A3DB71A469F6D3
         a                   :ContentLocation ;
@@ -96,7 +119,46 @@ bdg:MW28996 {
         :contentLocationInstance  bdr:W28996 ;
         :contentLocationPage  275 .
     
-    bdr:MW28996  :hasPart   bdr:MW28996_290296 , bdr:MW28996_56CC30 , bdr:MW28996_7D0AE4 , bdr:MW28996_8074AB , bdr:MW28996_8AB940 , bdr:MW28996_8F1189 , bdr:MW28996_ABE5A1 , bdr:MW28996_BDAF47 , bdr:MW28996_C0F311 , bdr:MW28996_E3B8FD ;
+    bdr:EV35233EBC35E765BA
+        a                   :PublishedEvent ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:ID22C1FE4830EAF4F5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7632 .B552 1999" .
+    
+    bdr:ID2745D6B6CEBFD33C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949047" .
+    
+    bdr:ID529BB843966CB026
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542106384" .
+    
+    bdr:ID5C2B308A3EB32722
+        a                   bdr:HollisId ;
+        rdf:value           "014259872" .
+    
+    bdr:MW28996  a          :Instance ;
+        skos:altLabel       "gongtang luozhijiacuo da shi zuo pin shi ling"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gsung thor bu/_blo gros rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID22C1FE4830EAF4F5 , bdr:ID2745D6B6CEBFD33C , bdr:ID529BB843966CB026 , bdr:ID5C2B308A3EB32722 ;
+        :authorshipStatement  "rje gung thang blo gros rgya mtshos mdzad/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW28996_290296 , bdr:MW28996_56CC30 , bdr:MW28996_7D0AE4 , bdr:MW28996_8074AB , bdr:MW28996_8AB940 , bdr:MW28996_8F1189 , bdr:MW28996_ABE5A1 , bdr:MW28996_BDAF47 , bdr:MW28996_C0F311 , bdr:MW28996_E3B8FD ;
+        :hasTitle           bdr:TT2CB60B5C75362ACF , bdr:TT2D1C66964D6BF275 , bdr:TT4B11A4E65A8E8AFF , bdr:TTD36319E382FB711C , bdr:TTD795AEEB696BA5C6 ;
+        :instanceEvent      bdr:EV35233EBC35E765BA ;
+        :instanceHasReproduction  bdr:W28996 ;
+        :instanceOf         bdr:WA28996 ;
+        :isRoot             true ;
+        :note               bdr:NTF1D32370650207F7 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS148 ;
+        :workExtentStatement  "1, 283 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28996_290296
@@ -238,17 +300,33 @@ bdg:MW28996 {
         :partTreeIndex      "09" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTF1D32370650207F7
+        a                   :Note ;
+        :noteText           "contents: byang chub lam rim chen mo'i bshad lung zin bris.--byang chub lam gyi rim pa chung ba sde khri rin po che'i mchan dang sbrags te bshad lung rgya cher gnang skabs kyi zin bris zhal lung bdud rtsi'i thigs pa.--mdo sde rin po che sdud pa dang 'grel ba don gsal gnyis sbyar ba'i gsung bshad zin bris sbas don gsal ba'i mig 'byed.--stong thun skal bzang mig 'byed kyi bshad zin.-- bstan bcos legs bshad snying bo dang rnam bshad dgongs pa rab gsal sogs kyi dgongs don las brtsams te dogs pa slong ba'i lan mdo tsam brjod pa ke ta ka'i phreng mdzes.--phar phyin mchan 'grel sogs las brtsams pa'i dris lan.-- mngon pa mdzod kyi dris lan mun sel sgron me.--'grel ba bzhi sbrags kyi zin thun zla zer snang ba.--rje blo gros rgya mtsho'i phyag bris dngos ma las bshus pa'i thor bu'i skor\n\n\ntbrc holds tiffs and pdf files; scanned for preservation purposes only; not for distribution purposes\n4975"@en .
+    
     bdr:TT17905EB7253DC2E2
         a                   :Title ;
         rdfs:label          "stong thun skal bzang mig 'byed kyi bshad zin/"@bo-x-ewts .
+    
+    bdr:TT2CB60B5C75362ACF
+        a                   :ColophonTitle ;
+        rdfs:label          "gongtang luozhijiacuo da shi zuo pin shi ling"@zh-latn-pinyin-x-ndia .
     
     bdr:TT2CF7BC19F141ED04
         a                   :Title ;
         rdfs:label          "byang chub lam rim chen mo'i bshad lung zin bris/"@bo-x-ewts .
     
+    bdr:TT2D1C66964D6BF275
+        a                   :OtherTitle ;
+        rdfs:label          "bka' 'bum thor bu bdams bsgrigs/"@bo-x-ewts .
+    
     bdr:TT433D2EEA4FFC4925
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TT4B11A4E65A8E8AFF
+        a                   :CoverTitle ;
+        rdfs:label          "rje gung thang blo gros rgya mtsho'i bka' 'bum/"@bo-x-ewts .
     
     bdr:TT4D59B1613A849993
         a                   :Title ;
@@ -273,6 +351,14 @@ bdg:MW28996 {
     bdr:TTC9B2D38F06100799
         a                   :Title ;
         rdfs:label          "mngon pa mdzod kyi dris lan mun sel sgron me/"@bo-x-ewts .
+    
+    bdr:TTD36319E382FB711C
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/_blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TTD795AEEB696BA5C6
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje gung thang blo gros rgya mtsho'i bka' 'bum thor bu bdams bsgrigs/"@bo-x-ewts .
     
     bdr:TTE05625BB83488052
         a                   :Title ;

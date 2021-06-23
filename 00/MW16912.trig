@@ -24,6 +24,10 @@ bdg:MW16912 {
         adm:logMessage      "add more in fo"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG28A94B7692BDAB95
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG4E85DAB509A813F4
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-03-23T10:34:03.423Z"^^xsd:dateTime ;
@@ -88,14 +92,33 @@ bdg:MW16912 {
         adm:logDate         "2009-11-04T16:44:26.797Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00038 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW16912  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1JT599" ;
         adm:adminAbout      bdr:MW16912 ;
-        adm:facetIndex      417 ;
-        adm:logEntry        bda:LG0FBC12F3848606A8 , bda:LG2749CA6C9749B36D , bda:LG4E85DAB509A813F4 , bda:LG89F8F395CE0D6CC0 , bda:LG8C4FCC0364A55BC0 , bda:LGB32CA682F195C399 , bda:LGCFA9B1236C31E1DC , bda:LGCFD8D5D245548046 , bda:LGD7BBFB1536C15268 , bda:LGD87909B99BE4DAB2 , bda:LGDB2365F33B8A6C29 , bda:LGE49DEF41BFA9DE45 , bda:LGE9FD9AECC5DA87C1 ;
+        adm:facetIndex      428 ;
+        adm:gitPath         "00/MW16912.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW16912 ;
+        adm:logEntry        bda:LG0FBC12F3848606A8 , bda:LG2749CA6C9749B36D , bda:LG28A94B7692BDAB95 , bda:LG4E85DAB509A813F4 , bda:LG89F8F395CE0D6CC0 , bda:LG8C4FCC0364A55BC0 , bda:LGB32CA682F195C399 , bda:LGCFA9B1236C31E1DC , bda:LGCFD8D5D245548046 , bda:LGD7BBFB1536C15268 , bda:LGD87909B99BE4DAB2 , bda:LGDB2365F33B8A6C29 , bda:LGE49DEF41BFA9DE45 , bda:LGE9FD9AECC5DA87C1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "jigme tashi with the gracious support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL003EBE39EA8171F5
         a                   :ContentLocation ;
@@ -1151,7 +1174,43 @@ bdg:MW16912 {
         :contentLocationPage  101 ;
         :contentLocationVolume  3 .
     
-    bdr:MW16912  :hasPart   bdr:MW16912_00E9E8 , bdr:MW16912_3CD66D , bdr:MW16912_89AECD , bdr:MW16912_DDFBF6 , bdr:MW16912_F6D0F7 ;
+    bdr:EV3032BE85CB162026
+        a                   :PublishedEvent ;
+        :notAfter           "1974"^^xsd:gYear ;
+        :notBefore          "1972"^^xsd:gYear .
+    
+    bdr:ID1D7ED0E8CEF3E25E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "72908334" .
+    
+    bdr:ID40892CA210C979FA
+        a                   bdr:HollisId ;
+        rdf:value           "014254769" .
+    
+    bdr:ID99E4986E5B3193EF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .N35 1972" .
+    
+    bdr:MW16912  a          :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works of nag-dban-mkhas-grub, kyai-rdor mkhan-po of urga"@en ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang mkhas grub/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1D7ED0E8CEF3E25E , bdr:ID40892CA210C979FA , bdr:ID99E4986E5B3193EF ;
+        :biblioNote         "reproduced under the instructions of glin rin po che from a set of the manuscripts and xylographic prints from the urga blocks"@en ;
+        :hasPart            bdr:MW16912_00E9E8 , bdr:MW16912_3CD66D , bdr:MW16912_89AECD , bdr:MW16912_DDFBF6 , bdr:MW16912_F6D0F7 ;
+        :hasTitle           bdr:TT2C71EAED3AC68901 , bdr:TT7DAE201CDD886B12 , bdr:TTD84F56C11674CE87 ;
+        :instanceEvent      bdr:EV3032BE85CB162026 ;
+        :instanceHasReproduction  bdr:W16912 ;
+        :instanceOf         bdr:WA16912 ;
+        :isRoot             true ;
+        :note               bdr:NT32C0868353B9BBD6 ;
+        :numberOfVolumes    5 ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "s.w. tashigangpa"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 44-48" ;
+        :workExtentStatement  "5 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW16912_00E9E8
@@ -3396,6 +3455,10 @@ bdg:MW16912 {
         :partTreeIndex      "5.10" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT32C0868353B9BBD6
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0588-0592.\n\nThe collected works of Nag-dban-mkhas-grub, Kyai-rdor Mkhan-po of Urga. -- Reproduced under the instructions of Glin Rin-po-che from a set of the manuscripts and xylographic prints from the Urga blocks. -- Leh : S.W. Tashigangpa, 1972-1974. -- 5 v. -- (Smanrtsis shesrig spendzod ; v. 44-48)\nCopy:\nTBRC.\n5 vol. xylographed gsung 'bum from blocks kept at Urga. One vol. in manuscript only.\nCopies:\nState Library, Ulanbator\nGling Bla-brang, Dharamsala\nIAIC, New Delhi.\nNo. 19 in series one of the Bod brgyud nang bstan dpyad gzhi yig rigs = Historical materials of Tibetan Buddhism, published by the Krung go'i Then cin Dpe rnying Dpar skrun Khang. Number of volumes of this gsung 'bum in these 80 volumes unknown.\nKhal-kha Mkhan-po Ngag-dbang-blo-bzang-mkhas-grub"@en .
+    
     bdr:TT00276BD394B83EB4
         a                   :Title ;
         rdfs:label          "kun bzang 'khor lo dang de'i 'grel pa/"@bo-x-ewts .
@@ -3595,6 +3658,10 @@ bdg:MW16912 {
     bdr:TT29B805D5610F380E
         a                   :TitlePageTitle ;
         rdfs:label          "'bras spungs bkra shis tshe 'phel gling gi gnas bstod/"@bo-x-ewts .
+    
+    bdr:TT2C71EAED3AC68901
+        a                   :CoverTitle ;
+        rdfs:label          "collected works of kyai-rdor mkhan-po nag-dban-mkhas-grub"@en .
     
     bdr:TT2CBF5522E536FC14
         a                   :Title ;
@@ -3907,6 +3974,10 @@ bdg:MW16912 {
     bdr:TT78C94C87802F40A6
         a                   :TitlePageTitle ;
         rdfs:label          "lha bzo dang sbyin bdag rnams kyis nges par lta dgos pa'i mdo rgyud kyi lung sna tshogs btus pa bya ba don ldan du 'jug byed kyi lha'i lam bzang /"@bo-x-ewts .
+    
+    bdr:TT7DAE201CDD886B12
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works of nag-dban-mkhas-grub, kyai-rdor mkhan-po of urga"@en .
     
     bdr:TT7E2FB2A129084930
         a                   :Title ;
@@ -4283,6 +4354,10 @@ bdg:MW16912 {
     bdr:TTD7F27601C2A32CFB
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TTD84F56C11674CE87
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang mkhas grub/"@bo-x-ewts .
     
     bdr:TTD8E3FFFF73C7231E
         a                   :Title ;

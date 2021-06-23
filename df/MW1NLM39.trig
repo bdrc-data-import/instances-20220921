@@ -12,20 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM39 {
+    bda:LG3456AEBB20692512
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-11-06T18:14:13.294Z"^^xsd:dateTime ;
+        adm:logMessage      "added bib note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG936B452003E40772
+        a                   adm:UpdateData ;
+        adm:logDate         "2018-12-18T12:17:23.737Z"^^xsd:dateTime ;
+        adm:logMessage      "add pub info"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGAFDF3EF05ABF93E6
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGBE46EC2CD7831712
+        a                   adm:UpdateData ;
+        adm:logDate         "2018-12-11T15:50:20.217Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM39"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGIM77B08F3B  a     adm:InitialDataImport ;
         adm:logDate         "2019-03-06T10:08:31.787Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM39  a         adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O4CZ327835" ;
         adm:adminAbout      bdr:MW1NLM39 ;
-        adm:facetIndex      239 ;
-        adm:logEntry        bda:LGIM77B08F3B ;
+        adm:facetIndex      248 ;
+        adm:gitPath         "df/MW1NLM39.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM39 ;
+        adm:logEntry        bda:LG3456AEBB20692512 , bda:LG936B452003E40772 , bda:LGAFDF3EF05ABF93E6 , bda:LGBE46EC2CD7831712 , bda:LGIM48AAB853 , bda:LGIM77B08F3B , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Kelsang Lhamo"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00413C5900E5E4FD
         a                   :ContentLocation ;
@@ -465,7 +507,20 @@ bdg:MW1NLM39 {
         a                   :ContentLocation ;
         :contentLocationInstance  bdr:W1NLM39 .
     
-    bdr:MW1NLM39  :hasPart  bdr:MW1NLM39_3446AB , bdr:MW1NLM39_707BEA ;
+    bdr:MW1NLM39  a         :Instance ;
+        skos:prefLabel      "gsung thor bu/ blo bzang tshul khrims 'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :dimensionsStatement  "26x8" ;
+        :hasPart            bdr:MW1NLM39_3446AB , bdr:MW1NLM39_707BEA ;
+        :hasTitle           bdr:TT328221F095262D97 , bdr:TT88FDF04BFBA040EC ;
+        :instanceHasReproduction  bdr:W1NLM39 ;
+        :instanceOf         bdr:WA1NLM39 ;
+        :isRoot             true ;
+        :note               bdr:NT71E2F179905B6191 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "112 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM39_00A427
@@ -1993,6 +2048,10 @@ bdg:MW1NLM39 {
         :partTreeIndex      "1.32" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT71E2F179905B6191
+        a                   :Note ;
+        :noteText           "nlmId: M0057933"@en .
+    
     bdr:TT010058D0671C0867
         a                   :TitlePageTitle ;
         rdfs:label          "ma'u byi zhes pa lcags glang zla ba'i tshes bcu'i skor la dbu gur sngon po'i nang bka' rtsom gnang ba'i zin bris/"@bo-x-ewts .
@@ -2076,6 +2135,10 @@ bdg:MW1NLM39 {
     bdr:TT31C270E647D3A19B
         a                   :Title ;
         rdfs:label          "bde ldan zhing mgon ma/"@bo-x-ewts .
+    
+    bdr:TT328221F095262D97
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsung thor bu phyogs gcig tu sdebs pa/"@bo-x-ewts .
     
     bdr:TT384DCC98EB1B0044
         a                   :Title ;
@@ -2248,6 +2311,10 @@ bdg:MW1NLM39 {
     bdr:TT81081E3E814AB53E
         a                   :Title ;
         rdfs:label          "dza ya paN+Di ta'i gsol 'debs brtan bzhugs/"@bo-x-ewts .
+    
+    bdr:TT88FDF04BFBA040EC
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/ blo bzang tshul khrims 'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts .
     
     bdr:TT892984AC50AE2127
         a                   :Title ;

@@ -12,10 +12,27 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1017393 {
+    bda:LG0A1E347F24D3F481
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-01-30T01:43:28.073Z"^^xsd:dateTime ;
+        adm:logMessage      "first cataloged"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG1CD1728B10F6FFB0
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-09-27T16:42:48.568Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG4CA9D02497245B6F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T15:06:11.554Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, v Language encoding, print type"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGA6C7BD40D5CF994B
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-01-02T14:27:54.881Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:LGF91918E9EC902F5D
@@ -23,15 +40,40 @@ bdg:MW00EGS1017393 {
         adm:logDate         "2010-04-30T15:57:06.846Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW00EGS1017393
         a                   adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB96942" ;
         adm:adminAbout      bdr:MW00EGS1017393 ;
-        adm:facetIndex      68 ;
-        adm:logEntry        bda:LG1CD1728B10F6FFB0 , bda:LGF91918E9EC902F5D ;
+        adm:facetIndex      81 ;
+        adm:gitPath         "6a/MW00EGS1017393.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1017393 ;
+        adm:logEntry        bda:LG0A1E347F24D3F481 , bda:LG1CD1728B10F6FFB0 , bda:LG4CA9D02497245B6F , bda:LGA6C7BD40D5CF994B , bda:LGF91918E9EC902F5D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL096FA9CB155105FD
         a                   :ContentLocation ;
@@ -223,8 +265,45 @@ bdg:MW00EGS1017393 {
         :contentLocationInstance  bdr:W00EGS1017393 ;
         :contentLocationPage  104 .
     
+    bdr:EV4FFA1A2186F22899
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID58301731B16F160E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540933089" .
+    
+    bdr:ID6812E8972CC7757D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7688.S639 S63 2006" .
+    
+    bdr:ID91E82C4045C3B5FB
+        a                   bdr:HollisId ;
+        rdf:value           "014254011" .
+    
+    bdr:IDBFD1CFC870BC1FA4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2007392874" .
+    
     bdr:MW00EGS1017393
+        a                   :Instance ;
+        skos:altLabel       "芒巴噶举传记汇编"@zh-hans ;
+        skos:prefLabel      "smar pa bka' brgyud kyi rnam thar phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID58301731B16F160E , bdr:ID6812E8972CC7757D , bdr:ID91E82C4045C3B5FB , bdr:IDBFD1CFC870BC1FA4 ;
+        :authorshipStatement  "[rgan bu karma rdo rje nas sgrig par dge'o"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasPart            bdr:MW00EGS1017393_0A1AF1 , bdr:MW00EGS1017393_1588A3 , bdr:MW00EGS1017393_1A85CF , bdr:MW00EGS1017393_2C053C , bdr:MW00EGS1017393_40EDBF , bdr:MW00EGS1017393_B48AA0 ;
+        :hasTitle           bdr:TT13A1531EA4624D1C , bdr:TT43DC7AA6D01FE183 ;
+        :instanceEvent      bdr:EV4FFA1A2186F22899 ;
+        :instanceHasReproduction  bdr:W00EGS1017393 ;
+        :instanceOf         bdr:WA00EGS1017393 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[khreng tu'u]"@en ;
+        :publisherName      "si khron dpe skrun tshogs pa, si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 1, 241 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW00EGS1017393_0015CA
@@ -665,6 +744,10 @@ bdg:MW00EGS1017393 {
         a                   :Title ;
         rdfs:label          "tsom mdo gnas gsar gyi khri rabs bcu gnyis pa/_chos rje dkon mchog rdo rje/"@bo-x-ewts .
     
+    bdr:TT13A1531EA4624D1C
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "芒巴噶举传记汇编"@zh-hans .
+    
     bdr:TT14D6E0CBAEEB37AC
         a                   :Title ;
         rdfs:label          "spangs mkhan chen 'od zer bla ma/"@bo-x-ewts .
@@ -692,6 +775,10 @@ bdg:MW00EGS1017393 {
     bdr:TT42A6EA39E58D1474
         a                   :Title ;
         rdfs:label          "dpal ldan smar pa bka' brgyud kyi rnam thar su khar r+Na'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TT43DC7AA6D01FE183
+        a                   :Title ;
+        rdfs:label          "smar pa bka' brgyud kyi rnam thar phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TT4F15489BD8499CA7
         a                   :Title ;

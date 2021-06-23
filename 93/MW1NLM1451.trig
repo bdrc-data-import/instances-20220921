@@ -12,25 +12,48 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1451 {
+    bda:LG62D3D335B5AA5C8E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T18:16:36.347Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGC08B57D954E0393C
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2021-05-04T13:21:15.332Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGEE9196DAAF14CA77
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
     bda:LGIM0F1078B6  a     adm:InitialDataImport ;
         adm:logDate         "2021-05-04T11:17:26.526Z"^^xsd:dateTime ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM1451"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:MW1NLM1451  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG221921" ;
         adm:adminAbout      bdr:MW1NLM1451 ;
-        adm:facetIndex      25 ;
-        adm:logEntry        bda:LGC08B57D954E0393C , bda:LGIM0F1078B6 ;
+        adm:facetIndex      30 ;
+        adm:gitPath         "93/MW1NLM1451.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1451 ;
+        adm:logEntry        bda:LG62D3D335B5AA5C8E , bda:LGC08B57D954E0393C , bda:LGEE9196DAAF14CA77 , bda:LGIM0F1078B6 , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0AEC9C421D68E2C3
         a                   :ContentLocation ;
@@ -98,7 +121,19 @@ bdg:MW1NLM1451 {
         :contentLocationInstance  bdr:W1NLM1451 ;
         :contentLocationPage  155 .
     
-    bdr:MW1NLM1451  :hasPart  bdr:MW1NLM1451_253D23 , bdr:MW1NLM1451_3C3FBB , bdr:MW1NLM1451_424F7C , bdr:MW1NLM1451_57961F , bdr:MW1NLM1451_70B6D3 , bdr:MW1NLM1451_78DA80 , bdr:MW1NLM1451_A04000 , bdr:MW1NLM1451_ADD6FB , bdr:MW1NLM1451_B4063C , bdr:MW1NLM1451_D2624A , bdr:MW1NLM1451_DBF042 ;
+    bdr:MW1NLM1451  a       :Instance ;
+        skos:prefLabel      "bslab pa yongs su sbyong ba'i gzhi gsum gyi cho ga la sogs pa so sor thar pa'i blang dor kyi gnas rnams mdor bsdus pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "49x6" ;
+        :hasPart            bdr:MW1NLM1451_253D23 , bdr:MW1NLM1451_3C3FBB , bdr:MW1NLM1451_424F7C , bdr:MW1NLM1451_57961F , bdr:MW1NLM1451_70B6D3 , bdr:MW1NLM1451_78DA80 , bdr:MW1NLM1451_A04000 , bdr:MW1NLM1451_ADD6FB , bdr:MW1NLM1451_B4063C , bdr:MW1NLM1451_D2624A , bdr:MW1NLM1451_DBF042 ;
+        :hasTitle           bdr:TT0EB8ABB49639A7D7 ;
+        :instanceHasReproduction  bdr:W1NLM1451 ;
+        :instanceOf         bdr:WA1NLM1451 ;
+        :isRoot             true ;
+        :note               bdr:NTDD21EA01C4B083C5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "37 ff., 18 ff., 22 ff., 15 ff., 4 ff., 3 ff., 6 ff., 4 ff., 18 ff., 7 ff., 4 ff., 6 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM1451_253D23
@@ -255,6 +290,10 @@ bdg:MW1NLM1451 {
         :partTreeIndex      "01" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NTDD21EA01C4B083C5
+        a                   :Note ;
+        :noteText           "nlmId: M0059369"@en .
+    
     bdr:TT099EFE1088C17A9C
         a                   :Title ;
         rdfs:label          "yul yul can gyi rnam bzhag"@bo-x-ewts .
@@ -262,6 +301,10 @@ bdg:MW1NLM1451 {
     bdr:TT0C01AD53AD0BBEB9
         a                   :Title ;
         rdfs:label          "rgyal ba byams pa'i sgrub thabs dang 'brel ba'i mchod chog dga' ldan pad mtshor 'jug pa'i gru gzings/"@bo-x-ewts .
+    
+    bdr:TT0EB8ABB49639A7D7
+        a                   :Title ;
+        rdfs:label          "bslab pa yongs su sbyong ba'i gzhi gsum gyi cho ga la sogs pa so sor thar pa'i blang dor kyi gnas rnams mdor bsdus pa sogs/"@bo-x-ewts .
     
     bdr:TT1C48ED7C566547E8
         a                   :Title ;

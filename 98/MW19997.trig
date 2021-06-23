@@ -53,10 +53,20 @@ bdg:MW19997 {
         adm:logMessage      "completed outline"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGD8D9960C70E5E360
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-19T16:20:53.753Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Author, Language encoding and print type"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGE3A13BCC0F7337B7
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2008-03-05T16:16:12.656Z"^^xsd:dateTime ;
         adm:logMessage      "begun corrections"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGEFDDEE9DCB856C8D
+        a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:LGFD893F882D1608C2
@@ -71,14 +81,33 @@ bdg:MW19997 {
         adm:logMessage      "added G1542"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW19997  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS44788" ;
         adm:adminAbout      bdr:MW19997 ;
-        adm:facetIndex      564 ;
-        adm:logEntry        bda:LG4F0D8DCEC5B7BBA3 , bda:LG50DF0D18B4BC1A7A , bda:LG577B002336973C8E , bda:LG58869DE71440E30E , bda:LG7BEC85044264E94B , bda:LG9650567A2938192D , bda:LGB036CE765104BD88 , bda:LGE3A13BCC0F7337B7 , bda:LGFD893F882D1608C2 , bda:LGFE29A38A68CD2412 ;
+        adm:facetIndex      574 ;
+        adm:gitPath         "98/MW19997.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19997 ;
+        adm:logEntry        bda:LG4F0D8DCEC5B7BBA3 , bda:LG50DF0D18B4BC1A7A , bda:LG577B002336973C8E , bda:LG58869DE71440E30E , bda:LG7BEC85044264E94B , bda:LG9650567A2938192D , bda:LGB036CE765104BD88 , bda:LGD8D9960C70E5E360 , bda:LGE3A13BCC0F7337B7 , bda:LGEFDDEE9DCB856C8D , bda:LGFD893F882D1608C2 , bda:LGFE29A38A68CD2412 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0029F187D44CB4DB
         a                   :ContentLocation ;
@@ -3945,7 +3974,39 @@ bdg:MW19997 {
         :contentLocationPage  188 ;
         :contentLocationVolume  1 .
     
-    bdr:MW19997  :hasPart   bdr:MW19997_1FEDE0 , bdr:MW19997_50614C , bdr:MW19997_83F41D ;
+    bdr:CRE2DDBD891122A90D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4746 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0F0B88D95E9FBC91
+        a                   :PublishedEvent ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:ID742F02FB73D0761D
+        a                   bdr:HollisId ;
+        rdf:value           "014254943" .
+    
+    bdr:MW19997  a          :Instance ;
+        skos:prefLabel      "dkar mdzes khul gyi dgon sde so so'i lo rgyus gsal bar bshad pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID742F02FB73D0761D ;
+        :authorshipStatement  "krung go'i bod kyi shes rig zhib 'jug ste gnas kyi chos lugs lo rgyus zhib 'jug so'o dang krung go bod brgyud nang bstan mntho rim slob gling bo brgyud nang bstan zhib 'jug khang, zi khrod zhing chen dkar mdzes khul chus lugs cud/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :creator            bdr:CRE2DDBD891122A90D ;
+        :hasPart            bdr:MW19997_1FEDE0 , bdr:MW19997_50614C , bdr:MW19997_83F41D ;
+        :hasTitle           bdr:TT36D982804DAAE6D9 , bdr:TT9E564E72F5A22462 ;
+        :instanceEvent      bdr:EV0F0B88D95E9FBC91 ;
+        :instanceHasReproduction  bdr:W19997 ;
+        :instanceOf         bdr:WA19997 ;
+        :isRoot             true ;
+        :note               bdr:NTCB353E99ED21F0AF ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod kyi shes rig dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW19997_00116D
@@ -11190,4 +11251,16 @@ bdg:MW19997 {
         :partTreeIndex      "2.10.15" ;
         :partType           bdr:PartTypeChapter ;
         :workIsAbout        bdr:G4089 .
+    
+    bdr:NTCB353E99ED21F0AF
+        a                   :Note ;
+        :noteText           "v. 1 covers three rdzong: dkar mdzes rdzong, nyag rong rdzong, and sde dge rdzong\nv. 2 covers twelve rdzong: li thang rdzong, ser shul rdzong, rdza chu kha rdzong, gser rta rdzong, cha phreng rdzong, 'ba' thang rdzong, sde rong rdzong, brgyad zil rdzong,  rong brag rdzong, nyag chu rdzong, rta'u rdzong, lcags zam rdzong\nv. 3 covers four rdzong: dar mdo rdzong, dpal yul rdzong, brag 'go rdzong. and 'dab pa rdzong"@en .
+    
+    bdr:TT36D982804DAAE6D9
+        a                   :Title ;
+        rdfs:label          "dkar mdzes khul gyi dgon sde so so'i lo rgyus gsal bar bshad pa/"@bo-x-ewts .
+    
+    bdr:TT9E564E72F5A22462
+        a                   :TitlePageTitle ;
+        rdfs:label          "khams phyogs dkar mdzes khul gyi dgon sde so so'i lo rgyus gsal bar bshad pa nang bstan gsal ba'i me long /"@bo-x-ewts .
 }

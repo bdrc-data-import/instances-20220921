@@ -36,11 +36,27 @@ bdg:MW29272 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG0641485DA0EB23DB
+        a                   adm:UpdateData ;
+        adm:logDate         "2006-12-23T01:08:33.64Z"^^xsd:dateTime ;
+        adm:logMessage      "published to create scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG29AAD41B1971EB0B
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-09-28T13:09:00.24Z"^^xsd:dateTime ;
         adm:logMessage      "added T00AG02680"@en ;
         adm:logWho          bdu:U00020 .
+    
+    bda:LG52B1F26C1393FFD2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-12T14:27:24.626Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG5A07EB0B5FD299DE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LG792FFA7BAE83E69F
         a                   adm:InitialOutlineData ;
@@ -59,14 +75,26 @@ bdg:MW29272 {
         adm:logMessage      "added T225 (chos pyod)"@en ;
         adm:logWho          bdu:U00043 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
     bda:MW29272  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB3352" ;
         adm:adminAbout      bdr:MW29272 ;
-        adm:facetIndex      619 ;
-        adm:logEntry        bda:LG013B080750CE846C , bda:LG01E03DA7034EB3E2 , bda:LG02EBC7092FF2D018 , bda:LG0452B962A108BA34 , bda:LG29AAD41B1971EB0B , bda:LG792FFA7BAE83E69F , bda:LG7F68DD0922C6FD06 , bda:LGE944C66B4CA59BE4 ;
+        adm:facetIndex      626 ;
+        adm:gitPath         "fd/MW29272.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29272 ;
+        adm:logEntry        bda:LG013B080750CE846C , bda:LG01E03DA7034EB3E2 , bda:LG02EBC7092FF2D018 , bda:LG0452B962A108BA34 , bda:LG0641485DA0EB23DB , bda:LG29AAD41B1971EB0B , bda:LG52B1F26C1393FFD2 , bda:LG5A07EB0B5FD299DE , bda:LG792FFA7BAE83E69F , bda:LG7F68DD0922C6FD06 , bda:LGE944C66B4CA59BE4 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Dega Bumu"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL00F121E379EAB396
         a                   :ContentLocation ;
@@ -2416,7 +2444,27 @@ bdg:MW29272 {
         :contentLocationPage  144 ;
         :contentLocationVolume  2 .
     
-    bdr:MW29272  :hasPart   bdr:MW29272_82D32B , bdr:MW29272_8DEC42 ;
+    bdr:EVB6B4F47CBA46FA56
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:MW29272  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang gsung rab mthu stobs/"@bo-x-ewts ;
+        :biblioNote         "blockprints from recently carved blocks preserrved blocks at stag brag monastery"@en ;
+        :hasPart            bdr:MW29272_82D32B , bdr:MW29272_8DEC42 ;
+        :hasSourcePrintery  bdr:G1PD129185 ;
+        :hasTitle           bdr:TTE261D01DCED2CFBB ;
+        :instanceEvent      bdr:EVB6B4F47CBA46FA56 ;
+        :instanceHasReproduction  bdr:W29272 ;
+        :instanceOf         bdr:WA29272 ;
+        :isRoot             true ;
+        :note               bdr:NT8AEDD7FCE1EDBC7C ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa]"@en ;
+        :publisherName      "[stag brag bla brang]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW29272_000C09
@@ -6842,6 +6890,10 @@ bdg:MW29272 {
         :partTreeIndex      "2.12.49" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT8AEDD7FCE1EDBC7C
+        a                   :Note ;
+        :noteText           "the gsung 'bum contains the author's gsan yig"@en .
+    
     bdr:TT00EB80326421AEB2
         a                   :Title ;
         rdfs:label          "(tsa)zhabs brtan smon tshig tshe dpal rgyas pa'i nyin byed/"@bo-x-ewts .
@@ -7805,6 +7857,10 @@ bdg:MW29272 {
     bdr:TTDF97489ECB8119C2
         a                   :TitlePageTitle ;
         rdfs:label          "('a) zhabs brtan gsol 'debs/"@bo-x-ewts .
+    
+    bdr:TTE261D01DCED2CFBB
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang gsung rab mthu stobs/"@bo-x-ewts .
     
     bdr:TTE26FEAD74BC689EB
         a                   :Title ;

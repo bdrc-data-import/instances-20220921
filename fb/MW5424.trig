@@ -30,6 +30,12 @@ bdg:MW5424 {
         adm:logMessage      "fixed pagination error"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG50A27B316EB73D02
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T13:57:53.48Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG61398E15D7974935
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-09T16:33:08.423Z"^^xsd:dateTime ;
@@ -46,14 +52,37 @@ bdg:MW5424 {
         adm:logMessage      "edited and released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGB92DDFC034D389EC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW5424  a           adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS878" ;
         adm:adminAbout      bdr:MW5424 ;
-        adm:facetIndex      223 ;
-        adm:logEntry        bda:LG230B1C335DA43802 , bda:LG2E2E92C003718A75 , bda:LG4DB0B7487A7279E8 , bda:LG61398E15D7974935 , bda:LG61AA0CC5371F24FE , bda:LG801104C3B7243DFA ;
+        adm:facetIndex      232 ;
+        adm:gitPath         "fb/MW5424.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW5424 ;
+        adm:logEntry        bda:LG230B1C335DA43802 , bda:LG2E2E92C003718A75 , bda:LG4DB0B7487A7279E8 , bda:LG50A27B316EB73D02 , bda:LG61398E15D7974935 , bda:LG61AA0CC5371F24FE , bda:LG801104C3B7243DFA , bda:LGB92DDFC034D389EC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri with the generous support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02DB120E9FA2B7F5
         a                   :ContentLocation ;
@@ -814,7 +843,33 @@ bdg:MW5424 {
         :contentLocationPage  655 ;
         :contentLocationVolume  1 .
     
-    bdr:MW5424  :hasPart    bdr:MW5424_500B83 , bdr:MW5424_6FCA2D ;
+    bdr:EV7ECB8D010A001BF5
+        a                   :PublishedEvent ;
+        :onYear             "2000"^^xsd:gYear .
+    
+    bdr:ID46550CB2D28A7707
+        a                   bdr:HollisId ;
+        rdf:value           "014260973" .
+    
+    bdr:MW5424  a           :Instance ;
+        skos:prefLabel      "gsung 'bum/_'jigs med bsam gtan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID46550CB2D28A7707 ;
+        :biblioNote         "impressions from blocks preserved at sku 'bum byams pa gling in amdo"@en ;
+        :hasPart            bdr:MW5424_500B83 , bdr:MW5424_6FCA2D ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT0580F59E23844088 , bdr:TT32CAE9CAABC92D6C ;
+        :instanceEvent      bdr:EV7ECB8D010A001BF5 ;
+        :instanceHasReproduction  bdr:W5424 ;
+        :instanceOf         bdr:WA5424 ;
+        :isRoot             true ;
+        :note               bdr:NT58917C7E527E30A8 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[sku 'bum]"@en ;
+        :publisherName      "[sku 'bum byams pa gling]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW5424_0285AA
@@ -2411,9 +2466,17 @@ bdg:MW5424 {
         :partTreeIndex      "2.39" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT58917C7E527E30A8
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images of this collection\n5401-5402"@en .
+    
     bdr:TT0010C57732C2A253
         a                   :TitlePageTitle ;
         rdfs:label          "dang po'i sangs rgyas dus kyi 'khor lo'i yum mchog sna tshogs 'bum gyi bum sgrub byed tshul bdud rtsi'i bum bzang rdo rje'i tshir ma zhi byed/ (bum bzang)"@bo-x-ewts .
+    
+    bdr:TT0580F59E23844088
+        a                   :OtherTitle ;
+        rdfs:label          "'jigs med bsam gtan gyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TT08CBCEC6D84598EF
         a                   :TitlePageTitle ;
@@ -2478,6 +2541,10 @@ bdg:MW5424 {
     bdr:TT2CEAF248535DDC32
         a                   :TitlePageTitle ;
         rdfs:label          "bcom ldan 'das dus kyi 'khor lo'i rim gnyis kyi rnam bzhag smon pa'i yul du byed pa'i rdo rje tshig rje blo gros chos skyong gis mdzad pa'i don rgya cher 'grel pa rdo rje'i lam ston gyi bsdus don rdo rje'i lam bzang bgrod pa'i them skas/ (dus rim)"@bo-x-ewts .
+    
+    bdr:TT32CAE9CAABC92D6C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'jigs med bsam gtan/"@bo-x-ewts .
     
     bdr:TT33CC997C251FD0D2
         a                   :TitlePageTitle ;

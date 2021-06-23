@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20443 {
+    bda:LG8FC8F90342B15749
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGAF48274232FECF30
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2010-08-13T11:11:35.162Z"^^xsd:dateTime ;
@@ -22,14 +26,39 @@ bdg:MW20443 {
         adm:logDate         "2009-12-28T11:49:45.68Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20443  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1LS2899" ;
         adm:adminAbout      bdr:MW20443 ;
-        adm:facetIndex      55 ;
-        adm:logEntry        bda:LGAF48274232FECF30 , bda:LGF4BA3AF42AAC183E ;
+        adm:facetIndex      68 ;
+        adm:gitPath         "2a/MW20443.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20443 ;
+        adm:logEntry        bda:LG8FC8F90342B15749 , bda:LGAF48274232FECF30 , bda:LGF4BA3AF42AAC183E , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "lobsang shastri created with the generous support of khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL13800CF4AE198879
         a                   :ContentLocation ;
@@ -187,7 +216,45 @@ bdg:MW20443 {
         :contentLocationInstance  bdr:W20443 ;
         :contentLocationPage  42 .
     
-    bdr:MW20443  :hasPart   bdr:MW20443_050698 , bdr:MW20443_06D95F , bdr:MW20443_11DA70 , bdr:MW20443_1B0FE5 , bdr:MW20443_1D68D0 , bdr:MW20443_2158B9 , bdr:MW20443_2CACBE , bdr:MW20443_4825AE , bdr:MW20443_4B794C , bdr:MW20443_4D8393 , bdr:MW20443_5AC972 , bdr:MW20443_5D6A67 , bdr:MW20443_7B9BE7 , bdr:MW20443_86A518 , bdr:MW20443_893E87 , bdr:MW20443_8EDA6B , bdr:MW20443_9AAD38 , bdr:MW20443_AF0B84 , bdr:MW20443_B0019A , bdr:MW20443_BD4A44 , bdr:MW20443_D2FBFB , bdr:MW20443_E09A0E , bdr:MW20443_E15745 , bdr:MW20443_E622B8 , bdr:MW20443_EC046D , bdr:MW20443_EE4A75 ;
+    bdr:EV3D2C2CF7D08F3E35
+        a                   :PublishedEvent ;
+        :onOrAbout          "1993,1994" .
+    
+    bdr:ID1FB26F45B6BF32A2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95918918" .
+    
+    bdr:ID463EC4E61363ABFE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ970.O73 R56 1994" .
+    
+    bdr:ID5F434926E5A80321
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542003607" .
+    
+    bdr:IDE71B16628B9AA7B7
+        a                   bdr:HollisId ;
+        rdf:value           "014258155" .
+    
+    bdr:MW20443  a          :Instance ;
+        skos:prefLabel      "lo ras pa'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1FB26F45B6BF32A2 , bdr:ID463EC4E61363ABFE , bdr:ID5F434926E5A80321 , bdr:IDE71B16628B9AA7B7 ;
+        :authorshipStatement  "rgod tshang ras pas brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/, par thengs gnyis pa/"@bo-x-ewts ;
+        :hasPart            bdr:MW20443_050698 , bdr:MW20443_06D95F , bdr:MW20443_11DA70 , bdr:MW20443_1B0FE5 , bdr:MW20443_1D68D0 , bdr:MW20443_2158B9 , bdr:MW20443_2CACBE , bdr:MW20443_4825AE , bdr:MW20443_4B794C , bdr:MW20443_4D8393 , bdr:MW20443_5AC972 , bdr:MW20443_5D6A67 , bdr:MW20443_7B9BE7 , bdr:MW20443_86A518 , bdr:MW20443_893E87 , bdr:MW20443_8EDA6B , bdr:MW20443_9AAD38 , bdr:MW20443_AF0B84 , bdr:MW20443_B0019A , bdr:MW20443_BD4A44 , bdr:MW20443_D2FBFB , bdr:MW20443_E09A0E , bdr:MW20443_E15745 , bdr:MW20443_E622B8 , bdr:MW20443_EC046D , bdr:MW20443_EE4A75 ;
+        :hasTitle           bdr:TT0F85D4C688BF268F , bdr:TT6850E2BFB993C9FF , bdr:TTD0D2FC261C58FEB5 ;
+        :instanceEvent      bdr:EV3D2C2CF7D08F3E35 ;
+        :instanceHasReproduction  bdr:W20443 ;
+        :instanceOf         bdr:WA20443 ;
+        :isRoot             true ;
+        :note               bdr:NT55166FFE42275B22 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS20443 ;
+        :workExtentStatement  "3, 113 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20443_050698
@@ -578,9 +645,17 @@ bdg:MW20443 {
         :partTreeIndex      "24" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT55166FFE42275B22
+        a                   :Note ;
+        :noteText           "for preservation purposes; not to be distributed\n4322\n\ntitle transcribed on the library of congress cataloging record is incorrect: chos ro-las-pa'i rnam thar"@en .
+    
     bdr:TT0971690A1992BFA3
         a                   :TitlePageTitle ;
         rdfs:label          "'chi khar phan pa'i gdams ngag mgur/"@bo-x-ewts .
+    
+    bdr:TT0F85D4C688BF268F
+        a                   :OtherTitle ;
+        rdfs:label          "chos rje lo ras pa'i rnam thar/"@bo-x-ewts .
     
     bdr:TT11D9106F3A1984C7
         a                   :TitlePageTitle ;
@@ -626,6 +701,10 @@ bdg:MW20443 {
         a                   :TitlePageTitle ;
         rdfs:label          "sgom chen pa rnams la mgur/"@bo-x-ewts .
     
+    bdr:TT6850E2BFB993C9FF
+        a                   :Title ;
+        rdfs:label          "lo ras pa'i rnam thar/"@bo-x-ewts .
+    
     bdr:TT73AD7DFBB89CCB7B
         a                   :TitlePageTitle ;
         rdfs:label          "bla ma'i sku drin dran pa'i mgur/"@bo-x-ewts .
@@ -657,6 +736,10 @@ bdg:MW20443 {
     bdr:TTCBECC4D89BE7C0F5
         a                   :TitlePageTitle ;
         rdfs:label          "'gyod med bzhi'i mgur ma/"@bo-x-ewts .
+    
+    bdr:TTD0D2FC261C58FEB5
+        a                   :OtherTitle ;
+        rdfs:label          "chos rje lo ras pa'i rnam par thar pa bdud rtsi'i phreng ba/"@bo-x-ewts .
     
     bdr:TTD4080787BB9E7C81
         a                   :TitlePageTitle ;

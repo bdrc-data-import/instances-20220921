@@ -17,6 +17,12 @@ bdg:MW1PD5302 {
         adm:logDate         "2010-05-07T11:50:31.856Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LG540DFAD12AC94629
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-05-18T14:03:59.436Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00021 .
+    
     bda:LG6618A0FBAAE0FE33
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-04-29T11:50:33.799Z"^^xsd:dateTime ;
@@ -33,14 +39,33 @@ bdg:MW1PD5302 {
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1PD5302  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD97421" ;
         adm:adminAbout      bdr:MW1PD5302 ;
-        adm:facetIndex      91 ;
-        adm:logEntry        bda:LG43F86E11AE71C84D , bda:LG6618A0FBAAE0FE33 , bda:LGC885C1BBAEE107D3 , bda:LGF52B3E9841ADE318 ;
+        adm:facetIndex      100 ;
+        adm:gitPath         "65/MW1PD5302.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD5302 ;
+        adm:logEntry        bda:LG43F86E11AE71C84D , bda:LG540DFAD12AC94629 , bda:LG6618A0FBAAE0FE33 , bda:LGC885C1BBAEE107D3 , bda:LGF52B3E9841ADE318 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL0942126CDD5CA2A4
         a                   :ContentLocation ;
@@ -300,7 +325,36 @@ bdg:MW1PD5302 {
         :contentLocationInstance  bdr:W1PD5302 ;
         :contentLocationPage  12 .
     
-    bdr:MW1PD5302  :hasPart  bdr:MW1PD5302_3B6FF5 , bdr:MW1PD5302_3F36AE , bdr:MW1PD5302_49D680 , bdr:MW1PD5302_5BAF95 , bdr:MW1PD5302_6AFFE3 , bdr:MW1PD5302_8E52F5 , bdr:MW1PD5302_97D65A , bdr:MW1PD5302_99646D , bdr:MW1PD5302_996724 , bdr:MW1PD5302_A15CFA , bdr:MW1PD5302_B512B4 , bdr:MW1PD5302_FD9654 ;
+    bdr:EVB9EF1553E2215210
+        a                   :PublishedEvent ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:ID2426928236D9525C
+        a                   bdr:HollisId ;
+        rdf:value           "014257825" .
+    
+    bdr:IDD4A0B22A10F8B6EE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542009680" .
+    
+    bdr:MW1PD5302  a        :Instance ;
+        skos:prefLabel      "gro tshang bod rigs kyi byung ba brjod pa/"@bo-x-ewts , "zhuo cang zang zu yuan liu kao"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2426928236D9525C , bdr:IDD4A0B22A10F8B6EE ;
+        :authorshipStatement  "ga rang . kang xiu dong zhu; ga rang . shang ma jie zhu/"@bo-x-ewts ;
+        :hasPart            bdr:MW1PD5302_3B6FF5 , bdr:MW1PD5302_3F36AE , bdr:MW1PD5302_49D680 , bdr:MW1PD5302_5BAF95 , bdr:MW1PD5302_6AFFE3 , bdr:MW1PD5302_8E52F5 , bdr:MW1PD5302_97D65A , bdr:MW1PD5302_99646D , bdr:MW1PD5302_996724 , bdr:MW1PD5302_A15CFA , bdr:MW1PD5302_B512B4 , bdr:MW1PD5302_FD9654 ;
+        :hasTitle           bdr:TT0A8499317750CF83 , bdr:TT1924176741AB2721 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVB9EF1553E2215210 ;
+        :instanceHasReproduction  bdr:W1PD5302 ;
+        :instanceOf         bdr:WA1PD5302 ;
+        :isRoot             true ;
+        :note               bdr:NTE58FB68DCEDC3479 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "xi ning"@en ;
+        :publisherName      "qing hai min zu chu ban she"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3, 4, 2, 208 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1PD5302_07D1CB
@@ -868,6 +922,14 @@ bdg:MW1PD5302 {
         :partTreeIndex      "04" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:NTE58FB68DCEDC3479
+        a                   :Note ;
+        :noteText           "text in chinese only"@en .
+    
+    bdr:TT0A8499317750CF83
+        a                   :Title ;
+        rdfs:label          "gro tshang bod rigs kyi byung ba brjod pa/"@bo-x-ewts .
+    
     bdr:TT0ECC945AE55286E0
         a                   :Title ;
         rdfs:label          "第二节 无弋爰剑及其子孙对河湟地区的开发"@zh-hans .
@@ -879,6 +941,10 @@ bdg:MW1PD5302 {
     bdr:TT15B9BFF72772995C
         a                   :Title ;
         rdfs:label          "第二章 远古时期卓仓地区的羌人活动"@zh-hans .
+    
+    bdr:TT1924176741AB2721
+        a                   :OtherTitle ;
+        rdfs:label          "zhuo cang zang zu yuan liu kao"@zh-latn-pinyin-x-ndia .
     
     bdr:TT195F4C82CC50648E
         a                   :Title ;

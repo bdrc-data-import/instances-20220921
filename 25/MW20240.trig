@@ -23,14 +23,37 @@ bdg:MW20240 {
         adm:logDate         "2010-10-20T15:56:52.769Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
     
+    bda:LGC032952684C9F2C1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW20240  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB94520" ;
         adm:adminAbout      bdr:MW20240 ;
-        adm:facetIndex      25 ;
-        adm:logEntry        bda:LG1C208F8B94D87702 , bda:LGB5506EC13AACB60E ;
+        adm:facetIndex      35 ;
+        adm:gitPath         "25/MW20240.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20240 ;
+        adm:logEntry        bda:LG1C208F8B94D87702 , bda:LGB5506EC13AACB60E , bda:LGC032952684C9F2C1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "bumu dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01DAE1D5DB1955DF
         a                   :ContentLocation ;
@@ -88,7 +111,44 @@ bdg:MW20240 {
         :contentLocationPage  12 ;
         :contentLocationVolume  1 .
     
-    bdr:MW20240  :hasPart   bdr:MW20240_1E4C5D , bdr:MW20240_1FCE8E , bdr:MW20240_23BCF1 , bdr:MW20240_2EC8CF , bdr:MW20240_332B22 , bdr:MW20240_5FA780 , bdr:MW20240_84A512 , bdr:MW20240_F98836 ;
+    bdr:EV85325E35B7480F50
+        a                   :PublishedEvent ;
+        :onYear             "1987"^^xsd:gYear .
+    
+    bdr:ID2234AB5442C41CE1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95906222" .
+    
+    bdr:ID3A171924B2B8E2B0
+        a                   bdr:HollisId ;
+        rdf:value           "014258102" .
+    
+    bdr:ID9D899A4271EA2435
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540900520" .
+    
+    bdr:IDB59AC9F6C6DDB888
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3611 .N87 1987" .
+    
+    bdr:MW20240  a          :Instance ;
+        skos:altLabel       "cheng tzu fa"@zh-latn-wadegile ;
+        skos:prefLabel      "yi ge'i dag sdeb skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2234AB5442C41CE1 , bdr:ID3A171924B2B8E2B0 , bdr:ID9D899A4271EA2435 , bdr:IDB59AC9F6C6DDB888 ;
+        :authorshipStatement  "tshogs shul bla ma nor bu bstan 'dzin gyis brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW20240_1E4C5D , bdr:MW20240_1FCE8E , bdr:MW20240_23BCF1 , bdr:MW20240_2EC8CF , bdr:MW20240_332B22 , bdr:MW20240_5FA780 , bdr:MW20240_84A512 , bdr:MW20240_F98836 ;
+        :hasTitle           bdr:TT9FAE8D5B408DFD25 , bdr:TTFC1FFADD575C5752 ;
+        :instanceEvent      bdr:EV85325E35B7480F50 ;
+        :instanceHasReproduction  bdr:W20240 ;
+        :instanceOf         bdr:WA20240 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS19959 ;
+        :workExtentStatement  "4, 6, 129 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW20240_1E4C5D
@@ -236,6 +296,10 @@ bdg:MW20240 {
         a                   :Title ;
         rdfs:label          "zur gsal/"@bo-x-ewts .
     
+    bdr:TT9FAE8D5B408DFD25
+        a                   :ColophonTitle ;
+        rdfs:label          "cheng tzu fa"@zh-latn-wadegile .
+    
     bdr:TTB0019523822CC16F
         a                   :Title ;
         rdfs:label          "sa mtha'i rnam grangs mdo mtshon/"@bo-x-ewts .
@@ -251,6 +315,10 @@ bdg:MW20240 {
     bdr:TTF897899D95C2D57A
         a                   :Title ;
         rdfs:label          "dkar chag"@bo-x-ewts .
+    
+    bdr:TTFC1FFADD575C5752
+        a                   :Title ;
+        rdfs:label          "yi ge'i dag sdeb skor/"@bo-x-ewts .
     
     bdr:TTFCFE3ABA7DA3B9B7
         a                   :Title ;

@@ -12,20 +12,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM607 {
+    bda:LG1CD1376277734D3E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGA0913719525B555D
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-04T16:01:22.909Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAEFB24DB939788B3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-10T10:17:16.298Z"^^xsd:dateTime ;
+        adm:logMessage      "added  donors name"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM23981CC0  a     adm:InitialDataImport ;
         adm:logDate         "2020-03-04T16:22:37.158Z"^^xsd:dateTime ;
         adm:logMessage      "structure outline"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMessage      "imported pubinfo for W1NLM607"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
     bda:MW1NLM607  a        adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2KG210771" ;
         adm:adminAbout      bdr:MW1NLM607 ;
-        adm:facetIndex      22 ;
-        adm:logEntry        bda:LGIM23981CC0 ;
+        adm:facetIndex      30 ;
+        adm:gitPath         "51/MW1NLM607.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM607 ;
+        adm:logEntry        bda:LG1CD1376277734D3E , bda:LGA0913719525B555D , bda:LGAEFB24DB939788B3 , bda:LGIM23981CC0 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Karma Gongde"@en ;
-        adm:outlineType     bda:OutlineTypeNotAssigned .
+        adm:outlineType     bda:OutlineTypeNotAssigned ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL1D7392758D2AA6A0
         a                   :ContentLocation ;
@@ -97,7 +133,19 @@ bdg:MW1NLM607 {
         :contentLocationPage  158 ;
         :contentLocationVolume  1 .
     
-    bdr:MW1NLM607  :hasPart  bdr:MW1NLM607_0CE8E3 , bdr:MW1NLM607_191C93 , bdr:MW1NLM607_302DED , bdr:MW1NLM607_433428 , bdr:MW1NLM607_656083 , bdr:MW1NLM607_6B41DE , bdr:MW1NLM607_901EFE , bdr:MW1NLM607_93E70E , bdr:MW1NLM607_A2865C , bdr:MW1NLM607_F5DF23 ;
+    bdr:MW1NLM607  a        :Instance ;
+        skos:prefLabel      "bkra shis brtsegs pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "14x4.5" ;
+        :hasPart            bdr:MW1NLM607_0CE8E3 , bdr:MW1NLM607_191C93 , bdr:MW1NLM607_302DED , bdr:MW1NLM607_433428 , bdr:MW1NLM607_656083 , bdr:MW1NLM607_6B41DE , bdr:MW1NLM607_901EFE , bdr:MW1NLM607_93E70E , bdr:MW1NLM607_A2865C , bdr:MW1NLM607_F5DF23 ;
+        :hasTitle           bdr:TT40B6CE1BDF4E7FD1 ;
+        :instanceHasReproduction  bdr:W1NLM607 ;
+        :instanceOf         bdr:WA1NLM130 ;
+        :isRoot             true ;
+        :note               bdr:NT4B8413BF59B87992 , bdr:NTF9397F5114E9E30A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "23 ff., 5 ff., 4 ff., 5 ff., 8 ff., 1 ff., 3 ff., 5 ff., 24 ff., 11 ff." ;
         :workPagination     bdr:PaginationRelative .
     
     bdr:MW1NLM607_0CE8E3
@@ -240,6 +288,14 @@ bdg:MW1NLM607 {
         :partTreeIndex      "07" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT4B8413BF59B87992
+        a                   :Note ;
+        :noteText           "coverType: paper cover"@en .
+    
+    bdr:NTF9397F5114E9E30A
+        a                   :Note ;
+        :noteText           "nlmId: M0058520"@en .
+    
     bdr:TT277A6EA226B6B7AF
         a                   :Title ;
         rdfs:label          "sngags kyi rtsa ltung dang sbom po'i bshags pa sdig ltung mun sel/"@bo-x-ewts .
@@ -247,6 +303,10 @@ bdg:MW1NLM607 {
     bdr:TT3F0C55328D72D42B
         a                   :Title ;
         rdfs:label          "kun gzigs pan chen thams cad mkhyen pa nas gnang ba'i shamab+ha la'i smon tshig"@bo-x-ewts .
+    
+    bdr:TT40B6CE1BDF4E7FD1
+        a                   :Title ;
+        rdfs:label          "bkra shis brtsegs pa sogs/"@bo-x-ewts .
     
     bdr:TT58524CE3A21557A6
         a                   :Title ;

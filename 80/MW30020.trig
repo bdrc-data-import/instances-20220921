@@ -12,6 +12,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30020 {
+    bda:LG07823032DDF52C7A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG59D82899C8184BEA
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-27T10:21:01.803Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
     bda:LGAA9E9400A4A93DA9
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2009-12-28T10:00:20.456Z"^^xsd:dateTime ;
@@ -35,14 +45,39 @@ bdg:MW30020 {
         adm:logMessage      "fixed numbers and normalazed"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30020  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB87572" ;
         adm:adminAbout      bdr:MW30020 ;
-        adm:facetIndex      88 ;
-        adm:logEntry        bda:LGAA9E9400A4A93DA9 , bda:LGC34241585BB8CD9D , bda:LGE873E4AD726B2E5C , bda:LGED4FB22BB4E721BF ;
+        adm:facetIndex      103 ;
+        adm:gitPath         "80/MW30020.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30020 ;
+        adm:logEntry        bda:LG07823032DDF52C7A , bda:LG59D82899C8184BEA , bda:LGAA9E9400A4A93DA9 , bda:LGC34241585BB8CD9D , bda:LGE873E4AD726B2E5C , bda:LGED4FB22BB4E721BF , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL037B039614DD15BB
         a                   :ContentLocation ;
@@ -496,7 +531,53 @@ bdg:MW30020 {
         :contentLocationPage  23 ;
         :contentLocationVolume  1 .
     
-    bdr:MW30020  :hasPart   bdr:MW30020_3CF7E0 , bdr:MW30020_6E8660 ;
+    bdr:CRC35019A006EB7E6D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9469 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB7743DDC706044D6
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID62C484971C400CC8
+        a                   bdr:HollisId ;
+        rdf:value           "014260573" .
+    
+    bdr:ID7FD6AB0FB37D1BA6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004314768" .
+    
+    bdr:ID951FA62E12B610B6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542010077" .
+    
+    bdr:IDFCE5D1A10ACDC37F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7679.4 .B64 20004 VOL. 12, ETC. BQ2685" .
+    
+    bdr:MW30020  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "chos mngon pa kun las btus kyi Tik rnam bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID62C484971C400CC8 , bdr:ID7FD6AB0FB37D1BA6 , bdr:ID951FA62E12B610B6 , bdr:IDFCE5D1A10ACDC37F ;
+        :authorshipStatement  "mkhan po dam chos zla bas bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "isbn v. 2: 7542010182"@en ;
+        :creator            bdr:CRC35019A006EB7E6D ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW30020_3CF7E0 , bdr:MW30020_6E8660 ;
+        :hasTitle           bdr:TT3C0CD0532F36EC6E , bdr:TTBCA282D74B28AE29 , bdr:TTD73389761FF78850 ;
+        :instanceEvent      bdr:EVB7743DDC706044D6 ;
+        :instanceHasReproduction  bdr:IE30020 , bdr:W30020 ;
+        :instanceOf         bdr:WA30020 ;
+        :isRoot             true ;
+        :note               bdr:NT2A1FF8DA58A0C71D ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS28983 ;
+        :seriesNumber       "v. 12-13" ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30020_0B2D78
@@ -1334,6 +1415,10 @@ bdg:MW30020 {
         :partTreeIndex      "1.1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT2A1FF8DA58A0C71D
+        a                   :Note ;
+        :noteText           "-5752"@en .
+    
     bdr:TT0C3B77EEDC7FFDFA
         a                   :Title ;
         rdfs:label          "mjug gi gtam/"@bo-x-ewts .
@@ -1349,6 +1434,10 @@ bdg:MW30020 {
     bdr:TT22D0F8E2BB45B257
         a                   :Title ;
         rdfs:label          "sgrig pa po'i gtam/"@bo-x-ewts .
+    
+    bdr:TT3C0CD0532F36EC6E
+        a                   :OtherTitle ;
+        rdfs:label          "chos mngon pa'i mdzod kyi 'grel pa rgyas par spros pa grub bde'i dpyid 'jo/"@bo-x-ewts .
     
     bdr:TT3D23B0DBADC2FF5F
         a                   :Title ;
@@ -1382,6 +1471,10 @@ bdg:MW30020 {
         a                   :Title ;
         rdfs:label          "gleng gzhi/"@bo-x-ewts .
     
+    bdr:TTBCA282D74B28AE29
+        a                   :Title ;
+        rdfs:label          "chos mngon pa kun las btus kyi Tik rnam bshad nyi ma'i 'od zer/"@bo-x-ewts .
+    
     bdr:TTC1517BE3FFF9DEA4
         a                   :Title ;
         rdfs:label          "sgrig pa po'i gtam/"@bo-x-ewts .
@@ -1397,6 +1490,10 @@ bdg:MW30020 {
     bdr:TTCDCF2010FC7575BC
         a                   :Title ;
         rdfs:label          "mngon pa mdzod kyi 'grel pa grub bde'i dpyid 'jo/ (stod cha)"@bo-x-ewts .
+    
+    bdr:TTD73389761FF78850
+        a                   :OtherTitle ;
+        rdfs:label          "mngon pa/"@bo-x-ewts .
     
     bdr:TTE04E2B34022C2EAF
         a                   :Title ;

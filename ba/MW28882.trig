@@ -12,6 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW28882 {
+    bda:LG22DFA95769D37B83
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG5DCDE0B8B4D1B3BC
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-12-14T16:26:30.577Z"^^xsd:dateTime ;
@@ -28,14 +32,33 @@ bdg:MW28882 {
         adm:logDate         "2010-03-22T15:48:40.775Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28882  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1JT2225" ;
         adm:adminAbout      bdr:MW28882 ;
-        adm:facetIndex      14 ;
-        adm:logEntry        bda:LG5DCDE0B8B4D1B3BC , bda:LG6E8FD6073E66B412 , bda:LG8191EF065A53B9A5 ;
+        adm:facetIndex      24 ;
+        adm:gitPath         "ba/MW28882.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28882 ;
+        adm:logEntry        bda:LG22DFA95769D37B83 , bda:LG5DCDE0B8B4D1B3BC , bda:LG6E8FD6073E66B412 , bda:LG8191EF065A53B9A5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "jigme tashi with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL07EB94A8BF9E060B
         a                   :ContentLocation ;
@@ -72,7 +95,45 @@ bdg:MW28882 {
         :contentLocationPage  10 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28882  :hasPart   bdr:MW28882_0F523F , bdr:MW28882_26B575 , bdr:MW28882_49BA85 , bdr:MW28882_4A3F1A , bdr:MW28882_778F18 ;
+    bdr:EV340961DAD0B27AB1
+        a                   :PublishedEvent ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:ID12500ACD6DF82E4C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950.N347 R56 1992" .
+    
+    bdr:ID1FA82D86F9D469D0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95903960" .
+    
+    bdr:ID2289ECF5F5BFF894
+        a                   bdr:HollisId ;
+        rdf:value           "014259818" .
+    
+    bdr:ID338FD58274FEE359
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542003186" .
+    
+    bdr:MW28882  a          :Instance ;
+        skos:altLabel       "te lo pa ho na jo pa chuan lueh"@zh-latn-wadegile ;
+        skos:prefLabel      "rje btsun ti lo pa'i rnam mgur dang dpal nA ro pa'i rnam thar bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID12500ACD6DF82E4C , bdr:ID1FA82D86F9D469D0 , bdr:ID2289ECF5F5BFF894 , bdr:ID338FD58274FEE359 ;
+        :authorshipStatement  "rin chen rnam rgyal dang gu ru dho tstsha gnyis kyis brtams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW28882_0F523F , bdr:MW28882_26B575 , bdr:MW28882_49BA85 , bdr:MW28882_4A3F1A , bdr:MW28882_778F18 ;
+        :hasTitle           bdr:TT565EF44365022500 , bdr:TT7700B892016195BB ;
+        :instanceEvent      bdr:EV340961DAD0B27AB1 ;
+        :instanceHasReproduction  bdr:W28882 ;
+        :instanceOf         bdr:WA28882 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS20443 ;
+        :workExtentStatement  "5, 151 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28882_0F523F
@@ -158,9 +219,17 @@ bdg:MW28882 {
         a                   :Title ;
         rdfs:label          "mtsho sngon grangs nyung mi rigs kyi gna' dpe'i dpe tshogs par du bskrun pa'i gsal bshad/"@bo-x-ewts .
     
+    bdr:TT565EF44365022500
+        a                   :ColophonTitle ;
+        rdfs:label          "te lo pa ho na jo pa chuan lueh"@zh-latn-wadegile .
+    
     bdr:TT6A414C666D696C0F
         a                   :Title ;
         rdfs:label          "mkhas grub mnyam med dpal nA ro pa'i rnam par thar pa dri med legs bshad bde chen 'brug sgra/"@bo-x-ewts .
+    
+    bdr:TT7700B892016195BB
+        a                   :Title ;
+        rdfs:label          "rje btsun ti lo pa'i rnam mgur dang dpal nA ro pa'i rnam thar bsdus pa/"@bo-x-ewts .
     
     bdr:TT81C31D3A9E319716
         a                   :Title ;

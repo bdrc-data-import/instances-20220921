@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30022 {
+    bda:LG287CA794B68864C7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG527F2825F0F26B23
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-10-14T09:35:13.537Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00003 .
+    
+    bda:LG90599A269C428431
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-02-02T15:00:57.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added copyrightpagetitle"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LGCF2CCF3479720D27
         a                   adm:UpdateOutlineData ;
@@ -23,14 +33,45 @@ bdg:MW30022 {
         adm:logMessage      "zhus dag byas"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGECD3E71579BAE450
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-27T10:22:23.178Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW30022  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O2DB87635" ;
         adm:adminAbout      bdr:MW30022 ;
-        adm:facetIndex      47 ;
-        adm:logEntry        bda:LG527F2825F0F26B23 , bda:LGCF2CCF3479720D27 ;
+        adm:facetIndex      63 ;
+        adm:gitPath         "b8/MW30022.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30022 ;
+        adm:logEntry        bda:LG287CA794B68864C7 , bda:LG527F2825F0F26B23 , bda:LG90599A269C428431 , bda:LGCF2CCF3479720D27 , bda:LGECD3E71579BAE450 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "Bumu Dega; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL042CE33F4A8BF498
         a                   :ContentLocation ;
@@ -194,7 +235,53 @@ bdg:MW30022 {
         :contentLocationInstance  bdr:W30022 ;
         :contentLocationPage  11 .
     
-    bdr:MW30022  :hasPart   bdr:MW30022_30E2E2 , bdr:MW30022_3C39A6 , bdr:MW30022_6470D6 , bdr:MW30022_96809D , bdr:MW30022_AD2307 , bdr:MW30022_D37EF1 , bdr:MW30022_E89BB9 ;
+    bdr:CRFDEB8997F288AB48
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9469 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV440F8E973D2BF59A
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID2351677807264A66
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542009303" .
+    
+    bdr:ID3AAD973047EA68BC
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7679.4 .B64 2001 V. 15 BQ1957" .
+    
+    bdr:ID44F05F5DC969B504
+        a                   bdr:HollisId ;
+        rdf:value           "014260575" .
+    
+    bdr:ID649FCD79917FEE0C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001416990" .
+    
+    bdr:MW30022  a          :Instance , :SerialInstance ;
+        skos:altLabel       "内明学 · 波罗蜜多"@zh-hans ;
+        skos:prefLabel      "phar phyin/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2351677807264A66 , bdr:ID3AAD973047EA68BC , bdr:ID44F05F5DC969B504 , bdr:ID649FCD79917FEE0C ;
+        :authorshipStatement  "[karma pa mi bskyod rdo rjes mdzad]; mkhan po dam chos zla bas bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "printed from computerizde input"@en ;
+        :creator            bdr:CRFDEB8997F288AB48 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW30022_30E2E2 , bdr:MW30022_3C39A6 , bdr:MW30022_6470D6 , bdr:MW30022_96809D , bdr:MW30022_AD2307 , bdr:MW30022_D37EF1 , bdr:MW30022_E89BB9 ;
+        :hasTitle           bdr:TT072C3CD352DC5401 , bdr:TT6F80AC80BA14B0DA , bdr:TTC89BEC2181626CBE , bdr:TTF1AD114FF0BF1A6B ;
+        :instanceEvent      bdr:EV440F8E973D2BF59A ;
+        :instanceHasReproduction  bdr:IE30022 , bdr:W30022 ;
+        :instanceOf         bdr:WA30022 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS28983 ;
+        :seriesNumber       "v. 15" ;
+        :workExtentStatement  "8, 3, 2, 1, 1176 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW30022_1BE0E4
@@ -547,6 +634,10 @@ bdg:MW30022 {
         :partTreeIndex      "5.2.3.2" ;
         :partType           bdr:PartTypeChapter .
     
+    bdr:TT072C3CD352DC5401
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "内明学 · 波罗蜜多"@zh-hans .
+    
     bdr:TT08203B6A4EE160D3
         a                   :Title ;
         rdfs:label          "skabs dang po/ rnam pa thams cad mkhyen pa nyid kyi 'grel pa/"@bo-x-ewts .
@@ -595,6 +686,10 @@ bdg:MW30022 {
         a                   :Title ;
         rdfs:label          "skabs gsum pa/ thams cad shes pa nyid kyi 'grel pa/"@bo-x-ewts .
     
+    bdr:TT6F80AC80BA14B0DA
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes rab kyi pha rol tu phyin pa'i lung chos mtha' dag gi bdud rtsi snying por gyur pa gang la ldan pa'i gzhi rje btsun mchog tu dgyes par ngal gso ba'i yongs 'du sa brtol gyi ljon pa rgyas pa/"@bo-x-ewts .
+    
     bdr:TT78E3994F5E3860AA
         a                   :Title ;
         rdfs:label          "sher phyin mngon rtogs rgyan gyi 'grel pa yongs 'du sa brtol ljon pa rgyas pa/"@bo-x-ewts .
@@ -614,4 +709,12 @@ bdg:MW30022 {
     bdr:TTAF18D7F94552E20D
         a                   :Title ;
         rdfs:label          "skabs brgyas pa/ chos kyi sku'i 'grel pa/"@bo-x-ewts .
+    
+    bdr:TTC89BEC2181626CBE
+        a                   :Title ;
+        rdfs:label          "phar phyin/"@bo-x-ewts .
+    
+    bdr:TTF1AD114FF0BF1A6B
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "nei ming xue · bo luo mi duo"@zh-latn-pinyin-x-ndia .
 }

@@ -12,20 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW15651 {
+    bda:LG39707E8710791371
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-01-14T12:52:00.463Z"^^xsd:dateTime ;
+        adm:logMessage      "completed and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCB08F991A7BBE282
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGD13ECB96C5EBC161
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-04-27T12:02:07.882Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW15651  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1PD102985" ;
         adm:adminAbout      bdr:MW15651 ;
-        adm:facetIndex      7 ;
-        adm:logEntry        bda:LGD13ECB96C5EBC161 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "d0/MW15651.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW15651 ;
+        adm:logEntry        bda:LG39707E8710791371 , bda:LGCB08F991A7BBE282 , bda:LGD13ECB96C5EBC161 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "paldor; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL024E619BF6478CF3
         a                   :ContentLocation ;
@@ -57,7 +86,23 @@ bdg:MW15651 {
         :contentLocationInstance  bdr:W15651 ;
         :contentLocationPage  56 .
     
-    bdr:MW15651  :hasPart   bdr:MW15651_5E1A58 , bdr:MW15651_89F066 , bdr:MW15651_AA868B , bdr:MW15651_D3B652 , bdr:MW15651_F494A0 ;
+    bdr:ID085D38C43C01051C
+        a                   bdr:HollisId ;
+        rdf:value           "014254743" .
+    
+    bdr:MW15651  a          :Instance ;
+        skos:prefLabel      "bya rung kha shor gyi lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID085D38C43C01051C ;
+        :hasPart            bdr:MW15651_5E1A58 , bdr:MW15651_89F066 , bdr:MW15651_AA868B , bdr:MW15651_D3B652 , bdr:MW15651_F494A0 ;
+        :hasTitle           bdr:TTC3EE6305897D455F , bdr:TTED272F24EE3BA8D8 ;
+        :instanceHasReproduction  bdr:W15651 ;
+        :instanceOf         bdr:WA15651 ;
+        :isRoot             true ;
+        :note               bdr:NTE10C0EE634CAC1A6 , bdr:NTEC61400F89D92C5A , bdr:NTEFB05DA095B797A7 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "32 ff." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW15651_5E1A58
@@ -119,4 +164,24 @@ bdg:MW15651 {
         :partOf             bdr:MW15651 ;
         :partTreeIndex      "3" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:NTE10C0EE634CAC1A6
+        a                   :Note ;
+        :noteText           "Gnas yig phyogs bsgrigs / Dge-'dun-chos-'phel sogs kyis brtsams. -- Khreng-tu'u : Si khron Mi rigs Dpe skrun Khang, 1998, pp. 303-339.\nGter ma recovered by Lha-btsun Sngon-mo (Lha-dbang-rgya-mtsho-blo-gros)"@en .
+    
+    bdr:NTEC61400F89D92C5A
+        a                   :Note ;
+        :noteText           "the last folio has seven rows of line and rest of the text has only five rows of line"@en .
+    
+    bdr:NTEFB05DA095B797A7
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TTC3EE6305897D455F
+        a                   :Title ;
+        rdfs:label          "bya rung kha shor gyi lo rgyus/"@bo-x-ewts .
+    
+    bdr:TTED272F24EE3BA8D8
+        a                   :TitlePageTitle ;
+        rdfs:label          "mchod rten chen po bya rung kha shor gyi lo rgyus thos pas grol ba/"@bo-x-ewts .
 }

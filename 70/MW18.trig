@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW18 {
+    bda:LG29DB72430E5DD348
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-06T14:25:24.055Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and soyrce printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:LG4C42E1E062D7FD2D
         a                   adm:UpdateOutlineData ;
         adm:logDate         "2014-02-27T11:11:06.547Z"^^xsd:dateTime ;
@@ -36,20 +42,48 @@ bdg:MW18 {
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG7C0E860377AA292D
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-02-27T10:34:26.836Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG98210765C7389EF5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LGC16F92D790F1FF26
         a                   adm:InitialOutlineData ;
         adm:logDate         "2010-07-12T10:42:01.783Z"^^xsd:dateTime ;
         adm:logMessage      "created outline"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW18  a             adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1KG5489" ;
         adm:adminAbout      bdr:MW18 ;
-        adm:facetIndex      215 ;
-        adm:logEntry        bda:LG4C42E1E062D7FD2D , bda:LG502F559C400B1352 , bda:LG511E6543CE0069EB , bda:LG64A0FF8B0AFE3C93 , bda:LGC16F92D790F1FF26 ;
+        adm:facetIndex      227 ;
+        adm:gitPath         "70/MW18.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW18 ;
+        adm:logEntry        bda:LG29DB72430E5DD348 , bda:LG4C42E1E062D7FD2D , bda:LG502F559C400B1352 , bda:LG511E6543CE0069EB , bda:LG64A0FF8B0AFE3C93 , bda:LG7C0E860377AA292D , bda:LG98210765C7389EF5 , bda:LGC16F92D790F1FF26 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "karma gongde; outlined with the gracious support of the khyentse foundation"@en ;
-        adm:outlineType     bda:OutlineTypeNoType .
+        adm:outlineType     bda:OutlineTypeNoType ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL02225D6938B9E210
         a                   :ContentLocation ;
@@ -614,7 +648,42 @@ bdg:MW18 {
         :contentLocationPage  259 ;
         :contentLocationVolume  1 .
     
-    bdr:MW18  :hasPart      bdr:MW18_335B1C , bdr:MW18_6E1191 ;
+    bdr:EV0A1277EFF1A50EC8
+        a                   :PublishedEvent ;
+        :onYear             "1977"^^xsd:gYear .
+    
+    bdr:ID33DB5F907160C68B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77903285" .
+    
+    bdr:ID34FD9F3E5C2A5802
+        a                   bdr:HollisId ;
+        rdf:value           "014254798" .
+    
+    bdr:ID50AB9A76704B0A00
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .G752 1977" .
+    
+    bdr:MW18  a             :Instance ;
+        skos:prefLabel      "sgrub thabs 'dod 'jo'i 'bum bzang /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID33DB5F907160C68B , bdr:ID34FD9F3E5C2A5802 , bdr:ID50AB9A76704B0A00 ;
+        :authorshipStatement  "by gter-bdag-glin-pa 'gyur-med-rdo-rje and his brother smin-grol-glin lo-chen dharma-sri"@en ;
+        :biblioNote         "reproduced from the incomplete set of dpal-spuns prints from the library of dbon-rgan rin-po-che ; supplemented by prints from the mtshur-phu redaction"@en ;
+        :hasPart            bdr:MW18_335B1C , bdr:MW18_6E1191 ;
+        :hasSourcePrintery  bdr:G3JT12497 ;
+        :hasTitle           bdr:TT378C1F4DEB7C4B7D , bdr:TTA8378BEB4DAF11CA ;
+        :instanceEvent      bdr:EV0A1277EFF1A50EC8 ;
+        :instanceHasReproduction  bdr:W18 ;
+        :instanceOf         bdr:WA18 ;
+        :isRoot             true ;
+        :note               bdr:NT35513E1880298A6C ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW18_0A0BE4  a      :Instance ;
@@ -1701,6 +1770,10 @@ bdg:MW18 {
         :partTreeIndex      "1.07.1" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT35513E1880298A6C
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 1735-1736\n\nother edition (dbu med):\nsgrub thabs 'dod 'jo bum bzan : a collection of nyingmapa sadhanas written by gter bdag gling pa with the help of smin glin lo chen. -- reproduced from the manuscript of dorje khandro. -- new delhi : b. jamyang norbu, 1972. 2 v. i-tib-920."@en .
+    
     bdr:TT01A046B88E512FA9
         a                   :OtherTitle ;
         rdfs:label          "dzam dmar chags pa rdo rje'i sgrub thabs dang 'brel par dbang skur bya tshul bcas/（grwa ston chen po'i gter ma'i lugs/）"@bo-x-ewts .
@@ -1812,6 +1885,10 @@ bdg:MW18 {
     bdr:TT334D188DE21BA8D8
         a                   :Title ;
         rdfs:label          "dzaM b+ha lha dmar po grwa ston chen po'i gter ma'i lugs kyi sgrub thabs rjes gnang dang bcas pa/（dzam dmar/）"@bo-x-ewts .
+    
+    bdr:TT378C1F4DEB7C4B7D
+        a                   :OtherTitle ;
+        rdfs:label          "'dod 'jo bum bzang /"@bo-x-ewts .
     
     bdr:TT3AABF76889F30BB6
         a                   :Title ;
@@ -2008,6 +2085,10 @@ bdg:MW18 {
     bdr:TTA6A88DE738A276BD
         a                   :Title ;
         rdfs:label          "'bring po me'i spu gri'i dbang chog（me'i spu gri/）"@bo-x-ewts .
+    
+    bdr:TTA8378BEB4DAF11CA
+        a                   :Title ;
+        rdfs:label          "sgrub thabs 'dod 'jo'i 'bum bzang /"@bo-x-ewts .
     
     bdr:TTAA5926543BBC2871
         a                   :OtherTitle ;

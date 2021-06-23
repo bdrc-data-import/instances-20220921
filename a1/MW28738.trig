@@ -12,10 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW28738 {
+    bda:LG0E685D31D8A9C7B0
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-07-13T13:31:26.616Z"^^xsd:dateTime ;
+        adm:logMessage      "annotation added"@en ;
+        adm:logWho          bdu:U00001 .
+    
     bda:LG1A2FEFB79FC7577A
         a                   adm:InitialOutlineData ;
         adm:logDate         "2009-06-08T09:53:16.89Z"^^xsd:dateTime ;
         adm:logMessage      "checkin"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG5FE183ACB2FA39B4
+        a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:LG7CED45B7C2B54C98
@@ -24,14 +34,33 @@ bdg:MW28738 {
         adm:logMessage      "added image and volume number also added topic"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW28738  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS53206" ;
         adm:adminAbout      bdr:MW28738 ;
-        adm:facetIndex      92 ;
-        adm:logEntry        bda:LG1A2FEFB79FC7577A , bda:LG7CED45B7C2B54C98 ;
+        adm:facetIndex      100 ;
+        adm:gitPath         "a1/MW28738.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28738 ;
+        adm:logEntry        bda:LG0E685D31D8A9C7B0 , bda:LG1A2FEFB79FC7577A , bda:LG5FE183ACB2FA39B4 , bda:LG7CED45B7C2B54C98 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL01EE4DA5FAC17EE2
         a                   :ContentLocation ;
@@ -655,7 +684,34 @@ bdg:MW28738 {
         :contentLocationPage  68 ;
         :contentLocationVolume  1 .
     
-    bdr:MW28738  :hasPart   bdr:MW28738_21CAE6 , bdr:MW28738_29EBB7 , bdr:MW28738_2ACA25 , bdr:MW28738_32C0FC , bdr:MW28738_397277 , bdr:MW28738_3A08CA , bdr:MW28738_69A997 , bdr:MW28738_6BA35E , bdr:MW28738_7F24EF , bdr:MW28738_840069 , bdr:MW28738_9637CB , bdr:MW28738_AC1519 , bdr:MW28738_C98BB5 , bdr:MW28738_DCC67A , bdr:MW28738_FAE3E2 ;
+    bdr:EV80FDA47EFFD0DB77
+        a                   :PublishedEvent ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:ID0720E3BB669FFADF
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624505950" .
+    
+    bdr:ID4016480F70CD3415
+        a                   bdr:HollisId ;
+        rdf:value           "014259771" .
+    
+    bdr:MW28738  a          :Instance ;
+        skos:prefLabel      "ngor e waM chos ldan gyi lo rgyus ngo mtshar nor bu'i phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0720E3BB669FFADF , bdr:ID4016480F70CD3415 ;
+        :authorshipStatement  "mkhan thub bstan snying pos brtsams/"@bo-x-ewts ;
+        :hasPart            bdr:MW28738_21CAE6 , bdr:MW28738_29EBB7 , bdr:MW28738_2ACA25 , bdr:MW28738_32C0FC , bdr:MW28738_397277 , bdr:MW28738_3A08CA , bdr:MW28738_69A997 , bdr:MW28738_6BA35E , bdr:MW28738_7F24EF , bdr:MW28738_840069 , bdr:MW28738_9637CB , bdr:MW28738_AC1519 , bdr:MW28738_C98BB5 , bdr:MW28738_DCC67A , bdr:MW28738_FAE3E2 ;
+        :hasTitle           bdr:TT0D47FDA5BC18E4FF ;
+        :instanceEvent      bdr:EV80FDA47EFFD0DB77 ;
+        :instanceHasReproduction  bdr:W28738 ;
+        :instanceOf         bdr:WA28738 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[shang kang]"@en ;
+        :publisherName      "shang kang then mA dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "4, 2, 150 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW28738_01423C
@@ -1807,4 +1863,8 @@ bdg:MW28738 {
         :partTreeIndex      "11.64" ;
         :partType           bdr:PartTypeChapter ;
         :workIsAbout        bdr:P973 .
+    
+    bdr:TT0D47FDA5BC18E4FF
+        a                   :Title ;
+        rdfs:label          "ngor e waM chos ldan gyi lo rgyus ngo mtshar nor bu'i phreng ba/"@bo-x-ewts .
 }

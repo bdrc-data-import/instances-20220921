@@ -30,14 +30,37 @@ bdg:MW23156 {
         adm:logDate         "2014-02-12T16:12:09.778Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00051 .
     
+    bda:LG9A945C85DFB9FC44
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW23156  a          adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O23156" ;
         adm:adminAbout      bdr:MW23156 ;
-        adm:facetIndex      112 ;
-        adm:logEntry        bda:LG1B1CD4CD3C05CB7E , bda:LG3991707067DBE340 , bda:LG815CB7D2197B3EEA ;
+        adm:facetIndex      124 ;
+        adm:gitPath         "5f/MW23156.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23156 ;
+        adm:logEntry        bda:LG1B1CD4CD3C05CB7E , bda:LG3991707067DBE340 , bda:LG815CB7D2197B3EEA , bda:LG9A945C85DFB9FC44 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "chengdu via TBRC Convert2Outline version: 1.5.5"@en ;
-        adm:outlineType     bda:OutlineTypeSubjectCollection .
+        adm:outlineType     bda:OutlineTypeSubjectCollection ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL017FC507E20C37B5
         a                   :ContentLocation ;
@@ -382,7 +405,51 @@ bdg:MW23156 {
         :contentLocationPage  3 ;
         :contentLocationVolume  3 .
     
-    bdr:MW23156  :hasPart   bdr:MW23156_2AD85E , bdr:MW23156_6C91D4 , bdr:MW23156_701322 ;
+    bdr:CR304D4CA3C8178814
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6159 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV29A41A51C566DA3D
+        a                   :PublishedEvent ;
+        :notAfter           "1985"^^xsd:gYear ;
+        :notBefore          "1984"^^xsd:gYear .
+    
+    bdr:ID336C0F57A15B6075
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2538" .
+    
+    bdr:ID670433CBD124E143
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84903604" .
+    
+    bdr:IDB4AF33DB76DA5E87
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .P32 1984" .
+    
+    bdr:IDD491BF2C860E73FD
+        a                   bdr:HollisId ;
+        rdf:value           "014258798" .
+    
+    bdr:MW23156  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of etarAja alias bde ba'i rgyal po"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_pad+ma bde chen rgyal po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID336C0F57A15B6075 , bdr:ID670433CBD124E143 , bdr:IDB4AF33DB76DA5E87 , bdr:IDD491BF2C860E73FD ;
+        :authorshipStatement  "edited and structured from the remaining manuscripts and blockprints by sprul-sku tshe-dban"@en ;
+        :creator            bdr:CR304D4CA3C8178814 ;
+        :hasPart            bdr:MW23156_2AD85E , bdr:MW23156_6C91D4 , bdr:MW23156_701322 ;
+        :hasTitle           bdr:TT247E56984137FAC9 , bdr:TTE11B33FF72CBA071 ;
+        :instanceEvent      bdr:EV29A41A51C566DA3D ;
+        :instanceHasReproduction  bdr:W23156 ;
+        :instanceOf         bdr:WA23156 ;
+        :isRoot             true ;
+        :note               bdr:NT24EC82703072E472 ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "damchoe sangpo"@en ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "3 v." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW23156_03926A
@@ -1103,6 +1170,10 @@ bdg:MW23156 {
         :partTreeIndex      "2.07" ;
         :partType           bdr:PartTypeText .
     
+    bdr:NT24EC82703072E472
+        a                   :Note ;
+        :noteText           "tbrc has scanned images, tiffs and pdf files.\n0183-0185."@en .
+    
     bdr:TT0C58607616587763
         a                   :FullTitle ;
         rdfs:label          "man ngag phrad tshad rang grol/__/rin chen phreng ba/"@bo-x-ewts .
@@ -1114,6 +1185,10 @@ bdg:MW23156 {
     bdr:TT23C3B3757DAC3FCD
         a                   :FullTitle ;
         rdfs:label          "zab gsang sngags kyi yang bcud/___/rmad byung seng+ge'i rtsal rdzogs/___/ri chos snying gi yang tig"@bo-x-ewts .
+    
+    bdr:TT247E56984137FAC9
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_pad+ma bde chen rgyal po/"@bo-x-ewts .
     
     bdr:TT2D417E2490954513
         a                   :FullTitle ;
@@ -1294,6 +1369,10 @@ bdg:MW23156 {
     bdr:TTD76A8F8CA7A98F0C
         a                   :Title ;
         rdfs:label          "gsol 'debs dngos grub 'byung gter/"@bo-x-ewts .
+    
+    bdr:TTE11B33FF72CBA071
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of etarAja alias bde ba'i rgyal po"@en-x-mixed .
     
     bdr:TTE1DD80E77EA1F7F0
         a                   :Title ;

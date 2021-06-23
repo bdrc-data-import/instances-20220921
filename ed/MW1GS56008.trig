@@ -18,14 +18,39 @@ bdg:MW1GS56008 {
         adm:logMessage      "outline completed"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG9AD5415099B5D33D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-08-20T17:48:12.523Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
     bda:MW1GS56008  a       adm:AdminData , adm:Outline ;
         :isRoot             true ;
         :legacyOutlineNodeRID  "O1GS94192" ;
         adm:adminAbout      bdr:MW1GS56008 ;
-        adm:facetIndex      143 ;
-        adm:logEntry        bda:LG8AD671CF8C9A9F8F ;
+        adm:facetIndex      150 ;
+        adm:gitPath         "ed/MW1GS56008.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS56008 ;
+        adm:logEntry        bda:LG8AD671CF8C9A9F8F , bda:LG9AD5415099B5D33D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:outlineAuthorStatement  "genesmith; outlined with the gractious support of the trace foundation"@en ;
-        adm:outlineType     bda:OutlineTypeSaBcad .
+        adm:outlineType     bda:OutlineTypeSaBcad ;
+        adm:status          bda:StatusReleased .
     
     bdr:CL08F67694883F614E
         a                   :ContentLocation ;
@@ -873,7 +898,36 @@ bdg:MW1GS56008 {
         :contentLocationInstance  bdr:W1GS56008 ;
         :contentLocationPage  395 .
     
-    bdr:MW1GS56008  :hasPart  bdr:MW1GS56008_0D51A0 , bdr:MW1GS56008_26B567 , bdr:MW1GS56008_2BA791 , bdr:MW1GS56008_7D4DDC , bdr:MW1GS56008_C1CC9A ;
+    bdr:EV4BE2196FD133AF26
+        a                   :PublishedEvent ;
+        :onYear             "2006"^^xsd:gYear .
+    
+    bdr:ID3CC80BEC257A3820
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223019042" .
+    
+    bdr:IDD16782CCA754828A
+        a                   bdr:HollisId ;
+        rdf:value           "014255482" .
+    
+    bdr:MW1GS56008  a       :Instance ;
+        skos:prefLabel      "mnga' ris chos 'byung gangs ljongs mdzes rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3CC80BEC257A3820 , bdr:IDD16782CCA754828A ;
+        :authorshipStatement  "gu ge tshe ring rgyal po/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :hasPart            bdr:MW1GS56008_0D51A0 , bdr:MW1GS56008_26B567 , bdr:MW1GS56008_2BA791 , bdr:MW1GS56008_7D4DDC , bdr:MW1GS56008_C1CC9A ;
+        :hasTitle           bdr:TTD4B5D429104DD2A9 ;
+        :illustrations      "24 p. col. ill, 2 maps" ;
+        :instanceEvent      bdr:EV4BE2196FD133AF26 ;
+        :instanceHasReproduction  bdr:W1GS56008 ;
+        :instanceOf         bdr:WA1GS56008 ;
+        :isRoot             true ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[lha sa]"@en ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "2, 5, 485 p." ;
         :workPagination     bdr:PaginationAbsolute .
     
     bdr:MW1GS56008_084B61
@@ -2578,4 +2632,8 @@ bdg:MW1GS56008 {
         :partOf             bdr:MW1GS56008_C6780A ;
         :partTreeIndex      "4.2.17" ;
         :partType           bdr:PartTypeChapter .
+    
+    bdr:TTD4B5D429104DD2A9
+        a                   :Title ;
+        rdfs:label          "mnga' ris chos 'byung gangs ljongs mdzes rgyan/"@bo-x-ewts .
 }
