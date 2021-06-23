@@ -18,6 +18,12 @@ bdg:MW1KG6094 {
         adm:logMessage      "cataloged and published"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGBAD1DFA1D68F7044
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-22T17:41:08.837Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
         adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
@@ -35,11 +41,11 @@ bdg:MW1KG6094 {
     bda:MW1KG6094  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1KG6094 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "b7/MW1KG6094.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG6094 ;
-        adm:logEntry        bda:LG857797E17A72CF22 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG857797E17A72CF22 , bda:LGBAD1DFA1D68F7044 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -66,13 +72,14 @@ bdg:MW1KG6094 {
         rdf:value           "9787105097920" .
     
     bdr:MW1KG6094  a        :Instance ;
-        skos:prefLabel      "bod kyi gna' rtsom gces bsgrigs/"@bo-x-ewts , "gu dai wen xue"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "gu dai wen xue"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bod kyi gna' rtsom gces bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID2CE02AE10426709A , bdr:ID87F3A783EFF4E6A9 ;
         :authorshipStatement  "gtso 'gan rtsom sgrig pa/ mkhas btsun/ gtso 'gan rtsom sgrig gzhon pa/ mig dmar/"@bo-x-ewts ;
-        :biblioNote         "printed from computerized input"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
         :creator            bdr:CR8DF1DF32995B6625 , bdr:CRD08A5C0A6B16DEFA ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT08E24DE08F2CA19C , bdr:TTD9197D6B1F882EE5 ;
         :instanceEvent      bdr:EVCAA569C6F2973F3E ;
         :instanceHasReproduction  bdr:W1KG6094 ;
@@ -80,6 +87,7 @@ bdg:MW1KG6094 {
         :isRoot             true ;
         :note               bdr:NT0A7A16A82ACC0EDA ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
