@@ -12,20 +12,26 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CN12077 {
-    bda:LG85FA052820F520B3
+    bda:LG52E47BFCAC083EE1
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-15T17:35:47.678Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged by Simon"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG584C3068DBBDBD4F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-24T10:33:06.161Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW4CN12077  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CN12077 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "32/MW4CN12077.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CN12077 ;
-        adm:logEntry        bda:LG85FA052820F520B3 ;
+        adm:logEntry        bda:LG52E47BFCAC083EE1 , bda:LG584C3068DBBDBD4F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -35,15 +41,21 @@ bdg:MW4CN12077 {
     
     bdr:MW4CN12077  a       :Instance ;
         skos:prefLabel      "mtho ling dpe rnying thor bu/"@bo-x-ewts ;
-        :biblioNote         "Incomplete manuscripts without the title and colorphone, poor original resolution"@en ;
         :hasTitle           bdr:TT528F844E600B3887 ;
         :instanceEvent      bdr:EV6996C12FC75DE349 ;
+        :instanceHasReproduction  bdr:W4CN12077 ;
         :instanceOf         bdr:WA4CN12077 ;
         :isRoot             true ;
+        :note               bdr:NT85FA052820F520B3 ;
+        :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuMed ;
         :sourceNote         "from Tholing monastery, West Tibet"@en ;
         :workExtentStatement  "50 p." .
+    
+    bdr:NT85FA052820F520B3
+        a                   :Note ;
+        :noteText           "We noted that this text has some missing or damages pages, and image quality issues, but we are releasing the text online because it may be of interest to some readers."@en .
     
     bdr:TT528F844E600B3887
         a                   :Title ;
