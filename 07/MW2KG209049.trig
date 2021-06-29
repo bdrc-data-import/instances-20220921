@@ -12,28 +12,34 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG209049 {
-    bda:LG953EB33D8B521E62
+    bda:LGCDBBDCA578E63686
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-22T15:58:52.814Z"^^xsd:dateTime ;
         adm:logMessage      "simple cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGE4DA1CAD1720003D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-28T13:59:29.854Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW2KG209049  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG209049 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "07/MW2KG209049.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG209049 ;
-        adm:logEntry        bda:LG953EB33D8B521E62 ;
+        adm:logEntry        bda:LGCDBBDCA578E63686 , bda:LGE4DA1CAD1720003D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV188A7E6893099DF2
+    bdr:EVDC5AD6FF0E9FFA45
         a                   :PublishedEvent ;
         :onYear             "2018"^^xsd:gYear .
     
-    bdr:IDDC5AD6FF0E9FFA45
+    bdr:ID953EB33D8B521E62
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223055321" .
     
@@ -41,10 +47,12 @@ bdg:MW2KG209049 {
         skos:altLabel       "西藏名人访谈录"@zh-hans ;
         skos:prefLabel      "rgyab ljongs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDC5AD6FF0E9FFA45 ;
+            bdr:ID953EB33D8B521E62 ;
+        :authorshipStatement  "khri gong o rgyan tshe ring gis rtsom sgrig byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT02C7CAECA06B78EF , bdr:TT2D11F23001CC3AFF ;
-        :instanceEvent      bdr:EV188A7E6893099DF2 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT02C7CAECA06B78EF , bdr:TT188A7E6893099DF2 , bdr:TT2D11F23001CC3AFF ;
+        :instanceEvent      bdr:EVDC5AD6FF0E9FFA45 ;
         :instanceHasReproduction  bdr:W2KG209049 ;
         :instanceOf         bdr:WA2KG209049 ;
         :isRoot             true ;
@@ -52,11 +60,16 @@ bdg:MW2KG209049 {
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "148 p." .
     
     bdr:TT02C7CAECA06B78EF
         a                   :OtherTitle ;
         rdfs:label          "西藏名人访谈录"@zh-hans .
+    
+    bdr:TT188A7E6893099DF2
+        a                   :OtherTitle ;
+        rdfs:label          "xizang ming ren fang tan lu"@zh-latn-pinyin-x-ndia .
     
     bdr:TT2D11F23001CC3AFF
         a                   :Title ;
