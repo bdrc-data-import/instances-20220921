@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20011 {
-    bda:LG0C3C4D1E52C5B2E2
+    bda:LG4F36AE93F6D5508C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG60D876E00D82FF44
+    bda:LG54DB40A8D9918C43
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-02T16:48:35.316Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, cat info, print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF8667813AC08D11A
         a                   adm:UpdateData ;
         adm:logDate         "2012-03-06T17:35:18.314Z"^^xsd:dateTime ;
         adm:logMessage      "added genre and topics"@en ;
@@ -39,40 +45,53 @@ bdg:MW20011 {
     bda:MW20011  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20011 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "1a/MW20011.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20011 ;
-        adm:logEntry        bda:LG0C3C4D1E52C5B2E2 , bda:LG60D876E00D82FF44 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG4F36AE93F6D5508C , bda:LG54DB40A8D9918C43 , bda:LGF8667813AC08D11A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV64F3CB3ACAC24B3B
+    bdr:CR64F3CB3ACAC24B3B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4852 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRE578C22077D8F1F2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG229084 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVC8778029527DB1BC
         a                   :PublishedEvent ;
         :onYear             "1993"^^xsd:gYear .
     
-    bdr:IDC8778029527DB1BC
+    bdr:ID090D01D56F42A409
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7542102397" .
     
-    bdr:IDE578C22077D8F1F2
+    bdr:ID60D876E00D82FF44
         a                   bdr:HollisId ;
         rdf:value           "014257999" .
     
     bdr:MW20011  a          :Instance ;
         skos:prefLabel      "kan lho bod kyi sman rtsis ched rtsom phyogs bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC8778029527DB1BC , bdr:IDE578C22077D8F1F2 ;
-        :authorshipStatement  "kan lho khul 'phrod bstan cus ; gtso sgrig pa, klu 'bum rgyal, sangs lo/"@bo-x-ewts ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+            bdr:ID090D01D56F42A409 , bdr:ID60D876E00D82FF44 ;
+        :authorshipStatement  "kan lho khul 'phrod bsten cus/ gtso sgrig pa/ klu 'bum rgyal/ sangs lo/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR64F3CB3ACAC24B3B , bdr:CRE578C22077D8F1F2 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TTBF655FDC4A830E20 ;
-        :instanceEvent      bdr:EV64F3CB3ACAC24B3B ;
+        :instanceEvent      bdr:EVC8778029527DB1BC ;
         :instanceHasReproduction  bdr:W20011 ;
         :instanceOf         bdr:WA20011 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "lan kro'u"@en ;
-        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kro'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "4, 5, 395 p." .
     
