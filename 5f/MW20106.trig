@@ -12,14 +12,20 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20106 {
-    bda:LG6F4BDC29D96B5A38
+    bda:LG0BA5CFF8837EE21A
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGB100496598ECF274
+    bda:LG778C16E34EEC261A
         a                   adm:UpdateData ;
         adm:logDate         "2014-06-24T14:41:29.851Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG88A6F2C935CE69ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-06T13:02:37.728Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, print type, and encoding"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIMD5FAEE0C6C
@@ -32,19 +38,24 @@ bdg:MW20106 {
     bda:MW20106  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20106 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "5f/MW20106.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20106 ;
-        adm:logEntry        bda:LG6F4BDC29D96B5A38 , bda:LGB100496598ECF274 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BA5CFF8837EE21A , bda:LG778C16E34EEC261A , bda:LG88A6F2C935CE69ED , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV47DADB519941637A
+    bdr:CR47DADB519941637A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7436 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV728381582CE268A0
         a                   :PublishedEvent ;
         :onYear             "1985"^^xsd:gYear .
     
-    bdr:ID728381582CE268A0
+    bdr:IDB100496598ECF274
         a                   bdr:HollisId ;
         rdf:value           "014258048" .
     
@@ -52,12 +63,13 @@ bdg:MW20106 {
         skos:altLabel       "格萨尔王传 -- 亭岭之战"@zh-hans ;
         skos:prefLabel      "mthing gling g.yul 'gyed dpa' bo rtsal 'gran/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID728381582CE268A0 ;
-        :authorshipStatement  "bod rang skyong ljongs gling ge sar rgyal po'i sgrung myug skyob gzhung las khang gi tshe ring don grub kyis lag bris ma gzhir bzung phyogs sgrig byas pa/ rtsom sgrig 'gan 'khur ba, thang dpon tshe stobs/"@bo-x-ewts ;
+            bdr:IDB100496598ECF274 ;
+        :authorshipStatement  "bod rang skyong ljongs gling ge sar rgyal po'i sgrung myug skyob gzhung las khang gi tshe ring don grub kyis lag bris ma gzhir bzung phyogs sgrig byas pa/ rtsom sgrig 'gan 'khur ba/ thang dpon tshe stobs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_TypeSet ;
-        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :creator            bdr:CR47DADB519941637A ;
+        :editionStatement   "par thengs dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT8755C3F9AC13B505 , bdr:TTB008B1A153B1F8BE , bdr:TTB1CF7A5F3514A97D , bdr:TTBC639D9C894EB889 ;
-        :instanceEvent      bdr:EV47DADB519941637A ;
+        :instanceEvent      bdr:EV728381582CE268A0 ;
         :instanceHasReproduction  bdr:W20106 ;
         :instanceOf         bdr:WA20106 ;
         :isRoot             true ;
