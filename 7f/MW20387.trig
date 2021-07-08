@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20387 {
+    bda:LG0A01FCE7D83108FF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-07T12:26:17.651Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGF17D4EBB51F70D5A
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -43,27 +49,27 @@ bdg:MW20387 {
         adm:gitPath         "7f/MW20387.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20387 ;
-        adm:logEntry        bda:LGF17D4EBB51F70D5A , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0A01FCE7D83108FF , bda:LGF17D4EBB51F70D5A , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVE09E4D4CAF7C9E6E
+    bdr:EVCA58937DC11CB6C8
         a                   :PublishedEvent ;
         :onYear             "1987"^^xsd:gYear .
     
     bdr:ID0501D1302798C9AB
-        a                   bdr:HollisId ;
-        rdf:value           "014258118" .
-    
-    bdr:ID44F264AB5EFE3722
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "95905746" .
-    
-    bdr:ID5B354B34107AA9BB
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7223000287" .
     
+    bdr:ID44F264AB5EFE3722
+        a                   bdr:HollisId ;
+        rdf:value           "014258118" .
+    
     bdr:ID988252BE517E4574
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95905746" .
+    
+    bdr:IDE09E4D4CAF7C9E6E
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "HV610 1803 .R36 1987" .
     
@@ -71,31 +77,28 @@ bdg:MW20387 {
         skos:altLabel       "zai yi zhi-zhui zai"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "rang byung gnod 'tshe chu skyon skor/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0501D1302798C9AB , bdr:ID44F264AB5EFE3722 , bdr:ID5B354B34107AA9BB , bdr:ID988252BE517E4574 ;
-        :authorshipStatement  "lo rgyus yig tshags khang, bod rang skyong ljongs spyi tshogs tshan rig khang, zhing 'brog tshan rig khang bcas kyis rtsom sgyur byas ; krung go spyi tshogs tshan rig khang sa khams zhib 'jug sa'o"@bo-x-ewts ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TTB062AAC9B4B49EA0 , bdr:TTCA58937DC11CB6C8 ;
-        :instanceEvent      bdr:EVE09E4D4CAF7C9E6E ;
+            bdr:ID0501D1302798C9AB , bdr:ID44F264AB5EFE3722 , bdr:ID988252BE517E4574 , bdr:IDE09E4D4CAF7C9E6E ;
+        :authorshipStatement  "lo rgyus yig tshags khang / bod rang skyong ljongs spyi tshogs tshan rig khang/ zhing 'brog tshan rig khang bcas kyis rtsom sgyur byas/ krung go spyi tshogs tshan rig khang sa khams zhib 'jug so'o"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TTB062AAC9B4B49EA0 , bdr:TTB39A99561CF3E374 ;
+        :instanceEvent      bdr:EVCA58937DC11CB6C8 ;
         :instanceHasReproduction  bdr:W20387 ;
         :instanceOf         bdr:WA20387 ;
         :isRoot             true ;
-        :note               bdr:NTB39A99561CF3E374 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :serialInstanceOf   bdr:WAS20387 ;
         :workExtentStatement  "3, 4, 11, 261 p." .
     
-    bdr:NTB39A99561CF3E374
-        a                   :Note ;
-        :noteText           "collection of documents on damages caused by rainstorms and floods in different parts of tibet from 1803-1958"@en .
-    
     bdr:TTB062AAC9B4B49EA0
-        a                   :Title ;
-        rdfs:label          "rang byung gnod 'tshe chu skyon skor/"@bo-x-ewts .
-    
-    bdr:TTCA58937DC11CB6C8
         a                   :ColophonTitle ;
         rdfs:label          "zai yi zhi-zhui zai"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB39A99561CF3E374
+        a                   :Title ;
+        rdfs:label          "rang byung gnod 'tshe chu skyon skor/"@bo-x-ewts .
 }

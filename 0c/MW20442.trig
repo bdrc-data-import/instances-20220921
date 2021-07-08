@@ -13,14 +13,20 @@
 
 bdg:MW20442 {
     bda:LG4D1AA574A46F1ECA
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-07T15:24:44.736Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LG9390E9DF2CDA87BF
         a                   adm:UpdateData ;
         adm:logDate         "2013-12-02T12:47:52.226Z"^^xsd:dateTime ;
         adm:logMessage      "released from onhold and completed cataloging"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LGED4C71636054A20F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -45,54 +51,55 @@ bdg:MW20442 {
     bda:MW20442  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20442 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "0c/MW20442.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20442 ;
-        adm:logEntry        bda:LG4D1AA574A46F1ECA , bda:LG9390E9DF2CDA87BF , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG4D1AA574A46F1ECA , bda:LG9390E9DF2CDA87BF , bda:LGED4C71636054A20F , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA0BA3880DFC164EF
+    bdr:CRA0BA3880DFC164EF
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG3929 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD01770CCB7DDA72A
         a                   :PublishedEvent ;
         :onYear             "1986"^^xsd:gYear .
     
     bdr:ID8D31B51720D16EEE
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "95918929" .
-    
-    bdr:IDD01770CCB7DDA72A
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "PL3740 .B63 1985" .
     
-    bdr:IDD349A3906366BF71
+    bdr:ID96C8558DBF1CC454
         a                   bdr:HollisId ;
         rdf:value           "014258154" .
+    
+    bdr:IDD349A3906366BF71
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95918929" .
     
     bdr:MW20442  a          :Instance ;
         skos:altLabel       "西藏短篇小说选"@zh-hans ;
         skos:prefLabel      "bod kyi brtsams sgrung 'dems sgrig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8D31B51720D16EEE , bdr:IDD01770CCB7DDA72A , bdr:IDD349A3906366BF71 ;
-        :authorshipStatement  "rtsom sgrig 'gan 'khur ba, u rgyan chos 'phel/"@bo-x-ewts ;
+            bdr:ID8D31B51720D16EEE , bdr:ID96C8558DBF1CC454 , bdr:IDD349A3906366BF71 ;
+        :authorshipStatement  "rtsom sgrig 'gan 'khur ba u rgyan chos 'phel/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_TypeSet ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :creator            bdr:CRA0BA3880DFC164EF ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT0C38B07D26238724 , bdr:TT6C010C7DDD525276 , bdr:TT832744211F5D392C ;
-        :instanceEvent      bdr:EVA0BA3880DFC164EF ;
+        :instanceEvent      bdr:EVD01770CCB7DDA72A ;
         :instanceHasReproduction  bdr:W20442 ;
         :instanceOf         bdr:WA20442 ;
         :isRoot             true ;
-        :note               bdr:NT96C8558DBF1CC454 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "12, 2, 705 p." .
-    
-    bdr:NT96C8558DBF1CC454
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
     
     bdr:TT0C38B07D26238724
         a                   :ColophonTitle ;

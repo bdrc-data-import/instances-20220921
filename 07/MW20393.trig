@@ -12,15 +12,21 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20393 {
-    bda:LG188F18027770E53A
+    bda:LG1F56DB2577BB451F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG380E3EDB4F76D893
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-07T12:26:34.693Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG7043005B73084892
         a                   adm:UpdateData ;
         adm:logDate         "2021-06-04T09:48:56.166Z"^^xsd:dateTime ;
         adm:logMessage      "Reviewed Catalog, added cat, pub info, print tyep and language encoding"@en ;
         adm:logWho          bdu:U00017 .
-    
-    bda:LG7043005B73084892
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -45,59 +51,65 @@ bdg:MW20393 {
     bda:MW20393  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20393 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      16 ;
         adm:gitPath         "07/MW20393.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20393 ;
-        adm:logEntry        bda:LG188F18027770E53A , bda:LG7043005B73084892 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG1F56DB2577BB451F , bda:LG380E3EDB4F76D893 , bda:LG7043005B73084892 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CRD70B50416BE9F732
+    bdr:CR18625675E4479308
         a                   :AgentAsCreator ;
         :agent              bdr:P6828 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EV18625675E4479308
+    bdr:EVB6E563A9716A19EA
         a                   :PublishedEvent ;
         :onYear             "1993"^^xsd:gYear .
     
     bdr:ID0AD5828684B62498
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
-        rdf:value           "98902416" .
-    
-    bdr:ID0F3E98881289E4FF
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "7542101323" .
-    
-    bdr:ID523D4A88031199B6
-        a                   bdr:HollisId ;
-        rdf:value           "014258121" .
-    
-    bdr:IDB6E563A9716A19EA
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
         rdf:value           "BJ1289 .K36 1993 <ASIAN TIB>" .
     
+    bdr:ID0F3E98881289E4FF
+        a                   bdr:HollisId ;
+        rdf:value           "014258121" .
+    
+    bdr:ID523D4A88031199B6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98902416" .
+    
+    bdr:IDC3FC0AF2AC2EC8FD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542101323" .
+    
     bdr:MW20393  a          :Instance ;
-        skos:altLabel       "fei qin xuan wang de gu shi"@zh-latn-pinyin-x-ndia ;
+        skos:altLabel       "飞禽选王的故事"@zh-hans ;
         skos:prefLabel      "'dab chags mi chos su bshad pa rig pa'i gter mdzod/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0AD5828684B62498 , bdr:ID0F3E98881289E4FF , bdr:ID523D4A88031199B6 , bdr:IDB6E563A9716A19EA ;
-        :creator            bdr:CRD70B50416BE9F732 ;
-        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
-        :hasTitle           bdr:TT27B0798A31D83499 , bdr:TTE9E4C3773134BBAA ;
-        :instanceEvent      bdr:EV18625675E4479308 ;
+            bdr:ID0AD5828684B62498 , bdr:ID0F3E98881289E4FF , bdr:ID523D4A88031199B6 , bdr:IDC3FC0AF2AC2EC8FD ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR18625675E4479308 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT27B0798A31D83499 , bdr:TTD70B50416BE9F732 , bdr:TTE9E4C3773134BBAA ;
+        :instanceEvent      bdr:EVB6E563A9716A19EA ;
         :instanceHasReproduction  bdr:W20393 ;
         :instanceOf         bdr:WA20393 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lan kru'u/"@bo-x-ewts ;
         :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "168 p." .
     
     bdr:TT27B0798A31D83499
-        a                   :ColophonTitle ;
+        a                   :OtherTitle ;
+        rdfs:label          "飞禽选王的故事"@zh-hans .
+    
+    bdr:TTD70B50416BE9F732
+        a                   :OtherTitle ;
         rdfs:label          "fei qin xuan wang de gu shi"@zh-latn-pinyin-x-ndia .
     
     bdr:TTE9E4C3773134BBAA
