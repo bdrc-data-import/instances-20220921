@@ -13,6 +13,12 @@
 
 bdg:MW20835 {
     bda:LG1919F2E7EFF81536
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-08T22:52:26.846Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6EB64C7368EF22FF
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
@@ -39,11 +45,11 @@ bdg:MW20835 {
     bda:MW20835  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20835 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "e2/MW20835.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20835 ;
-        adm:logEntry        bda:LG1919F2E7EFF81536 , bda:LGFAA0E3364EDD8FCA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG1919F2E7EFF81536 , bda:LG6EB64C7368EF22FF , bda:LGFAA0E3364EDD8FCA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -56,21 +62,22 @@ bdg:MW20835 {
         rdf:value           "014258240" .
     
     bdr:MW20835  a          :Instance ;
-        skos:altLabel       "an duo he zuo mi la ri ba fo ge"@zh-latn-pinyin-x-ndia ;
-        skos:prefLabel      "gtsos sras mkhar dgu thog mthong grol lha khang chen mo gser bzhangs kyi lo rgyus/"@bo-x-ewts ;
+        skos:prefLabel      "gtsos sras mkhar dgu thog mthong grol lha khang chen mo gser bzhangs kyi lo rgyus/"@bo-x-ewts , "an duo he zuo mi la ri ba fo ge"@zh-latn-pinyin-x-ndia ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID763A026C132F6039 ;
         :authorshipStatement  "gtsos dgon pa do dam u yon lhan khang gis/"@bo-x-ewts ;
-        :biblioNote         "the text is in tibetan and chinese language"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
         :hasTitle           bdr:TT4F45916B23B257FC , bdr:TTB789E30F26CBC596 , bdr:TTED3D3A0F6AC93A9A ;
         :instanceEvent      bdr:EV0EF1AF4C2293D38B ;
         :instanceHasReproduction  bdr:W20835 ;
         :instanceOf         bdr:WA20835 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :script             bdr:ScriptTibt ;
-        :workExtentStatement  "29 p." ;
-        :workPrintery       "gtsos dgon pas dpar du bskrun/"@bo-x-ewts .
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "*mdo smad gtsos/"@bo-x-ewts ;
+        :publisherName      "gtsos dgon/"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
+        :workExtentStatement  "29 p." .
     
     bdr:TT4F45916B23B257FC
         a                   :Title ;

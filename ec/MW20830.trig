@@ -12,9 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20830 {
-    bda:LG5695E7432C4C1E00
+    bda:LG3340B9DA3C3D86E9
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG351F4B3521B623B2
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-08T22:52:26.233Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:LGIM3B24E310  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
@@ -39,31 +45,36 @@ bdg:MW20830 {
     bda:MW20830  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW20830 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "ec/MW20830.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20830 ;
-        adm:logEntry        bda:LG5695E7432C4C1E00 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG3340B9DA3C3D86E9 , bda:LG351F4B3521B623B2 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1725CFD9E254867D
+    bdr:CR1725CFD9E254867D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26260 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAD8A064AB901CF5D
         a                   :PublishedEvent ;
         :onYear             "1989"^^xsd:gYear .
     
     bdr:ID70EFC7C3735160FB
-        a                   bdr:HollisId ;
-        rdf:value           "014258236" .
-    
-    bdr:IDAD8A064AB901CF5D
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
-        rdf:value           "DS785 .K77 1989" .
-    
-    bdr:IDBFF8BD5D2FAC089C
         a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
         rdf:value           "90132953" .
     
+    bdr:IDBFF8BD5D2FAC089C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .K77 1989" .
+    
     bdr:IDD23DE4F9F886A0CF
+        a                   bdr:HollisId ;
+        rdf:value           "014258236" .
+    
+    bdr:IDDC80E55371E5C7BE
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7223001348" .
     
@@ -71,15 +82,18 @@ bdg:MW20830 {
         skos:altLabel       "zhongguo xizang di fang li shi zi liao xuan ji"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "krung go'i bod sa gnas kyi lo rgyus yig tshang phyogs btus/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID70EFC7C3735160FB , bdr:IDAD8A064AB901CF5D , bdr:IDBFF8BD5D2FAC089C , bdr:IDD23DE4F9F886A0CF ;
-        :authorshipStatement  "krung dbyangs mi rigs slob grwa'i bod rig pa'i zhib 'jug tshogs chung nas bsgrigs ; rtsom sgrig 'gan 'khur ba tshe ring phun tshogs/"@bo-x-ewts ;
+            bdr:ID70EFC7C3735160FB , bdr:IDBFF8BD5D2FAC089C , bdr:IDD23DE4F9F886A0CF , bdr:IDDC80E55371E5C7BE ;
+        :authorshipStatement  "krung dbyangs mi rigs slob grwa'i bod rig pa'i zhib 'jug tshogs chung nas bsgrigs/ rtsom sgrig 'gan 'khur ba tshe ring phun tshogs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR1725CFD9E254867D ;
         :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT6D511F831497AF9E , bdr:TT914A1AD6A89AB4B0 ;
-        :instanceEvent      bdr:EV1725CFD9E254867D ;
+        :instanceEvent      bdr:EVAD8A064AB901CF5D ;
         :instanceHasReproduction  bdr:W20830 ;
         :instanceOf         bdr:WA20830 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
