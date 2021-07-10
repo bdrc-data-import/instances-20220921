@@ -13,6 +13,12 @@
 
 bdg:MW21595 {
     bda:LGC8C6A59A735DB6A2
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-09T13:41:18.083Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, editor print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE14F37CB95666ABD
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
@@ -33,17 +39,22 @@ bdg:MW21595 {
     bda:MW21595  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW21595 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "02/MW21595.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21595 ;
-        adm:logEntry        bda:LGC8C6A59A735DB6A2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGC8C6A59A735DB6A2 , bda:LGE14F37CB95666ABD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR8FC783EC4AD07648
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7701 ;
+        :role               bdr:R0ER0015 .
+    
     bdr:EVAC8B44C7BB33FF46
         a                   :PublishedEvent ;
-        :onOrAbout          "2000,2002printing" .
+        :onOrAbout          "2000,2002" .
     
     bdr:ID21972C2EC219DFD0
         a                   bdr:HollisId ;
@@ -58,33 +69,31 @@ bdg:MW21595 {
         skos:prefLabel      "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID21972C2EC219DFD0 , bdr:IDDBF40D52DE480125 ;
-        :authorshipStatement  "rtsom sgrig 'gan 'khur pa don grub/"@bo-x-ewts ;
-        :editionStatement   "par gzhi 2."@bo-x-ewts ;
-        :hasTitle           bdr:TT4617E08A07D99C4A , bdr:TT7E565EB9366ABA53 , bdr:TT8FC783EC4AD07648 ;
+        :authorshipStatement  "rtsom sgrig 'gan 'khur pa rkang btsugs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR8FC783EC4AD07648 ;
+        :editionStatement   "par gzhi gnyis pa/ par thengs gnyis pa/"@bo-x-ewts ;
+        :hasTitle           bdr:TT4617E08A07D99C4A , bdr:TT7E565EB9366ABA53 , bdr:TTDF2FCC3FDA6DAB44 ;
         :instanceEvent      bdr:EVAC8B44C7BB33FF46 ;
         :instanceHasReproduction  bdr:W21595 ;
         :instanceOf         bdr:WA21595 ;
         :isRoot             true ;
-        :note               bdr:NTDF2FCC3FDA6DAB44 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "75 p." .
     
-    bdr:NTDF2FCC3FDA6DAB44
-        a                   :Note ;
-        :noteText           "script of one of the classic dramas for presentation at the lha sa zhol ston\n\ntbrc has the original 1981 printing as well\n\ntbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution"@en .
-    
     bdr:TT4617E08A07D99C4A
-        a                   :Title ;
-        rdfs:label          "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts .
-    
-    bdr:TT7E565EB9366ABA53
         a                   :TitlePageTitle ;
         rdfs:label          "chos kyi rgyal po dri med kun ldan gyi mdzad tshul rgyas pa mu tig phreng ba/"@bo-x-ewts .
     
-    bdr:TT8FC783EC4AD07648
+    bdr:TT7E565EB9366ABA53
         a                   :ColophonTitle ;
         rdfs:label          "jimeigundan"@zh-latn-wadegile .
+    
+    bdr:TTDF2FCC3FDA6DAB44
+        a                   :Title ;
+        rdfs:label          "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts .
 }
