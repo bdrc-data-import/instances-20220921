@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC034647 {
+    bda:LG37F9427CE9B6FBD8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC034647"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC034647"@en , "imported pubinfo for W1FEMC034647"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC034647
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC034647 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "41/MW1FEMC034647.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC034647 ;
+        adm:logEntry        bda:LG37F9427CE9B6FBD8 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF4F0D16F60D1D621D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "241" .
+    
+    bdr:MW1FEMC034647
+        a                   :Instance ;
+        skos:prefLabel      "គម្ពីចាក់ (១-១៩...២៣-៤១)"@km ;
+        :hasTitle           bdr:TT81FCF4F0D21EA6EC ;
+        :instanceHasReproduction  bdr:W1FEMC034647 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4F0D16F60D1D621D ;
+        :note               bdr:NTA37540E73121882A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "129-B.06.04.03.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NTA37540E73121882A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT81FCF4F0D21EA6EC
+        a                   :Title ;
+        rdfs:label          "គម្ពីចាក់ (១-១៩...២៣-៤១)"@km .
+}

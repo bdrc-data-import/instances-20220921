@@ -16,11 +16,11 @@ bdg:MW1FEMC030723 {
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-09-09"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC030723"@en ;
-        adm:logWho          bdu:U00087 .
+        adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030723"@en , "imported pubinfo for W1FEMC030723"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,45 +28,48 @@ bdg:MW1FEMC030723 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030723 ;
-        adm:contentProvider  bda:CP048 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "68/MW1FEMC030723.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030723 ;
-        adm:logEntry        bda:LG051731490C0D5265 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG051731490C0D5265 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF9DA8153712551F43
+    bdr:MF9F358C31D60ED486
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "119" ;
         :microfilmStrip     "213" .
     
     bdr:MW1FEMC030723
         a                   :Instance ;
-        skos:prefLabel      "សុវាទ"@km ;
+        skos:prefLabel      "សូវ៉ាត"@km ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0254EFA22F7C18E1 ;
+        :hasTitle           bdr:TT0254EFA22F7C18E1 , bdr:TTC53047E951DB22FA ;
         :instanceHasReproduction  bdr:W1FEMC030723 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9DA8153712551F43 ;
-        :note               bdr:NTC53047E951DB22FA ;
+        :microfilmItem      bdr:MF9F358C31D60ED486 ;
+        :note               bdr:NT9DA8153712551F43 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "0719-B.01.06.01.II.1" ;
         :workIsAbout        bdr:FEMC_Scheme_II_1 .
     
-    bdr:NTC53047E951DB22FA
+    bdr:NT9DA8153712551F43
         a                   :Note ;
         :contentLocationStatement  "pg. 22" ;
         :noteSource         bda:PR1FEMC03 .
     
     bdr:TT0254EFA22F7C18E1
         a                   :Title ;
-        rdfs:label          "សុវាទ"@km .
+        rdfs:label          "សូវ៉ាត"@km ;
+        :femcConversionOf   bdr:TTC53047E951DB22FA .
+    
+    bdr:TTC53047E951DB22FA
+        a                   :CoverTitle ;
+        rdfs:label          "សុវាទ"@km-x-kmpre20c .
 }

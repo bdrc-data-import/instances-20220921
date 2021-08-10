@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC037375 {
+    bda:LG5FD92C20EB3E7A28
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-09-12"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC037375"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC037375"@en , "imported pubinfo for W1FEMC037375"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC037375
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC037375 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3e/MW1FEMC037375.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC037375 ;
+        adm:logEntry        bda:LG5FD92C20EB3E7A28 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFF0580093C6EDABA4
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "V" ;
+        :microfilmStrip     "20-21" .
+    
+    bdr:MW1FEMC037375
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមង្គលទីបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr , "Braḥ Maṅgaldipanī Aṭṭhakathā Maṅgalsātra"@pi-x-kmfemc ;
+        :hasFascicles       "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27" ;
+        :hasTitle           bdr:TT28D03AC1F0F5AC77 , bdr:TT31A011CCCDED8FBB ;
+        :instanceHasReproduction  bdr:W1FEMC037375 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF0580093C6EDABA4 ;
+        :note               bdr:NTEF0B3337D1C0B587 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "001_A.04.07.01.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NTEF0B3337D1C0B587
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT28D03AC1F0F5AC77
+        a                   :Title ;
+        rdfs:label          "Braḥ Maṅgaldipanī Aṭṭhakathā Maṅgalsātra"@pi-x-kmfemc .
+    
+    bdr:TT31A011CCCDED8FBB
+        a                   :Title ;
+        rdfs:label          "ព្រះមង្គលទីបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr .
+}

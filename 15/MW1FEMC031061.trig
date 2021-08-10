@@ -14,11 +14,13 @@
 bdg:MW1FEMC031061 {
     bda:LGDF246B008A6C1FD4
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031061"@en .
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031061"@en ;
+        adm:logWho          bdu:U00090 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031061"@en , "imported pubinfo for W1FEMC031061"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -27,31 +29,45 @@ bdg:MW1FEMC031061 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031061 ;
         adm:contentProvider  bda:CP049 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "15/MW1FEMC031061.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031061 ;
-        adm:logEntry        bda:LGDF246B008A6C1FD4 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGDF246B008A6C1FD4 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031061
         a                   :Instance ;
-        :hasInstanceNum     "1" ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km ;
+        :hasTitle           bdr:TT93ADFD8B76283BC3 , bdr:TTB8809908718F706C , bdr:TTD39DAEB7B44107EF ;
         :instanceHasReproduction  bdr:W1FEMC031061 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTB8809908718F706C ;
+        :note               bdr:NTCA270284826DA4DF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "0009-A.09.13.02" ;
-        :workIsAbout        bdr:FEMC_Scheme_02 .
+        :workFEMCManuscriptCode  "0009-A.09.13.02.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
     
-    bdr:NTB8809908718F706C
+    bdr:NTCA270284826DA4DF
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
+    
+    bdr:TT93ADFD8B76283BC3
+        a                   :CoverTitle ;
+        rdfs:label          "អានន្ទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TTD39DAEB7B44107EF .
+    
+    bdr:TTB8809908718F706C
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
+    
+    bdr:TTD39DAEB7B44107EF
+        a                   :CoverTitle ;
+        rdfs:label          "អណន្ទឆ្លើយ "@km-x-kmpre20c .
 }

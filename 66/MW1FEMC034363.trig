@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC034363 {
+    bda:LG55752619B923BB1A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-02"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC034363"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC034363"@en , "imported pubinfo for W1FEMC034363"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC034363
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC034363 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "66/MW1FEMC034363.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC034363 ;
+        adm:logEntry        bda:LG55752619B923BB1A , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFE2A70945BF9A0C01
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "164" .
+    
+    bdr:MW1FEMC034363
+        a                   :Instance ;
+        skos:prefLabel      "មហាវេស្សន្តរជាតក"@km , "mahā vessantara jātaka"@km-x-kmfemc ;
+        :hasFascicles       "3, 4, 7" ;
+        :hasTitle           bdr:TT4857E9E4C8B74A63 , bdr:TT8A5FAC27F22421BA ;
+        :instanceHasReproduction  bdr:W1FEMC034363 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE2A70945BF9A0C01 ;
+        :note               bdr:NT2DC81D597CC4ED5A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "007-B.09.12.01.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT2DC81D597CC4ED5A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT4857E9E4C8B74A63
+        a                   :Title ;
+        rdfs:label          "mahā vessantara jātaka"@km-x-kmfemc .
+    
+    bdr:TT8A5FAC27F22421BA
+        a                   :Title ;
+        rdfs:label          "មហាវេស្សន្តរជាតក"@km .
+}

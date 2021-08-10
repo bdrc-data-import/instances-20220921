@@ -12,15 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC031075 {
-    bda:LGB7F8060608E30242
+    bda:LG6FA43CB30FE1F755
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-10-05"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC031075"@en ;
         adm:logWho          bdu:U00083 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031075"@en , "imported pubinfo for W1FEMC031075"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,35 +28,29 @@ bdg:MW1FEMC031075 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031075 ;
-        adm:contentProvider  bda:CP040 ;
         adm:facetIndex      7 ;
         adm:gitPath         "34/MW1FEMC031075.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031075 ;
-        adm:logEntry        bda:LGB7F8060608E30242 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG6FA43CB30FE1F755 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031075
         a                   :Instance ;
-        skos:prefLabel      "ចៅវកើដ្ឋមាលារ័ (ក-ជ)"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTA616ED2B2D31BCC4 ;
+        skos:prefLabel      "ចៅកើតមាលា"@km ;
+        :hasTitle           bdr:TTA616ED2B2D31BCC4 , bdr:TTEA709D176E2870F0 ;
         :instanceHasReproduction  bdr:W1FEMC031075 ;
         :isComplete         true ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT6FA43CB30FE1F755 , bdr:NTD91577CD081BFAF4 ;
+        :note               bdr:NTD91577CD081BFAF4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "005-PP.03.03.03" ;
-        :workIsAbout        bdr:FEMC_Scheme_03 .
-    
-    bdr:NT6FA43CB30FE1F755
-        a                   :Note ;
-        :noteText           "where to put (ក-ជ)"@en .
+        :workFEMCManuscriptCode  "005-PP.03.03.03.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
     
     bdr:NTD91577CD081BFAF4
         a                   :Note ;
@@ -64,6 +58,11 @@ bdg:MW1FEMC031075 {
         :noteText           "Catalog" .
     
     bdr:TTA616ED2B2D31BCC4
+        a                   :CoverTitle ;
+        rdfs:label          "ចៅវកើដ្ឋមាលារ័ "@km-x-kmpre20c .
+    
+    bdr:TTEA709D176E2870F0
         a                   :Title ;
-        rdfs:label          "ចៅវកើដ្ឋមាលារ័ (ក-ជ)"@km .
+        rdfs:label          "ចៅកើតមាលា"@km ;
+        :femcConversionOf   bdr:TTA616ED2B2D31BCC4 .
 }

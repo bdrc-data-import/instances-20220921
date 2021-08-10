@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC037312 {
+    bda:LGD016F9687D44B94F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-09-12"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC037312"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC037312"@en , "imported pubinfo for W1FEMC037312"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC037312
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC037312 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "51/MW1FEMC037312.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC037312 ;
+        adm:logEntry        bda:LGD016F9687D44B94F , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF6609BB857B224CDD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "79" .
+    
+    bdr:MW1FEMC037312
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះអព្ភីធម្មបីដក"@km , "Braḥ Abbhīdhamma Pīṭaka"@km-x-kmfemc ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TTC90547174E6E3F36 , bdr:TTD1599A2FDABBA6D6 ;
+        :instanceHasReproduction  bdr:W1FEMC037312 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6609BB857B224CDD ;
+        :note               bdr:NTD72A4A589C2FD562 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "024_A.04.07.01.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
+    
+    bdr:NTD72A4A589C2FD562
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTC90547174E6E3F36
+        a                   :Title ;
+        rdfs:label          "ព្រះអព្ភីធម្មបីដក"@km .
+    
+    bdr:TTD1599A2FDABBA6D6
+        a                   :Title ;
+        rdfs:label          "Braḥ Abbhīdhamma Pīṭaka"@km-x-kmfemc .
+}

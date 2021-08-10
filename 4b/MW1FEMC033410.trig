@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033410 {
+    bda:LGAF4420843ADB4E1F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033410"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033410"@en , "imported pubinfo for W1FEMC033410"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033410
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033410 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4b/MW1FEMC033410.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033410 ;
+        adm:logEntry        bda:LGAF4420843ADB4E1F , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF26257CFA51169292
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC033410
+        a                   :Instance ;
+        skos:prefLabel      "សត្រារ ទុនសា្យ (១-២០)"@km , "satrār dunsāy"@km-x-kmfemc ;
+        :hasTitle           bdr:TT18909ADFA22BE20D , bdr:TT4DD14986713BF3F0 ;
+        :instanceHasReproduction  bdr:W1FEMC033410 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF26257CFA51169292 ;
+        :note               bdr:NT23D1CCD836F6D2D6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "029-B.11.15.01.II.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_2 .
+    
+    bdr:NT23D1CCD836F6D2D6
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT18909ADFA22BE20D
+        a                   :Title ;
+        rdfs:label          "satrār dunsāy"@km-x-kmfemc .
+    
+    bdr:TT4DD14986713BF3F0
+        a                   :Title ;
+        rdfs:label          "សត្រារ ទុនសា្យ (១-២០)"@km .
+}

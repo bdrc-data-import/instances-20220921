@@ -14,11 +14,13 @@
 bdg:MW1FEMC031067 {
     bda:LGF70B428F3142CFA0
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031067"@en .
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031067"@en ;
+        adm:logWho          bdu:U00090 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031067"@en , "imported pubinfo for W1FEMC031067"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -27,31 +29,45 @@ bdg:MW1FEMC031067 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031067 ;
         adm:contentProvider  bda:CP049 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "51/MW1FEMC031067.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031067 ;
-        adm:logEntry        bda:LGF70B428F3142CFA0 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGF70B428F3142CFA0 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031067
         a                   :Instance ;
-        :hasInstanceNum     "1" ;
+        skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km ;
+        :hasTitle           bdr:TT389FDC819B22C7CC , bdr:TT81EC7CA273F4DBEA , bdr:TTE5CC8D9B97ED430D ;
         :instanceHasReproduction  bdr:W1FEMC031067 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT81EC7CA273F4DBEA ;
+        :note               bdr:NT449372AE99E708C3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "0015-A.09.13.02" ;
-        :workIsAbout        bdr:FEMC_Scheme_02 .
+        :workFEMCManuscriptCode  "0015-A.09.13.02.III.4" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_4 .
     
-    bdr:NT81EC7CA273F4DBEA
+    bdr:NT449372AE99E708C3
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
+    
+    bdr:TT389FDC819B22C7CC
+        a                   :CoverTitle ;
+        rdfs:label          "អព្ភីធមព្រះកាំម្មថាន"@km-x-kmpre20c .
+    
+    bdr:TT81EC7CA273F4DBEA
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km .
+    
+    bdr:TTE5CC8D9B97ED430D
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មព្រះកម្មដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TT389FDC819B22C7CC .
 }

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036069 {
+    bda:LG20C1A9DAEDEED438
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036069"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036069"@en , "imported pubinfo for W1FEMC036069"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036069
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036069 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "02/MW1FEMC036069.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036069 ;
+        adm:logEntry        bda:LG20C1A9DAEDEED438 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF700CAE850B98EF0A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "174" .
+    
+    bdr:MW1FEMC036069
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមហាសម័យ្យសូត្រ (១-៣១)"@km , "braḥ mahāSamayyasūtr"@km-x-kmfemc ;
+        :hasTitle           bdr:TT497BEB1A026182B5 , bdr:TT5C8A767D22359750 ;
+        :instanceHasReproduction  bdr:W1FEMC036069 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF700CAE850B98EF0A ;
+        :note               bdr:NTDD851EF088CD5E2B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "028-B.04.03.03.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
+    
+    bdr:NTDD851EF088CD5E2B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT497BEB1A026182B5
+        a                   :Title ;
+        rdfs:label          "ព្រះមហាសម័យ្យសូត្រ (១-៣១)"@km .
+    
+    bdr:TT5C8A767D22359750
+        a                   :Title ;
+        rdfs:label          "braḥ mahāSamayyasūtr"@km-x-kmfemc .
+}

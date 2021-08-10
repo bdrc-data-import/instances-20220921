@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036713 {
+    bda:LG1F4382C5A3B54178
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036713"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036713"@en , "imported pubinfo for W1FEMC036713"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036713
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036713 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "06/MW1FEMC036713.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036713 ;
+        adm:logEntry        bda:LG1F4382C5A3B54178 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF350FC8A3ECE03582
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "190" .
+    
+    bdr:MW1FEMC036713
+        a                   :Instance ;
+        skos:prefLabel      "សុំម្រា្យបាដ្ឋិមោក"@km , "suṃ mrāy pāṭṭhi mok"@km-x-kmfemc ;
+        :hasTitle           bdr:TT7969FB035BA609A9 , bdr:TTCE3578589BB66AEF ;
+        :instanceHasReproduction  bdr:W1FEMC036713 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF350FC8A3ECE03582 ;
+        :note               bdr:NTD1384FBD0503CF08 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "026-B.11.05.01.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NTD1384FBD0503CF08
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT7969FB035BA609A9
+        a                   :Title ;
+        rdfs:label          "សុំម្រា្យបាដ្ឋិមោក"@km .
+    
+    bdr:TTCE3578589BB66AEF
+        a                   :Title ;
+        rdfs:label          "suṃ mrāy pāṭṭhi mok"@km-x-kmfemc .
+}

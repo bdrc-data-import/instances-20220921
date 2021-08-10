@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036135 {
+    bda:LGC26DDBF9A6216E18
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036135"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036135"@en , "imported pubinfo for W1FEMC036135"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036135
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036135 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6c/MW1FEMC036135.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036135 ;
+        adm:logEntry        bda:LGC26DDBF9A6216E18 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFD59E1213603F8243
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC036135
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនព្រះពុទុំនា្យ (១-៣០)"@km , "Kpoun braḥ buduṃnāy"@km-x-kmfemc ;
+        :hasTitle           bdr:TT5AA4EE9B29683A08 , bdr:TTADE325E660C51202 ;
+        :instanceHasReproduction  bdr:W1FEMC036135 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD59E1213603F8243 ;
+        :note               bdr:NTC03674CD9934CFB1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "093-B.04.03.03.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NTC03674CD9934CFB1
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5AA4EE9B29683A08
+        a                   :Title ;
+        rdfs:label          "Kpoun braḥ buduṃnāy"@km-x-kmfemc .
+    
+    bdr:TTADE325E660C51202
+        a                   :Title ;
+        rdfs:label          "ក្បួនព្រះពុទុំនា្យ (១-៣០)"@km .
+}

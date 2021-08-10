@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033618 {
+    bda:LG2B76EF504906E7B6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-11"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033618"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033618"@en , "imported pubinfo for W1FEMC033618"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033618
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033618 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f6/MW1FEMC033618.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033618 ;
+        adm:logEntry        bda:LG2B76EF504906E7B6 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFAD5E162EDAE4ECB5
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "186" .
+    
+    bdr:MW1FEMC033618
+        a                   :Instance ;
+        skos:prefLabel      "ឧប្បជ្ឈាខន្ធបញ្ចូលនិងបរិវាស្សខន្ធ"@km , "uppājjhā khandh pañcūl niṅ parῑvārrkhandh"@km-x-kmfemc ;
+        :hasTitle           bdr:TT89DD64A8E62B6D84 , bdr:TTC1DB6AB07AE83A97 ;
+        :instanceHasReproduction  bdr:W1FEMC033618 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAD5E162EDAE4ECB5 ;
+        :note               bdr:NT77C21C0CEF9C8326 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "035-B.11.11.05.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NT77C21C0CEF9C8326
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT89DD64A8E62B6D84
+        a                   :Title ;
+        rdfs:label          "ឧប្បជ្ឈាខន្ធបញ្ចូលនិងបរិវាស្សខន្ធ"@km .
+    
+    bdr:TTC1DB6AB07AE83A97
+        a                   :Title ;
+        rdfs:label          "uppājjhā khandh pañcūl niṅ parῑvārrkhandh"@km-x-kmfemc .
+}

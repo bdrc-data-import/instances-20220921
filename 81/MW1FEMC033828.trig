@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033828 {
+    bda:LGE289C5B38A3BFC23
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-02"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033828"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033828"@en , "imported pubinfo for W1FEMC033828"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033828
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033828 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "81/MW1FEMC033828.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033828 ;
+        adm:logEntry        bda:LGE289C5B38A3BFC23 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF0ACC6EFCFCD89D34
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "54" .
+    
+    bdr:MW1FEMC033828
+        a                   :Instance ;
+        skos:prefLabel      "ធុតុង្គ (ក-ចា)"@pi-khmr , "dhu tuńga"@pi-x-kmfemc ;
+        :hasTitle           bdr:TT26DCAC50982505C4 , bdr:TT9FF570070C94C63C ;
+        :instanceHasReproduction  bdr:W1FEMC033828 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0ACC6EFCFCD89D34 ;
+        :note               bdr:NTEABC2098C6C83AF7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "015-B.11.11.04.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
+    
+    bdr:NTEABC2098C6C83AF7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT26DCAC50982505C4
+        a                   :Title ;
+        rdfs:label          "dhu tuńga"@pi-x-kmfemc .
+    
+    bdr:TT9FF570070C94C63C
+        a                   :Title ;
+        rdfs:label          "ធុតុង្គ (ក-ចា)"@pi-khmr .
+}

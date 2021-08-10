@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036144 {
+    bda:LGBA1C33343142FB43
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036144"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036144"@en , "imported pubinfo for W1FEMC036144"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036144
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036144 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f0/MW1FEMC036144.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036144 ;
+        adm:logEntry        bda:LGBA1C33343142FB43 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF1CC42288CCCD75A3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "179" .
+    
+    bdr:MW1FEMC036144
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតក ព្រះតេមិយ, ច័ន្ទកុមារ"@km , "desjātaka braḥ temiya ; Cand kumār"@km-x-kmfemc ;
+        :hasFascicles       "1-5, ក-ម" ;
+        :hasTitle           bdr:TT6954A5BFD1066827 , bdr:TTBA903A1183AB9554 ;
+        :instanceHasReproduction  bdr:W1FEMC036144 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1CC42288CCCD75A3 ;
+        :note               bdr:NT5BDC588FA90B5B1A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "002-B.04.10.02.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT5BDC588FA90B5B1A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6954A5BFD1066827
+        a                   :Title ;
+        rdfs:label          "ទសជាតក ព្រះតេមិយ, ច័ន្ទកុមារ"@km .
+    
+    bdr:TTBA903A1183AB9554
+        a                   :Title ;
+        rdfs:label          "desjātaka braḥ temiya ; Cand kumār"@km-x-kmfemc .
+}

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036236 {
+    bda:LGA91D7605E737D284
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036236"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036236"@en , "imported pubinfo for W1FEMC036236"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036236
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036236 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "01/MW1FEMC036236.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036236 ;
+        adm:logEntry        bda:LGA91D7605E737D284 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF31A922DD077F6998
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "172" .
+    
+    bdr:MW1FEMC036236
+        a                   :Instance ;
+        skos:prefLabel      "មូលនគរ (៣-៣៧)"@km , "mūl nagar"@km-x-kmfemc ;
+        :hasTitle           bdr:TT2D201EF88C692FE5 , bdr:TT8D91B7ECBB5D8A39 ;
+        :instanceHasReproduction  bdr:W1FEMC036236 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF31A922DD077F6998 ;
+        :note               bdr:NT368270F2EFC4275F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "014-B.04.09.03.V.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_V_1 .
+    
+    bdr:NT368270F2EFC4275F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2D201EF88C692FE5
+        a                   :Title ;
+        rdfs:label          "មូលនគរ (៣-៣៧)"@km .
+    
+    bdr:TT8D91B7ECBB5D8A39
+        a                   :Title ;
+        rdfs:label          "mūl nagar"@km-x-kmfemc .
+}

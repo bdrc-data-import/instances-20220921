@@ -12,13 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC032011 {
-    bda:LG914DCD93C940B068
+    bda:LGEA3429F121B336D5
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC032011"@en .
+        adm:logDate         "2021-03-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC032011"@en ;
+        adm:logWhoStr       "Team" .
     
-    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC032011"@en , "imported pubinfo for W1FEMC032011"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -26,37 +28,41 @@ bdg:MW1FEMC032011 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC032011 ;
-        adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "6b/MW1FEMC032011.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC032011 ;
-        adm:logEntry        bda:LG914DCD93C940B068 , bda:LGIM6A01C8B4 ;
+        adm:logEntry        bda:LGEA3429F121B336D5 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC032011
         a                   :Instance ;
-        skos:prefLabel      "ល្បើកទសជាតិ (...២-១២)"@km ;
-        :hasTitle           bdr:TT3F849BE5559EEF9B ;
+        skos:prefLabel      "ល្បើកទសជាតិ"@km ;
+        :hasFascicles       "...2-12" ;
+        :hasTitle           bdr:TT1A368E989D3B8A3F ;
         :instanceHasReproduction  bdr:W1FEMC032011 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT1A368E989D3B8A3F ;
+        :note               bdr:NT914DCD93C940B068 , bdr:NTA3137A113C6BBC85 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "150-B.01.03.03.I.3" ;
         :workIsAbout        bdr:FEMC_Scheme_I_3 .
     
-    bdr:NT1A368E989D3B8A3F
+    bdr:NT914DCD93C940B068
+        a                   :Note ;
+        :noteText           "Canister130_Strip224"@en .
+    
+    bdr:NTA3137A113C6BBC85
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
     
-    bdr:TT3F849BE5559EEF9B
+    bdr:TT1A368E989D3B8A3F
         a                   :Title ;
-        rdfs:label          "ល្បើកទសជាតិ (...២-១២)"@km .
+        rdfs:label          "ល្បើកទសជាតិ"@km .
 }

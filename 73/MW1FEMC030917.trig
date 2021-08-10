@@ -12,15 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030917 {
-    bda:LG4983582527D39900
+    bda:LG692E6429DE896A9E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-09-09"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC030917"@en ;
-        adm:logWho          bdu:U00087 .
+        adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030917"@en , "imported pubinfo for W1FEMC030917"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,35 +28,29 @@ bdg:MW1FEMC030917 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030917 ;
-        adm:contentProvider  bda:CP048 ;
         adm:facetIndex      7 ;
         adm:gitPath         "73/MW1FEMC030917.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030917 ;
-        adm:logEntry        bda:LG4983582527D39900 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG692E6429DE896A9E , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC030917
         a                   :Instance ;
-        skos:prefLabel      "នេះគឺច្បាប់ក្រម"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT45566FE7DBEBB132 ;
+        skos:prefLabel      "ក្រមច្បាប់"@km ;
+        :hasTitle           bdr:TT45566FE7DBEBB132 , bdr:TT8FF436CA31BA9F9D ;
         :instanceHasReproduction  bdr:W1FEMC030917 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT692E6429DE896A9E , bdr:NTB4D7A0E0232331F3 ;
+        :note               bdr:NTB4D7A0E0232331F3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "0912-B.01.06.01.I.1" ;
         :workIsAbout        bdr:FEMC_Scheme_I_1 .
-    
-    bdr:NT692E6429DE896A9E
-        a                   :Note ;
-        :noteText           "នេះគឺច្បាប់ក្រម > នេះគឺក្រមច្បាប់"@en .
     
     bdr:NTB4D7A0E0232331F3
         a                   :Note ;
@@ -64,6 +58,11 @@ bdg:MW1FEMC030917 {
         :noteSource         bda:PR1FEMC03 .
     
     bdr:TT45566FE7DBEBB132
+        a                   :CoverTitle ;
+        rdfs:label          "នេះគឺក្រមច្បាប់"@km-x-kmpre20c .
+    
+    bdr:TT8FF436CA31BA9F9D
         a                   :Title ;
-        rdfs:label          "នេះគឺច្បាប់ក្រម"@km .
+        rdfs:label          "ក្រមច្បាប់"@km ;
+        :femcConversionOf   bdr:TT45566FE7DBEBB132 .
 }

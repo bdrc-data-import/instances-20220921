@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033397 {
+    bda:LGBB8A0AE33EBEB125
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033397"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033397"@en , "imported pubinfo for W1FEMC033397"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033397
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033397 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4c/MW1FEMC033397.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033397 ;
+        adm:logEntry        bda:LGBB8A0AE33EBEB125 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF10593B7D3F53687D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC033397
+        a                   :Instance ;
+        skos:prefLabel      "សតិមហាបថាន (ញ-ញះ)"@km , "Satī mahāpa thān"@km-x-kmfemc ;
+        :hasFascicles       "8" ;
+        :hasTitle           bdr:TT3C9F7F683FD186D2 , bdr:TT97CFC5B3627CB7F1 ;
+        :instanceHasReproduction  bdr:W1FEMC033397 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF10593B7D3F53687D ;
+        :note               bdr:NT5B702813513F2611 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "016-B.11.15.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT5B702813513F2611
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3C9F7F683FD186D2
+        a                   :Title ;
+        rdfs:label          "សតិមហាបថាន (ញ-ញះ)"@km .
+    
+    bdr:TT97CFC5B3627CB7F1
+        a                   :Title ;
+        rdfs:label          "Satī mahāpa thān"@km-x-kmfemc .
+}

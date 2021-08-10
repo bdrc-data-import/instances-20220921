@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036047 {
+    bda:LGF504062A8F58E7BA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036047"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036047"@en , "imported pubinfo for W1FEMC036047"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036047
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036047 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "19/MW1FEMC036047.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036047 ;
+        adm:logEntry        bda:LGF504062A8F58E7BA , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF57392E0A0910FC72
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "173" .
+    
+    bdr:MW1FEMC036047
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតក ជនក, សុវណ្ណសាម (ង-ឆិ)(ង-ឆី)"@km , "dasajātaka , janaka , SuvaṇṇaSām"@km-x-kmfemc ;
+        :hasFascicles       "3, 4" ;
+        :hasTitle           bdr:TTB9489C8E8319E571 , bdr:TTCD5C93A04078A8A5 ;
+        :instanceHasReproduction  bdr:W1FEMC036047 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF57392E0A0910FC72 ;
+        :note               bdr:NT7D0D20BD353FF2A9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "006-B.04.03.03.III.5" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+    
+    bdr:NT7D0D20BD353FF2A9
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB9489C8E8319E571
+        a                   :Title ;
+        rdfs:label          "dasajātaka , janaka , SuvaṇṇaSām"@km-x-kmfemc .
+    
+    bdr:TTCD5C93A04078A8A5
+        a                   :Title ;
+        rdfs:label          "ទសជាតក ជនក, សុវណ្ណសាម (ង-ឆិ)(ង-ឆី)"@km .
+}

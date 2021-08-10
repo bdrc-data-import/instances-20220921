@@ -18,9 +18,9 @@ bdg:MW1FEMC030515 {
         adm:logMessage      "entered cataloging for W1FEMC030515"@en ;
         adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030515"@en , "imported pubinfo for W1FEMC030515"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,38 +28,41 @@ bdg:MW1FEMC030515 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030515 ;
-        adm:contentProvider  bda:CP048 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "d2/MW1FEMC030515.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030515 ;
-        adm:logEntry        bda:LG280F4A62A52C49CB , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG280F4A62A52C49CB , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC030515
         a                   :Instance ;
-        skos:prefLabel      "ស្វះស្វែង"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTF90084FAC97E0B66 ;
+        skos:prefLabel      "ច្បាប់ស្វះស្វែង"@km ;
+        :hasTitle           bdr:TT178031DEA283806E , bdr:TTF90084FAC97E0B66 ;
         :instanceHasReproduction  bdr:W1FEMC030515 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT178031DEA283806E ;
+        :note               bdr:NT83C16D47074D034D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "0512-B.01.06.01.I.1" ;
         :workIsAbout        bdr:FEMC_Scheme_I_1 .
     
-    bdr:NT178031DEA283806E
+    bdr:NT83C16D47074D034D
         a                   :Note ;
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bda:PR1FEMC03 .
     
+    bdr:TT178031DEA283806E
+        a                   :CoverTitle ;
+        rdfs:label          "ស្វះស្វែង"@km-x-kmpre20c .
+    
     bdr:TTF90084FAC97E0B66
         a                   :Title ;
-        rdfs:label          "ស្វះស្វែង"@km .
+        rdfs:label          "ច្បាប់ស្វះស្វែង"@km ;
+        :femcConversionOf   bdr:TT178031DEA283806E .
 }

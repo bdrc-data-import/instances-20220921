@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036674 {
+    bda:LG89886DA7A49B53FF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036674"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036674"@en , "imported pubinfo for W1FEMC036674"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036674
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036674 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "77/MW1FEMC036674.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036674 ;
+        adm:logEntry        bda:LG89886DA7A49B53FF , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF2EC107FF23DB3626
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "197" .
+    
+    bdr:MW1FEMC036674
+        a                   :Instance ;
+        skos:prefLabel      "រឿងតំមរ៉ារថ្នាំ"@km , "riȍṅ taṃm rār thnāṃ"@km-x-kmfemc ;
+        :hasTitle           bdr:TT16499406B11E58CC , bdr:TTE1AF2EE45088E5AE ;
+        :instanceHasReproduction  bdr:W1FEMC036674 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2EC107FF23DB3626 ;
+        :note               bdr:NT3EE1B48532297519 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "007-B.11.14.02.VI.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_2 .
+    
+    bdr:NT3EE1B48532297519
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT16499406B11E58CC
+        a                   :Title ;
+        rdfs:label          "riȍṅ taṃm rār thnāṃ"@km-x-kmfemc .
+    
+    bdr:TTE1AF2EE45088E5AE
+        a                   :Title ;
+        rdfs:label          "រឿងតំមរ៉ារថ្នាំ"@km .
+}

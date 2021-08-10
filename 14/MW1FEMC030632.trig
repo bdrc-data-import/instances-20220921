@@ -16,11 +16,11 @@ bdg:MW1FEMC030632 {
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-09-07"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC030632"@en ;
-        adm:logWho          bdu:U00087 .
+        adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030632"@en , "imported pubinfo for W1FEMC030632"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,44 +28,47 @@ bdg:MW1FEMC030632 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030632 ;
-        adm:contentProvider  bda:CP048 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "14/MW1FEMC030632.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030632 ;
-        adm:logEntry        bda:LGA42520775DF3853E , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGA42520775DF3853E , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFEAC67A1F4B8E30A5
+    bdr:MFCAF7E43FD90F31BC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "116" ;
         :microfilmStrip     "210" .
     
     bdr:MW1FEMC030632
         a                   :Instance ;
-        skos:prefLabel      "ទន្សាយ"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTC5A76AA215384112 ;
+        skos:prefLabel      "ល្បើកទន្សាយ"@km ;
+        :hasTitle           bdr:TT02D301079071608D , bdr:TTC5A76AA215384112 ;
         :instanceHasReproduction  bdr:W1FEMC030632 ;
         :isComplete         true ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEAC67A1F4B8E30A5 ;
-        :note               bdr:NT02D301079071608D ;
+        :microfilmItem      bdr:MFCAF7E43FD90F31BC ;
+        :note               bdr:NTEAC67A1F4B8E30A5 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "0629-B.01.06.01.II.2" ;
         :workIsAbout        bdr:FEMC_Scheme_II_2 .
     
-    bdr:NT02D301079071608D
+    bdr:NTEAC67A1F4B8E30A5
         a                   :Note ;
         :contentLocationStatement  "pg. 19" ;
         :noteSource         bda:PR1FEMC03 .
     
+    bdr:TT02D301079071608D
+        a                   :CoverTitle ;
+        rdfs:label          "ទន្សាយ"@km-x-kmpre20c .
+    
     bdr:TTC5A76AA215384112
         a                   :Title ;
-        rdfs:label          "ទន្សាយ"@km .
+        rdfs:label          "ល្បើកទន្សាយ"@km ;
+        :femcConversionOf   bdr:TT02D301079071608D .
 }

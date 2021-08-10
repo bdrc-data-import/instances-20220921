@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039560 {
+    bda:LG5D380F3575D5DADF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039560"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC039560"@en , "imported pubinfo for W1FEMC039560"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039560
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC039560 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "81/MW1FEMC039560.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039560 ;
+        adm:logEntry        bda:LG5D380F3575D5DADF , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFBD7E0C65C9A3C531
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "10" ;
+        :microfilmStrip     "40" .
+    
+    bdr:MW1FEMC039560
+        a                   :Instance ;
+        skos:prefLabel      "សង្រួមព្រះសារីរិកធាតុ"@km , "saṅruom braḥ sārīrikadhātu"@km-x-kmfemc ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT1A82CC3793D7BCDA , bdr:TT30A28AE6DEDF4571 , bdr:TT3C47A635B34B985A , bdr:TT5F6F138BAC418DFB ;
+        :instanceHasReproduction  bdr:W1FEMC039560 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBD7E0C65C9A3C531 ;
+        :note               bdr:NT0B27D645DA18B133 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "050-PP.02.08.01.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+    
+    bdr:NT0B27D645DA18B133
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT1A82CC3793D7BCDA
+        a                   :Title ;
+        rdfs:label          "សង្រួមព្រះសារីរិកធាតុ"@km ;
+        :femcConversionOf   bdr:TT30A28AE6DEDF4571 .
+    
+    bdr:TT30A28AE6DEDF4571
+        a                   :CoverTitle ;
+        rdfs:label          "សង្រួមសរិក្កធាតុ"@km-x-kmpre20c .
+    
+    bdr:TT3C47A635B34B985A
+        a                   :Title ;
+        rdfs:label          "saṅruom braḥ sārīrikadhātu"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT5F6F138BAC418DFB .
+    
+    bdr:TT5F6F138BAC418DFB
+        a                   :CoverTitle ;
+        rdfs:label          "saṅruom sarikk dhātu"@km-x-kmpre20c-kmfemc .
+}

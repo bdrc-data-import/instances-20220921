@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039562 {
+    bda:LG18AEDC003711DAA0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039562"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC039562"@en , "imported pubinfo for W1FEMC039562"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039562
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC039562 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "fa/MW1FEMC039562.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039562 ;
+        adm:logEntry        bda:LG18AEDC003711DAA0 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF12E220684BAFCFE6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC039562
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សបុណ្យបុច្ឆាវិស្សជ្ជនា"@km , "ānisaṅs puṇy pucchā vissajjanā"@km-x-kmfemc ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT10ED9D476CC44BF0 , bdr:TT13C8B5D39C064D45 , bdr:TT246B7737680815D0 , bdr:TTD13D6AFF827D7AB8 ;
+        :instanceHasReproduction  bdr:W1FEMC039562 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF12E220684BAFCFE6 ;
+        :note               bdr:NT123A2F6B982FBFFA , bdr:NT352F96FB191F1B56 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "052-PP.02.08.01.III.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_6 .
+    
+    bdr:NT123A2F6B982FBFFA
+        a                   :Note ;
+        :noteText           "1 volume"@en .
+    
+    bdr:NT352F96FB191F1B56
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT10ED9D476CC44BF0
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs puṇy pucchā visujanā"@km-x-kmpre20c-kmfemc .
+    
+    bdr:TT13C8B5D39C064D45
+        a                   :Title ;
+        rdfs:label          "ānisaṅs puṇy pucchā vissajjanā"@km-x-kmfemc ;
+        :femcConversionOf   bdr:TT10ED9D476CC44BF0 .
+    
+    bdr:TT246B7737680815D0
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សបុណ្យបុច្ឆាវិសុជនា"@km-x-kmpre20c .
+    
+    bdr:TTD13D6AFF827D7AB8
+        a                   :Title ;
+        rdfs:label          "អានិសង្សបុណ្យបុច្ឆាវិស្សជ្ជនា"@km ;
+        :femcConversionOf   bdr:TT246B7737680815D0 .
+}

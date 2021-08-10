@@ -16,11 +16,11 @@ bdg:MW1FEMC030926 {
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-09-09"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC030926"@en ;
-        adm:logWho          bdu:U00087 .
+        adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030926"@en , "imported pubinfo for W1FEMC030926"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,38 +28,41 @@ bdg:MW1FEMC030926 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030926 ;
-        adm:contentProvider  bda:CP048 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "01/MW1FEMC030926.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030926 ;
-        adm:logEntry        bda:LG270DCC3A954911C5 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG270DCC3A954911C5 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC030926
         a                   :Instance ;
-        skos:prefLabel      "កេរកាល"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTFF8DD9A2D6CA37A0 ;
+        skos:prefLabel      "ច្បាប់កេរកាល"@km ;
+        :hasTitle           bdr:TTE741BFA05C5CA82E , bdr:TTFF8DD9A2D6CA37A0 ;
         :instanceHasReproduction  bdr:W1FEMC030926 ;
         :isComplete         true ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTE741BFA05C5CA82E ;
+        :note               bdr:NT539C690429F923A6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "0919-B.01.06.01.I.1" ;
         :workIsAbout        bdr:FEMC_Scheme_I_1 .
     
-    bdr:NTE741BFA05C5CA82E
+    bdr:NT539C690429F923A6
         a                   :Note ;
         :contentLocationStatement  "pg. 29" ;
         :noteSource         bda:PR1FEMC03 .
     
+    bdr:TTE741BFA05C5CA82E
+        a                   :CoverTitle ;
+        rdfs:label          "កេរកាល"@km-x-kmpre20c .
+    
     bdr:TTFF8DD9A2D6CA37A0
         a                   :Title ;
-        rdfs:label          "កេរកាល"@km .
+        rdfs:label          "ច្បាប់កេរកាល"@km ;
+        :femcConversionOf   bdr:TTE741BFA05C5CA82E .
 }

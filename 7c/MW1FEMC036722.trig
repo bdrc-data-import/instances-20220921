@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036722 {
+    bda:LG88E70FF87990E799
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036722"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC036722"@en , "imported pubinfo for W1FEMC036722"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036722
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC036722 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7c/MW1FEMC036722.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036722 ;
+        adm:logEntry        bda:LG88E70FF87990E799 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFDFB4C878BF69B36E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC036722
+        a                   :Instance ;
+        skos:prefLabel      "ពុទ្ធាភិសេក, ក្បួនទស្សទាយ"@km , "buddhā bhisek, kpoun dass dāy"@km-x-kmfemc ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT2A2B89D0ACA528AC , bdr:TT6D2BC4CFD8882D06 ;
+        :instanceHasReproduction  bdr:W1FEMC036722 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MFDFB4C878BF69B36E ;
+        :note               bdr:NT8EB2DAB5F1B35853 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "035-B.11.05.01.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NT8EB2DAB5F1B35853
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2A2B89D0ACA528AC
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធាភិសេក, ក្បួនទស្សទាយ"@km .
+    
+    bdr:TT6D2BC4CFD8882D06
+        a                   :Title ;
+        rdfs:label          "buddhā bhisek, kpoun dass dāy"@km-x-kmfemc .
+}

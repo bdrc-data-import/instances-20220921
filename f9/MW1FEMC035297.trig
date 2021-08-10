@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC035297 {
+    bda:LG8A38526431B494C5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC035297"@en ;
+        adm:logWhoStr       "sreypov Sort" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC035297"@en , "imported pubinfo for W1FEMC035297"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC035297
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC035297 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f9/MW1FEMC035297.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC035297 ;
+        adm:logEntry        bda:LG8A38526431B494C5 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC035297
+        a                   :Instance ;
+        skos:prefLabel      "ប្រែបព្វជាខ័ន្ធ សីមាខន្ធ (១ក-ម្ម...)"@km ;
+        :hasTitle           bdr:TT29640998DB5D4DA3 ;
+        :instanceHasReproduction  bdr:W1FEMC035297 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTEE77B13A6D0DB427 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "079-B.06.01.04.III.3" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_3 .
+    
+    bdr:NTEE77B13A6D0DB427
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT29640998DB5D4DA3
+        a                   :Title ;
+        rdfs:label          "ប្រែបព្វជាខ័ន្ធ សីមាខន្ធ (១ក-ម្ម...)"@km .
+}

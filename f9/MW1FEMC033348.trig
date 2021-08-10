@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033348 {
+    bda:LG5B523450E9E5AC84
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033348"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033348"@en , "imported pubinfo for W1FEMC033348"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033348
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033348 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f9/MW1FEMC033348.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033348 ;
+        adm:logEntry        bda:LG5B523450E9E5AC84 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MFC4BEFBFC07DDC61C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "193" .
+    
+    bdr:MW1FEMC033348
+        a                   :Instance ;
+        skos:prefLabel      "តំម្រារហៅព្រះលិង (ក-យ្យ)"@km , "taṃ mrār hav braḥ liṅ"@km-x-kmfemc ;
+        :hasTitle           bdr:TTC8B6C641CA127F47 , bdr:TTD33E85909EF69563 ;
+        :instanceHasReproduction  bdr:W1FEMC033348 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC4BEFBFC07DDC61C ;
+        :note               bdr:NTC4FD30F621CAFF73 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "023-B.11.02.01.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NTC4FD30F621CAFF73
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTC8B6C641CA127F47
+        a                   :Title ;
+        rdfs:label          "taṃ mrār hav braḥ liṅ"@km-x-kmfemc .
+    
+    bdr:TTD33E85909EF69563
+        a                   :Title ;
+        rdfs:label          "តំម្រារហៅព្រះលិង (ក-យ្យ)"@km .
+}

@@ -14,11 +14,13 @@
 bdg:MW1FEMC031382 {
     bda:LGBDC29FECFD503F85
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031382"@en .
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031382"@en ;
+        adm:logWhoStr       "Thida Heang" .
     
-    bda:LGIM6A01C8B4  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2020-04-14T17:44:25.389Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031382"@en , "imported pubinfo for W1FEMC031382"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -26,31 +28,52 @@ bdg:MW1FEMC031382 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031382 ;
-        adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "58/MW1FEMC031382.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031382 ;
-        adm:logEntry        bda:LGBDC29FECFD503F85 , bda:LGIM6A01C8B4 ;
+        adm:logEntry        bda:LGBDC29FECFD503F85 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:MF7493D434CE12C071
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "8" ;
+        :microfilmStrip     "31-32" .
+    
     bdr:MW1FEMC031382
         a                   :Instance ;
+        skos:prefLabel      "បឋមមន្តបាសាទិកាអដ្ឋកថាអាទិកម្ម"@pi-khmr , "paṭhama-samantapāsādikā aṭṭhakathā-ādikamma"@pi-x-kmfemc ;
+        :hasFascicles       "1, ​​ 2, 5-7, 9 11-13, 19, 22, 24-27" ;
+        :hasTitle           bdr:TT34FE60FE8C3EA7E6 , bdr:TT4659DF23AB12A77D , bdr:TT71A53C88907CE066 ;
         :instanceHasReproduction  bdr:W1FEMC031382 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
+        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT71A53C88907CE066 ;
+        :microfilmItem      bdr:MF7493D434CE12C071 ;
+        :note               bdr:NT79A0F958EFBC8DBF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workFEMCManuscriptCode  "025-PP.02.01.01.VII" ;
         :workIsAbout        bdr:FEMC_Scheme_VII .
     
-    bdr:NT71A53C88907CE066
+    bdr:NT79A0F958EFBC8DBF
         a                   :Note ;
-        :noteSource         bda:PR1FEMC03 ;
-        :noteText           "Catalog" .
+        :contentLocationStatement  "pg. 91" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT34FE60FE8C3EA7E6
+        a                   :Title ;
+        rdfs:label          "paṭhama-samantapāsādikā aṭṭhakathā-ādikamma"@pi-x-kmfemc .
+    
+    bdr:TT4659DF23AB12A77D
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសាមន្តបាសាទិកអដ្ឋកថាអទិកម្ម"@pi-khmr-x-kmpre20c .
+    
+    bdr:TT71A53C88907CE066
+        a                   :Title ;
+        rdfs:label          "បឋមមន្តបាសាទិកាអដ្ឋកថាអាទិកម្ម"@pi-khmr ;
+        :femcConversionOf   bdr:TT4659DF23AB12A77D .
 }

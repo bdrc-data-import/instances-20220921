@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC034448 {
+    bda:LG44C4CC5433E3695F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-02"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC034448"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC034448"@en , "imported pubinfo for W1FEMC034448"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC034448
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC034448 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9c/MW1FEMC034448.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC034448 ;
+        adm:logEntry        bda:LG44C4CC5433E3695F , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF108439DD96BE50C2
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "166" .
+    
+    bdr:MW1FEMC034448
+        a                   :Instance ;
+        skos:prefLabel      "លក្ខ្សិន្នវង្ស"@km , "lakkhsinn vaṅs"@km-x-kmfemc ;
+        :hasFascicles       "9-15" ;
+        :hasTitle           bdr:TT725955BCF7335DCA , bdr:TTFF94BD0CBA02CBBD ;
+        :instanceHasReproduction  bdr:W1FEMC034448 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF108439DD96BE50C2 ;
+        :note               bdr:NTCBEC8EC866487EB3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "081-B.09.12.01.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NTCBEC8EC866487EB3
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT725955BCF7335DCA
+        a                   :Title ;
+        rdfs:label          "លក្ខ្សិន្នវង្ស"@km .
+    
+    bdr:TTFF94BD0CBA02CBBD
+        a                   :Title ;
+        rdfs:label          "lakkhsinn vaṅs"@km-x-kmfemc .
+}

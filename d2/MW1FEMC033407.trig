@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC033407 {
+    bda:LGE91BABFCEB2D4EE9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC033407"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC033407"@en , "imported pubinfo for W1FEMC033407"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC033407
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC033407 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d2/MW1FEMC033407.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC033407 ;
+        adm:logEntry        bda:LGE91BABFCEB2D4EE9 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MF022AA1CD7C95B9F1
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC033407
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះបា្ទកងកប (១-២៩, ៣០-២៩)"@km , "braḥ pād kań kap"@km-x-kmfemc ;
+        :hasFascicles       "1, 2" ;
+        :hasTitle           bdr:TT6F64C36DBE5C73C9 , bdr:TTADB0FA27AB662674 ;
+        :instanceHasReproduction  bdr:W1FEMC033407 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF022AA1CD7C95B9F1 ;
+        :note               bdr:NTF3E85A5F30B066FF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "026-B.11.15.01.II.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+    
+    bdr:NTF3E85A5F30B066FF
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6F64C36DBE5C73C9
+        a                   :Title ;
+        rdfs:label          "ព្រះបា្ទកងកប (១-២៩, ៣០-២៩)"@km .
+    
+    bdr:TTADB0FA27AB662674
+        a                   :Title ;
+        rdfs:label          "braḥ pād kań kap"@km-x-kmfemc .
+}

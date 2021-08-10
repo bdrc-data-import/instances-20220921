@@ -1,0 +1,64 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039476 {
+    bda:LG5CC3D758D6646DC3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039476"@en ;
+        adm:logWhoStr       "Team" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC039476"@en , "imported pubinfo for W1FEMC039476"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039476
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC039476 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "28/MW1FEMC039476.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039476 ;
+        adm:logEntry        bda:LG5CC3D758D6646DC3 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC039476
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃ្យយុតត្រៃ្យតារ (១-៩), (១-៨)"@km ;
+        :hasFascicles       "5, 6" ;
+        :hasTitle           bdr:TT1AFCCFD14D30F442 ;
+        :instanceHasReproduction  bdr:W1FEMC039476 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT6814FC43CA47E889 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "051-A.10.09.02" ;
+        :workIsAbout        bdr:FEMC_Scheme_02 .
+    
+    bdr:NT6814FC43CA47E889
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1AFCCFD14D30F442
+        a                   :Title ;
+        rdfs:label          "ត្រៃ្យយុតត្រៃ្យតារ (១-៩), (១-៨)"@km .
+}

@@ -12,15 +12,15 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030536 {
-    bda:LGF3EC4B65997D015D
+    bda:LG71D475D056808079
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-09-07"^^xsd:date ;
         adm:logMessage      "entered cataloging for W1FEMC030536"@en ;
-        adm:logWho          bdu:U00087 .
+        adm:logWho          bdu:U00084 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC030536"@en , "imported pubinfo for W1FEMC030536"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,26 +28,24 @@ bdg:MW1FEMC030536 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030536 ;
-        adm:contentProvider  bda:CP048 ;
         adm:facetIndex      7 ;
         adm:gitPath         "32/MW1FEMC030536.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030536 ;
-        adm:logEntry        bda:LGF3EC4B65997D015D , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG71D475D056808079 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC030536
         a                   :Instance ;
-        skos:prefLabel      "កូនចៅ ធំ"@km ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT300F85DB7FADDDC8 ;
+        skos:prefLabel      "ច្បាប់កូនចៅធំ"@km ;
+        :hasTitle           bdr:TT300F85DB7FADDDC8 , bdr:TT382941707AFC5EC4 ;
         :instanceHasReproduction  bdr:W1FEMC030536 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT52AB368E171F5677 , bdr:NT71D475D056808079 ;
+        :note               bdr:NT52AB368E171F5677 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
@@ -59,11 +57,12 @@ bdg:MW1FEMC030536 {
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:NT71D475D056808079
-        a                   :Note ;
-        :noteText           "Should we need space or not?"@en .
-    
     bdr:TT300F85DB7FADDDC8
+        a                   :CoverTitle ;
+        rdfs:label          "កូនចៅធំ"@km-x-kmpre20c .
+    
+    bdr:TT382941707AFC5EC4
         a                   :Title ;
-        rdfs:label          "កូនចៅ ធំ"@km .
+        rdfs:label          "ច្បាប់កូនចៅធំ"@km ;
+        :femcConversionOf   bdr:TT300F85DB7FADDDC8 .
 }

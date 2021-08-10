@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC038939 {
+    bda:LG251FDB981F88F7D8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-01-28"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC038939"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC038939"@en , "imported pubinfo for W1FEMC038939"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC038939
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC038939 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "dc/MW1FEMC038939.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC038939 ;
+        adm:logEntry        bda:LG251FDB981F88F7D8 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC038939
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ក្មេង (១-៣)"@km ;
+        :hasTitle           bdr:TTD761E735A4DAF27E ;
+        :instanceHasReproduction  bdr:W1FEMC038939 ;
+        :isComplete         true ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT63F77302C0579D15 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "255-R.05.06.01" ;
+        :workIsAbout        bdr:FEMC_Scheme_01 .
+    
+    bdr:NT63F77302C0579D15
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTD761E735A4DAF27E
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្មេង (១-៣)"@km .
+}

@@ -14,11 +14,13 @@
 bdg:MW1FEMC031053 {
     bda:LG85A8098993CBEBEC
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031053"@en .
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031053"@en ;
+        adm:logWho          bdu:U00090 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031053"@en , "imported pubinfo for W1FEMC031053"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -27,31 +29,41 @@ bdg:MW1FEMC031053 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031053 ;
         adm:contentProvider  bda:CP049 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "0a/MW1FEMC031053.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031053 ;
-        adm:logEntry        bda:LG85A8098993CBEBEC , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LG85A8098993CBEBEC , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031053
         a                   :Instance ;
-        :hasInstanceNum     "1" ;
+        skos:prefLabel      "ច្បាប់ខុងចុវចៅថុក"@km ;
+        :hasTitle           bdr:TT51FBD450BFAEFD02 , bdr:TT8D9403106651CDD5 ;
         :instanceHasReproduction  bdr:W1FEMC031053 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT8D9403106651CDD5 ;
+        :note               bdr:NTF9C4E7D2820E422B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "0001-A.09.13.02" ;
-        :workIsAbout        bdr:FEMC_Scheme_02 .
+        :workFEMCManuscriptCode  "0001-A.09.13.02.I.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_I_1 .
     
-    bdr:NT8D9403106651CDD5
+    bdr:NTF9C4E7D2820E422B
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
+    
+    bdr:TT51FBD450BFAEFD02
+        a                   :CoverTitle ;
+        rdfs:label          "ខុងចូវចៅថុក"@km-x-kmpre20c .
+    
+    bdr:TT8D9403106651CDD5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ខុងចុវចៅថុក"@km ;
+        :femcConversionOf   bdr:TT51FBD450BFAEFD02 .
 }

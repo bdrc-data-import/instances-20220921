@@ -18,9 +18,9 @@ bdg:MW1FEMC031111 {
         adm:logMessage      "entered cataloging for W1FEMC031111"@en ;
         adm:logWho          bdu:U00083 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031111"@en , "imported pubinfo for W1FEMC031111"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -28,39 +28,42 @@ bdg:MW1FEMC031111 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031111 ;
-        adm:contentProvider  bda:CP040 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "83/MW1FEMC031111.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031111 ;
-        adm:logEntry        bda:LGE6ED7503B55FBA90 , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGE6ED7503B55FBA90 , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031111
         a                   :Instance ;
-        skos:prefLabel      "សត្តិសម្វោជ្ឈំង"@km ;
+        skos:prefLabel      "សត្តពោជ្ឈង្គ"@km ;
         :hasFascicles       "1, 2, 3, 5, 6, 7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTC09B218A1D2B275C ;
+        :hasTitle           bdr:TT54B813117D836FFE , bdr:TTC09B218A1D2B275C ;
         :instanceHasReproduction  bdr:W1FEMC031111 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT54B813117D836FFE ;
+        :note               bdr:NTE85BEE4E84F482EC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "040-PP.03.03.03" ;
-        :workIsAbout        bdr:FEMC_Scheme_03 .
+        :workFEMCManuscriptCode  "040-PP.03.03.03.III.1" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_1 .
     
-    bdr:NT54B813117D836FFE
+    bdr:NTE85BEE4E84F482EC
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
     
+    bdr:TT54B813117D836FFE
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តិសម្វោជ្ឈំង"@km-x-kmpre20c .
+    
     bdr:TTC09B218A1D2B275C
         a                   :Title ;
-        rdfs:label          "សត្តិសម្វោជ្ឈំង"@km .
+        rdfs:label          "សត្តពោជ្ឈង្គ"@km ;
+        :femcConversionOf   bdr:TT54B813117D836FFE .
 }

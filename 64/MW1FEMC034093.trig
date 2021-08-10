@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC034093 {
+    bda:LG210D782C23464353
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC034093"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMessage      "imported FEMC 03 workW1FEMC034093"@en , "imported pubinfo for W1FEMC034093"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC034093
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW1FEMC034093 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "64/MW1FEMC034093.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC034093 ;
+        adm:logEntry        bda:LG210D782C23464353 , bda:LGIM4F4FC78A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1FEMC034093
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាហួង, ថ្ងៃកាច, ក្រុងពាលី, ថ្ងៃជាស្តេច, ក្បួនសង់ផ្ទះ, មើលសម្ពង្ស, មើលពេលាអាពាហ៍ពិពាហ៍"@km ;
+        :hasTitle           bdr:TTA7899E860A9504C6 ;
+        :instanceHasReproduction  bdr:W1FEMC034093 ;
+        :isComplete         false ;
+        :isRoot             true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTC535306C5D345FB2 , bdr:NTC8FA7761AB63F479 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workFEMCManuscriptCode  "123-B.06.03.01.VI.6" ;
+        :workIsAbout        bdr:FEMC_Scheme_VI_6 .
+    
+    bdr:NTC535306C5D345FB2
+        a                   :Note ;
+        :noteText           "Canister148_Strip242"@en .
+    
+    bdr:NTC8FA7761AB63F479
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA7899E860A9504C6
+        a                   :Title ;
+        rdfs:label          "តម្រាហួង, ថ្ងៃកាច, ក្រុងពាលី, ថ្ងៃជាស្តេច, ក្បួនសង់ផ្ទះ, មើលសម្ពង្ស, មើលពេលាអាពាហ៍ពិពាហ៍"@km .
+}

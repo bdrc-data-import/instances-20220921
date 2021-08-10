@@ -14,11 +14,13 @@
 bdg:MW1FEMC031051 {
     bda:LGD843AEE67567E81D
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031051"@en .
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031051"@en ;
+        adm:logWho          bdu:U00090 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031051"@en , "imported pubinfo for W1FEMC031051"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -27,31 +29,37 @@ bdg:MW1FEMC031051 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031051 ;
         adm:contentProvider  bda:CP049 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "28/MW1FEMC031051.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031051 ;
-        adm:logEntry        bda:LGD843AEE67567E81D , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGD843AEE67567E81D , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031051
         a                   :Instance ;
-        :hasInstanceNum     "1" ;
+        skos:prefLabel      "មូលកច្ចាយនសន្ធិ"@pi-khmr ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TTF667F67E8CE35DD1 ;
         :instanceHasReproduction  bdr:W1FEMC031051 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
+        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTF667F67E8CE35DD1 ;
+        :note               bdr:NT049B41838E423228 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "0002-A.09.13.02" ;
-        :workIsAbout        bdr:FEMC_Scheme_02 .
+        :workFEMCManuscriptCode  "0002-A.09.13.02.VII" ;
+        :workIsAbout        bdr:FEMC_Scheme_VII .
     
-    bdr:NTF667F67E8CE35DD1
+    bdr:NT049B41838E423228
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
+    
+    bdr:TTF667F67E8CE35DD1
+        a                   :Title ;
+        rdfs:label          "មូលកច្ចាយនសន្ធិ"@pi-khmr .
 }

@@ -14,11 +14,13 @@
 bdg:MW1FEMC031064 {
     bda:LGD869D48D72AD914B
         a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC031064"@en .
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031064"@en ;
+        adm:logWho          bdu:U00090 .
     
-    bda:LGIM61B7CB85  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
         adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
-        adm:logDate         "2019-12-04T22:05:38.059Z"^^xsd:dateTime ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMessage      "imported FEMC 03 workW1FEMC031064"@en , "imported pubinfo for W1FEMC031064"@en ;
         adm:logMethod       bda:BatchMethod .
     
@@ -27,31 +29,41 @@ bdg:MW1FEMC031064 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031064 ;
         adm:contentProvider  bda:CP049 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "a0/MW1FEMC031064.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031064 ;
-        adm:logEntry        bda:LGD869D48D72AD914B , bda:LGIM61B7CB85 ;
+        adm:logEntry        bda:LGD869D48D72AD914B , bda:LGIM4F4FC78A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1FEMC031064
         a                   :Instance ;
-        :hasInstanceNum     "1" ;
+        skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
+        :hasFascicles       "6" ;
+        :hasTitle           bdr:TT0863AA50CD279D9B , bdr:TTD6C132C2CA405626 ;
         :instanceHasReproduction  bdr:W1FEMC031064 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT0863AA50CD279D9B ;
+        :note               bdr:NT82B759F61E34E8F1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "0012-A.09.13.02" ;
-        :workIsAbout        bdr:FEMC_Scheme_02 .
+        :workFEMCManuscriptCode  "0012-A.09.13.02.III.2" ;
+        :workIsAbout        bdr:FEMC_Scheme_III_2 .
     
-    bdr:NT0863AA50CD279D9B
+    bdr:NT82B759F61E34E8F1
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
+    
+    bdr:TT0863AA50CD279D9B
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km .
+    
+    bdr:TTD6C132C2CA405626
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលទីបនីអដ្ឋកថាមង្គលសូត្រ"@km .
 }
