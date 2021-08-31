@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN536 {
-    bda:LGC2A3E2CDACA8D464
+    bda:LGCD035E5BB1A06BDE
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-09-30T08:38:28.001Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LGCD035E5BB1A06BDE
+    bda:LGF7C553ABAEE633E0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-08-30T17:32:24.904Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGF9FE2C6FE101A12A
         a                   adm:UpdateData ;
         adm:logDate         "2017-03-31T10:02:11.53Z"^^xsd:dateTime ;
         adm:logMessage      "full cataloged"@en ;
@@ -27,18 +33,25 @@ bdg:MW3CN536 {
     bda:MW3CN536  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN536 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "29/MW3CN536.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN536 ;
-        adm:logEntry        bda:LGC2A3E2CDACA8D464 , bda:LGCD035E5BB1A06BDE ;
+        adm:logEntry        bda:LGCD035E5BB1A06BDE , bda:LGF7C553ABAEE633E0 , bda:LGF9FE2C6FE101A12A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:CRC2A3E2CDACA8D464
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26649 ;
+        :role               bdr:R0ER0015 .
     
     bdr:MW3CN536  a         :Instance ;
         skos:prefLabel      "dpal ldan sa skya'i chos spyod gces bsdus/"@bo-x-ewts ;
         :authorshipStatement  "sa skya rin chen bzang pos bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRC2A3E2CDACA8D464 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT6D08EAF97E3BEA1D ;
         :instanceHasReproduction  bdr:W3CN536 ;
         :instanceOf         bdr:WA3CN536 ;

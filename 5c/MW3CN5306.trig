@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN5306 {
-    bda:LG5DFDA9330A6B5D6A
+    bda:LG3F5A35992C8F00C5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-08-30T13:37:16.369Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGCC3CD35A4D9D406C
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-30T14:07:08.463Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
@@ -21,18 +27,25 @@ bdg:MW3CN5306 {
     bda:MW3CN5306  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN5306 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "5c/MW3CN5306.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN5306 ;
-        adm:logEntry        bda:LG5DFDA9330A6B5D6A ;
+        adm:logEntry        bda:LG3F5A35992C8F00C5 , bda:LGCC3CD35A4D9D406C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:CR5DFDA9330A6B5D6A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2DB4543 ;
+        :role               bdr:R0ER0015 .
     
     bdr:MW3CN5306  a        :Instance ;
         skos:prefLabel      "dpal zha lu'i gnas yig"@bo-x-ewts ;
         :authorshipStatement  "rtsom sgrig pa/ blo gsal rgya mtsho/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR5DFDA9330A6B5D6A ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT03FFE3EF16058669 , bdr:TTD7AF516877C22ACF ;
         :instanceHasReproduction  bdr:W3CN5306 ;
         :instanceOf         bdr:WA3CN5306 ;
