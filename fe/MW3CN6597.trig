@@ -12,42 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6597 {
-    bda:LG023DC498DAF762DC
+    bda:LG177BDD65DBAF4D2E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-16T16:58:38.316Z"^^xsd:dateTime ;
         adm:logMessage      "fully cataloged and released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG6F1F3E1202E0FB23
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-15T21:13:27.483Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN6597  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6597 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "fe/MW3CN6597.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6597 ;
-        adm:logEntry        bda:LG023DC498DAF762DC ;
+        adm:logEntry        bda:LG177BDD65DBAF4D2E , bda:LG6F1F3E1202E0FB23 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV6EC690B2F076BD3B
+    bdr:CR6EC690B2F076BD3B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7439 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV6379BDB0BDA07A60
         a                   :PublishedEvent ;
         :onYear             "2012"^^xsd:gYear .
     
-    bdr:ID6379BDB0BDA07A60
+    bdr:ID023DC498DAF762DC
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223033053" .
     
     bdr:MW3CN6597  a        :Instance ;
         skos:altLabel       "格萨尔唐卡"@zh-hans ;
-        skos:prefLabel      "ge gsar sgrung thang /"@bo-x-ewts ;
+        skos:prefLabel      "ge sar sgrung thang /"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6379BDB0BDA07A60 ;
+            bdr:ID023DC498DAF762DC ;
         :authorshipStatement  "rtsom sgrig pa bsod nams dge legs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR6EC690B2F076BD3B ;
         :editionStatement   "par gzhi, 01."@bo-x-ewts ;
         :hasTitle           bdr:TT09B1FE94471CA90D , bdr:TT1D13738C79DE8185 ;
         :illustrations      "col. ill." ;
-        :instanceEvent      bdr:EV6EC690B2F076BD3B ;
+        :instanceEvent      bdr:EV6379BDB0BDA07A60 ;
         :instanceHasReproduction  bdr:W3CN6597 ;
         :instanceOf         bdr:WA3CN6597 ;
         :isRoot             true ;
@@ -64,5 +76,5 @@ bdg:MW3CN6597 {
     
     bdr:TT1D13738C79DE8185
         a                   :Title ;
-        rdfs:label          "ge gsar sgrung thang /"@bo-x-ewts .
+        rdfs:label          "ge sar sgrung thang /"@bo-x-ewts .
 }

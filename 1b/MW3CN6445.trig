@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6445 {
-    bda:LG077E9085F3B4AC7F
+    bda:LG64C9CFEE6F4E7D12
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-15T15:07:01.498Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGD3FF7E48F52E6D8D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-24T16:47:52.179Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00017 .
@@ -20,32 +26,38 @@ bdg:MW3CN6445 {
     bda:MW3CN6445  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6445 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "1b/MW3CN6445.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6445 ;
-        adm:logEntry        bda:LG077E9085F3B4AC7F ;
+        adm:logEntry        bda:LG64C9CFEE6F4E7D12 , bda:LGD3FF7E48F52E6D8D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVCDC3488B766AEC41
+    bdr:CRCDC3488B766AEC41
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26729 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVA7B3CF3E36A66339
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:IDA7B3CF3E36A66339
+    bdr:ID077E9085F3B4AC7F
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "7223051408" .
     
     bdr:MW3CN6445  a        :Instance ;
         skos:prefLabel      "sku gsum sgrub brgyud pa'i bla rabs kyi rnam thar/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA7B3CF3E36A66339 ;
+            bdr:ID077E9085F3B4AC7F ;
         :authorshipStatement  "dbyings rig sprul sku 'ajm dbyngs bstan dar gyis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRCDC3488B766AEC41 ;
         :editionStatement   "par theng/ 01."@bo-x-ewts ;
         :hasTitle           bdr:TTA7C3B269C0346FF2 ;
         :illustrations      "ill. (col.)" ;
-        :instanceEvent      bdr:EVCDC3488B766AEC41 ;
+        :instanceEvent      bdr:EVA7B3CF3E36A66339 ;
         :instanceHasReproduction  bdr:W3CN6445 ;
         :instanceOf         bdr:WA3CN6445 ;
         :isRoot             true ;
