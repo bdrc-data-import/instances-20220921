@@ -12,7 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG5050 {
-    bda:LG0DA3F7BA634CDACD
+    bda:LG069BF5A6852C4290
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-16T18:15:14.25Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA13C7B7AEC4BA03A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-11-04T12:37:36.896Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00016 .
@@ -20,20 +25,40 @@ bdg:MW2KG5050 {
     bda:MW2KG5050  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG5050 ;
-        adm:facetIndex      2 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "91/MW2KG5050.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG5050 ;
-        adm:logEntry        bda:LG0DA3F7BA634CDACD ;
+        adm:logEntry        bda:LG069BF5A6852C4290 , bda:LGA13C7B7AEC4BA03A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusEditing .
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0157DD3D852E2DE6
+        a                   :PublishedEvent ;
+        :onYear             "2014"^^xsd:gYear .
+    
+    bdr:IDEDFD61B256A0ECC2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789937277792" .
     
     bdr:MW2KG5050  a        :Instance ;
+        skos:prefLabel      "phyag rgya chen po'i smon lam gyi 'grel pa ngo mtshar lam ston/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEDFD61B256A0ECC2 ;
         :biblioNote         "The PDF file of the text is shared with BDRC by Benchen Sungrab Gyunpel Khang, Benchen Nangten Thoesam Ling, Pharping, Kathmandu, Nepal to make available and benefit to wider users."@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
         :editionStatement   "1st ed."@en ;
+        :hasTitle           bdr:TT0DA3F7BA634CDACD ;
+        :instanceEvent      bdr:EV0157DD3D852E2DE6 ;
         :instanceOf         bdr:WA2KG5050 ;
         :isRoot             true ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "Pharping, Kathmandu"@en ;
         :publisherName      "Benchen Sungrab Gyunpel Khang"@en ;
-        :script             bdr:ScriptTibt .
+        :script             bdr:ScriptTibt ;
+        :workExtentStatement  "179 p." .
+    
+    bdr:TT0DA3F7BA634CDACD
+        a                   :Title ;
+        rdfs:label          "phyag rgya chen po'i smon lam gyi 'grel pa ngo mtshar lam ston/"@bo-x-ewts .
 }
