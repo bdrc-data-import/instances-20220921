@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2914 {
+    bda:LGE0849907771666F3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-20T09:46:43.504Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, topic, author, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -21,32 +27,36 @@ bdg:MW1NLM2914 {
     bda:MW1NLM2914  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2914 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "c7/MW1NLM2914.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2914 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LGE0849907771666F3 , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2914  a       :Instance ;
-        skos:prefLabel      "jo bo a ti sha'i rnam thar bla ma'i yon tan chos kyi 'byung gnas/"@bo-x-ewts ;
+        skos:prefLabel      "bka' gdams pha chos/"@bo-x-ewts ;
         :dimensionsStatement  "46.5x6.5" ;
-        :hasTitle           bdr:TT45E4693C28C3C63D ;
+        :hasTitle           bdr:TT45E4693C28C3C63D , bdr:TT81D2D6FBCCE80771 ;
         :instanceHasReproduction  bdr:W1NLM2914 ;
         :instanceOf         bdr:WA1NLM2914 ;
         :isRoot             true ;
-        :note               bdr:NT81D2D6FBCCE80771 ;
+        :note               bdr:NTA9FACACD9CCC64A9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "144 ff." .
     
-    bdr:NT81D2D6FBCCE80771
+    bdr:NTA9FACACD9CCC64A9
         a                   :Note ;
         :noteText           "nlmId: M0060832"@en .
     
     bdr:TT45E4693C28C3C63D
         a                   :Title ;
+        rdfs:label          "bka' gdams pha chos/"@bo-x-ewts .
+    
+    bdr:TT81D2D6FBCCE80771
+        a                   :TitlePageTitle ;
         rdfs:label          "jo bo a ti sha'i rnam thar bla ma'i yon tan chos kyi 'byung gnas/"@bo-x-ewts .
 }
