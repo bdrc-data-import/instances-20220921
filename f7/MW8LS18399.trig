@@ -12,13 +12,25 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18399 {
-    bda:LG867582A4AE5998C7
+    bda:LG152FE39095506150
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-18T11:21:55.256Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG18874F20A0122BBF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-18T11:20:22.478Z"^^xsd:dateTime ;
+        adm:logMessage      "added author & ISBN..."@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG1FE552B80359E444
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-11-29T08:39:52.501Z"^^xsd:dateTime ;
         adm:logMessage      "created new work record"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGF57FDED2BB20ACA7
+    bda:LGA028BDBE0E67640F
         a                   adm:UpdateData ;
         adm:logDate         "2017-04-04T12:45:39.682Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,29 +38,48 @@ bdg:MW8LS18399 {
     bda:MW8LS18399  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18399 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f7/MW8LS18399.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18399 ;
-        adm:logEntry        bda:LG867582A4AE5998C7 , bda:LGF57FDED2BB20ACA7 ;
+        adm:logEntry        bda:LG152FE39095506150 , bda:LG18874F20A0122BBF , bda:LG1FE552B80359E444 , bda:LGA028BDBE0E67640F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR867582A4AE5998C7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG212724 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF57FDED2BB20ACA7
+        a                   :PublishedEvent ;
+        :onYear             "2016"^^xsd:gYear .
+    
+    bdr:ID2A1C09E012A89C71
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542132444" .
+    
     bdr:MW8LS18399  a       :Instance ;
-        skos:prefLabel      "dmangs khrod rtsom rig"@bo-x-ewts ;
+        skos:prefLabel      "bod kyi yul srol dpyad gzhi bdams bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2A1C09E012A89C71 ;
+        :creator            bdr:CR867582A4AE5998C7 ;
         :hasTitle           bdr:TT0EB5A4E289FFFFA7 , bdr:TTE26E60B1F0F3D05A ;
+        :instanceEvent      bdr:EVF57FDED2BB20ACA7 ;
         :instanceHasReproduction  bdr:W8LS18399 ;
         :instanceOf         bdr:WA8LS18399 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
+        :publisherLocation  "lan kra'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "151 p." .
+        :workExtentStatement  "150 p." .
     
     bdr:TT0EB5A4E289FFFFA7
-        a                   :TitlePageTitle ;
-        rdfs:label          "bod kyi dmangs srol rig gnas dpyad gzhi gdams bsgrigs/"@bo-x-ewts .
+        a                   :Subtitle ;
+        rdfs:label          "bod kyi yul srol rig gnas 'tshol sdud kyi rtsom yig bdams bsgrigs/"@bo-x-ewts .
     
     bdr:TTE26E60B1F0F3D05A
         a                   :Title ;
-        rdfs:label          "dmangs khrod rtsom rig"@bo-x-ewts .
+        rdfs:label          "bod kyi yul srol dpyad gzhi bdams bsgrigs/"@bo-x-ewts .
 }
