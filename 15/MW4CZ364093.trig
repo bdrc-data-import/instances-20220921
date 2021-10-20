@@ -12,40 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ364093 {
-    bda:LG169F1694BC90F74C
+    bda:LG8416829C7A5EF3EB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-05-28T12:35:02.699Z"^^xsd:dateTime ;
         adm:logMessage      "QC and released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG9C262AEBED540A13
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-19T13:38:09.963Z"^^xsd:dateTime ;
+        adm:logMessage      "added other title and author"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW4CZ364093  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CZ364093 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "15/MW4CZ364093.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ364093 ;
-        adm:logEntry        bda:LG169F1694BC90F74C ;
+        adm:logEntry        bda:LG8416829C7A5EF3EB , bda:LG9C262AEBED540A13 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9ECDF796AE590DB3
+    bdr:EVB490FEF9900E1B7B
         a                   :PublishedEvent ;
         :onYear             "2017"^^xsd:gYear .
     
-    bdr:IDB490FEF9900E1B7B
+    bdr:ID169F1694BC90F74C
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "97875400972424" .
+        rdf:value           "9787540972424" .
     
     bdr:MW4CZ364093  a      :Instance ;
-        skos:altLabel       "The diary of a young girl"@en ;
+        skos:altLabel       "The Diary of a Young Girl"@en ;
         skos:prefLabel      "gzhon nu ma zhig gi nyin tho/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB490FEF9900E1B7B ;
+            bdr:ID169F1694BC90F74C ;
         :authorshipStatement  "('jar man/) e na h+phu ren khis brtsams/ blo bzang mkhyen brtse dang / bkra shis dpal sgron gnyis kyis dbyin yig nas bsgyur/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT21F6692D21B205C9 , bdr:TT7EBA197064207CD2 ;
-        :instanceEvent      bdr:EV9ECDF796AE590DB3 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT21F6692D21B205C9 , bdr:TT7EBA197064207CD2 , bdr:TT9ECDF796AE590DB3 ;
+        :instanceEvent      bdr:EVB490FEF9900E1B7B ;
         :instanceHasReproduction  bdr:W4CZ364093 ;
         :instanceOf         bdr:WA4CZ364093 ;
         :isRoot             true ;
@@ -59,9 +66,13 @@ bdg:MW4CZ364093 {
     
     bdr:TT21F6692D21B205C9
         a                   :CoverTitle ;
-        rdfs:label          "The diary of a young girl"@en .
+        rdfs:label          "The Diary of a Young Girl"@en .
     
     bdr:TT7EBA197064207CD2
         a                   :Title ;
         rdfs:label          "gzhon nu ma zhig gi nyin tho/"@bo-x-ewts .
+    
+    bdr:TT9ECDF796AE590DB3
+        a                   :OtherTitle ;
+        rdfs:label          "The Diary of Anne Frank"@en .
 }
