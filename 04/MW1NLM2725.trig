@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2725 {
+    bda:LG9BD4E3A384F7AC43
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-20T15:05:03.643Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIMD3D03661  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-11-18T22:29:47.935Z"^^xsd:dateTime ;
@@ -21,36 +27,46 @@ bdg:MW1NLM2725 {
     bda:MW1NLM2725  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2725 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "04/MW1NLM2725.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2725 ;
-        adm:logEntry        bda:LGIMD3D03661 ;
+        adm:logEntry        bda:LG9BD4E3A384F7AC43 , bda:LGIMD3D03661 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2725  a       :Instance ;
-        skos:prefLabel      "'phags pa brgyad stong pa sogs sher phyin gyi mdo klog thabs nyung bsdus bde legs kun 'byung sogs/"@bo-x-ewts ;
+        skos:prefLabel      "brgyad stong pa sogs sher phyin gyi mdo klog thabs dang brgyag stong pa/"@bo-x-ewts ;
         :dimensionsStatement  "49.5x8" ;
-        :hasTitle           bdr:TT31BC59500C968E92 ;
+        :hasTitle           bdr:TT31BC59500C968E92 , bdr:TTA8AA15AE9853AE3F , bdr:TTD6FEB592F9FCA792 ;
+        :illustrations      "Illustrated" ;
         :instanceHasReproduction  bdr:W1NLM2725 ;
         :instanceOf         bdr:WA1NLM2725 ;
         :isRoot             true ;
-        :note               bdr:NTA8AA15AE9853AE3F , bdr:NTD6FEB592F9FCA792 ;
+        :note               bdr:NT6274B605494B0BA0 , bdr:NT6C9DDEA920B51494 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "mongolia"@en ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "3 ff., 376 ff., 276 ff." .
     
-    bdr:NTA8AA15AE9853AE3F
+    bdr:NT6274B605494B0BA0
         a                   :Note ;
         :noteText           "nlmId: M0060643"@en .
     
-    bdr:NTD6FEB592F9FCA792
+    bdr:NT6C9DDEA920B51494
         a                   :Note ;
         :noteText           "missingPages: M0060643-002 [Page 2 was double numbered] Image 9-12"@en .
     
     bdr:TT31BC59500C968E92
         a                   :Title ;
-        rdfs:label          "'phags pa brgyad stong pa sogs sher phyin gyi mdo klog thabs nyung bsdus bde legs kun 'byung sogs/"@bo-x-ewts .
+        rdfs:label          "brgyad stong pa sogs sher phyin gyi mdo klog thabs dang brgyag stong pa/"@bo-x-ewts .
+    
+    bdr:TTA8AA15AE9853AE3F
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa brgyad stong pa sogs sher phyin gyi mdo klog thabs nyung bsdus bde legs kun 'byung /"@bo-x-ewts .
+    
+    bdr:TTD6FEB592F9FCA792
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa brgyad stong pa/ (ka dang kha)"@bo-x-ewts .
 }
