@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6727 {
-    bda:LG37C4417806A9CE46
+    bda:LG459C62DF53F210CA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-21T13:36:15.168Z"^^xsd:dateTime ;
+        adm:logMessage      "added eidtor"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGCB5C84B376707EDF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-17T15:49:58.945Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -21,38 +27,44 @@ bdg:MW3CN6727 {
     bda:MW3CN6727  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6727 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "fa/MW3CN6727.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6727 ;
-        adm:logEntry        bda:LG37C4417806A9CE46 ;
+        adm:logEntry        bda:LG459C62DF53F210CA , bda:LGCB5C84B376707EDF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVBA5C3A8F76D2801E
+    bdr:CRBA5C3A8F76D2801E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26983 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVAEC96545B58226E7
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:IDAEC96545B58226E7
+    bdr:ID37C4417806A9CE46
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223038614" .
     
     bdr:MW3CN6727  a        :Instance ;
         skos:prefLabel      "skad yig"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAEC96545B58226E7 ;
+            bdr:ID37C4417806A9CE46 ;
         :authorshipStatement  "gtso sgrig pa skal bzang lhun grub/"@bo-x-ewts ;
+        :creator            bdr:CRBA5C3A8F76D2801E ;
         :editionStatement   "lha sa dge 'os mtho rim ched tshan slob grwa'i slob gzhi/ (skad yig) rtsom sgrig u yon lhan khang /"@bo-x-ewts , "par thengs 02."@bo-x-ewts ;
         :hasTitle           bdr:TT4ED150FB8AA693F4 ;
-        :instanceEvent      bdr:EVBA5C3A8F76D2801E ;
+        :instanceEvent      bdr:EVAEC96545B58226E7 ;
         :instanceHasReproduction  bdr:W3CN6727 ;
         :instanceOf         bdr:WA3CN6727 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
-        :publisherLocation  "lha sa"@en ;
-        :publisherName      "bod ljongs mi dmangs dpe skrun khang"@en ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "2, ,2, 203p." .
+        :workExtentStatement  "2, 2, 203p." .
     
     bdr:TT4ED150FB8AA693F4
         a                   :Title ;

@@ -12,19 +12,25 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6730 {
-    bda:LG0DA663227E74F274
+    bda:LG6C75697754D078CC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-17T15:49:59.229Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
-    bda:LG6C75697754D078CC
+    bda:LGAAA149038698D9E5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-21T13:40:15.464Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGBD4349E8578605AC
         a                   adm:UpdateData ;
         adm:logDate         "2019-09-27T11:09:04.958Z"^^xsd:dateTime ;
         adm:logMessage      "added authorship"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LGBD4349E8578605AC
+    bda:LGBE53D023746328E7
         a                   adm:UpdateData ;
         adm:logDate         "2020-01-30T10:02:48.815Z"^^xsd:dateTime ;
         adm:logMessage      "corrected ISBN"@en ;
@@ -33,36 +39,43 @@ bdg:MW3CN6730 {
     bda:MW3CN6730  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6730 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "92/MW3CN6730.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6730 ;
-        adm:logEntry        bda:LG0DA663227E74F274 , bda:LG6C75697754D078CC , bda:LGBD4349E8578605AC ;
+        adm:logEntry        bda:LG6C75697754D078CC , bda:LGAAA149038698D9E5 , bda:LGBD4349E8578605AC , bda:LGBE53D023746328E7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV58DA51EA19E7BC29
+    bdr:CR58DA51EA19E7BC29
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26984 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVBD17A5415BB90537
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDBD17A5415BB90537
+    bdr:ID0DA663227E74F274
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223043960" .
     
     bdr:MW3CN6730  a        :Instance ;
         skos:prefLabel      "sgra gzhung rgya mtshor 'jug pa'i sngon 'gro/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBD17A5415BB90537 ;
+            bdr:ID0DA663227E74F274 ;
         :authorshipStatement  "spen rgod kyis rtsom sgrig byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR58DA51EA19E7BC29 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
         :hasTitle           bdr:TT91268B943E11AD3B , bdr:TTF67952A4A3EDD8C2 ;
-        :instanceEvent      bdr:EV58DA51EA19E7BC29 ;
+        :instanceEvent      bdr:EVBD17A5415BB90537 ;
         :instanceHasReproduction  bdr:W3CN6730 ;
         :instanceOf         bdr:WA3CN6730 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "*lha sa/"@bo-x-ewts ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "3, 2, 234p." .

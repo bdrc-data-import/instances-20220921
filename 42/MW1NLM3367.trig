@@ -12,41 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3367 {
-    bda:LGIM03915F22  a     adm:UpdateData ;
-        adm:logAgent        "NLM Importer" ;
-        adm:logDate         "2021-08-17T15:51:42.211Z"^^xsd:dateTime ;
-        adm:logMessage      "imported pubinfo for W1NLM3367"@en ;
-        adm:logMethod       bda:BatchMethod .
+    bda:LGIM1925E0B2  a     adm:InitialDataImport ;
+        adm:logDate         "2021-10-21T16:01:32.909Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00017 .
     
     bda:MW1NLM3367  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3367 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "42/MW1NLM3367.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3367 ;
-        adm:logEntry        bda:LGIM03915F22 ;
+        adm:logEntry        bda:LGIM1925E0B2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM3367  a       :Instance ;
         skos:prefLabel      "dpal mgon 'phags pa klu sgrub rang nyid kyis mdo'i don ji ltar bkral ba'i dgongs don rab gsal sgron me sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "47.5x6.5" ;
-        :hasTitle           bdr:TT7AD6F623B117B994 ;
+        :hasTitle           bdr:TT102908F8356B81AE , bdr:TT50ABBB08F76971E9 , bdr:TT7AD6F623B117B994 , bdr:TTF08DE218DF735BC6 ;
         :instanceHasReproduction  bdr:W1NLM3367 ;
         :instanceOf         bdr:WA1NLM3367 ;
         :isRoot             true ;
-        :note               bdr:NT102908F8356B81AE ;
         :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "a mdo/"@bo-x-ewts ;
+        :publisherName      "sku 'bum byams pa gling /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
-        :workExtentStatement  "30 ff., 47 ff., 20 ff., 9 ff." .
+        :workExtentStatement  "1 v." .
     
-    bdr:NT102908F8356B81AE
-        a                   :Note ;
-        :noteText           "nlmId: M0061285"@en .
+    bdr:TT102908F8356B81AE
+        a                   :OtherTitle ;
+        rdfs:label          "byang chub lam rim gyi 'khrid blo yi mun sel/"@bo-x-ewts .
+    
+    bdr:TT50ABBB08F76971E9
+        a                   :OtherTitle ;
+        rdfs:label          "bdus rtsi snying po yan lag brgyad pa gsang ba man ngag gi rgyu/"@bo-x-ewts .
     
     bdr:TT7AD6F623B117B994
         a                   :Title ;
         rdfs:label          "dpal mgon 'phags pa klu sgrub rang nyid kyis mdo'i don ji ltar bkral ba'i dgongs don rab gsal sgron me sogs/"@bo-x-ewts .
+    
+    bdr:TTF08DE218DF735BC6
+        a                   :Title ;
+        rdfs:label          "kun rig rnam par snang mdzad kyi cho ga'i TIk+ka gsal ba'i sgron me/"@bo-x-ewts .
 }

@@ -12,47 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6718 {
-    bda:LGE2C4D7773C7ECF7B
+    bda:LG99ACD7AA8B865A2A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-25T17:08:46.063Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGB79466E0DE809EA8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-21T13:28:23.245Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN6718  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6718 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "19/MW3CN6718.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6718 ;
-        adm:logEntry        bda:LGE2C4D7773C7ECF7B ;
+        adm:logEntry        bda:LG99ACD7AA8B865A2A , bda:LGB79466E0DE809EA8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA7B1D4481CFD4D35
+    bdr:CRA7B1D4481CFD4D35
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26982 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF5F6C2F01646E1EC
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:IDF5F6C2F01646E1EC
+    bdr:IDE2C4D7773C7ECF7B
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787805893549" .
     
     bdr:MW3CN6718  a        :Instance ;
         skos:prefLabel      "slob gzhi 'grel brjod ngo mtshar 'phrul gyi lde mig (lo rim lnga pa'i deb smad cha/)"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF5F6C2F01646E1EC ;
+            bdr:IDE2C4D7773C7ECF7B ;
         :authorshipStatement  "bsam sgrub kyis rtsom sgrig byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRA7B1D4481CFD4D35 ;
         :editionStatement   "par gzhi 01."@bo-x-ewts ;
         :hasTitle           bdr:TT4B01CEB70459A5FE ;
-        :instanceEvent      bdr:EVA7B1D4481CFD4D35 ;
+        :instanceEvent      bdr:EVF5F6C2F01646E1EC ;
         :instanceHasReproduction  bdr:W3CN6718 ;
         :instanceOf         bdr:WA3CN6715 , bdr:WA3CN6718 ;
         :isRoot             true ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lha sa"@en ;
-        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang"@en ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :serialInstanceOf   bdr:WAS3CN6709 ;
         :workExtentStatement  "4, 2, 255 p." .
