@@ -12,46 +12,63 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6991 {
-    bda:LGBE168C8F84EA9C07
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2017-05-23T16:38:05.645Z"^^xsd:dateTime ;
-        adm:logMessage      "add new info and released"@en ;
-        adm:logWho          bdu:U00017 .
-    
-    bda:LGCF8125D17DF6AB3C
+    bda:LGB4238166D2B5804E
         a                   adm:UpdateData ;
         adm:logDate         "2019-06-10T11:42:44.231Z"^^xsd:dateTime ;
         adm:logMessage      "corrected language settings"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGDD4F0266E8195B25
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-23T16:38:05.645Z"^^xsd:dateTime ;
+        adm:logMessage      "add new info and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFD0AB78F260ADE8B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-22T09:59:44.625Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN6991  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN6991 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "dd/MW3CN6991.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6991 ;
-        adm:logEntry        bda:LGBE168C8F84EA9C07 , bda:LGCF8125D17DF6AB3C ;
+        adm:logEntry        bda:LGB4238166D2B5804E , bda:LGDD4F0266E8195B25 , bda:LGFD0AB78F260ADE8B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV0860705B634DD1FA
+    bdr:CR0860705B634DD1FA
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN26284 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD34A497D3449B449
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3CN25731 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVBE168C8F84EA9C07
         a                   :PublishedEvent ;
         :onYear             "2016"^^xsd:gYear .
     
-    bdr:IDD34A497D3449B449
+    bdr:IDCF8125D17DF6AB3C
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787223050241" .
     
     bdr:MW3CN6991  a        :Instance ;
         skos:prefLabel      "tun hong yig rnying khrod kyi sgrung rabs phyogs bsgrigs/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD34A497D3449B449 ;
+            bdr:IDCF8125D17DF6AB3C ;
         :authorshipStatement  "rtsom sgrig pa/ stobs ldan/ rin chen sgrol ma/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CR0860705B634DD1FA , bdr:CRD34A497D3449B449 ;
         :editionStatement   "par gzhi 01."@bo-x-ewts ;
         :hasTitle           bdr:TTB05BB9C1B0B0F3E3 ;
-        :instanceEvent      bdr:EV0860705B634DD1FA ;
+        :instanceEvent      bdr:EVBE168C8F84EA9C07 ;
         :instanceHasReproduction  bdr:W3CN6991 ;
         :instanceOf         bdr:WA3CN6991 ;
         :isRoot             true ;
