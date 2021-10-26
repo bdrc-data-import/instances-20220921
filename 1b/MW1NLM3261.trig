@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3261 {
+    bda:LG41BE88FF1034F715
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-25T15:12:01.77Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -21,32 +27,40 @@ bdg:MW1NLM3261 {
     bda:MW1NLM3261  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3261 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "1b/MW1NLM3261.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3261 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG41BE88FF1034F715 , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM3261  a       :Instance ;
         skos:prefLabel      "rgyud brtag pa gnyis pa'i zin bris sogs/"@bo-x-ewts ;
+        :biblioNote         "01) rgyud brtag pa gnyis pa'i zin bris/ 82 ff. 02) mdor bsdus dang po la A tsa la garab+has don tshan bdun du byed pa/ 03) mngon rtogs brgyad don bdun cu dang bcas pa'i 'grel pa nyams su len tshul/ 04) mngon par rtogs pa'i rgyan gyi bsdus don rin po che'i phreng ba/ 05)'jigs byed kyi phyag mtshan sogs kyi bshad pa'i zin bris" ;
         :dimensionsStatement  "48x6.5" ;
-        :hasTitle           bdr:TTAC284590A38067F8 ;
+        :hasSourcePrintery  bdr:G507 ;
+        :hasTitle           bdr:TTAC284590A38067F8 , bdr:TTDF3DEC11C085E5B2 ;
         :instanceHasReproduction  bdr:W1NLM3261 ;
         :instanceOf         bdr:WA1NLM3261 ;
         :isRoot             true ;
-        :note               bdr:NTDF3DEC11C085E5B2 ;
+        :note               bdr:NT17F584A8BAF2339A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :publisherName      "dga' ldan theg chen gling /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :workExtentStatement  "82 ff., 3 ff., 26 ff., 14 ff.,10 ff." .
     
-    bdr:NTDF3DEC11C085E5B2
+    bdr:NT17F584A8BAF2339A
         a                   :Note ;
         :noteText           "nlmId: M0061179"@en .
     
     bdr:TTAC284590A38067F8
         a                   :Title ;
         rdfs:label          "rgyud brtag pa gnyis pa'i zin bris sogs/"@bo-x-ewts .
+    
+    bdr:TTDF3DEC11C085E5B2
+        a                   :HalfTitle ;
+        rdfs:label          "mdor bsdus dang po la A tsa la garab+has don tshan bdun du byed pa/"@bo-x-ewts .
 }

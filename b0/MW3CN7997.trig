@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN7997 {
-    bda:LGA25190C0ADEE98BC
+    bda:LG6915F6DCD350D115
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-25T16:45:41.031Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG955CFE19B6295E67
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-22T14:36:21.597Z"^^xsd:dateTime ;
         adm:logMessage      "added cat info, topic and pub info"@en ;
@@ -21,18 +27,24 @@ bdg:MW3CN7997 {
     bda:MW3CN7997  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN7997 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "b0/MW3CN7997.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN7997 ;
-        adm:logEntry        bda:LGA25190C0ADEE98BC ;
+        adm:logEntry        bda:LG6915F6DCD350D115 , bda:LG955CFE19B6295E67 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:CRA25190C0ADEE98BC
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG228725 ;
+        :role               bdr:R0ER0015 .
     
     bdr:MW3CN7997  a        :Instance ;
         skos:prefLabel      "'jigs med phun tshogs 'byung gnas/"@bo-x-ewts ;
         :authorshipStatement  "sgo yon gyis rtsom sgrig byas/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRA25190C0ADEE98BC ;
         :hasTitle           bdr:TT88C12C3D63FFE92B , bdr:TT9875F1C7781A742B ;
         :instanceHasReproduction  bdr:W3CN7997 ;
         :instanceOf         bdr:WA3CN7997 ;

@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN7823 {
-    bda:LGFBA5427169E159CD
+    bda:LG185666994F925617
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-25T16:23:44.797Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGC6B1A5F3A86D2B92
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-08T10:46:50.91Z"^^xsd:dateTime ;
         adm:logMessage      "detail cataloged"@en ;
@@ -21,18 +27,24 @@ bdg:MW3CN7823 {
     bda:MW3CN7823  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN7823 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "9c/MW3CN7823.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN7823 ;
-        adm:logEntry        bda:LGFBA5427169E159CD ;
+        adm:logEntry        bda:LG185666994F925617 , bda:LGC6B1A5F3A86D2B92 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:CRFBA5427169E159CD
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG4233 ;
+        :role               bdr:R0ER0015 .
     
     bdr:MW3CN7823  a        :Instance ;
         skos:prefLabel      "tshad ma rig gter gyi rnam bshad bdag gi blo gros kyi na tshod/"@bo-x-ewts ;
         :authorshipStatement  "phyogs sgrig byed pa po mkhan po bsod nams rgya mtsho/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :creator            bdr:CRFBA5427169E159CD ;
         :hasTitle           bdr:TT10C42DB7EFCE6FD9 ;
         :instanceHasReproduction  bdr:W3CN7823 ;
         :instanceOf         bdr:WA3CN7823 ;
