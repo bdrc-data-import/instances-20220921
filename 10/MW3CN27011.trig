@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN27011 {
+    bda:LG4FD65134CCEE9896
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-11-01T18:07:59.349Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGE93576019CABCFF3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-11-01T18:01:53.887Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN27011  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:MW3CN27011 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "10/MW3CN27011.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN27011 ;
+        adm:logEntry        bda:LG4FD65134CCEE9896 , bda:LGE93576019CABCFF3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD30A1DE70234D31F
+        a                   :PublishedEvent ;
+        :onYear             "1738"^^xsd:gYear .
+    
+    bdr:MW3CN27011  a       :Instance ;
+        skos:prefLabel      "乾隆大藏经"@zh-hant ;
+        :biblioNote         "以明《北藏》、《南藏》为底本，增入明清著名僧人语录、杂著，撤出《出三藏记集》等重要典籍。"@zh-hant ;
+        :hasTitle           bdr:TT2EA5EA22C72CCB48 , bdr:TTA414F3CC7EB937BC , bdr:TTD29F6F87D90FEC76 , bdr:TTF76DDA363379D4BD ;
+        :instanceEvent      bdr:EVD30A1DE70234D31F ;
+        :instanceOf         bdr:WA3CN27011 ;
+        :isRoot             true ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "北京"@zh-hans ;
+        :publisherName      "由乾隆皇帝钦定"@zh-hant ;
+        :script             bdr:ScriptHani ;
+        :volumesNote        "169 v." .
+    
+    bdr:TT2EA5EA22C72CCB48
+        a                   :Title ;
+        rdfs:label          "乾隆大藏经"@zh-hant .
+    
+    bdr:TTA414F3CC7EB937BC
+        a                   :TitlePageTitle ;
+        rdfs:label          "清代官刻汉文大藏经"@zh-hans .
+    
+    bdr:TTD29F6F87D90FEC76
+        a                   :OtherTitle ;
+        rdfs:label          "龍藏"@zh-hant .
+    
+    bdr:TTF76DDA363379D4BD
+        a                   :OtherTitle ;
+        rdfs:label          "清藏"@zh-hans .
+}
