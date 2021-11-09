@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN27013 {
-    bda:LG42AD6E24308FF187
+    bda:LG4392EC7AC437EC9C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-11-08T16:18:28.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added catalogInfo"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG4A9881B95CD3DFA9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-11-01T20:16:24.875Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LG819B02504B39452A
+    bda:LGD66DE24CEF28997A
         a                   adm:UpdateData ;
         adm:logDate         "2021-11-01T20:19:40.593Z"^^xsd:dateTime ;
         adm:logMessage      "added info"@en ;
@@ -27,24 +33,25 @@ bdg:MW3CN27013 {
     bda:MW3CN27013  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN27013 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "85/MW3CN27013.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN27013 ;
-        adm:logEntry        bda:LG42AD6E24308FF187 , bda:LG819B02504B39452A ;
+        adm:logEntry        bda:LG4392EC7AC437EC9C , bda:LG4A9881B95CD3DFA9 , bda:LGD66DE24CEF28997A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVEF2C99287411EAB8
+    bdr:EV819B02504B39452A
         a                   :PublishedEvent ;
         :onOrAbout          "大正八至十年（1919～1921）" .
     
     bdr:MW3CN27013  a       :Instance ;
-        skos:prefLabel      "日本大藏經"@zh-hant ;
+        skos:altLabel       "Japan Canon"@en ;
+        skos:prefLabel      "日本大藏经"@zh-hans ;
         :biblioNote         "原为《大日本续藏经》（《卍续藏》）所编的日本撰述部。全藏计收佛典七五三部，分为经藏部、律藏部、论藏部、宗典部等四类。48册加目录3册，共51册。"@en ;
         :contentMethod      bdr:ContentMethod_Facsimile ;
-        :hasTitle           bdr:TT3E24236E50ED7AE4 ;
-        :instanceEvent      bdr:EVEF2C99287411EAB8 ;
+        :hasTitle           bdr:TT3E24236E50ED7AE4 , bdr:TT42AD6E24308FF187 , bdr:TTEF2C99287411EAB8 ;
+        :instanceEvent      bdr:EV819B02504B39452A ;
         :instanceHasReproduction  bdr:W3CN27013 ;
         :instanceOf         bdr:WA3CN27013 ;
         :isRoot             true ;
@@ -56,6 +63,14 @@ bdg:MW3CN27013 {
         :volumesNote        "51 v." .
     
     bdr:TT3E24236E50ED7AE4
+        a                   :Title ;
+        rdfs:label          "日本大藏经"@zh-hans .
+    
+    bdr:TT42AD6E24308FF187
+        a                   :OtherTitle ;
+        rdfs:label          "Japan Canon"@en .
+    
+    bdr:TTEF2C99287411EAB8
         a                   :Title ;
         rdfs:label          "日本大藏經"@zh-hant .
 }
