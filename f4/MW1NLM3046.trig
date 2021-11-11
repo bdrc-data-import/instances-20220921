@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3046 {
+    bda:LG3439C25CE1B962FB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-11-10T14:15:42.303Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, author, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -21,32 +27,38 @@ bdg:MW1NLM3046 {
     bda:MW1NLM3046  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3046 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f4/MW1NLM3046.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3046 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG3439C25CE1B962FB , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR4E2AD153B7176B7B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P359 ;
+        :role               bdr:R0ER0015 .
+    
     bdr:MW1NLM3046  a       :Instance ;
         skos:prefLabel      "thun mongs rten 'brel sgrig byed lha rnams mnyes par byed pa'i bsangs kyi cho ga bde legs kun 'byung zhes bya ba bzhugs so//_rgyags brngan lha'i bsangs rnams mnyes pa'i bsang kyi cho ga bde legs kun 'byung sogs/"@bo-x-ewts ;
+        :creator            bdr:CR4E2AD153B7176B7B ;
         :dimensionsStatement  "28x8" ;
         :hasTitle           bdr:TT3177FB1A537D7218 ;
         :instanceHasReproduction  bdr:W1NLM3046 ;
         :instanceOf         bdr:WA1NLM3046 ;
         :isRoot             true ;
-        :note               bdr:NT4E2AD153B7176B7B , bdr:NT620938955EBE4CAF ;
+        :note               bdr:NT620938955EBE4CAF , bdr:NTAAC5086755DD0440 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "24 ff., 24 ff., 2 ff., 4 ff. end folio missing, 7 ff., 6 ff., 3 ff., 5 ff., 3 ff., 3 ff., 6 ff., 10 ff., 6 ff.," .
     
-    bdr:NT4E2AD153B7176B7B
+    bdr:NT620938955EBE4CAF
         a                   :Note ;
         :noteText           "nlmId: M0060964"@en .
     
-    bdr:NT620938955EBE4CAF
+    bdr:NTAAC5086755DD0440
         a                   :Note ;
         :noteText           "missingPages: M0060964-005 [Final pages are missing 5A] Image 109"@en .
     
