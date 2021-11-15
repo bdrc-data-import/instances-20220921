@@ -34,7 +34,7 @@ bdg:MW1FEMC010533 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010533 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a6/MW1FEMC010533.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010533 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010533 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFFE1292552A5DF623
+    bdr:IDFE1292552A5DF623
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-A.02.09.01.VII" .
+    
+    bdr:MF0D8DDA327E3C690A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "14" ;
         :microfilmStrip     "56" .
     
     bdr:MW1FEMC010533
         a                   :Instance ;
-        skos:prefLabel      "អាទិកម្ម"@pi-khmr , "ādikamma"@pi-x-kmfemc ;
+        skos:prefLabel      "អាទិកម្ម"@pi-khmr , "ādikamma"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFE1292552A5DF623 ;
         :hasFascicles       "13" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT08FB66B7BD09EA55 , bdr:TT5814DDF0D04CD542 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010533 {
         :isRoot             true ;
         :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFE1292552A5DF623 ;
+        :microfilmItem      bdr:MF0D8DDA327E3C690A ;
         :note               bdr:NTB167FE47686DFC3A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "003-A.02.09.01.VII" ;
-        :workIsAbout        bdr:FEMC_Scheme_VII .
+        :script             bdr:ScriptKhmr .
     
     bdr:NTB167FE47686DFC3A
         a                   :Note ;
@@ -77,5 +81,5 @@ bdg:MW1FEMC010533 {
     
     bdr:TT5814DDF0D04CD542
         a                   :Title ;
-        rdfs:label          "ādikamma"@pi-x-kmfemc .
+        rdfs:label          "ādikamma"@pi-x-twktt .
 }

@@ -34,7 +34,7 @@ bdg:MW1FEMC010201 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010201 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "9c/MW1FEMC010201.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010201 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010201 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFE338902F14BF062D
+    bdr:IDE338902F14BF062D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-PP.02.06.02.III.5" .
+    
+    bdr:MFB9BA3553809CED88
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "2" ;
         :microfilmStrip     "5" .
     
     bdr:MW1FEMC010201
         a                   :Instance ;
-        skos:prefLabel      "មហោសថជាតក"@km , "mahosath jātak"@km-x-kmfemc ;
+        skos:prefLabel      "មហោសថជាតក"@km , "mahosath jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE338902F14BF062D ;
         :hasFascicles       "5, 6, 7, 11, 13, 14" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT23C25A70CD4CAE5C , bdr:TT3329C2F8DD8264D5 , bdr:TTCCF89708B8757748 , bdr:TTF1292402A3F0FBC1 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010201 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE338902F14BF062D ;
+        :microfilmItem      bdr:MFB9BA3553809CED88 ;
         :note               bdr:NT52108C62F2FFCF9C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "001-PP.02.06.02.III.5" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT52108C62F2FFCF9C
         a                   :Note ;
@@ -85,5 +89,5 @@ bdg:MW1FEMC010201 {
     
     bdr:TTF1292402A3F0FBC1
         a                   :Title ;
-        rdfs:label          "mahosath jātak"@km-x-kmfemc .
+        rdfs:label          "mahosath jātak"@km-x-twktt .
 }

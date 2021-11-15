@@ -34,7 +34,7 @@ bdg:MW1FEMC010485 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010485 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "61/MW1FEMC010485.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010485 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010485 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFC776F43D3C483B43
+    bdr:IDC776F43D3C483B43
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "008-PP.03.08.01.III.1" .
+    
+    bdr:MF7AB5B6BB251DA56A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "11" ;
         :microfilmStrip     "42" .
     
     bdr:MW1FEMC010485
         a                   :Instance ;
-        skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-kmfemc ;
+        skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC776F43D3C483B43 ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT71D4EB7A30A29C88 , bdr:TT7A0EF012A71D4EEC ;
         :instanceHasReproduction  bdr:W1FEMC010485 ;
@@ -57,13 +63,11 @@ bdg:MW1FEMC010485 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC776F43D3C483B43 ;
+        :microfilmItem      bdr:MF7AB5B6BB251DA56A ;
         :note               bdr:NT7300C7F05D6A4CA8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "008-PP.03.08.01.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT7300C7F05D6A4CA8
         a                   :Note ;
@@ -76,5 +80,5 @@ bdg:MW1FEMC010485 {
     
     bdr:TT7A0EF012A71D4EEC
         a                   :Title ;
-        rdfs:label          "pet veṇī"@km-x-kmfemc .
+        rdfs:label          "pet veṇī"@km-x-twktt .
 }

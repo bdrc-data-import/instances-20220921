@@ -34,7 +34,7 @@ bdg:MW1FEMC010312 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010312 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "b7/MW1FEMC010312.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010312 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010312 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFB4741BABAB55420A
+    bdr:IDB4741BABAB55420A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "034-PP.03.03.03.III.1" .
+    
+    bdr:MFD69EA8BD16A73BF8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "62" .
     
     bdr:MW1FEMC010312
         a                   :Instance ;
-        skos:prefLabel      "មារពន្ធន៍"@km , "mār bandhan"@km-x-kmfemc ;
+        skos:prefLabel      "មារពន្ធន៍"@km , "mār bandhan"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB4741BABAB55420A ;
         :hasFascicles       "1" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT0748626171DFD41E , bdr:TT08A69044E5B83728 , bdr:TT4957165A57B4BB48 , bdr:TTD453866D705A9288 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010312 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB4741BABAB55420A ;
+        :microfilmItem      bdr:MFD69EA8BD16A73BF8 ;
         :note               bdr:NT6D593B0EF1671B1D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "034-PP.03.03.03.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT6D593B0EF1671B1D
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC010312 {
     
     bdr:TT0748626171DFD41E
         a                   :CoverTitle ;
-        rdfs:label          "មារពាន្ទ"@km-x-kmpre20c .
+        rdfs:label          "មារពាន្ទ"@km .
     
     bdr:TT08A69044E5B83728
         a                   :Title ;
-        rdfs:label          "mār bandhan"@km-x-kmfemc ;
+        rdfs:label          "mār bandhan"@km-x-twktt ;
         :femcConversionOf   bdr:TTD453866D705A9288 .
     
     bdr:TT4957165A57B4BB48
@@ -87,5 +91,5 @@ bdg:MW1FEMC010312 {
     
     bdr:TTD453866D705A9288
         a                   :CoverTitle ;
-        rdfs:label          "mār bānd "@km-x-kmpre20c-kmfemc .
+        rdfs:label          "mār bānd "@km-x-twktt .
 }

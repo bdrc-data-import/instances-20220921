@@ -34,7 +34,7 @@ bdg:MW1FEMC010677 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010677 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "5c/MW1FEMC010677.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010677 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010677 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFEFCA0FD4C176574F
+    bdr:IDEFCA0FD4C176574F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-A.03.03.01.VII" .
+    
+    bdr:MF653CF4648A65536E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "VII" ;
         :microfilmStrip     "31" .
     
     bdr:MW1FEMC010677
         a                   :Instance ;
-        skos:prefLabel      "ភាណវារ"@pi-khmr , "bhāṇavāra"@pi-x-kmfemc ;
+        skos:prefLabel      "ភាណវារ"@pi-khmr , "bhāṇavāra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEFCA0FD4C176574F ;
         :hasFascicles       "1" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT2941E628325BA19C , bdr:TT8248C2F0EAB198C2 , bdr:TTADECFAFAE59EC33B , bdr:TTB3A5B2DBAFB6CD8D ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010677 {
         :isRoot             true ;
         :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEFCA0FD4C176574F ;
+        :microfilmItem      bdr:MF653CF4648A65536E ;
         :note               bdr:NT2CAEFF9BAA1AEF42 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "001-A.03.03.01.VII" ;
-        :workIsAbout        bdr:FEMC_Scheme_VII .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT2CAEFF9BAA1AEF42
         a                   :Note ;
@@ -78,14 +82,14 @@ bdg:MW1FEMC010677 {
     
     bdr:TT8248C2F0EAB198C2
         a                   :Title ;
-        rdfs:label          "bhāṇavāra"@pi-x-kmfemc ;
+        rdfs:label          "bhāṇavāra"@pi-x-twktt ;
         :femcConversionOf   bdr:TTB3A5B2DBAFB6CD8D .
     
     bdr:TTADECFAFAE59EC33B
         a                   :CoverTitle ;
-        rdfs:label          "ភានវាណ"@pi-khmr-x-kmpre20c .
+        rdfs:label          "ភានវាណ"@pi-khmr .
     
     bdr:TTB3A5B2DBAFB6CD8D
         a                   :CoverTitle ;
-        rdfs:label          "bhānavāṇa"@pi-x-kmpre20c-kmfemc .
+        rdfs:label          "bhānavāṇa"@pi-x-twktt .
 }

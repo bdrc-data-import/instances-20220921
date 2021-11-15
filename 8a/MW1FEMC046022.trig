@@ -26,7 +26,7 @@ bdg:MW1FEMC046022 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC046022 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "8a/MW1FEMC046022.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC046022 ;
@@ -34,29 +34,33 @@ bdg:MW1FEMC046022 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFCAC1009BC8908AFB
+    bdr:IDCAC1009BC8908AFB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "004-B.04.11.02.III.1" .
+    
+    bdr:MF20D94CC324CA9AB0
         a                   :ItemMicrofilmAsset ;
         :microfilmStrip     "171" .
     
     bdr:MW1FEMC046022
         a                   :Instance ;
-        skos:prefLabel      "ទេសនាគ្រែ៣"@km , "deranā grē 3"@km-x-kmfemc ;
+        skos:prefLabel      "ទេសនាគ្រែ៣"@km , "deranā grē 3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCAC1009BC8908AFB ;
         :hasFascicles       "1-6" ;
         :hasTitle           bdr:TT0EDE1C7CACD7405B , bdr:TT20D6060638CAF00B ;
-        :instanceHasReproduction  bdr:W1FEMC046022 ;
+        :instanceHasReproduction  bdr:W1FEMC036022 , bdr:W1FEMC046022 ;
         :isComplete         true ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCAC1009BC8908AFB ;
-        :note               bdr:NT20D94CC324CA9AB0 ;
+        :microfilmItem      bdr:MF20D94CC324CA9AB0 ;
+        :note               bdr:NT78B2A1E7606AA166 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "004-B.04.11.02.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
-    bdr:NT20D94CC324CA9AB0
+    bdr:NT78B2A1E7606AA166
         a                   :Note ;
         :noteSource         bda:PR1FEMC04 ;
         :noteText           "Catalog" .
@@ -67,5 +71,5 @@ bdg:MW1FEMC046022 {
     
     bdr:TT20D6060638CAF00B
         a                   :Title ;
-        rdfs:label          "deranā grē 3"@km-x-kmfemc .
+        rdfs:label          "deranā grē 3"@km-x-twktt .
 }

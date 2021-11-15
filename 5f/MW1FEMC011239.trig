@@ -34,7 +34,7 @@ bdg:MW1FEMC011239 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011239 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "5f/MW1FEMC011239.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011239 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC011239 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF0ADF531CFE49F46E
+    bdr:ID0ADF531CFE49F46E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-A.07.01.05.III.1" .
+    
+    bdr:MF642EC9A800C23965
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "27" .
     
     bdr:MW1FEMC011239
         a                   :Instance ;
-        skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-kmfemc ;
+        skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0ADF531CFE49F46E ;
         :hasFascicles       "5" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT19F8A4EF5533A5DE , bdr:TT82B1AF92EB0E6E3B , bdr:TT8B74E482FCAEC27E , bdr:TTF53604A56E73C478 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC011239 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0ADF531CFE49F46E ;
+        :microfilmItem      bdr:MF642EC9A800C23965 ;
         :note               bdr:NTB5FE0B5E0030C436 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "018-A.07.01.05.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NTB5FE0B5E0030C436
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC011239 {
     
     bdr:TT19F8A4EF5533A5DE
         a                   :CoverTitle ;
-        rdfs:label          "ថំមត្រាស"@km-x-kmpre20c .
+        rdfs:label          "ថំមត្រាស"@km .
     
     bdr:TT82B1AF92EB0E6E3B
         a                   :CoverTitle ;
-        rdfs:label          "thaṃm trās"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "thaṃm trās"@km-x-twktt .
     
     bdr:TT8B74E482FCAEC27E
         a                   :Title ;
@@ -86,6 +90,6 @@ bdg:MW1FEMC011239 {
     
     bdr:TTF53604A56E73C478
         a                   :Title ;
-        rdfs:label          "paṭham trās'"@km-x-kmfemc ;
+        rdfs:label          "paṭham trās'"@km-x-twktt ;
         :femcConversionOf   bdr:TT82B1AF92EB0E6E3B .
 }

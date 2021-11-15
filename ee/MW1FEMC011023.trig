@@ -34,7 +34,7 @@ bdg:MW1FEMC011023 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011023 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "ee/MW1FEMC011023.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011023 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC011023 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF225A0FE654B159A4
+    bdr:ID225A0FE654B159A4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "033-A.04.07.01.III.1" .
+    
+    bdr:MFFAC68F162F287EC0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "80" .
     
     bdr:MW1FEMC011023
         a                   :Instance ;
-        skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-kmfemc ;
+        skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID225A0FE654B159A4 ;
         :hasFascicles       "2, 3" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT5334A456C2BE9F07 , bdr:TT64EAF3A427DB10FD , bdr:TTA44B4A28470EB8C4 , bdr:TTE31CBCDDEDCEAF4B ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC011023 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF225A0FE654B159A4 ;
+        :microfilmItem      bdr:MFFAC68F162F287EC0 ;
         :note               bdr:NT5B336357B986F347 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "033-A.04.07.01.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT5B336357B986F347
         a                   :Note ;
@@ -73,7 +77,7 @@ bdg:MW1FEMC011023 {
     
     bdr:TT5334A456C2BE9F07
         a                   :CoverTitle ;
-        rdfs:label          "ថម្មសម្ពោធី"@km-x-kmpre20c .
+        rdfs:label          "ថម្មសម្ពោធី"@km .
     
     bdr:TT64EAF3A427DB10FD
         a                   :Title ;
@@ -82,10 +86,10 @@ bdg:MW1FEMC011023 {
     
     bdr:TTA44B4A28470EB8C4
         a                   :Title ;
-        rdfs:label          "paṭham sambodhi"@km-x-kmfemc ;
+        rdfs:label          "paṭham sambodhi"@km-x-twktt ;
         :femcConversionOf   bdr:TTE31CBCDDEDCEAF4B .
     
     bdr:TTE31CBCDDEDCEAF4B
         a                   :CoverTitle ;
-        rdfs:label          "thamm sambodhī"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "thamm sambodhī"@km-x-twktt .
 }

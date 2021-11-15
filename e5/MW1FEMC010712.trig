@@ -34,7 +34,7 @@ bdg:MW1FEMC010712 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010712 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "e5/MW1FEMC010712.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010712 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010712 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFFA456AA6434575EA
+    bdr:IDFA456AA6434575EA
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "022-A.03.07.01.III.1" .
+    
+    bdr:MF5FB22F96382150BB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "113" .
     
     bdr:MW1FEMC010712
         a                   :Instance ;
-        skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-kmfemc ;
+        skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFA456AA6434575EA ;
         :hasFascicles       "1" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT0F9C6FD899EC76B1 , bdr:TT4C6C70DD437DED59 , bdr:TT5C3135EDB8A1A0E2 , bdr:TT9049E3CF959E3430 , bdr:TTD3FDCB479936F56C , bdr:TTD78BDAD58637C3CB ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010712 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFA456AA6434575EA ;
+        :microfilmItem      bdr:MF5FB22F96382150BB ;
         :note               bdr:NT3A1E05FC66AA4750 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "022-A.03.07.01.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT3A1E05FC66AA4750
         a                   :Note ;
@@ -73,15 +77,15 @@ bdg:MW1FEMC010712 {
     
     bdr:TT0F9C6FD899EC76B1
         a                   :Title ;
-        rdfs:label          "ariy sacc"@km-x-kmfemc .
+        rdfs:label          "ariy sacc"@km-x-twktt .
     
     bdr:TT4C6C70DD437DED59
         a                   :CoverTitle ;
-        rdfs:label          "ចតុរារីយសច្ច"@km-x-kmpre20c .
+        rdfs:label          "ចតុរារីយសច្ច"@km .
     
     bdr:TT5C3135EDB8A1A0E2
         a                   :CoverTitle ;
-        rdfs:label          "caturārīyasacc"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "caturārīyasacc"@km-x-twktt .
     
     bdr:TT9049E3CF959E3430
         a                   :Title ;
@@ -94,6 +98,6 @@ bdg:MW1FEMC010712 {
     
     bdr:TTD78BDAD58637C3CB
         a                   :CoverTitle ;
-        rdfs:label          "caturāriyasacc"@km-x-kmfemc ;
+        rdfs:label          "caturāriyasacc"@km-x-twktt ;
         :femcConversionOf   bdr:TT5C3135EDB8A1A0E2 .
 }

@@ -26,7 +26,7 @@ bdg:MW1FEMC044378 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC044378 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "fd/MW1FEMC044378.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC044378 ;
@@ -34,30 +34,34 @@ bdg:MW1FEMC044378 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFE0A723F505D24BCC
+    bdr:IDE0A723F505D24BCC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "019-B.09.12.01.III.5" .
+    
+    bdr:MF3ACCBFCD885208CA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "70-71" ;
         :microfilmStrip     "164-165" .
     
     bdr:MW1FEMC044378
         a                   :Instance ;
-        skos:prefLabel      "មហោសុថ"@km , "mahoSuth"@km-x-kmfemc ;
+        skos:prefLabel      "មហោសុថ"@km , "mahoSuth"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE0A723F505D24BCC ;
         :hasFascicles       "2-14" ;
         :hasTitle           bdr:TT72BCE0DFA03B58D8 , bdr:TT7E4AF3AA9BFE5527 ;
-        :instanceHasReproduction  bdr:W1FEMC044378 ;
+        :instanceHasReproduction  bdr:W1FEMC034378 , bdr:W1FEMC044378 ;
         :isComplete         false ;
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE0A723F505D24BCC ;
-        :note               bdr:NT3ACCBFCD885208CA ;
+        :microfilmItem      bdr:MF3ACCBFCD885208CA ;
+        :note               bdr:NT44BE74A7B2CF4D56 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "019-B.09.12.01.III.5" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+        :script             bdr:ScriptKhmr .
     
-    bdr:NT3ACCBFCD885208CA
+    bdr:NT44BE74A7B2CF4D56
         a                   :Note ;
         :noteSource         bda:PR1FEMC04 ;
         :noteText           "Catalog" .
@@ -68,5 +72,5 @@ bdg:MW1FEMC044378 {
     
     bdr:TT7E4AF3AA9BFE5527
         a                   :Title ;
-        rdfs:label          "mahoSuth"@km-x-kmfemc .
+        rdfs:label          "mahoSuth"@km-x-twktt .
 }

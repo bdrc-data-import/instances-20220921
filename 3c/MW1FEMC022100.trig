@@ -35,7 +35,7 @@ bdg:MW1FEMC022100 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022100 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "3c/MW1FEMC022100.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022100 ;
@@ -43,14 +43,20 @@ bdg:MW1FEMC022100 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFFF738C5A5952CD06
+    bdr:IDFF738C5A5952CD06
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "049.V.1" .
+    
+    bdr:MFDFCC08DEE70410CF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "7" ;
         :microfilmStrip     "28" .
     
     bdr:MW1FEMC022100
         a                   :Instance ;
-        skos:prefLabel      "សតិមហាបដ្ឋាន"@km , "sati mahā paṭṭhān"@km-x-kmfemc ;
+        skos:prefLabel      "សតិមហាបដ្ឋាន"@km , "sati mahā paṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFF738C5A5952CD06 ;
         :hasFascicles       "7" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TTC13AFAD0C28A6417 , bdr:TTC1465FFEC39CFB7D ;
@@ -59,13 +65,11 @@ bdg:MW1FEMC022100 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFF738C5A5952CD06 ;
+        :microfilmItem      bdr:MFDFCC08DEE70410CF ;
         :note               bdr:NTE3551C18F08D643E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "049.V.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_V_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NTE3551C18F08D643E
         a                   :Note ;
@@ -78,5 +82,5 @@ bdg:MW1FEMC022100 {
     
     bdr:TTC1465FFEC39CFB7D
         a                   :Title ;
-        rdfs:label          "sati mahā paṭṭhān"@km-x-kmfemc .
+        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt .
 }

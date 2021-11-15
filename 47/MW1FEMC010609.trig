@@ -34,7 +34,7 @@ bdg:MW1FEMC010609 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010609 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "47/MW1FEMC010609.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010609 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010609 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFD15DCA51E6B860A1
+    bdr:IDD15DCA51E6B860A1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-A.02.11.01.III.1" .
+    
+    bdr:MFE17BF088C0D21849
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "13" ;
         :microfilmStrip     "55" .
     
     bdr:MW1FEMC010609
         a                   :Instance ;
-        skos:prefLabel      "ពាហុំ"@km , "bāhuṃ"@km-x-kmfemc ;
+        skos:prefLabel      "ពាហុំ"@km , "bāhuṃ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD15DCA51E6B860A1 ;
         :hasFascicles       "5" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT1A90F86C8F44F37A , bdr:TT422DB125E872E181 , bdr:TT541955149772134D , bdr:TTBB0AD11B83748257 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010609 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD15DCA51E6B860A1 ;
+        :microfilmItem      bdr:MFE17BF088C0D21849 ;
         :note               bdr:NT9117EBBC0F872C06 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "003-A.02.11.01.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT9117EBBC0F872C06
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC010609 {
     
     bdr:TT1A90F86C8F44F37A
         a                   :CoverTitle ;
-        rdfs:label          "ពាហុំងមេកត្វា"@km-x-kmpre20c .
+        rdfs:label          "ពាហុំងមេកត្វា"@km .
     
     bdr:TT422DB125E872E181
         a                   :CoverTitle ;
-        rdfs:label          "bāhuṃṅ mekatvā"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "bāhuṃṅ mekatvā"@km-x-twktt .
     
     bdr:TT541955149772134D
         a                   :Title ;
@@ -86,6 +90,6 @@ bdg:MW1FEMC010609 {
     
     bdr:TTBB0AD11B83748257
         a                   :Title ;
-        rdfs:label          "bāhuṃ"@km-x-kmfemc ;
+        rdfs:label          "bāhuṃ"@km-x-twktt ;
         :femcConversionOf   bdr:TT422DB125E872E181 .
 }

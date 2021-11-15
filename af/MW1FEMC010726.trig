@@ -34,7 +34,7 @@ bdg:MW1FEMC010726 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010726 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "af/MW1FEMC010726.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010726 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010726 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF3DDBC83655801362
+    bdr:ID3DDBC83655801362
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "036-A.03.07.01.II.1" .
+    
+    bdr:MF111B8E6CD2BDE503
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "114" .
     
     bdr:MW1FEMC010726
         a                   :Instance ;
-        skos:prefLabel      "សព្វសិទ្ធ"@km , "sabb siddh"@km-x-kmfemc ;
+        skos:prefLabel      "សព្វសិទ្ធ"@km , "sabb siddh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3DDBC83655801362 ;
         :hasFascicles       "1, 2" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT5E0967CCB2CCB2F7 , bdr:TT7C8FD3BDCC076720 , bdr:TT817A94FF1E89AB1C , bdr:TTCFD2D252DB8B073B ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010726 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3DDBC83655801362 ;
+        :microfilmItem      bdr:MF111B8E6CD2BDE503 ;
         :note               bdr:NTCC2E61C5890824EE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "036-A.03.07.01.II.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_II_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NTCC2E61C5890824EE
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC010726 {
     
     bdr:TT5E0967CCB2CCB2F7
         a                   :CoverTitle ;
-        rdfs:label          "សព្វសិត្ថ"@km-x-kmpre20c .
+        rdfs:label          "សព្វសិត្ថ"@km .
     
     bdr:TT7C8FD3BDCC076720
         a                   :Title ;
-        rdfs:label          "sabb siddh"@km-x-kmfemc ;
+        rdfs:label          "sabb siddh"@km-x-twktt ;
         :femcConversionOf   bdr:TTCFD2D252DB8B073B .
     
     bdr:TT817A94FF1E89AB1C
@@ -87,5 +91,5 @@ bdg:MW1FEMC010726 {
     
     bdr:TTCFD2D252DB8B073B
         a                   :CoverTitle ;
-        rdfs:label          "sabb sitth"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "sabb sitth"@km-x-twktt .
 }

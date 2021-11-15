@@ -34,7 +34,7 @@ bdg:MW1FEMC010299 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010299 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "2a/MW1FEMC010299.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010299 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010299 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF742B73790E40B485
+    bdr:ID742B73790E40B485
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "012-013-PP.03.03.03.III.1" .
+    
+    bdr:MF07FF8600ED75F17F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "61" .
     
     bdr:MW1FEMC010299
         a                   :Instance ;
-        skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-kmfemc ;
+        skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID742B73790E40B485 ;
         :hasFascicles       "2, 5" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT0FC9C9C90BE131C9 , bdr:TTC8A35B0D6EAF966A , bdr:TTCF4736779964F5BA , bdr:TTD60A91A428231E75 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010299 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF742B73790E40B485 ;
+        :microfilmItem      bdr:MF07FF8600ED75F17F ;
         :note               bdr:NT4CE3BDE6E089B568 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "012-013-PP.03.03.03.III.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT4CE3BDE6E089B568
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC010299 {
     
     bdr:TT0FC9C9C90BE131C9
         a                   :CoverTitle ;
-        rdfs:label          "បែត្តវីនីជាតក្ខ"@km-x-kmpre20c .
+        rdfs:label          "បែត្តវីនីជាតក្ខ"@km .
     
     bdr:TTC8A35B0D6EAF966A
         a                   :CoverTitle ;
-        rdfs:label          "pètt vīnī jātakkh"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "pètt vīnī jātakkh"@km-x-twktt .
     
     bdr:TTCF4736779964F5BA
         a                   :Title ;
@@ -86,6 +90,6 @@ bdg:MW1FEMC010299 {
     
     bdr:TTD60A91A428231E75
         a                   :Title ;
-        rdfs:label          "pet veṇī"@km-x-kmfemc ;
+        rdfs:label          "pet veṇī"@km-x-twktt ;
         :femcConversionOf   bdr:TTC8A35B0D6EAF966A .
 }

@@ -34,7 +34,7 @@ bdg:MW1FEMC010306 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010306 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "4d/MW1FEMC010306.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010306 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010306 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MFDB80E5ED5249A814
+    bdr:IDDB80E5ED5249A814
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "027-PP.03.03.03.III.5" .
+    
+    bdr:MFCC1EBA6C94DE7E6D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "62" .
     
     bdr:MW1FEMC010306
         a                   :Instance ;
-        skos:prefLabel      "មហាជនក"@km , "mahā janak"@km-x-kmfemc ;
+        skos:prefLabel      "មហាជនក"@km , "mahā janak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDB80E5ED5249A814 ;
         :hasFascicles       "1" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT1A4FC712A8B07D19 , bdr:TT2A216E21B2BD6D50 , bdr:TT4502C23FF1F38785 , bdr:TT63E48C3236F7430D , bdr:TTB99202F3CC83F903 , bdr:TTF1F85DB26F486341 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010306 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDB80E5ED5249A814 ;
+        :microfilmItem      bdr:MFCC1EBA6C94DE7E6D ;
         :note               bdr:NT02A7DF60D12F6C2C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "027-PP.03.03.03.III.5" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT02A7DF60D12F6C2C
         a                   :Note ;
@@ -82,7 +86,7 @@ bdg:MW1FEMC010306 {
     
     bdr:TT4502C23FF1F38785
         a                   :CoverTitle ;
-        rdfs:label          "jinak'"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "jinak'"@km-x-twktt .
     
     bdr:TT63E48C3236F7430D
         a                   :OtherTitle ;
@@ -90,10 +94,10 @@ bdg:MW1FEMC010306 {
     
     bdr:TTB99202F3CC83F903
         a                   :CoverTitle ;
-        rdfs:label          "ជិនក់"@km-x-kmpre20c .
+        rdfs:label          "ជិនក់"@km .
     
     bdr:TTF1F85DB26F486341
         a                   :Title ;
-        rdfs:label          "mahā janak"@km-x-kmfemc ;
+        rdfs:label          "mahā janak"@km-x-twktt ;
         :femcConversionOf   bdr:TT4502C23FF1F38785 .
 }

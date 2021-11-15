@@ -34,7 +34,7 @@ bdg:MW1FEMC010021 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010021 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "db/MW1FEMC010021.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010021 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010021 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF95AE830DEC934E08
+    bdr:ID95AE830DEC934E08
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "008-PP.00.03.01.V.1" .
+    
+    bdr:MF71AEC57C050F0256
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "1" ;
         :microfilmStrip     "1" .
     
     bdr:MW1FEMC010021
         a                   :Instance ;
-        skos:prefLabel      "ពុទ្ធទំនាយ"@km , "buddh daṃnāy"@km-x-kmfemc ;
+        skos:prefLabel      "ពុទ្ធទំនាយ"@km , "buddh daṃnāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID95AE830DEC934E08 ;
         :hasFascicles       "1" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT3AD83489C18EBEF4 , bdr:TT6AAC0993C21C06AE , bdr:TTC652FAE90FE392F0 , bdr:TTC93400F80ACC0CE2 ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010021 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF95AE830DEC934E08 ;
+        :microfilmItem      bdr:MF71AEC57C050F0256 ;
         :note               bdr:NTF5D0C9F25DCB88A2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "008-PP.00.03.01.V.1" ;
-        :workIsAbout        bdr:FEMC_Scheme_V_1 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NTF5D0C9F25DCB88A2
         a                   :Note ;
@@ -73,11 +77,11 @@ bdg:MW1FEMC010021 {
     
     bdr:TT3AD83489C18EBEF4
         a                   :CoverTitle ;
-        rdfs:label          "ពន្ទិមនាយ"@km-x-kmpre20c .
+        rdfs:label          "ពន្ទិមនាយ"@km .
     
     bdr:TT6AAC0993C21C06AE
         a                   :CoverTitle ;
-        rdfs:label          "bandim-nāy"@km-x-kmpre20c-kmfemc .
+        rdfs:label          "bandim-nāy"@km-x-twktt .
     
     bdr:TTC652FAE90FE392F0
         a                   :Title ;
@@ -86,6 +90,6 @@ bdg:MW1FEMC010021 {
     
     bdr:TTC93400F80ACC0CE2
         a                   :Title ;
-        rdfs:label          "buddh daṃnāy"@km-x-kmfemc ;
+        rdfs:label          "buddh daṃnāy"@km-x-twktt ;
         :femcConversionOf   bdr:TT6AAC0993C21C06AE .
 }

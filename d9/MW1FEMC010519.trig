@@ -34,7 +34,7 @@ bdg:MW1FEMC010519 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010519 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d9/MW1FEMC010519.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010519 ;
@@ -42,14 +42,20 @@ bdg:MW1FEMC010519 {
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MF520DCB8D32626A55
+    bdr:ID520DCB8D32626A55
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-A.02.09.01.III.5" .
+    
+    bdr:MF68C1B4684982C0D5
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "13" ;
         :microfilmStrip     "55" .
     
     bdr:MW1FEMC010519
         a                   :Instance ;
-        skos:prefLabel      "តិកនិបាត"@km , "tikanipāt"@km-x-kmfemc ;
+        skos:prefLabel      "តិកនិបាត"@km , "tikanipāt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID520DCB8D32626A55 ;
         :hasFascicles       "14" ;
         :hasInstanceNum     "1" ;
         :hasTitle           bdr:TT756B111CCD844A1A , bdr:TT84D33C4C5AB1498E ;
@@ -58,13 +64,11 @@ bdg:MW1FEMC010519 {
         :isRoot             true ;
         :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF520DCB8D32626A55 ;
+        :microfilmItem      bdr:MF68C1B4684982C0D5 ;
         :note               bdr:NT160AA9012031C2AC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptKhmr ;
-        :workFEMCManuscriptCode  "003-A.02.09.01.III.5" ;
-        :workIsAbout        bdr:FEMC_Scheme_III_5 .
+        :script             bdr:ScriptKhmr .
     
     bdr:NT160AA9012031C2AC
         a                   :Note ;
@@ -77,5 +81,5 @@ bdg:MW1FEMC010519 {
     
     bdr:TT84D33C4C5AB1498E
         a                   :Title ;
-        rdfs:label          "tikanipāt"@km-x-kmfemc .
+        rdfs:label          "tikanipāt"@km-x-twktt .
 }
