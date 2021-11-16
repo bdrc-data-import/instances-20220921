@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020292 {
-    bda:LG1DA0C623B0686547
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020292"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020292"@en , "imported pubinfo for W1FEMC020292"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020292"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020292 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020292 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "27/MW1FEMC020292.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020292 ;
-        adm:logEntry        bda:LG1DA0C623B0686547 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDE4F34154EFE313B
+    bdr:ID4660701587EB515D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.185.I.1" .
     
-    bdr:MF8ADFA8D2B6CC277D
+    bdr:MFBF889C411374C109
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020292 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ក្រម"@km , "cpāp' kram"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDE4F34154EFE313B ;
+            bdr:ID4660701587EB515D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT087628195AAF4D98 , bdr:TT4660701587EB515D , bdr:TT66EBD794151E0F17 , bdr:TT77C2B84777041FEA ;
+        :hasTitle           bdr:TT087628195AAF4D98 , bdr:TT1DA0C623B0686547 , bdr:TT263FA499FE7036F2 , bdr:TT66EBD794151E0F17 ;
         :instanceHasReproduction  bdr:W1FEMC020292 ;
+        :instanceOf         bdr:WA1FEMC100009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8ADFA8D2B6CC277D ;
-        :note               bdr:NTBF889C411374C109 ;
+        :microfilmItem      bdr:MFBF889C411374C109 ;
+        :note               bdr:NT77C2B84777041FEA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBF889C411374C109
+    bdr:NT77C2B84777041FEA
         a                   :Note ;
         :contentLocationStatement  "pg. 58" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT087628195AAF4D98
-        a                   :Title ;
-        rdfs:label          "cpāp' kram"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4660701587EB515D .
-    
-    bdr:TT4660701587EB515D
         a                   :CoverTitle ;
         rdfs:label          "nī gị pakram"@km-x-twktt .
     
-    bdr:TT66EBD794151E0F17
+    bdr:TT1DA0C623B0686547
         a                   :Title ;
         rdfs:label          "ច្បាប់ក្រម"@km ;
-        :femcConversionOf   bdr:TT77C2B84777041FEA .
+        :femcConversionOf   bdr:TT66EBD794151E0F17 .
     
-    bdr:TT77C2B84777041FEA
+    bdr:TT263FA499FE7036F2
+        a                   :Title ;
+        rdfs:label          "cpāp' kram"@km-x-twktt ;
+        :femcConversionOf   bdr:TT087628195AAF4D98 .
+    
+    bdr:TT66EBD794151E0F17
         a                   :CoverTitle ;
         rdfs:label          "នីគឺបក្រម"@km .
 }

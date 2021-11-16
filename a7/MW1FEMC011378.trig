@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011378 {
-    bda:LG846C534CB7A83C6B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011378"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011378"@en , "imported pubinfo for W1FEMC011378"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011378"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011378 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011378 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a7/MW1FEMC011378.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011378 ;
-        adm:logEntry        bda:LG846C534CB7A83C6B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEB854233A2DADCAB
+    bdr:IDA8B546F8E1AFD5B1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.10.07.01.III.6" .
     
-    bdr:MF7DB57C0C71AC4C5F
+    bdr:MFB4BEC07083767AD8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "53" ;
         :microfilmStrip     "141" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011378 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សចូឡេកសាដក"@km , "ānisaṅs cūḷek sāṭak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEB854233A2DADCAB ;
+            bdr:IDA8B546F8E1AFD5B1 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CB079BF4F013033 , bdr:TT4A8FD4F08907C84D , bdr:TTA600B21F890DD82B , bdr:TTA8B546F8E1AFD5B1 ;
+        :hasTitle           bdr:TT0CB079BF4F013033 , bdr:TT846C534CB7A83C6B , bdr:TTA600B21F890DD82B , bdr:TTA721E5B3E4DA2C84 ;
         :instanceHasReproduction  bdr:W1FEMC011378 ;
+        :instanceOf         bdr:WA1FEMC060014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7DB57C0C71AC4C5F ;
-        :note               bdr:NTB4BEC07083767AD8 ;
+        :microfilmItem      bdr:MFB4BEC07083767AD8 ;
+        :note               bdr:NT4A8FD4F08907C84D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB4BEC07083767AD8
+    bdr:NT4A8FD4F08907C84D
         a                   :Note ;
         :contentLocationStatement  "pg. 322" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0CB079BF4F013033
-        a                   :Title ;
-        rdfs:label          "អានិសង្សចូឡេកសាដក"@km ;
-        :femcConversionOf   bdr:TT4A8FD4F08907C84D .
-    
-    bdr:TT4A8FD4F08907C84D
         a                   :CoverTitle ;
         rdfs:label          "ចុឡេកស្លាដក"@km .
     
-    bdr:TTA600B21F890DD82B
+    bdr:TT846C534CB7A83C6B
         a                   :Title ;
-        rdfs:label          "ānisaṅs cūḷek sāṭak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA8B546F8E1AFD5B1 .
+        rdfs:label          "អានិសង្សចូឡេកសាដក"@km ;
+        :femcConversionOf   bdr:TT0CB079BF4F013033 .
     
-    bdr:TTA8B546F8E1AFD5B1
+    bdr:TTA600B21F890DD82B
         a                   :CoverTitle ;
         rdfs:label          "cuḷek slāṭak"@km-x-twktt .
+    
+    bdr:TTA721E5B3E4DA2C84
+        a                   :Title ;
+        rdfs:label          "ānisaṅs cūḷek sāṭak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA600B21F890DD82B .
 }

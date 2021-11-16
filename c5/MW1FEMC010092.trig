@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010092 {
-    bda:LGB215B16DC58BE906
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010092"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010092"@en , "imported pubinfo for W1FEMC010092"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010092"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010092 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010092 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c5/MW1FEMC010092.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010092 ;
-        adm:logEntry        bda:LGB215B16DC58BE906 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4055D734BC678F26
+    bdr:IDBB3D402F201BAD2A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "050-PP.01.10.03.I.1" .
     
-    bdr:MF9FC226D65E6D861A
+    bdr:MFA7C1E6901BA7804F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010092 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់រាជបណ្ឌិត្យ"@km , "cpāp' rāj paṇḍity"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4055D734BC678F26 ;
+            bdr:IDBB3D402F201BAD2A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT074374A5015ED3C4 , bdr:TT3A67BACCB9818D63 , bdr:TT6BA40EF02EEE69A1 , bdr:TTBB3D402F201BAD2A ;
+        :hasTitle           bdr:TT074374A5015ED3C4 , bdr:TT3A67BACCB9818D63 , bdr:TT7752B2E48BA65515 , bdr:TTB215B16DC58BE906 ;
         :instanceHasReproduction  bdr:W1FEMC010092 ;
+        :instanceOf         bdr:WA1FEMC100016 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9FC226D65E6D861A ;
-        :note               bdr:NTA7C1E6901BA7804F ;
+        :microfilmItem      bdr:MFA7C1E6901BA7804F ;
+        :note               bdr:NT6BA40EF02EEE69A1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTA7C1E6901BA7804F
+    bdr:NT6BA40EF02EEE69A1
         a                   :Note ;
         :contentLocationStatement  "pg. 72" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT074374A5015ED3C4
-        a                   :Title ;
-        rdfs:label          "cpāp' rāj paṇḍity"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBB3D402F201BAD2A .
+        a                   :CoverTitle ;
+        rdfs:label          "rāj muṇḍit"@km-x-twktt .
     
     bdr:TT3A67BACCB9818D63
-        a                   :Title ;
-        rdfs:label          "ច្បាប់រាជបណ្ឌិត្យ"@km ;
-        :femcConversionOf   bdr:TT6BA40EF02EEE69A1 .
-    
-    bdr:TT6BA40EF02EEE69A1
         a                   :CoverTitle ;
         rdfs:label          "រាជមុណ្ឌិត"@km .
     
-    bdr:TTBB3D402F201BAD2A
-        a                   :CoverTitle ;
-        rdfs:label          "rāj muṇḍit"@km-x-twktt .
+    bdr:TT7752B2E48BA65515
+        a                   :Title ;
+        rdfs:label          "cpāp' rāj paṇḍity"@km-x-twktt ;
+        :femcConversionOf   bdr:TT074374A5015ED3C4 .
+    
+    bdr:TTB215B16DC58BE906
+        a                   :Title ;
+        rdfs:label          "ច្បាប់រាជបណ្ឌិត្យ"@km ;
+        :femcConversionOf   bdr:TT3A67BACCB9818D63 .
 }

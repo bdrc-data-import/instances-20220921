@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020323 {
-    bda:LG950B3842EB01494A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020323"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020323"@en , "imported pubinfo for W1FEMC020323"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020323"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020323 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020323 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "48/MW1FEMC020323.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020323 ;
-        adm:logEntry        bda:LG950B3842EB01494A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID572C74EDD86EF9EF
+    bdr:IDD18952785F38D3FD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.216.III.4" .
     
-    bdr:MF86C3B8DA6CD2CE7A
+    bdr:MF688C0530F4C0682D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "158" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020323 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្មត្ថសង្គហអធិប្បាយ"@km , "abhidhammatthasaṅgah adhippāy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID572C74EDD86EF9EF ;
+            bdr:IDD18952785F38D3FD ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT596A48692ACF18E0 , bdr:TT6C3DA96044616F92 , bdr:TT8EB91C5EC9C19259 , bdr:TTD18952785F38D3FD ;
+        :hasTitle           bdr:TT202B1870A1F40239 , bdr:TT596A48692ACF18E0 , bdr:TT6C3DA96044616F92 , bdr:TT950B3842EB01494A ;
         :instanceHasReproduction  bdr:W1FEMC020323 ;
+        :instanceOf         bdr:WA1FEMC040010 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF86C3B8DA6CD2CE7A ;
-        :note               bdr:NT688C0530F4C0682D ;
+        :microfilmItem      bdr:MF688C0530F4C0682D ;
+        :note               bdr:NT8EB91C5EC9C19259 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1111" .
     
-    bdr:NT688C0530F4C0682D
+    bdr:NT8EB91C5EC9C19259
         a                   :Note ;
         :contentLocationStatement  "pg. 64" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT596A48692ACF18E0
-        a                   :Title ;
-        rdfs:label          "អភិធម្មត្ថសង្គហអធិប្បាយ"@km ;
-        :femcConversionOf   bdr:TT8EB91C5EC9C19259 .
-    
-    bdr:TT6C3DA96044616F92
+    bdr:TT202B1870A1F40239
         a                   :Title ;
         rdfs:label          "abhidhammatthasaṅgah adhippāy"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD18952785F38D3FD .
+        :femcConversionOf   bdr:TT6C3DA96044616F92 .
     
-    bdr:TT8EB91C5EC9C19259
+    bdr:TT596A48692ACF18E0
         a                   :CoverTitle ;
         rdfs:label          "អភិធម្មត្ថសង្គហធិប្បាយ"@km .
     
-    bdr:TTD18952785F38D3FD
+    bdr:TT6C3DA96044616F92
         a                   :CoverTitle ;
         rdfs:label          "abhidhammatthasaṅgah dhip-pāy"@km-x-twktt .
+    
+    bdr:TT950B3842EB01494A
+        a                   :Title ;
+        rdfs:label          "អភិធម្មត្ថសង្គហអធិប្បាយ"@km ;
+        :femcConversionOf   bdr:TT596A48692ACF18E0 .
 }

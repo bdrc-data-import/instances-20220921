@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022350 {
-    bda:LG090BCAC8789C0015
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022350"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022350"@en , "imported pubinfo for W1FEMC022350"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022350"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022350 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022350 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "95/MW1FEMC022350.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022350 ;
-        adm:logEntry        bda:LG090BCAC8789C0015 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0AC72BD246830FE9
+    bdr:IDF319B21A4B6D0DF8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.837.I.1" .
     
-    bdr:MF4303F3B3DBBAF2AB
+    bdr:MF513A834C11913855
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022350 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ស្វះស្វែង"@km , "cpāp' svaḥ svèṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0AC72BD246830FE9 ;
+            bdr:IDF319B21A4B6D0DF8 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0E2C2BAC27D8DB6F , bdr:TT64237129150AFB4C , bdr:TTEE603FA7E8696F91 , bdr:TTF319B21A4B6D0DF8 ;
+        :hasTitle           bdr:TT090BCAC8789C0015 , bdr:TT0E2C2BAC27D8DB6F , bdr:TT64237129150AFB4C , bdr:TTE8EDB0F8505A999D ;
         :instanceHasReproduction  bdr:W1FEMC022350 ;
+        :instanceOf         bdr:WA1FEMC100020 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4303F3B3DBBAF2AB ;
-        :note               bdr:NT513A834C11913855 ;
+        :microfilmItem      bdr:MF513A834C11913855 ;
+        :note               bdr:NTEE603FA7E8696F91 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT513A834C11913855
+    bdr:NTEE603FA7E8696F91
         a                   :Note ;
         :contentLocationStatement  "pg. 420" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0E2C2BAC27D8DB6F
-        a                   :Title ;
-        rdfs:label          "cpāp' svaḥ svèṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF319B21A4B6D0DF8 .
-    
-    bdr:TT64237129150AFB4C
+    bdr:TT090BCAC8789C0015
         a                   :Title ;
         rdfs:label          "ច្បាប់ស្វះស្វែង"@km ;
-        :femcConversionOf   bdr:TTEE603FA7E8696F91 .
+        :femcConversionOf   bdr:TT64237129150AFB4C .
     
-    bdr:TTEE603FA7E8696F91
+    bdr:TT0E2C2BAC27D8DB6F
+        a                   :CoverTitle ;
+        rdfs:label          "svā lèṅ"@km-x-twktt .
+    
+    bdr:TT64237129150AFB4C
         a                   :CoverTitle ;
         rdfs:label          "ស្វាលែង"@km .
     
-    bdr:TTF319B21A4B6D0DF8
-        a                   :CoverTitle ;
-        rdfs:label          "svā lèṅ"@km-x-twktt .
+    bdr:TTE8EDB0F8505A999D
+        a                   :Title ;
+        rdfs:label          "cpāp' svaḥ svèṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0E2C2BAC27D8DB6F .
 }

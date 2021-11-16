@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022000 {
-    bda:LG8618665E2739C25A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022000"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022000"@en , "imported pubinfo for W1FEMC022000"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022000"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022000 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022000 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d5/MW1FEMC022000.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022000 ;
-        adm:logEntry        bda:LG8618665E2739C25A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC28431C901FF90F5
+    bdr:IDD5D30FF6A5004F30
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.782.V.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC022000 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-sūṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC28431C901FF90F5 ;
+            bdr:IDD5D30FF6A5004F30 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT22DC93973BF81113 , bdr:TTC11C23FFEDCFAB5C , bdr:TTD5D30FF6A5004F30 , bdr:TTDB2794B626DD8462 ;
+        :hasTitle           bdr:TT2E3B9654CCC104A3 , bdr:TT8618665E2739C25A , bdr:TTC11C23FFEDCFAB5C , bdr:TTDB2794B626DD8462 ;
         :instanceHasReproduction  bdr:W1FEMC022000 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT7E6D93D84EDDFAB7 ;
+        :note               bdr:NT22DC93973BF81113 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7E6D93D84EDDFAB7
+    bdr:NT22DC93973BF81113
         a                   :Note ;
         :contentLocationStatement  "pg. 354" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT22DC93973BF81113
+    bdr:TT2E3B9654CCC104A3
+        a                   :Title ;
+        rdfs:label          "paṭham viṅ-sūṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDB2794B626DD8462 .
+    
+    bdr:TT8618665E2739C25A
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TTC11C23FFEDCFAB5C .
+    
+    bdr:TTC11C23FFEDCFAB5C
         a                   :CoverTitle ;
         rdfs:label          "ធម្មជាត្ថកាលវឹងសុំង"@km .
     
-    bdr:TTC11C23FFEDCFAB5C
-        a                   :Title ;
-        rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT22DC93973BF81113 .
-    
-    bdr:TTD5D30FF6A5004F30
+    bdr:TTDB2794B626DD8462
         a                   :CoverTitle ;
         rdfs:label          "dhammajātthakāl vịṅ-suṅ"@km-x-twktt .
-    
-    bdr:TTDB2794B626DD8462
-        a                   :Title ;
-        rdfs:label          "paṭham viṅ-sūṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD5D30FF6A5004F30 .
 }

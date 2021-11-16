@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010615 {
-    bda:LG35E464259EADC6BB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010615"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010615"@en , "imported pubinfo for W1FEMC010615"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010615"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010615 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010615 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9e/MW1FEMC010615.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010615 ;
-        adm:logEntry        bda:LG35E464259EADC6BB , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID185A3CD6801A4D2F
+    bdr:IDF8BF12D916B78B45
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.02.11.01.III.1" .
     
-    bdr:MFB60E671309D890DD
+    bdr:MF977B96923F01491B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "13" ;
         :microfilmStrip     "55" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010615 {
         a                   :Instance ;
         skos:prefLabel      "អរុណវតី"@km , "aruṇ vatī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID185A3CD6801A4D2F ;
+            bdr:IDF8BF12D916B78B45 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT21EF3FFAB5B37BE3 , bdr:TT239BB560C7538395 , bdr:TT7D64311E0DD33DCE , bdr:TTF8BF12D916B78B45 ;
+        :hasTitle           bdr:TT21EF3FFAB5B37BE3 , bdr:TT239BB560C7538395 , bdr:TT35E464259EADC6BB , bdr:TT3ED08E83ADC4995B ;
         :instanceHasReproduction  bdr:W1FEMC010615 ;
+        :instanceOf         bdr:WA1FEMC010005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB60E671309D890DD ;
-        :note               bdr:NT977B96923F01491B ;
+        :microfilmItem      bdr:MF977B96923F01491B ;
+        :note               bdr:NT7D64311E0DD33DCE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT977B96923F01491B
+    bdr:NT7D64311E0DD33DCE
         a                   :Note ;
         :contentLocationStatement  "pg. 174" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT21EF3FFAB5B37BE3
-        a                   :Title ;
-        rdfs:label          "aruṇ vatī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF8BF12D916B78B45 .
+        a                   :CoverTitle ;
+        rdfs:label          "arun vaṭḍīy"@km-x-twktt .
     
     bdr:TT239BB560C7538395
-        a                   :Title ;
-        rdfs:label          "អរុណវតី"@km ;
-        :femcConversionOf   bdr:TT7D64311E0DD33DCE .
-    
-    bdr:TT7D64311E0DD33DCE
         a                   :CoverTitle ;
         rdfs:label          "អរុនវដ្តិ៍យ"@km .
     
-    bdr:TTF8BF12D916B78B45
-        a                   :CoverTitle ;
-        rdfs:label          "arun vaṭḍīy"@km-x-twktt .
+    bdr:TT35E464259EADC6BB
+        a                   :Title ;
+        rdfs:label          "អរុណវតី"@km ;
+        :femcConversionOf   bdr:TT239BB560C7538395 .
+    
+    bdr:TT3ED08E83ADC4995B
+        a                   :Title ;
+        rdfs:label          "aruṇ vatī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT21EF3FFAB5B37BE3 .
 }

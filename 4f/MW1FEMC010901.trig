@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010901 {
-    bda:LGC5830ECA4E6056B7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010901"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010901"@en , "imported pubinfo for W1FEMC010901"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010901"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010901 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010901 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4f/MW1FEMC010901.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010901 ;
-        adm:logEntry        bda:LGC5830ECA4E6056B7 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5337720EC5091F1B
+    bdr:ID3D134F4234C71C7C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "022-A.04.03.01.II.1" .
     
-    bdr:MFFC8BC2B87EE7264C
+    bdr:MF7073F7230465470E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "29" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC010901 {
         a                   :Instance ;
         skos:prefLabel      "សុវណ្ណខ្យងស័ង្ខ"@km , "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5337720EC5091F1B ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3D134F4234C71C7C , bdr:TT756499DF59616763 , bdr:TTCEDA5F1501ABC3C9 , bdr:TTEEA346B175D903C7 ;
+            bdr:ID3D134F4234C71C7C ;
+        :hasTitle           bdr:TT65383A3324B74594 , bdr:TT756499DF59616763 , bdr:TTC5830ECA4E6056B7 , bdr:TTEEA346B175D903C7 ;
         :instanceHasReproduction  bdr:W1FEMC010901 ;
+        :instanceOf         bdr:WA1FEMC120041 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFC8BC2B87EE7264C ;
-        :note               bdr:NT7073F7230465470E ;
+        :microfilmItem      bdr:MF7073F7230465470E ;
+        :note               bdr:NTCEDA5F1501ABC3C9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7073F7230465470E
+    bdr:NTCEDA5F1501ABC3C9
         a                   :Note ;
         :contentLocationStatement  "pg. 230" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3D134F4234C71C7C
+    bdr:TT65383A3324B74594
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
+        :femcConversionOf   bdr:TT756499DF59616763 .
+    
+    bdr:TT756499DF59616763
         a                   :CoverTitle ;
         rdfs:label          "khyaṅ săṅkh"@km-x-twktt .
     
-    bdr:TT756499DF59616763
-        a                   :Title ;
-        rdfs:label          "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3D134F4234C71C7C .
-    
-    bdr:TTCEDA5F1501ABC3C9
-        a                   :CoverTitle ;
-        rdfs:label          "ខ្យងស័ង្ខ"@km .
-    
-    bdr:TTEEA346B175D903C7
+    bdr:TTC5830ECA4E6056B7
         a                   :Title ;
         rdfs:label          "សុវណ្ណខ្យងស័ង្ខ"@km ;
-        :femcConversionOf   bdr:TTCEDA5F1501ABC3C9 .
+        :femcConversionOf   bdr:TTEEA346B175D903C7 .
+    
+    bdr:TTEEA346B175D903C7
+        a                   :CoverTitle ;
+        rdfs:label          "ខ្យងស័ង្ខ"@km .
 }

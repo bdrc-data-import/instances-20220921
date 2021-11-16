@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011464 {
-    bda:LGAF4B1EECADF319D6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011464"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011464"@en , "imported pubinfo for W1FEMC011464"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011464"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011464 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011464 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fe/MW1FEMC011464.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011464 ;
-        adm:logEntry        bda:LGAF4B1EECADF319D6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID936EE8CD45600710
+    bdr:ID775233F709F8869C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "036-A.10.07.03.I.1" .
     
-    bdr:MF1758191D0C1619E3
+    bdr:MF0B42B8C8E77CCF40
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "73" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011464 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ថ្មី"@km , "cpāp' thmī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID936EE8CD45600710 ;
+            bdr:ID775233F709F8869C ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4ACE8DF3BA146FB2 , bdr:TT4EA5F5896EBF3D08 , bdr:TT5CF63022AF9F8573 , bdr:TT775233F709F8869C ;
+        :hasTitle           bdr:TT4ACE8DF3BA146FB2 , bdr:TT5CF63022AF9F8573 , bdr:TTAF4B1EECADF319D6 , bdr:TTCD9C0708B15667A8 ;
         :instanceHasReproduction  bdr:W1FEMC011464 ;
+        :instanceOf         bdr:WA1FEMC100021 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1758191D0C1619E3 ;
-        :note               bdr:NT0B42B8C8E77CCF40 ;
+        :microfilmItem      bdr:MF0B42B8C8E77CCF40 ;
+        :note               bdr:NT4EA5F5896EBF3D08 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0B42B8C8E77CCF40
+    bdr:NT4EA5F5896EBF3D08
         a                   :Note ;
         :contentLocationStatement  "pg. 338" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT4ACE8DF3BA146FB2
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ថ្មី"@km ;
-        :femcConversionOf   bdr:TT4EA5F5896EBF3D08 .
-    
-    bdr:TT4EA5F5896EBF3D08
         a                   :CoverTitle ;
         rdfs:label          "ច្បាប់ថ្មីយ"@km .
     
     bdr:TT5CF63022AF9F8573
-        a                   :Title ;
-        rdfs:label          "cpāp' thmī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT775233F709F8869C .
-    
-    bdr:TT775233F709F8869C
         a                   :CoverTitle ;
         rdfs:label          "cpāp' thmīy"@km-x-twktt .
+    
+    bdr:TTAF4B1EECADF319D6
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ថ្មី"@km ;
+        :femcConversionOf   bdr:TT4ACE8DF3BA146FB2 .
+    
+    bdr:TTCD9C0708B15667A8
+        a                   :Title ;
+        rdfs:label          "cpāp' thmī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5CF63022AF9F8573 .
 }

@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020012 {
-    bda:LG860A116BE356A318
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020012"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020012"@en , "imported pubinfo for W1FEMC020012"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020012"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020012 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020012 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "cc/MW1FEMC020012.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020012 ;
-        adm:logEntry        bda:LG860A116BE356A318 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD98A2A878E519B2D
+    bdr:ID3DEB6CF6AEEA954D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.12.I.1" .
     
-    bdr:MFF4B61A605929C67D
+    bdr:MFFE121C9589F91042
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "4" .
@@ -54,32 +50,31 @@ bdg:MW1FEMC020012 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះច្បាប់"@km , "braḥ cpāp' "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD98A2A878E519B2D ;
+            bdr:ID3DEB6CF6AEEA954D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3DEB6CF6AEEA954D , bdr:TTF741A3339E5637BF ;
+        :hasTitle           bdr:TT860A116BE356A318 , bdr:TTB5DB1AC22574371A ;
         :instanceHasReproduction  bdr:W1FEMC020012 ;
+        :instanceOf         bdr:WA1FEMC100025 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF4B61A605929C67D ;
-        :note               bdr:NTFE121C9589F91042 ;
+        :microfilmItem      bdr:MFFE121C9589F91042 ;
+        :note               bdr:NTF741A3339E5637BF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1388" .
     
-    bdr:NTFE121C9589F91042
+    bdr:NTF741A3339E5637BF
         a                   :Note ;
         :contentLocationStatement  "pg. 3" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3DEB6CF6AEEA954D
-        a                   :Title ;
-        rdfs:label          "braḥ cpāp' "@km-x-twktt .
-    
-    bdr:TTF741A3339E5637BF
+    bdr:TT860A116BE356A318
         a                   :Title ;
         rdfs:label          "ព្រះច្បាប់"@km .
+    
+    bdr:TTB5DB1AC22574371A
+        a                   :Title ;
+        rdfs:label          "braḥ cpāp' "@km-x-twktt .
 }

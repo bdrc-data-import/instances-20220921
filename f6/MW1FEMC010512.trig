@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010512 {
-    bda:LG74246AA31BD4692C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010512"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010512"@en , "imported pubinfo for W1FEMC010512"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010512"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010512 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010512 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f6/MW1FEMC010512.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010512 ;
-        adm:logEntry        bda:LG74246AA31BD4692C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID713418915344ABDA
+    bdr:IDE6485FF32B0EBE7D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "017-A.02.08.02.III.2" .
     
-    bdr:MFF82109AF02D322EF
+    bdr:MF9152117FA8B6E584
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "29" ;
         :microfilmStrip     "45" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010512 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទសុកគិរីសូត្រ"@km , "cand suk girī sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID713418915344ABDA ;
+            bdr:IDE6485FF32B0EBE7D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5D04AF1E31193D2A , bdr:TT8A32B7DA475644B9 , bdr:TT8B98AB4AF5C9CFA8 , bdr:TTE6485FF32B0EBE7D ;
+        :hasTitle           bdr:TT5D04AF1E31193D2A , bdr:TT74246AA31BD4692C , bdr:TT8A32B7DA475644B9 , bdr:TTB76BCF2E16C84D33 ;
         :instanceHasReproduction  bdr:W1FEMC010512 ;
+        :instanceOf         bdr:WA1FEMC020018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF82109AF02D322EF ;
-        :note               bdr:NT9152117FA8B6E584 ;
+        :microfilmItem      bdr:MF9152117FA8B6E584 ;
+        :note               bdr:NT8B98AB4AF5C9CFA8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9152117FA8B6E584
+    bdr:NT8B98AB4AF5C9CFA8
         a                   :Note ;
         :contentLocationStatement  "pg. 154" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT5D04AF1E31193D2A
-        a                   :Title ;
-        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
-        :femcConversionOf   bdr:TT8B98AB4AF5C9CFA8 .
-    
-    bdr:TT8A32B7DA475644B9
-        a                   :Title ;
-        rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE6485FF32B0EBE7D .
-    
-    bdr:TT8B98AB4AF5C9CFA8
         a                   :CoverTitle ;
         rdfs:label          "ចន្ទសុកវីសូត្រ"@km .
     
-    bdr:TTE6485FF32B0EBE7D
+    bdr:TT74246AA31BD4692C
+        a                   :Title ;
+        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
+        :femcConversionOf   bdr:TT5D04AF1E31193D2A .
+    
+    bdr:TT8A32B7DA475644B9
         a                   :CoverTitle ;
         rdfs:label          "cand sukavī sūtr"@km-x-twktt .
+    
+    bdr:TTB76BCF2E16C84D33
+        a                   :Title ;
+        rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8A32B7DA475644B9 .
 }

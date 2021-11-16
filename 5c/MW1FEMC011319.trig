@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011319 {
-    bda:LG78747E41E2AB8CCA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011319"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011319"@en , "imported pubinfo for W1FEMC011319"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011319"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011319 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011319 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5c/MW1FEMC011319.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011319 ;
-        adm:logEntry        bda:LG78747E41E2AB8CCA , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB694BED6CAEB849B
+    bdr:ID68D23BB695842EB9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "011-A.09.01.01.III.1" .
     
-    bdr:MF93CB8E0AA2ACB3DC
+    bdr:MF4BD597197405517F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "143" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011319 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មបទដ្ឋកថាប៉េនប្លាយ"@pi-khmr , "dhammapadaṭṭhakathā p''en plāy"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB694BED6CAEB849B ;
+            bdr:ID68D23BB695842EB9 ;
         :hasFascicles       "11" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2502559E5FF31727 , bdr:TT391187A23139A6B9 , bdr:TT68D23BB695842EB9 , bdr:TT712A739A3270778F ;
+        :hasTitle           bdr:TT2502559E5FF31727 , bdr:TT391187A23139A6B9 , bdr:TT78747E41E2AB8CCA , bdr:TT88336AEDAF3F6E49 ;
         :instanceHasReproduction  bdr:W1FEMC011319 ;
+        :instanceOf         bdr:WA1FEMC010029 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF93CB8E0AA2ACB3DC ;
-        :note               bdr:NT4BD597197405517F ;
+        :microfilmItem      bdr:MF4BD597197405517F ;
+        :note               bdr:NT712A739A3270778F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4BD597197405517F
+    bdr:NT712A739A3270778F
         a                   :Note ;
         :contentLocationStatement  "pg. 309" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT2502559E5FF31727
-        a                   :Title ;
-        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនប្លាយ"@pi-khmr ;
-        :femcConversionOf   bdr:TT712A739A3270778F .
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មបទ​ ប័្នប្លាយ"@pi-khmr .
     
     bdr:TT391187A23139A6B9
-        a                   :Title ;
-        rdfs:label          "dhammapadaṭṭhakathā p''en plāy"@pi-x-twktt ;
-        :femcConversionOf   bdr:TT68D23BB695842EB9 .
-    
-    bdr:TT68D23BB695842EB9
         a                   :CoverTitle ;
         rdfs:label          "dhamm pad păn° plāy"@pi-x-twktt .
     
-    bdr:TT712A739A3270778F
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មបទ​ ប័្នប្លាយ"@pi-khmr .
+    bdr:TT78747E41E2AB8CCA
+        a                   :Title ;
+        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនប្លាយ"@pi-khmr ;
+        :femcConversionOf   bdr:TT2502559E5FF31727 .
+    
+    bdr:TT88336AEDAF3F6E49
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā p''en plāy"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT391187A23139A6B9 .
 }

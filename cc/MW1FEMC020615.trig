@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020615 {
-    bda:LGC8B1D42F9761B4E1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020615"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020615"@en , "imported pubinfo for W1FEMC020615"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020615"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020615 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020615 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "cc/MW1FEMC020615.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020615 ;
-        adm:logEntry        bda:LGC8B1D42F9761B4E1 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEE5A4B38A4C6E704
+    bdr:ID2C4E418365F297E6
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.248.II.1" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC020615 {
         a                   :Instance ;
         skos:prefLabel      "ស័ង្ខសិល្ប៍ជ័យ"@km , "săṅkh silp jăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEE5A4B38A4C6E704 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2C4E418365F297E6 , bdr:TT9BAECD104C7C528D , bdr:TTB52102BDD92D2891 , bdr:TTE991E44A31D0AC4C ;
+            bdr:ID2C4E418365F297E6 ;
+        :hasTitle           bdr:TTB52102BDD92D2891 , bdr:TTC0C42AB2D01A5E6C , bdr:TTC8B1D42F9761B4E1 , bdr:TTE991E44A31D0AC4C ;
         :instanceHasReproduction  bdr:W1FEMC020615 ;
+        :instanceOf         bdr:WA1FEMC120030 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT427E418CF0A87E24 ;
+        :note               bdr:NT9BAECD104C7C528D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT427E418CF0A87E24
+    bdr:NT9BAECD104C7C528D
         a                   :Note ;
         :contentLocationStatement  "pg. 115" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT2C4E418365F297E6
-        a                   :CoverTitle ;
-        rdfs:label          "sāṃṇ° sil jaiy°"@km-x-twktt .
-    
-    bdr:TT9BAECD104C7C528D
+    bdr:TTB52102BDD92D2891
         a                   :CoverTitle ;
         rdfs:label          "ស្ងាំសិលជ្យៃ"@km .
     
-    bdr:TTB52102BDD92D2891
-        a                   :Title ;
-        rdfs:label          "ស័ង្ខសិល្ប៍ជ័យ"@km ;
-        :femcConversionOf   bdr:TT9BAECD104C7C528D .
-    
-    bdr:TTE991E44A31D0AC4C
+    bdr:TTC0C42AB2D01A5E6C
         a                   :Title ;
         rdfs:label          "săṅkh silp jăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2C4E418365F297E6 .
+        :femcConversionOf   bdr:TTE991E44A31D0AC4C .
+    
+    bdr:TTC8B1D42F9761B4E1
+        a                   :Title ;
+        rdfs:label          "ស័ង្ខសិល្ប៍ជ័យ"@km ;
+        :femcConversionOf   bdr:TTB52102BDD92D2891 .
+    
+    bdr:TTE991E44A31D0AC4C
+        a                   :CoverTitle ;
+        rdfs:label          "sāṃṇ° sil jaiy°"@km-x-twktt .
 }

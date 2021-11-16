@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010548 {
-    bda:LG609DA01A6312E2B1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010548"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010548"@en , "imported pubinfo for W1FEMC010548"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010548"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010548 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010548 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d1/MW1FEMC010548.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010548 ;
-        adm:logEntry        bda:LG609DA01A6312E2B1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCE43FAAA19DB974D
+    bdr:IDC810F8C226DC2048
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "047-048-A.02.10.01.V.1" .
     
-    bdr:MF2868D8434FECA0EA
+    bdr:MF83A9332D6DCE9C2F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "71" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010548 {
         a                   :Instance ;
         skos:prefLabel      "ត្រៃភូមិ (ត្រៃភូមិ ១៣ ខ្សែ)​"@km , "trai bhūmi"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCE43FAAA19DB974D ;
+            bdr:IDC810F8C226DC2048 ;
         :hasFascicles       "2, 11" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3C0BB701685D6E05 , bdr:TTC810F8C226DC2048 , bdr:TTCC315040FDAD2FF3 , bdr:TTCC87C5D7225FB752 ;
+        :hasTitle           bdr:TT3C5B9B3B983A4C43 , bdr:TT609DA01A6312E2B1 , bdr:TTCC315040FDAD2FF3 , bdr:TTCC87C5D7225FB752 ;
         :instanceHasReproduction  bdr:W1FEMC010548 ;
+        :instanceOf         bdr:WA1FEMC070019 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2868D8434FECA0EA ;
-        :note               bdr:NT83A9332D6DCE9C2F ;
+        :microfilmItem      bdr:MF83A9332D6DCE9C2F ;
+        :note               bdr:NT3C0BB701685D6E05 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT83A9332D6DCE9C2F
+    bdr:NT3C0BB701685D6E05
         a                   :Note ;
         :contentLocationStatement  "pg. 161" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3C0BB701685D6E05
+    bdr:TT3C5B9B3B983A4C43
+        a                   :Title ;
+        rdfs:label          "trai bhūmi"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCC87C5D7225FB752 .
+    
+    bdr:TT609DA01A6312E2B1
+        a                   :Title ;
+        rdfs:label          "ត្រៃភូមិ (ត្រៃភូមិ ១៣ ខ្សែ)​"@km ;
+        :femcConversionOf   bdr:TTCC315040FDAD2FF3 .
+    
+    bdr:TTCC315040FDAD2FF3
         a                   :CoverTitle ;
         rdfs:label          "ត្រៃភូម"@km .
     
-    bdr:TTC810F8C226DC2048
+    bdr:TTCC87C5D7225FB752
         a                   :CoverTitle ;
         rdfs:label          "trai bhūm"@km-x-twktt .
-    
-    bdr:TTCC315040FDAD2FF3
-        a                   :Title ;
-        rdfs:label          "ត្រៃភូមិ (ត្រៃភូមិ ១៣ ខ្សែ)​"@km ;
-        :femcConversionOf   bdr:TT3C0BB701685D6E05 .
-    
-    bdr:TTCC87C5D7225FB752
-        a                   :Title ;
-        rdfs:label          "trai bhūmi"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC810F8C226DC2048 .
 }

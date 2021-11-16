@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011405 {
-    bda:LG6BA3FC61FC19A523
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011405"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011405"@en , "imported pubinfo for W1FEMC011405"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011405"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011405 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011405 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "58/MW1FEMC011405.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011405 ;
-        adm:logEntry        bda:LG6BA3FC61FC19A523 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD28B16461E24AD32
+    bdr:IDC05DD48DC84CC9F2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "024-A.10.07.02.III.2" .
     
-    bdr:MF217A2C0B9B737A69
+    bdr:MF7B8A93E1EC5A3315
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "35" ;
         :microfilmStrip     "68" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011405 {
         a                   :Instance ;
         skos:prefLabel      "យសោធរាពិម្ពានិព្វាន"@km , "yasodharā bimbā nibbān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD28B16461E24AD32 ;
+            bdr:IDC05DD48DC84CC9F2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1B80EC261E0A03F4 , bdr:TT8BFBEC5D2A302829 , bdr:TTC05DD48DC84CC9F2 , bdr:TTE643F1EFAB36E84C ;
+        :hasTitle           bdr:TT6BA3FC61FC19A523 , bdr:TT8BFBEC5D2A302829 , bdr:TT8F20C5C699320F30 , bdr:TTE643F1EFAB36E84C ;
         :instanceHasReproduction  bdr:W1FEMC011405 ;
+        :instanceOf         bdr:WA1FEMC020013 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF217A2C0B9B737A69 ;
-        :note               bdr:NT7B8A93E1EC5A3315 ;
+        :microfilmItem      bdr:MF7B8A93E1EC5A3315 ;
+        :note               bdr:NT1B80EC261E0A03F4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7B8A93E1EC5A3315
+    bdr:NT1B80EC261E0A03F4
         a                   :Note ;
         :contentLocationStatement  "pg. 327" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1B80EC261E0A03F4
+    bdr:TT6BA3FC61FC19A523
+        a                   :Title ;
+        rdfs:label          "យសោធរាពិម្ពានិព្វាន"@km ;
+        :femcConversionOf   bdr:TT8BFBEC5D2A302829 .
+    
+    bdr:TT8BFBEC5D2A302829
         a                   :CoverTitle ;
         rdfs:label          "ពិម្ពារភិលាភ"@km .
     
-    bdr:TT8BFBEC5D2A302829
-        a                   :Title ;
-        rdfs:label          "យសោធរាពិម្ពានិព្វាន"@km ;
-        :femcConversionOf   bdr:TT1B80EC261E0A03F4 .
-    
-    bdr:TTC05DD48DC84CC9F2
-        a                   :CoverTitle ;
-        rdfs:label          "bimbār bhilābh"@km-x-twktt .
-    
-    bdr:TTE643F1EFAB36E84C
+    bdr:TT8F20C5C699320F30
         a                   :Title ;
         rdfs:label          "yasodharā bimbā nibbān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC05DD48DC84CC9F2 .
+        :femcConversionOf   bdr:TTE643F1EFAB36E84C .
+    
+    bdr:TTE643F1EFAB36E84C
+        a                   :CoverTitle ;
+        rdfs:label          "bimbār bhilābh"@km-x-twktt .
 }

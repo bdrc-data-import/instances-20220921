@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010399 {
-    bda:LG11AF1DF8086ACF97
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010399"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010399"@en , "imported pubinfo for W1FEMC010399"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010399"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010399 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010399 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "bf/MW1FEMC010399.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010399 ;
-        adm:logEntry        bda:LG11AF1DF8086ACF97 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC2D432FE4B747BFE
+    bdr:IDC8FCE348B7B739A2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005'-PP.03.03.03.V.3" .
     
-    bdr:MF50B4B04674580AD1
+    bdr:MF00699CE0158BECB8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "2" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010399 {
         a                   :Instance ;
         skos:prefLabel      "កម្មដ្ឋានសំវរសុទ្ធសីល"@km , "kammaṭṭhān saṃvarasuddhasīl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC2D432FE4B747BFE ;
+            bdr:IDC8FCE348B7B739A2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2ED82CF7FD87FD3A , bdr:TT516840E246DC26D1 , bdr:TTC8FCE348B7B739A2 , bdr:TTD354CA98AE52FBFB ;
+        :hasTitle           bdr:TT11AF1DF8086ACF97 , bdr:TT160F414EF9621D56 , bdr:TT516840E246DC26D1 , bdr:TTD354CA98AE52FBFB ;
         :instanceHasReproduction  bdr:W1FEMC010399 ;
+        :instanceOf         bdr:WA1FEMC080002 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF50B4B04674580AD1 ;
-        :note               bdr:NT00699CE0158BECB8 ;
+        :microfilmItem      bdr:MF00699CE0158BECB8 ;
+        :note               bdr:NT2ED82CF7FD87FD3A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT00699CE0158BECB8
+    bdr:NT2ED82CF7FD87FD3A
         a                   :Note ;
         :contentLocationStatement  "pg. 130" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2ED82CF7FD87FD3A
-        a                   :CoverTitle ;
-        rdfs:label          "កម្មដ្ឋានសង្វ៉រសុត្តសិល"@km .
+    bdr:TT11AF1DF8086ACF97
+        a                   :Title ;
+        rdfs:label          "កម្មដ្ឋានសំវរសុទ្ធសីល"@km ;
+        :femcConversionOf   bdr:TTD354CA98AE52FBFB .
     
-    bdr:TT516840E246DC26D1
+    bdr:TT160F414EF9621D56
         a                   :Title ;
         rdfs:label          "kammaṭṭhān saṃvarasuddhasīl"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC8FCE348B7B739A2 .
+        :femcConversionOf   bdr:TT516840E246DC26D1 .
     
-    bdr:TTC8FCE348B7B739A2
+    bdr:TT516840E246DC26D1
         a                   :CoverTitle ;
         rdfs:label          "kammaṭṭhān saṅv'' ar sutt sil"@km-x-twktt .
     
     bdr:TTD354CA98AE52FBFB
-        a                   :Title ;
-        rdfs:label          "កម្មដ្ឋានសំវរសុទ្ធសីល"@km ;
-        :femcConversionOf   bdr:TT2ED82CF7FD87FD3A .
+        a                   :CoverTitle ;
+        rdfs:label          "កម្មដ្ឋានសង្វ៉រសុត្តសិល"@km .
 }

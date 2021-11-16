@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021680 {
-    bda:LG7E757DCD2EDD1FC5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-27"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021680"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021680"@en , "imported pubinfo for W1FEMC021680"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021680"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021680 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021680 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8e/MW1FEMC021680.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021680 ;
-        adm:logEntry        bda:LG7E757DCD2EDD1FC5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB5003C8EA4BF223E
+    bdr:ID9A273E93D53020FC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.584.V.2" .
     
-    bdr:MF1A6B24D2060106B6
+    bdr:MF0AB03723C75A274B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "133" ;
         :microfilmStrip     "227" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021680 {
         a                   :Instance ;
         skos:prefLabel      "បុរោហិតក្រឹត្យ"@km , "purohit krịty"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB5003C8EA4BF223E ;
+            bdr:ID9A273E93D53020FC ;
         :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "5" ;
-        :hasTitle           bdr:TT45BAE79DE7167DDF , bdr:TT9A273E93D53020FC , bdr:TTC61B70483863B14E , bdr:TTE7D890580A761D04 ;
+        :hasTitle           bdr:TT45BAE79DE7167DDF , bdr:TT7E757DCD2EDD1FC5 , bdr:TTC61B70483863B14E , bdr:TTF40E4BA900C51E08 ;
+        :instanceOf         bdr:WA1FEMC140018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1A6B24D2060106B6 ;
-        :note               bdr:NT0AB03723C75A274B ;
+        :microfilmItem      bdr:MF0AB03723C75A274B ;
+        :note               bdr:NTE7D890580A761D04 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0AB03723C75A274B
+    bdr:NTE7D890580A761D04
         a                   :Note ;
         :contentLocationStatement  "pg. 302" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT45BAE79DE7167DDF
+        a                   :CoverTitle ;
+        rdfs:label          "បរោហិត"@km .
+    
+    bdr:TT7E757DCD2EDD1FC5
         a                   :Title ;
         rdfs:label          "បុរោហិតក្រឹត្យ"@km ;
-        :femcConversionOf   bdr:TTE7D890580A761D04 .
+        :femcConversionOf   bdr:TT45BAE79DE7167DDF .
     
-    bdr:TT9A273E93D53020FC
+    bdr:TTC61B70483863B14E
         a                   :CoverTitle ;
         rdfs:label          "parohit"@km-x-twktt .
     
-    bdr:TTC61B70483863B14E
+    bdr:TTF40E4BA900C51E08
         a                   :Title ;
         rdfs:label          "purohit krịty"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9A273E93D53020FC .
-    
-    bdr:TTE7D890580A761D04
-        a                   :CoverTitle ;
-        rdfs:label          "បរោហិត"@km .
+        :femcConversionOf   bdr:TTC61B70483863B14E .
 }

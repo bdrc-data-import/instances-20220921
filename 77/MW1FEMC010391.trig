@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010391 {
-    bda:LGC9BDC6275E20E3CA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010391"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010391"@en , "imported pubinfo for W1FEMC010391"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010391"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010391 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010391 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "77/MW1FEMC010391.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010391 ;
-        adm:logEntry        bda:LGC9BDC6275E20E3CA , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1E93905251DD994F
+    bdr:IDE069478C58EF7C48
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "116-PP.03.03.03.II.2" .
     
-    bdr:MFF52D60804EDC2389
+    bdr:MFBC0F61C08B16749F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "66" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010391 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកជុច"@km , "lpök juc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1E93905251DD994F ;
+            bdr:IDE069478C58EF7C48 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5F04F0BCAB12DF4C , bdr:TTE069478C58EF7C48 , bdr:TTEFA85C26E963F25C , bdr:TTF0C8F44DC89F9B26 ;
+        :hasTitle           bdr:TT3ADA7FC725665C26 , bdr:TTC9BDC6275E20E3CA , bdr:TTEFA85C26E963F25C , bdr:TTF0C8F44DC89F9B26 ;
         :instanceHasReproduction  bdr:W1FEMC010391 ;
+        :instanceOf         bdr:WA1FEMC130003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF52D60804EDC2389 ;
-        :note               bdr:NTBC0F61C08B16749F ;
+        :microfilmItem      bdr:MFBC0F61C08B16749F ;
+        :note               bdr:NT5F04F0BCAB12DF4C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBC0F61C08B16749F
+    bdr:NT5F04F0BCAB12DF4C
         a                   :Note ;
         :contentLocationStatement  "pg. 129" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT5F04F0BCAB12DF4C
-        a                   :CoverTitle ;
-        rdfs:label          "ជុច"@km .
+    bdr:TT3ADA7FC725665C26
+        a                   :Title ;
+        rdfs:label          "lpök juc"@km-x-twktt ;
+        :femcConversionOf   bdr:TTEFA85C26E963F25C .
     
-    bdr:TTE069478C58EF7C48
+    bdr:TTC9BDC6275E20E3CA
+        a                   :Title ;
+        rdfs:label          "ល្បើកជុច"@km ;
+        :femcConversionOf   bdr:TTF0C8F44DC89F9B26 .
+    
+    bdr:TTEFA85C26E963F25C
         a                   :CoverTitle ;
         rdfs:label          "juc"@km-x-twktt .
     
-    bdr:TTEFA85C26E963F25C
-        a                   :Title ;
-        rdfs:label          "lpök juc"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE069478C58EF7C48 .
-    
     bdr:TTF0C8F44DC89F9B26
-        a                   :Title ;
-        rdfs:label          "ល្បើកជុច"@km ;
-        :femcConversionOf   bdr:TT5F04F0BCAB12DF4C .
+        a                   :CoverTitle ;
+        rdfs:label          "ជុច"@km .
 }

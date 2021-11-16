@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011178 {
-    bda:LG00210E432EA28FF1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011178"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011178"@en , "imported pubinfo for W1FEMC011178"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011178"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011178 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011178 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "c1/MW1FEMC011178.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011178 ;
-        adm:logEntry        bda:LG00210E432EA28FF1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5E9F2E5E28930DB2
+    bdr:ID2913C2F31D976C9A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.05.05.03.V.3" .
     
-    bdr:MFED595AD131C82793
+    bdr:MFD33CD13487C6AD9F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "88" ;
         :microfilmStrip     "182" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC011178 {
         a                   :Instance ;
         skos:prefLabel      "មូលព្រះកម្មដ្ឋាន"@km , "mūl braḥ kammaṭṭhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5E9F2E5E28930DB2 ;
+            bdr:ID2913C2F31D976C9A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2913C2F31D976C9A , bdr:TT6C7E52894C8DDEF4 ;
+        :hasTitle           bdr:TT00210E432EA28FF1 , bdr:TT439B30DD26AA0BDB ;
         :instanceHasReproduction  bdr:W1FEMC011178 ;
+        :instanceOf         bdr:WA1FEMC080001 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFED595AD131C82793 ;
-        :note               bdr:NTD33CD13487C6AD9F ;
+        :microfilmItem      bdr:MFD33CD13487C6AD9F ;
+        :note               bdr:NT6C7E52894C8DDEF4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD33CD13487C6AD9F
+    bdr:NT6C7E52894C8DDEF4
         a                   :Note ;
         :contentLocationStatement  "pg. 282" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2913C2F31D976C9A
-        a                   :Title ;
-        rdfs:label          "mūl braḥ kammaṭṭhān"@km-x-twktt .
-    
-    bdr:TT6C7E52894C8DDEF4
+    bdr:TT00210E432EA28FF1
         a                   :Title ;
         rdfs:label          "មូលព្រះកម្មដ្ឋាន"@km .
+    
+    bdr:TT439B30DD26AA0BDB
+        a                   :Title ;
+        rdfs:label          "mūl braḥ kammaṭṭhān"@km-x-twktt .
 }

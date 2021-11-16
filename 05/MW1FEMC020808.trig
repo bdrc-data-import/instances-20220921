@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020808 {
-    bda:LGCC6BE27B31F0F3B8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020808"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020808"@en , "imported pubinfo for W1FEMC020808"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020808"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020808 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020808 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "05/MW1FEMC020808.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020808 ;
-        adm:logEntry        bda:LGCC6BE27B31F0F3B8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB5FC401687D7516A
+    bdr:IDCC0BE4FDE4E39195
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.479.III.1" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC020808 {
         a                   :Instance ;
         skos:prefLabel      "សម្ដែងអំពីរឿងស្មាទាន"@km , "samtèṅ ambī rīöṅ smādān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB5FC401687D7516A ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTB79DA1CD5CC4CF5F , bdr:TTCC0BE4FDE4E39195 , bdr:TTD098549E5FDA2880 , bdr:TTFCC6256A52E3C82C ;
+            bdr:IDCC0BE4FDE4E39195 ;
+        :hasTitle           bdr:TT45D1F3E450D02254 , bdr:TTB79DA1CD5CC4CF5F , bdr:TTCC6BE27B31F0F3B8 , bdr:TTFCC6256A52E3C82C ;
         :instanceHasReproduction  bdr:W1FEMC020808 ;
+        :instanceOf         bdr:WA1FEMC010127 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT496BB44F60011605 ;
+        :note               bdr:NTD098549E5FDA2880 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT496BB44F60011605
+    bdr:NTD098549E5FDA2880
         a                   :Note ;
         :contentLocationStatement  "pg. 144" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTB79DA1CD5CC4CF5F
+    bdr:TT45D1F3E450D02254
         a                   :Title ;
-        rdfs:label          "សម្ដែងអំពីរឿងស្មាទាន"@km ;
-        :femcConversionOf   bdr:TTD098549E5FDA2880 .
+        rdfs:label          "samtèṅ ambī rīöṅ smādān"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFCC6256A52E3C82C .
     
-    bdr:TTCC0BE4FDE4E39195
-        a                   :CoverTitle ;
-        rdfs:label          "saṃmtèṅ ambīy° rīöṅ smādān"@km-x-twktt .
-    
-    bdr:TTD098549E5FDA2880
+    bdr:TTB79DA1CD5CC4CF5F
         a                   :CoverTitle ;
         rdfs:label          "សំម្តែងអំពី្យរឿងស្មាទាន"@km .
     
-    bdr:TTFCC6256A52E3C82C
+    bdr:TTCC6BE27B31F0F3B8
         a                   :Title ;
-        rdfs:label          "samtèṅ ambī rīöṅ smādān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCC0BE4FDE4E39195 .
+        rdfs:label          "សម្ដែងអំពីរឿងស្មាទាន"@km ;
+        :femcConversionOf   bdr:TTB79DA1CD5CC4CF5F .
+    
+    bdr:TTFCC6256A52E3C82C
+        a                   :CoverTitle ;
+        rdfs:label          "saṃmtèṅ ambīy° rīöṅ smādān"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010638 {
-    bda:LGB037982FFBA7DFC4
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010638"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010638"@en , "imported pubinfo for W1FEMC010638"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010638"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010638 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010638 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "04/MW1FEMC010638.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010638 ;
-        adm:logEntry        bda:LGB037982FFBA7DFC4 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA8687FFA54FCC1EF
+    bdr:ID2056529BBFEAC906
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "018-A.02.12.04.III.1" .
     
-    bdr:MF89B133A8C7486C96
+    bdr:MF26654DCE5A6FF9AC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "33" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010638 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA8687FFA54FCC1EF ;
+            bdr:ID2056529BBFEAC906 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2056529BBFEAC906 , bdr:TT2324B53137AC4BFF , bdr:TT89443885B909C8BB , bdr:TTE6CDBAB3F37BEB7A , bdr:TTEF04EE51A4D14B8F , bdr:TTFE56A8A04DF42AA9 ;
+        :hasTitle           bdr:TT1AAC7A511F445DD4 , bdr:TT2324B53137AC4BFF , bdr:TTB037982FFBA7DFC4 , bdr:TTE6CDBAB3F37BEB7A , bdr:TTEF04EE51A4D14B8F , bdr:TTFE56A8A04DF42AA9 ;
         :instanceHasReproduction  bdr:W1FEMC010638 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF89B133A8C7486C96 ;
-        :note               bdr:NT26654DCE5A6FF9AC ;
+        :microfilmItem      bdr:MF26654DCE5A6FF9AC ;
+        :note               bdr:NT89443885B909C8BB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT26654DCE5A6FF9AC
+    bdr:NT89443885B909C8BB
         a                   :Note ;
         :contentLocationStatement  "pg. 179" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2056529BBFEAC906
-        a                   :CoverTitle ;
-        rdfs:label          "braḥ sūtr pīṭakkh"@km-x-twktt .
-    
-    bdr:TT2324B53137AC4BFF
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
-    
-    bdr:TT89443885B909C8BB
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះសូត្របីដក្ខ"@km .
-    
-    bdr:TTE6CDBAB3F37BEB7A
+    bdr:TT1AAC7A511F445DD4
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
     
-    bdr:TTEF04EE51A4D14B8F
+    bdr:TT2324B53137AC4BFF
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះសូត្របិដក"@km ;
+        :femcConversionOf   bdr:TTFE56A8A04DF42AA9 .
+    
+    bdr:TTB037982FFBA7DFC4
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTE6CDBAB3F37BEB7A
         a                   :CoverTitle ;
         rdfs:label          "braḥ sūtr piṭak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2056529BBFEAC906 .
+        :femcConversionOf   bdr:TTEF04EE51A4D14B8F .
+    
+    bdr:TTEF04EE51A4D14B8F
+        a                   :CoverTitle ;
+        rdfs:label          "braḥ sūtr pīṭakkh"@km-x-twktt .
     
     bdr:TTFE56A8A04DF42AA9
         a                   :CoverTitle ;
-        rdfs:label          "ព្រះសូត្របិដក"@km ;
-        :femcConversionOf   bdr:TT89443885B909C8BB .
+        rdfs:label          "ព្រះសូត្របីដក្ខ"@km .
 }

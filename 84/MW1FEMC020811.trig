@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020811 {
-    bda:LGA185FFDCFC2E3803
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020811"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020811"@en , "imported pubinfo for W1FEMC020811"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020811"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020811 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020811 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "84/MW1FEMC020811.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020811 ;
-        adm:logEntry        bda:LGA185FFDCFC2E3803 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC62497EB9D0B2D25
+    bdr:IDD58F29A3C2023604
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.482.III.5" .
     
@@ -51,48 +45,47 @@ bdg:MW1FEMC020811 {
         a                   :Instance ;
         skos:prefLabel      "តេមិយជាតក"@km , "temiy jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC62497EB9D0B2D25 ;
+            bdr:IDD58F29A3C2023604 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT9E05BAA59C7C8347 , bdr:TTA45C161B0305CBB4 , bdr:TTC86CFD7B5C9DDDB8 , bdr:TTCF12E762D6C49158 , bdr:TTD58F29A3C2023604 , bdr:TTFFD4E94D46F03800 ;
+        :hasTitle           bdr:TTA185FFDCFC2E3803 , bdr:TTA45C161B0305CBB4 , bdr:TTC86CFD7B5C9DDDB8 , bdr:TTCF12E762D6C49158 , bdr:TTF50F537CFE1D6489 , bdr:TTFFD4E94D46F03800 ;
         :instanceHasReproduction  bdr:W1FEMC020811 ;
+        :instanceOf         bdr:WA1FEMC050011 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTC98E13CEDC4FA46C ;
+        :note               bdr:NT9E05BAA59C7C8347 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC98E13CEDC4FA46C
+    bdr:NT9E05BAA59C7C8347
         a                   :Note ;
         :contentLocationStatement  "pg. 145" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT9E05BAA59C7C8347
+    bdr:TTA185FFDCFC2E3803
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTA45C161B0305CBB4
+        a                   :Title ;
+        rdfs:label          "តេមិយជាតក"@km ;
+        :femcConversionOf   bdr:TTC86CFD7B5C9DDDB8 .
+    
+    bdr:TTC86CFD7B5C9DDDB8
         a                   :CoverTitle ;
         rdfs:label          "តិមេ"@km .
     
-    bdr:TTA45C161B0305CBB4
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TTC86CFD7B5C9DDDB8
-        a                   :Title ;
-        rdfs:label          "តេមិយជាតក"@km ;
-        :femcConversionOf   bdr:TT9E05BAA59C7C8347 .
-    
     bdr:TTCF12E762D6C49158
-        a                   :Title ;
-        rdfs:label          "temiy jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD58F29A3C2023604 .
-    
-    bdr:TTD58F29A3C2023604
         a                   :CoverTitle ;
         rdfs:label          "time"@km-x-twktt .
     
-    bdr:TTFFD4E94D46F03800
+    bdr:TTF50F537CFE1D6489
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTFFD4E94D46F03800
+        a                   :Title ;
+        rdfs:label          "temiy jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCF12E762D6C49158 .
 }

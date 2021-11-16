@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010940 {
-    bda:LGDBBE0411C8258D32
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010940"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010940"@en , "imported pubinfo for W1FEMC010940"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010940"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010940 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010940 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "77/MW1FEMC010940.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010940 ;
-        adm:logEntry        bda:LGDBBE0411C8258D32 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID835A3B4916E87FFC
+    bdr:ID9001591E13D792FD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "105-A.04.03.02.III.6" .
     
-    bdr:MF261BC0AE7D4EE701
+    bdr:MFB9F8D850672E04B2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "25" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010940 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សទៀនព្រះវស្សា"@km , "ānisaṅs dīen braḥ vassā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID835A3B4916E87FFC ;
+            bdr:ID9001591E13D792FD ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0C0AEAA7C98AAAF2 , bdr:TT7A90B1DCC9496151 , bdr:TT9001591E13D792FD , bdr:TT9EEC07EFD83DBE2B ;
+        :hasTitle           bdr:TT0C0AEAA7C98AAAF2 , bdr:TT67EA77EF21508785 , bdr:TT9EEC07EFD83DBE2B , bdr:TTDBBE0411C8258D32 ;
         :instanceHasReproduction  bdr:W1FEMC010940 ;
+        :instanceOf         bdr:WA1FEMC060020 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF261BC0AE7D4EE701 ;
-        :note               bdr:NTB9F8D850672E04B2 ;
+        :microfilmItem      bdr:MFB9F8D850672E04B2 ;
+        :note               bdr:NT7A90B1DCC9496151 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB9F8D850672E04B2
+    bdr:NT7A90B1DCC9496151
         a                   :Note ;
         :contentLocationStatement  "pg. 237" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0C0AEAA7C98AAAF2
-        a                   :Title ;
-        rdfs:label          "ānisaṅs dīen braḥ vassā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9001591E13D792FD .
-    
-    bdr:TT7A90B1DCC9496151
-        a                   :CoverTitle ;
-        rdfs:label          "អនិសងទៀនព្រះវស្សារ"@km .
-    
-    bdr:TT9001591E13D792FD
         a                   :CoverTitle ;
         rdfs:label          "anisaṅ dīen braḥ vassār"@km-x-twktt .
     
+    bdr:TT67EA77EF21508785
+        a                   :Title ;
+        rdfs:label          "ānisaṅs dīen braḥ vassā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0C0AEAA7C98AAAF2 .
+    
     bdr:TT9EEC07EFD83DBE2B
+        a                   :CoverTitle ;
+        rdfs:label          "អនិសងទៀនព្រះវស្សារ"@km .
+    
+    bdr:TTDBBE0411C8258D32
         a                   :Title ;
         rdfs:label          "អានិសង្សទៀនព្រះវស្សា"@km ;
-        :femcConversionOf   bdr:TT7A90B1DCC9496151 .
+        :femcConversionOf   bdr:TT9EEC07EFD83DBE2B .
 }

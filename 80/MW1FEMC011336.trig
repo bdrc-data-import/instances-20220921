@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011336 {
-    bda:LG68D45FDD5D21C74B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011336"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011336"@en , "imported pubinfo for W1FEMC011336"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011336"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011336 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011336 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "80/MW1FEMC011336.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011336 ;
-        adm:logEntry        bda:LG68D45FDD5D21C74B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID826FDFDA9D652EF0
+    bdr:ID84F880ECFCBF3517
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.09.13.01.III.3" .
     
-    bdr:MF3553DBDC0CA4D21C
+    bdr:MFD3111641877E608F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "74" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011336 {
         a                   :Instance ;
         skos:prefLabel      "សិក្ខាបទវណ្ណនា"@km , "sikkhā pad vaṇṇanā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID826FDFDA9D652EF0 ;
+            bdr:ID84F880ECFCBF3517 ;
         :hasFascicles       "1, 4, 6-16" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0E3F6342492743BA , bdr:TT84F880ECFCBF3517 , bdr:TTCA31E3E4E84D6C7B , bdr:TTE4E6558BB31A4FB7 ;
+        :hasTitle           bdr:TT0E3F6342492743BA , bdr:TT10D448B8B33073B2 , bdr:TT68D45FDD5D21C74B , bdr:TTCA31E3E4E84D6C7B ;
         :instanceHasReproduction  bdr:W1FEMC011336 ;
+        :instanceOf         bdr:WA1FEMC030023 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3553DBDC0CA4D21C ;
-        :note               bdr:NTD3111641877E608F ;
+        :microfilmItem      bdr:MFD3111641877E608F ;
+        :note               bdr:NTE4E6558BB31A4FB7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD3111641877E608F
+    bdr:NTE4E6558BB31A4FB7
         a                   :Note ;
         :contentLocationStatement  "pg. 313" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0E3F6342492743BA
-        a                   :Title ;
-        rdfs:label          "សិក្ខាបទវណ្ណនា"@km ;
-        :femcConversionOf   bdr:TTE4E6558BB31A4FB7 .
-    
-    bdr:TT84F880ECFCBF3517
-        a                   :CoverTitle ;
-        rdfs:label          "sikkhāvaṇṇanār"@km-x-twktt .
-    
-    bdr:TTCA31E3E4E84D6C7B
-        a                   :Title ;
-        rdfs:label          "sikkhā pad vaṇṇanā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT84F880ECFCBF3517 .
-    
-    bdr:TTE4E6558BB31A4FB7
         a                   :CoverTitle ;
         rdfs:label          "សិក្ខាវណ្ណនារ"@km .
+    
+    bdr:TT10D448B8B33073B2
+        a                   :Title ;
+        rdfs:label          "sikkhā pad vaṇṇanā"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCA31E3E4E84D6C7B .
+    
+    bdr:TT68D45FDD5D21C74B
+        a                   :Title ;
+        rdfs:label          "សិក្ខាបទវណ្ណនា"@km ;
+        :femcConversionOf   bdr:TT0E3F6342492743BA .
+    
+    bdr:TTCA31E3E4E84D6C7B
+        a                   :CoverTitle ;
+        rdfs:label          "sikkhāvaṇṇanār"@km-x-twktt .
 }

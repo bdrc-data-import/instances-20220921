@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022077 {
-    bda:LGEE56DA9280C6E208
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022077"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022077"@en , "imported pubinfo for W1FEMC022077"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022077"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022077 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022077 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f7/MW1FEMC022077.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022077 ;
-        adm:logEntry        bda:LGEE56DA9280C6E208 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID2C310BF2403E4868
+    bdr:IDCC9BB165DC08CD91
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "026.III.2" .
     
-    bdr:MFD414A24FE392EE51
+    bdr:MF68C60851D4E92AD0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "7" ;
         :microfilmStrip     "27" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022077 {
         a                   :Instance ;
         skos:prefLabel      "អនុត្តរិយសូត្រ"@km , "anuttariy sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2C310BF2403E4868 ;
+            bdr:IDCC9BB165DC08CD91 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT57B5D2C704480D86 , bdr:TT7154454469A84B47 , bdr:TTBAF964112349C579 , bdr:TTCC9BB165DC08CD91 ;
+        :hasTitle           bdr:TT57B5D2C704480D86 , bdr:TT7154454469A84B47 , bdr:TTEE56DA9280C6E208 , bdr:TTFD24D66353DB3FE1 ;
         :instanceHasReproduction  bdr:W1FEMC022077 ;
+        :instanceOf         bdr:WA1FEMC020031 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD414A24FE392EE51 ;
-        :note               bdr:NT68C60851D4E92AD0 ;
+        :microfilmItem      bdr:MF68C60851D4E92AD0 ;
+        :note               bdr:NTBAF964112349C579 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT68C60851D4E92AD0
+    bdr:NTBAF964112349C579
         a                   :Note ;
         :contentLocationStatement  "pg. 367" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT57B5D2C704480D86
-        a                   :Title ;
-        rdfs:label          "អនុត្តរិយសូត្រ"@km ;
-        :femcConversionOf   bdr:TTBAF964112349C579 .
-    
-    bdr:TT7154454469A84B47
-        a                   :Title ;
-        rdfs:label          "anuttariy sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCC9BB165DC08CD91 .
-    
-    bdr:TTBAF964112349C579
         a                   :CoverTitle ;
         rdfs:label          "អនុត្តរិយសូត្ថ"@km .
     
-    bdr:TTCC9BB165DC08CD91
+    bdr:TT7154454469A84B47
         a                   :CoverTitle ;
         rdfs:label          "anuttariy sūtth"@km-x-twktt .
+    
+    bdr:TTEE56DA9280C6E208
+        a                   :Title ;
+        rdfs:label          "អនុត្តរិយសូត្រ"@km ;
+        :femcConversionOf   bdr:TT57B5D2C704480D86 .
+    
+    bdr:TTFD24D66353DB3FE1
+        a                   :Title ;
+        rdfs:label          "anuttariy sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7154454469A84B47 .
 }

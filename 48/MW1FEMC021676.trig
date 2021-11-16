@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021676 {
-    bda:LG83B21CE4CFBA2D91
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-27"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021676"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021676"@en , "imported pubinfo for W1FEMC021676"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021676"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021676 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021676 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "48/MW1FEMC021676.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021676 ;
-        adm:logEntry        bda:LG83B21CE4CFBA2D91 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID17C77BF035F5364A
+    bdr:IDC7172F86819C0927
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.584.V.2" .
     
-    bdr:MF0930EFC34E9F5A52
+    bdr:MF42629BD59E98A6D6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "133" ;
         :microfilmStrip     "227" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021676 {
         a                   :Instance ;
         skos:prefLabel      "ទសពិធរាជធម៌"@km , "dasabidh rāj dhaṛm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID17C77BF035F5364A ;
+            bdr:IDC7172F86819C0927 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CC1E947B5C00394 , bdr:TTAEE9630CE711E80F , bdr:TTC7172F86819C0927 , bdr:TTEB3E20399CEC55B9 ;
+        :hasTitle           bdr:TT0CC1E947B5C00394 , bdr:TT34F70F832AF158FA , bdr:TT83B21CE4CFBA2D91 , bdr:TTAEE9630CE711E80F ;
         :instanceHasReproduction  bdr:W1FEMC021676 ;
+        :instanceOf         bdr:WA1FEMC140014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0930EFC34E9F5A52 ;
-        :note               bdr:NT42629BD59E98A6D6 ;
+        :microfilmItem      bdr:MF42629BD59E98A6D6 ;
+        :note               bdr:NTEB3E20399CEC55B9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT42629BD59E98A6D6
+    bdr:NTEB3E20399CEC55B9
         a                   :Note ;
         :contentLocationStatement  "pg. 302" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT0CC1E947B5C00394
-        a                   :Title ;
-        rdfs:label          "ទសពិធរាជធម៌"@km ;
-        :femcConversionOf   bdr:TTEB3E20399CEC55B9 .
-    
-    bdr:TTAEE9630CE711E80F
-        a                   :Title ;
-        rdfs:label          "dasabidh rāj dhaṛm"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC7172F86819C0927 .
-    
-    bdr:TTC7172F86819C0927
-        a                   :CoverTitle ;
-        rdfs:label          "dasabit"@km-x-twktt .
-    
-    bdr:TTEB3E20399CEC55B9
         a                   :CoverTitle ;
         rdfs:label          "ទសពិត"@km .
+    
+    bdr:TT34F70F832AF158FA
+        a                   :Title ;
+        rdfs:label          "dasabidh rāj dhaṛm"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAEE9630CE711E80F .
+    
+    bdr:TT83B21CE4CFBA2D91
+        a                   :Title ;
+        rdfs:label          "ទសពិធរាជធម៌"@km ;
+        :femcConversionOf   bdr:TT0CC1E947B5C00394 .
+    
+    bdr:TTAEE9630CE711E80F
+        a                   :CoverTitle ;
+        rdfs:label          "dasabit"@km-x-twktt .
 }

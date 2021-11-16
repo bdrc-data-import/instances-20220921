@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020140 {
-    bda:LG82AECB7CDB10BAC6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020140"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020140"@en , "imported pubinfo for W1FEMC020140"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020140"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020140 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020140 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "68/MW1FEMC020140.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020140 ;
-        adm:logEntry        bda:LG82AECB7CDB10BAC6 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID2C500D702C2C4A42
+    bdr:IDABAA81B6FD10A647
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.33.I.1" .
     
-    bdr:MFDA0B2BC8CA24091A
+    bdr:MF8E6A4F1B9A8E70C5
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "52" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020140 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ប្រុស"@km , "cpāp' prus"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2C500D702C2C4A42 ;
+            bdr:IDABAA81B6FD10A647 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT08985239597B5529 , bdr:TT9E4DBF66DB7C8AE6 , bdr:TTABAA81B6FD10A647 , bdr:TTE6A1A5170D538E02 ;
+        :hasTitle           bdr:TT82AECB7CDB10BAC6 , bdr:TT9E4DBF66DB7C8AE6 , bdr:TTA3F78980BC9C6115 , bdr:TTE6A1A5170D538E02 ;
         :instanceHasReproduction  bdr:W1FEMC020140 ;
+        :instanceOf         bdr:WA1FEMC100067 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDA0B2BC8CA24091A ;
-        :note               bdr:NT8E6A4F1B9A8E70C5 ;
+        :microfilmItem      bdr:MF8E6A4F1B9A8E70C5 ;
+        :note               bdr:NT08985239597B5529 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "667" .
     
-    bdr:NT8E6A4F1B9A8E70C5
+    bdr:NT08985239597B5529
         a                   :Note ;
         :contentLocationStatement  "pg. 29" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT08985239597B5529
+    bdr:TT82AECB7CDB10BAC6
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ប្រុស"@km ;
+        :femcConversionOf   bdr:TT9E4DBF66DB7C8AE6 .
+    
+    bdr:TT9E4DBF66DB7C8AE6
         a                   :CoverTitle ;
         rdfs:label          "ច្ប័បប្រុស"@km .
     
-    bdr:TT9E4DBF66DB7C8AE6
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ប្រុស"@km ;
-        :femcConversionOf   bdr:TT08985239597B5529 .
-    
-    bdr:TTABAA81B6FD10A647
-        a                   :CoverTitle ;
-        rdfs:label          "cpăp prus"@km-x-twktt .
-    
-    bdr:TTE6A1A5170D538E02
+    bdr:TTA3F78980BC9C6115
         a                   :Title ;
         rdfs:label          "cpāp' prus"@km-x-twktt ;
-        :femcConversionOf   bdr:TTABAA81B6FD10A647 .
+        :femcConversionOf   bdr:TTE6A1A5170D538E02 .
+    
+    bdr:TTE6A1A5170D538E02
+        a                   :CoverTitle ;
+        rdfs:label          "cpăp prus"@km-x-twktt .
 }

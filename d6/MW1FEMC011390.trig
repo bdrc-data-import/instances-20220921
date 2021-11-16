@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011390 {
-    bda:LGCCF1099B80FE2882
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011390"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011390"@en , "imported pubinfo for W1FEMC011390"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011390"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011390 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011390 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d6/MW1FEMC011390.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011390 ;
-        adm:logEntry        bda:LGCCF1099B80FE2882 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC0EBF7B70F1CC26D
+    bdr:IDF28FC2A314C47F30
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.10.07.02.III.1" .
     
-    bdr:MFA60075D60F0D3C01
+    bdr:MF2A914F4031E232CF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "34" ;
         :microfilmStrip     "66" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011390 {
         a                   :Instance ;
         skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC0EBF7B70F1CC26D ;
+            bdr:IDF28FC2A314C47F30 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT19D1EF2844B739D2 , bdr:TT4FA9C25D501DF7B7 , bdr:TTEF0F2E55EA293A90 , bdr:TTF28FC2A314C47F30 ;
+        :hasTitle           bdr:TT081B1D9D84461230 , bdr:TT4FA9C25D501DF7B7 , bdr:TTCCF1099B80FE2882 , bdr:TTEF0F2E55EA293A90 ;
         :instanceHasReproduction  bdr:W1FEMC011390 ;
+        :instanceOf         bdr:WA1FEMC010052 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA60075D60F0D3C01 ;
-        :note               bdr:NT2A914F4031E232CF ;
+        :microfilmItem      bdr:MF2A914F4031E232CF ;
+        :note               bdr:NT19D1EF2844B739D2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2A914F4031E232CF
+    bdr:NT19D1EF2844B739D2
         a                   :Note ;
         :contentLocationStatement  "pg. 325" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT19D1EF2844B739D2
+    bdr:TT081B1D9D84461230
+        a                   :Title ;
+        rdfs:label          "pet veṇī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTEF0F2E55EA293A90 .
+    
+    bdr:TT4FA9C25D501DF7B7
         a                   :CoverTitle ;
         rdfs:label          "បេត្តវីន្យី"@km .
     
-    bdr:TT4FA9C25D501DF7B7
+    bdr:TTCCF1099B80FE2882
         a                   :Title ;
         rdfs:label          "បេតវេណី"@km ;
-        :femcConversionOf   bdr:TT19D1EF2844B739D2 .
+        :femcConversionOf   bdr:TT4FA9C25D501DF7B7 .
     
     bdr:TTEF0F2E55EA293A90
-        a                   :Title ;
-        rdfs:label          "pet veṇī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF28FC2A314C47F30 .
-    
-    bdr:TTF28FC2A314C47F30
         a                   :CoverTitle ;
         rdfs:label          "pètt vīnīy°"@km-x-twktt .
 }

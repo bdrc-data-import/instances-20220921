@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020603 {
-    bda:LG50E73638D26A4C5C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020603"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020603"@en , "imported pubinfo for W1FEMC020603"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020603"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020603 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020603 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "1d/MW1FEMC020603.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020603 ;
-        adm:logEntry        bda:LG50E73638D26A4C5C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID954B576340FC4DB2
+    bdr:IDE500FEE032787364
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.236.III.3" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020603 {
         a                   :Instance ;
         skos:prefLabel      "ត្រៃសរណគមន៍"@km , "trai saraṇagaman"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID954B576340FC4DB2 ;
+            bdr:IDE500FEE032787364 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4FE00E434AE3D75A , bdr:TT87E225F45A11CE7B , bdr:TTE29C7B07B14BAEFD , bdr:TTE500FEE032787364 ;
+        :hasTitle           bdr:TT4FE00E434AE3D75A , bdr:TT50E73638D26A4C5C , bdr:TTE29C7B07B14BAEFD , bdr:TTFEAD7EE5BFA6C978 ;
         :instanceHasReproduction  bdr:W1FEMC020603 ;
+        :instanceOf         bdr:WA1FEMC010071 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT70C38A1D5B0D613F ;
+        :note               bdr:NT87E225F45A11CE7B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT70C38A1D5B0D613F
+    bdr:NT87E225F45A11CE7B
         a                   :Note ;
         :contentLocationStatement  "pg. 114" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT4FE00E434AE3D75A
-        a                   :Title ;
-        rdfs:label          "ត្រៃសរណគមន៍"@km ;
-        :femcConversionOf   bdr:TT87E225F45A11CE7B .
-    
-    bdr:TT87E225F45A11CE7B
         a                   :CoverTitle ;
         rdfs:label          "ត្រៃ្យសរណគំម"@km .
     
-    bdr:TTE29C7B07B14BAEFD
+    bdr:TT50E73638D26A4C5C
         a                   :Title ;
-        rdfs:label          "trai saraṇagaman"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE500FEE032787364 .
+        rdfs:label          "ត្រៃសរណគមន៍"@km ;
+        :femcConversionOf   bdr:TT4FE00E434AE3D75A .
     
-    bdr:TTE500FEE032787364
+    bdr:TTE29C7B07B14BAEFD
         a                   :CoverTitle ;
         rdfs:label          "traiy° saraṇagaṃm"@km-x-twktt .
+    
+    bdr:TTFEAD7EE5BFA6C978
+        a                   :Title ;
+        rdfs:label          "trai saraṇagaman"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE29C7B07B14BAEFD .
 }

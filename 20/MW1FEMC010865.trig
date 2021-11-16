@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010865 {
-    bda:LG63B0F90972E38766
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010865"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010865"@en , "imported pubinfo for W1FEMC010865"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010865"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010865 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010865 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "20/MW1FEMC010865.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010865 ;
-        adm:logEntry        bda:LG63B0F90972E38766 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4CCEACC8D58594F1
+    bdr:ID5F963725FF3875CE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "060-A.04.02.01.III.1" .
     
-    bdr:MFA5CF2AB64B73FD77
+    bdr:MFC3D15A52D6617E5B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "40" ;
         :microfilmStrip     "91" .
@@ -55,48 +49,47 @@ bdg:MW1FEMC010865 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4CCEACC8D58594F1 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0711D63E80A7F44F , bdr:TT593B1062F305F6D6 , bdr:TT5F963725FF3875CE , bdr:TT698E0D965E7353BC , bdr:TTD896DEC88186C1D4 , bdr:TTE1FB7F53796D6C4A ;
+            bdr:ID5F963725FF3875CE ;
+        :hasTitle           bdr:TT0711D63E80A7F44F , bdr:TT593B1062F305F6D6 , bdr:TT63B0F90972E38766 , bdr:TTCB2F45AAE1D9DBA0 , bdr:TTD896DEC88186C1D4 , bdr:TTE1FB7F53796D6C4A ;
         :instanceHasReproduction  bdr:W1FEMC010865 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA5CF2AB64B73FD77 ;
-        :note               bdr:NTC3D15A52D6617E5B ;
+        :microfilmItem      bdr:MFC3D15A52D6617E5B ;
+        :note               bdr:NT698E0D965E7353BC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC3D15A52D6617E5B
+    bdr:NT698E0D965E7353BC
         a                   :Note ;
         :contentLocationStatement  "pg. 223" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0711D63E80A7F44F
         a                   :CoverTitle ;
-        rdfs:label          "kassap cod braḥ Upāli"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5F963725FF3875CE .
+        rdfs:label          "kāsabb cod brah Uppalī"@km-x-twktt .
     
     bdr:TT593B1062F305F6D6
         a                   :CoverTitle ;
-        rdfs:label          "កស្សបចោទព្រះឧបាលិ"@km ;
-        :femcConversionOf   bdr:TT698E0D965E7353BC .
-    
-    bdr:TT5F963725FF3875CE
-        a                   :CoverTitle ;
-        rdfs:label          "kāsabb cod brah Uppalī"@km-x-twktt .
-    
-    bdr:TT698E0D965E7353BC
-        a                   :CoverTitle ;
         rdfs:label          "កាសព្វចោទព្រះឧប្បលី"@km .
     
-    bdr:TTD896DEC88186C1D4
+    bdr:TT63B0F90972E38766
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៣"@km .
     
-    bdr:TTE1FB7F53796D6C4A
+    bdr:TTCB2F45AAE1D9DBA0
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
+    
+    bdr:TTD896DEC88186C1D4
+        a                   :CoverTitle ;
+        rdfs:label          "កស្សបចោទព្រះឧបាលិ"@km ;
+        :femcConversionOf   bdr:TT593B1062F305F6D6 .
+    
+    bdr:TTE1FB7F53796D6C4A
+        a                   :CoverTitle ;
+        rdfs:label          "kassap cod braḥ Upāli"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0711D63E80A7F44F .
 }

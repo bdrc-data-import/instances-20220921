@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011493 {
-    bda:LGEE3D4C85411D9099
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011493"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011493"@en , "imported pubinfo for W1FEMC011493"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011493"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011493 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011493 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "73/MW1FEMC011493.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011493 ;
-        adm:logEntry        bda:LGEE3D4C85411D9099 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA86004986B041297
+    bdr:IDA81D784C1F27EEC7
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "035-A.10.08.01.III.1" .
     
-    bdr:MF57E25BB88C2C53E6
+    bdr:MF97AEFDA93DD0598A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "37" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011493 {
         a                   :Instance ;
         skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA86004986B041297 ;
+            bdr:IDA81D784C1F27EEC7 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3377D6A8621BCB18 , bdr:TT89EDC318E40F650F , bdr:TTA81D784C1F27EEC7 , bdr:TTEABB13C86E044D42 ;
+        :hasTitle           bdr:TT07E287C550EEC88F , bdr:TT3377D6A8621BCB18 , bdr:TT89EDC318E40F650F , bdr:TTEE3D4C85411D9099 ;
         :instanceHasReproduction  bdr:W1FEMC011493 ;
+        :instanceOf         bdr:WA1FEMC010003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF57E25BB88C2C53E6 ;
-        :note               bdr:NT97AEFDA93DD0598A ;
+        :microfilmItem      bdr:MF97AEFDA93DD0598A ;
+        :note               bdr:NTEABB13C86E044D42 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT97AEFDA93DD0598A
+    bdr:NTEABB13C86E044D42
         a                   :Note ;
         :contentLocationStatement  "pg. 343" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3377D6A8621BCB18
+    bdr:TT07E287C550EEC88F
         a                   :Title ;
         rdfs:label          "ariy sacc"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA81D784C1F27EEC7 .
+        :femcConversionOf   bdr:TT3377D6A8621BCB18 .
     
-    bdr:TT89EDC318E40F650F
-        a                   :Title ;
-        rdfs:label          "អរិយសច្ច"@km ;
-        :femcConversionOf   bdr:TTEABB13C86E044D42 .
-    
-    bdr:TTA81D784C1F27EEC7
+    bdr:TT3377D6A8621BCB18
         a                   :CoverTitle ;
         rdfs:label          "dukkh ariy sacc"@km-x-twktt .
     
-    bdr:TTEABB13C86E044D42
+    bdr:TT89EDC318E40F650F
         a                   :CoverTitle ;
         rdfs:label          "ទុក្ខអរិយសច្ច"@km .
+    
+    bdr:TTEE3D4C85411D9099
+        a                   :Title ;
+        rdfs:label          "អរិយសច្ច"@km ;
+        :femcConversionOf   bdr:TT89EDC318E40F650F .
 }

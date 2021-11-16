@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010763 {
-    bda:LGA82A988FFD371774
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010763"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010763"@en , "imported pubinfo for W1FEMC010763"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010763"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010763 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010763 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "34/MW1FEMC010763.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010763 ;
-        adm:logEntry        bda:LGA82A988FFD371774 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA9CC81B239E3B6A8
+    bdr:ID279399B528A5134D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "034-A.03.08.01.II.1" .
     
-    bdr:MFAA7990BB6384551C
+    bdr:MF467A35968E55B2CA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "124" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC010763 {
         a                   :Instance ;
         skos:prefLabel      "ជបលក្ខណ៍​ រាមលក្ខណ៍"@km , "jap lakkhaṇ rām lakkhaṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA9CC81B239E3B6A8 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT279399B528A5134D , bdr:TTD1FCE67A546CB044 , bdr:TTD2C07B9D08D8DDB6 , bdr:TTFDC9F5D5BCAD3BFD ;
+            bdr:ID279399B528A5134D ;
+        :hasTitle           bdr:TT4E645D7A96C9E66B , bdr:TTA82A988FFD371774 , bdr:TTD1FCE67A546CB044 , bdr:TTD2C07B9D08D8DDB6 ;
         :instanceHasReproduction  bdr:W1FEMC010763 ;
+        :instanceOf         bdr:WA1FEMC120015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFAA7990BB6384551C ;
-        :note               bdr:NT467A35968E55B2CA ;
+        :microfilmItem      bdr:MF467A35968E55B2CA ;
+        :note               bdr:NTFDC9F5D5BCAD3BFD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT467A35968E55B2CA
+    bdr:NTFDC9F5D5BCAD3BFD
         a                   :Note ;
         :contentLocationStatement  "pg. 204" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT279399B528A5134D
+    bdr:TT4E645D7A96C9E66B
+        a                   :Title ;
+        rdfs:label          "jap lakkhaṇ rām lakkhaṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD1FCE67A546CB044 .
+    
+    bdr:TTA82A988FFD371774
+        a                   :Title ;
+        rdfs:label          "ជបលក្ខណ៍​ រាមលក្ខណ៍"@km ;
+        :femcConversionOf   bdr:TTD2C07B9D08D8DDB6 .
+    
+    bdr:TTD1FCE67A546CB044
         a                   :CoverTitle ;
         rdfs:label          "jubd lākkh' rāmm lākkh'"@km-x-twktt .
     
-    bdr:TTD1FCE67A546CB044
-        a                   :Title ;
-        rdfs:label          "jap lakkhaṇ rām lakkhaṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT279399B528A5134D .
-    
     bdr:TTD2C07B9D08D8DDB6
-        a                   :Title ;
-        rdfs:label          "ជបលក្ខណ៍​ រាមលក្ខណ៍"@km ;
-        :femcConversionOf   bdr:TTFDC9F5D5BCAD3BFD .
-    
-    bdr:TTFDC9F5D5BCAD3BFD
         a                   :CoverTitle ;
         rdfs:label          "ជុព្ទលាក្ខ់រាម្មលាក្ខ់"@km .
 }

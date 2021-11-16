@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011089 {
-    bda:LGE0DAC57293FB6863
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011089"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011089"@en , "imported pubinfo for W1FEMC011089"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011089"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011089 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011089 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "dc/MW1FEMC011089.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011089 ;
-        adm:logEntry        bda:LGE0DAC57293FB6863 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID529C138626DBDFD2
+    bdr:ID8E1C5E5312930B9D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.04.07.01.III.1" .
     
-    bdr:MF93CAEF297CE9DE95
+    bdr:MF87FC6D09DD64CFAA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "42" ;
         :microfilmStrip     "98" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011089 {
         a                   :Instance ;
         skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID529C138626DBDFD2 ;
+            bdr:ID8E1C5E5312930B9D ;
         :hasFascicles       "8, 9, 11, 13-19" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0C7D13E4CA3224ED , bdr:TT67D19D3E4CB7A106 , bdr:TT8E1C5E5312930B9D , bdr:TTE2583F1F77B89B39 ;
+        :hasTitle           bdr:TT67D19D3E4CB7A106 , bdr:TT72808C0709FB8EA6 , bdr:TTE0DAC57293FB6863 , bdr:TTE2583F1F77B89B39 ;
         :instanceHasReproduction  bdr:W1FEMC011089 ;
+        :instanceOf         bdr:WA1FEMC010047 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF93CAEF297CE9DE95 ;
-        :note               bdr:NT87FC6D09DD64CFAA ;
+        :microfilmItem      bdr:MF87FC6D09DD64CFAA ;
+        :note               bdr:NT0C7D13E4CA3224ED ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT87FC6D09DD64CFAA
+    bdr:NT0C7D13E4CA3224ED
         a                   :Note ;
         :contentLocationStatement  "pg. 265" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0C7D13E4CA3224ED
-        a                   :CoverTitle ;
-        rdfs:label          "បថមសម្ពោធី"@km .
-    
     bdr:TT67D19D3E4CB7A106
-        a                   :Title ;
-        rdfs:label          "paṭham sambodhi"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8E1C5E5312930B9D .
-    
-    bdr:TT8E1C5E5312930B9D
         a                   :CoverTitle ;
         rdfs:label          "patham sambodhī"@km-x-twktt .
     
-    bdr:TTE2583F1F77B89B39
+    bdr:TT72808C0709FB8EA6
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@km-x-twktt ;
+        :femcConversionOf   bdr:TT67D19D3E4CB7A106 .
+    
+    bdr:TTE0DAC57293FB6863
         a                   :Title ;
         rdfs:label          "បឋមសម្ពោធិ"@km ;
-        :femcConversionOf   bdr:TT0C7D13E4CA3224ED .
+        :femcConversionOf   bdr:TTE2583F1F77B89B39 .
+    
+    bdr:TTE2583F1F77B89B39
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសម្ពោធី"@km .
 }

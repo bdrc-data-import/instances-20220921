@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010437 {
-    bda:LGB15E604116C0120B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010437"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010437"@en , "imported pubinfo for W1FEMC010437"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010437"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010437 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010437 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "d4/MW1FEMC010437.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010437 ;
-        adm:logEntry        bda:LGB15E604116C0120B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6A24DB73C97EC70F
+    bdr:ID941A7F8451B3AA9E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "030*-PP.03.03.03.III.6" .
     
-    bdr:MFD2487A8ACCA0E7E3
+    bdr:MFFF1F5D897621725F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "42" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010437 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សខ្មោច"@km , "ānisaṅs khmoc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6A24DB73C97EC70F ;
+            bdr:ID941A7F8451B3AA9E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1254BDA22D7D8620 , bdr:TT71271E90CAEF4944 , bdr:TT73D64F4EA6A0FBC4 , bdr:TT880993E2F5C54ABA , bdr:TT941A7F8451B3AA9E , bdr:TTE27974CBA6E7D30B ;
+        :hasTitle           bdr:TT1254BDA22D7D8620 , bdr:TT528220A51D522C24 , bdr:TT73D64F4EA6A0FBC4 , bdr:TT880993E2F5C54ABA , bdr:TTB15E604116C0120B , bdr:TTE27974CBA6E7D30B ;
         :instanceHasReproduction  bdr:W1FEMC010437 ;
+        :instanceOf         bdr:WA1FEMC060023 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD2487A8ACCA0E7E3 ;
-        :note               bdr:NTFF1F5D897621725F ;
+        :microfilmItem      bdr:MFFF1F5D897621725F ;
+        :note               bdr:NT71271E90CAEF4944 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTFF1F5D897621725F
+    bdr:NT71271E90CAEF4944
         a                   :Note ;
         :contentLocationStatement  "pg. 137" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1254BDA22D7D8620
         a                   :CoverTitle ;
-        rdfs:label          "ānisaṅs puggal"@km-x-twktt ;
-        :femcConversionOf   bdr:TT941A7F8451B3AA9E .
+        rdfs:label          "anīsagh puggul"@km-x-twktt .
     
-    bdr:TT71271E90CAEF4944
-        a                   :CoverTitle ;
-        rdfs:label          "អនីសងឃ៊បុគ្គុល"@km .
-    
-    bdr:TT73D64F4EA6A0FBC4
-        a                   :Title ;
-        rdfs:label          "អានិសង្សខ្មោច"@km .
-    
-    bdr:TT880993E2F5C54ABA
+    bdr:TT528220A51D522C24
         a                   :Title ;
         rdfs:label          "ānisaṅs khmoc"@km-x-twktt .
     
-    bdr:TT941A7F8451B3AA9E
+    bdr:TT73D64F4EA6A0FBC4
         a                   :CoverTitle ;
-        rdfs:label          "anīsagh puggul"@km-x-twktt .
+        rdfs:label          "អានិសង្សបុគ្គល"@km ;
+        :femcConversionOf   bdr:TTE27974CBA6E7D30B .
+    
+    bdr:TT880993E2F5C54ABA
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs puggal"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1254BDA22D7D8620 .
+    
+    bdr:TTB15E604116C0120B
+        a                   :Title ;
+        rdfs:label          "អានិសង្សខ្មោច"@km .
     
     bdr:TTE27974CBA6E7D30B
         a                   :CoverTitle ;
-        rdfs:label          "អានិសង្សបុគ្គល"@km ;
-        :femcConversionOf   bdr:TT71271E90CAEF4944 .
+        rdfs:label          "អនីសងឃ៊បុគ្គុល"@km .
 }

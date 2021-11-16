@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020505 {
-    bda:LGE2BC01C47CC4C5B6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020505"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020505"@en , "imported pubinfo for W1FEMC020505"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020505"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020505 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020505 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9f/MW1FEMC020505.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020505 ;
-        adm:logEntry        bda:LGE2BC01C47CC4C5B6 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8B8FD16101C947CC
+    bdr:IDD47BBD40146206B2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.138.II.1" .
     
-    bdr:MFF064667C75517B11
+    bdr:MFBCFBBB0FC303683A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020505 {
         a                   :Instance ;
         skos:prefLabel      "ស័ង្ខបត្ដ"@km , "săṅkh patt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8B8FD16101C947CC ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT743A6D1A2D8ABB42 , bdr:TTD47BBD40146206B2 , bdr:TTFB8487CEC9E80755 , bdr:TTFCD44C785768E145 ;
+            bdr:IDD47BBD40146206B2 ;
+        :hasTitle           bdr:TT743A6D1A2D8ABB42 , bdr:TT95453693ADA7B26E , bdr:TTE2BC01C47CC4C5B6 , bdr:TTFCD44C785768E145 ;
         :instanceHasReproduction  bdr:W1FEMC020505 ;
+        :instanceOf         bdr:WA1FEMC120029 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF064667C75517B11 ;
-        :note               bdr:NTBCFBBB0FC303683A ;
+        :microfilmItem      bdr:MFBCFBBB0FC303683A ;
+        :note               bdr:NTFB8487CEC9E80755 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBCFBBB0FC303683A
+    bdr:NTFB8487CEC9E80755
         a                   :Note ;
         :contentLocationStatement  "pg. 98" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT743A6D1A2D8ABB42
-        a                   :Title ;
-        rdfs:label          "săṅkh patt"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD47BBD40146206B2 .
-    
-    bdr:TTD47BBD40146206B2
         a                   :CoverTitle ;
         rdfs:label          "saṅgh phāt kūm''ār"@km-x-twktt .
     
-    bdr:TTFB8487CEC9E80755
-        a                   :CoverTitle ;
-        rdfs:label          "សង្ឈផាតកូម៉ារ"@km .
+    bdr:TT95453693ADA7B26E
+        a                   :Title ;
+        rdfs:label          "săṅkh patt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT743A6D1A2D8ABB42 .
     
-    bdr:TTFCD44C785768E145
+    bdr:TTE2BC01C47CC4C5B6
         a                   :Title ;
         rdfs:label          "ស័ង្ខបត្ដ"@km ;
-        :femcConversionOf   bdr:TTFB8487CEC9E80755 .
+        :femcConversionOf   bdr:TTFCD44C785768E145 .
+    
+    bdr:TTFCD44C785768E145
+        a                   :CoverTitle ;
+        rdfs:label          "សង្ឈផាតកូម៉ារ"@km .
 }

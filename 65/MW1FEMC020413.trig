@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020413 {
-    bda:LGA667705E2D5EAC79
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020413"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020413"@en , "imported pubinfo for W1FEMC020413"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020413"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020413 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020413 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "65/MW1FEMC020413.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020413 ;
-        adm:logEntry        bda:LGA667705E2D5EAC79 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4969B718D60A963C
+    bdr:IDB29A4196D7F4A476
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.47.V.1" .
     
-    bdr:MF7EE22BA788D776D2
+    bdr:MF06B6ACA906CF0C8C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "67" ;
         :microfilmStrip     "161" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020413 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-suṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4969B718D60A963C ;
+            bdr:IDB29A4196D7F4A476 ;
         :hasFascicles       "3, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1F6DC63E4E39DA8A , bdr:TT9504E6A9E301BD21 , bdr:TTB29A4196D7F4A476 , bdr:TTDEA83E97273A8427 ;
+        :hasTitle           bdr:TT20F05CDEAA3829C1 , bdr:TT9504E6A9E301BD21 , bdr:TTA667705E2D5EAC79 , bdr:TTDEA83E97273A8427 ;
         :instanceHasReproduction  bdr:W1FEMC020413 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7EE22BA788D776D2 ;
-        :note               bdr:NT06B6ACA906CF0C8C ;
+        :microfilmItem      bdr:MF06B6ACA906CF0C8C ;
+        :note               bdr:NT1F6DC63E4E39DA8A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT06B6ACA906CF0C8C
+    bdr:NT1F6DC63E4E39DA8A
         a                   :Note ;
         :contentLocationStatement  "pg. 81" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1F6DC63E4E39DA8A
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មវឹងស៊ុង"@km .
-    
-    bdr:TT9504E6A9E301BD21
+    bdr:TT20F05CDEAA3829C1
         a                   :Title ;
         rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB29A4196D7F4A476 .
+        :femcConversionOf   bdr:TT9504E6A9E301BD21 .
     
-    bdr:TTB29A4196D7F4A476
+    bdr:TT9504E6A9E301BD21
         a                   :CoverTitle ;
         rdfs:label          "dhamm vịṅ-suṅ"@km-x-twktt .
     
-    bdr:TTDEA83E97273A8427
+    bdr:TTA667705E2D5EAC79
         a                   :Title ;
         rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT1F6DC63E4E39DA8A .
+        :femcConversionOf   bdr:TTDEA83E97273A8427 .
+    
+    bdr:TTDEA83E97273A8427
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មវឹងស៊ុង"@km .
 }

@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020031 {
-    bda:LG7A7795D0520B67D7
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020031"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020031"@en , "imported pubinfo for W1FEMC020031"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020031"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020031 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020031 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "77/MW1FEMC020031.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020031 ;
-        adm:logEntry        bda:LG7A7795D0520B67D7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9454F9861AE1639B
+    bdr:ID45E82824F1DAE279
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.30.III.3" .
     
-    bdr:MF81BDAE9D46DF441D
+    bdr:MFB5FED83508A3B9B4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "19" ;
         :microfilmStrip     "8" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020031 {
         a                   :Instance ;
         skos:prefLabel      "ខសរុបបិដក"@km , "kha sarup piṭak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9454F9861AE1639B ;
+            bdr:ID45E82824F1DAE279 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT45E82824F1DAE279 , bdr:TT64F65D13E7BB92BF , bdr:TT8ECC74FFAB450E71 , bdr:TT96847220DBC36C6A ;
+        :hasTitle           bdr:TT64F65D13E7BB92BF , bdr:TT7A7795D0520B67D7 , bdr:TT96847220DBC36C6A , bdr:TT978E43DAF266EE03 ;
         :instanceHasReproduction  bdr:W1FEMC020031 ;
+        :instanceOf         bdr:WA1FEMC030045 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF81BDAE9D46DF441D ;
-        :note               bdr:NTB5FED83508A3B9B4 ;
+        :microfilmItem      bdr:MFB5FED83508A3B9B4 ;
+        :note               bdr:NT8ECC74FFAB450E71 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1456" .
     
-    bdr:NTB5FED83508A3B9B4
+    bdr:NT8ECC74FFAB450E71
         a                   :Note ;
         :contentLocationStatement  "pg. 7" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT45E82824F1DAE279
-        a                   :CoverTitle ;
-        rdfs:label          "kha sarūp piṭak"@km-x-twktt .
-    
     bdr:TT64F65D13E7BB92BF
-        a                   :Title ;
-        rdfs:label          "ខសរុបបិដក"@km ;
-        :femcConversionOf   bdr:TT8ECC74FFAB450E71 .
-    
-    bdr:TT8ECC74FFAB450E71
         a                   :CoverTitle ;
         rdfs:label          "ខ៍សរូបបិដក"@km .
     
+    bdr:TT7A7795D0520B67D7
+        a                   :Title ;
+        rdfs:label          "ខសរុបបិដក"@km ;
+        :femcConversionOf   bdr:TT64F65D13E7BB92BF .
+    
     bdr:TT96847220DBC36C6A
+        a                   :CoverTitle ;
+        rdfs:label          "kha sarūp piṭak"@km-x-twktt .
+    
+    bdr:TT978E43DAF266EE03
         a                   :Title ;
         rdfs:label          "kha sarup piṭak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT45E82824F1DAE279 .
+        :femcConversionOf   bdr:TT96847220DBC36C6A .
 }

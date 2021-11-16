@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022359 {
-    bda:LG2762F0D496B8FC71
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022359"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022359"@en , "imported pubinfo for W1FEMC022359"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022359"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022359 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022359 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "77/MW1FEMC022359.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022359 ;
-        adm:logEntry        bda:LG2762F0D496B8FC71 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4D0100B7D6DD88BF
+    bdr:IDBF9877EBFABFDF01
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.846.I.3" .
     
-    bdr:MF1A9DB20032C58C86
+    bdr:MFAD2A85970C041B5D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022359 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកមគ្គ4ផល4"@km , "lpök magg 4 phal 4"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4D0100B7D6DD88BF ;
+            bdr:IDBF9877EBFABFDF01 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT14B086A53E4B9C8D , bdr:TT24AE1E9037070956 , bdr:TT4E9334D706A4EAEB , bdr:TTBF9877EBFABFDF01 ;
+        :hasTitle           bdr:TT24AE1E9037070956 , bdr:TT2762F0D496B8FC71 , bdr:TT4E9334D706A4EAEB , bdr:TTFB587309B4E6B929 ;
         :instanceHasReproduction  bdr:W1FEMC022359 ;
+        :instanceOf         bdr:WA1FEMC110023 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1A9DB20032C58C86 ;
-        :note               bdr:NTAD2A85970C041B5D ;
+        :microfilmItem      bdr:MFAD2A85970C041B5D ;
+        :note               bdr:NT14B086A53E4B9C8D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTAD2A85970C041B5D
+    bdr:NT14B086A53E4B9C8D
         a                   :Note ;
         :contentLocationStatement  "pg. 422" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT14B086A53E4B9C8D
+    bdr:TT24AE1E9037070956
+        a                   :CoverTitle ;
+        rdfs:label          "magg 4 phal 4"@km-x-twktt .
+    
+    bdr:TT2762F0D496B8FC71
+        a                   :Title ;
+        rdfs:label          "ល្បើកមគ្គ4ផល4"@km ;
+        :femcConversionOf   bdr:TT4E9334D706A4EAEB .
+    
+    bdr:TT4E9334D706A4EAEB
         a                   :CoverTitle ;
         rdfs:label          "មគ្គ៤ផល៤"@km .
     
-    bdr:TT24AE1E9037070956
+    bdr:TTFB587309B4E6B929
         a                   :Title ;
         rdfs:label          "lpök magg 4 phal 4"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBF9877EBFABFDF01 .
-    
-    bdr:TT4E9334D706A4EAEB
-        a                   :Title ;
-        rdfs:label          "ល្បើកមគ្គ4ផល4"@km ;
-        :femcConversionOf   bdr:TT14B086A53E4B9C8D .
-    
-    bdr:TTBF9877EBFABFDF01
-        a                   :CoverTitle ;
-        rdfs:label          "magg 4 phal 4"@km-x-twktt .
+        :femcConversionOf   bdr:TT24AE1E9037070956 .
 }

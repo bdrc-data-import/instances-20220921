@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030515 {
-    bda:LG280F4A62A52C49CB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-09-09"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC030515"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC030515"@en , "imported pubinfo for W1FEMC030515"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC030515"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC030515 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030515 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "d2/MW1FEMC030515.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030515 ;
-        adm:logEntry        bda:LG280F4A62A52C49CB , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE459E5C151A18287
+    bdr:ID178031DEA283806E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0512-B.01.06.01.I.1" .
     
@@ -50,29 +44,29 @@ bdg:MW1FEMC030515 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ស្វះស្វែង"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE459E5C151A18287 ;
-        :hasTitle           bdr:TT178031DEA283806E , bdr:TTF90084FAC97E0B66 ;
+            bdr:ID178031DEA283806E ;
+        :hasTitle           bdr:TT280F4A62A52C49CB , bdr:TT521A2FAEB307F342 ;
         :instanceHasReproduction  bdr:W1FEMC030515 ;
+        :instanceOf         bdr:WA1FEMC100020 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT83C16D47074D034D ;
+        :note               bdr:NTF90084FAC97E0B66 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT83C16D47074D034D
+    bdr:NTF90084FAC97E0B66
         a                   :Note ;
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:TT178031DEA283806E
-        a                   :CoverTitle ;
-        rdfs:label          "ស្វះស្វែង"@km .
-    
-    bdr:TTF90084FAC97E0B66
+    bdr:TT280F4A62A52C49CB
         a                   :Title ;
         rdfs:label          "ច្បាប់ស្វះស្វែង"@km ;
-        :femcConversionOf   bdr:TT178031DEA283806E .
+        :femcConversionOf   bdr:TT521A2FAEB307F342 .
+    
+    bdr:TT521A2FAEB307F342
+        a                   :CoverTitle ;
+        rdfs:label          "ស្វះស្វែង"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011107 {
-    bda:LGD49CEC04BCFEBE7E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011107"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011107"@en , "imported pubinfo for W1FEMC011107"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011107"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011107 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011107 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b6/MW1FEMC011107.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011107 ;
-        adm:logEntry        bda:LGD49CEC04BCFEBE7E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1FC5C6BFF6B3DE8D
+    bdr:ID17C27862D04E7CF6
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005-A.04.17.02.II.1" .
     
-    bdr:MF5A924CCF0EFFE2EE
+    bdr:MF76721E6981DE9FB3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "29" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011107 {
         a                   :Instance ;
         skos:prefLabel      "សុរព្ភ"@km , "surabbh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1FC5C6BFF6B3DE8D ;
+            bdr:ID17C27862D04E7CF6 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CB86BD20A0923E3 , bdr:TT17C27862D04E7CF6 , bdr:TT90ABB8A6772D35EC , bdr:TTE5178C9ED82ACBC6 ;
+        :hasTitle           bdr:TT90ABB8A6772D35EC , bdr:TTD49CEC04BCFEBE7E , bdr:TTE5178C9ED82ACBC6 , bdr:TTFF35B9A0C31E3E03 ;
         :instanceHasReproduction  bdr:W1FEMC011107 ;
+        :instanceOf         bdr:WA1FEMC120037 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5A924CCF0EFFE2EE ;
-        :note               bdr:NT76721E6981DE9FB3 ;
+        :microfilmItem      bdr:MF76721E6981DE9FB3 ;
+        :note               bdr:NT0CB86BD20A0923E3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT76721E6981DE9FB3
+    bdr:NT0CB86BD20A0923E3
         a                   :Note ;
         :contentLocationStatement  "pg. 269" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0CB86BD20A0923E3
+    bdr:TT90ABB8A6772D35EC
         a                   :CoverTitle ;
         rdfs:label          "សុរុព្ភ"@km .
     
-    bdr:TT17C27862D04E7CF6
+    bdr:TTD49CEC04BCFEBE7E
+        a                   :Title ;
+        rdfs:label          "សុរព្ភ"@km ;
+        :femcConversionOf   bdr:TT90ABB8A6772D35EC .
+    
+    bdr:TTE5178C9ED82ACBC6
         a                   :CoverTitle ;
         rdfs:label          "surubbh"@km-x-twktt .
     
-    bdr:TT90ABB8A6772D35EC
-        a                   :Title ;
-        rdfs:label          "សុរព្ភ"@km ;
-        :femcConversionOf   bdr:TT0CB86BD20A0923E3 .
-    
-    bdr:TTE5178C9ED82ACBC6
+    bdr:TTFF35B9A0C31E3E03
         a                   :Title ;
         rdfs:label          "surabbh"@km-x-twktt ;
-        :femcConversionOf   bdr:TT17C27862D04E7CF6 .
+        :femcConversionOf   bdr:TTE5178C9ED82ACBC6 .
 }

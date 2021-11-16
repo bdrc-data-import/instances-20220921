@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020024 {
-    bda:LGFF7EB5031CA76413
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020024"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020024"@en , "imported pubinfo for W1FEMC020024"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020024"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020024 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020024 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c9/MW1FEMC020024.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020024 ;
-        adm:logEntry        bda:LGFF7EB5031CA76413 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC169B2C989934912
+    bdr:IDDCDCB8C213A17B11
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.24.III.1" .
     
-    bdr:MFBFE748259BE1C264
+    bdr:MF9F67FBA708B91597
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "19" ;
         :microfilmStrip     "8" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020024 {
         a                   :Instance ;
         skos:prefLabel      "ជិនកាលមាលិនី"@km , "jinakāl mālinī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC169B2C989934912 ;
+            bdr:IDDCDCB8C213A17B11 ;
         :hasFascicles       "3, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT27710A1BD5A508D8 , bdr:TT4747BB8A83A2172E , bdr:TT9C2AA2C5EC23DA37 , bdr:TTDCDCB8C213A17B11 ;
+        :hasTitle           bdr:TT4747BB8A83A2172E , bdr:TT9C2AA2C5EC23DA37 , bdr:TTD93F55A021FA59B0 , bdr:TTFF7EB5031CA76413 ;
         :instanceHasReproduction  bdr:W1FEMC020024 ;
+        :instanceOf         bdr:WA1FEMC010093 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFBFE748259BE1C264 ;
-        :note               bdr:NT9F67FBA708B91597 ;
+        :microfilmItem      bdr:MF9F67FBA708B91597 ;
+        :note               bdr:NT27710A1BD5A508D8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1432" .
     
-    bdr:NT9F67FBA708B91597
+    bdr:NT27710A1BD5A508D8
         a                   :Note ;
         :contentLocationStatement  "pg. 5" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT27710A1BD5A508D8
+    bdr:TT4747BB8A83A2172E
+        a                   :CoverTitle ;
+        rdfs:label          "jinakāl mālīnī"@km-x-twktt .
+    
+    bdr:TT9C2AA2C5EC23DA37
         a                   :CoverTitle ;
         rdfs:label          "ជិនកាលមាលីនី"@km .
     
-    bdr:TT4747BB8A83A2172E
+    bdr:TTD93F55A021FA59B0
         a                   :Title ;
         rdfs:label          "jinakāl mālinī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTDCDCB8C213A17B11 .
+        :femcConversionOf   bdr:TT4747BB8A83A2172E .
     
-    bdr:TT9C2AA2C5EC23DA37
+    bdr:TTFF7EB5031CA76413
         a                   :Title ;
         rdfs:label          "ជិនកាលមាលិនី"@km ;
-        :femcConversionOf   bdr:TT27710A1BD5A508D8 .
-    
-    bdr:TTDCDCB8C213A17B11
-        a                   :CoverTitle ;
-        rdfs:label          "jinakāl mālīnī"@km-x-twktt .
+        :femcConversionOf   bdr:TT9C2AA2C5EC23DA37 .
 }

@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020011 {
-    bda:LG839DF0B91BCCBE54
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020011"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020011"@en , "imported pubinfo for W1FEMC020011"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020011"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020011 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020011 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "19/MW1FEMC020011.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020011 ;
-        adm:logEntry        bda:LG839DF0B91BCCBE54 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDCBF197EDECE38D1
+    bdr:ID91E159C40F9FBB2B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.11.I.3" .
     
-    bdr:MF9645B775CD6C56AA
+    bdr:MF6BF8A649CBBC063F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "4" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020011 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកព្រះអភិធម្ម (កណ្ដាលដូចច្បាប់អភិធម្មកូនគោ)"@km , "lpök braḥ abhidhamm "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDCBF197EDECE38D1 ;
+            bdr:ID91E159C40F9FBB2B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3E8B2FCDCB8C1533 , bdr:TT91E159C40F9FBB2B , bdr:TTB5CF93502EB5B606 , bdr:TTF7EAAC5E1EFB0B8C ;
+        :hasTitle           bdr:TT3E8B2FCDCB8C1533 , bdr:TT839DF0B91BCCBE54 , bdr:TTB5CF93502EB5B606 , bdr:TTE578171AE4CC2F46 ;
         :instanceHasReproduction  bdr:W1FEMC020011 ;
+        :instanceOf         bdr:WA1FEMC110010 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9645B775CD6C56AA ;
-        :note               bdr:NT6BF8A649CBBC063F ;
+        :microfilmItem      bdr:MF6BF8A649CBBC063F ;
+        :note               bdr:NTF7EAAC5E1EFB0B8C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1388" .
     
-    bdr:NT6BF8A649CBBC063F
+    bdr:NTF7EAAC5E1EFB0B8C
         a                   :Note ;
         :contentLocationStatement  "pg. 3" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT3E8B2FCDCB8C1533
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មល្បើក"@km .
+    
+    bdr:TT839DF0B91BCCBE54
         a                   :Title ;
         rdfs:label          "ល្បើកព្រះអភិធម្ម (កណ្ដាលដូចច្បាប់អភិធម្មកូនគោ)"@km ;
-        :femcConversionOf   bdr:TTF7EAAC5E1EFB0B8C .
+        :femcConversionOf   bdr:TT3E8B2FCDCB8C1533 .
     
-    bdr:TT91E159C40F9FBB2B
+    bdr:TTB5CF93502EB5B606
         a                   :CoverTitle ;
         rdfs:label          "abhidhamm lpök"@km-x-twktt .
     
-    bdr:TTB5CF93502EB5B606
+    bdr:TTE578171AE4CC2F46
         a                   :Title ;
         rdfs:label          "lpök braḥ abhidhamm "@km-x-twktt ;
-        :femcConversionOf   bdr:TT91E159C40F9FBB2B .
-    
-    bdr:TTF7EAAC5E1EFB0B8C
-        a                   :CoverTitle ;
-        rdfs:label          "អភិធម្មល្បើក"@km .
+        :femcConversionOf   bdr:TTB5CF93502EB5B606 .
 }

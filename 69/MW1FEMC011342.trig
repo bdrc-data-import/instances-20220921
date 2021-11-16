@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011342 {
-    bda:LG972CE45FD4C05667
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011342"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011342"@en , "imported pubinfo for W1FEMC011342"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011342"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011342 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011342 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "69/MW1FEMC011342.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011342 ;
-        adm:logEntry        bda:LG972CE45FD4C05667 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID03104305E55414AA
+    bdr:ID442EA67E523B1B7B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "007-A.09.13.01.V.1" .
     
-    bdr:MFD6D2581AAD488B0F
+    bdr:MF16341DA47CB5582D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "75" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011342 {
         a                   :Instance ;
         skos:prefLabel      "មូលព្រះវិសុទ្ធិមគ្គ"@km , "mūl braḥ visuddhimagg"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID03104305E55414AA ;
+            bdr:ID442EA67E523B1B7B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT442EA67E523B1B7B , bdr:TT8055F6370087DFD9 , bdr:TTACEF901A26F6D965 , bdr:TTD87B86B33C0FEADC ;
+        :hasTitle           bdr:TT62057AE65644DAAE , bdr:TT972CE45FD4C05667 , bdr:TTACEF901A26F6D965 , bdr:TTD87B86B33C0FEADC ;
         :instanceHasReproduction  bdr:W1FEMC011342 ;
+        :instanceOf         bdr:WA1FEMC070012 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD6D2581AAD488B0F ;
-        :note               bdr:NT16341DA47CB5582D ;
+        :microfilmItem      bdr:MF16341DA47CB5582D ;
+        :note               bdr:NT8055F6370087DFD9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT16341DA47CB5582D
+    bdr:NT8055F6370087DFD9
         a                   :Note ;
         :contentLocationStatement  "pg. 314" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT442EA67E523B1B7B
-        a                   :CoverTitle ;
-        rdfs:label          "sīddhīyamagg"@km-x-twktt .
+    bdr:TT62057AE65644DAAE
+        a                   :Title ;
+        rdfs:label          "mūl braḥ visuddhimagg"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD87B86B33C0FEADC .
     
-    bdr:TT8055F6370087DFD9
+    bdr:TT972CE45FD4C05667
+        a                   :Title ;
+        rdfs:label          "មូលព្រះវិសុទ្ធិមគ្គ"@km ;
+        :femcConversionOf   bdr:TTACEF901A26F6D965 .
+    
+    bdr:TTACEF901A26F6D965
         a                   :CoverTitle ;
         rdfs:label          "សីទ្ធីយមគ្គ"@km .
     
-    bdr:TTACEF901A26F6D965
-        a                   :Title ;
-        rdfs:label          "មូលព្រះវិសុទ្ធិមគ្គ"@km ;
-        :femcConversionOf   bdr:TT8055F6370087DFD9 .
-    
     bdr:TTD87B86B33C0FEADC
-        a                   :Title ;
-        rdfs:label          "mūl braḥ visuddhimagg"@km-x-twktt ;
-        :femcConversionOf   bdr:TT442EA67E523B1B7B .
+        a                   :CoverTitle ;
+        rdfs:label          "sīddhīyamagg"@km-x-twktt .
 }

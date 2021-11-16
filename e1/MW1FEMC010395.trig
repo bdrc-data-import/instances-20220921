@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010395 {
-    bda:LG954B72F01BBEF88C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010395"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010395"@en , "imported pubinfo for W1FEMC010395"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010395"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010395 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010395 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e1/MW1FEMC010395.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010395 ;
-        adm:logEntry        bda:LG954B72F01BBEF88C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8F7B322D4B948DAD
+    bdr:IDCEE111DADD20B7F2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001'-PP.03.03.03.III.1" .
     
-    bdr:MF26AC29CC89499E55
+    bdr:MF1E26800569B15280
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "1" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010395 {
         a                   :Instance ;
         skos:prefLabel      "ពោធិបក្ខិយធម‌៍"@km , "bodhipakkhiyadhaṛm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8F7B322D4B948DAD ;
+            bdr:IDCEE111DADD20B7F2 ;
         :hasFascicles       "35" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0B533099F6382DA8 , bdr:TT33FB1F3FAB7E9A04 , bdr:TT5F21CB77FA993418 , bdr:TTCEE111DADD20B7F2 ;
+        :hasTitle           bdr:TT0B533099F6382DA8 , bdr:TT33FB1F3FAB7E9A04 , bdr:TT954B72F01BBEF88C , bdr:TTE94BB8EA7B6259D0 ;
         :instanceHasReproduction  bdr:W1FEMC010395 ;
+        :instanceOf         bdr:WA1FEMC010013 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF26AC29CC89499E55 ;
-        :note               bdr:NT1E26800569B15280 ;
+        :microfilmItem      bdr:MF1E26800569B15280 ;
+        :note               bdr:NT5F21CB77FA993418 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1E26800569B15280
+    bdr:NT5F21CB77FA993418
         a                   :Note ;
         :contentLocationStatement  "pg. 130" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0B533099F6382DA8
-        a                   :Title ;
-        rdfs:label          "bodhipakkhiyadhaṛm"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCEE111DADD20B7F2 .
+        a                   :CoverTitle ;
+        rdfs:label          "bodhipakkhiyadharmm"@km-x-twktt .
     
     bdr:TT33FB1F3FAB7E9A04
-        a                   :Title ;
-        rdfs:label          "ពោធិបក្ខិយធម‌៍"@km ;
-        :femcConversionOf   bdr:TT5F21CB77FA993418 .
-    
-    bdr:TT5F21CB77FA993418
         a                   :CoverTitle ;
         rdfs:label          "ពោធិបក្ខិយធរម្ម"@km .
     
-    bdr:TTCEE111DADD20B7F2
-        a                   :CoverTitle ;
-        rdfs:label          "bodhipakkhiyadharmm"@km-x-twktt .
+    bdr:TT954B72F01BBEF88C
+        a                   :Title ;
+        rdfs:label          "ពោធិបក្ខិយធម‌៍"@km ;
+        :femcConversionOf   bdr:TT33FB1F3FAB7E9A04 .
+    
+    bdr:TTE94BB8EA7B6259D0
+        a                   :Title ;
+        rdfs:label          "bodhipakkhiyadhaṛm"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0B533099F6382DA8 .
 }

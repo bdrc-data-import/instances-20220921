@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011123 {
-    bda:LGEAF59FAC5D1CBA7F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011123"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011123"@en , "imported pubinfo for W1FEMC011123"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011123"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011123 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011123 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1c/MW1FEMC011123.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011123 ;
-        adm:logEntry        bda:LGEAF59FAC5D1CBA7F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEABA38B6964E2497
+    bdr:IDACC7F009366BCD02
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "021-A.04.17.02.III.2" .
     
-    bdr:MFCB8B851015B80F0D
+    bdr:MF624B16F723B88CCD
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "49" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011123 {
         a                   :Instance ;
         skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km , "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEABA38B6964E2497 ;
+            bdr:IDACC7F009366BCD02 ;
         :hasFascicles       "20" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0B47354E74B5064D , bdr:TT7B9200F33396FCB1 , bdr:TTACC7F009366BCD02 , bdr:TTE750F0A181D7F71E ;
+        :hasTitle           bdr:TT7B9200F33396FCB1 , bdr:TT7FC460D146352B94 , bdr:TTE750F0A181D7F71E , bdr:TTEAF59FAC5D1CBA7F ;
         :instanceHasReproduction  bdr:W1FEMC011123 ;
+        :instanceOf         bdr:WA1FEMC020001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCB8B851015B80F0D ;
-        :note               bdr:NT624B16F723B88CCD ;
+        :microfilmItem      bdr:MF624B16F723B88CCD ;
+        :note               bdr:NT0B47354E74B5064D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT624B16F723B88CCD
+    bdr:NT0B47354E74B5064D
         a                   :Note ;
         :contentLocationStatement  "pg. 272" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0B47354E74B5064D
-        a                   :CoverTitle ;
-        rdfs:label          "មង្គលទិព្វន្យី"@km .
-    
     bdr:TT7B9200F33396FCB1
-        a                   :Title ;
-        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTACC7F009366BCD02 .
-    
-    bdr:TTACC7F009366BCD02
         a                   :CoverTitle ;
         rdfs:label          "maṅgal dibbanīy°"@km-x-twktt .
     
+    bdr:TT7FC460D146352B94
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7B9200F33396FCB1 .
+    
     bdr:TTE750F0A181D7F71E
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលទិព្វន្យី"@km .
+    
+    bdr:TTEAF59FAC5D1CBA7F
         a                   :Title ;
         rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
-        :femcConversionOf   bdr:TT0B47354E74B5064D .
+        :femcConversionOf   bdr:TTE750F0A181D7F71E .
 }

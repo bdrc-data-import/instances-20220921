@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010372 {
-    bda:LG1333796D7E597EB3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010372"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010372"@en , "imported pubinfo for W1FEMC010372"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010372"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010372 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010372 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "61/MW1FEMC010372.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010372 ;
-        adm:logEntry        bda:LG1333796D7E597EB3 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD5CCB995EEE5C62F
+    bdr:ID6CD93068017AFCAA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "097-PP.03.03.03.II.1" .
     
-    bdr:MFA09840AB4A9258BC
+    bdr:MF8C86196C8297609E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "65" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010372 {
         a                   :Instance ;
         skos:prefLabel      "សិទ្ធធ្នូ"@km , "siddh dhnū"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD5CCB995EEE5C62F ;
+            bdr:ID6CD93068017AFCAA ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2C0EA7D18B4EA6B8 , bdr:TT6CD93068017AFCAA , bdr:TT92E331E06BDF9B0C , bdr:TTC412D6E6A1CA6ADF ;
+        :hasTitle           bdr:TT1268F062773473B9 , bdr:TT1333796D7E597EB3 , bdr:TT2C0EA7D18B4EA6B8 , bdr:TTC412D6E6A1CA6ADF ;
         :instanceHasReproduction  bdr:W1FEMC010372 ;
+        :instanceOf         bdr:WA1FEMC120031 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA09840AB4A9258BC ;
-        :note               bdr:NT8C86196C8297609E ;
+        :microfilmItem      bdr:MF8C86196C8297609E ;
+        :note               bdr:NT92E331E06BDF9B0C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8C86196C8297609E
+    bdr:NT92E331E06BDF9B0C
         a                   :Note ;
         :contentLocationStatement  "pg. 125" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2C0EA7D18B4EA6B8
+    bdr:TT1268F062773473B9
         a                   :Title ;
         rdfs:label          "siddh dhnū"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6CD93068017AFCAA .
+        :femcConversionOf   bdr:TT2C0EA7D18B4EA6B8 .
     
-    bdr:TT6CD93068017AFCAA
+    bdr:TT1333796D7E597EB3
+        a                   :Title ;
+        rdfs:label          "សិទ្ធធ្នូ"@km ;
+        :femcConversionOf   bdr:TTC412D6E6A1CA6ADF .
+    
+    bdr:TT2C0EA7D18B4EA6B8
         a                   :CoverTitle ;
         rdfs:label          "sit dhnūv"@km-x-twktt .
     
-    bdr:TT92E331E06BDF9B0C
+    bdr:TTC412D6E6A1CA6ADF
         a                   :CoverTitle ;
         rdfs:label          "សិតធ្នូវ"@km .
-    
-    bdr:TTC412D6E6A1CA6ADF
-        a                   :Title ;
-        rdfs:label          "សិទ្ធធ្នូ"@km ;
-        :femcConversionOf   bdr:TT92E331E06BDF9B0C .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020608 {
-    bda:LG78D015CFD40A6A2A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020608"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020608"@en , "imported pubinfo for W1FEMC020608"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020608"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020608 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020608 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "a5/MW1FEMC020608.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020608 ;
-        adm:logEntry        bda:LG78D015CFD40A6A2A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4AA69DDDD6FF71C4
+    bdr:IDEE9128D5AAF9C0DE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.241.III.3" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020608 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យសិក្ខាបទ"@km , "vinăy sikkhāpad"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4AA69DDDD6FF71C4 ;
+            bdr:IDEE9128D5AAF9C0DE ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTDFA9FC3DF2AD5A17 , bdr:TTEAC4FCFA95D30EB9 , bdr:TTEAF29F61486B6464 , bdr:TTEE9128D5AAF9C0DE ;
+        :hasTitle           bdr:TT78D015CFD40A6A2A , bdr:TT91CC74EC01AA0EEE , bdr:TTDFA9FC3DF2AD5A17 , bdr:TTEAF29F61486B6464 ;
         :instanceHasReproduction  bdr:W1FEMC020608 ;
+        :instanceOf         bdr:WA1FEMC030062 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT2CC8B431A008E495 ;
+        :note               bdr:NTEAC4FCFA95D30EB9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2CC8B431A008E495
+    bdr:NTEAC4FCFA95D30EB9
         a                   :Note ;
         :contentLocationStatement  "pg. 114" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTDFA9FC3DF2AD5A17
-        a                   :Title ;
-        rdfs:label          "vinăy sikkhāpad"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEE9128D5AAF9C0DE .
-    
-    bdr:TTEAC4FCFA95D30EB9
-        a                   :CoverTitle ;
-        rdfs:label          "វិន័យសិក្ខាបទ្ទ"@km .
-    
-    bdr:TTEAF29F61486B6464
+    bdr:TT78D015CFD40A6A2A
         a                   :Title ;
         rdfs:label          "វិន័យសិក្ខាបទ"@km ;
-        :femcConversionOf   bdr:TTEAC4FCFA95D30EB9 .
+        :femcConversionOf   bdr:TTEAF29F61486B6464 .
     
-    bdr:TTEE9128D5AAF9C0DE
+    bdr:TT91CC74EC01AA0EEE
+        a                   :Title ;
+        rdfs:label          "vinăy sikkhāpad"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDFA9FC3DF2AD5A17 .
+    
+    bdr:TTDFA9FC3DF2AD5A17
         a                   :CoverTitle ;
         rdfs:label          "vīnăy sikkhār-padd"@km-x-twktt .
+    
+    bdr:TTEAF29F61486B6464
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័យសិក្ខាបទ្ទ"@km .
 }

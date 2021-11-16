@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010628 {
-    bda:LGF1A22E8E24714965
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010628"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010628"@en , "imported pubinfo for W1FEMC010628"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010628"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010628 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010628 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "99/MW1FEMC010628.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010628 ;
-        adm:logEntry        bda:LGF1A22E8E24714965 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID50A6913C3136DE16
+    bdr:ID01035CF410CBDA24
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "008-A.02.12.04.III.4" .
     
-    bdr:MFC09FADBE8D0CD05B
+    bdr:MFB67C9D244377681A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "33" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010628 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID50A6913C3136DE16 ;
+            bdr:ID01035CF410CBDA24 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT01035CF410CBDA24 , bdr:TT1FA8CEE011D4CDA0 , bdr:TT3C40AFBC5994D6E8 , bdr:TTF8E10C43CA9D1FBD ;
+        :hasTitle           bdr:TT1FA8CEE011D4CDA0 , bdr:TT46A99E248F2D51BC , bdr:TTF1A22E8E24714965 , bdr:TTF8E10C43CA9D1FBD ;
         :instanceHasReproduction  bdr:W1FEMC010628 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC09FADBE8D0CD05B ;
-        :note               bdr:NTB67C9D244377681A ;
+        :microfilmItem      bdr:MFB67C9D244377681A ;
+        :note               bdr:NT3C40AFBC5994D6E8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB67C9D244377681A
+    bdr:NT3C40AFBC5994D6E8
         a                   :Note ;
         :contentLocationStatement  "pg. 177" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT01035CF410CBDA24
-        a                   :CoverTitle ;
-        rdfs:label          "vibhaṅg"@km-x-twktt .
-    
     bdr:TT1FA8CEE011D4CDA0
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
-    
-    bdr:TT3C40AFBC5994D6E8
         a                   :CoverTitle ;
         rdfs:label          "វិភង្គ"@km .
     
-    bdr:TTF8E10C43CA9D1FBD
+    bdr:TT46A99E248F2D51BC
         a                   :Title ;
         rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
+    
+    bdr:TTF1A22E8E24714965
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTF8E10C43CA9D1FBD
+        a                   :CoverTitle ;
+        rdfs:label          "vibhaṅg"@km-x-twktt .
 }

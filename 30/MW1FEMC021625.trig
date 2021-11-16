@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021625 {
-    bda:LG91A2D65BA4D9700B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021625"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021625"@en , "imported pubinfo for W1FEMC021625"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021625"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021625 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021625 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "30/MW1FEMC021625.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021625 ;
-        adm:logEntry        bda:LG91A2D65BA4D9700B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD1F24DC5015F8D9B
+    bdr:ID9430ABC5E4A51B4C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.534.III.1" .
     
-    bdr:MF182680794F6DA981
+    bdr:MF0C3A09F9827D4D11
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "132" ;
         :microfilmStrip     "226" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021625 {
         a                   :Instance ;
         skos:prefLabel      "តម្រាប់លោកន័យ"@km , "tamrāp' lokanăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD1F24DC5015F8D9B ;
+            bdr:ID9430ABC5E4A51B4C ;
         :hasFascicles       "1-16" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT39D832AB8899FAAC , bdr:TT9430ABC5E4A51B4C , bdr:TTB273DB93AB6A54BE , bdr:TTB8CA31B258F9B81A ;
+        :hasTitle           bdr:TT271972754AF11CD0 , bdr:TT91A2D65BA4D9700B , bdr:TTB273DB93AB6A54BE , bdr:TTB8CA31B258F9B81A ;
         :instanceHasReproduction  bdr:W1FEMC021625 ;
+        :instanceOf         bdr:WA1FEMC010066 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF182680794F6DA981 ;
-        :note               bdr:NT0C3A09F9827D4D11 ;
+        :microfilmItem      bdr:MF0C3A09F9827D4D11 ;
+        :note               bdr:NT39D832AB8899FAAC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0C3A09F9827D4D11
+    bdr:NT39D832AB8899FAAC
         a                   :Note ;
         :contentLocationStatement  "pg. 293" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT39D832AB8899FAAC
+    bdr:TT271972754AF11CD0
+        a                   :Title ;
+        rdfs:label          "tamrāp' lokanăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB8CA31B258F9B81A .
+    
+    bdr:TT91A2D65BA4D9700B
+        a                   :Title ;
+        rdfs:label          "តម្រាប់លោកន័យ"@km ;
+        :femcConversionOf   bdr:TTB273DB93AB6A54BE .
+    
+    bdr:TTB273DB93AB6A54BE
         a                   :CoverTitle ;
         rdfs:label          "តំរាបលោក្កនៃ"@km .
     
-    bdr:TT9430ABC5E4A51B4C
+    bdr:TTB8CA31B258F9B81A
         a                   :CoverTitle ;
         rdfs:label          "taṃrāp lokkanai"@km-x-twktt .
-    
-    bdr:TTB273DB93AB6A54BE
-        a                   :Title ;
-        rdfs:label          "តម្រាប់លោកន័យ"@km ;
-        :femcConversionOf   bdr:TT39D832AB8899FAAC .
-    
-    bdr:TTB8CA31B258F9B81A
-        a                   :Title ;
-        rdfs:label          "tamrāp' lokanăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9430ABC5E4A51B4C .
 }

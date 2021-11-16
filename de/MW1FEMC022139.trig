@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022139 {
-    bda:LGF97C253B0B576606
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022139"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022139"@en , "imported pubinfo for W1FEMC022139"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022139"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022139 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022139 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "de/MW1FEMC022139.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022139 ;
-        adm:logEntry        bda:LGF97C253B0B576606 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6AC7E387AA4189AA
+    bdr:ID3F798F00810323C0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.129.I.3" .
     
-    bdr:MF19DDF90EF1133EEC
+    bdr:MF28DA53DEA737D89D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "138" ;
         :microfilmStrip     "232" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022139 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកកាមរាគា"@km , "lpök kām rāgā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6AC7E387AA4189AA ;
+            bdr:ID3F798F00810323C0 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3F798F00810323C0 , bdr:TT4D9E46BE66890081 , bdr:TT52643432D6B86ADE , bdr:TT829F71A897FE2B4C ;
+        :hasTitle           bdr:TT4D9E46BE66890081 , bdr:TT829F71A897FE2B4C , bdr:TTD261E235B3E8587F , bdr:TTF97C253B0B576606 ;
         :instanceHasReproduction  bdr:W1FEMC022139 ;
+        :instanceOf         bdr:WA1FEMC110017 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF19DDF90EF1133EEC ;
-        :note               bdr:NT28DA53DEA737D89D ;
+        :microfilmItem      bdr:MF28DA53DEA737D89D ;
+        :note               bdr:NT52643432D6B86ADE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1415" .
     
-    bdr:NT28DA53DEA737D89D
+    bdr:NT52643432D6B86ADE
         a                   :Note ;
         :contentLocationStatement  "pg. 380" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3F798F00810323C0
+    bdr:TT4D9E46BE66890081
         a                   :CoverTitle ;
         rdfs:label          "kām rāgā"@km-x-twktt .
     
-    bdr:TT4D9E46BE66890081
-        a                   :Title ;
-        rdfs:label          "lpök kām rāgā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3F798F00810323C0 .
-    
-    bdr:TT52643432D6B86ADE
+    bdr:TT829F71A897FE2B4C
         a                   :CoverTitle ;
         rdfs:label          "កាមរាគា"@km .
     
-    bdr:TT829F71A897FE2B4C
+    bdr:TTD261E235B3E8587F
+        a                   :Title ;
+        rdfs:label          "lpök kām rāgā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4D9E46BE66890081 .
+    
+    bdr:TTF97C253B0B576606
         a                   :Title ;
         rdfs:label          "ល្បើកកាមរាគា"@km ;
-        :femcConversionOf   bdr:TT52643432D6B86ADE .
+        :femcConversionOf   bdr:TT829F71A897FE2B4C .
 }

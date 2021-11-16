@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011465 {
-    bda:LG6CC601CB6B333CD0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011465"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011465"@en , "imported pubinfo for W1FEMC011465"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011465"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011465 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011465 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "28/MW1FEMC011465.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011465 ;
-        adm:logEntry        bda:LG6CC601CB6B333CD0 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1643D8F1C5C8F9E1
+    bdr:ID08909A12C7878526
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "037-A.10.07.03.I.1" .
     
-    bdr:MF867403F6FEDD34D9
+    bdr:MF5B32C34DE123029D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "73" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011465 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់គោបាល"@km , "cpāp' gopāl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1643D8F1C5C8F9E1 ;
+            bdr:ID08909A12C7878526 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT08909A12C7878526 , bdr:TT60452D90B9C98E2E , bdr:TT9EC742BC8CFBD55F , bdr:TTA365B69961E4E355 ;
+        :hasTitle           bdr:TT0E15BA506EB9DD1C , bdr:TT60452D90B9C98E2E , bdr:TT6CC601CB6B333CD0 , bdr:TTA365B69961E4E355 ;
         :instanceHasReproduction  bdr:W1FEMC011465 ;
+        :instanceOf         bdr:WA1FEMC100004 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF867403F6FEDD34D9 ;
-        :note               bdr:NT5B32C34DE123029D ;
+        :microfilmItem      bdr:MF5B32C34DE123029D ;
+        :note               bdr:NT9EC742BC8CFBD55F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5B32C34DE123029D
+    bdr:NT9EC742BC8CFBD55F
         a                   :Note ;
         :contentLocationStatement  "pg. 338" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT08909A12C7878526
-        a                   :CoverTitle ;
-        rdfs:label          "gopāl "@km-x-twktt .
+    bdr:TT0E15BA506EB9DD1C
+        a                   :Title ;
+        rdfs:label          "cpāp' gopāl"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA365B69961E4E355 .
     
     bdr:TT60452D90B9C98E2E
-        a                   :Title ;
-        rdfs:label          "ច្បាប់គោបាល"@km ;
-        :femcConversionOf   bdr:TT9EC742BC8CFBD55F .
-    
-    bdr:TT9EC742BC8CFBD55F
         a                   :CoverTitle ;
         rdfs:label          "គោបាល"@km .
     
-    bdr:TTA365B69961E4E355
+    bdr:TT6CC601CB6B333CD0
         a                   :Title ;
-        rdfs:label          "cpāp' gopāl"@km-x-twktt ;
-        :femcConversionOf   bdr:TT08909A12C7878526 .
+        rdfs:label          "ច្បាប់គោបាល"@km ;
+        :femcConversionOf   bdr:TT60452D90B9C98E2E .
+    
+    bdr:TTA365B69961E4E355
+        a                   :CoverTitle ;
+        rdfs:label          "gopāl "@km-x-twktt .
 }

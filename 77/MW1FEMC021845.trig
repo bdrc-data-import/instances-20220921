@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021845 {
-    bda:LGC82D4EA6256E6EE1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021845"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021845"@en , "imported pubinfo for W1FEMC021845"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021845"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021845 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021845 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "77/MW1FEMC021845.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021845 ;
-        adm:logEntry        bda:LGC82D4EA6256E6EE1 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3E747FAB7B8526A2
+    bdr:ID6FD3C64DB6526AC1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.627.II.1" .
     
@@ -51,48 +45,47 @@ bdg:MW1FEMC021845 {
         a                   :Instance ;
         skos:prefLabel      "សិរសា"@km , "sirasā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3E747FAB7B8526A2 ;
+            bdr:ID6FD3C64DB6526AC1 ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT14C608185164E508 , bdr:TT6D8BC6B9B1DC7870 , bdr:TT6FD3C64DB6526AC1 , bdr:TT9C1BE89A8F7EE94C , bdr:TTCBECFA4AE0AD77A1 , bdr:TTDBDC8A394A1D5490 ;
+        :hasTitle           bdr:TT14C608185164E508 , bdr:TT9C1BE89A8F7EE94C , bdr:TTC82D4EA6256E6EE1 , bdr:TTCBECFA4AE0AD77A1 , bdr:TTDBDC8A394A1D5490 , bdr:TTFF3B5186652AC35C ;
         :instanceHasReproduction  bdr:W1FEMC021845 ;
+        :instanceOf         bdr:WA1FEMC120032 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTD00C7515CB7F123C ;
+        :note               bdr:NT6D8BC6B9B1DC7870 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD00C7515CB7F123C
+    bdr:NT6D8BC6B9B1DC7870
         a                   :Note ;
         :contentLocationStatement  "pg. 330" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT14C608185164E508
-        a                   :Title ;
-        rdfs:label          "sirasā"@km-x-twktt .
-    
-    bdr:TT6D8BC6B9B1DC7870
         a                   :CoverTitle ;
-        rdfs:label          "បុញសា"@km .
-    
-    bdr:TT6FD3C64DB6526AC1
-        a                   :CoverTitle ;
-        rdfs:label          "puñasā"@km-x-twktt .
+        rdfs:label          "puññasār"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDBDC8A394A1D5490 .
     
     bdr:TT9C1BE89A8F7EE94C
         a                   :CoverTitle ;
-        rdfs:label          "បុញ្ញសារ"@km ;
-        :femcConversionOf   bdr:TT6D8BC6B9B1DC7870 .
+        rdfs:label          "បុញសា"@km .
     
-    bdr:TTCBECFA4AE0AD77A1
+    bdr:TTC82D4EA6256E6EE1
         a                   :Title ;
         rdfs:label          "សិរសា"@km .
     
+    bdr:TTCBECFA4AE0AD77A1
+        a                   :CoverTitle ;
+        rdfs:label          "បុញ្ញសារ"@km ;
+        :femcConversionOf   bdr:TT9C1BE89A8F7EE94C .
+    
     bdr:TTDBDC8A394A1D5490
         a                   :CoverTitle ;
-        rdfs:label          "puññasār"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6FD3C64DB6526AC1 .
+        rdfs:label          "puñasā"@km-x-twktt .
+    
+    bdr:TTFF3B5186652AC35C
+        a                   :Title ;
+        rdfs:label          "sirasā"@km-x-twktt .
 }

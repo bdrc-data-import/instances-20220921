@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011312 {
-    bda:LG88A26D93BDA54E52
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011312"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011312"@en , "imported pubinfo for W1FEMC011312"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011312"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011312 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011312 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d7/MW1FEMC011312.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011312 ;
-        adm:logEntry        bda:LG88A26D93BDA54E52 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID855025DF89F2630C
+    bdr:ID7439BD81F7072B50
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "004-A.09.01.01.III.6" .
     
-    bdr:MF3DA4AD0331B3C2CD
+    bdr:MFBDF76786725DE872
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "142" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011312 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសាលា"@pi-khmr , "ānisaṅs sālā"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID855025DF89F2630C ;
+            bdr:ID7439BD81F7072B50 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT081EFAB0D22CB193 , bdr:TT7439BD81F7072B50 , bdr:TTA757427C6BA74210 , bdr:TTDD3B32C3E6EEF782 ;
+        :hasTitle           bdr:TT88A26D93BDA54E52 , bdr:TTA757427C6BA74210 , bdr:TTB9A5AF1EDE91E13C , bdr:TTDD3B32C3E6EEF782 ;
         :instanceHasReproduction  bdr:W1FEMC011312 ;
+        :instanceOf         bdr:WA1FEMC060034 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3DA4AD0331B3C2CD ;
-        :note               bdr:NTBDF76786725DE872 ;
+        :microfilmItem      bdr:MFBDF76786725DE872 ;
+        :note               bdr:NT081EFAB0D22CB193 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBDF76786725DE872
+    bdr:NT081EFAB0D22CB193
         a                   :Note ;
         :contentLocationStatement  "pg. 308" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT081EFAB0D22CB193
+    bdr:TT88A26D93BDA54E52
+        a                   :Title ;
+        rdfs:label          "អានិសង្សសាលា"@pi-khmr ;
+        :femcConversionOf   bdr:TTA757427C6BA74210 .
+    
+    bdr:TTA757427C6BA74210
         a                   :CoverTitle ;
         rdfs:label          "អនិសងសាឡារ"@pi-khmr .
     
-    bdr:TT7439BD81F7072B50
-        a                   :CoverTitle ;
-        rdfs:label          "anisaṅ sāḷār"@pi-x-twktt .
-    
-    bdr:TTA757427C6BA74210
-        a                   :Title ;
-        rdfs:label          "អានិសង្សសាលា"@pi-khmr ;
-        :femcConversionOf   bdr:TT081EFAB0D22CB193 .
-    
-    bdr:TTDD3B32C3E6EEF782
+    bdr:TTB9A5AF1EDE91E13C
         a                   :Title ;
         rdfs:label          "ānisaṅs sālā"@pi-x-twktt ;
-        :femcConversionOf   bdr:TT7439BD81F7072B50 .
+        :femcConversionOf   bdr:TTDD3B32C3E6EEF782 .
+    
+    bdr:TTDD3B32C3E6EEF782
+        a                   :CoverTitle ;
+        rdfs:label          "anisaṅ sāḷār"@pi-x-twktt .
 }

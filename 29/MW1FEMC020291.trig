@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020291 {
-    bda:LG5B015D827EA26B5F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020291"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020291"@en , "imported pubinfo for W1FEMC020291"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020291"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020291 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020291 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "29/MW1FEMC020291.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020291 ;
-        adm:logEntry        bda:LG5B015D827EA26B5F , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID06CFFE3899A01E4F
+    bdr:IDB44409AADDF3CE2F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.184.II.1" .
     
-    bdr:MFCA1FFE73309F5883
+    bdr:MFFE653F06FCC4C4B7
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020291 {
         a                   :Instance ;
         skos:prefLabel      "ហង្សយន្ត"@km , "haṅs yant"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID06CFFE3899A01E4F ;
+            bdr:IDB44409AADDF3CE2F ;
         :hasFascicles       "1, 2, 3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4E0B46BE886F045B , bdr:TT57882EC06DE50BF9 , bdr:TTB44409AADDF3CE2F , bdr:TTD8302ED2E8C29C4E ;
+        :hasTitle           bdr:TT3A194AF1880AD58B , bdr:TT4E0B46BE886F045B , bdr:TT57882EC06DE50BF9 , bdr:TT5B015D827EA26B5F ;
         :instanceHasReproduction  bdr:W1FEMC020291 ;
+        :instanceOf         bdr:WA1FEMC120014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCA1FFE73309F5883 ;
-        :note               bdr:NTFE653F06FCC4C4B7 ;
+        :microfilmItem      bdr:MFFE653F06FCC4C4B7 ;
+        :note               bdr:NTD8302ED2E8C29C4E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTFE653F06FCC4C4B7
+    bdr:NTD8302ED2E8C29C4E
         a                   :Note ;
         :contentLocationStatement  "pg. 58" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4E0B46BE886F045B
-        a                   :Title ;
-        rdfs:label          "ហង្សយន្ត"@km ;
-        :femcConversionOf   bdr:TTD8302ED2E8C29C4E .
-    
-    bdr:TT57882EC06DE50BF9
+    bdr:TT3A194AF1880AD58B
         a                   :Title ;
         rdfs:label          "haṅs yant"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB44409AADDF3CE2F .
+        :femcConversionOf   bdr:TT57882EC06DE50BF9 .
     
-    bdr:TTB44409AADDF3CE2F
+    bdr:TT4E0B46BE886F045B
+        a                   :CoverTitle ;
+        rdfs:label          "ហង់យុន្ទ"@km .
+    
+    bdr:TT57882EC06DE50BF9
         a                   :CoverTitle ;
         rdfs:label          "haṅ' yund"@km-x-twktt .
     
-    bdr:TTD8302ED2E8C29C4E
-        a                   :CoverTitle ;
-        rdfs:label          "ហង់យុន្ទ"@km .
+    bdr:TT5B015D827EA26B5F
+        a                   :Title ;
+        rdfs:label          "ហង្សយន្ត"@km ;
+        :femcConversionOf   bdr:TT4E0B46BE886F045B .
 }

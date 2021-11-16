@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011471 {
-    bda:LG1DB35E95D0971620
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011471"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011471"@en , "imported pubinfo for W1FEMC011471"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011471"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011471 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011471 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ec/MW1FEMC011471.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011471 ;
-        adm:logEntry        bda:LG1DB35E95D0971620 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5ED3B013237352AA
+    bdr:IDA2EFDF2B4AAE6F36
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "012-013-A.10.08.01.II.1" .
     
-    bdr:MFB191D6A45D880F46
+    bdr:MFAD2E42EBAD265DC7
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "35" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011471 {
         a                   :Instance ;
         skos:prefLabel      "លក្សណវង្ស"@km , "laksaṇavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5ED3B013237352AA ;
+            bdr:IDA2EFDF2B4AAE6F36 ;
         :hasFascicles       "3, 10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0024DFCE593E2B52 , bdr:TT210E652856ACE551 , bdr:TT2F0D4B69067B8EA5 , bdr:TTA2EFDF2B4AAE6F36 ;
+        :hasTitle           bdr:TT0024DFCE593E2B52 , bdr:TT1DB35E95D0971620 , bdr:TT210E652856ACE551 , bdr:TTF8FB5679C9798708 ;
         :instanceHasReproduction  bdr:W1FEMC011471 ;
+        :instanceOf         bdr:WA1FEMC120022 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB191D6A45D880F46 ;
-        :note               bdr:NTAD2E42EBAD265DC7 ;
+        :microfilmItem      bdr:MFAD2E42EBAD265DC7 ;
+        :note               bdr:NT2F0D4B69067B8EA5 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTAD2E42EBAD265DC7
+    bdr:NT2F0D4B69067B8EA5
         a                   :Note ;
         :contentLocationStatement  "pg. 339" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0024DFCE593E2B52
-        a                   :Title ;
-        rdfs:label          "លក្សណវង្ស"@km ;
-        :femcConversionOf   bdr:TT2F0D4B69067B8EA5 .
-    
-    bdr:TT210E652856ACE551
-        a                   :Title ;
-        rdfs:label          "laksaṇavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA2EFDF2B4AAE6F36 .
-    
-    bdr:TT2F0D4B69067B8EA5
         a                   :CoverTitle ;
         rdfs:label          "ល័ក្សិន្នវង្ស"@km .
     
-    bdr:TTA2EFDF2B4AAE6F36
+    bdr:TT1DB35E95D0971620
+        a                   :Title ;
+        rdfs:label          "លក្សណវង្ស"@km ;
+        :femcConversionOf   bdr:TT0024DFCE593E2B52 .
+    
+    bdr:TT210E652856ACE551
         a                   :CoverTitle ;
         rdfs:label          "lăksinnavaṅs"@km-x-twktt .
+    
+    bdr:TTF8FB5679C9798708
+        a                   :Title ;
+        rdfs:label          "laksaṇavaṅs"@km-x-twktt ;
+        :femcConversionOf   bdr:TT210E652856ACE551 .
 }

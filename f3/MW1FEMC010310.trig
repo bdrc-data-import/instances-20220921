@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010310 {
-    bda:LGC7DDA0E47C1F07AB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010310"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010310"@en , "imported pubinfo for W1FEMC010310"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010310"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010310 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010310 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f3/MW1FEMC010310.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010310 ;
-        adm:logEntry        bda:LGC7DDA0E47C1F07AB , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID62625B4E0E768DD6
+    bdr:ID7CDA67C49EDCE988
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "032-PP.03.03.03.III.4" .
     
-    bdr:MF5CA6B26A58CB405F
+    bdr:MFBCE521E634AFB3B4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "62" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010310 {
         a                   :Instance ;
         skos:prefLabel      "មូលព្រះអភិធម្ម"@km , "mūl braḥ abhidhamm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID62625B4E0E768DD6 ;
+            bdr:ID7CDA67C49EDCE988 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT675D82961C298EB2 , bdr:TT694688627839457B , bdr:TT7CDA67C49EDCE988 , bdr:TTDE73345333A153BB ;
+        :hasTitle           bdr:TT691240041E3F988D , bdr:TT694688627839457B , bdr:TTC7DDA0E47C1F07AB , bdr:TTDE73345333A153BB ;
         :instanceHasReproduction  bdr:W1FEMC010310 ;
+        :instanceOf         bdr:WA1FEMC040009 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5CA6B26A58CB405F ;
-        :note               bdr:NTBCE521E634AFB3B4 ;
+        :microfilmItem      bdr:MFBCE521E634AFB3B4 ;
+        :note               bdr:NT675D82961C298EB2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBCE521E634AFB3B4
+    bdr:NT675D82961C298EB2
         a                   :Note ;
         :contentLocationStatement  "pg. 114" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT675D82961C298EB2
+    bdr:TT691240041E3F988D
+        a                   :Title ;
+        rdfs:label          "mūl braḥ abhidhamm"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDE73345333A153BB .
+    
+    bdr:TT694688627839457B
         a                   :CoverTitle ;
         rdfs:label          "មូលព្រះអព្ភិធម្ម"@km .
     
-    bdr:TT694688627839457B
+    bdr:TTC7DDA0E47C1F07AB
         a                   :Title ;
         rdfs:label          "មូលព្រះអភិធម្ម"@km ;
-        :femcConversionOf   bdr:TT675D82961C298EB2 .
-    
-    bdr:TT7CDA67C49EDCE988
-        a                   :CoverTitle ;
-        rdfs:label          "mūl braḥ abbhidhamm"@km-x-twktt .
+        :femcConversionOf   bdr:TT694688627839457B .
     
     bdr:TTDE73345333A153BB
-        a                   :Title ;
-        rdfs:label          "mūl braḥ abhidhamm"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7CDA67C49EDCE988 .
+        a                   :CoverTitle ;
+        rdfs:label          "mūl braḥ abbhidhamm"@km-x-twktt .
 }

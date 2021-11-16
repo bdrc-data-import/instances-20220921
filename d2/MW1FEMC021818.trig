@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021818 {
-    bda:LG69D15314BBE88995
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021818"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021818"@en , "imported pubinfo for W1FEMC021818"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021818"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021818 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021818 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d2/MW1FEMC021818.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021818 ;
-        adm:logEntry        bda:LG69D15314BBE88995 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID7FD53EDB34259DA9
+    bdr:ID2313F77B1649FA0E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.600.I.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021818 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ក្រម"@km , "cpāp' kram"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7FD53EDB34259DA9 ;
+            bdr:ID2313F77B1649FA0E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1328FEA85906FCCB , bdr:TT172FB9E3A016744A , bdr:TT2313F77B1649FA0E , bdr:TT3520A8D6A6694E19 ;
+        :hasTitle           bdr:TT172FB9E3A016744A , bdr:TT3520A8D6A6694E19 , bdr:TT5EB5218AE7F9A624 , bdr:TT69D15314BBE88995 ;
         :instanceHasReproduction  bdr:W1FEMC021818 ;
+        :instanceOf         bdr:WA1FEMC100009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT53ED86997DC65023 ;
+        :note               bdr:NT1328FEA85906FCCB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT53ED86997DC65023
+    bdr:NT1328FEA85906FCCB
         a                   :Note ;
         :contentLocationStatement  "pg. 325" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1328FEA85906FCCB
-        a                   :CoverTitle ;
-        rdfs:label          "ច្បាប​ក្រំម"@km .
-    
     bdr:TT172FB9E3A016744A
-        a                   :Title ;
-        rdfs:label          "cpāp' kram"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2313F77B1649FA0E .
-    
-    bdr:TT2313F77B1649FA0E
         a                   :CoverTitle ;
         rdfs:label          "cpāp kraṃm"@km-x-twktt .
     
     bdr:TT3520A8D6A6694E19
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប​ក្រំម"@km .
+    
+    bdr:TT5EB5218AE7F9A624
+        a                   :Title ;
+        rdfs:label          "cpāp' kram"@km-x-twktt ;
+        :femcConversionOf   bdr:TT172FB9E3A016744A .
+    
+    bdr:TT69D15314BBE88995
         a                   :Title ;
         rdfs:label          "ច្បាប់ក្រម"@km ;
-        :femcConversionOf   bdr:TT1328FEA85906FCCB .
+        :femcConversionOf   bdr:TT3520A8D6A6694E19 .
 }

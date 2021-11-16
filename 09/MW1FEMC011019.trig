@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011019 {
-    bda:LGEDE69ED0A0053C4C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011019"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011019"@en , "imported pubinfo for W1FEMC011019"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011019"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011019 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011019 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "09/MW1FEMC011019.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011019 ;
-        adm:logEntry        bda:LGEDE69ED0A0053C4C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA17DD956FFCCDCB1
+    bdr:ID1F4BE6A0B15B58CE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "029-A.04.07.01.III.1" .
     
-    bdr:MF4027A4A6A7E0BFE6
+    bdr:MF109BCB29969B40A5
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "80" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011019 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA17DD956FFCCDCB1 ;
+            bdr:ID1F4BE6A0B15B58CE ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1F4BE6A0B15B58CE , bdr:TT2350B01D8B3C527C , bdr:TTAE2A6C99D4159141 , bdr:TTDD960C6758CF482E ;
+        :hasTitle           bdr:TT2350B01D8B3C527C , bdr:TTAE2A6C99D4159141 , bdr:TTEDE69ED0A0053C4C , bdr:TTF677A8F1D6D5DF91 ;
         :instanceHasReproduction  bdr:W1FEMC011019 ;
+        :instanceOf         bdr:WA1FEMC010048 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4027A4A6A7E0BFE6 ;
-        :note               bdr:NT109BCB29969B40A5 ;
+        :microfilmItem      bdr:MF109BCB29969B40A5 ;
+        :note               bdr:NTDD960C6758CF482E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT109BCB29969B40A5
+    bdr:NTDD960C6758CF482E
         a                   :Note ;
         :contentLocationStatement  "pg. 252" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1F4BE6A0B15B58CE
+    bdr:TT2350B01D8B3C527C
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មត្រា្ស"@km .
+    
+    bdr:TTAE2A6C99D4159141
         a                   :CoverTitle ;
         rdfs:label          "dhamm trās°"@km-x-twktt .
     
-    bdr:TT2350B01D8B3C527C
+    bdr:TTEDE69ED0A0053C4C
         a                   :Title ;
         rdfs:label          "បឋមត្រាស់"@km ;
-        :femcConversionOf   bdr:TTDD960C6758CF482E .
+        :femcConversionOf   bdr:TT2350B01D8B3C527C .
     
-    bdr:TTAE2A6C99D4159141
+    bdr:TTF677A8F1D6D5DF91
         a                   :Title ;
         rdfs:label          "paṭham trās'"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1F4BE6A0B15B58CE .
-    
-    bdr:TTDD960C6758CF482E
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មត្រា្ស"@km .
+        :femcConversionOf   bdr:TTAE2A6C99D4159141 .
 }

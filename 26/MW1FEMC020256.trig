@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020256 {
-    bda:LGC477332D6B21BB4C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020256"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020256"@en , "imported pubinfo for W1FEMC020256"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020256"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020256 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020256 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "26/MW1FEMC020256.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020256 ;
-        adm:logEntry        bda:LGC477332D6B21BB4C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID34D82BDF437FCF13
+    bdr:ID5C8C026FFDB99504
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.149.V.1" .
     
-    bdr:MF1EA947B4FB7741AD
+    bdr:MFCE8942AAC3F67A5C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "62" ;
         :microfilmStrip     "156" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020256 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-suṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID34D82BDF437FCF13 ;
+            bdr:ID5C8C026FFDB99504 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5C8C026FFDB99504 , bdr:TT7A4622C8D20EC643 , bdr:TT917B8E84EC63D786 , bdr:TTD8A91A3083C10692 ;
+        :hasTitle           bdr:TT7A4622C8D20EC643 , bdr:TTC477332D6B21BB4C , bdr:TTC96807E4C025538E , bdr:TTD8A91A3083C10692 ;
         :instanceHasReproduction  bdr:W1FEMC020256 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1EA947B4FB7741AD ;
-        :note               bdr:NTCE8942AAC3F67A5C ;
+        :microfilmItem      bdr:MFCE8942AAC3F67A5C ;
+        :note               bdr:NT917B8E84EC63D786 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1119" .
     
-    bdr:NTCE8942AAC3F67A5C
+    bdr:NT917B8E84EC63D786
         a                   :Note ;
         :contentLocationStatement  "pg. 51" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT5C8C026FFDB99504
-        a                   :CoverTitle ;
-        rdfs:label          "dhamm vịṅ-suṃṅ"@km-x-twktt .
-    
     bdr:TT7A4622C8D20EC643
-        a                   :Title ;
-        rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT917B8E84EC63D786 .
-    
-    bdr:TT917B8E84EC63D786
         a                   :CoverTitle ;
         rdfs:label          "ធម្មវឹងសុំង"@km .
     
-    bdr:TTD8A91A3083C10692
+    bdr:TTC477332D6B21BB4C
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TT7A4622C8D20EC643 .
+    
+    bdr:TTC96807E4C025538E
         a                   :Title ;
         rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5C8C026FFDB99504 .
+        :femcConversionOf   bdr:TTD8A91A3083C10692 .
+    
+    bdr:TTD8A91A3083C10692
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm vịṅ-suṃṅ"@km-x-twktt .
 }

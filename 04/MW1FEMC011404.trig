@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011404 {
-    bda:LGE9D09A915CB5D4CE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011404"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011404"@en , "imported pubinfo for W1FEMC011404"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011404"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011404 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011404 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "04/MW1FEMC011404.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011404 ;
-        adm:logEntry        bda:LGE9D09A915CB5D4CE , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDBDDF3C1B18B7DBB2
+    bdr:ID6BF2F621A06DA6D2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "023-A.10.07.02.III.1" .
     
-    bdr:MFDFF387D65BBCB6D0
+    bdr:MF0DB6CC48780D0A6F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "35" ;
         :microfilmStrip     "68" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011404 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មរតនវណ្ណនា"@km , "dhamm ratan vaṇṇanā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBDDF3C1B18B7DBB2 ;
+            bdr:ID6BF2F621A06DA6D2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT35691D6BB7876154 , bdr:TT36BA81372888EECA , bdr:TT67BF6107D63C8630 , bdr:TT6BF2F621A06DA6D2 ;
+        :hasTitle           bdr:TT35691D6BB7876154 , bdr:TT5313E51806B5DD6F , bdr:TT67BF6107D63C8630 , bdr:TTE9D09A915CB5D4CE ;
         :instanceHasReproduction  bdr:W1FEMC011404 ;
+        :instanceOf         bdr:WA1FEMC010027 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDFF387D65BBCB6D0 ;
-        :note               bdr:NT0DB6CC48780D0A6F ;
+        :microfilmItem      bdr:MF0DB6CC48780D0A6F ;
+        :note               bdr:NT36BA81372888EECA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0DB6CC48780D0A6F
+    bdr:NT36BA81372888EECA
         a                   :Note ;
         :contentLocationStatement  "pg. 327" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT35691D6BB7876154
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm ratan"@km-x-twktt .
+    
+    bdr:TT5313E51806B5DD6F
         a                   :Title ;
         rdfs:label          "dhamm ratan vaṇṇanā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6BF2F621A06DA6D2 .
+        :femcConversionOf   bdr:TT35691D6BB7876154 .
     
-    bdr:TT36BA81372888EECA
+    bdr:TT67BF6107D63C8630
         a                   :CoverTitle ;
         rdfs:label          "ធម្មរតន"@km .
     
-    bdr:TT67BF6107D63C8630
+    bdr:TTE9D09A915CB5D4CE
         a                   :Title ;
         rdfs:label          "ធម្មរតនវណ្ណនា"@km ;
-        :femcConversionOf   bdr:TT36BA81372888EECA .
-    
-    bdr:TT6BF2F621A06DA6D2
-        a                   :CoverTitle ;
-        rdfs:label          "dhamm ratan"@km-x-twktt .
+        :femcConversionOf   bdr:TT67BF6107D63C8630 .
 }

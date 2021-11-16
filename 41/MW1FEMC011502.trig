@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011502 {
-    bda:LGAE15582681657CF3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011502"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011502"@en , "imported pubinfo for W1FEMC011502"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011502"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011502 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011502 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "41/MW1FEMC011502.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011502 ;
-        adm:logEntry        bda:LGAE15582681657CF3 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCCDA80E8546474CC
+    bdr:IDCA3A30ECC76B549C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "044-A.10.08.01.II.1" .
     
-    bdr:MF37317D8A56856A55
+    bdr:MF1F80D19EB36CAB53
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "38" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011502 {
         a                   :Instance ;
         skos:prefLabel      "ជ័យទត្ត"@km , "jăy datt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCCDA80E8546474CC ;
+            bdr:IDCA3A30ECC76B549C ;
         :hasFascicles       "8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1287EEE85BD23483 , bdr:TT86F4C1C4001AE319 , bdr:TTCA3A30ECC76B549C , bdr:TTF8BB22EE380FD3B1 ;
+        :hasTitle           bdr:TT1287EEE85BD23483 , bdr:TT86F4C1C4001AE319 , bdr:TTAE15582681657CF3 , bdr:TTCC824063CC677B6F ;
         :instanceHasReproduction  bdr:W1FEMC011502 ;
+        :instanceOf         bdr:WA1FEMC120017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF37317D8A56856A55 ;
-        :note               bdr:NT1F80D19EB36CAB53 ;
+        :microfilmItem      bdr:MF1F80D19EB36CAB53 ;
+        :note               bdr:NTF8BB22EE380FD3B1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1F80D19EB36CAB53
+    bdr:NTF8BB22EE380FD3B1
         a                   :Note ;
         :contentLocationStatement  "pg. 345" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1287EEE85BD23483
-        a                   :Title ;
-        rdfs:label          "jăy datt"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCA3A30ECC76B549C .
-    
-    bdr:TT86F4C1C4001AE319
-        a                   :Title ;
-        rdfs:label          "ជ័យទត្ត"@km ;
-        :femcConversionOf   bdr:TTF8BB22EE380FD3B1 .
-    
-    bdr:TTCA3A30ECC76B549C
         a                   :CoverTitle ;
         rdfs:label          "jaiy° dātt"@km-x-twktt .
     
-    bdr:TTF8BB22EE380FD3B1
+    bdr:TT86F4C1C4001AE319
         a                   :CoverTitle ;
         rdfs:label          "ជ្យៃទាត្ត"@km .
+    
+    bdr:TTAE15582681657CF3
+        a                   :Title ;
+        rdfs:label          "ជ័យទត្ត"@km ;
+        :femcConversionOf   bdr:TT86F4C1C4001AE319 .
+    
+    bdr:TTCC824063CC677B6F
+        a                   :Title ;
+        rdfs:label          "jăy datt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1287EEE85BD23483 .
 }

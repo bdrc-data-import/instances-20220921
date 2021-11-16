@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022116 {
-    bda:LGBFBF7ED0CE301222
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022116"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022116"@en , "imported pubinfo for W1FEMC022116"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022116"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022116 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022116 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f6/MW1FEMC022116.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022116 ;
-        adm:logEntry        bda:LGBFBF7ED0CE301222 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCA91C794013ACE7F
+    bdr:IDA3E6B17802C95C57
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "065.I.1" .
     
-    bdr:MF3A7873C1A978AA1C
+    bdr:MF27B6107FFA5CCDA1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "8" ;
         :microfilmStrip     "29" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022116 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ស្រីតូច"@km , "cpāp' srī tūc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCA91C794013ACE7F ;
+            bdr:IDA3E6B17802C95C57 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1E0B882E4FF6B746 , bdr:TT2A0E550ACCE39136 , bdr:TTA3E6B17802C95C57 , bdr:TTC6CCA95CA784FE5C ;
+        :hasTitle           bdr:TT1E0B882E4FF6B746 , bdr:TT2A0E550ACCE39136 , bdr:TTA6E5B12965BEDFF3 , bdr:TTBFBF7ED0CE301222 ;
         :instanceHasReproduction  bdr:W1FEMC022116 ;
+        :instanceOf         bdr:WA1FEMC100078 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3A7873C1A978AA1C ;
-        :note               bdr:NT27B6107FFA5CCDA1 ;
+        :microfilmItem      bdr:MF27B6107FFA5CCDA1 ;
+        :note               bdr:NTC6CCA95CA784FE5C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT27B6107FFA5CCDA1
+    bdr:NTC6CCA95CA784FE5C
         a                   :Note ;
         :contentLocationStatement  "pg. 375" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1E0B882E4FF6B746
-        a                   :Title ;
-        rdfs:label          "cpāp' srī tūc"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA3E6B17802C95C57 .
-    
-    bdr:TT2A0E550ACCE39136
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ស្រីតូច"@km ;
-        :femcConversionOf   bdr:TTC6CCA95CA784FE5C .
-    
-    bdr:TTA3E6B17802C95C57
         a                   :CoverTitle ;
         rdfs:label          "cpāp srī"@km-x-twktt .
     
-    bdr:TTC6CCA95CA784FE5C
+    bdr:TT2A0E550ACCE39136
         a                   :CoverTitle ;
         rdfs:label          "ច្បាបស្រី"@km .
+    
+    bdr:TTA6E5B12965BEDFF3
+        a                   :Title ;
+        rdfs:label          "cpāp' srī tūc"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1E0B882E4FF6B746 .
+    
+    bdr:TTBFBF7ED0CE301222
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ស្រីតូច"@km ;
+        :femcConversionOf   bdr:TT2A0E550ACCE39136 .
 }

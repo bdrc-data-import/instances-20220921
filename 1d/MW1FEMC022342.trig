@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022342 {
-    bda:LGF20DC952327830C5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022342"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022342"@en , "imported pubinfo for W1FEMC022342"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022342"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022342 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022342 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1d/MW1FEMC022342.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022342 ;
-        adm:logEntry        bda:LGF20DC952327830C5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1FABFCE99BBCA7E9
+    bdr:ID86C31D818FC19C23
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.829.I.1" .
     
-    bdr:MF81BCC532953C597B
+    bdr:MF0BF45788A03298DF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022342 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ស្រី"@km , "cpāp' srī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1FABFCE99BBCA7E9 ;
+            bdr:ID86C31D818FC19C23 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT86C31D818FC19C23 , bdr:TTA28FD0553C32A0F6 , bdr:TTBBC962015CBF58C2 , bdr:TTDE70526AF35C518B ;
+        :hasTitle           bdr:TT3461971BBE132D0A , bdr:TTA28FD0553C32A0F6 , bdr:TTBBC962015CBF58C2 , bdr:TTF20DC952327830C5 ;
         :instanceHasReproduction  bdr:W1FEMC022342 ;
+        :instanceOf         bdr:WA1FEMC100017 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF81BCC532953C597B ;
-        :note               bdr:NT0BF45788A03298DF ;
+        :microfilmItem      bdr:MF0BF45788A03298DF ;
+        :note               bdr:NTDE70526AF35C518B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0BF45788A03298DF
+    bdr:NTDE70526AF35C518B
         a                   :Note ;
         :contentLocationStatement  "pg. 419" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT86C31D818FC19C23
+    bdr:TT3461971BBE132D0A
+        a                   :Title ;
+        rdfs:label          "cpāp' srī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA28FD0553C32A0F6 .
+    
+    bdr:TTA28FD0553C32A0F6
         a                   :CoverTitle ;
         rdfs:label          "cpāp srī"@km-x-twktt .
     
-    bdr:TTA28FD0553C32A0F6
-        a                   :Title ;
-        rdfs:label          "cpāp' srī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT86C31D818FC19C23 .
-    
     bdr:TTBBC962015CBF58C2
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ស្រី"@km ;
-        :femcConversionOf   bdr:TTDE70526AF35C518B .
-    
-    bdr:TTDE70526AF35C518B
         a                   :CoverTitle ;
         rdfs:label          "ច្បាបស្រី"@km .
+    
+    bdr:TTF20DC952327830C5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ស្រី"@km ;
+        :femcConversionOf   bdr:TTBBC962015CBF58C2 .
 }

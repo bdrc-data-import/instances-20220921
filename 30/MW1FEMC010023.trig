@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010023 {
-    bda:LG24F2B75146D66C4E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010023"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010023"@en , "imported pubinfo for W1FEMC010023"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010023"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010023 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010023 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "30/MW1FEMC010023.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010023 ;
-        adm:logEntry        bda:LG24F2B75146D66C4E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1EE0522E2BD5049D
+    bdr:ID0507BCE9160D4795
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "010-PP.00.03.01.V.1" .
     
-    bdr:MF7C7C417C2697A869
+    bdr:MF3178DD795381655E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "10" ;
         :microfilmStrip     "40" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010023 {
         a                   :Instance ;
         skos:prefLabel      "ពុទ្ធទំនាយ"@km , "buddh daṃnāy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1EE0522E2BD5049D ;
+            bdr:ID0507BCE9160D4795 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0507BCE9160D4795 , bdr:TT6105C3383DF0576A , bdr:TT8DE9CA7AE609E97D , bdr:TTD5EB7FA6C8E59EEE ;
+        :hasTitle           bdr:TT24F2B75146D66C4E , bdr:TT3F022A07B9DB9827 , bdr:TT6105C3383DF0576A , bdr:TTD5EB7FA6C8E59EEE ;
         :instanceHasReproduction  bdr:W1FEMC010023 ;
+        :instanceOf         bdr:WA1FEMC070004 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7C7C417C2697A869 ;
-        :note               bdr:NT3178DD795381655E ;
+        :microfilmItem      bdr:MF3178DD795381655E ;
+        :note               bdr:NT8DE9CA7AE609E97D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3178DD795381655E
+    bdr:NT8DE9CA7AE609E97D
         a                   :Note ;
         :contentLocationStatement  "pg. 58" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0507BCE9160D4795
-        a                   :CoverTitle ;
-        rdfs:label          "buddh duṃmnāy knuṅ sāsnār"@km-x-twktt .
-    
-    bdr:TT6105C3383DF0576A
+    bdr:TT24F2B75146D66C4E
         a                   :Title ;
         rdfs:label          "ពុទ្ធទំនាយ"@km ;
-        :femcConversionOf   bdr:TT8DE9CA7AE609E97D .
+        :femcConversionOf   bdr:TT6105C3383DF0576A .
     
-    bdr:TT8DE9CA7AE609E97D
+    bdr:TT3F022A07B9DB9827
+        a                   :Title ;
+        rdfs:label          "buddh daṃnāy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD5EB7FA6C8E59EEE .
+    
+    bdr:TT6105C3383DF0576A
         a                   :CoverTitle ;
         rdfs:label          "ពុទ្ធទុំម្នាយក្នុងសាស្នារ"@km .
     
     bdr:TTD5EB7FA6C8E59EEE
-        a                   :Title ;
-        rdfs:label          "buddh daṃnāy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0507BCE9160D4795 .
+        a                   :CoverTitle ;
+        rdfs:label          "buddh duṃmnāy knuṅ sāsnār"@km-x-twktt .
 }

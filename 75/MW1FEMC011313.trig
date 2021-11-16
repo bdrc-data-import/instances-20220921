@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011313 {
-    bda:LGEDFD228B93A266DC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011313"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011313"@en , "imported pubinfo for W1FEMC011313"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011313"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011313 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011313 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "75/MW1FEMC011313.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011313 ;
-        adm:logEntry        bda:LGEDFD228B93A266DC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD38EEA56EE848D40
+    bdr:ID45BBB3BC825293A1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005-A.09.01.01.III.6" .
     
-    bdr:MFD092735F82EFF161
+    bdr:MF5415EDF76522E128
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "142" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011313 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះធម្មគោរព"@pi-khmr , "ānisaṅs braḥ dhamm gorab"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD38EEA56EE848D40 ;
+            bdr:ID45BBB3BC825293A1 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1ACB0D0F6851E575 , bdr:TT45BBB3BC825293A1 , bdr:TT87AD4BC26508F0DB , bdr:TTE77D3AC17EF5FEE8 ;
+        :hasTitle           bdr:TT1ACB0D0F6851E575 , bdr:TTE77D3AC17EF5FEE8 , bdr:TTECC9927FE1ECC34D , bdr:TTEDFD228B93A266DC ;
         :instanceHasReproduction  bdr:W1FEMC011313 ;
+        :instanceOf         bdr:WA1FEMC060006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD092735F82EFF161 ;
-        :note               bdr:NT5415EDF76522E128 ;
+        :microfilmItem      bdr:MF5415EDF76522E128 ;
+        :note               bdr:NT87AD4BC26508F0DB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5415EDF76522E128
+    bdr:NT87AD4BC26508F0DB
         a                   :Note ;
         :contentLocationStatement  "pg. 308" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1ACB0D0F6851E575
-        a                   :Title ;
-        rdfs:label          "ānisaṅs braḥ dhamm gorab"@pi-x-twktt ;
-        :femcConversionOf   bdr:TT45BBB3BC825293A1 .
-    
-    bdr:TT45BBB3BC825293A1
         a                   :CoverTitle ;
         rdfs:label          "annisaṅgh stāp' braḥ dhaṛmm jār dhamm gorubbh"@pi-x-twktt .
     
-    bdr:TT87AD4BC26508F0DB
+    bdr:TTE77D3AC17EF5FEE8
         a                   :CoverTitle ;
         rdfs:label          "អន្និសង្ឃស្ដាប់ព្រះធម្ម៌ជារធម្មគោរុព្ភ"@pi-khmr .
     
-    bdr:TTE77D3AC17EF5FEE8
+    bdr:TTECC9927FE1ECC34D
+        a                   :Title ;
+        rdfs:label          "ānisaṅs braḥ dhamm gorab"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT1ACB0D0F6851E575 .
+    
+    bdr:TTEDFD228B93A266DC
         a                   :Title ;
         rdfs:label          "អានិសង្សព្រះធម្មគោរព"@pi-khmr ;
-        :femcConversionOf   bdr:TT87AD4BC26508F0DB .
+        :femcConversionOf   bdr:TTE77D3AC17EF5FEE8 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030612 {
-    bda:LGB020A8B0B8E90F21
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-09-07"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC030612"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC030612"@en , "imported pubinfo for W1FEMC030612"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC030612"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC030612 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030612 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "1c/MW1FEMC030612.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030612 ;
-        adm:logEntry        bda:LGB020A8B0B8E90F21 , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4EEA7D56CB73879E
+    bdr:ID5E030CD6B3BC1F86
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0609-B.01.06.01.II.2" .
     
@@ -50,29 +44,29 @@ bdg:MW1FEMC030612 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកជុច"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4EEA7D56CB73879E ;
-        :hasTitle           bdr:TT29519498EA1E2EA3 , bdr:TT5E030CD6B3BC1F86 ;
+            bdr:ID5E030CD6B3BC1F86 ;
+        :hasTitle           bdr:TT0DC7E147792FA552 , bdr:TTB020A8B0B8E90F21 ;
         :instanceHasReproduction  bdr:W1FEMC030612 ;
+        :instanceOf         bdr:WA1FEMC130003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT8BD1BCAB73143085 ;
+        :note               bdr:NT29519498EA1E2EA3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8BD1BCAB73143085
+    bdr:NT29519498EA1E2EA3
         a                   :Note ;
         :contentLocationStatement  "pg. 19" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:TT29519498EA1E2EA3
-        a                   :Title ;
-        rdfs:label          "ល្បើកជុច"@km ;
-        :femcConversionOf   bdr:TT5E030CD6B3BC1F86 .
-    
-    bdr:TT5E030CD6B3BC1F86
+    bdr:TT0DC7E147792FA552
         a                   :CoverTitle ;
         rdfs:label          "ជុច"@km .
+    
+    bdr:TTB020A8B0B8E90F21
+        a                   :Title ;
+        rdfs:label          "ល្បើកជុច"@km ;
+        :femcConversionOf   bdr:TT0DC7E147792FA552 .
 }

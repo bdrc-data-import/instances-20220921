@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020282 {
-    bda:LG1DF3138F40B45A82
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020282"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020282"@en , "imported pubinfo for W1FEMC020282"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020282"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020282 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020282 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "31/MW1FEMC020282.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020282 ;
-        adm:logEntry        bda:LG1DF3138F40B45A82 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID11C16DA6F7779907
+    bdr:IDAE07B7A940797FC1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.175.I.3" .
     
-    bdr:MF889AC0EBE81D0B0D
+    bdr:MFA2A0AF3B32F631EA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020282 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកកម្មវេរា"@km , "lpök kamm verā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID11C16DA6F7779907 ;
+            bdr:IDAE07B7A940797FC1 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT07DB0A596E00A262 , bdr:TT4C6F2AB0D086A154 , bdr:TT818FFC67D85DFD7C , bdr:TTAE07B7A940797FC1 ;
+        :hasTitle           bdr:TT07DB0A596E00A262 , bdr:TT1DF3138F40B45A82 , bdr:TT5B54678E6F2A9DAE , bdr:TT818FFC67D85DFD7C ;
         :instanceHasReproduction  bdr:W1FEMC020282 ;
+        :instanceOf         bdr:WA1FEMC110018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF889AC0EBE81D0B0D ;
-        :note               bdr:NTA2A0AF3B32F631EA ;
+        :microfilmItem      bdr:MFA2A0AF3B32F631EA ;
+        :note               bdr:NT4C6F2AB0D086A154 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1204" .
     
-    bdr:NTA2A0AF3B32F631EA
+    bdr:NT4C6F2AB0D086A154
         a                   :Note ;
         :contentLocationStatement  "pg. 56" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT07DB0A596E00A262
-        a                   :Title ;
-        rdfs:label          "lpök kamm verā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTAE07B7A940797FC1 .
-    
-    bdr:TT4C6F2AB0D086A154
-        a                   :CoverTitle ;
-        rdfs:label          "ក្មាំវីរារ"@km .
-    
-    bdr:TT818FFC67D85DFD7C
-        a                   :Title ;
-        rdfs:label          "ល្បើកកម្មវេរា"@km ;
-        :femcConversionOf   bdr:TT4C6F2AB0D086A154 .
-    
-    bdr:TTAE07B7A940797FC1
         a                   :CoverTitle ;
         rdfs:label          "kāṃm° vīrār"@km-x-twktt .
+    
+    bdr:TT1DF3138F40B45A82
+        a                   :Title ;
+        rdfs:label          "ល្បើកកម្មវេរា"@km ;
+        :femcConversionOf   bdr:TT818FFC67D85DFD7C .
+    
+    bdr:TT5B54678E6F2A9DAE
+        a                   :Title ;
+        rdfs:label          "lpök kamm verā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT07DB0A596E00A262 .
+    
+    bdr:TT818FFC67D85DFD7C
+        a                   :CoverTitle ;
+        rdfs:label          "ក្មាំវីរារ"@km .
 }

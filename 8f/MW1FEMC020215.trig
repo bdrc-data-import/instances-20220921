@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020215 {
-    bda:LGAFACCE019112569E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020215"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020215"@en , "imported pubinfo for W1FEMC020215"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020215"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020215 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020215 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8f/MW1FEMC020215.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020215 ;
-        adm:logEntry        bda:LGAFACCE019112569E , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD06E80B394C47EFF
+    bdr:IDA25E25893ED96070
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.108.III.1" .
     
-    bdr:MF241FD8418BF9DF50
+    bdr:MF878B55041220BC5E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "33" ;
         :microfilmStrip     "63" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020215 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD06E80B394C47EFF ;
+            bdr:IDA25E25893ED96070 ;
         :hasFascicles       "1-6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0DA606473E72F98E , bdr:TT2ACDDF1DEBDD3885 , bdr:TT6E3ED77517473F15 , bdr:TTA25E25893ED96070 ;
+        :hasTitle           bdr:TT07367D6A087C6477 , bdr:TT2ACDDF1DEBDD3885 , bdr:TT6E3ED77517473F15 , bdr:TTAFACCE019112569E ;
         :instanceHasReproduction  bdr:W1FEMC020215 ;
+        :instanceOf         bdr:WA1FEMC010059 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF241FD8418BF9DF50 ;
-        :note               bdr:NT878B55041220BC5E ;
+        :microfilmItem      bdr:MF878B55041220BC5E ;
+        :note               bdr:NT0DA606473E72F98E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "936" .
     
-    bdr:NT878B55041220BC5E
+    bdr:NT0DA606473E72F98E
         a                   :Note ;
         :contentLocationStatement  "pg. 43" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0DA606473E72F98E
-        a                   :CoverTitle ;
-        rdfs:label          "ទេសនាគ្រែ៥"@km .
-    
-    bdr:TT2ACDDF1DEBDD3885
+    bdr:TT07367D6A087C6477
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
     
-    bdr:TT6E3ED77517473F15
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
-    
-    bdr:TTA25E25893ED96070
+    bdr:TT2ACDDF1DEBDD3885
         a                   :CoverTitle ;
         rdfs:label          "desanā grè 5"@km-x-twktt .
+    
+    bdr:TT6E3ED77517473F15
+        a                   :CoverTitle ;
+        rdfs:label          "ទេសនាគ្រែ៥"@km .
+    
+    bdr:TTAFACCE019112569E
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020768 {
-    bda:LGB956FCBCEB2D4B0C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020768"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020768"@en , "imported pubinfo for W1FEMC020768"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020768"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020768 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020768 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d2/MW1FEMC020768.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020768 ;
-        adm:logEntry        bda:LGB956FCBCEB2D4B0C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0EDA3E6F15FE2CA5
+    bdr:IDE74148E8BA2AE87E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.439.III.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020768 {
         a                   :Instance ;
         skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0EDA3E6F15FE2CA5 ;
+            bdr:IDE74148E8BA2AE87E ;
         :hasFascicles       "3, 10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT538A4E66B4AE20C8 , bdr:TTC627422AA3E6D6CD , bdr:TTD3064383910997F9 , bdr:TTE74148E8BA2AE87E ;
+        :hasTitle           bdr:TTB956FCBCEB2D4B0C , bdr:TTC627422AA3E6D6CD , bdr:TTD3064383910997F9 , bdr:TTDB62FA35A91C92B9 ;
         :instanceHasReproduction  bdr:W1FEMC020768 ;
+        :instanceOf         bdr:WA1FEMC010047 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT82146032CB583780 ;
+        :note               bdr:NT538A4E66B4AE20C8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT82146032CB583780
+    bdr:NT538A4E66B4AE20C8
         a                   :Note ;
         :contentLocationStatement  "pg. 139" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT538A4E66B4AE20C8
+    bdr:TTB956FCBCEB2D4B0C
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@km ;
+        :femcConversionOf   bdr:TTC627422AA3E6D6CD .
+    
+    bdr:TTC627422AA3E6D6CD
         a                   :CoverTitle ;
         rdfs:label          "ថំម្មសំពោធ្ធិ"@km .
     
-    bdr:TTC627422AA3E6D6CD
-        a                   :Title ;
-        rdfs:label          "បឋមសម្ពោធិ"@km ;
-        :femcConversionOf   bdr:TT538A4E66B4AE20C8 .
-    
     bdr:TTD3064383910997F9
-        a                   :Title ;
-        rdfs:label          "paṭham sambodhi"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE74148E8BA2AE87E .
-    
-    bdr:TTE74148E8BA2AE87E
         a                   :CoverTitle ;
         rdfs:label          "thaṃmm saṃbodhdhi"@km-x-twktt .
+    
+    bdr:TTDB62FA35A91C92B9
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD3064383910997F9 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010227 {
-    bda:LG0E08C20C7BB76994
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010227"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010227"@en , "imported pubinfo for W1FEMC010227"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010227"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010227 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010227 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "81/MW1FEMC010227.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010227 ;
-        adm:logEntry        bda:LG0E08C20C7BB76994 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID38B768330B27510B
+    bdr:ID6FDCE3FB8FC77EDE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "027-PP.02.06.02.III.3" .
     
-    bdr:MF49A6165A2A3642F8
+    bdr:MF18AF6BB965D4D07B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "3" ;
         :microfilmStrip     "11" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010227 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យសុភោគ"@km , "vinăy subhog"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID38B768330B27510B ;
+            bdr:ID6FDCE3FB8FC77EDE ;
         :hasFascicles       "11" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3A7FA2DFE30E2B6C , bdr:TT5AE8FCE3C630B1F6 , bdr:TT6FDCE3FB8FC77EDE , bdr:TT9809D54544973EBC ;
+        :hasTitle           bdr:TT0E08C20C7BB76994 , bdr:TT3A7FA2DFE30E2B6C , bdr:TT5AE8FCE3C630B1F6 , bdr:TTAD0EA2967939B903 ;
         :instanceHasReproduction  bdr:W1FEMC010227 ;
+        :instanceOf         bdr:WA1FEMC030037 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF49A6165A2A3642F8 ;
-        :note               bdr:NT18AF6BB965D4D07B ;
+        :microfilmItem      bdr:MF18AF6BB965D4D07B ;
+        :note               bdr:NT9809D54544973EBC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT18AF6BB965D4D07B
+    bdr:NT9809D54544973EBC
         a                   :Note ;
         :contentLocationStatement  "pg. 98" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3A7FA2DFE30E2B6C
+    bdr:TT0E08C20C7BB76994
         a                   :Title ;
         rdfs:label          "វិន័យសុភោគ"@km ;
-        :femcConversionOf   bdr:TT9809D54544973EBC .
+        :femcConversionOf   bdr:TT3A7FA2DFE30E2B6C .
+    
+    bdr:TT3A7FA2DFE30E2B6C
+        a                   :CoverTitle ;
+        rdfs:label          "វីន្យៃសូភោគ្សរ"@km .
     
     bdr:TT5AE8FCE3C630B1F6
-        a                   :Title ;
-        rdfs:label          "vinăy subhog"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6FDCE3FB8FC77EDE .
-    
-    bdr:TT6FDCE3FB8FC77EDE
         a                   :CoverTitle ;
         rdfs:label          "vīnaiy° sūbhogsar"@km-x-twktt .
     
-    bdr:TT9809D54544973EBC
-        a                   :CoverTitle ;
-        rdfs:label          "វីន្យៃសូភោគ្សរ"@km .
+    bdr:TTAD0EA2967939B903
+        a                   :Title ;
+        rdfs:label          "vinăy subhog"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5AE8FCE3C630B1F6 .
 }

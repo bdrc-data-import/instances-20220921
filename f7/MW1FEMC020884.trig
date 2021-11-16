@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020884 {
-    bda:LGAC52A3DEF7481957
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020884"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020884"@en , "imported pubinfo for W1FEMC020884"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020884"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020884 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020884 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f7/MW1FEMC020884.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020884 ;
-        adm:logEntry        bda:LGAC52A3DEF7481957 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA1666478832B96EB
+    bdr:IDA9895F0BF9138458
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "e.8.I.1" .
     
-    bdr:MFB5045F47B5962965
+    bdr:MFE78FEA35C3F9C340
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020884 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់កូនចៅ"@km , "cpāp' kūn cau"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA1666478832B96EB ;
+            bdr:IDA9895F0BF9138458 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1EA50B62EE27DCC3 , bdr:TT46304B5173661802 , bdr:TT9E75CF398916033C , bdr:TTA9895F0BF9138458 ;
+        :hasTitle           bdr:TT46304B5173661802 , bdr:TT67F316C0B1C82840 , bdr:TT9E75CF398916033C , bdr:TTAC52A3DEF7481957 ;
         :instanceHasReproduction  bdr:W1FEMC020884 ;
+        :instanceOf         bdr:WA1FEMC100047 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB5045F47B5962965 ;
-        :note               bdr:NTE78FEA35C3F9C340 ;
+        :microfilmItem      bdr:MFE78FEA35C3F9C340 ;
+        :note               bdr:NT1EA50B62EE27DCC3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE78FEA35C3F9C340
+    bdr:NT1EA50B62EE27DCC3
         a                   :Note ;
         :contentLocationStatement  "pg. 155" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1EA50B62EE27DCC3
+    bdr:TT46304B5173661802
+        a                   :CoverTitle ;
+        rdfs:label          "kūn cau"@km-x-twktt .
+    
+    bdr:TT67F316C0B1C82840
+        a                   :Title ;
+        rdfs:label          "cpāp' kūn cau"@km-x-twktt ;
+        :femcConversionOf   bdr:TT46304B5173661802 .
+    
+    bdr:TT9E75CF398916033C
         a                   :CoverTitle ;
         rdfs:label          "កូនចៅ"@km .
     
-    bdr:TT46304B5173661802
-        a                   :Title ;
-        rdfs:label          "cpāp' kūn cau"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA9895F0BF9138458 .
-    
-    bdr:TT9E75CF398916033C
+    bdr:TTAC52A3DEF7481957
         a                   :Title ;
         rdfs:label          "ច្បាប់កូនចៅ"@km ;
-        :femcConversionOf   bdr:TT1EA50B62EE27DCC3 .
-    
-    bdr:TTA9895F0BF9138458
-        a                   :CoverTitle ;
-        rdfs:label          "kūn cau"@km-x-twktt .
+        :femcConversionOf   bdr:TT9E75CF398916033C .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020180 {
-    bda:LGC105487741F5C780
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020180"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020180"@en , "imported pubinfo for W1FEMC020180"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020180"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020180 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020180 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "65/MW1FEMC020180.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020180 ;
-        adm:logEntry        bda:LGC105487741F5C780 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF83BA4D9D8F4041B
+    bdr:ID830936B3557D6C1B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.73.III.1" .
     
-    bdr:MF3ED5B573876EE7AA
+    bdr:MF185DC9BAC84A48D7
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "32" ;
         :microfilmStrip     "58" .
@@ -56,50 +50,49 @@ bdg:MW1FEMC020180 {
         a                   :Instance ;
         skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF83BA4D9D8F4041B ;
+            bdr:ID830936B3557D6C1B ;
         :hasFascicles       "6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1450905E5DA9591C , bdr:TT4DDFD32435C8ADBE , bdr:TT830936B3557D6C1B , bdr:TTA36AACDC033A8A27 , bdr:TTEA65C2D96C61FF04 , bdr:TTFAABB0D966F130DD ;
+        :hasTitle           bdr:TT1450905E5DA9591C , bdr:TT4DDFD32435C8ADBE , bdr:TTA36AACDC033A8A27 , bdr:TTC105487741F5C780 , bdr:TTE8E68C2C0F5631B9 , bdr:TTEA65C2D96C61FF04 ;
         :instanceHasReproduction  bdr:W1FEMC020180 ;
+        :instanceOf         bdr:WA1FEMC010044 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3ED5B573876EE7AA ;
-        :note               bdr:NT185DC9BAC84A48D7 ;
+        :microfilmItem      bdr:MF185DC9BAC84A48D7 ;
+        :note               bdr:NTFAABB0D966F130DD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "818" .
     
-    bdr:NT185DC9BAC84A48D7
+    bdr:NTFAABB0D966F130DD
         a                   :Note ;
         :contentLocationStatement  "pg. 37" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1450905E5DA9591C
         a                   :CoverTitle ;
-        rdfs:label          "kruṅ milind braḥ nāgasen"@km-x-twktt ;
-        :femcConversionOf   bdr:TT830936B3557D6C1B .
-    
-    bdr:TT4DDFD32435C8ADBE
-        a                   :Title ;
-        rdfs:label          "milindappañhā"@km-x-twktt .
-    
-    bdr:TT830936B3557D6C1B
-        a                   :CoverTitle ;
         rdfs:label          "kruṅ mālin braḥ nāgasen"@km-x-twktt .
     
+    bdr:TT4DDFD32435C8ADBE
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ milind braḥ nāgasen"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1450905E5DA9591C .
+    
     bdr:TTA36AACDC033A8A27
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមិលិន្ទ ព្រះនាគសេន"@km ;
+        :femcConversionOf   bdr:TTEA65C2D96C61FF04 .
+    
+    bdr:TTC105487741F5C780
         a                   :Title ;
         rdfs:label          "មិលិន្ទប្បញ្ហា"@km .
     
-    bdr:TTEA65C2D96C61FF04
-        a                   :CoverTitle ;
-        rdfs:label          "ក្រុងមិលិន្ទ ព្រះនាគសេន"@km ;
-        :femcConversionOf   bdr:TTFAABB0D966F130DD .
+    bdr:TTE8E68C2C0F5631B9
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-twktt .
     
-    bdr:TTFAABB0D966F130DD
+    bdr:TTEA65C2D96C61FF04
         a                   :CoverTitle ;
         rdfs:label          "ក្រុងមាលិន​ ព្រះនាគសេន"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022245 {
-    bda:LG2195DEC431782874
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022245"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022245"@en , "imported pubinfo for W1FEMC022245"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022245"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022245 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022245 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b5/MW1FEMC022245.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022245 ;
-        adm:logEntry        bda:LG2195DEC431782874 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6795C9543DE4265
+    bdr:IDD28038378EFF5A50
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.323.II.1" .
     
-    bdr:MF6121BD4F806C9F31
+    bdr:MF2FD5058156A13EF6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "142" ;
         :microfilmStrip     "236" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022245 {
         a                   :Instance ;
         skos:prefLabel      "សុរព្ភ"@km , "surabbh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6795C9543DE4265 ;
+            bdr:IDD28038378EFF5A50 ;
         :hasFascicles       "1-8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT04A79A2DFA119E8A , bdr:TTA9D5ADCAED2B22CF , bdr:TTAB08B5E08FB6F65C , bdr:TTD28038378EFF5A50 ;
+        :hasTitle           bdr:TT2195DEC431782874 , bdr:TTA9D5ADCAED2B22CF , bdr:TTAB08B5E08FB6F65C , bdr:TTFA8D0F858A59AFA6 ;
         :instanceHasReproduction  bdr:W1FEMC022245 ;
+        :instanceOf         bdr:WA1FEMC120037 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF6121BD4F806C9F31 ;
-        :note               bdr:NT2FD5058156A13EF6 ;
+        :microfilmItem      bdr:MF2FD5058156A13EF6 ;
+        :note               bdr:NT04A79A2DFA119E8A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "854" .
     
-    bdr:NT2FD5058156A13EF6
+    bdr:NT04A79A2DFA119E8A
         a                   :Note ;
         :contentLocationStatement  "pg. 400" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT04A79A2DFA119E8A
+    bdr:TT2195DEC431782874
+        a                   :Title ;
+        rdfs:label          "សុរព្ភ"@km ;
+        :femcConversionOf   bdr:TTAB08B5E08FB6F65C .
+    
+    bdr:TTA9D5ADCAED2B22CF
+        a                   :CoverTitle ;
+        rdfs:label          "surup jātak"@km-x-twktt .
+    
+    bdr:TTAB08B5E08FB6F65C
         a                   :CoverTitle ;
         rdfs:label          "សុរុបជាតក"@km .
     
-    bdr:TTA9D5ADCAED2B22CF
+    bdr:TTFA8D0F858A59AFA6
         a                   :Title ;
         rdfs:label          "surabbh"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD28038378EFF5A50 .
-    
-    bdr:TTAB08B5E08FB6F65C
-        a                   :Title ;
-        rdfs:label          "សុរព្ភ"@km ;
-        :femcConversionOf   bdr:TT04A79A2DFA119E8A .
-    
-    bdr:TTD28038378EFF5A50
-        a                   :CoverTitle ;
-        rdfs:label          "surup jātak"@km-x-twktt .
+        :femcConversionOf   bdr:TTA9D5ADCAED2B22CF .
 }

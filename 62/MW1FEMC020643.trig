@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020643 {
-    bda:LGF72A5CE6D22FA6EF
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020643"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020643"@en , "imported pubinfo for W1FEMC020643"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020643"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020643 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020643 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "62/MW1FEMC020643.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020643 ;
-        adm:logEntry        bda:LGF72A5CE6D22FA6EF , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF3731B13AC1FCC73
+    bdr:ID11736F54C470076D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.276.I.3" .
     
@@ -51,48 +45,47 @@ bdg:MW1FEMC020643 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកកាមរាគា"@km , "lpök kām rāgā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF3731B13AC1FCC73 ;
+            bdr:ID11736F54C470076D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT11736F54C470076D , bdr:TT4C8931D23FDDEFFD , bdr:TT607757B23FA8CAC9 , bdr:TT9761066F059267FD , bdr:TTB8E689C17A7634C2 , bdr:TTE8B377384AA0DD9C ;
+        :hasTitle           bdr:TT4C8931D23FDDEFFD , bdr:TT607757B23FA8CAC9 , bdr:TTA52795A266A856F2 , bdr:TTB8E689C17A7634C2 , bdr:TTE8B377384AA0DD9C , bdr:TTF72A5CE6D22FA6EF ;
         :instanceHasReproduction  bdr:W1FEMC020643 ;
+        :instanceOf         bdr:WA1FEMC110017 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTE7E920797F022C23 ;
+        :note               bdr:NT9761066F059267FD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE7E920797F022C23
+    bdr:NT9761066F059267FD
         a                   :Note ;
         :contentLocationStatement  "pg. 120" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT11736F54C470076D
-        a                   :CoverTitle ;
-        rdfs:label          "cpāp kāṃm rāgā"@km-x-twktt .
-    
     bdr:TT4C8931D23FDDEFFD
-        a                   :Title ;
-        rdfs:label          "lpök kām rāgā"@km-x-twktt .
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' kām rāgā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT607757B23FA8CAC9 .
     
     bdr:TT607757B23FA8CAC9
         a                   :CoverTitle ;
-        rdfs:label          "cpāp' kām rāgā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT11736F54C470076D .
+        rdfs:label          "cpāp kāṃm rāgā"@km-x-twktt .
     
-    bdr:TT9761066F059267FD
-        a                   :CoverTitle ;
-        rdfs:label          "ច្បាបកាំមរាគា"@km .
+    bdr:TTA52795A266A856F2
+        a                   :Title ;
+        rdfs:label          "lpök kām rāgā"@km-x-twktt .
     
     bdr:TTB8E689C17A7634C2
         a                   :CoverTitle ;
-        rdfs:label          "ច្បាប់កាមរាគា"@km ;
-        :femcConversionOf   bdr:TT9761066F059267FD .
+        rdfs:label          "ច្បាបកាំមរាគា"@km .
     
     bdr:TTE8B377384AA0DD9C
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់កាមរាគា"@km ;
+        :femcConversionOf   bdr:TTB8E689C17A7634C2 .
+    
+    bdr:TTF72A5CE6D22FA6EF
         a                   :Title ;
         rdfs:label          "ល្បើកកាមរាគា"@km .
 }

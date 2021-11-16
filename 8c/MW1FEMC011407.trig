@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011407 {
-    bda:LGE9409CCD51E1D9AE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011407"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011407"@en , "imported pubinfo for W1FEMC011407"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011407"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011407 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011407 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8c/MW1FEMC011407.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011407 ;
-        adm:logEntry        bda:LGE9409CCD51E1D9AE , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDBA703A1CD04E6E05
+    bdr:ID6052915B73C08CF9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "026-A.10.07.02.II.1" .
     
-    bdr:MF672D2BAD58D010E2
+    bdr:MFDDE729F36B7768EB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "35" ;
         :microfilmStrip     "69" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011407 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទគោរព"@km , "cand gorab"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBA703A1CD04E6E05 ;
+            bdr:ID6052915B73C08CF9 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT50350CE8F92BE064 , bdr:TT6052915B73C08CF9 , bdr:TTE9DB1142DECF38F3 , bdr:TTFA139085E1ACF486 ;
+        :hasTitle           bdr:TT50350CE8F92BE064 , bdr:TTA6C4D9FADB37D4F8 , bdr:TTE9409CCD51E1D9AE , bdr:TTFA139085E1ACF486 ;
         :instanceHasReproduction  bdr:W1FEMC011407 ;
+        :instanceOf         bdr:WA1FEMC120008 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF672D2BAD58D010E2 ;
-        :note               bdr:NTDDE729F36B7768EB ;
+        :microfilmItem      bdr:MFDDE729F36B7768EB ;
+        :note               bdr:NTE9DB1142DECF38F3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDDE729F36B7768EB
+    bdr:NTE9DB1142DECF38F3
         a                   :Note ;
         :contentLocationStatement  "pg. 328" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT50350CE8F92BE064
-        a                   :Title ;
-        rdfs:label          "cand gorab"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6052915B73C08CF9 .
-    
-    bdr:TT6052915B73C08CF9
         a                   :CoverTitle ;
         rdfs:label          "cand gorub"@km-x-twktt .
     
-    bdr:TTE9DB1142DECF38F3
-        a                   :CoverTitle ;
-        rdfs:label          "ចន្ទគោរុព្វ"@km .
+    bdr:TTA6C4D9FADB37D4F8
+        a                   :Title ;
+        rdfs:label          "cand gorab"@km-x-twktt ;
+        :femcConversionOf   bdr:TT50350CE8F92BE064 .
     
-    bdr:TTFA139085E1ACF486
+    bdr:TTE9409CCD51E1D9AE
         a                   :Title ;
         rdfs:label          "ចន្ទគោរព"@km ;
-        :femcConversionOf   bdr:TTE9DB1142DECF38F3 .
+        :femcConversionOf   bdr:TTFA139085E1ACF486 .
+    
+    bdr:TTFA139085E1ACF486
+        a                   :CoverTitle ;
+        rdfs:label          "ចន្ទគោរុព្វ"@km .
 }

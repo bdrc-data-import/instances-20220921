@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010719 {
-    bda:LG371A52322D6D5824
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010719"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010719"@en , "imported pubinfo for W1FEMC010719"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010719"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010719 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010719 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "68/MW1FEMC010719.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010719 ;
-        adm:logEntry        bda:LG371A52322D6D5824 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFFC3DC784E9C312C
+    bdr:IDA91070D8B476764B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "029-A.03.07.01.I.1" .
     
-    bdr:MFFFF45A96C78998EC
+    bdr:MFCB763134E04F1C0B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "114" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010719 {
         a                   :Instance ;
         skos:prefLabel      "ក្រមច្បាប់"@km , "kram cpāp'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFFC3DC784E9C312C ;
+            bdr:IDA91070D8B476764B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1F85EC22BC23C6C9 , bdr:TTA91070D8B476764B , bdr:TTAB946A8B56863205 , bdr:TTFDD616641D2E5533 ;
+        :hasTitle           bdr:TT1F85EC22BC23C6C9 , bdr:TT371A52322D6D5824 , bdr:TT3CD4387282BEB10E , bdr:TTAB946A8B56863205 ;
         :instanceHasReproduction  bdr:W1FEMC010719 ;
+        :instanceOf         bdr:WA1FEMC100022 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFFF45A96C78998EC ;
-        :note               bdr:NTCB763134E04F1C0B ;
+        :microfilmItem      bdr:MFCB763134E04F1C0B ;
+        :note               bdr:NTFDD616641D2E5533 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTCB763134E04F1C0B
+    bdr:NTFDD616641D2E5533
         a                   :Note ;
         :contentLocationStatement  "pg. 195" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1F85EC22BC23C6C9
-        a                   :Title ;
-        rdfs:label          "kram cpāp'"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA91070D8B476764B .
-    
-    bdr:TTA91070D8B476764B
         a                   :CoverTitle ;
         rdfs:label          "kraṃ cpāp'"@km-x-twktt .
     
-    bdr:TTAB946A8B56863205
+    bdr:TT371A52322D6D5824
         a                   :Title ;
         rdfs:label          "ក្រមច្បាប់"@km ;
-        :femcConversionOf   bdr:TTFDD616641D2E5533 .
+        :femcConversionOf   bdr:TTAB946A8B56863205 .
     
-    bdr:TTFDD616641D2E5533
+    bdr:TT3CD4387282BEB10E
+        a                   :Title ;
+        rdfs:label          "kram cpāp'"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1F85EC22BC23C6C9 .
+    
+    bdr:TTAB946A8B56863205
         a                   :CoverTitle ;
         rdfs:label          "ក្រំច្បាប់"@km .
 }

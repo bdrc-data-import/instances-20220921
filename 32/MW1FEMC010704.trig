@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010704 {
-    bda:LGE77D8158A4EFC903
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010704"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010704"@en , "imported pubinfo for W1FEMC010704"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010704"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010704 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010704 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "32/MW1FEMC010704.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010704 ;
-        adm:logEntry        bda:LGE77D8158A4EFC903 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCD6B96899FEC33A4
+    bdr:ID000019622AC81DEB
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "014-A.03.07.01.III.1" .
     
-    bdr:MF3D79B1056873C67D
+    bdr:MF3FD7240F7902930F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "113" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010704 {
         a                   :Instance ;
         skos:prefLabel      "វិសុទ្ធិមគ្គបញ្ញានិទ្ទេស"@km , "visuddhimagg paññāniddes"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCD6B96899FEC33A4 ;
+            bdr:ID000019622AC81DEB ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT000019622AC81DEB , bdr:TT50126F8B8D883002 , bdr:TTE700A9CDA67757DB , bdr:TTEDB6F4B5647B7CEF ;
+        :hasTitle           bdr:TT246C8E78374FC220 , bdr:TT50126F8B8D883002 , bdr:TTE700A9CDA67757DB , bdr:TTE77D8158A4EFC903 ;
         :instanceHasReproduction  bdr:W1FEMC010704 ;
+        :instanceOf         bdr:WA1FEMC010075 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3D79B1056873C67D ;
-        :note               bdr:NT3FD7240F7902930F ;
+        :microfilmItem      bdr:MF3FD7240F7902930F ;
+        :note               bdr:NTEDB6F4B5647B7CEF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3FD7240F7902930F
+    bdr:NTEDB6F4B5647B7CEF
         a                   :Note ;
         :contentLocationStatement  "pg. 192" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT000019622AC81DEB
+    bdr:TT246C8E78374FC220
+        a                   :Title ;
+        rdfs:label          "visuddhimagg paññāniddes"@km-x-twktt ;
+        :femcConversionOf   bdr:TT50126F8B8D883002 .
+    
+    bdr:TT50126F8B8D883002
         a                   :CoverTitle ;
         rdfs:label          "vinicchey braḥ visuddhimagg paññā nīdes"@km-x-twktt .
     
-    bdr:TT50126F8B8D883002
-        a                   :Title ;
-        rdfs:label          "visuddhimagg paññāniddes"@km-x-twktt ;
-        :femcConversionOf   bdr:TT000019622AC81DEB .
-    
     bdr:TTE700A9CDA67757DB
-        a                   :Title ;
-        rdfs:label          "វិសុទ្ធិមគ្គបញ្ញានិទ្ទេស"@km ;
-        :femcConversionOf   bdr:TTEDB6F4B5647B7CEF .
-    
-    bdr:TTEDB6F4B5647B7CEF
         a                   :CoverTitle ;
         rdfs:label          "វិនិច្ឆេយព្រះវិសុទ្ធិមគ្គបញ្ញានីទេស"@km .
+    
+    bdr:TTE77D8158A4EFC903
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គបញ្ញានិទ្ទេស"@km ;
+        :femcConversionOf   bdr:TTE700A9CDA67757DB .
 }

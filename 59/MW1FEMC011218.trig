@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011218 {
-    bda:LG73EBBA6D6CC5A352
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011218"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011218"@en , "imported pubinfo for W1FEMC011218"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011218"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011218 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011218 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "59/MW1FEMC011218.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011218 ;
-        adm:logEntry        bda:LG73EBBA6D6CC5A352 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID74B80EE25AB58C29
+    bdr:ID22BBB0AB449ADA85
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002-A.07.01.03.V.1" .
     
-    bdr:MFE3538006E8006F82
+    bdr:MF0CE9C001C3956539
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "28" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC011218 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មតាមហាអនន្តគុណ"@km , "dhammatā mahā anantaguṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID74B80EE25AB58C29 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT14486C557ACE1E2F , bdr:TT1B8AEC6BC140B416 , bdr:TT1EC509549F364F56 , bdr:TT22BBB0AB449ADA85 ;
+            bdr:ID22BBB0AB449ADA85 ;
+        :hasTitle           bdr:TT1B8AEC6BC140B416 , bdr:TT1EC509549F364F56 , bdr:TT31958B93B63F0CCE , bdr:TT73EBBA6D6CC5A352 ;
         :instanceHasReproduction  bdr:W1FEMC011218 ;
+        :instanceOf         bdr:WA1FEMC070006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE3538006E8006F82 ;
-        :note               bdr:NT0CE9C001C3956539 ;
+        :microfilmItem      bdr:MF0CE9C001C3956539 ;
+        :note               bdr:NT14486C557ACE1E2F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0CE9C001C3956539
+    bdr:NT14486C557ACE1E2F
         a                   :Note ;
         :contentLocationStatement  "pg. 291" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT14486C557ACE1E2F
+    bdr:TT1B8AEC6BC140B416
         a                   :CoverTitle ;
         rdfs:label          "ធម្តារមហាអនន្ទគុន"@km .
     
-    bdr:TT1B8AEC6BC140B416
-        a                   :Title ;
-        rdfs:label          "ធម្មតាមហាអនន្តគុណ"@km ;
-        :femcConversionOf   bdr:TT14486C557ACE1E2F .
-    
     bdr:TT1EC509549F364F56
-        a                   :Title ;
-        rdfs:label          "dhammatā mahā anantaguṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT22BBB0AB449ADA85 .
-    
-    bdr:TT22BBB0AB449ADA85
         a                   :CoverTitle ;
         rdfs:label          "dhamtār mahā anandagun"@km-x-twktt .
+    
+    bdr:TT31958B93B63F0CCE
+        a                   :Title ;
+        rdfs:label          "dhammatā mahā anantaguṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1EC509549F364F56 .
+    
+    bdr:TT73EBBA6D6CC5A352
+        a                   :Title ;
+        rdfs:label          "ធម្មតាមហាអនន្តគុណ"@km ;
+        :femcConversionOf   bdr:TT1B8AEC6BC140B416 .
 }

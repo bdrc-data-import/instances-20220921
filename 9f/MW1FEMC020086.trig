@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020086 {
-    bda:LGD972E9853CF75BE6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020086"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020086"@en , "imported pubinfo for W1FEMC020086"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020086"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020086 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020086 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9f/MW1FEMC020086.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020086 ;
-        adm:logEntry        bda:LGD972E9853CF75BE6 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDBBB09B8C7578998D
+    bdr:ID632F5F86B24E4765
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.80.I.3" .
     
-    bdr:MFEF7E8A0E9849767A
+    bdr:MFBAEE47609383A1FA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "99" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020086 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកជូជក"@km , "lpök jūjak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBBB09B8C7578998D ;
+            bdr:ID632F5F86B24E4765 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT20FB4D27DC2D4CAA , bdr:TT632F5F86B24E4765 , bdr:TT73EE0DDFD3D6C870 , bdr:TTE5653168BA64B97A ;
+        :hasTitle           bdr:TT20FB4D27DC2D4CAA , bdr:TT5B366EE2C4B49ED3 , bdr:TT73EE0DDFD3D6C870 , bdr:TTD972E9853CF75BE6 ;
         :instanceHasReproduction  bdr:W1FEMC020086 ;
+        :instanceOf         bdr:WA1FEMC110016 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEF7E8A0E9849767A ;
-        :note               bdr:NTBAEE47609383A1FA ;
+        :microfilmItem      bdr:MFBAEE47609383A1FA ;
+        :note               bdr:NTE5653168BA64B97A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1540" .
     
-    bdr:NTBAEE47609383A1FA
+    bdr:NTE5653168BA64B97A
         a                   :Note ;
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT20FB4D27DC2D4CAA
-        a                   :Title ;
-        rdfs:label          "lpök jūjak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT632F5F86B24E4765 .
-    
-    bdr:TT632F5F86B24E4765
         a                   :CoverTitle ;
         rdfs:label          "jūjuk lapök"@km-x-twktt .
     
-    bdr:TT73EE0DDFD3D6C870
+    bdr:TT5B366EE2C4B49ED3
         a                   :Title ;
-        rdfs:label          "ល្បើកជូជក"@km ;
-        :femcConversionOf   bdr:TTE5653168BA64B97A .
+        rdfs:label          "lpök jūjak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT20FB4D27DC2D4CAA .
     
-    bdr:TTE5653168BA64B97A
+    bdr:TT73EE0DDFD3D6C870
         a                   :CoverTitle ;
         rdfs:label          "ជូជុកល៍បើក"@km .
+    
+    bdr:TTD972E9853CF75BE6
+        a                   :Title ;
+        rdfs:label          "ល្បើកជូជក"@km ;
+        :femcConversionOf   bdr:TT73EE0DDFD3D6C870 .
 }

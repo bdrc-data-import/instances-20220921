@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010547 {
-    bda:LGEC5D6580B33827E7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010547"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010547"@en , "imported pubinfo for W1FEMC010547"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010547"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010547 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010547 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "54/MW1FEMC010547.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010547 ;
-        adm:logEntry        bda:LGEC5D6580B33827E7 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID06E84AC9F8D5F6AF
+    bdr:ID2BD9469AE575AAB0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "045-046-A.02.10.01.II.1" .
     
-    bdr:MF82E3273567D0E95C
+    bdr:MF7F505DFB6CEF2549
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "71" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010547 {
         a                   :Instance ;
         skos:prefLabel      "ភិនសុវណ្ណ"@km , "bhin suvaṇṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID06E84AC9F8D5F6AF ;
+            bdr:ID2BD9469AE575AAB0 ;
         :hasFascicles       "2, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT097A8EEA1C438E66 , bdr:TT2BD9469AE575AAB0 , bdr:TT79A2069C05314AA7 , bdr:TTD4D8B9A116297A65 ;
+        :hasTitle           bdr:TT097A8EEA1C438E66 , bdr:TT79A2069C05314AA7 , bdr:TTAEE607D086B4505D , bdr:TTEC5D6580B33827E7 ;
         :instanceHasReproduction  bdr:W1FEMC010547 ;
+        :instanceOf         bdr:WA1FEMC120002 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF82E3273567D0E95C ;
-        :note               bdr:NT7F505DFB6CEF2549 ;
+        :microfilmItem      bdr:MF7F505DFB6CEF2549 ;
+        :note               bdr:NTD4D8B9A116297A65 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7F505DFB6CEF2549
+    bdr:NTD4D8B9A116297A65
         a                   :Note ;
         :contentLocationStatement  "pg. 161" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT097A8EEA1C438E66
-        a                   :Title ;
-        rdfs:label          "bhin suvaṇṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2BD9469AE575AAB0 .
-    
-    bdr:TT2BD9469AE575AAB0
         a                   :CoverTitle ;
         rdfs:label          "bhin sūr-vand"@km-x-twktt .
     
     bdr:TT79A2069C05314AA7
-        a                   :Title ;
-        rdfs:label          "ភិនសុវណ្ណ"@km ;
-        :femcConversionOf   bdr:TTD4D8B9A116297A65 .
-    
-    bdr:TTD4D8B9A116297A65
         a                   :CoverTitle ;
         rdfs:label          "ភិនសូរវន្ទ"@km .
+    
+    bdr:TTAEE607D086B4505D
+        a                   :Title ;
+        rdfs:label          "bhin suvaṇṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT097A8EEA1C438E66 .
+    
+    bdr:TTEC5D6580B33827E7
+        a                   :Title ;
+        rdfs:label          "ភិនសុវណ្ណ"@km ;
+        :femcConversionOf   bdr:TT79A2069C05314AA7 .
 }

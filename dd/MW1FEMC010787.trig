@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010787 {
-    bda:LG39472BF3B12B69AC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010787"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010787"@en , "imported pubinfo for W1FEMC010787"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010787"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010787 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010787 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "dd/MW1FEMC010787.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010787 ;
-        adm:logEntry        bda:LG39472BF3B12B69AC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF06D1F030410F582
+    bdr:ID1594C313FE89F6CF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "023-A.03.08.02.III.1" .
     
-    bdr:MFA683B149CB445738
+    bdr:MF9A80C0D8EEF36D10
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "51" ;
         :microfilmStrip     "132" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010787 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មធាតុទាំង៧"@km , "dhamm dhātu dāṃṅ 7"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF06D1F030410F582 ;
+            bdr:ID1594C313FE89F6CF ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0E9AF72183A2D779 , bdr:TT1594C313FE89F6CF , bdr:TT6820679D5AD108CC , bdr:TTF9B28F9816F289FA ;
+        :hasTitle           bdr:TT39472BF3B12B69AC , bdr:TT6820679D5AD108CC , bdr:TTF4FB9AD494C4524C , bdr:TTF9B28F9816F289FA ;
         :instanceHasReproduction  bdr:W1FEMC010787 ;
+        :instanceOf         bdr:WA1FEMC010026 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA683B149CB445738 ;
-        :note               bdr:NT9A80C0D8EEF36D10 ;
+        :microfilmItem      bdr:MF9A80C0D8EEF36D10 ;
+        :note               bdr:NT0E9AF72183A2D779 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9A80C0D8EEF36D10
+    bdr:NT0E9AF72183A2D779
         a                   :Note ;
         :contentLocationStatement  "pg. 208" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0E9AF72183A2D779
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មធាតុ"@km .
+    bdr:TT39472BF3B12B69AC
+        a                   :Title ;
+        rdfs:label          "ធម្មធាតុទាំង៧"@km ;
+        :femcConversionOf   bdr:TTF9B28F9816F289FA .
     
-    bdr:TT1594C313FE89F6CF
+    bdr:TT6820679D5AD108CC
         a                   :CoverTitle ;
         rdfs:label          "dhamm dhātu"@km-x-twktt .
     
-    bdr:TT6820679D5AD108CC
+    bdr:TTF4FB9AD494C4524C
         a                   :Title ;
         rdfs:label          "dhamm dhātu dāṃṅ 7"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1594C313FE89F6CF .
+        :femcConversionOf   bdr:TT6820679D5AD108CC .
     
     bdr:TTF9B28F9816F289FA
-        a                   :Title ;
-        rdfs:label          "ធម្មធាតុទាំង៧"@km ;
-        :femcConversionOf   bdr:TT0E9AF72183A2D779 .
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មធាតុ"@km .
 }

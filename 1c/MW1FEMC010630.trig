@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010630 {
-    bda:LG4A7BF33D24344B33
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010630"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010630"@en , "imported pubinfo for W1FEMC010630"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010630"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010630 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010630 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1c/MW1FEMC010630.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010630 ;
-        adm:logEntry        bda:LG4A7BF33D24344B33 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4E30A5290F1DEBF2
+    bdr:ID494927BDA70793D2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "010-A.02.12.04.III.2" .
     
-    bdr:MF531F3CC4E5B652BA
+    bdr:MF4C3829F558FEAF2E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "33" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010630 {
         a                   :Instance ;
         skos:prefLabel      "អង្គុត្តរនិកាយ"@km , "aṅguttaranikāy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4E30A5290F1DEBF2 ;
+            bdr:ID494927BDA70793D2 ;
         :hasFascicles       "8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2E90250946E12A77 , bdr:TT494927BDA70793D2 , bdr:TT4D07423A602E6128 , bdr:TTC4E6F6A6BF973BCE ;
+        :hasTitle           bdr:TT2E90250946E12A77 , bdr:TT4A7BF33D24344B33 , bdr:TTA2C0C1214B8D48E1 , bdr:TTC4E6F6A6BF973BCE ;
         :instanceHasReproduction  bdr:W1FEMC010630 ;
+        :instanceOf         bdr:WA1FEMC020014 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF531F3CC4E5B652BA ;
-        :note               bdr:NT4C3829F558FEAF2E ;
+        :microfilmItem      bdr:MF4C3829F558FEAF2E ;
+        :note               bdr:NT4D07423A602E6128 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4C3829F558FEAF2E
+    bdr:NT4D07423A602E6128
         a                   :Note ;
         :contentLocationStatement  "pg. 177" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT2E90250946E12A77
-        a                   :Title ;
-        rdfs:label          "អង្គុត្តរនិកាយ"@km ;
-        :femcConversionOf   bdr:TT4D07423A602E6128 .
-    
-    bdr:TT494927BDA70793D2
-        a                   :CoverTitle ;
-        rdfs:label          "aṅgatar nīkāy"@km-x-twktt .
-    
-    bdr:TT4D07423A602E6128
         a                   :CoverTitle ;
         rdfs:label          "អង្គតរនីកាយ"@km .
     
-    bdr:TTC4E6F6A6BF973BCE
+    bdr:TT4A7BF33D24344B33
+        a                   :Title ;
+        rdfs:label          "អង្គុត្តរនិកាយ"@km ;
+        :femcConversionOf   bdr:TT2E90250946E12A77 .
+    
+    bdr:TTA2C0C1214B8D48E1
         a                   :Title ;
         rdfs:label          "aṅguttaranikāy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT494927BDA70793D2 .
+        :femcConversionOf   bdr:TTC4E6F6A6BF973BCE .
+    
+    bdr:TTC4E6F6A6BF973BCE
+        a                   :CoverTitle ;
+        rdfs:label          "aṅgatar nīkāy"@km-x-twktt .
 }

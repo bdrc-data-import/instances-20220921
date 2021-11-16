@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011429 {
-    bda:LGD552DAA934DAF767
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011429"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011429"@en , "imported pubinfo for W1FEMC011429"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011429"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011429 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011429 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ae/MW1FEMC011429.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011429 ;
-        adm:logEntry        bda:LGD552DAA934DAF767 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID17395C77840F25E3
+    bdr:IDA46EE9963CC7E48D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "004-A.10.07.03.III.4" .
     
-    bdr:MFD57374BD57E40907
+    bdr:MF5727451753395237
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "35" ;
         :microfilmStrip     "70" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011429 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km , "abhidhamm 9 paricched"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID17395C77840F25E3 ;
+            bdr:IDA46EE9963CC7E48D ;
         :hasFascicles       "1, 9" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5C97350CD39CD1E1 , bdr:TTA46EE9963CC7E48D , bdr:TTCFE4B42E94F0AAA9 , bdr:TTFB30D9C70C250EEC ;
+        :hasTitle           bdr:TT5C97350CD39CD1E1 , bdr:TT8892E72DDAA2FD36 , bdr:TTCFE4B42E94F0AAA9 , bdr:TTD552DAA934DAF767 ;
         :instanceHasReproduction  bdr:W1FEMC011429 ;
+        :instanceOf         bdr:WA1FEMC040002 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD57374BD57E40907 ;
-        :note               bdr:NT5727451753395237 ;
+        :microfilmItem      bdr:MF5727451753395237 ;
+        :note               bdr:NTFB30D9C70C250EEC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5727451753395237
+    bdr:NTFB30D9C70C250EEC
         a                   :Note ;
         :contentLocationStatement  "pg. 332" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT5C97350CD39CD1E1
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km ;
-        :femcConversionOf   bdr:TTFB30D9C70C250EEC .
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្ម៩"@km .
     
-    bdr:TTA46EE9963CC7E48D
+    bdr:TT8892E72DDAA2FD36
+        a                   :Title ;
+        rdfs:label          "abhidhamm 9 paricched"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCFE4B42E94F0AAA9 .
+    
+    bdr:TTCFE4B42E94F0AAA9
         a                   :CoverTitle ;
         rdfs:label          "abhidham 9"@km-x-twktt .
     
-    bdr:TTCFE4B42E94F0AAA9
+    bdr:TTD552DAA934DAF767
         a                   :Title ;
-        rdfs:label          "abhidhamm 9 paricched"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA46EE9963CC7E48D .
-    
-    bdr:TTFB30D9C70C250EEC
-        a                   :CoverTitle ;
-        rdfs:label          "អភិធម្ម៩"@km .
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km ;
+        :femcConversionOf   bdr:TT5C97350CD39CD1E1 .
 }

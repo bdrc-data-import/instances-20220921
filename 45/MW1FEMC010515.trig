@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010515 {
-    bda:LGFF0CCDA83256CBD6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010515"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010515"@en , "imported pubinfo for W1FEMC010515"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010515"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010515 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010515 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "45/MW1FEMC010515.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010515 ;
-        adm:logEntry        bda:LGFF0CCDA83256CBD6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3E3E1D75BEBEBFBC
+    bdr:ID295A29D66FDF8DBE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "020-A.02.08.02.III.6" .
     
-    bdr:MF71036F09497636FB
+    bdr:MFA93E8548C8E45109
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "29" ;
         :microfilmStrip     "45" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010515 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សបិណ្ឌ"@km , "ānisaṅs piṇḍ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3E3E1D75BEBEBFBC ;
+            bdr:ID295A29D66FDF8DBE ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT175E9E7EE11509CA , bdr:TT295A29D66FDF8DBE ;
+        :hasTitle           bdr:TTCDAC99B2CE95F395 , bdr:TTFF0CCDA83256CBD6 ;
         :instanceHasReproduction  bdr:W1FEMC010515 ;
+        :instanceOf         bdr:WA1FEMC060032 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF71036F09497636FB ;
-        :note               bdr:NTA93E8548C8E45109 ;
+        :microfilmItem      bdr:MFA93E8548C8E45109 ;
+        :note               bdr:NT175E9E7EE11509CA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTA93E8548C8E45109
+    bdr:NT175E9E7EE11509CA
         a                   :Note ;
         :contentLocationStatement  "pg. 155" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT175E9E7EE11509CA
-        a                   :Title ;
-        rdfs:label          "អានិសង្សបិណ្ឌ"@km .
-    
-    bdr:TT295A29D66FDF8DBE
+    bdr:TTCDAC99B2CE95F395
         a                   :Title ;
         rdfs:label          "ānisaṅs piṇḍ"@km-x-twktt .
+    
+    bdr:TTFF0CCDA83256CBD6
+        a                   :Title ;
+        rdfs:label          "អានិសង្សបិណ្ឌ"@km .
 }

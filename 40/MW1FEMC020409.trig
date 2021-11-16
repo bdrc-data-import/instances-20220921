@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020409 {
-    bda:LG5DF52BA8276B750B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020409"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020409"@en , "imported pubinfo for W1FEMC020409"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020409"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020409 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020409 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "40/MW1FEMC020409.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020409 ;
-        adm:logEntry        bda:LG5DF52BA8276B750B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE45CE7B98DA50EE7
+    bdr:IDE5F8D5D6D0A04C31
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.44.III.3" .
     
-    bdr:MF0A4D071F2E9BD92C
+    bdr:MF38C633893B724CE0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "67" ;
         :microfilmStrip     "161" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020409 {
         a                   :Instance ;
         skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ"@km , "bhikkhuppāṭimokkh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE45CE7B98DA50EE7 ;
+            bdr:IDE5F8D5D6D0A04C31 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT226B2B8EF10E8F2E , bdr:TT5E940E04E343C021 , bdr:TTDFEF90F5716EB6EB , bdr:TTE5F8D5D6D0A04C31 ;
+        :hasTitle           bdr:TT08DFB6E5EE6913BB , bdr:TT226B2B8EF10E8F2E , bdr:TT5DF52BA8276B750B , bdr:TTDFEF90F5716EB6EB ;
         :instanceHasReproduction  bdr:W1FEMC020409 ;
+        :instanceOf         bdr:WA1FEMC030005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0A4D071F2E9BD92C ;
-        :note               bdr:NT38C633893B724CE0 ;
+        :microfilmItem      bdr:MF38C633893B724CE0 ;
+        :note               bdr:NT5E940E04E343C021 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT38C633893B724CE0
+    bdr:NT5E940E04E343C021
         a                   :Note ;
         :contentLocationStatement  "pg. 80" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT226B2B8EF10E8F2E
+    bdr:TT08DFB6E5EE6913BB
         a                   :Title ;
         rdfs:label          "bhikkhuppāṭimokkh"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE5F8D5D6D0A04C31 .
+        :femcConversionOf   bdr:TT226B2B8EF10E8F2E .
     
-    bdr:TT5E940E04E343C021
-        a                   :CoverTitle ;
-        rdfs:label          "បាដិមោក្ខ"@km .
-    
-    bdr:TTDFEF90F5716EB6EB
-        a                   :Title ;
-        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@km ;
-        :femcConversionOf   bdr:TT5E940E04E343C021 .
-    
-    bdr:TTE5F8D5D6D0A04C31
+    bdr:TT226B2B8EF10E8F2E
         a                   :CoverTitle ;
         rdfs:label          "pāṭimokkh"@km-x-twktt .
+    
+    bdr:TT5DF52BA8276B750B
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@km ;
+        :femcConversionOf   bdr:TTDFEF90F5716EB6EB .
+    
+    bdr:TTDFEF90F5716EB6EB
+        a                   :CoverTitle ;
+        rdfs:label          "បាដិមោក្ខ"@km .
 }

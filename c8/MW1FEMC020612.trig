@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020612 {
-    bda:LG83729A23ACDDF701
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020612"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020612"@en , "imported pubinfo for W1FEMC020612"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020612"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020612 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020612 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "c8/MW1FEMC020612.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020612 ;
-        adm:logEntry        bda:LG83729A23ACDDF701 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF795E9EA5E96C9C9
+    bdr:IDD0C19DAC2EB725BA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.245.II.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020612 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទគោរព"@km , "cand gorab"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF795E9EA5E96C9C9 ;
+            bdr:IDD0C19DAC2EB725BA ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6ABF2743357581E2 , bdr:TT7E919E0DA5E56D15 , bdr:TTBC364A30A964FB7E , bdr:TTD0C19DAC2EB725BA ;
+        :hasTitle           bdr:TT6ABF2743357581E2 , bdr:TT83729A23ACDDF701 , bdr:TT9C2C3EE99C6F1B38 , bdr:TTBC364A30A964FB7E ;
         :instanceHasReproduction  bdr:W1FEMC020612 ;
+        :instanceOf         bdr:WA1FEMC120008 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT79E3BB61707B434B ;
+        :note               bdr:NT7E919E0DA5E56D15 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT79E3BB61707B434B
+    bdr:NT7E919E0DA5E56D15
         a                   :Note ;
         :contentLocationStatement  "pg. 115" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT6ABF2743357581E2
-        a                   :Title ;
-        rdfs:label          "ចន្ទគោរព"@km ;
-        :femcConversionOf   bdr:TT7E919E0DA5E56D15 .
-    
-    bdr:TT7E919E0DA5E56D15
         a                   :CoverTitle ;
         rdfs:label          "ចន្ទគោរុព្ភ"@km .
     
-    bdr:TTBC364A30A964FB7E
+    bdr:TT83729A23ACDDF701
+        a                   :Title ;
+        rdfs:label          "ចន្ទគោរព"@km ;
+        :femcConversionOf   bdr:TT6ABF2743357581E2 .
+    
+    bdr:TT9C2C3EE99C6F1B38
         a                   :Title ;
         rdfs:label          "cand gorab"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD0C19DAC2EB725BA .
+        :femcConversionOf   bdr:TTBC364A30A964FB7E .
     
-    bdr:TTD0C19DAC2EB725BA
+    bdr:TTBC364A30A964FB7E
         a                   :CoverTitle ;
         rdfs:label          "cand gorubbh"@km-x-twktt .
 }

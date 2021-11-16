@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010062 {
-    bda:LGCB0B0EC45B7CA9F4
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010062"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010062"@en , "imported pubinfo for W1FEMC010062"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010062"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010062 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010062 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "68/MW1FEMC010062.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010062 ;
-        adm:logEntry        bda:LGCB0B0EC45B7CA9F4 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB78917A51237A8AD
+    bdr:ID9A5D5842BF647785
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "022-24-PP.01.08.01.II.1" .
     
-    bdr:MF8D14C9FD6779FE71
+    bdr:MFDD3F47343978B54B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "22" ;
         :microfilmStrip     "17" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010062 {
         a                   :Instance ;
         skos:prefLabel      "ស្រទបចេក"@km , "sradap cek"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB78917A51237A8AD ;
+            bdr:ID9A5D5842BF647785 ;
         :hasFascicles       "2-4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT077BD75E225E20B3 , bdr:TT4E35D61DE7AD378C , bdr:TT9A5D5842BF647785 , bdr:TTBFBD1521D6AF2C78 , bdr:TTCEBBC98F0E77865F , bdr:TTF42253DF9E6E1776 ;
+        :hasTitle           bdr:TT077BD75E225E20B3 , bdr:TT3C7796601E077B99 , bdr:TT4E35D61DE7AD378C , bdr:TTBFBD1521D6AF2C78 , bdr:TTCB0B0EC45B7CA9F4 , bdr:TTF42253DF9E6E1776 ;
         :instanceHasReproduction  bdr:W1FEMC010062 ;
+        :instanceOf         bdr:WA1FEMC120033 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8D14C9FD6779FE71 ;
-        :note               bdr:NTDD3F47343978B54B ;
+        :microfilmItem      bdr:MFDD3F47343978B54B ;
+        :note               bdr:NTCEBBC98F0E77865F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDD3F47343978B54B
+    bdr:NTCEBBC98F0E77865F
         a                   :Note ;
         :contentLocationStatement  "pg. 66" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT077BD75E225E20B3
         a                   :CoverTitle ;
-        rdfs:label          "devavaṅs kumār"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9A5D5842BF647785 .
+        rdfs:label          "devaṅs kumār"@km-x-twktt .
     
-    bdr:TT4E35D61DE7AD378C
+    bdr:TT3C7796601E077B99
         a                   :Title ;
         rdfs:label          "sradap cek"@km-x-twktt .
     
-    bdr:TT9A5D5842BF647785
+    bdr:TT4E35D61DE7AD378C
         a                   :CoverTitle ;
-        rdfs:label          "devaṅs kumār"@km-x-twktt .
+        rdfs:label          "devavaṅs kumār"@km-x-twktt ;
+        :femcConversionOf   bdr:TT077BD75E225E20B3 .
     
     bdr:TTBFBD1521D6AF2C78
+        a                   :CoverTitle ;
+        rdfs:label          "ទេវវង្សកុមារ"@km ;
+        :femcConversionOf   bdr:TTF42253DF9E6E1776 .
+    
+    bdr:TTCB0B0EC45B7CA9F4
         a                   :Title ;
         rdfs:label          "ស្រទបចេក"@km .
     
-    bdr:TTCEBBC98F0E77865F
-        a                   :CoverTitle ;
-        rdfs:label          "ទេវង្សកុមារ"@km .
-    
     bdr:TTF42253DF9E6E1776
         a                   :CoverTitle ;
-        rdfs:label          "ទេវវង្សកុមារ"@km ;
-        :femcConversionOf   bdr:TTCEBBC98F0E77865F .
+        rdfs:label          "ទេវង្សកុមារ"@km .
 }

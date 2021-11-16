@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011090 {
-    bda:LG05A3985EC273573E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011090"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011090"@en , "imported pubinfo for W1FEMC011090"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011090"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011090 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011090 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "68/MW1FEMC011090.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011090 ;
-        adm:logEntry        bda:LG05A3985EC273573E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1686A472A75109AA
+    bdr:ID31ED21AFE4E931D2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.04.08.01.V.1" .
     
-    bdr:MF2C9D669FAB3E5A8C
+    bdr:MF2AA9F81141AB5D8D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "42" ;
         :microfilmStrip     "98" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011090 {
         a                   :Instance ;
         skos:prefLabel      "ក្បួនព្រះគុនកែវ"@km , "kpuon braḥ guṇ kèv"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1686A472A75109AA ;
+            bdr:ID31ED21AFE4E931D2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT114134906C7BD70F , bdr:TT31ED21AFE4E931D2 , bdr:TTD1B64102DBA21D24 , bdr:TTEB8AF69A22DFE2D5 ;
+        :hasTitle           bdr:TT05A3985EC273573E , bdr:TT114134906C7BD70F , bdr:TTD1A327CD818C0A2E , bdr:TTD1B64102DBA21D24 ;
         :instanceHasReproduction  bdr:W1FEMC011090 ;
+        :instanceOf         bdr:WA1FEMC070008 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2C9D669FAB3E5A8C ;
-        :note               bdr:NT2AA9F81141AB5D8D ;
+        :microfilmItem      bdr:MF2AA9F81141AB5D8D ;
+        :note               bdr:NTEB8AF69A22DFE2D5 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2AA9F81141AB5D8D
+    bdr:NTEB8AF69A22DFE2D5
         a                   :Note ;
         :contentLocationStatement  "pg. 265" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT114134906C7BD70F
+    bdr:TT05A3985EC273573E
         a                   :Title ;
         rdfs:label          "ក្បួនព្រះគុនកែវ"@km ;
-        :femcConversionOf   bdr:TTEB8AF69A22DFE2D5 .
+        :femcConversionOf   bdr:TT114134906C7BD70F .
     
-    bdr:TT31ED21AFE4E931D2
-        a                   :CoverTitle ;
-        rdfs:label          "kpuon braḥ gun kèv"@km-x-twktt .
-    
-    bdr:TTD1B64102DBA21D24
-        a                   :Title ;
-        rdfs:label          "kpuon braḥ guṇ kèv"@km-x-twktt ;
-        :femcConversionOf   bdr:TT31ED21AFE4E931D2 .
-    
-    bdr:TTEB8AF69A22DFE2D5
+    bdr:TT114134906C7BD70F
         a                   :CoverTitle ;
         rdfs:label          "ក្បួនព្រះគុនកែវ"@km .
+    
+    bdr:TTD1A327CD818C0A2E
+        a                   :Title ;
+        rdfs:label          "kpuon braḥ guṇ kèv"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD1B64102DBA21D24 .
+    
+    bdr:TTD1B64102DBA21D24
+        a                   :CoverTitle ;
+        rdfs:label          "kpuon braḥ gun kèv"@km-x-twktt .
 }

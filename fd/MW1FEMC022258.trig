@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022258 {
-    bda:LG8CD2BC4D7B772F24
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022258"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022258"@en , "imported pubinfo for W1FEMC022258"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022258"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022258 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022258 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fd/MW1FEMC022258.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022258 ;
-        adm:logEntry        bda:LG8CD2BC4D7B772F24 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCD3A98B00DD2D6DD
+    bdr:ID862488B3B76B963F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.336.V.1" .
     
-    bdr:MFF6AE28C401F174A8
+    bdr:MFD75B79A1FC61FD26
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "142" ;
         :microfilmStrip     "236" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022258 {
         a                   :Instance ;
         skos:prefLabel      "សតិមហាបដ្ឋាន"@km , "sati mahā paṭṭhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCD3A98B00DD2D6DD ;
+            bdr:ID862488B3B76B963F ;
         :hasFascicles       "1-7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4AF1DA9B99D40610 , bdr:TT862488B3B76B963F , bdr:TT943C515F00A2894C , bdr:TT9C592172AFEDF0C8 ;
+        :hasTitle           bdr:TT3013612E00447F4E , bdr:TT8CD2BC4D7B772F24 , bdr:TT943C515F00A2894C , bdr:TT9C592172AFEDF0C8 ;
         :instanceHasReproduction  bdr:W1FEMC022258 ;
+        :instanceOf         bdr:WA1FEMC070017 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF6AE28C401F174A8 ;
-        :note               bdr:NTD75B79A1FC61FD26 ;
+        :microfilmItem      bdr:MFD75B79A1FC61FD26 ;
+        :note               bdr:NT4AF1DA9B99D40610 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "920" .
     
-    bdr:NTD75B79A1FC61FD26
+    bdr:NT4AF1DA9B99D40610
         a                   :Note ;
         :contentLocationStatement  "pg. 403" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4AF1DA9B99D40610
-        a                   :CoverTitle ;
-        rdfs:label          "សត្តិមហាបដ្ឋាន"@km .
+    bdr:TT3013612E00447F4E
+        a                   :Title ;
+        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT943C515F00A2894C .
     
-    bdr:TT862488B3B76B963F
+    bdr:TT8CD2BC4D7B772F24
+        a                   :Title ;
+        rdfs:label          "សតិមហាបដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TT9C592172AFEDF0C8 .
+    
+    bdr:TT943C515F00A2894C
         a                   :CoverTitle ;
         rdfs:label          "satti mahā paṭṭhān"@km-x-twktt .
     
-    bdr:TT943C515F00A2894C
-        a                   :Title ;
-        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TT862488B3B76B963F .
-    
     bdr:TT9C592172AFEDF0C8
-        a                   :Title ;
-        rdfs:label          "សតិមហាបដ្ឋាន"@km ;
-        :femcConversionOf   bdr:TT4AF1DA9B99D40610 .
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តិមហាបដ្ឋាន"@km .
 }

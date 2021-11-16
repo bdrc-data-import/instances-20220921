@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010863 {
-    bda:LGF0337F23E37E0518
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010863"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010863"@en , "imported pubinfo for W1FEMC010863"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010863"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010863 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010863 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "db/MW1FEMC010863.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010863 ;
-        adm:logEntry        bda:LGF0337F23E37E0518 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID66DEAD9147CF637A
+    bdr:ID943C856A8A4FD66C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "058-A.04.02.01.V.2" .
     
-    bdr:MFE304DD0CEB0029ED
+    bdr:MF12D0AC676995AC04
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "40" ;
         :microfilmStrip     "91" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010863 {
         a                   :Instance ;
         skos:prefLabel      "រាជក្រឹត្យក្រមពលទេព"@km , "rāj krịty kram bal deb"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID66DEAD9147CF637A ;
+            bdr:ID943C856A8A4FD66C ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT7B8627C54E97B006 , bdr:TT943C856A8A4FD66C , bdr:TTBD23BE64BB068C27 , bdr:TTC121E8CD782C2A75 ;
+        :hasTitle           bdr:TTA98DD2302A3C3EB9 , bdr:TTBD23BE64BB068C27 , bdr:TTC121E8CD782C2A75 , bdr:TTF0337F23E37E0518 ;
         :instanceHasReproduction  bdr:W1FEMC010863 ;
+        :instanceOf         bdr:WA1FEMC140002 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE304DD0CEB0029ED ;
-        :note               bdr:NT12D0AC676995AC04 ;
+        :microfilmItem      bdr:MF12D0AC676995AC04 ;
+        :note               bdr:NT7B8627C54E97B006 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT12D0AC676995AC04
+    bdr:NT7B8627C54E97B006
         a                   :Note ;
         :contentLocationStatement  "pg. 222" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT7B8627C54E97B006
-        a                   :CoverTitle ;
-        rdfs:label          "ច្បាបក្រំមពល្ថទេព្ព"@km .
+    bdr:TTA98DD2302A3C3EB9
+        a                   :Title ;
+        rdfs:label          "rāj krịty kram bal deb"@km-x-twktt ;
+        :femcConversionOf   bdr:TTBD23BE64BB068C27 .
     
-    bdr:TT943C856A8A4FD66C
+    bdr:TTBD23BE64BB068C27
         a                   :CoverTitle ;
         rdfs:label          "cpāp kraṃm ball debb"@km-x-twktt .
     
-    bdr:TTBD23BE64BB068C27
-        a                   :Title ;
-        rdfs:label          "rāj krịty kram bal deb"@km-x-twktt ;
-        :femcConversionOf   bdr:TT943C856A8A4FD66C .
-    
     bdr:TTC121E8CD782C2A75
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាបក្រំមពល្ថទេព្ព"@km .
+    
+    bdr:TTF0337F23E37E0518
         a                   :Title ;
         rdfs:label          "រាជក្រឹត្យក្រមពលទេព"@km ;
-        :femcConversionOf   bdr:TT7B8627C54E97B006 .
+        :femcConversionOf   bdr:TTC121E8CD782C2A75 .
 }

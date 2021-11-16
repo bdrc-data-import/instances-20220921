@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020619 {
-    bda:LG7D27374F80223569
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020619"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020619"@en , "imported pubinfo for W1FEMC020619"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020619"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020619 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020619 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "67/MW1FEMC020619.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020619 ;
-        adm:logEntry        bda:LG7D27374F80223569 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID67D921C13C50FC8A
+    bdr:IDC6E19052E64EF5EB
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.252.II.1" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC020619 {
         a                   :Instance ;
         skos:prefLabel      "សុវណ្ណសិរសា"@km , "suvaṇṇ sirasā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID67D921C13C50FC8A ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0841A714816F7D24 , bdr:TT118E03192E8F72D5 , bdr:TTB1275E3700417CB1 , bdr:TTC6E19052E64EF5EB ;
+            bdr:IDC6E19052E64EF5EB ;
+        :hasTitle           bdr:TT0841A714816F7D24 , bdr:TT118E03192E8F72D5 , bdr:TT7D27374F80223569 , bdr:TTA7C9FF00883EFB42 ;
         :instanceHasReproduction  bdr:W1FEMC020619 ;
+        :instanceOf         bdr:WA1FEMC120043 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT076FBA84BBBB3173 ;
+        :note               bdr:NTB1275E3700417CB1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT076FBA84BBBB3173
+    bdr:NTB1275E3700417CB1
         a                   :Note ;
         :contentLocationStatement  "pg. 116" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT0841A714816F7D24
-        a                   :Title ;
-        rdfs:label          "សុវណ្ណសិរសា"@km ;
-        :femcConversionOf   bdr:TTB1275E3700417CB1 .
-    
-    bdr:TT118E03192E8F72D5
-        a                   :Title ;
-        rdfs:label          "suvaṇṇ sirasā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC6E19052E64EF5EB .
-    
-    bdr:TTB1275E3700417CB1
         a                   :CoverTitle ;
         rdfs:label          "សុវណ្ណសិរិសារ"@km .
     
-    bdr:TTC6E19052E64EF5EB
+    bdr:TT118E03192E8F72D5
         a                   :CoverTitle ;
         rdfs:label          "suvaṇṇ sirisār"@km-x-twktt .
+    
+    bdr:TT7D27374F80223569
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណសិរសា"@km ;
+        :femcConversionOf   bdr:TT0841A714816F7D24 .
+    
+    bdr:TTA7C9FF00883EFB42
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ sirasā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT118E03192E8F72D5 .
 }

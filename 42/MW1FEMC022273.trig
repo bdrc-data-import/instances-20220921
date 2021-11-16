@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022273 {
-    bda:LG522B04DEC8122FDC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022273"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022273"@en , "imported pubinfo for W1FEMC022273"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022273"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022273 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022273 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "42/MW1FEMC022273.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022273 ;
-        adm:logEntry        bda:LG522B04DEC8122FDC , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID977E15C07B0836AF
+    bdr:ID5F836212B5B72E94
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.351.III.6" .
     
-    bdr:MF7993D4131DEF6960
+    bdr:MF99CEA64C090FF8C0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022273 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សពុទ្ធបូជា"@km , "ānisaṅs buddhapūjā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID977E15C07B0836AF ;
+            bdr:ID5F836212B5B72E94 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT04DD88F29B0ADA99 , bdr:TT5F836212B5B72E94 , bdr:TTB549B9BE09200749 , bdr:TTF89917AECD0604B3 ;
+        :hasTitle           bdr:TT04DD88F29B0ADA99 , bdr:TT522B04DEC8122FDC , bdr:TTB44FC065573A5BBE , bdr:TTB549B9BE09200749 ;
         :instanceHasReproduction  bdr:W1FEMC022273 ;
+        :instanceOf         bdr:WA1FEMC060043 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7993D4131DEF6960 ;
-        :note               bdr:NT99CEA64C090FF8C0 ;
+        :microfilmItem      bdr:MF99CEA64C090FF8C0 ;
+        :note               bdr:NTF89917AECD0604B3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1014" .
     
-    bdr:NT99CEA64C090FF8C0
+    bdr:NTF89917AECD0604B3
         a                   :Note ;
         :contentLocationStatement  "pg. 406" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT04DD88F29B0ADA99
-        a                   :Title ;
-        rdfs:label          "អានិសង្សពុទ្ធបូជា"@km ;
-        :femcConversionOf   bdr:TTF89917AECD0604B3 .
-    
-    bdr:TT5F836212B5B72E94
-        a                   :CoverTitle ;
-        rdfs:label          "ānisaṃs buddhapūjā"@km-x-twktt .
-    
-    bdr:TTB549B9BE09200749
-        a                   :Title ;
-        rdfs:label          "ānisaṅs buddhapūjā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5F836212B5B72E94 .
-    
-    bdr:TTF89917AECD0604B3
         a                   :CoverTitle ;
         rdfs:label          "អានិសំសពុទ្ធបូជា"@km .
+    
+    bdr:TT522B04DEC8122FDC
+        a                   :Title ;
+        rdfs:label          "អានិសង្សពុទ្ធបូជា"@km ;
+        :femcConversionOf   bdr:TT04DD88F29B0ADA99 .
+    
+    bdr:TTB44FC065573A5BBE
+        a                   :Title ;
+        rdfs:label          "ānisaṅs buddhapūjā"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB549B9BE09200749 .
+    
+    bdr:TTB549B9BE09200749
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṃs buddhapūjā"@km-x-twktt .
 }

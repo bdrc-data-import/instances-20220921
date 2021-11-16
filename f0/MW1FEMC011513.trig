@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011513 {
-    bda:LG02F1E25A228388C1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011513"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011513"@en , "imported pubinfo for W1FEMC011513"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011513"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011513 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011513 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f0/MW1FEMC011513.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011513 ;
-        adm:logEntry        bda:LG02F1E25A228388C1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8D33145921EC6EE2
+    bdr:IDB8A77720D131295A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "055-A.10.08.01.II.1" .
     
-    bdr:MF1E929DB3F7EAD233
+    bdr:MFC5F9E43691CF8FF2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "38" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011513 {
         a                   :Instance ;
         skos:prefLabel      "ក្រុងសុភមិត្ត"@km , "kruṅ subhamitt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8D33145921EC6EE2 ;
+            bdr:IDB8A77720D131295A ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT66F76F6A6B4FEC47 , bdr:TTB15FF07FA60810AC , bdr:TTB8A77720D131295A , bdr:TTD3490590CAC3F75A ;
+        :hasTitle           bdr:TT02F1E25A228388C1 , bdr:TT66F76F6A6B4FEC47 , bdr:TTD3490590CAC3F75A , bdr:TTF5E3C8F35E5A6661 ;
         :instanceHasReproduction  bdr:W1FEMC011513 ;
+        :instanceOf         bdr:WA1FEMC120021 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1E929DB3F7EAD233 ;
-        :note               bdr:NTC5F9E43691CF8FF2 ;
+        :microfilmItem      bdr:MFC5F9E43691CF8FF2 ;
+        :note               bdr:NTB15FF07FA60810AC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC5F9E43691CF8FF2
+    bdr:NTB15FF07FA60810AC
         a                   :Note ;
         :contentLocationStatement  "pg. 347" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT66F76F6A6B4FEC47
+    bdr:TT02F1E25A228388C1
         a                   :Title ;
-        rdfs:label          "kruṅ subhamitt"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB8A77720D131295A .
+        rdfs:label          "ក្រុងសុភមិត្ត"@km ;
+        :femcConversionOf   bdr:TTD3490590CAC3F75A .
     
-    bdr:TTB15FF07FA60810AC
-        a                   :CoverTitle ;
-        rdfs:label          "ក្រុងសព្ភមិត្ត"@km .
-    
-    bdr:TTB8A77720D131295A
+    bdr:TT66F76F6A6B4FEC47
         a                   :CoverTitle ;
         rdfs:label          "kruṅ sabbhamitt"@km-x-twktt .
     
     bdr:TTD3490590CAC3F75A
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងសព្ភមិត្ត"@km .
+    
+    bdr:TTF5E3C8F35E5A6661
         a                   :Title ;
-        rdfs:label          "ក្រុងសុភមិត្ត"@km ;
-        :femcConversionOf   bdr:TTB15FF07FA60810AC .
+        rdfs:label          "kruṅ subhamitt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT66F76F6A6B4FEC47 .
 }

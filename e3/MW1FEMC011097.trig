@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011097 {
-    bda:LGCB93E845E7229AEC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011097"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011097"@en , "imported pubinfo for W1FEMC011097"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011097"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011097 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011097 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e3/MW1FEMC011097.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011097 ;
-        adm:logEntry        bda:LGCB93E845E7229AEC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID360B594F1893C0A3
+    bdr:IDEF8A1124096E4F38
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005-A.04.09.01.III.6" .
     
-    bdr:MF786A33C4C9692205
+    bdr:MF19BE7C117CDE0C54
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "42" ;
         :microfilmStrip     "97" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC011097 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សគុណនិងទោស"@km , "ānisaṅs guṇ niṅ dos"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID360B594F1893C0A3 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT23EB430F9B40ED6C , bdr:TT903A4AE3EB311DD4 , bdr:TTB056221D02617A78 , bdr:TTEF8A1124096E4F38 ;
+            bdr:IDEF8A1124096E4F38 ;
+        :hasTitle           bdr:TT23EB430F9B40ED6C , bdr:TT903A4AE3EB311DD4 , bdr:TTCB93E845E7229AEC , bdr:TTEDA0655168783400 ;
         :instanceHasReproduction  bdr:W1FEMC011097 ;
+        :instanceOf         bdr:WA1FEMC060021 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF786A33C4C9692205 ;
-        :note               bdr:NT19BE7C117CDE0C54 ;
+        :microfilmItem      bdr:MF19BE7C117CDE0C54 ;
+        :note               bdr:NTB056221D02617A78 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT19BE7C117CDE0C54
+    bdr:NTB056221D02617A78
         a                   :Note ;
         :contentLocationStatement  "pg. 267" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT23EB430F9B40ED6C
-        a                   :Title ;
-        rdfs:label          "ānisaṅs guṇ niṅ dos"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEF8A1124096E4F38 .
+        a                   :CoverTitle ;
+        rdfs:label          "anisaṅs gaṇ' nīṅ doḥ"@km-x-twktt .
     
     bdr:TT903A4AE3EB311DD4
-        a                   :Title ;
-        rdfs:label          "អានិសង្សគុណនិងទោស"@km ;
-        :femcConversionOf   bdr:TTB056221D02617A78 .
-    
-    bdr:TTB056221D02617A78
         a                   :CoverTitle ;
         rdfs:label          "អនិសង្សគណ់នីងទោះ"@km .
     
-    bdr:TTEF8A1124096E4F38
-        a                   :CoverTitle ;
-        rdfs:label          "anisaṅs gaṇ' nīṅ doḥ"@km-x-twktt .
+    bdr:TTCB93E845E7229AEC
+        a                   :Title ;
+        rdfs:label          "អានិសង្សគុណនិងទោស"@km ;
+        :femcConversionOf   bdr:TT903A4AE3EB311DD4 .
+    
+    bdr:TTEDA0655168783400
+        a                   :Title ;
+        rdfs:label          "ānisaṅs guṇ niṅ dos"@km-x-twktt ;
+        :femcConversionOf   bdr:TT23EB430F9B40ED6C .
 }

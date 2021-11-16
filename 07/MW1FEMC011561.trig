@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011561 {
-    bda:LG6121FBD605272B62
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011561"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011561"@en , "imported pubinfo for W1FEMC011561"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011561"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011561 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011561 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "07/MW1FEMC011561.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011561 ;
-        adm:logEntry        bda:LG6121FBD605272B62 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1C131A13A60ECAE6
+    bdr:IDF43B56E3A91E5C73
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "045-A.10.09.02.II.1" .
     
-    bdr:MF560513838D7ACD73
+    bdr:MF2AB5840D26EBD7B1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "53" ;
         :microfilmStrip     "139" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011561 {
         a                   :Instance ;
         skos:prefLabel      "មរណមាតា"@km , "mataṇamātā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1C131A13A60ECAE6 ;
+            bdr:IDF43B56E3A91E5C73 ;
         :hasFascicles       "8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT362DAF8E469647BD , bdr:TT8818FE6D9B3643F0 , bdr:TTB39A26434075E235 , bdr:TTF43B56E3A91E5C73 ;
+        :hasTitle           bdr:TT6121FBD605272B62 , bdr:TT61A83C84F34BC0C3 , bdr:TT8818FE6D9B3643F0 , bdr:TTB39A26434075E235 ;
         :instanceHasReproduction  bdr:W1FEMC011561 ;
+        :instanceOf         bdr:WA1FEMC120025 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF560513838D7ACD73 ;
-        :note               bdr:NT2AB5840D26EBD7B1 ;
+        :microfilmItem      bdr:MF2AB5840D26EBD7B1 ;
+        :note               bdr:NT362DAF8E469647BD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2AB5840D26EBD7B1
+    bdr:NT362DAF8E469647BD
         a                   :Note ;
         :contentLocationStatement  "pg. 356" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT362DAF8E469647BD
-        a                   :CoverTitle ;
-        rdfs:label          "មរណៈមាតា"@km .
-    
-    bdr:TT8818FE6D9B3643F0
-        a                   :Title ;
-        rdfs:label          "mataṇamātā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF43B56E3A91E5C73 .
-    
-    bdr:TTB39A26434075E235
+    bdr:TT6121FBD605272B62
         a                   :Title ;
         rdfs:label          "មរណមាតា"@km ;
-        :femcConversionOf   bdr:TT362DAF8E469647BD .
+        :femcConversionOf   bdr:TTB39A26434075E235 .
     
-    bdr:TTF43B56E3A91E5C73
+    bdr:TT61A83C84F34BC0C3
+        a                   :Title ;
+        rdfs:label          "mataṇamātā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8818FE6D9B3643F0 .
+    
+    bdr:TT8818FE6D9B3643F0
         a                   :CoverTitle ;
         rdfs:label          "marana: mātā"@km-x-twktt .
+    
+    bdr:TTB39A26434075E235
+        a                   :CoverTitle ;
+        rdfs:label          "មរណៈមាតា"@km .
 }

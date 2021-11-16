@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010712 {
-    bda:LGEF1FC5CE00D0E4BF
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010712"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010712"@en , "imported pubinfo for W1FEMC010712"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010712"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010712 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010712 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "e5/MW1FEMC010712.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010712 ;
-        adm:logEntry        bda:LGEF1FC5CE00D0E4BF , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFA456AA6434575EA
+    bdr:ID5C3135EDB8A1A0E2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "022-A.03.07.01.III.1" .
     
-    bdr:MF5FB22F96382150BB
+    bdr:MF3A1E05FC66AA4750
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "113" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010712 {
         a                   :Instance ;
         skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFA456AA6434575EA ;
+            bdr:ID5C3135EDB8A1A0E2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0F9C6FD899EC76B1 , bdr:TT4C6C70DD437DED59 , bdr:TT5C3135EDB8A1A0E2 , bdr:TT9049E3CF959E3430 , bdr:TTD3FDCB479936F56C , bdr:TTD78BDAD58637C3CB ;
+        :hasTitle           bdr:TT0F9C6FD899EC76B1 , bdr:TT9049E3CF959E3430 , bdr:TTD3FDCB479936F56C , bdr:TTD78BDAD58637C3CB , bdr:TTEC6D4D97EEED9E00 , bdr:TTEF1FC5CE00D0E4BF ;
         :instanceHasReproduction  bdr:W1FEMC010712 ;
+        :instanceOf         bdr:WA1FEMC010003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5FB22F96382150BB ;
-        :note               bdr:NT3A1E05FC66AA4750 ;
+        :microfilmItem      bdr:MF3A1E05FC66AA4750 ;
+        :note               bdr:NT4C6C70DD437DED59 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3A1E05FC66AA4750
+    bdr:NT4C6C70DD437DED59
         a                   :Note ;
         :contentLocationStatement  "pg. 194" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0F9C6FD899EC76B1
-        a                   :Title ;
-        rdfs:label          "ariy sacc"@km-x-twktt .
-    
-    bdr:TT4C6C70DD437DED59
         a                   :CoverTitle ;
-        rdfs:label          "ចតុរារីយសច្ច"@km .
-    
-    bdr:TT5C3135EDB8A1A0E2
-        a                   :CoverTitle ;
-        rdfs:label          "caturārīyasacc"@km-x-twktt .
+        rdfs:label          "caturāriyasacc"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD78BDAD58637C3CB .
     
     bdr:TT9049E3CF959E3430
-        a                   :Title ;
-        rdfs:label          "អរិយសច្ច"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុរារិយសច្ច"@km ;
+        :femcConversionOf   bdr:TTD3FDCB479936F56C .
     
     bdr:TTD3FDCB479936F56C
         a                   :CoverTitle ;
-        rdfs:label          "ចតុរារិយសច្ច"@km ;
-        :femcConversionOf   bdr:TT4C6C70DD437DED59 .
+        rdfs:label          "ចតុរារីយសច្ច"@km .
     
     bdr:TTD78BDAD58637C3CB
         a                   :CoverTitle ;
-        rdfs:label          "caturāriyasacc"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5C3135EDB8A1A0E2 .
+        rdfs:label          "caturārīyasacc"@km-x-twktt .
+    
+    bdr:TTEC6D4D97EEED9E00
+        a                   :Title ;
+        rdfs:label          "ariy sacc"@km-x-twktt .
+    
+    bdr:TTEF1FC5CE00D0E4BF
+        a                   :Title ;
+        rdfs:label          "អរិយសច្ច"@km .
 }

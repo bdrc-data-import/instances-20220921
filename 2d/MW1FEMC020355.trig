@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020355 {
-    bda:LGD10BFC93A2A2A931
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020355"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020355"@en , "imported pubinfo for W1FEMC020355"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020355"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020355 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020355 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2d/MW1FEMC020355.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020355 ;
-        adm:logEntry        bda:LGD10BFC93A2A2A931 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3B73F5706946401E
+    bdr:ID03B519F4F3A34840
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "c.7.V.1" .
     
-    bdr:MFF321C676C5404F1E
+    bdr:MF566EF65CB42BD1DF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "65" ;
         :microfilmStrip     "159" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020355 {
         a                   :Instance ;
         skos:prefLabel      "រាមកេរ្តិ៍"@km , "rāmakertti"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3B73F5706946401E ;
+            bdr:ID03B519F4F3A34840 ;
         :hasFascicles       "4, 6, 7, 9, 76, 78, 79" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT03B519F4F3A34840 , bdr:TT63F3F7BE00689AFE , bdr:TTAF3057489EEDE104 , bdr:TTC1B0B4A54A741CFE ;
+        :hasTitle           bdr:TT63F3F7BE00689AFE , bdr:TT79E132E0C1C17BB1 , bdr:TTAF3057489EEDE104 , bdr:TTD10BFC93A2A2A931 ;
         :instanceHasReproduction  bdr:W1FEMC020355 ;
+        :instanceOf         bdr:WA1FEMC070029 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF321C676C5404F1E ;
-        :note               bdr:NT566EF65CB42BD1DF ;
+        :microfilmItem      bdr:MF566EF65CB42BD1DF ;
+        :note               bdr:NTC1B0B4A54A741CFE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "661" .
     
-    bdr:NT566EF65CB42BD1DF
+    bdr:NTC1B0B4A54A741CFE
         a                   :Note ;
         :contentLocationStatement  "pg. 70" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT03B519F4F3A34840
+    bdr:TT63F3F7BE00689AFE
+        a                   :CoverTitle ;
+        rdfs:label          "រាមកេរតិ៍"@km .
+    
+    bdr:TT79E132E0C1C17BB1
+        a                   :Title ;
+        rdfs:label          "rāmakertti"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAF3057489EEDE104 .
+    
+    bdr:TTAF3057489EEDE104
         a                   :CoverTitle ;
         rdfs:label          "rāmaker-ti"@km-x-twktt .
     
-    bdr:TT63F3F7BE00689AFE
+    bdr:TTD10BFC93A2A2A931
         a                   :Title ;
         rdfs:label          "រាមកេរ្តិ៍"@km ;
-        :femcConversionOf   bdr:TTC1B0B4A54A741CFE .
-    
-    bdr:TTAF3057489EEDE104
-        a                   :Title ;
-        rdfs:label          "rāmakertti"@km-x-twktt ;
-        :femcConversionOf   bdr:TT03B519F4F3A34840 .
-    
-    bdr:TTC1B0B4A54A741CFE
-        a                   :CoverTitle ;
-        rdfs:label          "រាមកេរតិ៍"@km .
+        :femcConversionOf   bdr:TT63F3F7BE00689AFE .
 }

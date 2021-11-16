@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010101 {
-    bda:LGDA058BC48F103324
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010101"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010101"@en , "imported pubinfo for W1FEMC010101"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010101"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010101 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010101 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "fb/MW1FEMC010101.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010101 ;
-        adm:logEntry        bda:LGDA058BC48F103324 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEA4FCFCAD7E092CE
+    bdr:ID455B2B4931FA18AF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "059-060-PP.01.10.03.II.1" .
     
-    bdr:MF551C9C64E9BBDCBA
+    bdr:MF8632966637751FAB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010101 {
         a                   :Instance ;
         skos:prefLabel      "សុធនកុមារ"@km , "sudhan kumār"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEA4FCFCAD7E092CE ;
+            bdr:ID455B2B4931FA18AF ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT455B2B4931FA18AF , bdr:TT9CCAAF0094BB0D90 ;
+        :hasTitle           bdr:TT13DFA4B95BE34173 , bdr:TTDA058BC48F103324 ;
         :instanceHasReproduction  bdr:W1FEMC010101 ;
+        :instanceOf         bdr:WA1FEMC120035 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF551C9C64E9BBDCBA ;
-        :note               bdr:NT8632966637751FAB ;
+        :microfilmItem      bdr:MF8632966637751FAB ;
+        :note               bdr:NT9CCAAF0094BB0D90 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8632966637751FAB
+    bdr:NT9CCAAF0094BB0D90
         a                   :Note ;
         :contentLocationStatement  "pg. 73" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT455B2B4931FA18AF
+    bdr:TT13DFA4B95BE34173
         a                   :Title ;
         rdfs:label          "sudhan kumār"@km-x-twktt .
     
-    bdr:TT9CCAAF0094BB0D90
+    bdr:TTDA058BC48F103324
         a                   :Title ;
         rdfs:label          "សុធនកុមារ"@km .
 }

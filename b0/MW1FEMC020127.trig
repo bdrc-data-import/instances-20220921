@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020127 {
-    bda:LGC043C0CE820786F5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020127"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020127"@en , "imported pubinfo for W1FEMC020127"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020127"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020127 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020127 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b0/MW1FEMC020127.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020127 ;
-        adm:logEntry        bda:LGC043C0CE820786F5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID84FC5C8E567BE4A4
+    bdr:IDFF22A752BF8F7067
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.20.II.2" .
     
-    bdr:MFD6E2DA48C7B0E8B4
+    bdr:MFEB7FE6D4F16B6870
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "52" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020127 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកទន្សាយច្រូតសូ្បវ"@km , "lpök dansāy crūt spūv"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID84FC5C8E567BE4A4 ;
+            bdr:IDFF22A752BF8F7067 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT42F7BCBEADB093AF , bdr:TT74016062DBE6F5B0 , bdr:TTA8045A376E7065ED , bdr:TTFF22A752BF8F7067 ;
+        :hasTitle           bdr:TT23F979488C42DCF0 , bdr:TT74016062DBE6F5B0 , bdr:TTA8045A376E7065ED , bdr:TTC043C0CE820786F5 ;
         :instanceHasReproduction  bdr:W1FEMC020127 ;
+        :instanceOf         bdr:WA1FEMC130009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD6E2DA48C7B0E8B4 ;
-        :note               bdr:NTEB7FE6D4F16B6870 ;
+        :microfilmItem      bdr:MFEB7FE6D4F16B6870 ;
+        :note               bdr:NT42F7BCBEADB093AF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "628" .
     
-    bdr:NTEB7FE6D4F16B6870
+    bdr:NT42F7BCBEADB093AF
         a                   :Note ;
         :contentLocationStatement  "pg. 26" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT42F7BCBEADB093AF
+    bdr:TT23F979488C42DCF0
+        a                   :Title ;
+        rdfs:label          "lpök dansāy crūt spūv"@km-x-twktt ;
+        :femcConversionOf   bdr:TT74016062DBE6F5B0 .
+    
+    bdr:TT74016062DBE6F5B0
+        a                   :CoverTitle ;
+        rdfs:label          "dan'-sāy crūt spūv"@km-x-twktt .
+    
+    bdr:TTA8045A376E7065ED
         a                   :CoverTitle ;
         rdfs:label          "ទន់សាយច្រូតស្រូវ"@km .
     
-    bdr:TT74016062DBE6F5B0
-        a                   :Title ;
-        rdfs:label          "lpök dansāy crūt spūv"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFF22A752BF8F7067 .
-    
-    bdr:TTA8045A376E7065ED
+    bdr:TTC043C0CE820786F5
         a                   :Title ;
         rdfs:label          "ល្បើកទន្សាយច្រូតសូ្បវ"@km ;
-        :femcConversionOf   bdr:TT42F7BCBEADB093AF .
-    
-    bdr:TTFF22A752BF8F7067
-        a                   :CoverTitle ;
-        rdfs:label          "dan'-sāy crūt spūv"@km-x-twktt .
+        :femcConversionOf   bdr:TTA8045A376E7065ED .
 }

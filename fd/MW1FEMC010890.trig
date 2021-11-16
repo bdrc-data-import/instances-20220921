@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010890 {
-    bda:LGD1DFE482FE702C0E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010890"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010890"@en , "imported pubinfo for W1FEMC010890"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010890"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010890 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010890 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fd/MW1FEMC010890.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010890 ;
-        adm:logEntry        bda:LGD1DFE482FE702C0E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDC69A2BFDA7DA077
+    bdr:IDEBAD7DD0B3748E80
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "011-A.04.03.01.III.6" .
     
-    bdr:MF0E636A0DC22E386A
+    bdr:MFCEE98848F759A442
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "29" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010890 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសីល"@km , "ānisaṅs sīl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDC69A2BFDA7DA077 ;
+            bdr:IDEBAD7DD0B3748E80 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3552B3BF63237F18 , bdr:TTA1219101A80F0874 , bdr:TTEBAD7DD0B3748E80 , bdr:TTF4D913DB09845AED ;
+        :hasTitle           bdr:TT2C2364389472F3BE , bdr:TT3552B3BF63237F18 , bdr:TTD1DFE482FE702C0E , bdr:TTF4D913DB09845AED ;
         :instanceHasReproduction  bdr:W1FEMC010890 ;
+        :instanceOf         bdr:WA1FEMC060035 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0E636A0DC22E386A ;
-        :note               bdr:NTCEE98848F759A442 ;
+        :microfilmItem      bdr:MFCEE98848F759A442 ;
+        :note               bdr:NTA1219101A80F0874 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTCEE98848F759A442
+    bdr:NTA1219101A80F0874
         a                   :Note ;
         :contentLocationStatement  "pg. 228" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3552B3BF63237F18
+    bdr:TT2C2364389472F3BE
         a                   :Title ;
         rdfs:label          "ānisaṅs sīl"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEBAD7DD0B3748E80 .
+        :femcConversionOf   bdr:TT3552B3BF63237F18 .
     
-    bdr:TTA1219101A80F0874
-        a                   :CoverTitle ;
-        rdfs:label          "អន្និសំឃ៊សិល"@km .
-    
-    bdr:TTEBAD7DD0B3748E80
+    bdr:TT3552B3BF63237F18
         a                   :CoverTitle ;
         rdfs:label          "annisaṃgh sil"@km-x-twktt .
     
-    bdr:TTF4D913DB09845AED
+    bdr:TTD1DFE482FE702C0E
         a                   :Title ;
         rdfs:label          "អានិសង្សសីល"@km ;
-        :femcConversionOf   bdr:TTA1219101A80F0874 .
+        :femcConversionOf   bdr:TTF4D913DB09845AED .
+    
+    bdr:TTF4D913DB09845AED
+        a                   :CoverTitle ;
+        rdfs:label          "អន្និសំឃ៊សិល"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011373 {
-    bda:LGE08E55D9B586CF18
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011373"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011373"@en , "imported pubinfo for W1FEMC011373"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011373"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011373 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011373 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7b/MW1FEMC011373.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011373 ;
-        adm:logEntry        bda:LGE08E55D9B586CF18 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID83A59F62D83CBEC5
+    bdr:ID11EAE6AA98220EFC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "004-A.10.07.01.III.1" .
     
-    bdr:MFCAF485B2A10D61FC
+    bdr:MF0467B072E4CD3297
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "53" ;
         :microfilmStrip     "141" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011373 {
         a                   :Instance ;
         skos:prefLabel      "ចេតនាភេទា"@km , "cetanā bhedā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID83A59F62D83CBEC5 ;
+            bdr:ID11EAE6AA98220EFC ;
         :hasFascicles       "1, 4, 5, 10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0C8D885EC9404BE2 , bdr:TT11EAE6AA98220EFC , bdr:TTD852C39613DA4287 , bdr:TTE26CD6DF81BCBCC4 ;
+        :hasTitle           bdr:TT0C8D885EC9404BE2 , bdr:TT5DED8023CC40424C , bdr:TTE08E55D9B586CF18 , bdr:TTE26CD6DF81BCBCC4 ;
         :instanceHasReproduction  bdr:W1FEMC011373 ;
+        :instanceOf         bdr:WA1FEMC010021 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCAF485B2A10D61FC ;
-        :note               bdr:NT0467B072E4CD3297 ;
+        :microfilmItem      bdr:MF0467B072E4CD3297 ;
+        :note               bdr:NTD852C39613DA4287 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0467B072E4CD3297
+    bdr:NTD852C39613DA4287
         a                   :Note ;
         :contentLocationStatement  "pg. 321" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0C8D885EC9404BE2
-        a                   :Title ;
-        rdfs:label          "ចេតនាភេទា"@km ;
-        :femcConversionOf   bdr:TTD852C39613DA4287 .
-    
-    bdr:TT11EAE6AA98220EFC
-        a                   :CoverTitle ;
-        rdfs:label          "cèttanā bhedā"@km-x-twktt .
-    
-    bdr:TTD852C39613DA4287
         a                   :CoverTitle ;
         rdfs:label          "ចែត្តនាភេទា"@km .
     
-    bdr:TTE26CD6DF81BCBCC4
+    bdr:TT5DED8023CC40424C
         a                   :Title ;
         rdfs:label          "cetanā bhedā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT11EAE6AA98220EFC .
+        :femcConversionOf   bdr:TTE26CD6DF81BCBCC4 .
+    
+    bdr:TTE08E55D9B586CF18
+        a                   :Title ;
+        rdfs:label          "ចេតនាភេទា"@km ;
+        :femcConversionOf   bdr:TT0C8D885EC9404BE2 .
+    
+    bdr:TTE26CD6DF81BCBCC4
+        a                   :CoverTitle ;
+        rdfs:label          "cèttanā bhedā"@km-x-twktt .
 }

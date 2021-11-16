@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020161 {
-    bda:LGAA437FA05D8C5223
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020161"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020161"@en , "imported pubinfo for W1FEMC020161"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020161"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020161 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020161 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "e0/MW1FEMC020161.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020161 ;
-        adm:logEntry        bda:LGAA437FA05D8C5223 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB7C3EEE86EE44C60
+    bdr:ID1B89CA9AE4DDC233
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.54.III.5" .
     
-    bdr:MF9DB1062FBEEB9525
+    bdr:MF978CC84948DE998D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "31" ;
         :microfilmStrip     "55" .
@@ -56,50 +50,49 @@ bdg:MW1FEMC020161 {
         a                   :Instance ;
         skos:prefLabel      "នារទព្រហ្មជាតក"@km , "nārad brahm jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB7C3EEE86EE44C60 ;
+            bdr:ID1B89CA9AE4DDC233 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1091DA4545FF8BAE , bdr:TT1B89CA9AE4DDC233 , bdr:TT45F4BA8EA4C3A364 , bdr:TT6A145F71BFDC806D , bdr:TT93A682B086F1E1F7 , bdr:TTE4530C65CC31213C ;
+        :hasTitle           bdr:TT1091DA4545FF8BAE , bdr:TT6A145F71BFDC806D , bdr:TT93A682B086F1E1F7 , bdr:TTAA437FA05D8C5223 , bdr:TTE4530C65CC31213C , bdr:TTFD5692609529420C ;
         :instanceHasReproduction  bdr:W1FEMC020161 ;
+        :instanceOf         bdr:WA1FEMC050007 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9DB1062FBEEB9525 ;
-        :note               bdr:NT978CC84948DE998D ;
+        :microfilmItem      bdr:MF978CC84948DE998D ;
+        :note               bdr:NT45F4BA8EA4C3A364 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "758" .
     
-    bdr:NT978CC84948DE998D
+    bdr:NT45F4BA8EA4C3A364
         a                   :Note ;
         :contentLocationStatement  "pg. 33" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1091DA4545FF8BAE
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
+        a                   :Title ;
+        rdfs:label          "នារទព្រហ្មជាតក"@km ;
+        :femcConversionOf   bdr:TTE4530C65CC31213C .
     
-    bdr:TT1B89CA9AE4DDC233
+    bdr:TT6A145F71BFDC806D
         a                   :CoverTitle ;
         rdfs:label          "nāraṭṭh"@km-x-twktt .
     
-    bdr:TT45F4BA8EA4C3A364
-        a                   :CoverTitle ;
-        rdfs:label          "នារដ្ឋ"@km .
-    
-    bdr:TT6A145F71BFDC806D
+    bdr:TT93A682B086F1E1F7
         a                   :Title ;
         rdfs:label          "nārad brahm jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1B89CA9AE4DDC233 .
+        :femcConversionOf   bdr:TT6A145F71BFDC806D .
     
-    bdr:TT93A682B086F1E1F7
+    bdr:TTAA437FA05D8C5223
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TTE4530C65CC31213C
-        a                   :Title ;
-        rdfs:label          "នារទព្រហ្មជាតក"@km ;
-        :femcConversionOf   bdr:TT45F4BA8EA4C3A364 .
+        a                   :CoverTitle ;
+        rdfs:label          "នារដ្ឋ"@km .
+    
+    bdr:TTFD5692609529420C
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
 }

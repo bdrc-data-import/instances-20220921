@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020322 {
-    bda:LG480AA12FF4731AFA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020322"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020322"@en , "imported pubinfo for W1FEMC020322"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020322"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020322 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020322 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "72/MW1FEMC020322.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020322 ;
-        adm:logEntry        bda:LG480AA12FF4731AFA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCE6FEFCEF49C1133
+    bdr:ID30DE1FC26091C623
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.215.III.6" .
     
-    bdr:MF0185C315BE85616D
+    bdr:MF212109C9398A5FB2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "158" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020322 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសាលា"@km , "ānisaṅs sālā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCE6FEFCEF49C1133 ;
+            bdr:ID30DE1FC26091C623 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1B1F98B65E845674 , bdr:TT30DE1FC26091C623 , bdr:TT65AF61DEEF4DC900 , bdr:TTDD711670DE279A80 ;
+        :hasTitle           bdr:TT1B1F98B65E845674 , bdr:TT3C0C7910C2EFD3BA , bdr:TT480AA12FF4731AFA , bdr:TT65AF61DEEF4DC900 ;
         :instanceHasReproduction  bdr:W1FEMC020322 ;
+        :instanceOf         bdr:WA1FEMC060034 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0185C315BE85616D ;
-        :note               bdr:NT212109C9398A5FB2 ;
+        :microfilmItem      bdr:MF212109C9398A5FB2 ;
+        :note               bdr:NTDD711670DE279A80 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1065" .
     
-    bdr:NT212109C9398A5FB2
+    bdr:NTDD711670DE279A80
         a                   :Note ;
         :contentLocationStatement  "pg. 64" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1B1F98B65E845674
-        a                   :Title ;
-        rdfs:label          "ānisaṅs sālā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT30DE1FC26091C623 .
-    
-    bdr:TT30DE1FC26091C623
         a                   :CoverTitle ;
         rdfs:label          "anisaṅṅ' silā"@km-x-twktt .
     
-    bdr:TT65AF61DEEF4DC900
+    bdr:TT3C0C7910C2EFD3BA
+        a                   :Title ;
+        rdfs:label          "ānisaṅs sālā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1B1F98B65E845674 .
+    
+    bdr:TT480AA12FF4731AFA
         a                   :Title ;
         rdfs:label          "អានិសង្សសាលា"@km ;
-        :femcConversionOf   bdr:TTDD711670DE279A80 .
+        :femcConversionOf   bdr:TT65AF61DEEF4DC900 .
     
-    bdr:TTDD711670DE279A80
+    bdr:TT65AF61DEEF4DC900
         a                   :CoverTitle ;
         rdfs:label          "អនិសង្ង់សិលា"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011406 {
-    bda:LGBF93115208ECB2EC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011406"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011406"@en , "imported pubinfo for W1FEMC011406"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011406"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011406 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011406 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4e/MW1FEMC011406.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011406 ;
-        adm:logEntry        bda:LGBF93115208ECB2EC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID83DFA49B07F5EBD5
+    bdr:ID3B8C78BF4310361F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "025-A.10.07.02.III.2" .
     
-    bdr:MF1737F7CAE731D769
+    bdr:MF261A79E4E10488C6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "35" ;
         :microfilmStrip     "69" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011406 {
         a                   :Instance ;
         skos:prefLabel      "មតកសូត្រ"@km , "matak sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID83DFA49B07F5EBD5 ;
+            bdr:ID3B8C78BF4310361F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT064B6B8A303D3DEB , bdr:TT3B8C78BF4310361F , bdr:TT55C02A30E702F456 , bdr:TT6294030130EF4239 ;
+        :hasTitle           bdr:TT064B6B8A303D3DEB , bdr:TT3332C41706D8EC1A , bdr:TT55C02A30E702F456 , bdr:TTBF93115208ECB2EC ;
         :instanceHasReproduction  bdr:W1FEMC011406 ;
+        :instanceOf         bdr:WA1FEMC020006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1737F7CAE731D769 ;
-        :note               bdr:NT261A79E4E10488C6 ;
+        :microfilmItem      bdr:MF261A79E4E10488C6 ;
+        :note               bdr:NT6294030130EF4239 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT261A79E4E10488C6
+    bdr:NT6294030130EF4239
         a                   :Note ;
         :contentLocationStatement  "pg. 327" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT064B6B8A303D3DEB
-        a                   :Title ;
-        rdfs:label          "មតកសូត្រ"@km ;
-        :femcConversionOf   bdr:TT6294030130EF4239 .
+        a                   :CoverTitle ;
+        rdfs:label          "មត្តកសូត្រ"@km .
     
-    bdr:TT3B8C78BF4310361F
+    bdr:TT3332C41706D8EC1A
+        a                   :Title ;
+        rdfs:label          "matak sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT55C02A30E702F456 .
+    
+    bdr:TT55C02A30E702F456
         a                   :CoverTitle ;
         rdfs:label          "mattak sūtr"@km-x-twktt .
     
-    bdr:TT55C02A30E702F456
+    bdr:TTBF93115208ECB2EC
         a                   :Title ;
-        rdfs:label          "matak sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3B8C78BF4310361F .
-    
-    bdr:TT6294030130EF4239
-        a                   :CoverTitle ;
-        rdfs:label          "មត្តកសូត្រ"@km .
+        rdfs:label          "មតកសូត្រ"@km ;
+        :femcConversionOf   bdr:TT064B6B8A303D3DEB .
 }

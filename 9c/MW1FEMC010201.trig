@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010201 {
-    bda:LGE05020D6F0374C62
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010201"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010201"@en , "imported pubinfo for W1FEMC010201"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010201"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010201 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010201 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9c/MW1FEMC010201.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010201 ;
-        adm:logEntry        bda:LGE05020D6F0374C62 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE338902F14BF062D
+    bdr:IDF1292402A3F0FBC1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-PP.02.06.02.III.5" .
     
-    bdr:MFB9BA3553809CED88
+    bdr:MF52108C62F2FFCF9C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "2" ;
         :microfilmStrip     "5" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010201 {
         a                   :Instance ;
         skos:prefLabel      "មហោសថជាតក"@km , "mahosath jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE338902F14BF062D ;
+            bdr:IDF1292402A3F0FBC1 ;
         :hasFascicles       "5, 6, 7, 11, 13, 14" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT23C25A70CD4CAE5C , bdr:TT3329C2F8DD8264D5 , bdr:TTCCF89708B8757748 , bdr:TTF1292402A3F0FBC1 ;
+        :hasTitle           bdr:TT23C25A70CD4CAE5C , bdr:TT7141CBA37747FAEB , bdr:TTCCF89708B8757748 , bdr:TTE05020D6F0374C62 ;
         :instanceHasReproduction  bdr:W1FEMC010201 ;
+        :instanceOf         bdr:WA1FEMC050006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB9BA3553809CED88 ;
-        :note               bdr:NT52108C62F2FFCF9C ;
+        :microfilmItem      bdr:MF52108C62F2FFCF9C ;
+        :note               bdr:NT3329C2F8DD8264D5 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT52108C62F2FFCF9C
+    bdr:NT3329C2F8DD8264D5
         a                   :Note ;
         :contentLocationStatement  "pg. 93" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT23C25A70CD4CAE5C
+        a                   :Title ;
+        rdfs:label          "mahosath jātak"@km-x-twktt .
+    
+    bdr:TT7141CBA37747FAEB
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
-    bdr:TT3329C2F8DD8264D5
+    bdr:TTCCF89708B8757748
         a                   :Title ;
         rdfs:label          "មហោសថជាតក"@km .
     
-    bdr:TTCCF89708B8757748
+    bdr:TTE05020D6F0374C62
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TTF1292402A3F0FBC1
-        a                   :Title ;
-        rdfs:label          "mahosath jātak"@km-x-twktt .
 }

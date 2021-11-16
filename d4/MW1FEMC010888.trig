@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010888 {
-    bda:LGB1E0D63B73A6148D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010888"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010888"@en , "imported pubinfo for W1FEMC010888"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010888"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010888 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010888 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d4/MW1FEMC010888.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010888 ;
-        adm:logEntry        bda:LGB1E0D63B73A6148D , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE0AC13F7D8DC5943
+    bdr:ID209DDCB327E32B17
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.04.03.01.III.2" .
     
-    bdr:MF904720305E3EA194
+    bdr:MF81B68ACE2420565B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "29" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010888 {
         a                   :Instance ;
         skos:prefLabel      "តិរោកុឌ្ឌសូត្រ"@km , "tirokuḍḍasūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE0AC13F7D8DC5943 ;
+            bdr:ID209DDCB327E32B17 ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT209DDCB327E32B17 , bdr:TT8364DC921AEF932A , bdr:TTBE2105866455FA16 , bdr:TTD12772009B759160 ;
+        :hasTitle           bdr:TT607F405C771FD4EE , bdr:TT8364DC921AEF932A , bdr:TTB1E0D63B73A6148D , bdr:TTD12772009B759160 ;
         :instanceHasReproduction  bdr:W1FEMC010888 ;
+        :instanceOf         bdr:WA1FEMC020012 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF904720305E3EA194 ;
-        :note               bdr:NT81B68ACE2420565B ;
+        :microfilmItem      bdr:MF81B68ACE2420565B ;
+        :note               bdr:NTBE2105866455FA16 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT81B68ACE2420565B
+    bdr:NTBE2105866455FA16
         a                   :Note ;
         :contentLocationStatement  "pg. 227" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT209DDCB327E32B17
-        a                   :CoverTitle ;
-        rdfs:label          "tirokkh"@km-x-twktt .
+    bdr:TT607F405C771FD4EE
+        a                   :Title ;
+        rdfs:label          "tirokuḍḍasūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD12772009B759160 .
     
     bdr:TT8364DC921AEF932A
-        a                   :Title ;
-        rdfs:label          "តិរោកុឌ្ឌសូត្រ"@km ;
-        :femcConversionOf   bdr:TTBE2105866455FA16 .
-    
-    bdr:TTBE2105866455FA16
         a                   :CoverTitle ;
         rdfs:label          "តិរោក្ខ"@km .
     
-    bdr:TTD12772009B759160
+    bdr:TTB1E0D63B73A6148D
         a                   :Title ;
-        rdfs:label          "tirokuḍḍasūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT209DDCB327E32B17 .
+        rdfs:label          "តិរោកុឌ្ឌសូត្រ"@km ;
+        :femcConversionOf   bdr:TT8364DC921AEF932A .
+    
+    bdr:TTD12772009B759160
+        a                   :CoverTitle ;
+        rdfs:label          "tirokkh"@km-x-twktt .
 }

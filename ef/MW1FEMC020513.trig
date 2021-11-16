@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020513 {
-    bda:LG35B8CF0358D2DE1A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020513"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020513"@en , "imported pubinfo for W1FEMC020513"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020513"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020513 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020513 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ef/MW1FEMC020513.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020513 ;
-        adm:logEntry        bda:LG35B8CF0358D2DE1A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID97AE03C4A0506D67
+    bdr:IDC93B90326F9437CD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.146.III.6" .
     
-    bdr:MF7780AF747CAB527C
+    bdr:MFCCB2441DFA959C05
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020513 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះត្រៃបិដក"@km , "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID97AE03C4A0506D67 ;
+            bdr:IDC93B90326F9437CD ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT28BAFEE355E049DD , bdr:TTC93B90326F9437CD , bdr:TTCDAEAC52684CED56 , bdr:TTE5C30937D648BA8A ;
+        :hasTitle           bdr:TT28BAFEE355E049DD , bdr:TT35B8CF0358D2DE1A , bdr:TT465CEB974ED90DD3 , bdr:TTCDAEAC52684CED56 ;
         :instanceHasReproduction  bdr:W1FEMC020513 ;
+        :instanceOf         bdr:WA1FEMC060008 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7780AF747CAB527C ;
-        :note               bdr:NTCCB2441DFA959C05 ;
+        :microfilmItem      bdr:MFCCB2441DFA959C05 ;
+        :note               bdr:NTE5C30937D648BA8A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTCCB2441DFA959C05
+    bdr:NTE5C30937D648BA8A
         a                   :Note ;
         :contentLocationStatement  "pg. 99" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT28BAFEE355E049DD
-        a                   :Title ;
-        rdfs:label          "អានិសង្សព្រះត្រៃបិដក"@km ;
-        :femcConversionOf   bdr:TTE5C30937D648BA8A .
-    
-    bdr:TTC93B90326F9437CD
-        a                   :CoverTitle ;
-        rdfs:label          "anisaṅ braḥ traiy˚ -ṭakkh"@km-x-twktt .
-    
-    bdr:TTCDAEAC52684CED56
-        a                   :Title ;
-        rdfs:label          "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC93B90326F9437CD .
-    
-    bdr:TTE5C30937D648BA8A
         a                   :CoverTitle ;
         rdfs:label          "អនិសងព្រះត្រៃ្យប្យីដក្ខ"@km .
+    
+    bdr:TT35B8CF0358D2DE1A
+        a                   :Title ;
+        rdfs:label          "អានិសង្សព្រះត្រៃបិដក"@km ;
+        :femcConversionOf   bdr:TT28BAFEE355E049DD .
+    
+    bdr:TT465CEB974ED90DD3
+        a                   :Title ;
+        rdfs:label          "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCDAEAC52684CED56 .
+    
+    bdr:TTCDAEAC52684CED56
+        a                   :CoverTitle ;
+        rdfs:label          "anisaṅ braḥ traiy˚ -ṭakkh"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020498 {
-    bda:LG79BA8546E91623DE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2009-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020498"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020498"@en , "imported pubinfo for W1FEMC020498"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020498"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020498 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020498 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "73/MW1FEMC020498.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020498 ;
-        adm:logEntry        bda:LG79BA8546E91623DE , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID302896A53FD89135
+    bdr:IDB9AC7FB107454BA3
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.131.I.1" .
     
-    bdr:MFC16440DED5E5E9DF
+    bdr:MF348FAAAF86ECA2E7
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020498 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់កេរកាល"@km , "cpāp' ker kāl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID302896A53FD89135 ;
+            bdr:IDB9AC7FB107454BA3 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT204C8D74F9B34959 , bdr:TTB9AC7FB107454BA3 , bdr:TTD2D1CA4650EA24CE , bdr:TTFAB336D31399F1DE ;
+        :hasTitle           bdr:TT204C8D74F9B34959 , bdr:TT79BA8546E91623DE , bdr:TTD2D1CA4650EA24CE , bdr:TTFE82C7088E496B36 ;
         :instanceHasReproduction  bdr:W1FEMC020498 ;
+        :instanceOf         bdr:WA1FEMC100006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC16440DED5E5E9DF ;
-        :note               bdr:NT348FAAAF86ECA2E7 ;
+        :microfilmItem      bdr:MF348FAAAF86ECA2E7 ;
+        :note               bdr:NTFAB336D31399F1DE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT348FAAAF86ECA2E7
+    bdr:NTFAB336D31399F1DE
         a                   :Note ;
         :contentLocationStatement  "pg. 96" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT204C8D74F9B34959
+        a                   :CoverTitle ;
+        rdfs:label          "កេកាល"@km .
+    
+    bdr:TT79BA8546E91623DE
         a                   :Title ;
         rdfs:label          "ច្បាប់កេរកាល"@km ;
-        :femcConversionOf   bdr:TTFAB336D31399F1DE .
+        :femcConversionOf   bdr:TT204C8D74F9B34959 .
     
-    bdr:TTB9AC7FB107454BA3
+    bdr:TTD2D1CA4650EA24CE
         a                   :CoverTitle ;
         rdfs:label          "ke kāl"@km-x-twktt .
     
-    bdr:TTD2D1CA4650EA24CE
+    bdr:TTFE82C7088E496B36
         a                   :Title ;
         rdfs:label          "cpāp' ker kāl"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB9AC7FB107454BA3 .
-    
-    bdr:TTFAB336D31399F1DE
-        a                   :CoverTitle ;
-        rdfs:label          "កេកាល"@km .
+        :femcConversionOf   bdr:TTD2D1CA4650EA24CE .
 }

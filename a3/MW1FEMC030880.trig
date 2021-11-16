@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030880 {
-    bda:LG187B01F3DD007063
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-09-09"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC030880"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC030880"@en , "imported pubinfo for W1FEMC030880"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC030880"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC030880 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030880 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "a3/MW1FEMC030880.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030880 ;
-        adm:logEntry        bda:LG187B01F3DD007063 , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA941F4971C90196F
+    bdr:ID181FE43A7CDF75DB
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0875-B.01.06.01.III.6" .
     
@@ -50,29 +44,29 @@ bdg:MW1FEMC030880 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សកថិនទាន"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA941F4971C90196F ;
-        :hasTitle           bdr:TT181FE43A7CDF75DB , bdr:TT4074FBD686DDE770 ;
+            bdr:ID181FE43A7CDF75DB ;
+        :hasTitle           bdr:TT187B01F3DD007063 , bdr:TTEFCD987C638B3208 ;
         :instanceHasReproduction  bdr:W1FEMC030880 ;
+        :instanceOf         bdr:WA1FEMC060022 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT1A3C5C8714B87AC2 ;
+        :note               bdr:NT4074FBD686DDE770 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1A3C5C8714B87AC2
+    bdr:NT4074FBD686DDE770
         a                   :Note ;
         :contentLocationStatement  "pg. 28" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:TT181FE43A7CDF75DB
-        a                   :CoverTitle ;
-        rdfs:label          "អានិសង្សព្រះកថិន"@km .
-    
-    bdr:TT4074FBD686DDE770
+    bdr:TT187B01F3DD007063
         a                   :Title ;
         rdfs:label          "អានិសង្សកថិនទាន"@km ;
-        :femcConversionOf   bdr:TT181FE43A7CDF75DB .
+        :femcConversionOf   bdr:TTEFCD987C638B3208 .
+    
+    bdr:TTEFCD987C638B3208
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សព្រះកថិន"@km .
 }

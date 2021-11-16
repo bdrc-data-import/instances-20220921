@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010316 {
-    bda:LGD089EC8E1F6CE643
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010316"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010316"@en , "imported pubinfo for W1FEMC010316"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010316"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010316 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010316 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "09/MW1FEMC010316.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010316 ;
-        adm:logEntry        bda:LGD089EC8E1F6CE643 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4A221EA1F33E172C
+    bdr:ID2CAFD2285488ECD9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "039-PP.03.03.03.III.5" .
     
-    bdr:MF7AEDE235B017B754
+    bdr:MF7DC95AC8B7A01E3C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "63" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010316 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះបាទវិជ្ជាធរ"@km , "braḥ pād vijjādhar"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4A221EA1F33E172C ;
+            bdr:ID2CAFD2285488ECD9 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2CAFD2285488ECD9 , bdr:TT59ADDA5EE61B9AF0 , bdr:TT938D8049C209E300 , bdr:TTF2CA1F2B896CF0FB ;
+        :hasTitle           bdr:TT59ADDA5EE61B9AF0 , bdr:TT72F39D5F86D07DC6 , bdr:TT938D8049C209E300 , bdr:TTD089EC8E1F6CE643 ;
         :instanceHasReproduction  bdr:W1FEMC010316 ;
+        :instanceOf         bdr:WA1FEMC050015 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7AEDE235B017B754 ;
-        :note               bdr:NT7DC95AC8B7A01E3C ;
+        :microfilmItem      bdr:MF7DC95AC8B7A01E3C ;
+        :note               bdr:NTF2CA1F2B896CF0FB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7DC95AC8B7A01E3C
+    bdr:NTF2CA1F2B896CF0FB
         a                   :Note ;
         :contentLocationStatement  "pg. 115" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2CAFD2285488ECD9
+    bdr:TT59ADDA5EE61B9AF0
         a                   :CoverTitle ;
         rdfs:label          "braḥ pād° vijjādhar"@km-x-twktt .
     
-    bdr:TT59ADDA5EE61B9AF0
+    bdr:TT72F39D5F86D07DC6
         a                   :Title ;
         rdfs:label          "braḥ pād vijjādhar"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2CAFD2285488ECD9 .
+        :femcConversionOf   bdr:TT59ADDA5EE61B9AF0 .
     
     bdr:TT938D8049C209E300
-        a                   :Title ;
-        rdfs:label          "ព្រះបាទវិជ្ជាធរ"@km ;
-        :femcConversionOf   bdr:TTF2CA1F2B896CF0FB .
-    
-    bdr:TTF2CA1F2B896CF0FB
         a                   :CoverTitle ;
         rdfs:label          "ព្រះប្ចាវិជ្ជាធរ"@km .
+    
+    bdr:TTD089EC8E1F6CE643
+        a                   :Title ;
+        rdfs:label          "ព្រះបាទវិជ្ជាធរ"@km ;
+        :femcConversionOf   bdr:TT938D8049C209E300 .
 }

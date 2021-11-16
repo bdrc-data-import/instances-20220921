@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020241 {
-    bda:LG64C10AE6015355A5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020241"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020241"@en , "imported pubinfo for W1FEMC020241"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020241"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020241 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020241 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "25/MW1FEMC020241.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020241 ;
-        adm:logEntry        bda:LG64C10AE6015355A5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID08ED732CFB81941B
+    bdr:ID62DEC94E65EDA19E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.134.III.2" .
     
-    bdr:MFA8F41A5BA6D476E7
+    bdr:MF8E669E985A9F3711
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "62" ;
         :microfilmStrip     "156" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020241 {
         a                   :Instance ;
         skos:prefLabel      "អង្គុត្តរនិកាយ"@km , "aṅguttaranikāy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID08ED732CFB81941B ;
+            bdr:ID62DEC94E65EDA19E ;
         :hasFascicles       "20" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT32225BAB1D301555 , bdr:TT3D564C9F4DDB9772 , bdr:TT62DEC94E65EDA19E , bdr:TTC915240A54B3E6E5 ;
+        :hasTitle           bdr:TT17B301C9D784AB06 , bdr:TT3D564C9F4DDB9772 , bdr:TT64C10AE6015355A5 , bdr:TTC915240A54B3E6E5 ;
         :instanceHasReproduction  bdr:W1FEMC020241 ;
+        :instanceOf         bdr:WA1FEMC020014 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA8F41A5BA6D476E7 ;
-        :note               bdr:NT8E669E985A9F3711 ;
+        :microfilmItem      bdr:MF8E669E985A9F3711 ;
+        :note               bdr:NT32225BAB1D301555 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1048" .
     
-    bdr:NT8E669E985A9F3711
+    bdr:NT32225BAB1D301555
         a                   :Note ;
         :contentLocationStatement  "pg. 48" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT32225BAB1D301555
+    bdr:TT17B301C9D784AB06
+        a                   :Title ;
+        rdfs:label          "aṅguttaranikāy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC915240A54B3E6E5 .
+    
+    bdr:TT3D564C9F4DDB9772
         a                   :CoverTitle ;
         rdfs:label          "អង្គត្តនិកាយ"@km .
     
-    bdr:TT3D564C9F4DDB9772
+    bdr:TT64C10AE6015355A5
         a                   :Title ;
         rdfs:label          "អង្គុត្តរនិកាយ"@km ;
-        :femcConversionOf   bdr:TT32225BAB1D301555 .
-    
-    bdr:TT62DEC94E65EDA19E
-        a                   :CoverTitle ;
-        rdfs:label          "aṅgattanikāy"@km-x-twktt .
+        :femcConversionOf   bdr:TT3D564C9F4DDB9772 .
     
     bdr:TTC915240A54B3E6E5
-        a                   :Title ;
-        rdfs:label          "aṅguttaranikāy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT62DEC94E65EDA19E .
+        a                   :CoverTitle ;
+        rdfs:label          "aṅgattanikāy"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020211 {
-    bda:LGAC7A467DF4DB9CE1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020211"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020211"@en , "imported pubinfo for W1FEMC020211"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020211"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020211 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020211 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0d/MW1FEMC020211.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020211 ;
-        adm:logEntry        bda:LGAC7A467DF4DB9CE1 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4FE0FD9894330566
+    bdr:IDC3FF986274966CF7
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.104.III.1" .
     
-    bdr:MF81BE5780EFFE7975
+    bdr:MFEA8D071329042AF0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "33" ;
         :microfilmStrip     "62" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020211 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4FE0FD9894330566 ;
+            bdr:IDC3FF986274966CF7 ;
         :hasFascicles       "1, 2, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT02C5AEEFC7F2C575 , bdr:TT0831C8EC72E6B23E , bdr:TT4C90EDB71A7E1640 , bdr:TTC3FF986274966CF7 ;
+        :hasTitle           bdr:TT0831C8EC72E6B23E , bdr:TT4C90EDB71A7E1640 , bdr:TTAC7A467DF4DB9CE1 , bdr:TTEB3A16B422504074 ;
         :instanceHasReproduction  bdr:W1FEMC020211 ;
+        :instanceOf         bdr:WA1FEMC010059 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF81BE5780EFFE7975 ;
-        :note               bdr:NTEA8D071329042AF0 ;
+        :microfilmItem      bdr:MFEA8D071329042AF0 ;
+        :note               bdr:NT02C5AEEFC7F2C575 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "929" .
     
-    bdr:NTEA8D071329042AF0
+    bdr:NT02C5AEEFC7F2C575
         a                   :Note ;
         :contentLocationStatement  "pg. 42" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT02C5AEEFC7F2C575
+    bdr:TT0831C8EC72E6B23E
         a                   :CoverTitle ;
         rdfs:label          "ទេសនាគ្រែ៥"@km .
     
-    bdr:TT0831C8EC72E6B23E
+    bdr:TT4C90EDB71A7E1640
+        a                   :CoverTitle ;
+        rdfs:label          "desanā grè 5"@km-x-twktt .
+    
+    bdr:TTAC7A467DF4DB9CE1
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៥"@km .
     
-    bdr:TT4C90EDB71A7E1640
+    bdr:TTEB3A16B422504074
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
-    
-    bdr:TTC3FF986274966CF7
-        a                   :CoverTitle ;
-        rdfs:label          "desanā grè 5"@km-x-twktt .
 }

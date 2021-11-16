@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010745 {
-    bda:LG832D59A894A378D0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010745"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010745"@en , "imported pubinfo for W1FEMC010745"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010745"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010745 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010745 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "57/MW1FEMC010745.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010745 ;
-        adm:logEntry        bda:LG832D59A894A378D0 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID493877416FF552DE
+    bdr:ID427868AADA75B768
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "016-A.03.08.01.III.1" .
     
-    bdr:MFD7EB4A404BD5AF06
+    bdr:MF8A4EAB2B03DF04A2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "48" ;
         :microfilmStrip     "121" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010745 {
         a                   :Instance ;
         skos:prefLabel      "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km , "visuddhimagg vinicchăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID493877416FF552DE ;
+            bdr:ID427868AADA75B768 ;
         :hasFascicles       "9-11, 13" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1F16FBB96E3F699D , bdr:TT427868AADA75B768 , bdr:TT4C34809BDBE825F8 , bdr:TTEB25DADE2B3ACBDF ;
+        :hasTitle           bdr:TT1F16FBB96E3F699D , bdr:TT4C34809BDBE825F8 , bdr:TT832D59A894A378D0 , bdr:TT912B4EC6F124D4ED ;
         :instanceHasReproduction  bdr:W1FEMC010745 ;
+        :instanceOf         bdr:WA1FEMC010078 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD7EB4A404BD5AF06 ;
-        :note               bdr:NT8A4EAB2B03DF04A2 ;
+        :microfilmItem      bdr:MF8A4EAB2B03DF04A2 ;
+        :note               bdr:NTEB25DADE2B3ACBDF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8A4EAB2B03DF04A2
+    bdr:NTEB25DADE2B3ACBDF
         a                   :Note ;
         :contentLocationStatement  "pg. 200" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1F16FBB96E3F699D
-        a                   :Title ;
-        rdfs:label          "visuddhimagg vinicchăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT427868AADA75B768 .
-    
-    bdr:TT427868AADA75B768
         a                   :CoverTitle ;
         rdfs:label          "vīsuddhīmagg"@km-x-twktt .
     
     bdr:TT4C34809BDBE825F8
-        a                   :Title ;
-        rdfs:label          "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km ;
-        :femcConversionOf   bdr:TTEB25DADE2B3ACBDF .
-    
-    bdr:TTEB25DADE2B3ACBDF
         a                   :CoverTitle ;
         rdfs:label          "វិសុទ្ធីមគ្គ"@km .
+    
+    bdr:TT832D59A894A378D0
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km ;
+        :femcConversionOf   bdr:TT4C34809BDBE825F8 .
+    
+    bdr:TT912B4EC6F124D4ED
+        a                   :Title ;
+        rdfs:label          "visuddhimagg vinicchăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1F16FBB96E3F699D .
 }

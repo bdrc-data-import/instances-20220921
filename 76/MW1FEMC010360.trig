@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010360 {
-    bda:LGCAE9BDD8DA57BFD1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010360"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010360"@en , "imported pubinfo for W1FEMC010360"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010360"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010360 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010360 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "76/MW1FEMC010360.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010360 ;
-        adm:logEntry        bda:LGCAE9BDD8DA57BFD1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDD33F6D3D646D189
+    bdr:IDB32D0C4FA82DFB4E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "085-PP.03.03.03.II.1" .
     
-    bdr:MFC04367280F6865C4
+    bdr:MF29AA7B8154DDB70A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "65" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010360 {
         a                   :Instance ;
         skos:prefLabel      "វរវង្ស សូរ្យវង្ស"@km , "varavaṅ sūryavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDD33F6D3D646D189 ;
+            bdr:IDB32D0C4FA82DFB4E ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5A024B4FD4C101D5 , bdr:TTB32D0C4FA82DFB4E , bdr:TTECD57D8EA94A68A0 , bdr:TTFF856A1420E0A09A ;
+        :hasTitle           bdr:TT1E09C10D12852FFF , bdr:TT5A024B4FD4C101D5 , bdr:TTCAE9BDD8DA57BFD1 , bdr:TTFF856A1420E0A09A ;
         :instanceHasReproduction  bdr:W1FEMC010360 ;
+        :instanceOf         bdr:WA1FEMC120046 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC04367280F6865C4 ;
-        :note               bdr:NT29AA7B8154DDB70A ;
+        :microfilmItem      bdr:MF29AA7B8154DDB70A ;
+        :note               bdr:NTECD57D8EA94A68A0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT29AA7B8154DDB70A
+    bdr:NTECD57D8EA94A68A0
         a                   :Note ;
         :contentLocationStatement  "pg. 123" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT5A024B4FD4C101D5
+    bdr:TT1E09C10D12852FFF
         a                   :Title ;
         rdfs:label          "varavaṅ sūryavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB32D0C4FA82DFB4E .
+        :femcConversionOf   bdr:TT5A024B4FD4C101D5 .
     
-    bdr:TTB32D0C4FA82DFB4E
+    bdr:TT5A024B4FD4C101D5
         a                   :CoverTitle ;
         rdfs:label          "vavaṅs"@km-x-twktt .
     
-    bdr:TTECD57D8EA94A68A0
-        a                   :CoverTitle ;
-        rdfs:label          "វវង្ស"@km .
-    
-    bdr:TTFF856A1420E0A09A
+    bdr:TTCAE9BDD8DA57BFD1
         a                   :Title ;
         rdfs:label          "វរវង្ស សូរ្យវង្ស"@km ;
-        :femcConversionOf   bdr:TTECD57D8EA94A68A0 .
+        :femcConversionOf   bdr:TTFF856A1420E0A09A .
+    
+    bdr:TTFF856A1420E0A09A
+        a                   :CoverTitle ;
+        rdfs:label          "វវង្ស"@km .
 }

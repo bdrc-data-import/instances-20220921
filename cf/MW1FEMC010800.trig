@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010800 {
-    bda:LG8470432215038CD3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010800"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010800"@en , "imported pubinfo for W1FEMC010800"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010800"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010800 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010800 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cf/MW1FEMC010800.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010800 ;
-        adm:logEntry        bda:LG8470432215038CD3 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9537DA88DAA43CC3
+    bdr:IDC0880DD50447C2A1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "036-A.03.08.02.III.2" .
     
-    bdr:MF6F9B334C573A9C58
+    bdr:MF2E75894332F06A03
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "51" ;
         :microfilmStrip     "133" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010800 {
         a                   :Instance ;
         skos:prefLabel      "មាតុគុណសូត្រ"@km , "mātuguṇ sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9537DA88DAA43CC3 ;
+            bdr:IDC0880DD50447C2A1 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0448AA4F235C2FA2 , bdr:TT7BBE77BAE9F88409 , bdr:TTBE939A7DE9495CF5 , bdr:TTC0880DD50447C2A1 ;
+        :hasTitle           bdr:TT0448AA4F235C2FA2 , bdr:TT2C1822FA2A822E32 , bdr:TT7BBE77BAE9F88409 , bdr:TT8470432215038CD3 ;
         :instanceHasReproduction  bdr:W1FEMC010800 ;
+        :instanceOf         bdr:WA1FEMC020007 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF6F9B334C573A9C58 ;
-        :note               bdr:NT2E75894332F06A03 ;
+        :microfilmItem      bdr:MF2E75894332F06A03 ;
+        :note               bdr:NTBE939A7DE9495CF5 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2E75894332F06A03
+    bdr:NTBE939A7DE9495CF5
         a                   :Note ;
         :contentLocationStatement  "pg. 211" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0448AA4F235C2FA2
+        a                   :CoverTitle ;
+        rdfs:label          "māttigun"@km-x-twktt .
+    
+    bdr:TT2C1822FA2A822E32
         a                   :Title ;
         rdfs:label          "mātuguṇ sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC0880DD50447C2A1 .
+        :femcConversionOf   bdr:TT0448AA4F235C2FA2 .
     
     bdr:TT7BBE77BAE9F88409
-        a                   :Title ;
-        rdfs:label          "មាតុគុណសូត្រ"@km ;
-        :femcConversionOf   bdr:TTBE939A7DE9495CF5 .
-    
-    bdr:TTBE939A7DE9495CF5
         a                   :CoverTitle ;
         rdfs:label          "មាត្តិគុន"@km .
     
-    bdr:TTC0880DD50447C2A1
-        a                   :CoverTitle ;
-        rdfs:label          "māttigun"@km-x-twktt .
+    bdr:TT8470432215038CD3
+        a                   :Title ;
+        rdfs:label          "មាតុគុណសូត្រ"@km ;
+        :femcConversionOf   bdr:TT7BBE77BAE9F88409 .
 }

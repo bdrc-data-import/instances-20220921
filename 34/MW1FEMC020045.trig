@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020045 {
-    bda:LG1ED0F77B00E6E987
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020045"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020045"@en , "imported pubinfo for W1FEMC020045"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020045"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020045 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020045 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "34/MW1FEMC020045.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020045 ;
-        adm:logEntry        bda:LG1ED0F77B00E6E987 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID09F862FB2B203152
+    bdr:ID1CF50BDBD325C89D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.41.I.1" .
     
-    bdr:MFB27AFF8B2FDBD5D7
+    bdr:MF665A62BC7E053B91
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "20" ;
         :microfilmStrip     "9" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020045 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ហៃមហាជន"@km , "cpāp' hai mahā jan"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID09F862FB2B203152 ;
+            bdr:ID1CF50BDBD325C89D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1CF50BDBD325C89D , bdr:TT30BA2ED380364DB3 , bdr:TT6BB98B93EAC6EB27 , bdr:TTEA1BCCB431280733 ;
+        :hasTitle           bdr:TT1ED0F77B00E6E987 , bdr:TT30BA2ED380364DB3 , bdr:TT6BB98B93EAC6EB27 , bdr:TTE05C681AAACC4BA9 ;
         :instanceHasReproduction  bdr:W1FEMC020045 ;
+        :instanceOf         bdr:WA1FEMC100037 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB27AFF8B2FDBD5D7 ;
-        :note               bdr:NT665A62BC7E053B91 ;
+        :microfilmItem      bdr:MF665A62BC7E053B91 ;
+        :note               bdr:NTEA1BCCB431280733 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1530" .
     
-    bdr:NT665A62BC7E053B91
+    bdr:NTEA1BCCB431280733
         a                   :Note ;
         :contentLocationStatement  "pg. 10" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1CF50BDBD325C89D
+    bdr:TT1ED0F77B00E6E987
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ហៃមហាជន"@km ;
+        :femcConversionOf   bdr:TT30BA2ED380364DB3 .
+    
+    bdr:TT30BA2ED380364DB3
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជន"@km .
+    
+    bdr:TT6BB98B93EAC6EB27
         a                   :CoverTitle ;
         rdfs:label          "mahā jan"@km-x-twktt .
     
-    bdr:TT30BA2ED380364DB3
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ហៃមហាជន"@km ;
-        :femcConversionOf   bdr:TTEA1BCCB431280733 .
-    
-    bdr:TT6BB98B93EAC6EB27
+    bdr:TTE05C681AAACC4BA9
         a                   :Title ;
         rdfs:label          "cpāp' hai mahā jan"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1CF50BDBD325C89D .
-    
-    bdr:TTEA1BCCB431280733
-        a                   :CoverTitle ;
-        rdfs:label          "មហាជន"@km .
+        :femcConversionOf   bdr:TT6BB98B93EAC6EB27 .
 }

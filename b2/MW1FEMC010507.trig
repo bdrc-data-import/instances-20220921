@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010507 {
-    bda:LG523A81F50FE50C27
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010507"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010507"@en , "imported pubinfo for W1FEMC010507"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010507"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010507 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010507 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b2/MW1FEMC010507.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010507 ;
-        adm:logEntry        bda:LG523A81F50FE50C27 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID433A2CCB0A62D714
+    bdr:ID8B986272EE8C7C2A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "008-012-A.02.08.02.III.1" .
     
-    bdr:MF65640B04D7EECF62
+    bdr:MF2E0D53CFFE7695C6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "29" ;
         :microfilmStrip     "45" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010507 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID433A2CCB0A62D714 ;
+            bdr:ID8B986272EE8C7C2A ;
         :hasFascicles       "1-4, 6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT16EF9AA4D308FFF8 , bdr:TT1EAF793F07C826AB , bdr:TT8B986272EE8C7C2A , bdr:TTBB2E11728E0FBFC1 ;
+        :hasTitle           bdr:TT0E0025902535C3CE , bdr:TT1EAF793F07C826AB , bdr:TT523A81F50FE50C27 , bdr:TTBB2E11728E0FBFC1 ;
         :instanceHasReproduction  bdr:W1FEMC010507 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF65640B04D7EECF62 ;
-        :note               bdr:NT2E0D53CFFE7695C6 ;
+        :microfilmItem      bdr:MF2E0D53CFFE7695C6 ;
+        :note               bdr:NT16EF9AA4D308FFF8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2E0D53CFFE7695C6
+    bdr:NT16EF9AA4D308FFF8
         a                   :Note ;
         :contentLocationStatement  "pg. 153" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT16EF9AA4D308FFF8
-        a                   :CoverTitle ;
-        rdfs:label          "វិន័យសួរ"@km .
-    
-    bdr:TT1EAF793F07C826AB
+    bdr:TT0E0025902535C3CE
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
     
-    bdr:TT8B986272EE8C7C2A
+    bdr:TT1EAF793F07C826AB
         a                   :CoverTitle ;
         rdfs:label          "vinăy suor"@km-x-twktt .
     
-    bdr:TTBB2E11728E0FBFC1
+    bdr:TT523A81F50FE50C27
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTBB2E11728E0FBFC1
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័យសួរ"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010545 {
-    bda:LG9A5B3A6576067744
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010545"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010545"@en , "imported pubinfo for W1FEMC010545"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010545"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010545 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010545 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4d/MW1FEMC010545.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010545 ;
-        adm:logEntry        bda:LG9A5B3A6576067744 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC574C3819272BE2E
+    bdr:ID34DD51260D092C85
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "041-042-A.02.10.01.II.1" .
     
-    bdr:MF041923137EFD6E31
+    bdr:MF3F41A2D7346C1A7B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "70" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010545 {
         a                   :Instance ;
         skos:prefLabel      "ជាវគុណ"@km , "jāv guṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC574C3819272BE2E ;
+            bdr:ID34DD51260D092C85 ;
         :hasFascicles       "6, 7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0A2E034005A4EFD5 , bdr:TT2A20B2DE64A92525 , bdr:TT34DD51260D092C85 , bdr:TT88A22E7F50CF6E9E ;
+        :hasTitle           bdr:TT0A2E034005A4EFD5 , bdr:TT2A20B2DE64A92525 , bdr:TT9A5B3A6576067744 , bdr:TTBCF75B197B2802A1 ;
         :instanceHasReproduction  bdr:W1FEMC010545 ;
+        :instanceOf         bdr:WA1FEMC120016 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF041923137EFD6E31 ;
-        :note               bdr:NT3F41A2D7346C1A7B ;
+        :microfilmItem      bdr:MF3F41A2D7346C1A7B ;
+        :note               bdr:NT88A22E7F50CF6E9E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3F41A2D7346C1A7B
+    bdr:NT88A22E7F50CF6E9E
         a                   :Note ;
         :contentLocationStatement  "pg. 161" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0A2E034005A4EFD5
-        a                   :Title ;
-        rdfs:label          "ជាវគុណ"@km ;
-        :femcConversionOf   bdr:TT88A22E7F50CF6E9E .
+        a                   :CoverTitle ;
+        rdfs:label          "ជាវគុន"@km .
     
     bdr:TT2A20B2DE64A92525
-        a                   :Title ;
-        rdfs:label          "jāv guṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT34DD51260D092C85 .
-    
-    bdr:TT34DD51260D092C85
         a                   :CoverTitle ;
         rdfs:label          "jāv gun"@km-x-twktt .
     
-    bdr:TT88A22E7F50CF6E9E
-        a                   :CoverTitle ;
-        rdfs:label          "ជាវគុន"@km .
+    bdr:TT9A5B3A6576067744
+        a                   :Title ;
+        rdfs:label          "ជាវគុណ"@km ;
+        :femcConversionOf   bdr:TT0A2E034005A4EFD5 .
+    
+    bdr:TTBCF75B197B2802A1
+        a                   :Title ;
+        rdfs:label          "jāv guṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT2A20B2DE64A92525 .
 }

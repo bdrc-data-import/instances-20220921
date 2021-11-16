@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020100 {
-    bda:LG868BA8CDCC704E9C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020100"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020100"@en , "imported pubinfo for W1FEMC020100"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020100"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020100 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020100 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "7d/MW1FEMC020100.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020100 ;
-        adm:logEntry        bda:LG868BA8CDCC704E9C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFBD211304C76C84A
+    bdr:ID98FFABF9E83AEFCF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.94.II.1" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC020100 {
         a                   :Instance ;
         skos:prefLabel      "តារារត្នរឿងរង្សី"@km , "tārāratn rīöṅ raṅsī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFBD211304C76C84A ;
+            bdr:ID98FFABF9E83AEFCF ;
         :hasFascicles       "6, 7, 8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5B16E75D2F8343EF , bdr:TT98FFABF9E83AEFCF , bdr:TTE729E7FE34DAD4D1 , bdr:TTFFD260F079A7C82D ;
+        :hasTitle           bdr:TT489A92E348D20C4A , bdr:TT868BA8CDCC704E9C , bdr:TTE729E7FE34DAD4D1 , bdr:TTFFD260F079A7C82D ;
         :instanceHasReproduction  bdr:W1FEMC020100 ;
+        :instanceOf         bdr:WA1FEMC120094 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT613186F521D36021 ;
+        :note               bdr:NT5B16E75D2F8343EF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1619" .
     
-    bdr:NT613186F521D36021
+    bdr:NT5B16E75D2F8343EF
         a                   :Note ;
         :contentLocationStatement  "pg. 21" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT5B16E75D2F8343EF
-        a                   :CoverTitle ;
-        rdfs:label          "តរារត្នរឿងរង្សី"@km .
+    bdr:TT489A92E348D20C4A
+        a                   :Title ;
+        rdfs:label          "tārāratn rīöṅ raṅsī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE729E7FE34DAD4D1 .
     
-    bdr:TT98FFABF9E83AEFCF
+    bdr:TT868BA8CDCC704E9C
+        a                   :Title ;
+        rdfs:label          "តារារត្នរឿងរង្សី"@km ;
+        :femcConversionOf   bdr:TTFFD260F079A7C82D .
+    
+    bdr:TTE729E7FE34DAD4D1
         a                   :CoverTitle ;
         rdfs:label          "tarāratn rīöṅ raṅsī"@km-x-twktt .
     
-    bdr:TTE729E7FE34DAD4D1
-        a                   :Title ;
-        rdfs:label          "tārāratn rīöṅ raṅsī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT98FFABF9E83AEFCF .
-    
     bdr:TTFFD260F079A7C82D
-        a                   :Title ;
-        rdfs:label          "តារារត្នរឿងរង្សី"@km ;
-        :femcConversionOf   bdr:TT5B16E75D2F8343EF .
+        a                   :CoverTitle ;
+        rdfs:label          "តរារត្នរឿងរង្សី"@km .
 }

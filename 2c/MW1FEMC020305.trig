@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020305 {
-    bda:LGB514D1699E2CFBB8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020305"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020305"@en , "imported pubinfo for W1FEMC020305"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020305"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020305 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020305 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2c/MW1FEMC020305.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020305 ;
-        adm:logEntry        bda:LGB514D1699E2CFBB8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3C90B51566CEB664
+    bdr:ID8D627B83790C412C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.198.II.1" .
     
-    bdr:MFD26007AAD5C47FC0
+    bdr:MF07BBD575D59AD8CC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020305 {
         a                   :Instance ;
         skos:prefLabel      "ដាវរឿង"@km , "ṭāv rīöṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3C90B51566CEB664 ;
+            bdr:ID8D627B83790C412C ;
         :hasFascicles       "6, 7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT75E5ACAA19C64769 , bdr:TT8D627B83790C412C , bdr:TTB62E4B6C66BFDF90 , bdr:TTDC48AD3A2D19AD4E ;
+        :hasTitle           bdr:TT6EDF6B5AF5B62A87 , bdr:TTB514D1699E2CFBB8 , bdr:TTB62E4B6C66BFDF90 , bdr:TTDC48AD3A2D19AD4E ;
         :instanceHasReproduction  bdr:W1FEMC020305 ;
+        :instanceOf         bdr:WA1FEMC120044 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD26007AAD5C47FC0 ;
-        :note               bdr:NT07BBD575D59AD8CC ;
+        :microfilmItem      bdr:MF07BBD575D59AD8CC ;
+        :note               bdr:NT75E5ACAA19C64769 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "549" .
     
-    bdr:NT07BBD575D59AD8CC
+    bdr:NT75E5ACAA19C64769
         a                   :Note ;
         :contentLocationStatement  "pg. 60" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT75E5ACAA19C64769
+    bdr:TT6EDF6B5AF5B62A87
+        a                   :Title ;
+        rdfs:label          "ṭāv rīöṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDC48AD3A2D19AD4E .
+    
+    bdr:TTB514D1699E2CFBB8
+        a                   :Title ;
+        rdfs:label          "ដាវរឿង"@km ;
+        :femcConversionOf   bdr:TTB62E4B6C66BFDF90 .
+    
+    bdr:TTB62E4B6C66BFDF90
         a                   :CoverTitle ;
         rdfs:label          "តាវរើង"@km .
     
-    bdr:TT8D627B83790C412C
+    bdr:TTDC48AD3A2D19AD4E
         a                   :CoverTitle ;
         rdfs:label          "tāv röṅ"@km-x-twktt .
-    
-    bdr:TTB62E4B6C66BFDF90
-        a                   :Title ;
-        rdfs:label          "ដាវរឿង"@km ;
-        :femcConversionOf   bdr:TT75E5ACAA19C64769 .
-    
-    bdr:TTDC48AD3A2D19AD4E
-        a                   :Title ;
-        rdfs:label          "ṭāv rīöṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8D627B83790C412C .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010693 {
-    bda:LGCAC0212E38A554AD
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010693"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010693"@en , "imported pubinfo for W1FEMC010693"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010693"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010693 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010693 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "2e/MW1FEMC010693.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010693 ;
-        adm:logEntry        bda:LGCAC0212E38A554AD , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC22D040B5EEE2E50
+    bdr:IDAA664D24DC8FD651
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003-A.03.07.01.III.5" .
     
-    bdr:MFCFF450404D68CFFE
+    bdr:MF143FFF556DFD6A42
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "112" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010693 {
         a                   :Instance ;
         skos:prefLabel      "មហាវេស្សន្តរជាតក"@km , "mahā vessantar jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC22D040B5EEE2E50 ;
+            bdr:IDAA664D24DC8FD651 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1704D4CD5BECFE9D , bdr:TT7ACC0A03B8E40B14 , bdr:TTAA664D24DC8FD651 , bdr:TTD3788AC8C09224A6 , bdr:TTD8ABD678F9F4097A , bdr:TTF56F3BE6504CA23D ;
+        :hasTitle           bdr:TT1704D4CD5BECFE9D , bdr:TT7ACC0A03B8E40B14 , bdr:TTCAC0212E38A554AD , bdr:TTD8ABD678F9F4097A , bdr:TTE3476504E300AAB2 , bdr:TTF56F3BE6504CA23D ;
         :instanceHasReproduction  bdr:W1FEMC010693 ;
+        :instanceOf         bdr:WA1FEMC050001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCFF450404D68CFFE ;
-        :note               bdr:NT143FFF556DFD6A42 ;
+        :microfilmItem      bdr:MF143FFF556DFD6A42 ;
+        :note               bdr:NTD3788AC8C09224A6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT143FFF556DFD6A42
+    bdr:NTD3788AC8C09224A6
         a                   :Note ;
         :contentLocationStatement  "pg. 190" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1704D4CD5BECFE9D
         a                   :CoverTitle ;
-        rdfs:label          "មហាពន"@km ;
-        :femcConversionOf   bdr:TTD3788AC8C09224A6 .
+        rdfs:label          "មហាពន្ធ"@km .
     
     bdr:TT7ACC0A03B8E40B14
         a                   :CoverTitle ;
-        rdfs:label          "mahā ban"@km-x-twktt ;
-        :femcConversionOf   bdr:TTAA664D24DC8FD651 .
-    
-    bdr:TTAA664D24DC8FD651
-        a                   :CoverTitle ;
         rdfs:label          "mahā bandh"@km-x-twktt .
     
-    bdr:TTD3788AC8C09224A6
-        a                   :CoverTitle ;
-        rdfs:label          "មហាពន្ធ"@km .
-    
-    bdr:TTD8ABD678F9F4097A
+    bdr:TTCAC0212E38A554AD
         a                   :Title ;
         rdfs:label          "មហាវេស្សន្តរជាតក"@km .
     
-    bdr:TTF56F3BE6504CA23D
+    bdr:TTD8ABD678F9F4097A
+        a                   :CoverTitle ;
+        rdfs:label          "មហាពន"@km ;
+        :femcConversionOf   bdr:TT1704D4CD5BECFE9D .
+    
+    bdr:TTE3476504E300AAB2
         a                   :Title ;
         rdfs:label          "mahā vessantar jātak"@km-x-twktt .
+    
+    bdr:TTF56F3BE6504CA23D
+        a                   :CoverTitle ;
+        rdfs:label          "mahā ban"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7ACC0A03B8E40B14 .
 }

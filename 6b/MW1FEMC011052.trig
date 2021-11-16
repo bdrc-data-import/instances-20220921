@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011052 {
-    bda:LG7632A7BEA443CE11
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011052"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011052"@en , "imported pubinfo for W1FEMC011052"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011052"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011052 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011052 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "6b/MW1FEMC011052.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011052 ;
-        adm:logEntry        bda:LG7632A7BEA443CE11 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1B2E47AF49119934
+    bdr:IDA7064BA0EA39CB25
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "062-A.04.07.01.II.1" .
     
-    bdr:MF0C533EA4991E50F6
+    bdr:MF54DBF263FC91239F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "82" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011052 {
         a                   :Instance ;
         skos:prefLabel      "ចៅឳមនាងពៅ"@km , "cau Aom nāṅ bau"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1B2E47AF49119934 ;
+            bdr:IDA7064BA0EA39CB25 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT10A61A5108AB76B2 , bdr:TT2E3F8E435AD1CB16 , bdr:TTA7064BA0EA39CB25 , bdr:TTAB3241AEDAA6F4A3 ;
+        :hasTitle           bdr:TT10A61A5108AB76B2 , bdr:TT26D1E5134B2DD68B , bdr:TT7632A7BEA443CE11 , bdr:TTAB3241AEDAA6F4A3 ;
         :instanceHasReproduction  bdr:W1FEMC011052 ;
+        :instanceOf         bdr:WA1FEMC120010 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0C533EA4991E50F6 ;
-        :note               bdr:NT54DBF263FC91239F ;
+        :microfilmItem      bdr:MF54DBF263FC91239F ;
+        :note               bdr:NT2E3F8E435AD1CB16 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT54DBF263FC91239F
+    bdr:NT2E3F8E435AD1CB16
         a                   :Note ;
         :contentLocationStatement  "pg. 258" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT10A61A5108AB76B2
-        a                   :Title ;
-        rdfs:label          "ចៅឳមនាងពៅ"@km ;
-        :femcConversionOf   bdr:TT2E3F8E435AD1CB16 .
-    
-    bdr:TT2E3F8E435AD1CB16
         a                   :CoverTitle ;
         rdfs:label          "ចៅវឳមនាងពៅរ័"@km .
     
-    bdr:TTA7064BA0EA39CB25
-        a                   :CoverTitle ;
-        rdfs:label          "cauv Aom nāṅ baur"@km-x-twktt .
-    
-    bdr:TTAB3241AEDAA6F4A3
+    bdr:TT26D1E5134B2DD68B
         a                   :Title ;
         rdfs:label          "cau Aom nāṅ bau"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA7064BA0EA39CB25 .
+        :femcConversionOf   bdr:TTAB3241AEDAA6F4A3 .
+    
+    bdr:TT7632A7BEA443CE11
+        a                   :Title ;
+        rdfs:label          "ចៅឳមនាងពៅ"@km ;
+        :femcConversionOf   bdr:TT10A61A5108AB76B2 .
+    
+    bdr:TTAB3241AEDAA6F4A3
+        a                   :CoverTitle ;
+        rdfs:label          "cauv Aom nāṅ baur"@km-x-twktt .
 }

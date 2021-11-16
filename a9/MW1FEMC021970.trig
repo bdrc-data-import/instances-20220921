@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021970 {
-    bda:LGF65D1536565E04F4
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021970"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021970"@en , "imported pubinfo for W1FEMC021970"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021970"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021970 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021970 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "a9/MW1FEMC021970.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021970 ;
-        adm:logEntry        bda:LGF65D1536565E04F4 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID89AC175A241A4E68
+    bdr:ID364CC9CE0AA8EBE6
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.752.III.6" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021970 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះត្រៃបិដក"@km , "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID89AC175A241A4E68 ;
+            bdr:ID364CC9CE0AA8EBE6 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT364CC9CE0AA8EBE6 , bdr:TTD1287F2549150D25 , bdr:TTFA78909A5CE6AFBB , bdr:TTFC7E59F612F83757 ;
+        :hasTitle           bdr:TTCE6C13CD9202C8CB , bdr:TTD1287F2549150D25 , bdr:TTF65D1536565E04F4 , bdr:TTFC7E59F612F83757 ;
         :instanceHasReproduction  bdr:W1FEMC021970 ;
+        :instanceOf         bdr:WA1FEMC060008 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT94821FC66799CCB2 ;
+        :note               bdr:NTFA78909A5CE6AFBB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT94821FC66799CCB2
+    bdr:NTFA78909A5CE6AFBB
         a                   :Note ;
         :contentLocationStatement  "pg. 349" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT364CC9CE0AA8EBE6
-        a                   :CoverTitle ;
-        rdfs:label          "ānisaṅs piṭak"@km-x-twktt .
+    bdr:TTCE6C13CD9202C8CB
+        a                   :Title ;
+        rdfs:label          "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFC7E59F612F83757 .
     
     bdr:TTD1287F2549150D25
-        a                   :Title ;
-        rdfs:label          "អានិសង្សព្រះត្រៃបិដក"@km ;
-        :femcConversionOf   bdr:TTFA78909A5CE6AFBB .
-    
-    bdr:TTFA78909A5CE6AFBB
         a                   :CoverTitle ;
         rdfs:label          "អានិសង្សបិដក"@km .
     
-    bdr:TTFC7E59F612F83757
+    bdr:TTF65D1536565E04F4
         a                   :Title ;
-        rdfs:label          "ānisaṅs braḥ trai piṭak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT364CC9CE0AA8EBE6 .
+        rdfs:label          "អានិសង្សព្រះត្រៃបិដក"@km ;
+        :femcConversionOf   bdr:TTD1287F2549150D25 .
+    
+    bdr:TTFC7E59F612F83757
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs piṭak"@km-x-twktt .
 }

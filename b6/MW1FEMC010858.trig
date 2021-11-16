@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010858 {
-    bda:LG93D8073EAF69C402
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010858"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010858"@en , "imported pubinfo for W1FEMC010858"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010858"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010858 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010858 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b6/MW1FEMC010858.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010858 ;
-        adm:logEntry        bda:LG93D8073EAF69C402 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCE0B998EB87F4FBC
+    bdr:IDFB9EDB3D7386882C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "053-A.04.02.01.III.1" .
     
-    bdr:MFC96937370849DDAB
+    bdr:MF1CB1CA63F34923D1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "40" ;
         :microfilmStrip     "91" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010858 {
         a                   :Instance ;
         skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCE0B998EB87F4FBC ;
+            bdr:IDFB9EDB3D7386882C ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT083A50699C05F870 , bdr:TT7887323A33D4E587 , bdr:TT7DF7D183BAAA7DD5 , bdr:TTFB9EDB3D7386882C ;
+        :hasTitle           bdr:TT7887323A33D4E587 , bdr:TT7DF7D183BAAA7DD5 , bdr:TT93D8073EAF69C402 , bdr:TTAE7889959DCDCCA4 ;
         :instanceHasReproduction  bdr:W1FEMC010858 ;
+        :instanceOf         bdr:WA1FEMC010044 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC96937370849DDAB ;
-        :note               bdr:NT1CB1CA63F34923D1 ;
+        :microfilmItem      bdr:MF1CB1CA63F34923D1 ;
+        :note               bdr:NT083A50699C05F870 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1CB1CA63F34923D1
+    bdr:NT083A50699C05F870
         a                   :Note ;
         :contentLocationStatement  "pg. 221" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT083A50699C05F870
+    bdr:TT7887323A33D4E587
         a                   :CoverTitle ;
         rdfs:label          "ក្រុងមាលិន"@km .
     
-    bdr:TT7887323A33D4E587
-        a                   :Title ;
-        rdfs:label          "មិលិន្ទប្បញ្ហា"@km ;
-        :femcConversionOf   bdr:TT083A50699C05F870 .
-    
     bdr:TT7DF7D183BAAA7DD5
-        a                   :Title ;
-        rdfs:label          "milindappañhā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFB9EDB3D7386882C .
-    
-    bdr:TTFB9EDB3D7386882C
         a                   :CoverTitle ;
         rdfs:label          "kruṅ mālin"@km-x-twktt .
+    
+    bdr:TT93D8073EAF69C402
+        a                   :Title ;
+        rdfs:label          "មិលិន្ទប្បញ្ហា"@km ;
+        :femcConversionOf   bdr:TT7887323A33D4E587 .
+    
+    bdr:TTAE7889959DCDCCA4
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7DF7D183BAAA7DD5 .
 }

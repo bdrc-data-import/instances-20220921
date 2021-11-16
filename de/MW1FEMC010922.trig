@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010922 {
-    bda:LG59E94CE1864F8BB6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010922"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010922"@en , "imported pubinfo for W1FEMC010922"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010922"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010922 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010922 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "de/MW1FEMC010922.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010922 ;
-        adm:logEntry        bda:LG59E94CE1864F8BB6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDBB47A8CE3C583445
+    bdr:ID75D7D20A0DB426B0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "076-078-A.04.03.02.III.4" .
     
-    bdr:MFBD761B31461A9A32
+    bdr:MF1688F6DDCC4F583C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "22" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010922 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBB47A8CE3C583445 ;
+            bdr:ID75D7D20A0DB426B0 ;
         :hasFascicles       "1, 2, 6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT75D7D20A0DB426B0 , bdr:TTF890FAD46FE4E470 ;
+        :hasTitle           bdr:TT59E94CE1864F8BB6 , bdr:TTB2B7FFF5E0DB0D8E ;
         :instanceHasReproduction  bdr:W1FEMC010922 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFBD761B31461A9A32 ;
-        :note               bdr:NT1688F6DDCC4F583C ;
+        :microfilmItem      bdr:MF1688F6DDCC4F583C ;
+        :note               bdr:NTF890FAD46FE4E470 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1688F6DDCC4F583C
+    bdr:NTF890FAD46FE4E470
         a                   :Note ;
         :contentLocationStatement  "pg. 234" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT75D7D20A0DB426B0
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
-    
-    bdr:TTF890FAD46FE4E470
+    bdr:TT59E94CE1864F8BB6
         a                   :Title ;
         rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTB2B7FFF5E0DB0D8E
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
 }

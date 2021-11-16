@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011051 {
-    bda:LG52E5EDE5F0CA906C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011051"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011051"@en , "imported pubinfo for W1FEMC011051"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011051"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011051 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011051 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4d/MW1FEMC011051.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011051 ;
-        adm:logEntry        bda:LG52E5EDE5F0CA906C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID452C5B2C868A7B24
+    bdr:ID5EDC0BB5C74B142A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "061-A.04.07.01.I.1" .
     
-    bdr:MFED1D533104C719B7
+    bdr:MF031B556AE3721956
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "82" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011051 {
         a                   :Instance ;
         skos:prefLabel      "បណ្ឌិតស្ទើរភ្លើង"@km , "paṇḍit sdör bhlöṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID452C5B2C868A7B24 ;
+            bdr:ID5EDC0BB5C74B142A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT292D44D2599971B4 , bdr:TT5EDC0BB5C74B142A , bdr:TT8F7943B85E0B4619 , bdr:TTF3B47E8DE18F8682 ;
+        :hasTitle           bdr:TT292D44D2599971B4 , bdr:TT52E5EDE5F0CA906C , bdr:TTC140A4FF0BF11C6F , bdr:TTF3B47E8DE18F8682 ;
         :instanceHasReproduction  bdr:W1FEMC011051 ;
+        :instanceOf         bdr:WA1FEMC100024 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFED1D533104C719B7 ;
-        :note               bdr:NT031B556AE3721956 ;
+        :microfilmItem      bdr:MF031B556AE3721956 ;
+        :note               bdr:NT8F7943B85E0B4619 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT031B556AE3721956
+    bdr:NT8F7943B85E0B4619
         a                   :Note ;
         :contentLocationStatement  "pg. 257" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT292D44D2599971B4
-        a                   :Title ;
-        rdfs:label          "paṇḍit sdör bhlöṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5EDC0BB5C74B142A .
-    
-    bdr:TT5EDC0BB5C74B142A
         a                   :CoverTitle ;
         rdfs:label          "maṇḍit sdö bhlöṅ"@km-x-twktt .
     
-    bdr:TT8F7943B85E0B4619
-        a                   :CoverTitle ;
-        rdfs:label          "មណ្ឌិតស្ទើភ្លើង"@km .
-    
-    bdr:TTF3B47E8DE18F8682
+    bdr:TT52E5EDE5F0CA906C
         a                   :Title ;
         rdfs:label          "បណ្ឌិតស្ទើរភ្លើង"@km ;
-        :femcConversionOf   bdr:TT8F7943B85E0B4619 .
+        :femcConversionOf   bdr:TTF3B47E8DE18F8682 .
+    
+    bdr:TTC140A4FF0BF11C6F
+        a                   :Title ;
+        rdfs:label          "paṇḍit sdör bhlöṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT292D44D2599971B4 .
+    
+    bdr:TTF3B47E8DE18F8682
+        a                   :CoverTitle ;
+        rdfs:label          "មណ្ឌិតស្ទើភ្លើង"@km .
 }

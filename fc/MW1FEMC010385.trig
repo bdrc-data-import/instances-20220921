@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010385 {
-    bda:LG1823779E8058591B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010385"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010385"@en , "imported pubinfo for W1FEMC010385"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010385"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010385 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010385 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fc/MW1FEMC010385.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010385 ;
-        adm:logEntry        bda:LG1823779E8058591B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB10E93E7117BCF17
+    bdr:IDF142CFE2AB20759F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "110-PP.03.03.03.II.1" .
     
-    bdr:MF70E54D482E68B6B2
+    bdr:MFBA7CBDA0DDFE185F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "66" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010385 {
         a                   :Instance ;
         skos:prefLabel      "ជ័យទត្ត"@km , "jăy datt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB10E93E7117BCF17 ;
+            bdr:IDF142CFE2AB20759F ;
         :hasFascicles       "8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT713F417B8C95DB34 , bdr:TTBA9C90572438ACF0 , bdr:TTDF175F336B888070 , bdr:TTF142CFE2AB20759F ;
+        :hasTitle           bdr:TT1823779E8058591B , bdr:TT1B649404FF3D8BAE , bdr:TT713F417B8C95DB34 , bdr:TTDF175F336B888070 ;
         :instanceHasReproduction  bdr:W1FEMC010385 ;
+        :instanceOf         bdr:WA1FEMC120017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF70E54D482E68B6B2 ;
-        :note               bdr:NTBA7CBDA0DDFE185F ;
+        :microfilmItem      bdr:MFBA7CBDA0DDFE185F ;
+        :note               bdr:NTBA9C90572438ACF0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTBA7CBDA0DDFE185F
+    bdr:NTBA9C90572438ACF0
         a                   :Note ;
         :contentLocationStatement  "pg. 128" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT713F417B8C95DB34
+    bdr:TT1823779E8058591B
         a                   :Title ;
         rdfs:label          "ជ័យទត្ត"@km ;
-        :femcConversionOf   bdr:TTBA9C90572438ACF0 .
+        :femcConversionOf   bdr:TT713F417B8C95DB34 .
     
-    bdr:TTBA9C90572438ACF0
+    bdr:TT1B649404FF3D8BAE
+        a                   :Title ;
+        rdfs:label          "jăy datt"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDF175F336B888070 .
+    
+    bdr:TT713F417B8C95DB34
         a                   :CoverTitle ;
         rdfs:label          "ជ្យៃទាត្ថ"@km .
     
     bdr:TTDF175F336B888070
-        a                   :Title ;
-        rdfs:label          "jăy datt"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF142CFE2AB20759F .
-    
-    bdr:TTF142CFE2AB20759F
         a                   :CoverTitle ;
         rdfs:label          "jaiy° dātth"@km-x-twktt .
 }

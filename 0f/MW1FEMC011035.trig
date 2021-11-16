@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011035 {
-    bda:LG9626170D81D38275
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011035"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011035"@en , "imported pubinfo for W1FEMC011035"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011035"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011035 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011035 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0f/MW1FEMC011035.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011035 ;
-        adm:logEntry        bda:LG9626170D81D38275 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC7CB3B8A8BE1644C
+    bdr:ID9CBA727BD5812C17
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "045-A.04.07.01.V.1" .
     
-    bdr:MF758C13340D2E6133
+    bdr:MFEA8524407A2FD51C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "81" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011035 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-suṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC7CB3B8A8BE1644C ;
+            bdr:ID9CBA727BD5812C17 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1970234CA56924CF , bdr:TT43E27BE4A9808A6B , bdr:TT68284CEC80924DED , bdr:TT9CBA727BD5812C17 ;
+        :hasTitle           bdr:TT1970234CA56924CF , bdr:TT68284CEC80924DED , bdr:TT9626170D81D38275 , bdr:TTD279638F13E00E4D ;
         :instanceHasReproduction  bdr:W1FEMC011035 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF758C13340D2E6133 ;
-        :note               bdr:NTEA8524407A2FD51C ;
+        :microfilmItem      bdr:MFEA8524407A2FD51C ;
+        :note               bdr:NT43E27BE4A9808A6B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTEA8524407A2FD51C
+    bdr:NT43E27BE4A9808A6B
         a                   :Note ;
         :contentLocationStatement  "pg. 254" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1970234CA56924CF
-        a                   :Title ;
-        rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT43E27BE4A9808A6B .
-    
-    bdr:TT43E27BE4A9808A6B
         a                   :CoverTitle ;
         rdfs:label          "ធម្មវឹងស៊ុំង"@km .
     
     bdr:TT68284CEC80924DED
-        a                   :Title ;
-        rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9CBA727BD5812C17 .
-    
-    bdr:TT9CBA727BD5812C17
         a                   :CoverTitle ;
         rdfs:label          "dhamm vịṅ suṃṅ"@km-x-twktt .
+    
+    bdr:TT9626170D81D38275
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TT1970234CA56924CF .
+    
+    bdr:TTD279638F13E00E4D
+        a                   :Title ;
+        rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT68284CEC80924DED .
 }

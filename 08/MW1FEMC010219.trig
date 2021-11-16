@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010219 {
-    bda:LGED5DFF187C749110
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010219"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010219"@en , "imported pubinfo for W1FEMC010219"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010219"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010219 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010219 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "08/MW1FEMC010219.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010219 ;
-        adm:logEntry        bda:LGED5DFF187C749110 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6AC0F287803F759
+    bdr:ID39510749F55F1D0F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "020-PP.02.06.02.III.6" .
     
-    bdr:MF082A9BE54E65D03C
+    bdr:MF134C636E1F81CE0E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "3" ;
         :microfilmStrip     "8" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010219 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សទានភ្លើង"@km , "ānisaṅs dān bhlöṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6AC0F287803F759 ;
+            bdr:ID39510749F55F1D0F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT39510749F55F1D0F , bdr:TT39D84A00EC9140C5 , bdr:TT93440DF87AADF062 , bdr:TTD09D1D348D39A71A ;
+        :hasTitle           bdr:TT39D84A00EC9140C5 , bdr:TT93440DF87AADF062 , bdr:TTD4420B590613706E , bdr:TTED5DFF187C749110 ;
         :instanceHasReproduction  bdr:W1FEMC010219 ;
+        :instanceOf         bdr:WA1FEMC060015 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF082A9BE54E65D03C ;
-        :note               bdr:NT134C636E1F81CE0E ;
+        :microfilmItem      bdr:MF134C636E1F81CE0E ;
+        :note               bdr:NTD09D1D348D39A71A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT134C636E1F81CE0E
+    bdr:NTD09D1D348D39A71A
         a                   :Note ;
         :contentLocationStatement  "pg. 96" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT39510749F55F1D0F
+    bdr:TT39D84A00EC9140C5
         a                   :CoverTitle ;
         rdfs:label          "annisaṅgh dān bhlöṅ"@km-x-twktt .
     
-    bdr:TT39D84A00EC9140C5
-        a                   :Title ;
-        rdfs:label          "ānisaṅs dān bhlöṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT39510749F55F1D0F .
-    
     bdr:TT93440DF87AADF062
-        a                   :Title ;
-        rdfs:label          "អានិសង្សទានភ្លើង"@km ;
-        :femcConversionOf   bdr:TTD09D1D348D39A71A .
-    
-    bdr:TTD09D1D348D39A71A
         a                   :CoverTitle ;
         rdfs:label          "អន្និសង្ឃទានភ្លើង"@km .
+    
+    bdr:TTD4420B590613706E
+        a                   :Title ;
+        rdfs:label          "ānisaṅs dān bhlöṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT39D84A00EC9140C5 .
+    
+    bdr:TTED5DFF187C749110
+        a                   :Title ;
+        rdfs:label          "អានិសង្សទានភ្លើង"@km ;
+        :femcConversionOf   bdr:TT93440DF87AADF062 .
 }

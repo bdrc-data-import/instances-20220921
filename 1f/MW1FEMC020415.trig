@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020415 {
-    bda:LGCDE69BCE985EE0DA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020415"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020415"@en , "imported pubinfo for W1FEMC020415"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020415"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020415 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020415 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1f/MW1FEMC020415.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020415 ;
-        adm:logEntry        bda:LGCDE69BCE985EE0DA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID35B7669B8F065A5F
+    bdr:ID3E1FE6C3712D2F9E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.49.V.1" .
     
-    bdr:MF3DAA2F62DA63D574
+    bdr:MF01069D11D54AA446
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "67" ;
         :microfilmStrip     "161" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020415 {
         a                   :Instance ;
         skos:prefLabel      "បឋមជ្ឈាន"@km , "paṭham jjhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID35B7669B8F065A5F ;
+            bdr:ID3E1FE6C3712D2F9E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3E1FE6C3712D2F9E , bdr:TT7DCCC6CEE7F4F255 , bdr:TT9FDB242E7B2B1D56 , bdr:TTCB59990965A66F6C ;
+        :hasTitle           bdr:TT1D5CC92D5DC605CC , bdr:TT7DCCC6CEE7F4F255 , bdr:TTCB59990965A66F6C , bdr:TTCDE69BCE985EE0DA ;
         :instanceHasReproduction  bdr:W1FEMC020415 ;
+        :instanceOf         bdr:WA1FEMC070014 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3DAA2F62DA63D574 ;
-        :note               bdr:NT01069D11D54AA446 ;
+        :microfilmItem      bdr:MF01069D11D54AA446 ;
+        :note               bdr:NT9FDB242E7B2B1D56 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT01069D11D54AA446
+    bdr:NT9FDB242E7B2B1D56
         a                   :Note ;
         :contentLocationStatement  "pg. 81" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3E1FE6C3712D2F9E
-        a                   :CoverTitle ;
-        rdfs:label          "dhamm jhān"@km-x-twktt .
+    bdr:TT1D5CC92D5DC605CC
+        a                   :Title ;
+        rdfs:label          "paṭham jjhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCB59990965A66F6C .
     
     bdr:TT7DCCC6CEE7F4F255
-        a                   :Title ;
-        rdfs:label          "បឋមជ្ឈាន"@km ;
-        :femcConversionOf   bdr:TT9FDB242E7B2B1D56 .
-    
-    bdr:TT9FDB242E7B2B1D56
         a                   :CoverTitle ;
         rdfs:label          "ធម្មឈាន"@km .
     
     bdr:TTCB59990965A66F6C
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm jhān"@km-x-twktt .
+    
+    bdr:TTCDE69BCE985EE0DA
         a                   :Title ;
-        rdfs:label          "paṭham jjhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3E1FE6C3712D2F9E .
+        rdfs:label          "បឋមជ្ឈាន"@km ;
+        :femcConversionOf   bdr:TT7DCCC6CEE7F4F255 .
 }

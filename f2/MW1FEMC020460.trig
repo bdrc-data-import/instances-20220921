@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020460 {
-    bda:LG45D7201CF7ED134C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020460"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020460"@en , "imported pubinfo for W1FEMC020460"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020460"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020460 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020460 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f2/MW1FEMC020460.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020460 ;
-        adm:logEntry        bda:LG45D7201CF7ED134C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3EAE52220BD6C543
+    bdr:IDEDA2A14AB44FF33C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.93.II.1" .
     
-    bdr:MFB896BED79264583C
+    bdr:MF2BDC64DFE6BB988F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "68" ;
         :microfilmStrip     "162" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020460 {
         a                   :Instance ;
         skos:prefLabel      "បុណ្ណា"@km , "puṇṇā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3EAE52220BD6C543 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT302A14171D712D2B , bdr:TT69ED5B5579BE5280 , bdr:TT935D9DF39F5BBEA3 , bdr:TTEDA2A14AB44FF33C ;
+            bdr:IDEDA2A14AB44FF33C ;
+        :hasTitle           bdr:TT302A14171D712D2B , bdr:TT3CE25322CDF49A3A , bdr:TT45D7201CF7ED134C , bdr:TT69ED5B5579BE5280 ;
         :instanceHasReproduction  bdr:W1FEMC020460 ;
+        :instanceOf         bdr:WA1FEMC120083 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB896BED79264583C ;
-        :note               bdr:NT2BDC64DFE6BB988F ;
+        :microfilmItem      bdr:MF2BDC64DFE6BB988F ;
+        :note               bdr:NT935D9DF39F5BBEA3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1585" .
     
-    bdr:NT2BDC64DFE6BB988F
+    bdr:NT935D9DF39F5BBEA3
         a                   :Note ;
         :contentLocationStatement  "pg. 90" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT302A14171D712D2B
-        a                   :Title ;
-        rdfs:label          "puṇṇā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEDA2A14AB44FF33C .
-    
-    bdr:TT69ED5B5579BE5280
-        a                   :Title ;
-        rdfs:label          "បុណ្ណា"@km ;
-        :femcConversionOf   bdr:TT935D9DF39F5BBEA3 .
-    
-    bdr:TT935D9DF39F5BBEA3
-        a                   :CoverTitle ;
-        rdfs:label          "បុ៊ណ្ណា"@km .
-    
-    bdr:TTEDA2A14AB44FF33C
         a                   :CoverTitle ;
         rdfs:label          "puṇṇā"@km-x-twktt .
+    
+    bdr:TT3CE25322CDF49A3A
+        a                   :Title ;
+        rdfs:label          "puṇṇā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT302A14171D712D2B .
+    
+    bdr:TT45D7201CF7ED134C
+        a                   :Title ;
+        rdfs:label          "បុណ្ណា"@km ;
+        :femcConversionOf   bdr:TT69ED5B5579BE5280 .
+    
+    bdr:TT69ED5B5579BE5280
+        a                   :CoverTitle ;
+        rdfs:label          "បុ៊ណ្ណា"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010383 {
-    bda:LGF46087D1A8E82DE2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010383"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010383"@en , "imported pubinfo for W1FEMC010383"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010383"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010383 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010383 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2f/MW1FEMC010383.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010383 ;
-        adm:logEntry        bda:LGF46087D1A8E82DE2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4F562B038B4D9FAE
+    bdr:ID35C04761C03F3805
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "108-PP.03.03.03.II.1" .
     
-    bdr:MF2BAD6C2A9AAEF742
+    bdr:MF9F00240E1C6FBC6E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "66" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010383 {
         a                   :Instance ;
         skos:prefLabel      "សមណគោតម"@km , "samaṇagotam"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4F562B038B4D9FAE ;
+            bdr:ID35C04761C03F3805 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT18AE0DC3A238F3B0 , bdr:TT249E0E0946960704 , bdr:TT35C04761C03F3805 , bdr:TTAE2531171C6D9666 ;
+        :hasTitle           bdr:TT249E0E0946960704 , bdr:TTAE2531171C6D9666 , bdr:TTE5F68E2840191E1F , bdr:TTF46087D1A8E82DE2 ;
         :instanceHasReproduction  bdr:W1FEMC010383 ;
+        :instanceOf         bdr:WA1FEMC120028 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2BAD6C2A9AAEF742 ;
-        :note               bdr:NT9F00240E1C6FBC6E ;
+        :microfilmItem      bdr:MF9F00240E1C6FBC6E ;
+        :note               bdr:NT18AE0DC3A238F3B0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9F00240E1C6FBC6E
+    bdr:NT18AE0DC3A238F3B0
         a                   :Note ;
         :contentLocationStatement  "pg. 127" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT18AE0DC3A238F3B0
-        a                   :CoverTitle ;
-        rdfs:label          "សុម៉នគោតម"@km .
-    
     bdr:TT249E0E0946960704
-        a                   :Title ;
-        rdfs:label          "samaṇagotam"@km-x-twktt ;
-        :femcConversionOf   bdr:TT35C04761C03F3805 .
-    
-    bdr:TT35C04761C03F3805
         a                   :CoverTitle ;
         rdfs:label          "sum ''anagotam"@km-x-twktt .
     
     bdr:TTAE2531171C6D9666
+        a                   :CoverTitle ;
+        rdfs:label          "សុម៉នគោតម"@km .
+    
+    bdr:TTE5F68E2840191E1F
+        a                   :Title ;
+        rdfs:label          "samaṇagotam"@km-x-twktt ;
+        :femcConversionOf   bdr:TT249E0E0946960704 .
+    
+    bdr:TTF46087D1A8E82DE2
         a                   :Title ;
         rdfs:label          "សមណគោតម"@km ;
-        :femcConversionOf   bdr:TT18AE0DC3A238F3B0 .
+        :femcConversionOf   bdr:TTAE2531171C6D9666 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010418 {
-    bda:LGC028FC5D47A0CE56
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010418"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010418"@en , "imported pubinfo for W1FEMC010418"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010418"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010418 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010418 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "11/MW1FEMC010418.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010418 ;
-        adm:logEntry        bda:LGC028FC5D47A0CE56 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID06EA683DC42FE009
+    bdr:ID46A17E36370157CA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "011*-PP.03.03.03.III.1" .
     
-    bdr:MFCA9FB54DF2492511
+    bdr:MF5E7A63FF3371C837
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "40" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010418 {
         a                   :Instance ;
         skos:prefLabel      "អនាគតវង្ស"@km , "anāgatavaṅs "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID06EA683DC42FE009 ;
+            bdr:ID46A17E36370157CA ;
         :hasFascicles       "2, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT46A17E36370157CA , bdr:TTB0468033BCFF8817 , bdr:TTC9C486D98F984F1A , bdr:TTEBCBC0D1017A17FA ;
+        :hasTitle           bdr:TTB0468033BCFF8817 , bdr:TTC028FC5D47A0CE56 , bdr:TTC9C486D98F984F1A , bdr:TTD918A4450EED7DA3 ;
         :instanceHasReproduction  bdr:W1FEMC010418 ;
+        :instanceOf         bdr:WA1FEMC010001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCA9FB54DF2492511 ;
-        :note               bdr:NT5E7A63FF3371C837 ;
+        :microfilmItem      bdr:MF5E7A63FF3371C837 ;
+        :note               bdr:NTEBCBC0D1017A17FA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5E7A63FF3371C837
+    bdr:NTEBCBC0D1017A17FA
         a                   :Note ;
         :contentLocationStatement  "pg. 134" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT46A17E36370157CA
+    bdr:TTB0468033BCFF8817
         a                   :CoverTitle ;
         rdfs:label          "āṇāgattavaṅ"@km-x-twktt .
     
-    bdr:TTB0468033BCFF8817
-        a                   :Title ;
-        rdfs:label          "anāgatavaṅs "@km-x-twktt ;
-        :femcConversionOf   bdr:TT46A17E36370157CA .
-    
-    bdr:TTC9C486D98F984F1A
+    bdr:TTC028FC5D47A0CE56
         a                   :Title ;
         rdfs:label          "អនាគតវង្ស"@km ;
-        :femcConversionOf   bdr:TTEBCBC0D1017A17FA .
+        :femcConversionOf   bdr:TTC9C486D98F984F1A .
     
-    bdr:TTEBCBC0D1017A17FA
+    bdr:TTC9C486D98F984F1A
         a                   :CoverTitle ;
         rdfs:label          "អាណាគត្តវង"@km .
+    
+    bdr:TTD918A4450EED7DA3
+        a                   :Title ;
+        rdfs:label          "anāgatavaṅs "@km-x-twktt ;
+        :femcConversionOf   bdr:TTB0468033BCFF8817 .
 }

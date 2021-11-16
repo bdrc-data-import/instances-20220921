@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010327 {
-    bda:LGB2A703F797D35B9A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010327"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010327"@en , "imported pubinfo for W1FEMC010327"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010327"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010327 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010327 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ca/MW1FEMC010327.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010327 ;
-        adm:logEntry        bda:LGB2A703F797D35B9A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6595123E112F7C9
+    bdr:ID69B4C3585F86B573
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "050-PP.03.03.03.II.1" .
     
-    bdr:MF95C826295C818F4B
+    bdr:MF44B109A619035448
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "63" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010327 {
         a                   :Instance ;
         skos:prefLabel      "សមណរគោតម"@km , "samaṇagotam"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6595123E112F7C9 ;
+            bdr:ID69B4C3585F86B573 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT61E5763BF4122743 , bdr:TT69B4C3585F86B573 , bdr:TTC4618EEF9EDB291F , bdr:TTEA079E3CFFB3682C ;
+        :hasTitle           bdr:TT61E5763BF4122743 , bdr:TT7CE30C774D7D11F4 , bdr:TTB2A703F797D35B9A , bdr:TTC4618EEF9EDB291F ;
         :instanceHasReproduction  bdr:W1FEMC010327 ;
+        :instanceOf         bdr:WA1FEMC120028 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF95C826295C818F4B ;
-        :note               bdr:NT44B109A619035448 ;
+        :microfilmItem      bdr:MF44B109A619035448 ;
+        :note               bdr:NTEA079E3CFFB3682C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT44B109A619035448
+    bdr:NTEA079E3CFFB3682C
         a                   :Note ;
         :contentLocationStatement  "pg. 117" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT61E5763BF4122743
-        a                   :Title ;
-        rdfs:label          "សមណរគោតម"@km ;
-        :femcConversionOf   bdr:TTEA079E3CFFB3682C .
-    
-    bdr:TT69B4C3585F86B573
-        a                   :CoverTitle ;
-        rdfs:label          "sūmanagotuṃm"@km-x-twktt .
-    
-    bdr:TTC4618EEF9EDB291F
-        a                   :Title ;
-        rdfs:label          "samaṇagotam"@km-x-twktt ;
-        :femcConversionOf   bdr:TT69B4C3585F86B573 .
-    
-    bdr:TTEA079E3CFFB3682C
         a                   :CoverTitle ;
         rdfs:label          "សូមនគោតុំម"@km .
+    
+    bdr:TT7CE30C774D7D11F4
+        a                   :Title ;
+        rdfs:label          "samaṇagotam"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC4618EEF9EDB291F .
+    
+    bdr:TTB2A703F797D35B9A
+        a                   :Title ;
+        rdfs:label          "សមណរគោតម"@km ;
+        :femcConversionOf   bdr:TT61E5763BF4122743 .
+    
+    bdr:TTC4618EEF9EDB291F
+        a                   :CoverTitle ;
+        rdfs:label          "sūmanagotuṃm"@km-x-twktt .
 }

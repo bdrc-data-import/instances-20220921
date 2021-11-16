@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020459 {
-    bda:LG946C995C766F9F36
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020459"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020459"@en , "imported pubinfo for W1FEMC020459"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020459"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020459 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020459 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "90/MW1FEMC020459.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020459 ;
-        adm:logEntry        bda:LG946C995C766F9F36 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC9E66B491AC4099E
+    bdr:IDBC90F62F78572DA2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.92.III.1" .
     
-    bdr:MFD4BC9FAFD48BFD60
+    bdr:MF240904D56A126FDD
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "68" ;
         :microfilmStrip     "162" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020459 {
         a                   :Instance ;
         skos:prefLabel      "សោទត្តកិ"@km , "sodattaki"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC9E66B491AC4099E ;
+            bdr:IDBC90F62F78572DA2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT67A093BB67712E32 , bdr:TTBC90F62F78572DA2 , bdr:TTDFF80A34B47BD322 , bdr:TTF2BAAE6D2D27E9AE ;
+        :hasTitle           bdr:TT41D81F12FF4E90E5 , bdr:TT946C995C766F9F36 , bdr:TTDFF80A34B47BD322 , bdr:TTF2BAAE6D2D27E9AE ;
         :instanceHasReproduction  bdr:W1FEMC020459 ;
+        :instanceOf         bdr:WA1FEMC010064 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD4BC9FAFD48BFD60 ;
-        :note               bdr:NT240904D56A126FDD ;
+        :microfilmItem      bdr:MF240904D56A126FDD ;
+        :note               bdr:NT67A093BB67712E32 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT240904D56A126FDD
+    bdr:NT67A093BB67712E32
         a                   :Note ;
         :contentLocationStatement  "pg. 89" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT67A093BB67712E32
+    bdr:TT41D81F12FF4E90E5
+        a                   :Title ;
+        rdfs:label          "sodattaki"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF2BAAE6D2D27E9AE .
+    
+    bdr:TT946C995C766F9F36
+        a                   :Title ;
+        rdfs:label          "សោទត្តកិ"@km ;
+        :femcConversionOf   bdr:TTDFF80A34B47BD322 .
+    
+    bdr:TTDFF80A34B47BD322
         a                   :CoverTitle ;
         rdfs:label          "សោទត្តិកិ"@km .
     
-    bdr:TTBC90F62F78572DA2
+    bdr:TTF2BAAE6D2D27E9AE
         a                   :CoverTitle ;
         rdfs:label          "sodattiki"@km-x-twktt .
-    
-    bdr:TTDFF80A34B47BD322
-        a                   :Title ;
-        rdfs:label          "សោទត្តកិ"@km ;
-        :femcConversionOf   bdr:TT67A093BB67712E32 .
-    
-    bdr:TTF2BAAE6D2D27E9AE
-        a                   :Title ;
-        rdfs:label          "sodattaki"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBC90F62F78572DA2 .
 }

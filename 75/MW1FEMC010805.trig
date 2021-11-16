@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010805 {
-    bda:LGEB0E7699AED257D2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010805"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010805"@en , "imported pubinfo for W1FEMC010805"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010805"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010805 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010805 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "75/MW1FEMC010805.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010805 ;
-        adm:logEntry        bda:LGEB0E7699AED257D2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA70EDB85346B4C81
+    bdr:IDBAB369AEB70F59ED
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003-A.03.09.01.II.1" .
     
-    bdr:MF170E1A8D665A5939
+    bdr:MFB7402412E5033658
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "47" ;
         :microfilmStrip     "116" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC010805 {
         a                   :Instance ;
         skos:prefLabel      "លក្សណវង្ស"@km , "laksaṇavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA70EDB85346B4C81 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0A26C50227FAD00B , bdr:TTAEF0421F18063E57 , bdr:TTBAB369AEB70F59ED , bdr:TTF8701C7FAF9F7692 ;
+            bdr:IDBAB369AEB70F59ED ;
+        :hasTitle           bdr:TT0A26C50227FAD00B , bdr:TT51B533784870B561 , bdr:TTEB0E7699AED257D2 , bdr:TTF8701C7FAF9F7692 ;
         :instanceHasReproduction  bdr:W1FEMC010805 ;
+        :instanceOf         bdr:WA1FEMC120022 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF170E1A8D665A5939 ;
-        :note               bdr:NTB7402412E5033658 ;
+        :microfilmItem      bdr:MFB7402412E5033658 ;
+        :note               bdr:NTAEF0421F18063E57 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB7402412E5033658
+    bdr:NTAEF0421F18063E57
         a                   :Note ;
         :contentLocationStatement  "pg. 212" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0A26C50227FAD00B
-        a                   :Title ;
-        rdfs:label          "laksaṇavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBAB369AEB70F59ED .
-    
-    bdr:TTAEF0421F18063E57
-        a                   :CoverTitle ;
-        rdfs:label          "លក្ខ្សីនវុង"@km .
-    
-    bdr:TTBAB369AEB70F59ED
         a                   :CoverTitle ;
         rdfs:label          "lakkhsinavuṅ"@km-x-twktt .
     
-    bdr:TTF8701C7FAF9F7692
+    bdr:TT51B533784870B561
+        a                   :Title ;
+        rdfs:label          "laksaṇavaṅs"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0A26C50227FAD00B .
+    
+    bdr:TTEB0E7699AED257D2
         a                   :Title ;
         rdfs:label          "លក្សណវង្ស"@km ;
-        :femcConversionOf   bdr:TTAEF0421F18063E57 .
+        :femcConversionOf   bdr:TTF8701C7FAF9F7692 .
+    
+    bdr:TTF8701C7FAF9F7692
+        a                   :CoverTitle ;
+        rdfs:label          "លក្ខ្សីនវុង"@km .
 }

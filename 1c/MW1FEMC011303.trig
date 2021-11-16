@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011303 {
-    bda:LGE928513CF6E8FAC8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011303"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011303"@en , "imported pubinfo for W1FEMC011303"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011303"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011303 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011303 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1c/MW1FEMC011303.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011303 ;
-        adm:logEntry        bda:LGE928513CF6E8FAC8 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE5F68BD3CEB0D7D1
+    bdr:ID898D593DF92F9AFC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.07.04.01.III.3" .
     
-    bdr:MF8861E750B525D31B
+    bdr:MF1E7D139DB9BE58A9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "44" ;
         :microfilmStrip     "104" .
@@ -55,42 +49,41 @@ bdg:MW1FEMC011303 {
         a                   :Instance ;
         skos:prefLabel      "ក្បួនធុតង្គទាំង១៣"@km , "kpuon dhutaṅg dāṃṅ 13"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE5F68BD3CEB0D7D1 ;
+            bdr:ID898D593DF92F9AFC ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT49ABAC602ADBDC53 , bdr:TT813E41209CE707C6 , bdr:TT82A0DBB1B5F7A697 , bdr:TT898D593DF92F9AFC ;
+        :hasTitle           bdr:TT05B47CBD750BB69D , bdr:TT813E41209CE707C6 , bdr:TT82A0DBB1B5F7A697 , bdr:TTE928513CF6E8FAC8 ;
         :instanceHasReproduction  bdr:W1FEMC011303 ;
+        :instanceOf         bdr:WA1FEMC030012 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8861E750B525D31B ;
-        :note               bdr:NT1E7D139DB9BE58A9 ;
+        :microfilmItem      bdr:MF1E7D139DB9BE58A9 ;
+        :note               bdr:NT49ABAC602ADBDC53 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "a 2622" .
     
-    bdr:NT1E7D139DB9BE58A9
+    bdr:NT49ABAC602ADBDC53
         a                   :Note ;
         :contentLocationStatement  "pg. 306" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT49ABAC602ADBDC53
+    bdr:TT05B47CBD750BB69D
+        a                   :Title ;
+        rdfs:label          "kpuon dhutaṅg dāṃṅ 13"@km-x-twktt ;
+        :femcConversionOf   bdr:TT813E41209CE707C6 .
+    
+    bdr:TT813E41209CE707C6
+        a                   :CoverTitle ;
+        rdfs:label          "kpuon dhutaṅ 13"@km-x-twktt .
+    
+    bdr:TT82A0DBB1B5F7A697
         a                   :CoverTitle ;
         rdfs:label          "ក្បួនធុតង១៣"@km .
     
-    bdr:TT813E41209CE707C6
-        a                   :Title ;
-        rdfs:label          "kpuon dhutaṅg dāṃṅ 13"@km-x-twktt ;
-        :femcConversionOf   bdr:TT898D593DF92F9AFC .
-    
-    bdr:TT82A0DBB1B5F7A697
+    bdr:TTE928513CF6E8FAC8
         a                   :Title ;
         rdfs:label          "ក្បួនធុតង្គទាំង១៣"@km ;
-        :femcConversionOf   bdr:TT49ABAC602ADBDC53 .
-    
-    bdr:TT898D593DF92F9AFC
-        a                   :CoverTitle ;
-        rdfs:label          "kpuon dhutaṅ 13"@km-x-twktt .
+        :femcConversionOf   bdr:TT82A0DBB1B5F7A697 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011074 {
-    bda:LG1AE6642024B86886
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011074"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011074"@en , "imported pubinfo for W1FEMC011074"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011074"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011074 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011074 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "23/MW1FEMC011074.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011074 ;
-        adm:logEntry        bda:LG1AE6642024B86886 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFCF3A64B1DF7D416
+    bdr:ID94186EB26ED76CBD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "007'-A.04.07.01.III.3" .
     
-    bdr:MF19340353166C75C5
+    bdr:MFF3F6EFE26A835200
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "83" .
@@ -55,45 +49,44 @@ bdg:MW1FEMC011074 {
         a                   :Instance ;
         skos:prefLabel      "បរិវាសកម្ម"@km , "parivāsakamm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFCF3A64B1DF7D416 ;
+            bdr:ID94186EB26ED76CBD ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT37B4B5A236BBF82C , bdr:TT3FE586865F3E6C19 , bdr:TT8527E5E5685F56C5 , bdr:TT94186EB26ED76CBD ;
+        :hasTitle           bdr:TT1AE6642024B86886 , bdr:TT37B4B5A236BBF82C , bdr:TT8527E5E5685F56C5 , bdr:TTFF9D0200FF3A69C9 ;
         :instanceHasReproduction  bdr:W1FEMC011074 ;
+        :instanceOf         bdr:WA1FEMC030016 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF19340353166C75C5 ;
-        :note               bdr:NT7AC16F87FCE3AAA7 , bdr:NTF3F6EFE26A835200 ;
+        :microfilmItem      bdr:MFF3F6EFE26A835200 ;
+        :note               bdr:NT3FE586865F3E6C19 , bdr:NT7AC16F87FCE3AAA7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
+    
+    bdr:NT3FE586865F3E6C19
+        a                   :Note ;
+        :contentLocationStatement  "pg. 262" ;
+        :noteSource         bdr:W1FEMC01 .
     
     bdr:NT7AC16F87FCE3AAA7
         a                   :Note ;
         :noteText           "Should we write (វាន) ?"@en .
     
-    bdr:NTF3F6EFE26A835200
-        a                   :Note ;
-        :contentLocationStatement  "pg. 262" ;
-        :noteSource         bdr:W1FEMC01 .
-    
-    bdr:TT37B4B5A236BBF82C
+    bdr:TT1AE6642024B86886
         a                   :Title ;
         rdfs:label          "បរិវាសកម្ម"@km ;
-        :femcConversionOf   bdr:TT3FE586865F3E6C19 .
+        :femcConversionOf   bdr:TT37B4B5A236BBF82C .
     
-    bdr:TT3FE586865F3E6C19
+    bdr:TT37B4B5A236BBF82C
         a                   :CoverTitle ;
         rdfs:label          "បរិវាស្ស (វាន)"@km .
     
     bdr:TT8527E5E5685F56C5
-        a                   :Title ;
-        rdfs:label          "parivāsakamm"@km-x-twktt ;
-        :femcConversionOf   bdr:TT94186EB26ED76CBD .
-    
-    bdr:TT94186EB26ED76CBD
         a                   :CoverTitle ;
         rdfs:label          "parivāss"@km-x-twktt .
+    
+    bdr:TTFF9D0200FF3A69C9
+        a                   :Title ;
+        rdfs:label          "parivāsakamm"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8527E5E5685F56C5 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022152 {
-    bda:LG7B314631E649D17C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022152"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022152"@en , "imported pubinfo for W1FEMC022152"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022152"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022152 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022152 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ce/MW1FEMC022152.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022152 ;
-        adm:logEntry        bda:LG7B314631E649D17C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1721E2C00A6930AB
+    bdr:IDC4B85434EF510008
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.142.V.1" .
     
-    bdr:MF59AF4BA3C0A2620A
+    bdr:MFE3E2E85528556BA4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "138" ;
         :microfilmStrip     "232" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022152 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះកាលត្ថេរ"@km , "braḥ kālatther"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1721E2C00A6930AB ;
+            bdr:IDC4B85434EF510008 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT039B9188D2360BFE , bdr:TT983772D5D5C43329 , bdr:TTC4B85434EF510008 , bdr:TTE2BE9B6424BEED4C ;
+        :hasTitle           bdr:TT039B9188D2360BFE , bdr:TT7B314631E649D17C , bdr:TT983772D5D5C43329 , bdr:TTE59311B7ECCCE61A ;
         :instanceHasReproduction  bdr:W1FEMC022152 ;
+        :instanceOf         bdr:WA1FEMC070024 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF59AF4BA3C0A2620A ;
-        :note               bdr:NTE3E2E85528556BA4 ;
+        :microfilmItem      bdr:MFE3E2E85528556BA4 ;
+        :note               bdr:NTE2BE9B6424BEED4C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1420" .
     
-    bdr:NTE3E2E85528556BA4
+    bdr:NTE2BE9B6424BEED4C
         a                   :Note ;
         :contentLocationStatement  "pg. 382" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT039B9188D2360BFE
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះកាល្លត្ថេរ"@km .
+    
+    bdr:TT7B314631E649D17C
         a                   :Title ;
         rdfs:label          "ព្រះកាលត្ថេរ"@km ;
-        :femcConversionOf   bdr:TTE2BE9B6424BEED4C .
+        :femcConversionOf   bdr:TT039B9188D2360BFE .
     
     bdr:TT983772D5D5C43329
-        a                   :Title ;
-        rdfs:label          "braḥ kālatther"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC4B85434EF510008 .
-    
-    bdr:TTC4B85434EF510008
         a                   :CoverTitle ;
         rdfs:label          "braḥ kāllatther"@km-x-twktt .
     
-    bdr:TTE2BE9B6424BEED4C
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះកាល្លត្ថេរ"@km .
+    bdr:TTE59311B7ECCCE61A
+        a                   :Title ;
+        rdfs:label          "braḥ kālatther"@km-x-twktt ;
+        :femcConversionOf   bdr:TT983772D5D5C43329 .
 }

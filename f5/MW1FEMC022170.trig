@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022170 {
-    bda:LG9747F006979E80E3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022170"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022170"@en , "imported pubinfo for W1FEMC022170"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022170"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022170 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022170 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f5/MW1FEMC022170.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022170 ;
-        adm:logEntry        bda:LG9747F006979E80E3 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4770C3A4A23FA204
+    bdr:IDE28B53CE25D7BFE9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.160.II.1" .
     
-    bdr:MFCC0E7F6CC3193753
+    bdr:MF2BE2FEA8AA0AC7CB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "139" ;
         :microfilmStrip     "233" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022170 {
         a                   :Instance ;
         skos:prefLabel      "យីតោបួយ"@km , "yītopuoy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4770C3A4A23FA204 ;
+            bdr:IDE28B53CE25D7BFE9 ;
         :hasFascicles       "1-6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4451CA2A6ED53A3C , bdr:TT5D106D2A676842DB , bdr:TT695939039A6BDF24 , bdr:TTE28B53CE25D7BFE9 ;
+        :hasTitle           bdr:TT4451CA2A6ED53A3C , bdr:TT4B02E29C2C44525B , bdr:TT695939039A6BDF24 , bdr:TT9747F006979E80E3 ;
         :instanceHasReproduction  bdr:W1FEMC022170 ;
+        :instanceOf         bdr:WA1FEMC120096 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCC0E7F6CC3193753 ;
-        :note               bdr:NT2BE2FEA8AA0AC7CB ;
+        :microfilmItem      bdr:MF2BE2FEA8AA0AC7CB ;
+        :note               bdr:NT5D106D2A676842DB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1490" .
     
-    bdr:NT2BE2FEA8AA0AC7CB
+    bdr:NT5D106D2A676842DB
         a                   :Note ;
         :contentLocationStatement  "pg. 386" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT4451CA2A6ED53A3C
+        a                   :CoverTitle ;
+        rdfs:label          "rīöṅ yītopūy"@km-x-twktt .
+    
+    bdr:TT4B02E29C2C44525B
         a                   :Title ;
         rdfs:label          "yītopuoy"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE28B53CE25D7BFE9 .
+        :femcConversionOf   bdr:TT4451CA2A6ED53A3C .
     
-    bdr:TT5D106D2A676842DB
+    bdr:TT695939039A6BDF24
         a                   :CoverTitle ;
         rdfs:label          "រឿងយីតោបួយ"@km .
     
-    bdr:TT695939039A6BDF24
+    bdr:TT9747F006979E80E3
         a                   :Title ;
         rdfs:label          "យីតោបួយ"@km ;
-        :femcConversionOf   bdr:TT5D106D2A676842DB .
-    
-    bdr:TTE28B53CE25D7BFE9
-        a                   :CoverTitle ;
-        rdfs:label          "rīöṅ yītopūy"@km-x-twktt .
+        :femcConversionOf   bdr:TT695939039A6BDF24 .
 }

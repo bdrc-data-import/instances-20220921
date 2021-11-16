@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022257 {
-    bda:LGD306E4245B8F447A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022257"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022257"@en , "imported pubinfo for W1FEMC022257"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022257"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022257 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022257 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cc/MW1FEMC022257.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022257 ;
-        adm:logEntry        bda:LGD306E4245B8F447A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF08088ECC8219480
+    bdr:IDCF34322FB7F22262
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.335.III.1" .
     
-    bdr:MF6A042C32E539BE88
+    bdr:MF48FFD8671B175A68
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "142" ;
         :microfilmStrip     "236" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022257 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF08088ECC8219480 ;
+            bdr:IDCF34322FB7F22262 ;
         :hasFascicles       "1-7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4883241236A306E7 , bdr:TT670806F5DDFD19CA , bdr:TT887669ECA20274D4 , bdr:TTCF34322FB7F22262 ;
+        :hasTitle           bdr:TT4883241236A306E7 , bdr:TT74ECDFB76D18862D , bdr:TT887669ECA20274D4 , bdr:TTD306E4245B8F447A ;
         :instanceHasReproduction  bdr:W1FEMC022257 ;
+        :instanceOf         bdr:WA1FEMC010059 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF6A042C32E539BE88 ;
-        :note               bdr:NT48FFD8671B175A68 ;
+        :microfilmItem      bdr:MF48FFD8671B175A68 ;
+        :note               bdr:NT670806F5DDFD19CA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "918" .
     
-    bdr:NT48FFD8671B175A68
+    bdr:NT670806F5DDFD19CA
         a                   :Note ;
         :contentLocationStatement  "pg. 403" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT4883241236A306E7
+        a                   :CoverTitle ;
+        rdfs:label          "saghāyanā grè 5"@km-x-twktt .
+    
+    bdr:TT74ECDFB76D18862D
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 5"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCF34322FB7F22262 .
+        :femcConversionOf   bdr:TT4883241236A306E7 .
     
-    bdr:TT670806F5DDFD19CA
+    bdr:TT887669ECA20274D4
         a                   :CoverTitle ;
         rdfs:label          "សឃាយនាគ្រែ៥"@km .
     
-    bdr:TT887669ECA20274D4
+    bdr:TTD306E4245B8F447A
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៥"@km ;
-        :femcConversionOf   bdr:TT670806F5DDFD19CA .
-    
-    bdr:TTCF34322FB7F22262
-        a                   :CoverTitle ;
-        rdfs:label          "saghāyanā grè 5"@km-x-twktt .
+        :femcConversionOf   bdr:TT887669ECA20274D4 .
 }

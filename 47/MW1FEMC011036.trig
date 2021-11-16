@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011036 {
-    bda:LG59E83F45B9B58A77
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011036"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011036"@en , "imported pubinfo for W1FEMC011036"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011036"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011036 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011036 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "47/MW1FEMC011036.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011036 ;
-        adm:logEntry        bda:LG59E83F45B9B58A77 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID435579275691F44D
+    bdr:ID3A6B7872168D7D47
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "046-A.04.07.01.III.1" .
     
-    bdr:MF9370F081AB125236
+    bdr:MFDFE8144E73AEE673
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "81" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011036 {
         a                   :Instance ;
         skos:prefLabel      "នវហារាទិគុណ"@km , "navahārādiguṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID435579275691F44D ;
+            bdr:ID3A6B7872168D7D47 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3A6B7872168D7D47 , bdr:TT7F74E900369EC7FE , bdr:TTD0AAE0F0C594B611 , bdr:TTD15C1B978B1117B9 ;
+        :hasTitle           bdr:TT59E83F45B9B58A77 , bdr:TTCA4B0AE2F20E1A4B , bdr:TTD0AAE0F0C594B611 , bdr:TTD15C1B978B1117B9 ;
         :instanceHasReproduction  bdr:W1FEMC011036 ;
+        :instanceOf         bdr:WA1FEMC010045 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9370F081AB125236 ;
-        :note               bdr:NTDFE8144E73AEE673 ;
+        :microfilmItem      bdr:MFDFE8144E73AEE673 ;
+        :note               bdr:NT7F74E900369EC7FE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDFE8144E73AEE673
+    bdr:NT7F74E900369EC7FE
         a                   :Note ;
         :contentLocationStatement  "pg. 255" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3A6B7872168D7D47
-        a                   :CoverTitle ;
-        rdfs:label          "vahārā''dīgun"@km-x-twktt .
+    bdr:TT59E83F45B9B58A77
+        a                   :Title ;
+        rdfs:label          "នវហារាទិគុណ"@km ;
+        :femcConversionOf   bdr:TTD0AAE0F0C594B611 .
     
-    bdr:TT7F74E900369EC7FE
+    bdr:TTCA4B0AE2F20E1A4B
+        a                   :Title ;
+        rdfs:label          "navahārādiguṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD15C1B978B1117B9 .
+    
+    bdr:TTD0AAE0F0C594B611
         a                   :CoverTitle ;
         rdfs:label          "វហារ៉ាទីគុន"@km .
     
-    bdr:TTD0AAE0F0C594B611
-        a                   :Title ;
-        rdfs:label          "នវហារាទិគុណ"@km ;
-        :femcConversionOf   bdr:TT7F74E900369EC7FE .
-    
     bdr:TTD15C1B978B1117B9
-        a                   :Title ;
-        rdfs:label          "navahārādiguṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3A6B7872168D7D47 .
+        a                   :CoverTitle ;
+        rdfs:label          "vahārā''dīgun"@km-x-twktt .
 }

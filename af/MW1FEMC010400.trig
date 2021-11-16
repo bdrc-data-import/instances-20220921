@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010400 {
-    bda:LG6A081F62FEEF05B6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010400"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010400"@en , "imported pubinfo for W1FEMC010400"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010400"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010400 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010400 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "af/MW1FEMC010400.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010400 ;
-        adm:logEntry        bda:LG6A081F62FEEF05B6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD41B6F1FF6E8ACA8
+    bdr:IDD746DE15A53004C7
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "006'-PP.03.03.03.V.1" .
     
-    bdr:MFC4B096D44E46059C
+    bdr:MFD6086FD44652A41B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "2" .
@@ -55,17 +49,16 @@ bdg:MW1FEMC010400 {
         a                   :Instance ;
         skos:prefLabel      "មូលព្រះ​ធម្មត្រៃ"@km , "mūl braḥ dhamm trai (type B)"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD41B6F1FF6E8ACA8 ;
+            bdr:IDD746DE15A53004C7 ;
         :hasFascicles       "1, 3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT218990C90A8E986F , bdr:TTB75646AEFE66FF82 , bdr:TTD746DE15A53004C7 , bdr:TTDC5AD81BCF811E24 ;
+        :hasTitle           bdr:TT218990C90A8E986F , bdr:TT4C760DCC63503CC8 , bdr:TT6A081F62FEEF05B6 , bdr:TTDC5AD81BCF811E24 ;
         :instanceHasReproduction  bdr:W1FEMC010400 ;
+        :instanceOf         bdr:WA1FEMC070010 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC4B096D44E46059C ;
-        :note               bdr:NT4D1DB8FF5E60AB55 , bdr:NTD6086FD44652A41B ;
+        :microfilmItem      bdr:MFD6086FD44652A41B ;
+        :note               bdr:NT4D1DB8FF5E60AB55 , bdr:NTB75646AEFE66FF82 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -74,26 +67,26 @@ bdg:MW1FEMC010400 {
         a                   :Note ;
         :noteText           "Should we write (Type B) ?"@en .
     
-    bdr:NTD6086FD44652A41B
+    bdr:NTB75646AEFE66FF82
         a                   :Note ;
         :contentLocationStatement  "pg. 130" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT218990C90A8E986F
-        a                   :Title ;
-        rdfs:label          "mūl braḥ dhamm trai (type B)"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD746DE15A53004C7 .
-    
-    bdr:TTB75646AEFE66FF82
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មត្រៃ"@km .
-    
-    bdr:TTD746DE15A53004C7
         a                   :CoverTitle ;
         rdfs:label          "dhamm trai"@km-x-twktt .
     
-    bdr:TTDC5AD81BCF811E24
+    bdr:TT4C760DCC63503CC8
+        a                   :Title ;
+        rdfs:label          "mūl braḥ dhamm trai (type B)"@km-x-twktt ;
+        :femcConversionOf   bdr:TT218990C90A8E986F .
+    
+    bdr:TT6A081F62FEEF05B6
         a                   :Title ;
         rdfs:label          "មូលព្រះ​ធម្មត្រៃ"@km ;
-        :femcConversionOf   bdr:TTB75646AEFE66FF82 .
+        :femcConversionOf   bdr:TTDC5AD81BCF811E24 .
+    
+    bdr:TTDC5AD81BCF811E24
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មត្រៃ"@km .
 }

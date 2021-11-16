@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011452 {
-    bda:LGA6B33C511CD1560F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011452"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011452"@en , "imported pubinfo for W1FEMC011452"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011452"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011452 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011452 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2c/MW1FEMC011452.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011452 ;
-        adm:logEntry        bda:LGA6B33C511CD1560F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID718E97CAF38D4A74
+    bdr:ID463137309E5793E2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "024-A.10.07.03.III.1" .
     
-    bdr:MFABE6E68963BE915A
+    bdr:MF0AB2C4CADB59A15F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "73" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011452 {
         a                   :Instance ;
         skos:prefLabel      "ប្រែនមោ"@km , "prè namo"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID718E97CAF38D4A74 ;
+            bdr:ID463137309E5793E2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT463137309E5793E2 , bdr:TT5F290D84DB5A02FB , bdr:TTD7FBF58D7E327645 , bdr:TTF04354EADA34AA47 ;
+        :hasTitle           bdr:TT5F290D84DB5A02FB , bdr:TT9AB8F962D2D015B7 , bdr:TTA6B33C511CD1560F , bdr:TTD7FBF58D7E327645 ;
         :instanceHasReproduction  bdr:W1FEMC011452 ;
+        :instanceOf         bdr:WA1FEMC010054 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFABE6E68963BE915A ;
-        :note               bdr:NT0AB2C4CADB59A15F ;
+        :microfilmItem      bdr:MF0AB2C4CADB59A15F ;
+        :note               bdr:NTF04354EADA34AA47 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0AB2C4CADB59A15F
+    bdr:NTF04354EADA34AA47
         a                   :Note ;
         :contentLocationStatement  "pg. 336" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT463137309E5793E2
-        a                   :CoverTitle ;
-        rdfs:label          "prè anak mor"@km-x-twktt .
-    
     bdr:TT5F290D84DB5A02FB
-        a                   :Title ;
-        rdfs:label          "ប្រែនមោ"@km ;
-        :femcConversionOf   bdr:TTF04354EADA34AA47 .
-    
-    bdr:TTD7FBF58D7E327645
-        a                   :Title ;
-        rdfs:label          "prè namo"@km-x-twktt ;
-        :femcConversionOf   bdr:TT463137309E5793E2 .
-    
-    bdr:TTF04354EADA34AA47
         a                   :CoverTitle ;
         rdfs:label          "ប្រែអ្នកមោរ"@km .
+    
+    bdr:TT9AB8F962D2D015B7
+        a                   :Title ;
+        rdfs:label          "prè namo"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD7FBF58D7E327645 .
+    
+    bdr:TTA6B33C511CD1560F
+        a                   :Title ;
+        rdfs:label          "ប្រែនមោ"@km ;
+        :femcConversionOf   bdr:TT5F290D84DB5A02FB .
+    
+    bdr:TTD7FBF58D7E327645
+        a                   :CoverTitle ;
+        rdfs:label          "prè anak mor"@km-x-twktt .
 }

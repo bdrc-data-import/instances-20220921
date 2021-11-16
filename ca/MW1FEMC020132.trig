@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020132 {
-    bda:LG1ABCA813E0B6130A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020132"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020132"@en , "imported pubinfo for W1FEMC020132"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020132"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020132 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020132 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ca/MW1FEMC020132.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020132 ;
-        adm:logEntry        bda:LG1ABCA813E0B6130A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9962AD354DD7F6BA
+    bdr:IDFB8793E57E8169D9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.25.I.3" .
     
-    bdr:MF75D303F435B05FA4
+    bdr:MF30841285E148AB3A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "52" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020132 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកសរសើរគុណមាតា"@km , "lpök sar-sör guṇ mātā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9962AD354DD7F6BA ;
+            bdr:IDFB8793E57E8169D9 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT437F4BC3B7EA05D2 , bdr:TT5DCC42F0D0696D5F , bdr:TTC87179423D5B8C9E , bdr:TTFB8793E57E8169D9 ;
+        :hasTitle           bdr:TT1ABCA813E0B6130A , bdr:TT5DCC42F0D0696D5F , bdr:TTA2C5D79A756751F3 , bdr:TTC87179423D5B8C9E ;
         :instanceHasReproduction  bdr:W1FEMC020132 ;
+        :instanceOf         bdr:WA1FEMC110039 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF75D303F435B05FA4 ;
-        :note               bdr:NT30841285E148AB3A ;
+        :microfilmItem      bdr:MF30841285E148AB3A ;
+        :note               bdr:NT437F4BC3B7EA05D2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "633" .
     
-    bdr:NT30841285E148AB3A
+    bdr:NT437F4BC3B7EA05D2
         a                   :Note ;
         :contentLocationStatement  "pg. 27" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT437F4BC3B7EA05D2
-        a                   :CoverTitle ;
-        rdfs:label          "សរសើរគុណមាតា"@km .
-    
-    bdr:TT5DCC42F0D0696D5F
-        a                   :Title ;
-        rdfs:label          "lpök sar-sör guṇ mātā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFB8793E57E8169D9 .
-    
-    bdr:TTC87179423D5B8C9E
+    bdr:TT1ABCA813E0B6130A
         a                   :Title ;
         rdfs:label          "ល្បើកសរសើរគុណមាតា"@km ;
-        :femcConversionOf   bdr:TT437F4BC3B7EA05D2 .
+        :femcConversionOf   bdr:TTC87179423D5B8C9E .
     
-    bdr:TTFB8793E57E8169D9
+    bdr:TT5DCC42F0D0696D5F
         a                   :CoverTitle ;
         rdfs:label          "sar-sör guṇ mātā"@km-x-twktt .
+    
+    bdr:TTA2C5D79A756751F3
+        a                   :Title ;
+        rdfs:label          "lpök sar-sör guṇ mātā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5DCC42F0D0696D5F .
+    
+    bdr:TTC87179423D5B8C9E
+        a                   :CoverTitle ;
+        rdfs:label          "សរសើរគុណមាតា"@km .
 }

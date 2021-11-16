@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010543 {
-    bda:LG95B99EB27A968E70
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010543"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010543"@en , "imported pubinfo for W1FEMC010543"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010543"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010543 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010543 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "b5/MW1FEMC010543.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010543 ;
-        adm:logEntry        bda:LG95B99EB27A968E70 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC4D59E46683754AE
+    bdr:IDED0A638F5939738E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "038-A.02.10.01.III.5" .
     
-    bdr:MFE25B875F3469131A
+    bdr:MF8C6EFE4E491421A6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "70" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010543 {
         a                   :Instance ;
         skos:prefLabel      "មហាជនក"@km , "mahā janak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC4D59E46683754AE ;
+            bdr:IDED0A638F5939738E ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT29AFEBAA94E0356F , bdr:TT6E30CA19A733661F , bdr:TTA57E8829762A4559 , bdr:TTE80DA4000781F9FB , bdr:TTED0A638F5939738E , bdr:TTFB479CCB331D5D9A ;
+        :hasTitle           bdr:TT29AFEBAA94E0356F , bdr:TT95B99EB27A968E70 , bdr:TTA57E8829762A4559 , bdr:TTB5A7C35FF688980D , bdr:TTE80DA4000781F9FB , bdr:TTFB479CCB331D5D9A ;
         :instanceHasReproduction  bdr:W1FEMC010543 ;
+        :instanceOf         bdr:WA1FEMC050005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE25B875F3469131A ;
-        :note               bdr:NT8C6EFE4E491421A6 ;
+        :microfilmItem      bdr:MF8C6EFE4E491421A6 ;
+        :note               bdr:NT6E30CA19A733661F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8C6EFE4E491421A6
+    bdr:NT6E30CA19A733661F
         a                   :Note ;
         :contentLocationStatement  "pg. 160" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT29AFEBAA94E0356F
+        a                   :Title ;
+        rdfs:label          "មហាជនក"@km ;
+        :femcConversionOf   bdr:TTA57E8829762A4559 .
+    
+    bdr:TT95B99EB27A968E70
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
-    bdr:TT6E30CA19A733661F
+    bdr:TTA57E8829762A4559
         a                   :CoverTitle ;
         rdfs:label          "ជីនុក្ខ"@km .
     
-    bdr:TTA57E8829762A4559
-        a                   :Title ;
-        rdfs:label          "មហាជនក"@km ;
-        :femcConversionOf   bdr:TT6E30CA19A733661F .
-    
-    bdr:TTE80DA4000781F9FB
+    bdr:TTB5A7C35FF688980D
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
-    bdr:TTED0A638F5939738E
-        a                   :CoverTitle ;
-        rdfs:label          "jīnukkh"@km-x-twktt .
-    
-    bdr:TTFB479CCB331D5D9A
+    bdr:TTE80DA4000781F9FB
         a                   :Title ;
         rdfs:label          "mahā janak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTED0A638F5939738E .
+        :femcConversionOf   bdr:TTFB479CCB331D5D9A .
+    
+    bdr:TTFB479CCB331D5D9A
+        a                   :CoverTitle ;
+        rdfs:label          "jīnukkh"@km-x-twktt .
 }

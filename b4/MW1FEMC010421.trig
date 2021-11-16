@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010421 {
-    bda:LGE2ABB373D9CF745F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010421"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010421"@en , "imported pubinfo for W1FEMC010421"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010421"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010421 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010421 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b4/MW1FEMC010421.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010421 ;
-        adm:logEntry        bda:LGE2ABB373D9CF745F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC59B70BFA7404796
+    bdr:IDA60906503A705604
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "014*-PP.03.03.03.III.3" .
     
-    bdr:MF9C4CD0437A0429C2
+    bdr:MFA32DA8237C149267
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "40" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010421 {
         a                   :Instance ;
         skos:prefLabel      "សិក្ខាបទប្រញប្ដិ"@km , "sikkhā pad prañapti"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC59B70BFA7404796 ;
+            bdr:IDA60906503A705604 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6BE6BC321981A163 , bdr:TTA60906503A705604 , bdr:TTBE1682792249DC1F , bdr:TTD8D6DC3BFB57B800 ;
+        :hasTitle           bdr:TT65DE28D4F4368B4E , bdr:TT6BE6BC321981A163 , bdr:TTD8D6DC3BFB57B800 , bdr:TTE2ABB373D9CF745F ;
         :instanceHasReproduction  bdr:W1FEMC010421 ;
+        :instanceOf         bdr:WA1FEMC030023 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9C4CD0437A0429C2 ;
-        :note               bdr:NTA32DA8237C149267 ;
+        :microfilmItem      bdr:MFA32DA8237C149267 ;
+        :note               bdr:NTBE1682792249DC1F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTA32DA8237C149267
+    bdr:NTBE1682792249DC1F
         a                   :Note ;
         :contentLocationStatement  "pg. 134" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT6BE6BC321981A163
+    bdr:TT65DE28D4F4368B4E
         a                   :Title ;
-        rdfs:label          "សិក្ខាបទប្រញប្ដិ"@km ;
-        :femcConversionOf   bdr:TTBE1682792249DC1F .
+        rdfs:label          "sikkhā pad prañapti"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD8D6DC3BFB57B800 .
     
-    bdr:TTA60906503A705604
-        a                   :CoverTitle ;
-        rdfs:label          "sikkhāpth pañāp'"@km-x-twktt .
-    
-    bdr:TTBE1682792249DC1F
+    bdr:TT6BE6BC321981A163
         a                   :CoverTitle ;
         rdfs:label          "សិក្ខាបថបញាប់"@km .
     
     bdr:TTD8D6DC3BFB57B800
+        a                   :CoverTitle ;
+        rdfs:label          "sikkhāpth pañāp'"@km-x-twktt .
+    
+    bdr:TTE2ABB373D9CF745F
         a                   :Title ;
-        rdfs:label          "sikkhā pad prañapti"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA60906503A705604 .
+        rdfs:label          "សិក្ខាបទប្រញប្ដិ"@km ;
+        :femcConversionOf   bdr:TT6BE6BC321981A163 .
 }

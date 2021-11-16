@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010432 {
-    bda:LG84C40EBB6F2100B5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010432"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010432"@en , "imported pubinfo for W1FEMC010432"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010432"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010432 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010432 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a0/MW1FEMC010432.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010432 ;
-        adm:logEntry        bda:LG84C40EBB6F2100B5 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFFAF6C3053C2DB86
+    bdr:ID3F977504168A37F4
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "025*-PP.03.03.03.III.6" .
     
-    bdr:MF627FAB7DA403BCAA
+    bdr:MF413519D313F440A7
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "42" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010432 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសីល៥"@km , "ānisaṅs sīl 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFFAF6C3053C2DB86 ;
+            bdr:ID3F977504168A37F4 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3F977504168A37F4 , bdr:TT548179338564EA52 , bdr:TTE04D7E80E7AF94F2 , bdr:TTFC5C3F381218AA2B ;
+        :hasTitle           bdr:TT548179338564EA52 , bdr:TT84C40EBB6F2100B5 , bdr:TT85FDF8493B4D1779 , bdr:TTFC5C3F381218AA2B ;
         :instanceHasReproduction  bdr:W1FEMC010432 ;
+        :instanceOf         bdr:WA1FEMC060036 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF627FAB7DA403BCAA ;
-        :note               bdr:NT413519D313F440A7 ;
+        :microfilmItem      bdr:MF413519D313F440A7 ;
+        :note               bdr:NTE04D7E80E7AF94F2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT413519D313F440A7
+    bdr:NTE04D7E80E7AF94F2
         a                   :Note ;
         :contentLocationStatement  "pg. 136" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3F977504168A37F4
-        a                   :CoverTitle ;
-        rdfs:label          "anisagh sil 5"@km-x-twktt .
-    
     bdr:TT548179338564EA52
-        a                   :Title ;
-        rdfs:label          "អានិសង្សសីល៥"@km ;
-        :femcConversionOf   bdr:TTE04D7E80E7AF94F2 .
-    
-    bdr:TTE04D7E80E7AF94F2
         a                   :CoverTitle ;
         rdfs:label          "អនិសឃ៊សិល៥"@km .
     
-    bdr:TTFC5C3F381218AA2B
+    bdr:TT84C40EBB6F2100B5
+        a                   :Title ;
+        rdfs:label          "អានិសង្សសីល៥"@km ;
+        :femcConversionOf   bdr:TT548179338564EA52 .
+    
+    bdr:TT85FDF8493B4D1779
         a                   :Title ;
         rdfs:label          "ānisaṅs sīl 5"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3F977504168A37F4 .
+        :femcConversionOf   bdr:TTFC5C3F381218AA2B .
+    
+    bdr:TTFC5C3F381218AA2B
+        a                   :CoverTitle ;
+        rdfs:label          "anisagh sil 5"@km-x-twktt .
 }

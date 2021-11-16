@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020025 {
-    bda:LGD2249E741A76145C
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020025"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020025"@en , "imported pubinfo for W1FEMC020025"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020025"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020025 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020025 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "db/MW1FEMC020025.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020025 ;
-        adm:logEntry        bda:LGD2249E741A76145C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF9C9634BE7EA324F
+    bdr:IDF9E147881EB9FF27
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.25.II.1" .
     
-    bdr:MFCBDB0820E1D79064
+    bdr:MF32A2AFEABE7F786A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "19" ;
         :microfilmStrip     "8" .
@@ -54,50 +50,49 @@ bdg:MW1FEMC020025 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទស៊ីសមុទ្រ"@km , "cand sīsamudr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF9C9634BE7EA324F ;
+            bdr:IDF9E147881EB9FF27 ;
         :hasFascicles       "1, 2, 3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0AAA093BB200C1C7 , bdr:TT4B43231B0F8C1078 , bdr:TT5163BD5B0D613FFB , bdr:TTAAA706CE157EDB03 , bdr:TTE8BC321ED45B894F , bdr:TTF9E147881EB9FF27 ;
+        :hasTitle           bdr:TT0AAA093BB200C1C7 , bdr:TT4B43231B0F8C1078 , bdr:TT98AF7E4FC788D677 , bdr:TTAAA706CE157EDB03 , bdr:TTD2249E741A76145C , bdr:TTE8BC321ED45B894F ;
         :instanceHasReproduction  bdr:W1FEMC020025 ;
+        :instanceOf         bdr:WA1FEMC120009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCBDB0820E1D79064 ;
-        :note               bdr:NT32A2AFEABE7F786A ;
+        :microfilmItem      bdr:MF32A2AFEABE7F786A ;
+        :note               bdr:NT5163BD5B0D613FFB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1437" .
     
-    bdr:NT32A2AFEABE7F786A
+    bdr:NT5163BD5B0D613FFB
         a                   :Note ;
         :contentLocationStatement  "pg. 6" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT0AAA093BB200C1C7
-        a                   :Title ;
-        rdfs:label          "ចន្ទស៊ីសមុទ្រ"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "ស៊ីសុវណ្ណព្រះចន្ទស៊ីសមុទ្រ"@km ;
+        :femcConversionOf   bdr:TTE8BC321ED45B894F .
     
     bdr:TT4B43231B0F8C1078
+        a                   :CoverTitle ;
+        rdfs:label          "sīsuvaṇṇ braḥ cand sīsamudr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAAA706CE157EDB03 .
+    
+    bdr:TT98AF7E4FC788D677
         a                   :Title ;
         rdfs:label          "cand sīsamudr"@km-x-twktt .
     
-    bdr:TT5163BD5B0D613FFB
-        a                   :CoverTitle ;
-        rdfs:label          "ស៊ីសូវណ្ណព្រះចន្ទស៊ីសមុត"@km .
-    
     bdr:TTAAA706CE157EDB03
         a                   :CoverTitle ;
-        rdfs:label          "sīsuvaṇṇ braḥ cand sīsamudr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF9E147881EB9FF27 .
+        rdfs:label          "sīsūvaṇṇ barḥ cand sīsamut"@km-x-twktt .
+    
+    bdr:TTD2249E741A76145C
+        a                   :Title ;
+        rdfs:label          "ចន្ទស៊ីសមុទ្រ"@km .
     
     bdr:TTE8BC321ED45B894F
         a                   :CoverTitle ;
-        rdfs:label          "ស៊ីសុវណ្ណព្រះចន្ទស៊ីសមុទ្រ"@km ;
-        :femcConversionOf   bdr:TT5163BD5B0D613FFB .
-    
-    bdr:TTF9E147881EB9FF27
-        a                   :CoverTitle ;
-        rdfs:label          "sīsūvaṇṇ barḥ cand sīsamut"@km-x-twktt .
+        rdfs:label          "ស៊ីសូវណ្ណព្រះចន្ទស៊ីសមុត"@km .
 }

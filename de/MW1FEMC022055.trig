@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022055 {
-    bda:LG7742A6BD014C9A09
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022055"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022055"@en , "imported pubinfo for W1FEMC022055"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022055"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022055 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022055 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "de/MW1FEMC022055.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022055 ;
-        adm:logEntry        bda:LG7742A6BD014C9A09 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6DBB12FCA8AF9020
+    bdr:IDFA8440DB9EFE5E73
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "004.III.1" .
     
-    bdr:MF0B4DFC6E2CDE0F9A
+    bdr:MF2CC23B895F79B8A9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "7" ;
         :microfilmStrip     "26" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022055 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6DBB12FCA8AF9020 ;
+            bdr:IDFA8440DB9EFE5E73 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT67BE045BAFA6EC6A , bdr:TTD76D8401106C0EA2 , bdr:TTE9B0093BC1FE34D6 , bdr:TTFA8440DB9EFE5E73 ;
+        :hasTitle           bdr:TT0625D507EBCF179F , bdr:TT67BE045BAFA6EC6A , bdr:TT7742A6BD014C9A09 , bdr:TTD76D8401106C0EA2 ;
         :instanceHasReproduction  bdr:W1FEMC022055 ;
+        :instanceOf         bdr:WA1FEMC010048 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0B4DFC6E2CDE0F9A ;
-        :note               bdr:NT2CC23B895F79B8A9 ;
+        :microfilmItem      bdr:MF2CC23B895F79B8A9 ;
+        :note               bdr:NTE9B0093BC1FE34D6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2CC23B895F79B8A9
+    bdr:NTE9B0093BC1FE34D6
         a                   :Note ;
         :contentLocationStatement  "pg. 363" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT67BE045BAFA6EC6A
+    bdr:TT0625D507EBCF179F
         a                   :Title ;
         rdfs:label          "paṭham trās'"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFA8440DB9EFE5E73 .
+        :femcConversionOf   bdr:TT67BE045BAFA6EC6A .
     
-    bdr:TTD76D8401106C0EA2
-        a                   :Title ;
-        rdfs:label          "បឋមត្រាស់"@km ;
-        :femcConversionOf   bdr:TTE9B0093BC1FE34D6 .
-    
-    bdr:TTE9B0093BC1FE34D6
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះធម្មបានត្រាស្ស"@km .
-    
-    bdr:TTFA8440DB9EFE5E73
+    bdr:TT67BE045BAFA6EC6A
         a                   :CoverTitle ;
         rdfs:label          "braḥ dhamm pān trāss"@km-x-twktt .
+    
+    bdr:TT7742A6BD014C9A09
+        a                   :Title ;
+        rdfs:label          "បឋមត្រាស់"@km ;
+        :femcConversionOf   bdr:TTD76D8401106C0EA2 .
+    
+    bdr:TTD76D8401106C0EA2
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះធម្មបានត្រាស្ស"@km .
 }

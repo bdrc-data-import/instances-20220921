@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022111 {
-    bda:LG2ED25AB9A42B1BF4
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022111"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022111"@en , "imported pubinfo for W1FEMC022111"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022111"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022111 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022111 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "57/MW1FEMC022111.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022111 ;
-        adm:logEntry        bda:LG2ED25AB9A42B1BF4 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4577C45339FDA88A
+    bdr:IDA115249554FDE92B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "060.II.1" .
     
-    bdr:MF3DDD206BAC208D6C
+    bdr:MF7A3926213F716B34
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "8" ;
         :microfilmStrip     "29" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC022111 {
         a                   :Instance ;
         skos:prefLabel      "តេជោដាំឌិន"@km , "tejo ṭāṃḍin"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4577C45339FDA88A ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT073991E5A40F13DE , bdr:TT0BB47F0A77954D66 , bdr:TT4576100B1319F24E , bdr:TTA115249554FDE92B ;
+            bdr:IDA115249554FDE92B ;
+        :hasTitle           bdr:TT073991E5A40F13DE , bdr:TT0BB47F0A77954D66 , bdr:TT2ED25AB9A42B1BF4 , bdr:TT710CA993257B386A ;
         :instanceHasReproduction  bdr:W1FEMC022111 ;
+        :instanceOf         bdr:WA1FEMC120095 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3DDD206BAC208D6C ;
-        :note               bdr:NT7A3926213F716B34 ;
+        :microfilmItem      bdr:MF7A3926213F716B34 ;
+        :note               bdr:NT4576100B1319F24E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7A3926213F716B34
+    bdr:NT4576100B1319F24E
         a                   :Note ;
         :contentLocationStatement  "pg. 374" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT073991E5A40F13DE
-        a                   :Title ;
-        rdfs:label          "តេជោដាំឌិន"@km ;
-        :femcConversionOf   bdr:TT4576100B1319F24E .
-    
-    bdr:TT0BB47F0A77954D66
-        a                   :Title ;
-        rdfs:label          "tejo ṭāṃḍin"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA115249554FDE92B .
-    
-    bdr:TT4576100B1319F24E
         a                   :CoverTitle ;
         rdfs:label          "តេជោដំឌឹន"@km .
     
-    bdr:TTA115249554FDE92B
+    bdr:TT0BB47F0A77954D66
         a                   :CoverTitle ;
         rdfs:label          "tejo ṭaṃḍịn"@km-x-twktt .
+    
+    bdr:TT2ED25AB9A42B1BF4
+        a                   :Title ;
+        rdfs:label          "តេជោដាំឌិន"@km ;
+        :femcConversionOf   bdr:TT073991E5A40F13DE .
+    
+    bdr:TT710CA993257B386A
+        a                   :Title ;
+        rdfs:label          "tejo ṭāṃḍin"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0BB47F0A77954D66 .
 }

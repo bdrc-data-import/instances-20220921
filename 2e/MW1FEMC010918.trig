@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010918 {
-    bda:LGB7BE65BF6613BB23
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010918"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010918"@en , "imported pubinfo for W1FEMC010918"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010918"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010918 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010918 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "2e/MW1FEMC010918.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010918 ;
-        adm:logEntry        bda:LGB7BE65BF6613BB23 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF451E80228A997B6
+    bdr:ID76BAF9A081A57419
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "067-068-A.04.03.02.III.1" .
     
-    bdr:MF7485FF63AB1BD52A
+    bdr:MFE7BE915895E0A1F3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "21" .
@@ -55,30 +49,29 @@ bdg:MW1FEMC010918 {
         a                   :Instance ;
         skos:prefLabel      "អដ្ឋកថាវិមានវត្ថុ"@km , "aṭṭhakathā vimān vatthu"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF451E80228A997B6 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT66339604166AB077 , bdr:TT76BAF9A081A57419 ;
+            bdr:ID76BAF9A081A57419 ;
+        :hasTitle           bdr:TT3487E8476DB93A33 , bdr:TTB7BE65BF6613BB23 ;
         :instanceHasReproduction  bdr:W1FEMC010918 ;
+        :instanceOf         bdr:WA1FEMC010007 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7485FF63AB1BD52A ;
-        :note               bdr:NTE7BE915895E0A1F3 ;
+        :microfilmItem      bdr:MFE7BE915895E0A1F3 ;
+        :note               bdr:NT66339604166AB077 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE7BE915895E0A1F3
+    bdr:NT66339604166AB077
         a                   :Note ;
         :contentLocationStatement  "pg. 233" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT66339604166AB077
-        a                   :Title ;
-        rdfs:label          "អដ្ឋកថាវិមានវត្ថុ"@km .
-    
-    bdr:TT76BAF9A081A57419
+    bdr:TT3487E8476DB93A33
         a                   :Title ;
         rdfs:label          "aṭṭhakathā vimān vatthu"@km-x-twktt .
+    
+    bdr:TTB7BE65BF6613BB23
+        a                   :Title ;
+        rdfs:label          "អដ្ឋកថាវិមានវត្ថុ"@km .
 }

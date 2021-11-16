@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010942 {
-    bda:LG9A9BB97BACB6121C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010942"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010942"@en , "imported pubinfo for W1FEMC010942"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010942"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010942 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010942 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5a/MW1FEMC010942.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010942 ;
-        adm:logEntry        bda:LG9A9BB97BACB6121C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID429153FDEBE3D333
+    bdr:IDF49B6D7C8A82479F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "107-A.04.03.02.III.6" .
     
-    bdr:MF49C1786034D00134
+    bdr:MF924FF555B9F0E252
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "25" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010942 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សពិតាន"@km , "ānisaṅs bitān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID429153FDEBE3D333 ;
+            bdr:IDF49B6D7C8A82479F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT118E452C14A55776 , bdr:TT2D906724C01EA91B , bdr:TT395FD71E4794C0AC , bdr:TTF49B6D7C8A82479F ;
+        :hasTitle           bdr:TT118E452C14A55776 , bdr:TT2D906724C01EA91B , bdr:TT9A9BB97BACB6121C , bdr:TTB7414412C9D5EAF0 ;
         :instanceHasReproduction  bdr:W1FEMC010942 ;
+        :instanceOf         bdr:WA1FEMC060003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF49C1786034D00134 ;
-        :note               bdr:NT924FF555B9F0E252 ;
+        :microfilmItem      bdr:MF924FF555B9F0E252 ;
+        :note               bdr:NT395FD71E4794C0AC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT924FF555B9F0E252
+    bdr:NT395FD71E4794C0AC
         a                   :Note ;
         :contentLocationStatement  "pg. 237" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT118E452C14A55776
-        a                   :Title ;
-        rdfs:label          "អានិសង្សពិតាន"@km ;
-        :femcConversionOf   bdr:TT395FD71E4794C0AC .
-    
-    bdr:TT2D906724C01EA91B
-        a                   :Title ;
-        rdfs:label          "ānisaṅs bitān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF49B6D7C8A82479F .
-    
-    bdr:TT395FD71E4794C0AC
         a                   :CoverTitle ;
         rdfs:label          "អន្នីសង្ឃភីដាន"@km .
     
-    bdr:TTF49B6D7C8A82479F
+    bdr:TT2D906724C01EA91B
         a                   :CoverTitle ;
         rdfs:label          "annisaṅgh bhīṭān"@km-x-twktt .
+    
+    bdr:TT9A9BB97BACB6121C
+        a                   :Title ;
+        rdfs:label          "អានិសង្សពិតាន"@km ;
+        :femcConversionOf   bdr:TT118E452C14A55776 .
+    
+    bdr:TTB7414412C9D5EAF0
+        a                   :Title ;
+        rdfs:label          "ānisaṅs bitān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT2D906724C01EA91B .
 }

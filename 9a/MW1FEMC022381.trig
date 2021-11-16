@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022381 {
-    bda:LG111A460C1E699362
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022381"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022381"@en , "imported pubinfo for W1FEMC022381"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022381"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022381 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022381 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9a/MW1FEMC022381.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022381 ;
-        adm:logEntry        bda:LG111A460C1E699362 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4D9E0F838E2004B0
+    bdr:ID975C7ED16AB1D68D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.868.II.1" .
     
-    bdr:MFCBA819B02EE8B15C
+    bdr:MFB7F33D5B1F14F8EA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022381 {
         a                   :Instance ;
         skos:prefLabel      "បុណ្ណា"@km , "puṇṇā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4D9E0F838E2004B0 ;
+            bdr:ID975C7ED16AB1D68D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT03E9269E0E6DF80B , bdr:TT975C7ED16AB1D68D , bdr:TTD363084122FC0699 , bdr:TTD38758A21BCCA76F ;
+        :hasTitle           bdr:TT111A460C1E699362 , bdr:TTD363084122FC0699 , bdr:TTD38758A21BCCA76F , bdr:TTF88E443C1E0C1144 ;
         :instanceHasReproduction  bdr:W1FEMC022381 ;
+        :instanceOf         bdr:WA1FEMC120083 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCBA819B02EE8B15C ;
-        :note               bdr:NTB7F33D5B1F14F8EA ;
+        :microfilmItem      bdr:MFB7F33D5B1F14F8EA ;
+        :note               bdr:NT03E9269E0E6DF80B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB7F33D5B1F14F8EA
+    bdr:NT03E9269E0E6DF80B
         a                   :Note ;
         :contentLocationStatement  "pg. 426" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT03E9269E0E6DF80B
-        a                   :CoverTitle ;
-        rdfs:label          "ប៊ុណ្ណារ"@km .
+    bdr:TT111A460C1E699362
+        a                   :Title ;
+        rdfs:label          "បុណ្ណា"@km ;
+        :femcConversionOf   bdr:TTD38758A21BCCA76F .
     
-    bdr:TT975C7ED16AB1D68D
+    bdr:TTD363084122FC0699
         a                   :CoverTitle ;
         rdfs:label          "puṇṇār"@km-x-twktt .
     
-    bdr:TTD363084122FC0699
+    bdr:TTD38758A21BCCA76F
+        a                   :CoverTitle ;
+        rdfs:label          "ប៊ុណ្ណារ"@km .
+    
+    bdr:TTF88E443C1E0C1144
         a                   :Title ;
         rdfs:label          "puṇṇā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT975C7ED16AB1D68D .
-    
-    bdr:TTD38758A21BCCA76F
-        a                   :Title ;
-        rdfs:label          "បុណ្ណា"@km ;
-        :femcConversionOf   bdr:TT03E9269E0E6DF80B .
+        :femcConversionOf   bdr:TTD363084122FC0699 .
 }

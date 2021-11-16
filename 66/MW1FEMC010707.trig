@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010707 {
-    bda:LGF52B8C4A59F73548
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010707"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010707"@en , "imported pubinfo for W1FEMC010707"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010707"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010707 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010707 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "66/MW1FEMC010707.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010707 ;
-        adm:logEntry        bda:LGF52B8C4A59F73548 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID503DF597CA7E97FA
+    bdr:IDE234EC9C57D512F2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "017-A.03.07.01.III.2" .
     
-    bdr:MF128453E7D84C6BEE
+    bdr:MF12155E22B9AACDD3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "113" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010707 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទសុកគិរីសូត្រ"@km , "cand suk girī sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID503DF597CA7E97FA ;
+            bdr:IDE234EC9C57D512F2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT85516605FB15C721 , bdr:TTB484E5885DDF5B8E , bdr:TTDBBA9984AC1B1F41 , bdr:TTE234EC9C57D512F2 ;
+        :hasTitle           bdr:TTB484E5885DDF5B8E , bdr:TTDBBA9984AC1B1F41 , bdr:TTF236633FA01F96DC , bdr:TTF52B8C4A59F73548 ;
         :instanceHasReproduction  bdr:W1FEMC010707 ;
+        :instanceOf         bdr:WA1FEMC020018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF128453E7D84C6BEE ;
-        :note               bdr:NT12155E22B9AACDD3 ;
+        :microfilmItem      bdr:MF12155E22B9AACDD3 ;
+        :note               bdr:NT85516605FB15C721 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT12155E22B9AACDD3
+    bdr:NT85516605FB15C721
         a                   :Note ;
         :contentLocationStatement  "pg. 193" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT85516605FB15C721
+    bdr:TTB484E5885DDF5B8E
+        a                   :CoverTitle ;
+        rdfs:label          "cānd suk gīri sūtr"@km-x-twktt .
+    
+    bdr:TTDBBA9984AC1B1F41
         a                   :CoverTitle ;
         rdfs:label          "ចាន្ទសុកគីរិសូត"@km .
     
-    bdr:TTB484E5885DDF5B8E
+    bdr:TTF236633FA01F96DC
         a                   :Title ;
         rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE234EC9C57D512F2 .
+        :femcConversionOf   bdr:TTB484E5885DDF5B8E .
     
-    bdr:TTDBBA9984AC1B1F41
+    bdr:TTF52B8C4A59F73548
         a                   :Title ;
         rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
-        :femcConversionOf   bdr:TT85516605FB15C721 .
-    
-    bdr:TTE234EC9C57D512F2
-        a                   :CoverTitle ;
-        rdfs:label          "cānd suk gīri sūtr"@km-x-twktt .
+        :femcConversionOf   bdr:TTDBBA9984AC1B1F41 .
 }

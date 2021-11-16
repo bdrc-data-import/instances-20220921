@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020048 {
-    bda:LGE9748DEB68A3B4FA
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020048"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020048"@en , "imported pubinfo for W1FEMC020048"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020048"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020048 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020048 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "df/MW1FEMC020048.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020048 ;
-        adm:logEntry        bda:LGE9748DEB68A3B4FA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCA0E68687D9E54C8
+    bdr:IDBFF49C913AACAE58
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.44.III.3" .
     
-    bdr:MF43BC0301EE793648
+    bdr:MFBE1A57FCCEF9884D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "20" ;
         :microfilmStrip     "9" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020048 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យនេន"@km , "vinăy nen"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCA0E68687D9E54C8 ;
+            bdr:IDBFF49C913AACAE58 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT453C2860E1D43948 , bdr:TTBFF49C913AACAE58 , bdr:TTC7061335657EA74C , bdr:TTFB2FD23B7AFE7635 ;
+        :hasTitle           bdr:TT453C2860E1D43948 , bdr:TT68B42BB23F5F75AF , bdr:TTC7061335657EA74C , bdr:TTE9748DEB68A3B4FA ;
         :instanceHasReproduction  bdr:W1FEMC020048 ;
+        :instanceOf         bdr:WA1FEMC030060 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF43BC0301EE793648 ;
-        :note               bdr:NTBE1A57FCCEF9884D ;
+        :microfilmItem      bdr:MFBE1A57FCCEF9884D ;
+        :note               bdr:NTFB2FD23B7AFE7635 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1558" .
     
-    bdr:NTBE1A57FCCEF9884D
+    bdr:NTFB2FD23B7AFE7635
         a                   :Note ;
         :contentLocationStatement  "pg. 10" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT453C2860E1D43948
-        a                   :Title ;
-        rdfs:label          "vinăy nen"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBFF49C913AACAE58 .
-    
-    bdr:TTBFF49C913AACAE58
         a                   :CoverTitle ;
         rdfs:label          "viney nen"@km-x-twktt .
     
-    bdr:TTC7061335657EA74C
+    bdr:TT68B42BB23F5F75AF
         a                   :Title ;
-        rdfs:label          "វិន័យនេន"@km ;
-        :femcConversionOf   bdr:TTFB2FD23B7AFE7635 .
+        rdfs:label          "vinăy nen"@km-x-twktt ;
+        :femcConversionOf   bdr:TT453C2860E1D43948 .
     
-    bdr:TTFB2FD23B7AFE7635
+    bdr:TTC7061335657EA74C
         a                   :CoverTitle ;
         rdfs:label          "វិនេយនេន"@km .
+    
+    bdr:TTE9748DEB68A3B4FA
+        a                   :Title ;
+        rdfs:label          "វិន័យនេន"@km ;
+        :femcConversionOf   bdr:TTC7061335657EA74C .
 }

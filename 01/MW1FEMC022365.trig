@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022365 {
-    bda:LG50DE498738726154
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022365"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022365"@en , "imported pubinfo for W1FEMC022365"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022365"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022365 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022365 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "01/MW1FEMC022365.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022365 ;
-        adm:logEntry        bda:LG50DE498738726154 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6EB81BD8A900BEB
+    bdr:ID9C25F89844BD3137
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.852.I.3" .
     
-    bdr:MFF83CDF49312D88E3
+    bdr:MF975F1566D7BBEB81
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022365 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើករស្មី"@km , "lpök rasmī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6EB81BD8A900BEB ;
+            bdr:ID9C25F89844BD3137 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3755A6560D66D524 , bdr:TT993BE0DC2B6A5B3D , bdr:TT9C25F89844BD3137 , bdr:TTDC5FBA15EC0B9263 ;
+        :hasTitle           bdr:TT3755A6560D66D524 , bdr:TT50DE498738726154 , bdr:TT993BE0DC2B6A5B3D , bdr:TTFB205AF74AEEFA1F ;
         :instanceHasReproduction  bdr:W1FEMC022365 ;
+        :instanceOf         bdr:WA1FEMC110037 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF83CDF49312D88E3 ;
-        :note               bdr:NT975F1566D7BBEB81 ;
+        :microfilmItem      bdr:MF975F1566D7BBEB81 ;
+        :note               bdr:NTDC5FBA15EC0B9263 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT975F1566D7BBEB81
+    bdr:NTDC5FBA15EC0B9263
         a                   :Note ;
         :contentLocationStatement  "pg. 423" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT3755A6560D66D524
+        a                   :CoverTitle ;
+        rdfs:label          "រស្មី"@km .
+    
+    bdr:TT50DE498738726154
         a                   :Title ;
         rdfs:label          "ល្បើករស្មី"@km ;
-        :femcConversionOf   bdr:TTDC5FBA15EC0B9263 .
+        :femcConversionOf   bdr:TT3755A6560D66D524 .
     
     bdr:TT993BE0DC2B6A5B3D
-        a                   :Title ;
-        rdfs:label          "lpök rasmī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9C25F89844BD3137 .
-    
-    bdr:TT9C25F89844BD3137
         a                   :CoverTitle ;
         rdfs:label          "rasmī"@km-x-twktt .
     
-    bdr:TTDC5FBA15EC0B9263
-        a                   :CoverTitle ;
-        rdfs:label          "រស្មី"@km .
+    bdr:TTFB205AF74AEEFA1F
+        a                   :Title ;
+        rdfs:label          "lpök rasmī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT993BE0DC2B6A5B3D .
 }

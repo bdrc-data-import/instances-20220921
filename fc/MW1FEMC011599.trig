@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011599 {
-    bda:LGB3C93953435048E0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011599"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011599"@en , "imported pubinfo for W1FEMC011599"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011599"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011599 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011599 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fc/MW1FEMC011599.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011599 ;
-        adm:logEntry        bda:LGB3C93953435048E0 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE58EB7C57A4DE178
+    bdr:ID030F90D4329C7D18
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "031-A.10.10.01.III.2" .
     
-    bdr:MFD39510AB8F744923
+    bdr:MF78AC0E6A747DD767
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "31" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011599 {
         a                   :Instance ;
         skos:prefLabel      "សង្រួមមង្គលត្ថទីបនី"@km , "saṅruom maṅgalatthadīpanī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE58EB7C57A4DE178 ;
+            bdr:ID030F90D4329C7D18 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT030F90D4329C7D18 , bdr:TT13B028B1FAE18919 , bdr:TTC1CE8EA4C5452B40 , bdr:TTE5114C887FB25B73 ;
+        :hasTitle           bdr:TT13B028B1FAE18919 , bdr:TT747AD55C9CFBCD98 , bdr:TTB3C93953435048E0 , bdr:TTE5114C887FB25B73 ;
         :instanceHasReproduction  bdr:W1FEMC011599 ;
+        :instanceOf         bdr:WA1FEMC020010 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD39510AB8F744923 ;
-        :note               bdr:NT78AC0E6A747DD767 ;
+        :microfilmItem      bdr:MF78AC0E6A747DD767 ;
+        :note               bdr:NTC1CE8EA4C5452B40 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT78AC0E6A747DD767
+    bdr:NTC1CE8EA4C5452B40
         a                   :Note ;
         :contentLocationStatement  "pg. 363" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT030F90D4329C7D18
+    bdr:TT13B028B1FAE18919
         a                   :CoverTitle ;
         rdfs:label          "saṇruom muṅgul muṅgul dibbhanīy°"@km-x-twktt .
     
-    bdr:TT13B028B1FAE18919
+    bdr:TT747AD55C9CFBCD98
         a                   :Title ;
         rdfs:label          "saṅruom maṅgalatthadīpanī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT030F90D4329C7D18 .
+        :femcConversionOf   bdr:TT13B028B1FAE18919 .
     
-    bdr:TTC1CE8EA4C5452B40
-        a                   :CoverTitle ;
-        rdfs:label          "សង្រួមមុង្គុលទិព្ភន្យី"@km .
-    
-    bdr:TTE5114C887FB25B73
+    bdr:TTB3C93953435048E0
         a                   :Title ;
         rdfs:label          "សង្រួមមង្គលត្ថទីបនី"@km ;
-        :femcConversionOf   bdr:TTC1CE8EA4C5452B40 .
+        :femcConversionOf   bdr:TTE5114C887FB25B73 .
+    
+    bdr:TTE5114C887FB25B73
+        a                   :CoverTitle ;
+        rdfs:label          "សង្រួមមុង្គុលទិព្ភន្យី"@km .
 }

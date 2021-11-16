@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010072 {
-    bda:LG42DA3FD4CAF5F1B8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010072"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010072"@en , "imported pubinfo for W1FEMC010072"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010072"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010072 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010072 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ce/MW1FEMC010072.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010072 ;
-        adm:logEntry        bda:LG42DA3FD4CAF5F1B8 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDFBCB8486A1F7327
+    bdr:IDF0619DA95B1C88D2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003'-PP.01.08.01.VI.6" .
     
-    bdr:MF34E69412F97B63A3
+    bdr:MF9A874FB6798D72F8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "21" ;
         :microfilmStrip     "16" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010072 {
         a                   :Instance ;
         skos:prefLabel      "រំឭកគុណ"@km , "raṃḶak guṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDFBCB8486A1F7327 ;
+            bdr:IDF0619DA95B1C88D2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT71228D5389760B69 , bdr:TTCF4D9C65502F340F , bdr:TTE6FF40929C98795D , bdr:TTF0619DA95B1C88D2 ;
+        :hasTitle           bdr:TT082D6C4DC2277E3B , bdr:TT42DA3FD4CAF5F1B8 , bdr:TTCF4D9C65502F340F , bdr:TTE6FF40929C98795D ;
         :instanceHasReproduction  bdr:W1FEMC010072 ;
+        :instanceOf         bdr:WA1FEMC090011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF34E69412F97B63A3 ;
-        :note               bdr:NT9A874FB6798D72F8 ;
+        :microfilmItem      bdr:MF9A874FB6798D72F8 ;
+        :note               bdr:NT71228D5389760B69 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9A874FB6798D72F8
+    bdr:NT71228D5389760B69
         a                   :Note ;
         :contentLocationStatement  "pg. 68" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT71228D5389760B69
-        a                   :CoverTitle ;
-        rdfs:label          "រំឮកគុណ ​(វា​ន)"@km .
-    
-    bdr:TTCF4D9C65502F340F
+    bdr:TT082D6C4DC2277E3B
         a                   :Title ;
         rdfs:label          "raṃḶak guṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF0619DA95B1C88D2 .
+        :femcConversionOf   bdr:TTCF4D9C65502F340F .
     
-    bdr:TTE6FF40929C98795D
+    bdr:TT42DA3FD4CAF5F1B8
         a                   :Title ;
         rdfs:label          "រំឭកគុណ"@km ;
-        :femcConversionOf   bdr:TT71228D5389760B69 .
+        :femcConversionOf   bdr:TTE6FF40929C98795D .
     
-    bdr:TTF0619DA95B1C88D2
+    bdr:TTCF4D9C65502F340F
         a                   :CoverTitle ;
         rdfs:label          "raṃḸak guṇ"@km-x-twktt .
+    
+    bdr:TTE6FF40929C98795D
+        a                   :CoverTitle ;
+        rdfs:label          "រំឮកគុណ ​(វា​ន)"@km .
 }

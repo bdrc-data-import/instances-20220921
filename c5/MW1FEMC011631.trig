@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011631 {
-    bda:LG69B1008D159B3FD7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011631"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011631"@en , "imported pubinfo for W1FEMC011631"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011631"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011631 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011631 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c5/MW1FEMC011631.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011631 ;
-        adm:logEntry        bda:LG69B1008D159B3FD7 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID01752147E9EF879E
+    bdr:ID40B2008E4AAA9026
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "015-A.10.16.02.III.1" .
     
-    bdr:MFB16DA241F5F8DFA3
+    bdr:MF26B401C66E03710C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "143" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011631 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់សង្ខេបសេចក្តី"@km , "paṭham trās' saṅkhep sec-kti"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID01752147E9EF879E ;
+            bdr:ID40B2008E4AAA9026 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT40B2008E4AAA9026 , bdr:TTB978B3D242B633FF , bdr:TTC3016A4235D61ADC , bdr:TTC69B8757DAB6E584 ;
+        :hasTitle           bdr:TT3158E807C8DF8182 , bdr:TT69B1008D159B3FD7 , bdr:TTB978B3D242B633FF , bdr:TTC3016A4235D61ADC ;
         :instanceHasReproduction  bdr:W1FEMC011631 ;
+        :instanceOf         bdr:WA1FEMC010049 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB16DA241F5F8DFA3 ;
-        :note               bdr:NT26B401C66E03710C ;
+        :microfilmItem      bdr:MF26B401C66E03710C ;
+        :note               bdr:NTC69B8757DAB6E584 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT26B401C66E03710C
+    bdr:NTC69B8757DAB6E584
         a                   :Note ;
         :contentLocationStatement  "pg. 369" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT40B2008E4AAA9026
-        a                   :CoverTitle ;
-        rdfs:label          "tham trās'"@km-x-twktt .
-    
-    bdr:TTB978B3D242B633FF
-        a                   :Title ;
-        rdfs:label          "បឋមត្រាស់សង្ខេបសេចក្តី"@km ;
-        :femcConversionOf   bdr:TTC69B8757DAB6E584 .
-    
-    bdr:TTC3016A4235D61ADC
+    bdr:TT3158E807C8DF8182
         a                   :Title ;
         rdfs:label          "paṭham trās' saṅkhep sec-kti"@km-x-twktt ;
-        :femcConversionOf   bdr:TT40B2008E4AAA9026 .
+        :femcConversionOf   bdr:TTC3016A4235D61ADC .
     
-    bdr:TTC69B8757DAB6E584
+    bdr:TT69B1008D159B3FD7
+        a                   :Title ;
+        rdfs:label          "បឋមត្រាស់សង្ខេបសេចក្តី"@km ;
+        :femcConversionOf   bdr:TTB978B3D242B633FF .
+    
+    bdr:TTB978B3D242B633FF
         a                   :CoverTitle ;
         rdfs:label          "ថមត្រាស់"@km .
+    
+    bdr:TTC3016A4235D61ADC
+        a                   :CoverTitle ;
+        rdfs:label          "tham trās'"@km-x-twktt .
 }

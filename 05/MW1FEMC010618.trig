@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010618 {
-    bda:LGFA1E087D3848E7AB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010618"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010618"@en , "imported pubinfo for W1FEMC010618"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010618"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010618 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010618 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "05/MW1FEMC010618.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010618 ;
-        adm:logEntry        bda:LGFA1E087D3848E7AB , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID11648D78A82185E7
+    bdr:IDAB44AA0C9CF01E84
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.02.11.01.VII" .
     
-    bdr:MFD17EA77AB5BACD78
+    bdr:MF4FD629596547C5F0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "13" ;
         :microfilmStrip     "54" .
@@ -55,17 +49,16 @@ bdg:MW1FEMC010618 {
         a                   :Instance ;
         skos:prefLabel      "មេសូត្រនិទ្ទេស"@pi-khmr , "mesūtraniddesa"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID11648D78A82185E7 ;
+            bdr:IDAB44AA0C9CF01E84 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6A464699D3CC01A9 , bdr:TT6A9CCD8E2A9218B6 , bdr:TTAB44AA0C9CF01E84 , bdr:TTDB65AFDB26778A88 ;
+        :hasTitle           bdr:TT6A464699D3CC01A9 , bdr:TTDB65AFDB26778A88 , bdr:TTF2F43B6857E03EB2 , bdr:TTFA1E087D3848E7AB ;
         :instanceHasReproduction  bdr:W1FEMC010618 ;
+        :instanceOf         bdr:WA1FEMC010044 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD17EA77AB5BACD78 ;
-        :note               bdr:NT30A718BB4FAFFD7E , bdr:NT4FD629596547C5F0 ;
+        :microfilmItem      bdr:MF4FD629596547C5F0 ;
+        :note               bdr:NT30A718BB4FAFFD7E , bdr:NT6A9CCD8E2A9218B6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -74,26 +67,26 @@ bdg:MW1FEMC010618 {
         a                   :Note ;
         :noteText           "Should we write (ក-ឃំ) ?"@en .
     
-    bdr:NT4FD629596547C5F0
+    bdr:NT6A9CCD8E2A9218B6
         a                   :Note ;
         :contentLocationStatement  "pg. 175" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT6A464699D3CC01A9
-        a                   :Title ;
-        rdfs:label          "mesūtraniddesa"@pi-x-twktt ;
-        :femcConversionOf   bdr:TTAB44AA0C9CF01E84 .
-    
-    bdr:TT6A9CCD8E2A9218B6
-        a                   :CoverTitle ;
-        rdfs:label          "មេសូត្រនិទេសន(ក-ឃំ)"@pi-khmr .
-    
-    bdr:TTAB44AA0C9CF01E84
         a                   :CoverTitle ;
         rdfs:label          "mesūtranidesana"@pi-x-twktt .
     
     bdr:TTDB65AFDB26778A88
+        a                   :CoverTitle ;
+        rdfs:label          "មេសូត្រនិទេសន(ក-ឃំ)"@pi-khmr .
+    
+    bdr:TTF2F43B6857E03EB2
+        a                   :Title ;
+        rdfs:label          "mesūtraniddesa"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT6A464699D3CC01A9 .
+    
+    bdr:TTFA1E087D3848E7AB
         a                   :Title ;
         rdfs:label          "មេសូត្រនិទ្ទេស"@pi-khmr ;
-        :femcConversionOf   bdr:TT6A9CCD8E2A9218B6 .
+        :femcConversionOf   bdr:TTDB65AFDB26778A88 .
 }

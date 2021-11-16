@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020543 {
-    bda:LGF36C5477EA3D6782
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020543"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020543"@en , "imported pubinfo for W1FEMC020543"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020543"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020543 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020543 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b6/MW1FEMC020543.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020543 ;
-        adm:logEntry        bda:LGF36C5477EA3D6782 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF7C9EF9BE5E1E678
+    bdr:ID1D17E14294EFF60F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d*.176.II.2" .
     
-    bdr:MF4FAF7021948BF417
+    bdr:MFC3DC8C896A1A6965
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "61" ;
         :microfilmStrip     "155" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020543 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកក្ដាមផ្គរ"@km , "lpök ktām phgar"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF7C9EF9BE5E1E678 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1C9F38224BA78F81 , bdr:TT1D17E14294EFF60F , bdr:TT3A901CF0FC8147F0 , bdr:TT97503B5A710BFE7D ;
+            bdr:ID1D17E14294EFF60F ;
+        :hasTitle           bdr:TT1C9F38224BA78F81 , bdr:TT8BA26D00978C4022 , bdr:TT97503B5A710BFE7D , bdr:TTF36C5477EA3D6782 ;
         :instanceHasReproduction  bdr:W1FEMC020543 ;
+        :instanceOf         bdr:WA1FEMC130004 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4FAF7021948BF417 ;
-        :note               bdr:NTC3DC8C896A1A6965 ;
+        :microfilmItem      bdr:MFC3DC8C896A1A6965 ;
+        :note               bdr:NT3A901CF0FC8147F0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC3DC8C896A1A6965
+    bdr:NT3A901CF0FC8147F0
         a                   :Note ;
         :contentLocationStatement  "pg. 105" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1C9F38224BA78F81
-        a                   :Title ;
-        rdfs:label          "ល្បើកក្ដាមផ្គរ"@km ;
-        :femcConversionOf   bdr:TT3A901CF0FC8147F0 .
-    
-    bdr:TT1D17E14294EFF60F
-        a                   :CoverTitle ;
-        rdfs:label          "ktām"@km-x-twktt .
-    
-    bdr:TT3A901CF0FC8147F0
         a                   :CoverTitle ;
         rdfs:label          "ក្ដាម"@km .
     
-    bdr:TT97503B5A710BFE7D
+    bdr:TT8BA26D00978C4022
         a                   :Title ;
         rdfs:label          "lpök ktām phgar"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1D17E14294EFF60F .
+        :femcConversionOf   bdr:TT97503B5A710BFE7D .
+    
+    bdr:TT97503B5A710BFE7D
+        a                   :CoverTitle ;
+        rdfs:label          "ktām"@km-x-twktt .
+    
+    bdr:TTF36C5477EA3D6782
+        a                   :Title ;
+        rdfs:label          "ល្បើកក្ដាមផ្គរ"@km ;
+        :femcConversionOf   bdr:TT1C9F38224BA78F81 .
 }

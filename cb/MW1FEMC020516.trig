@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020516 {
-    bda:LG86CF385E3656EBC8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020516"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020516"@en , "imported pubinfo for W1FEMC020516"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020516"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020516 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020516 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cb/MW1FEMC020516.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020516 ;
-        adm:logEntry        bda:LG86CF385E3656EBC8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID07545A84D0A8275E
+    bdr:ID2141E3A8C8E8FBE8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.149.III.1" .
     
-    bdr:MFD8BE48358DA4220A
+    bdr:MF801F6582F4470CF3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020516 {
         a                   :Instance ;
         skos:prefLabel      "ខសង្គាយនាគ្រែ៣ (បុច្ឆាវិស្សជ្ជនាគ្រេ៣ និង អានិសង្សនានា"@km , "kha saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID07545A84D0A8275E ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0000C2E653D6B54C , bdr:TT2141E3A8C8E8FBE8 , bdr:TT3CA0BF33E1C7A4AA , bdr:TTAB5494EF2B6F44E1 ;
+            bdr:ID2141E3A8C8E8FBE8 ;
+        :hasTitle           bdr:TT000D350911DBB937 , bdr:TT3CA0BF33E1C7A4AA , bdr:TT86CF385E3656EBC8 , bdr:TTAB5494EF2B6F44E1 ;
         :instanceHasReproduction  bdr:W1FEMC020516 ;
+        :instanceOf         bdr:WA1FEMC010097 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD8BE48358DA4220A ;
-        :note               bdr:NT801F6582F4470CF3 ;
+        :microfilmItem      bdr:MF801F6582F4470CF3 ;
+        :note               bdr:NT0000C2E653D6B54C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT801F6582F4470CF3
+    bdr:NT0000C2E653D6B54C
         a                   :Note ;
         :contentLocationStatement  "pg. 100" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0000C2E653D6B54C
-        a                   :CoverTitle ;
-        rdfs:label          "ខ៍សង្គាយនាគ្រែ៣"@km .
+    bdr:TT000D350911DBB937
+        a                   :Title ;
+        rdfs:label          "kha saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3CA0BF33E1C7A4AA .
     
-    bdr:TT2141E3A8C8E8FBE8
+    bdr:TT3CA0BF33E1C7A4AA
         a                   :CoverTitle ;
         rdfs:label          "kha saṅgāyanā grè 3"@km-x-twktt .
     
-    bdr:TT3CA0BF33E1C7A4AA
-        a                   :Title ;
-        rdfs:label          "kha saṅgāyanā grè 3"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2141E3A8C8E8FBE8 .
-    
-    bdr:TTAB5494EF2B6F44E1
+    bdr:TT86CF385E3656EBC8
         a                   :Title ;
         rdfs:label          "ខសង្គាយនាគ្រែ៣ (បុច្ឆាវិស្សជ្ជនាគ្រេ៣ និង អានិសង្សនានា"@km ;
-        :femcConversionOf   bdr:TT0000C2E653D6B54C .
+        :femcConversionOf   bdr:TTAB5494EF2B6F44E1 .
+    
+    bdr:TTAB5494EF2B6F44E1
+        a                   :CoverTitle ;
+        rdfs:label          "ខ៍សង្គាយនាគ្រែ៣"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010854 {
-    bda:LG3F05A718CAB485A2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010854"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010854"@en , "imported pubinfo for W1FEMC010854"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010854"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010854 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010854 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0d/MW1FEMC010854.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010854 ;
-        adm:logEntry        bda:LG3F05A718CAB485A2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDAEC3235209A4C44C
+    bdr:ID107340C9E0DA08DF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "049-A.04.02.01.III.1" .
     
-    bdr:MF0430AFA169F30666
+    bdr:MF61E619883B53EB31
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "40" ;
         :microfilmStrip     "90" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010854 {
         a                   :Instance ;
         skos:prefLabel      "ត្រៃលោកវិត្ថារ"@km , "trai lok vitthār"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAEC3235209A4C44C ;
+            bdr:ID107340C9E0DA08DF ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT107340C9E0DA08DF , bdr:TT289BD35DE5E326A9 , bdr:TT5B698E62390EC545 , bdr:TT6AD9D3271BEEC099 ;
+        :hasTitle           bdr:TT002A923E124FF54F , bdr:TT289BD35DE5E326A9 , bdr:TT3F05A718CAB485A2 , bdr:TT5B698E62390EC545 ;
         :instanceHasReproduction  bdr:W1FEMC010854 ;
+        :instanceOf         bdr:WA1FEMC010070 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0430AFA169F30666 ;
-        :note               bdr:NT61E619883B53EB31 ;
+        :microfilmItem      bdr:MF61E619883B53EB31 ;
+        :note               bdr:NT6AD9D3271BEEC099 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT61E619883B53EB31
+    bdr:NT6AD9D3271BEEC099
         a                   :Note ;
         :contentLocationStatement  "pg. 221" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT107340C9E0DA08DF
-        a                   :CoverTitle ;
-        rdfs:label          "trai lokk viṭṭān"@km-x-twktt .
-    
-    bdr:TT289BD35DE5E326A9
-        a                   :Title ;
-        rdfs:label          "ត្រៃលោកវិត្ថារ"@km ;
-        :femcConversionOf   bdr:TT6AD9D3271BEEC099 .
-    
-    bdr:TT5B698E62390EC545
+    bdr:TT002A923E124FF54F
         a                   :Title ;
         rdfs:label          "trai lok vitthār"@km-x-twktt ;
-        :femcConversionOf   bdr:TT107340C9E0DA08DF .
+        :femcConversionOf   bdr:TT5B698E62390EC545 .
     
-    bdr:TT6AD9D3271BEEC099
+    bdr:TT289BD35DE5E326A9
         a                   :CoverTitle ;
         rdfs:label          "ត្រៃលោក្កវិដ្ឋាន"@km .
+    
+    bdr:TT3F05A718CAB485A2
+        a                   :Title ;
+        rdfs:label          "ត្រៃលោកវិត្ថារ"@km ;
+        :femcConversionOf   bdr:TT289BD35DE5E326A9 .
+    
+    bdr:TT5B698E62390EC545
+        a                   :CoverTitle ;
+        rdfs:label          "trai lokk viṭṭān"@km-x-twktt .
 }

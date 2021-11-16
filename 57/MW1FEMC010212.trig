@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010212 {
-    bda:LG4EA447DF24DAE696
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010212"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010212"@en , "imported pubinfo for W1FEMC010212"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010212"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010212 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010212 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "57/MW1FEMC010212.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010212 ;
-        adm:logEntry        bda:LG4EA447DF24DAE696 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID49CB47AEBE0E6DD3
+    bdr:ID9BBADB2A10E7B778
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "014-PP.02.06.02.III.6" .
     
-    bdr:MF09528C94ADA67D13
+    bdr:MFCD1824B279F88F5E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "2" ;
         :microfilmStrip     "7" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010212 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សមហាវេស្សន្តរជាតក"@km , "ānisaṅs mahā vessantar jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID49CB47AEBE0E6DD3 ;
+            bdr:ID9BBADB2A10E7B778 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT35AE77016BA9FA33 , bdr:TT50631B048A00780E , bdr:TT9BBADB2A10E7B778 , bdr:TTB455088DB5CE468C ;
+        :hasTitle           bdr:TT35AE77016BA9FA33 , bdr:TT3DBDAC061E7C25F5 , bdr:TT4EA447DF24DAE696 , bdr:TT50631B048A00780E ;
         :instanceHasReproduction  bdr:W1FEMC010212 ;
+        :instanceOf         bdr:WA1FEMC060027 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF09528C94ADA67D13 ;
-        :note               bdr:NTCD1824B279F88F5E ;
+        :microfilmItem      bdr:MFCD1824B279F88F5E ;
+        :note               bdr:NTB455088DB5CE468C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTCD1824B279F88F5E
+    bdr:NTB455088DB5CE468C
         a                   :Note ;
         :contentLocationStatement  "pg. 95" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT35AE77016BA9FA33
-        a                   :Title ;
-        rdfs:label          "ānisaṅs mahā vessantar jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9BBADB2A10E7B778 .
-    
-    bdr:TT50631B048A00780E
-        a                   :Title ;
-        rdfs:label          "អានិសង្សមហាវេស្សន្តរជាតក"@km ;
-        :femcConversionOf   bdr:TTB455088DB5CE468C .
-    
-    bdr:TT9BBADB2A10E7B778
         a                   :CoverTitle ;
         rdfs:label          "anisaṅ mahā jāt"@km-x-twktt .
     
-    bdr:TTB455088DB5CE468C
+    bdr:TT3DBDAC061E7C25F5
+        a                   :Title ;
+        rdfs:label          "ānisaṅs mahā vessantar jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT35AE77016BA9FA33 .
+    
+    bdr:TT4EA447DF24DAE696
+        a                   :Title ;
+        rdfs:label          "អានិសង្សមហាវេស្សន្តរជាតក"@km ;
+        :femcConversionOf   bdr:TT50631B048A00780E .
+    
+    bdr:TT50631B048A00780E
         a                   :CoverTitle ;
         rdfs:label          "អនិសងមហាជាត"@km .
 }

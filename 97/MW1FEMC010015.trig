@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010015 {
-    bda:LG63AB0EC951D6651A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010015"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010015"@en , "imported pubinfo for W1FEMC010015"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010015"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010015 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010015 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "97/MW1FEMC010015.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010015 ;
-        adm:logEntry        bda:LG63AB0EC951D6651A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE2E21E6542BCBF38
+    bdr:ID3E0F33A78A07DCAA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002-PP.00.03.01.V.2" .
     
-    bdr:MF69E61468402694EE
+    bdr:MFBC7267F130D044F6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "1" ;
         :microfilmStrip     "1" .
@@ -55,42 +49,41 @@ bdg:MW1FEMC010015 {
         a                   :Instance ;
         skos:prefLabel      "រាជក្រឹត្យក្រមប្រដៅចៅក្រម"@km , "rāj krịty kram praṭau cau kram"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE2E21E6542BCBF38 ;
+            bdr:ID3E0F33A78A07DCAA ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2D3336B41473A470 , bdr:TT3E0F33A78A07DCAA , bdr:TT6B3E6F9E3D4040FF , bdr:TT9E5E34CD8F22C1D6 ;
+        :hasTitle           bdr:TT2D3336B41473A470 , bdr:TT5151C9E2DA26A4AC , bdr:TT63AB0EC951D6651A , bdr:TT9E5E34CD8F22C1D6 ;
         :instanceHasReproduction  bdr:W1FEMC010015 ;
+        :instanceOf         bdr:WA1FEMC140004 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF69E61468402694EE ;
-        :note               bdr:NTBC7267F130D044F6 ;
+        :microfilmItem      bdr:MFBC7267F130D044F6 ;
+        :note               bdr:NT6B3E6F9E3D4040FF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "b 983" .
     
-    bdr:NTBC7267F130D044F6
+    bdr:NT6B3E6F9E3D4040FF
         a                   :Note ;
         :contentLocationStatement  "pg. 56" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT2D3336B41473A470
-        a                   :Title ;
-        rdfs:label          "រាជក្រឹត្យក្រមប្រដៅចៅក្រម"@km ;
-        :femcConversionOf   bdr:TT6B3E6F9E3D4040FF .
-    
-    bdr:TT3E0F33A78A07DCAA
-        a                   :CoverTitle ;
-        rdfs:label          "rāj krit kram praṭau cau kram"@km-x-twktt .
-    
-    bdr:TT6B3E6F9E3D4040FF
         a                   :CoverTitle ;
         rdfs:label          "រាជក្រិតក្រមប្រដៅចៅក្រម"@km .
     
-    bdr:TT9E5E34CD8F22C1D6
+    bdr:TT5151C9E2DA26A4AC
         a                   :Title ;
         rdfs:label          "rāj krịty kram praṭau cau kram"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3E0F33A78A07DCAA .
+        :femcConversionOf   bdr:TT9E5E34CD8F22C1D6 .
+    
+    bdr:TT63AB0EC951D6651A
+        a                   :Title ;
+        rdfs:label          "រាជក្រឹត្យក្រមប្រដៅចៅក្រម"@km ;
+        :femcConversionOf   bdr:TT2D3336B41473A470 .
+    
+    bdr:TT9E5E34CD8F22C1D6
+        a                   :CoverTitle ;
+        rdfs:label          "rāj krit kram praṭau cau kram"@km-x-twktt .
 }

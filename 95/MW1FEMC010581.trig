@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010581 {
-    bda:LGBE9B421BB159AB52
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010581"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010581"@en , "imported pubinfo for W1FEMC010581"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010581"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010581 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010581 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "95/MW1FEMC010581.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010581 ;
-        adm:logEntry        bda:LGBE9B421BB159AB52 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3339A84346E402C2
+    bdr:ID09C5F87821E628DC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "081-A.02.10.01.III.1" .
     
-    bdr:MF4EF9D030162649F3
+    bdr:MFE35DC1FAD23587BE
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "73" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010581 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3339A84346E402C2 ;
+            bdr:ID09C5F87821E628DC ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT09C5F87821E628DC , bdr:TT2F5C57EDD727DD46 , bdr:TT6CEDA83FFE41B9DB , bdr:TTD6F43BA675B74DF6 , bdr:TTDB42D5C921DB5379 , bdr:TTEFD663ADD6417ABC ;
+        :hasTitle           bdr:TT2F5C57EDD727DD46 , bdr:TT508CF57C46FC0F28 , bdr:TT6CEDA83FFE41B9DB , bdr:TTBE9B421BB159AB52 , bdr:TTDB42D5C921DB5379 , bdr:TTEFD663ADD6417ABC ;
         :instanceHasReproduction  bdr:W1FEMC010581 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4EF9D030162649F3 ;
-        :note               bdr:NTE35DC1FAD23587BE ;
+        :microfilmItem      bdr:MFE35DC1FAD23587BE ;
+        :note               bdr:NTD6F43BA675B74DF6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE35DC1FAD23587BE
+    bdr:NTD6F43BA675B74DF6
         a                   :Note ;
         :contentLocationStatement  "pg. 167" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT09C5F87821E628DC
-        a                   :CoverTitle ;
-        rdfs:label          "vinaiy° "@km-x-twktt .
-    
     bdr:TT2F5C57EDD727DD46
+        a                   :CoverTitle ;
+        rdfs:label          "vinăy "@km-x-twktt ;
+        :femcConversionOf   bdr:TT6CEDA83FFE41B9DB .
+    
+    bdr:TT508CF57C46FC0F28
         a                   :Title ;
         rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
     
     bdr:TT6CEDA83FFE41B9DB
         a                   :CoverTitle ;
-        rdfs:label          "vinăy "@km-x-twktt ;
-        :femcConversionOf   bdr:TT09C5F87821E628DC .
+        rdfs:label          "vinaiy° "@km-x-twktt .
     
-    bdr:TTD6F43BA675B74DF6
-        a                   :CoverTitle ;
-        rdfs:label          "វិន្យៃ"@km .
+    bdr:TTBE9B421BB159AB52
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
     
     bdr:TTDB42D5C921DB5379
         a                   :CoverTitle ;
-        rdfs:label          "វិន័័យ"@km ;
-        :femcConversionOf   bdr:TTD6F43BA675B74DF6 .
+        rdfs:label          "វិន្យៃ"@km .
     
     bdr:TTEFD663ADD6417ABC
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័័យ"@km ;
+        :femcConversionOf   bdr:TTDB42D5C921DB5379 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010749 {
-    bda:LGDBA0A1A2E4C7D96B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010749"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010749"@en , "imported pubinfo for W1FEMC010749"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010749"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010749 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010749 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "09/MW1FEMC010749.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010749 ;
-        adm:logEntry        bda:LGDBA0A1A2E4C7D96B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID703EA3B953F101C4
+    bdr:ID8289D21DE7896BB0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "020-A.03.08.01.III.1" .
     
-    bdr:MFEE9A949A96134008
+    bdr:MF5675C31B6EB725DC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "48" ;
         :microfilmStrip     "122" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010749 {
         a                   :Instance ;
         skos:prefLabel      "បេតវត្ថុ"@km , "pet vatthu"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID703EA3B953F101C4 ;
+            bdr:ID8289D21DE7896BB0 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT8289D21DE7896BB0 , bdr:TTA3EE46DE1CD6AFE8 , bdr:TTAC59D67E02E8838E , bdr:TTE6B3404ECFCC1164 ;
+        :hasTitle           bdr:TT030E11CECE6B3708 , bdr:TTA3EE46DE1CD6AFE8 , bdr:TTDBA0A1A2E4C7D96B , bdr:TTE6B3404ECFCC1164 ;
         :instanceHasReproduction  bdr:W1FEMC010749 ;
+        :instanceOf         bdr:WA1FEMC010051 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEE9A949A96134008 ;
-        :note               bdr:NT5675C31B6EB725DC ;
+        :microfilmItem      bdr:MF5675C31B6EB725DC ;
+        :note               bdr:NTAC59D67E02E8838E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5675C31B6EB725DC
+    bdr:NTAC59D67E02E8838E
         a                   :Note ;
         :contentLocationStatement  "pg. 201" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT8289D21DE7896BB0
+    bdr:TT030E11CECE6B3708
+        a                   :Title ;
+        rdfs:label          "pet vatthu"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA3EE46DE1CD6AFE8 .
+    
+    bdr:TTA3EE46DE1CD6AFE8
         a                   :CoverTitle ;
         rdfs:label          "pètth vatthu"@km-x-twktt .
     
-    bdr:TTA3EE46DE1CD6AFE8
-        a                   :Title ;
-        rdfs:label          "pet vatthu"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8289D21DE7896BB0 .
-    
-    bdr:TTAC59D67E02E8838E
-        a                   :CoverTitle ;
-        rdfs:label          "បែត្ថវត្ថុ"@km .
-    
-    bdr:TTE6B3404ECFCC1164
+    bdr:TTDBA0A1A2E4C7D96B
         a                   :Title ;
         rdfs:label          "បេតវត្ថុ"@km ;
-        :femcConversionOf   bdr:TTAC59D67E02E8838E .
+        :femcConversionOf   bdr:TTE6B3404ECFCC1164 .
+    
+    bdr:TTE6B3404ECFCC1164
+        a                   :CoverTitle ;
+        rdfs:label          "បែត្ថវត្ថុ"@km .
 }

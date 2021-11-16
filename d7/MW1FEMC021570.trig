@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021570 {
-    bda:LGB1A33A1B3E576AD9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021570"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021570"@en , "imported pubinfo for W1FEMC021570"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021570"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021570 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021570 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d7/MW1FEMC021570.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021570 ;
-        adm:logEntry        bda:LGB1A33A1B3E576AD9 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID40F71777AABF4B7E
+    bdr:IDB1B1DD257CC6F4EF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.108.II.1" .
     
-    bdr:MF1FD57A823219A775
+    bdr:MFCD963CE603045173
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "131" ;
         :microfilmStrip     "225" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC021570 {
         a                   :Instance ;
         skos:prefLabel      "ផាត់សាមា"@km , "phāt' sāmā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID40F71777AABF4B7E ;
+            bdr:IDB1B1DD257CC6F4EF ;
         :hasFascicles       "1, 3-8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTA2EB6EE30FE3E2C2 , bdr:TTB1B1DD257CC6F4EF , bdr:TTD40A3020CE6C713C , bdr:TTD75863F998BDAF1A ;
+        :hasTitle           bdr:TT254C34E683B6BF00 , bdr:TTA2EB6EE30FE3E2C2 , bdr:TTB1A33A1B3E576AD9 , bdr:TTD40A3020CE6C713C ;
         :instanceHasReproduction  bdr:W1FEMC021570 ;
+        :instanceOf         bdr:WA1FEMC120081 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1FD57A823219A775 ;
-        :note               bdr:NTCD963CE603045173 ;
+        :microfilmItem      bdr:MFCD963CE603045173 ;
+        :note               bdr:NTD75863F998BDAF1A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1423" .
     
-    bdr:NTCD963CE603045173
+    bdr:NTD75863F998BDAF1A
         a                   :Note ;
         :contentLocationStatement  "pg. 283" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTA2EB6EE30FE3E2C2
-        a                   :Title ;
-        rdfs:label          "ផាត់សាមា"@km ;
-        :femcConversionOf   bdr:TTD75863F998BDAF1A .
-    
-    bdr:TTB1B1DD257CC6F4EF
-        a                   :CoverTitle ;
-        rdfs:label          "phāt' sām\"ā"@km-x-twktt .
-    
-    bdr:TTD40A3020CE6C713C
+    bdr:TT254C34E683B6BF00
         a                   :Title ;
         rdfs:label          "phāt' sāmā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB1B1DD257CC6F4EF .
+        :femcConversionOf   bdr:TTD40A3020CE6C713C .
     
-    bdr:TTD75863F998BDAF1A
+    bdr:TTA2EB6EE30FE3E2C2
         a                   :CoverTitle ;
         rdfs:label          "ផាត់សាម៉ា"@km .
+    
+    bdr:TTB1A33A1B3E576AD9
+        a                   :Title ;
+        rdfs:label          "ផាត់សាមា"@km ;
+        :femcConversionOf   bdr:TTA2EB6EE30FE3E2C2 .
+    
+    bdr:TTD40A3020CE6C713C
+        a                   :CoverTitle ;
+        rdfs:label          "phāt' sām\"ā"@km-x-twktt .
 }

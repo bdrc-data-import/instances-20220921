@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010235 {
-    bda:LGA33C077BC97041F2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010235"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010235"@en , "imported pubinfo for W1FEMC010235"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010235"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010235 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010235 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2b/MW1FEMC010235.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010235 ;
-        adm:logEntry        bda:LGA33C077BC97041F2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3D86119C78D8A519
+    bdr:ID1DAC97FF051B211D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "035-PP.02.06.02.III.2" .
     
-    bdr:MFB2F1C40C06B3F9AF
+    bdr:MF8D1E487F235DA599
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "3" ;
         :microfilmStrip     "12" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010235 {
         a                   :Instance ;
         skos:prefLabel      "សីលសារសូត្រ"@km , "sīl sār sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3D86119C78D8A519 ;
+            bdr:ID1DAC97FF051B211D ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1DAC97FF051B211D , bdr:TT6C2ACC1372B15ABA , bdr:TT6EB7356B1E772EA7 , bdr:TTCF9167A172553DA3 ;
+        :hasTitle           bdr:TT36B95B549E1487F5 , bdr:TT6C2ACC1372B15ABA , bdr:TT6EB7356B1E772EA7 , bdr:TTA33C077BC97041F2 ;
         :instanceHasReproduction  bdr:W1FEMC010235 ;
+        :instanceOf         bdr:WA1FEMC020011 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB2F1C40C06B3F9AF ;
-        :note               bdr:NT8D1E487F235DA599 ;
+        :microfilmItem      bdr:MF8D1E487F235DA599 ;
+        :note               bdr:NTCF9167A172553DA3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8D1E487F235DA599
+    bdr:NTCF9167A172553DA3
         a                   :Note ;
         :contentLocationStatement  "pg. 99" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1DAC97FF051B211D
+    bdr:TT36B95B549E1487F5
+        a                   :Title ;
+        rdfs:label          "sīl sār sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6C2ACC1372B15ABA .
+    
+    bdr:TT6C2ACC1372B15ABA
         a                   :CoverTitle ;
         rdfs:label          "sil sā sūtr"@km-x-twktt .
     
-    bdr:TT6C2ACC1372B15ABA
-        a                   :Title ;
-        rdfs:label          "sīl sār sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1DAC97FF051B211D .
-    
     bdr:TT6EB7356B1E772EA7
-        a                   :Title ;
-        rdfs:label          "សីលសារសូត្រ"@km ;
-        :femcConversionOf   bdr:TTCF9167A172553DA3 .
-    
-    bdr:TTCF9167A172553DA3
         a                   :CoverTitle ;
         rdfs:label          "សិលសាសូត្រ"@km .
+    
+    bdr:TTA33C077BC97041F2
+        a                   :Title ;
+        rdfs:label          "សីលសារសូត្រ"@km ;
+        :femcConversionOf   bdr:TT6EB7356B1E772EA7 .
 }

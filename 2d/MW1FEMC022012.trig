@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022012 {
-    bda:LG91C133E47E8255CD
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022012"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022012"@en , "imported pubinfo for W1FEMC022012"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022012"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022012 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022012 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "2d/MW1FEMC022012.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022012 ;
-        adm:logEntry        bda:LG91C133E47E8255CD , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF91A26BC0D9D5779
+    bdr:ID25AD639D667DFFB2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.794.V.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC022012 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះពុទ្ធគុណបន្លែ"@km , "braḥ buddh guṇ panlè"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF91A26BC0D9D5779 ;
+            bdr:ID25AD639D667DFFB2 ;
         :hasFascicles       "8" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT25AD639D667DFFB2 , bdr:TT6DF12E4E5A6A88C3 , bdr:TTC4B321414D92D561 , bdr:TTF2475604D6ECBC8F ;
+        :hasTitle           bdr:TT3F8E35AA717B8C42 , bdr:TT6DF12E4E5A6A88C3 , bdr:TT91C133E47E8255CD , bdr:TTF2475604D6ECBC8F ;
         :instanceHasReproduction  bdr:W1FEMC022012 ;
+        :instanceOf         bdr:WA1FEMC070002 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT4127E74FCED95292 ;
+        :note               bdr:NTC4B321414D92D561 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4127E74FCED95292
+    bdr:NTC4B321414D92D561
         a                   :Note ;
         :contentLocationStatement  "pg. 356" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT25AD639D667DFFB2
+    bdr:TT3F8E35AA717B8C42
+        a                   :Title ;
+        rdfs:label          "braḥ buddh guṇ panlè"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6DF12E4E5A6A88C3 .
+    
+    bdr:TT6DF12E4E5A6A88C3
         a                   :CoverTitle ;
         rdfs:label          "braḥ buddh guṇ"@km-x-twktt .
     
-    bdr:TT6DF12E4E5A6A88C3
-        a                   :Title ;
-        rdfs:label          "braḥ buddh guṇ panlè"@km-x-twktt ;
-        :femcConversionOf   bdr:TT25AD639D667DFFB2 .
-    
-    bdr:TTC4B321414D92D561
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះពុទ្ធគុណ​"@km .
-    
-    bdr:TTF2475604D6ECBC8F
+    bdr:TT91C133E47E8255CD
         a                   :Title ;
         rdfs:label          "ព្រះពុទ្ធគុណបន្លែ"@km ;
-        :femcConversionOf   bdr:TTC4B321414D92D561 .
+        :femcConversionOf   bdr:TTF2475604D6ECBC8F .
+    
+    bdr:TTF2475604D6ECBC8F
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះពុទ្ធគុណ​"@km .
 }

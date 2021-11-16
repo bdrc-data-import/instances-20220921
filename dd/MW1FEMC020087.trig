@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020087 {
-    bda:LG557F44F86986A1B3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020087"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020087"@en , "imported pubinfo for W1FEMC020087"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020087"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020087 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020087 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "dd/MW1FEMC020087.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020087 ;
-        adm:logEntry        bda:LG557F44F86986A1B3 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID250EDCF4F64DDD8D
+    bdr:ID6A6A3E7FF5AC525A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.81.III.1" .
     
-    bdr:MF206C9FA6974FDAA1
+    bdr:MF178B3E80426ED276
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "99" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020087 {
         a                   :Instance ;
         skos:prefLabel      "វិវាហមង្គល"@km , "vivāhamaṅgal"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID250EDCF4F64DDD8D ;
+            bdr:ID6A6A3E7FF5AC525A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6A6A3E7FF5AC525A , bdr:TTA5C537298CE64158 , bdr:TTE5FE47565F35B046 , bdr:TTEA791700BB8D66B3 ;
+        :hasTitle           bdr:TT07E60BF9CE275C4D , bdr:TT557F44F86986A1B3 , bdr:TTA5C537298CE64158 , bdr:TTEA791700BB8D66B3 ;
         :instanceHasReproduction  bdr:W1FEMC020087 ;
+        :instanceOf         bdr:WA1FEMC010142 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF206C9FA6974FDAA1 ;
-        :note               bdr:NT178B3E80426ED276 ;
+        :microfilmItem      bdr:MF178B3E80426ED276 ;
+        :note               bdr:NTE5FE47565F35B046 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1645" .
     
-    bdr:NT178B3E80426ED276
+    bdr:NTE5FE47565F35B046
         a                   :Note ;
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT6A6A3E7FF5AC525A
+    bdr:TT07E60BF9CE275C4D
+        a                   :Title ;
+        rdfs:label          "vivāhamaṅgal"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA5C537298CE64158 .
+    
+    bdr:TT557F44F86986A1B3
+        a                   :Title ;
+        rdfs:label          "វិវាហមង្គល"@km ;
+        :femcConversionOf   bdr:TTEA791700BB8D66B3 .
+    
+    bdr:TTA5C537298CE64158
         a                   :CoverTitle ;
         rdfs:label          "vivāha: maṅgal"@km-x-twktt .
     
-    bdr:TTA5C537298CE64158
-        a                   :Title ;
-        rdfs:label          "vivāhamaṅgal"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6A6A3E7FF5AC525A .
-    
-    bdr:TTE5FE47565F35B046
+    bdr:TTEA791700BB8D66B3
         a                   :CoverTitle ;
         rdfs:label          "វិវាហៈមង្គល"@km .
-    
-    bdr:TTEA791700BB8D66B3
-        a                   :Title ;
-        rdfs:label          "វិវាហមង្គល"@km ;
-        :femcConversionOf   bdr:TTE5FE47565F35B046 .
 }

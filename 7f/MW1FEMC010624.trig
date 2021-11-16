@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010624 {
-    bda:LGD7A9CDD93C2F064E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010624"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010624"@en , "imported pubinfo for W1FEMC010624"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010624"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010624 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010624 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7f/MW1FEMC010624.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010624 ;
-        adm:logEntry        bda:LGD7A9CDD93C2F064E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID761CE3BA00A2E2CA
+    bdr:IDFEC7357A98987AC1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.02.12.04.III.1" .
     
-    bdr:MF21ABFECE16FEA2BC
+    bdr:MFDFFE2A4A274EE179
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "32" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010624 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មធាតុទាំង៧"@km , "dhamm dhātu dāṃṅ 7"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID761CE3BA00A2E2CA ;
+            bdr:IDFEC7357A98987AC1 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT89FB633004DA3276 , bdr:TTC689A94698ED8E86 , bdr:TTC69C6DEFE5DF950A , bdr:TTFEC7357A98987AC1 ;
+        :hasTitle           bdr:TT89FB633004DA3276 , bdr:TTC2827D7E6201B070 , bdr:TTC689A94698ED8E86 , bdr:TTD7A9CDD93C2F064E ;
         :instanceHasReproduction  bdr:W1FEMC010624 ;
+        :instanceOf         bdr:WA1FEMC010026 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF21ABFECE16FEA2BC ;
-        :note               bdr:NTDFFE2A4A274EE179 ;
+        :microfilmItem      bdr:MFDFFE2A4A274EE179 ;
+        :note               bdr:NTC69C6DEFE5DF950A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDFFE2A4A274EE179
+    bdr:NTC69C6DEFE5DF950A
         a                   :Note ;
         :contentLocationStatement  "pg. 176" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT89FB633004DA3276
-        a                   :Title ;
-        rdfs:label          "ធម្មធាតុទាំង៧"@km ;
-        :femcConversionOf   bdr:TTC69C6DEFE5DF950A .
-    
-    bdr:TTC689A94698ED8E86
-        a                   :Title ;
-        rdfs:label          "dhamm dhātu dāṃṅ 7"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFEC7357A98987AC1 .
-    
-    bdr:TTC69C6DEFE5DF950A
         a                   :CoverTitle ;
         rdfs:label          "ធម្មធាតុ"@km .
     
-    bdr:TTFEC7357A98987AC1
+    bdr:TTC2827D7E6201B070
+        a                   :Title ;
+        rdfs:label          "dhamm dhātu dāṃṅ 7"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC689A94698ED8E86 .
+    
+    bdr:TTC689A94698ED8E86
         a                   :CoverTitle ;
         rdfs:label          "dhamm dhātu"@km-x-twktt .
+    
+    bdr:TTD7A9CDD93C2F064E
+        a                   :Title ;
+        rdfs:label          "ធម្មធាតុទាំង៧"@km ;
+        :femcConversionOf   bdr:TT89FB633004DA3276 .
 }

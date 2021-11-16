@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010089 {
-    bda:LG9EE85246DFFBB251
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010089"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010089"@en , "imported pubinfo for W1FEMC010089"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010089"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010089 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010089 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7e/MW1FEMC010089.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010089 ;
-        adm:logEntry        bda:LG9EE85246DFFBB251 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID483397A7FE618F1D
+    bdr:ID6F173E132E4B6E86
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "047-PP.01.10.03.II.1" .
     
-    bdr:MF4904B37AD4837D04
+    bdr:MF6DE8610C4BD4554C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "45" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010089 {
         a                   :Instance ;
         skos:prefLabel      "ជ័យទត្ត"@km , "jăy datt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID483397A7FE618F1D ;
+            bdr:ID6F173E132E4B6E86 ;
         :hasFascicles       "6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT315F5646CCE154BB , bdr:TT3959B2B7D6330B7D , bdr:TT4E274E9E07836596 , bdr:TT6F173E132E4B6E86 ;
+        :hasTitle           bdr:TT315F5646CCE154BB , bdr:TT3959B2B7D6330B7D , bdr:TT9DDB2425764489AA , bdr:TT9EE85246DFFBB251 ;
         :instanceHasReproduction  bdr:W1FEMC010089 ;
+        :instanceOf         bdr:WA1FEMC120017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4904B37AD4837D04 ;
-        :note               bdr:NT6DE8610C4BD4554C ;
+        :microfilmItem      bdr:MF6DE8610C4BD4554C ;
+        :note               bdr:NT4E274E9E07836596 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT6DE8610C4BD4554C
+    bdr:NT4E274E9E07836596
         a                   :Note ;
         :contentLocationStatement  "pg. 71" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT315F5646CCE154BB
-        a                   :Title ;
-        rdfs:label          "ជ័យទត្ត"@km ;
-        :femcConversionOf   bdr:TT4E274E9E07836596 .
-    
-    bdr:TT3959B2B7D6330B7D
-        a                   :Title ;
-        rdfs:label          "jăy datt"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6F173E132E4B6E86 .
-    
-    bdr:TT4E274E9E07836596
         a                   :CoverTitle ;
         rdfs:label          "ជៃទាត់"@km .
     
-    bdr:TT6F173E132E4B6E86
+    bdr:TT3959B2B7D6330B7D
         a                   :CoverTitle ;
         rdfs:label          "jai dāt'"@km-x-twktt .
+    
+    bdr:TT9DDB2425764489AA
+        a                   :Title ;
+        rdfs:label          "jăy datt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3959B2B7D6330B7D .
+    
+    bdr:TT9EE85246DFFBB251
+        a                   :Title ;
+        rdfs:label          "ជ័យទត្ត"@km ;
+        :femcConversionOf   bdr:TT315F5646CCE154BB .
 }

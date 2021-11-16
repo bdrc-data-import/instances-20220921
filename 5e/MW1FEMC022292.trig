@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022292 {
-    bda:LG4C2D9431FC182A81
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022292"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022292"@en , "imported pubinfo for W1FEMC022292"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022292"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022292 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022292 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "5e/MW1FEMC022292.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022292 ;
-        adm:logEntry        bda:LG4C2D9431FC182A81 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEFBAAF6D1232A952
+    bdr:ID9BE385E209900071
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.370.III.4" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC022292 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km , "abhidhamm 9 paricched"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEFBAAF6D1232A952 ;
+            bdr:ID9BE385E209900071 ;
         :hasFascicles       "1-9" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4EBE98B48E23BCBA , bdr:TT7346C7318F0279CE , bdr:TT9BE385E209900071 , bdr:TTDAE2C4A34DEE71C8 ;
+        :hasTitle           bdr:TT4C2D9431FC182A81 , bdr:TT7346C7318F0279CE , bdr:TT7B9685A56155B62B , bdr:TTDAE2C4A34DEE71C8 ;
         :instanceHasReproduction  bdr:W1FEMC022292 ;
+        :instanceOf         bdr:WA1FEMC040002 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT6E4A5BDA4ED84B08 ;
+        :note               bdr:NT4EBE98B48E23BCBA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1106" .
     
-    bdr:NT6E4A5BDA4ED84B08
+    bdr:NT4EBE98B48E23BCBA
         a                   :Note ;
         :contentLocationStatement  "pg. 409" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4EBE98B48E23BCBA
-        a                   :CoverTitle ;
-        rdfs:label          "អភិធម្មត្ថនវបរិច្ឆេទ"@km .
+    bdr:TT4C2D9431FC182A81
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km ;
+        :femcConversionOf   bdr:TTDAE2C4A34DEE71C8 .
     
     bdr:TT7346C7318F0279CE
-        a                   :Title ;
-        rdfs:label          "abhidhamm 9 paricched"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9BE385E209900071 .
-    
-    bdr:TT9BE385E209900071
         a                   :CoverTitle ;
         rdfs:label          "abhidhammatthanavaparicched"@km-x-twktt .
     
-    bdr:TTDAE2C4A34DEE71C8
+    bdr:TT7B9685A56155B62B
         a                   :Title ;
-        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km ;
-        :femcConversionOf   bdr:TT4EBE98B48E23BCBA .
+        rdfs:label          "abhidhamm 9 paricched"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7346C7318F0279CE .
+    
+    bdr:TTDAE2C4A34DEE71C8
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មត្ថនវបរិច្ឆេទ"@km .
 }

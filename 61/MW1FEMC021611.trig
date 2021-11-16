@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021611 {
-    bda:LG933986E078E766F5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021611"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021611"@en , "imported pubinfo for W1FEMC021611"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021611"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021611 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021611 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "61/MW1FEMC021611.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021611 ;
-        adm:logEntry        bda:LG933986E078E766F5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID96B3FF4BB65A9CDA
+    bdr:ID4D2C33E1134C4728
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.520.I.1" .
     
-    bdr:MF7CA29A7031A615DF
+    bdr:MF606141B0E70B8515
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "132" ;
         :microfilmStrip     "226" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021611 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់កេរកាល"@km , "cpāp' ker kāl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID96B3FF4BB65A9CDA ;
+            bdr:ID4D2C33E1134C4728 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3300740AD8F6F0B0 , bdr:TT37771FD347B44B8E , bdr:TT4D2C33E1134C4728 , bdr:TTE19017EF2C8FEB1D ;
+        :hasTitle           bdr:TT37771FD347B44B8E , bdr:TT7FDBD771199B21E4 , bdr:TT933986E078E766F5 , bdr:TTE19017EF2C8FEB1D ;
         :instanceHasReproduction  bdr:W1FEMC021611 ;
+        :instanceOf         bdr:WA1FEMC100006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7CA29A7031A615DF ;
-        :note               bdr:NT606141B0E70B8515 ;
+        :microfilmItem      bdr:MF606141B0E70B8515 ;
+        :note               bdr:NT3300740AD8F6F0B0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT606141B0E70B8515
+    bdr:NT3300740AD8F6F0B0
         a                   :Note ;
         :contentLocationStatement  "pg. 290" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3300740AD8F6F0B0
+    bdr:TT37771FD347B44B8E
         a                   :CoverTitle ;
         rdfs:label          "កេរកាល"@km .
     
-    bdr:TT37771FD347B44B8E
-        a                   :Title ;
-        rdfs:label          "ច្បាប់កេរកាល"@km ;
-        :femcConversionOf   bdr:TT3300740AD8F6F0B0 .
-    
-    bdr:TT4D2C33E1134C4728
-        a                   :CoverTitle ;
-        rdfs:label          "ker kāl"@km-x-twktt .
-    
-    bdr:TTE19017EF2C8FEB1D
+    bdr:TT7FDBD771199B21E4
         a                   :Title ;
         rdfs:label          "cpāp' ker kāl"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4D2C33E1134C4728 .
+        :femcConversionOf   bdr:TTE19017EF2C8FEB1D .
+    
+    bdr:TT933986E078E766F5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កេរកាល"@km ;
+        :femcConversionOf   bdr:TT37771FD347B44B8E .
+    
+    bdr:TTE19017EF2C8FEB1D
+        a                   :CoverTitle ;
+        rdfs:label          "ker kāl"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020308 {
-    bda:LGC7683D244794AF93
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020308"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020308"@en , "imported pubinfo for W1FEMC020308"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020308"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020308 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020308 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9d/MW1FEMC020308.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020308 ;
-        adm:logEntry        bda:LGC7683D244794AF93 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8FA759925B65F816
+    bdr:ID8C447939559C7B5C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.201.III.1" .
     
-    bdr:MF24AB863C8AF5AA85
+    bdr:MF2397439A08C5D496
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020308 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8FA759925B65F816 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT13CF418D345AF223 , bdr:TT61460A6F13D2983E , bdr:TT8C447939559C7B5C , bdr:TTCCF2DA46640085B8 ;
+            bdr:ID8C447939559C7B5C ;
+        :hasTitle           bdr:TT13CF418D345AF223 , bdr:TT61460A6F13D2983E , bdr:TTC7683D244794AF93 , bdr:TTE9FE1F53EF96D76E ;
         :instanceHasReproduction  bdr:W1FEMC020308 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF24AB863C8AF5AA85 ;
-        :note               bdr:NT2397439A08C5D496 ;
+        :microfilmItem      bdr:MF2397439A08C5D496 ;
+        :note               bdr:NTCCF2DA46640085B8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2397439A08C5D496
+    bdr:NTCCF2DA46640085B8
         a                   :Note ;
         :contentLocationStatement  "pg. 61" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT13CF418D345AF223
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
-        :femcConversionOf   bdr:TTCCF2DA46640085B8 .
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសង្គាយនាគ្រែ៣"@km .
     
     bdr:TT61460A6F13D2983E
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8C447939559C7B5C .
-    
-    bdr:TT8C447939559C7B5C
         a                   :CoverTitle ;
         rdfs:label          "patham saṅgāyanā grè 3"@km-x-twktt .
     
-    bdr:TTCCF2DA46640085B8
-        a                   :CoverTitle ;
-        rdfs:label          "បថមសង្គាយនាគ្រែ៣"@km .
+    bdr:TTC7683D244794AF93
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
+        :femcConversionOf   bdr:TT13CF418D345AF223 .
+    
+    bdr:TTE9FE1F53EF96D76E
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TT61460A6F13D2983E .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020532 {
-    bda:LG3411AD90F261E57A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020532"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020532"@en , "imported pubinfo for W1FEMC020532"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020532"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020532 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020532 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e8/MW1FEMC020532.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020532 ;
-        adm:logEntry        bda:LG3411AD90F261E57A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5AD1C779651112D7
+    bdr:ID6EA10204A7D6574D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d*.165.III.2" .
     
-    bdr:MFD6569DAF0960D979
+    bdr:MF092DC811C022A214
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "61" ;
         :microfilmStrip     "155" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020532 {
         a                   :Instance ;
         skos:prefLabel      "មតកសូត្រ"@km , "matak sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5AD1C779651112D7 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6EA10204A7D6574D , bdr:TT81D3F5CCA35E53D2 , bdr:TTCDE337A19C077BB3 , bdr:TTFF1B9868AAB3AAE0 ;
+            bdr:ID6EA10204A7D6574D ;
+        :hasTitle           bdr:TT3411AD90F261E57A , bdr:TT8BA1AB763B0A356C , bdr:TTCDE337A19C077BB3 , bdr:TTFF1B9868AAB3AAE0 ;
         :instanceHasReproduction  bdr:W1FEMC020532 ;
+        :instanceOf         bdr:WA1FEMC020006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD6569DAF0960D979 ;
-        :note               bdr:NT092DC811C022A214 ;
+        :microfilmItem      bdr:MF092DC811C022A214 ;
+        :note               bdr:NT81D3F5CCA35E53D2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT092DC811C022A214
+    bdr:NT81D3F5CCA35E53D2
         a                   :Note ;
         :contentLocationStatement  "pg. 103" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT6EA10204A7D6574D
-        a                   :CoverTitle ;
-        rdfs:label          "matt sut"@km-x-twktt .
+    bdr:TT3411AD90F261E57A
+        a                   :Title ;
+        rdfs:label          "មតកសូត្រ"@km ;
+        :femcConversionOf   bdr:TTCDE337A19C077BB3 .
     
-    bdr:TT81D3F5CCA35E53D2
+    bdr:TT8BA1AB763B0A356C
+        a                   :Title ;
+        rdfs:label          "matak sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFF1B9868AAB3AAE0 .
+    
+    bdr:TTCDE337A19C077BB3
         a                   :CoverTitle ;
         rdfs:label          "មត្តសុត"@km .
     
-    bdr:TTCDE337A19C077BB3
-        a                   :Title ;
-        rdfs:label          "មតកសូត្រ"@km ;
-        :femcConversionOf   bdr:TT81D3F5CCA35E53D2 .
-    
     bdr:TTFF1B9868AAB3AAE0
-        a                   :Title ;
-        rdfs:label          "matak sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6EA10204A7D6574D .
+        a                   :CoverTitle ;
+        rdfs:label          "matt sut"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010926 {
-    bda:LGF0884DE9C6F6D3B8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010926"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010926"@en , "imported pubinfo for W1FEMC010926"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010926"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010926 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010926 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "37/MW1FEMC010926.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010926 ;
-        adm:logEntry        bda:LGF0884DE9C6F6D3B8 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID82124E8C1FCECA8A
+    bdr:ID17CD04F780A9C98A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "083-086-A.04.03.02.II.1" .
     
-    bdr:MFEB90FF7F79937E1D
+    bdr:MFD57AC77CCF7EC6A8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "23" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010926 {
         a                   :Instance ;
         skos:prefLabel      "ជិនវង្ស"@km , "jinavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID82124E8C1FCECA8A ;
+            bdr:ID17CD04F780A9C98A ;
         :hasFascicles       "3, 5-7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT09DA1602ADF84525 , bdr:TT17CD04F780A9C98A ;
+        :hasTitle           bdr:TT8F9B54A0B18163F6 , bdr:TTF0884DE9C6F6D3B8 ;
         :instanceHasReproduction  bdr:W1FEMC010926 ;
+        :instanceOf         bdr:WA1FEMC120018 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEB90FF7F79937E1D ;
-        :note               bdr:NTD57AC77CCF7EC6A8 ;
+        :microfilmItem      bdr:MFD57AC77CCF7EC6A8 ;
+        :note               bdr:NT09DA1602ADF84525 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD57AC77CCF7EC6A8
+    bdr:NT09DA1602ADF84525
         a                   :Note ;
         :contentLocationStatement  "pg. 234" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT09DA1602ADF84525
-        a                   :Title ;
-        rdfs:label          "ជិនវង្ស"@km .
-    
-    bdr:TT17CD04F780A9C98A
+    bdr:TT8F9B54A0B18163F6
         a                   :Title ;
         rdfs:label          "jinavaṅs"@km-x-twktt .
+    
+    bdr:TTF0884DE9C6F6D3B8
+        a                   :Title ;
+        rdfs:label          "ជិនវង្ស"@km .
 }

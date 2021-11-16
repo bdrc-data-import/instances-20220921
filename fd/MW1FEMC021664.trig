@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021664 {
-    bda:LG859CA9875CF94473
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021664"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021664"@en , "imported pubinfo for W1FEMC021664"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021664"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021664 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021664 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "fd/MW1FEMC021664.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021664 ;
-        adm:logEntry        bda:LG859CA9875CF94473 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF847D6E163E4A118
+    bdr:IDF14EE021E2B03C9D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.573.III.5" .
     
-    bdr:MF1AA955DFE2FE495C
+    bdr:MFB3F8973AE794A2DF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "133" ;
         :microfilmStrip     "227" .
@@ -56,17 +50,16 @@ bdg:MW1FEMC021664 {
         a                   :Instance ;
         skos:prefLabel      "ទសជាតក​​ (ទសជាតក ១០​ ខ្សែ)"@km , "das jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF847D6E163E4A118 ;
+            bdr:IDF14EE021E2B03C9D ;
         :hasFascicles       "10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT28391E95F56125AD , bdr:TT63ADF3072F464B3E , bdr:TTB7927FEF8E71F22D , bdr:TTF14EE021E2B03C9D ;
+        :hasTitle           bdr:TT28391E95F56125AD , bdr:TT2E447827AFB5E619 , bdr:TT63ADF3072F464B3E , bdr:TT859CA9875CF94473 ;
         :instanceHasReproduction  bdr:W1FEMC021664 ;
+        :instanceOf         bdr:WA1FEMC050012 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1AA955DFE2FE495C ;
-        :note               bdr:NT8709D46F9F8CD38C , bdr:NTB3F8973AE794A2DF ;
+        :microfilmItem      bdr:MFB3F8973AE794A2DF ;
+        :note               bdr:NT8709D46F9F8CD38C , bdr:NTB7927FEF8E71F22D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -75,26 +68,26 @@ bdg:MW1FEMC021664 {
         a                   :Note ;
         :noteText           "Should we write (ទសជាតក ១០ ខ្សែ)?"@en .
     
-    bdr:NTB3F8973AE794A2DF
+    bdr:NTB7927FEF8E71F22D
         a                   :Note ;
         :contentLocationStatement  "pg. 300" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT28391E95F56125AD
+        a                   :CoverTitle ;
+        rdfs:label          "das jātitak"@km-x-twktt .
+    
+    bdr:TT2E447827AFB5E619
         a                   :Title ;
         rdfs:label          "das jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF14EE021E2B03C9D .
+        :femcConversionOf   bdr:TT28391E95F56125AD .
     
     bdr:TT63ADF3072F464B3E
-        a                   :Title ;
-        rdfs:label          "ទសជាតក​​ (ទសជាតក ១០​ ខ្សែ)"@km ;
-        :femcConversionOf   bdr:TTB7927FEF8E71F22D .
-    
-    bdr:TTB7927FEF8E71F22D
         a                   :CoverTitle ;
         rdfs:label          "ទសជាតិតក"@km .
     
-    bdr:TTF14EE021E2B03C9D
-        a                   :CoverTitle ;
-        rdfs:label          "das jātitak"@km-x-twktt .
+    bdr:TT859CA9875CF94473
+        a                   :Title ;
+        rdfs:label          "ទសជាតក​​ (ទសជាតក ១០​ ខ្សែ)"@km ;
+        :femcConversionOf   bdr:TT63ADF3072F464B3E .
 }

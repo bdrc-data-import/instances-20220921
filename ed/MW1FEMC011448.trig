@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011448 {
-    bda:LG7FD9971CB8BA8411
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011448"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011448"@en , "imported pubinfo for W1FEMC011448"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011448"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011448 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011448 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ed/MW1FEMC011448.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011448 ;
-        adm:logEntry        bda:LG7FD9971CB8BA8411 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDAEDA4F69AE525623
+    bdr:IDEF99525442BE1E25
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "020-A.10.07.03.III.2" .
     
-    bdr:MF74E19C05B9760070
+    bdr:MF34A570B3849961FF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "73" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011448 {
         a                   :Instance ;
         skos:prefLabel      "និព្វានសូត្រ"@km , "nibbān sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAEDA4F69AE525623 ;
+            bdr:IDEF99525442BE1E25 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5E649EFE28F59803 , bdr:TTD787F39D75851875 , bdr:TTD829EEBE615BCCFF , bdr:TTEF99525442BE1E25 ;
+        :hasTitle           bdr:TT3BE122E3A2498A0B , bdr:TT5E649EFE28F59803 , bdr:TT7FD9971CB8BA8411 , bdr:TTD787F39D75851875 ;
         :instanceHasReproduction  bdr:W1FEMC011448 ;
+        :instanceOf         bdr:WA1FEMC020008 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF74E19C05B9760070 ;
-        :note               bdr:NT34A570B3849961FF ;
+        :microfilmItem      bdr:MF34A570B3849961FF ;
+        :note               bdr:NTD829EEBE615BCCFF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT34A570B3849961FF
+    bdr:NTD829EEBE615BCCFF
         a                   :Note ;
         :contentLocationStatement  "pg. 335" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT5E649EFE28F59803
+    bdr:TT3BE122E3A2498A0B
         a                   :Title ;
         rdfs:label          "nibbān sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEF99525442BE1E25 .
+        :femcConversionOf   bdr:TT5E649EFE28F59803 .
     
-    bdr:TTD787F39D75851875
-        a                   :Title ;
-        rdfs:label          "និព្វានសូត្រ"@km ;
-        :femcConversionOf   bdr:TTD829EEBE615BCCFF .
-    
-    bdr:TTD829EEBE615BCCFF
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មនិព្វាន"@km .
-    
-    bdr:TTEF99525442BE1E25
+    bdr:TT5E649EFE28F59803
         a                   :CoverTitle ;
         rdfs:label          "dhamm nibbān"@km-x-twktt .
+    
+    bdr:TT7FD9971CB8BA8411
+        a                   :Title ;
+        rdfs:label          "និព្វានសូត្រ"@km ;
+        :femcConversionOf   bdr:TTD787F39D75851875 .
+    
+    bdr:TTD787F39D75851875
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មនិព្វាន"@km .
 }

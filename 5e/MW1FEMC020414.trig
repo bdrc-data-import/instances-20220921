@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020414 {
-    bda:LG5A66318188C26717
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020414"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020414"@en , "imported pubinfo for W1FEMC020414"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020414"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020414 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020414 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5e/MW1FEMC020414.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020414 ;
-        adm:logEntry        bda:LG5A66318188C26717 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID24BD7D80D0C88908
+    bdr:ID140E53C93DEE4F3B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.48.V.1" .
     
-    bdr:MFE6D7FF2091B53B51
+    bdr:MF75B70769BE4E2168
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "67" ;
         :microfilmStrip     "161" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020414 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-suṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID24BD7D80D0C88908 ;
+            bdr:ID140E53C93DEE4F3B ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT140E53C93DEE4F3B , bdr:TT3BB58DB2897E351E , bdr:TT67DDB24E24E1C2C5 , bdr:TTE7CED0CDF2273036 ;
+        :hasTitle           bdr:TT5A66318188C26717 , bdr:TT67DDB24E24E1C2C5 , bdr:TTC061399C1D31AD64 , bdr:TTE7CED0CDF2273036 ;
         :instanceHasReproduction  bdr:W1FEMC020414 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE6D7FF2091B53B51 ;
-        :note               bdr:NT75B70769BE4E2168 ;
+        :microfilmItem      bdr:MF75B70769BE4E2168 ;
+        :note               bdr:NT3BB58DB2897E351E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT75B70769BE4E2168
+    bdr:NT3BB58DB2897E351E
         a                   :Note ;
         :contentLocationStatement  "pg. 81" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT140E53C93DEE4F3B
+    bdr:TT5A66318188C26717
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TTE7CED0CDF2273036 .
+    
+    bdr:TT67DDB24E24E1C2C5
         a                   :CoverTitle ;
         rdfs:label          "thamm vịṅ-suṅ"@km-x-twktt .
     
-    bdr:TT3BB58DB2897E351E
-        a                   :CoverTitle ;
-        rdfs:label          "ថម្មវឹងស៊ុង"@km .
-    
-    bdr:TT67DDB24E24E1C2C5
+    bdr:TTC061399C1D31AD64
         a                   :Title ;
         rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT140E53C93DEE4F3B .
+        :femcConversionOf   bdr:TT67DDB24E24E1C2C5 .
     
     bdr:TTE7CED0CDF2273036
-        a                   :Title ;
-        rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT3BB58DB2897E351E .
+        a                   :CoverTitle ;
+        rdfs:label          "ថម្មវឹងស៊ុង"@km .
 }

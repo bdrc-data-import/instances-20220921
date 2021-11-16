@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022001 {
-    bda:LG36A018504C4D42B9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022001"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022001"@en , "imported pubinfo for W1FEMC022001"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022001"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022001 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022001 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "98/MW1FEMC022001.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022001 ;
-        adm:logEntry        bda:LG36A018504C4D42B9 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6771D5EE1B287193
+    bdr:ID25F9721F1858A252
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.783.V.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC022001 {
         a                   :Instance ;
         skos:prefLabel      "សតិមហាបដ្ឋាន"@km , "sati mahā paṭṭhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6771D5EE1B287193 ;
+            bdr:ID25F9721F1858A252 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT25F9721F1858A252 , bdr:TT85055F47B27B4BF7 , bdr:TTC2520B8665AACBA5 , bdr:TTE595FE50088F70EE ;
+        :hasTitle           bdr:TT36A018504C4D42B9 , bdr:TT85055F47B27B4BF7 , bdr:TT8DEE115BF24C25C7 , bdr:TTC2520B8665AACBA5 ;
         :instanceHasReproduction  bdr:W1FEMC022001 ;
+        :instanceOf         bdr:WA1FEMC070017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTDE62287C04ACC3D2 ;
+        :note               bdr:NTE595FE50088F70EE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDE62287C04ACC3D2
+    bdr:NTE595FE50088F70EE
         a                   :Note ;
         :contentLocationStatement  "pg. 354" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT25F9721F1858A252
-        a                   :CoverTitle ;
-        rdfs:label          "mahā paṭṭhān"@km-x-twktt .
-    
-    bdr:TT85055F47B27B4BF7
+    bdr:TT36A018504C4D42B9
         a                   :Title ;
         rdfs:label          "សតិមហាបដ្ឋាន"@km ;
-        :femcConversionOf   bdr:TTE595FE50088F70EE .
+        :femcConversionOf   bdr:TT85055F47B27B4BF7 .
     
-    bdr:TTC2520B8665AACBA5
-        a                   :Title ;
-        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TT25F9721F1858A252 .
-    
-    bdr:TTE595FE50088F70EE
+    bdr:TT85055F47B27B4BF7
         a                   :CoverTitle ;
         rdfs:label          "មហាបដ្ឋាន"@km .
+    
+    bdr:TT8DEE115BF24C25C7
+        a                   :Title ;
+        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC2520B8665AACBA5 .
+    
+    bdr:TTC2520B8665AACBA5
+        a                   :CoverTitle ;
+        rdfs:label          "mahā paṭṭhān"@km-x-twktt .
 }

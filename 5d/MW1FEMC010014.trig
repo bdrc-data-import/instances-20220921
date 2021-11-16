@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010014 {
-    bda:LGF83E124FCEAFCF13
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010014"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010014"@en , "imported pubinfo for W1FEMC010014"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010014"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010014 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010014 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5d/MW1FEMC010014.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010014 ;
-        adm:logEntry        bda:LGF83E124FCEAFCF13 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID2CCE0949A16A79C8
+    bdr:IDB7F1A593DC933561
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-PP.00.03.01.V.2" .
     
-    bdr:MFA2354E17D496ED1F
+    bdr:MF431DCF3780AA4D45
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "1" ;
         :microfilmStrip     "1" .
@@ -55,42 +49,41 @@ bdg:MW1FEMC010014 {
         a                   :Instance ;
         skos:prefLabel      "រាជក្រឹត្យក្រមពលទេព"@km , "rāj krịty kram bal deb"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2CCE0949A16A79C8 ;
+            bdr:IDB7F1A593DC933561 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3786748E51C97248 , bdr:TT49A50CC6E14713FC , bdr:TT71EF37F9113959CC , bdr:TTB7F1A593DC933561 ;
+        :hasTitle           bdr:TT49A50CC6E14713FC , bdr:TT71EF37F9113959CC , bdr:TTC67D19C04FF754C2 , bdr:TTF83E124FCEAFCF13 ;
         :instanceHasReproduction  bdr:W1FEMC010014 ;
+        :instanceOf         bdr:WA1FEMC140002 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA2354E17D496ED1F ;
-        :note               bdr:NT431DCF3780AA4D45 ;
+        :microfilmItem      bdr:MF431DCF3780AA4D45 ;
+        :note               bdr:NT3786748E51C97248 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "b 983" .
     
-    bdr:NT431DCF3780AA4D45
+    bdr:NT3786748E51C97248
         a                   :Note ;
         :contentLocationStatement  "pg. 56" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3786748E51C97248
+    bdr:TT49A50CC6E14713FC
+        a                   :CoverTitle ;
+        rdfs:label          "rāj krit kram bal deb"@km-x-twktt .
+    
+    bdr:TT71EF37F9113959CC
         a                   :CoverTitle ;
         rdfs:label          "រាជក្រិតក្រមពលទេព"@km .
     
-    bdr:TT49A50CC6E14713FC
+    bdr:TTC67D19C04FF754C2
         a                   :Title ;
         rdfs:label          "rāj krịty kram bal deb"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB7F1A593DC933561 .
+        :femcConversionOf   bdr:TT49A50CC6E14713FC .
     
-    bdr:TT71EF37F9113959CC
+    bdr:TTF83E124FCEAFCF13
         a                   :Title ;
         rdfs:label          "រាជក្រឹត្យក្រមពលទេព"@km ;
-        :femcConversionOf   bdr:TT3786748E51C97248 .
-    
-    bdr:TTB7F1A593DC933561
-        a                   :CoverTitle ;
-        rdfs:label          "rāj krit kram bal deb"@km-x-twktt .
+        :femcConversionOf   bdr:TT71EF37F9113959CC .
 }

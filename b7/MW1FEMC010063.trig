@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010063 {
-    bda:LG9BDD87099F9F8F1C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010063"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010063"@en , "imported pubinfo for W1FEMC010063"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010063"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010063 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010063 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b7/MW1FEMC010063.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010063 ;
-        adm:logEntry        bda:LG9BDD87099F9F8F1C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA7A49988637995F1
+    bdr:ID73A2F04F3A1AD5CF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "025-PP.01.08.01.III.5" .
     
-    bdr:MF37EC45DFBFFB1931
+    bdr:MF77831F95BC723FB4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "22" ;
         :microfilmStrip     "17" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010063 {
         a                   :Instance ;
         skos:prefLabel      "ទសជាតកសង្ខេបសេចក្តី"@km , "das jātak saṅkhep sec-ktī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA7A49988637995F1 ;
+            bdr:ID73A2F04F3A1AD5CF ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1E12A21371A80D29 , bdr:TT73A2F04F3A1AD5CF , bdr:TT9716438751AE4D13 , bdr:TTDD1A18F99524A2D9 ;
+        :hasTitle           bdr:TT7F98AC28FA097459 , bdr:TT9716438751AE4D13 , bdr:TT9BDD87099F9F8F1C , bdr:TTDD1A18F99524A2D9 ;
         :instanceHasReproduction  bdr:W1FEMC010063 ;
+        :instanceOf         bdr:WA1FEMC050014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF37EC45DFBFFB1931 ;
-        :note               bdr:NT77831F95BC723FB4 ;
+        :microfilmItem      bdr:MF77831F95BC723FB4 ;
+        :note               bdr:NT1E12A21371A80D29 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT77831F95BC723FB4
+    bdr:NT1E12A21371A80D29
         a                   :Note ;
         :contentLocationStatement  "pg. 66" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1E12A21371A80D29
-        a                   :CoverTitle ;
-        rdfs:label          "សោរុព្ភទសជាតិក​ គឺជាដក់ទ្ង័១០"@km .
+    bdr:TT7F98AC28FA097459
+        a                   :Title ;
+        rdfs:label          "das jātak saṅkhep sec-ktī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT9716438751AE4D13 .
     
-    bdr:TT73A2F04F3A1AD5CF
+    bdr:TT9716438751AE4D13
         a                   :CoverTitle ;
         rdfs:label          "sorubbh das jātik gḹ jāṭak' dăṅ°10"@km-x-twktt .
     
-    bdr:TT9716438751AE4D13
-        a                   :Title ;
-        rdfs:label          "das jātak saṅkhep sec-ktī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT73A2F04F3A1AD5CF .
-    
-    bdr:TTDD1A18F99524A2D9
+    bdr:TT9BDD87099F9F8F1C
         a                   :Title ;
         rdfs:label          "ទសជាតកសង្ខេបសេចក្តី"@km ;
-        :femcConversionOf   bdr:TT1E12A21371A80D29 .
+        :femcConversionOf   bdr:TTDD1A18F99524A2D9 .
+    
+    bdr:TTDD1A18F99524A2D9
+        a                   :CoverTitle ;
+        rdfs:label          "សោរុព្ភទសជាតិក​ គឺជាដក់ទ្ង័១០"@km .
 }

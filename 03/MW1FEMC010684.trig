@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010684 {
-    bda:LG80F4326640CD75FE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010684"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010684"@en , "imported pubinfo for W1FEMC010684"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010684"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010684 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010684 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "03/MW1FEMC010684.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010684 ;
-        adm:logEntry        bda:LG80F4326640CD75FE , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCA45D471EE1B0D19
+    bdr:ID3DC8F8B173CA9028
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.03.05.03.VI.6" .
     
-    bdr:MFF8BB8BBB77169FE7
+    bdr:MFE02DFA7D5F825381
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "124" .
@@ -55,17 +49,16 @@ bdg:MW1FEMC010684 {
         a                   :Instance ;
         skos:prefLabel      "គាថាមកុដពេជ្រ"@km , "gāthā makuṭ bejr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCA45D471EE1B0D19 ;
+            bdr:ID3DC8F8B173CA9028 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0907092B90306B09 , bdr:TT3DC8F8B173CA9028 , bdr:TT6BF62DD9454BDA6E , bdr:TTBBD3EEF48D68E462 ;
+        :hasTitle           bdr:TT0907092B90306B09 , bdr:TT3342CA4226B64E8E , bdr:TT80F4326640CD75FE , bdr:TTBBD3EEF48D68E462 ;
         :instanceHasReproduction  bdr:W1FEMC010684 ;
+        :instanceOf         bdr:WA1FEMC090003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF8BB8BBB77169FE7 ;
-        :note               bdr:NT3E1A564C9747F776 , bdr:NTE02DFA7D5F825381 ;
+        :microfilmItem      bdr:MFE02DFA7D5F825381 ;
+        :note               bdr:NT3E1A564C9747F776 , bdr:NT6BF62DD9454BDA6E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -74,26 +67,26 @@ bdg:MW1FEMC010684 {
         a                   :Note ;
         :noteText           "Should we write (វាន) ?"@en .
     
-    bdr:NTE02DFA7D5F825381
+    bdr:NT6BF62DD9454BDA6E
         a                   :Note ;
         :contentLocationStatement  "pg. 188" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0907092B90306B09
-        a                   :Title ;
-        rdfs:label          "គាថាមកុដពេជ្រ"@km ;
-        :femcConversionOf   bdr:TT6BF62DD9454BDA6E .
-    
-    bdr:TT3DC8F8B173CA9028
-        a                   :CoverTitle ;
-        rdfs:label          "gāthā makuṭṭh bejj"@km-x-twktt .
-    
-    bdr:TT6BF62DD9454BDA6E
         a                   :CoverTitle ;
         rdfs:label          "គាថាមកុដ្ឋពេជ្ជ (វាន)"@km .
     
-    bdr:TTBBD3EEF48D68E462
+    bdr:TT3342CA4226B64E8E
         a                   :Title ;
         rdfs:label          "gāthā makuṭ bejr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3DC8F8B173CA9028 .
+        :femcConversionOf   bdr:TTBBD3EEF48D68E462 .
+    
+    bdr:TT80F4326640CD75FE
+        a                   :Title ;
+        rdfs:label          "គាថាមកុដពេជ្រ"@km ;
+        :femcConversionOf   bdr:TT0907092B90306B09 .
+    
+    bdr:TTBBD3EEF48D68E462
+        a                   :CoverTitle ;
+        rdfs:label          "gāthā makuṭṭh bejj"@km-x-twktt .
 }

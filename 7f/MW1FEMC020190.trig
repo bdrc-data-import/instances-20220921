@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020190 {
-    bda:LG4351B4F7288913A6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020190"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020190"@en , "imported pubinfo for W1FEMC020190"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020190"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020190 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020190 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7f/MW1FEMC020190.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020190 ;
-        adm:logEntry        bda:LG4351B4F7288913A6 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE118A5A14B27BCA6
+    bdr:IDBB1CF9B4B7066E20
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.83.III.1" .
     
-    bdr:MF49CB1799B43F3102
+    bdr:MFB52FEDE00BCC08B5
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "32" ;
         :microfilmStrip     "59" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020190 {
         a                   :Instance ;
         skos:prefLabel      "សត្តពោជ្ឃង្គ"@km , "satt bojjhaṅg"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE118A5A14B27BCA6 ;
+            bdr:IDBB1CF9B4B7066E20 ;
         :hasFascicles       "2, 6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT06516685A9F474DC , bdr:TT0EA59292FD684E0B , bdr:TT8516FB61EECF9067 , bdr:TTBB1CF9B4B7066E20 ;
+        :hasTitle           bdr:TT06516685A9F474DC , bdr:TT0EA59292FD684E0B , bdr:TT4351B4F7288913A6 , bdr:TT89ED84A7CF3C66BB ;
         :instanceHasReproduction  bdr:W1FEMC020190 ;
+        :instanceOf         bdr:WA1FEMC010063 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF49CB1799B43F3102 ;
-        :note               bdr:NTB52FEDE00BCC08B5 ;
+        :microfilmItem      bdr:MFB52FEDE00BCC08B5 ;
+        :note               bdr:NT8516FB61EECF9067 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "842" .
     
-    bdr:NTB52FEDE00BCC08B5
+    bdr:NT8516FB61EECF9067
         a                   :Note ;
         :contentLocationStatement  "pg. 38" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT06516685A9F474DC
-        a                   :Title ;
-        rdfs:label          "satt bojjhaṅg"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBB1CF9B4B7066E20 .
+        a                   :CoverTitle ;
+        rdfs:label          "satt bojjhaṃṅ"@km-x-twktt .
     
     bdr:TT0EA59292FD684E0B
-        a                   :Title ;
-        rdfs:label          "សត្តពោជ្ឃង្គ"@km ;
-        :femcConversionOf   bdr:TT8516FB61EECF9067 .
-    
-    bdr:TT8516FB61EECF9067
         a                   :CoverTitle ;
         rdfs:label          "សត្តពោជ្ឈំង"@km .
     
-    bdr:TTBB1CF9B4B7066E20
-        a                   :CoverTitle ;
-        rdfs:label          "satt bojjhaṃṅ"@km-x-twktt .
+    bdr:TT4351B4F7288913A6
+        a                   :Title ;
+        rdfs:label          "សត្តពោជ្ឃង្គ"@km ;
+        :femcConversionOf   bdr:TT0EA59292FD684E0B .
+    
+    bdr:TT89ED84A7CF3C66BB
+        a                   :Title ;
+        rdfs:label          "satt bojjhaṅg"@km-x-twktt ;
+        :femcConversionOf   bdr:TT06516685A9F474DC .
 }

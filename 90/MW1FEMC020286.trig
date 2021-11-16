@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020286 {
-    bda:LGBDC5A75997AFABF0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020286"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020286"@en , "imported pubinfo for W1FEMC020286"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020286"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020286 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020286 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "90/MW1FEMC020286.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020286 ;
-        adm:logEntry        bda:LGBDC5A75997AFABF0 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA70D704B6F5E1D29
+    bdr:IDC0245A5D86696D4F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.179.II.2" .
     
-    bdr:MF3561C515E01A0A4F
+    bdr:MF068C66F4D7ACF7B8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020286 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកទោមនិងគែប"@km , "lpök dom niṅ gèp"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA70D704B6F5E1D29 ;
+            bdr:IDC0245A5D86696D4F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT404BFD6329CDEDE3 , bdr:TT60258D20315AC6F1 , bdr:TTBB285EE064DA672C , bdr:TTC0245A5D86696D4F ;
+        :hasTitle           bdr:TT404BFD6329CDEDE3 , bdr:TTBB285EE064DA672C , bdr:TTBDC5A75997AFABF0 , bdr:TTD68C6B4E47BF819C ;
         :instanceHasReproduction  bdr:W1FEMC020286 ;
+        :instanceOf         bdr:WA1FEMC130011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3561C515E01A0A4F ;
-        :note               bdr:NT068C66F4D7ACF7B8 ;
+        :microfilmItem      bdr:MF068C66F4D7ACF7B8 ;
+        :note               bdr:NT60258D20315AC6F1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT068C66F4D7ACF7B8
+    bdr:NT60258D20315AC6F1
         a                   :Note ;
         :contentLocationStatement  "pg. 57" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT404BFD6329CDEDE3
-        a                   :Title ;
-        rdfs:label          "lpök dom niṅ gèp"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC0245A5D86696D4F .
+        a                   :CoverTitle ;
+        rdfs:label          "dom niṅ gèp"@km-x-twktt .
     
-    bdr:TT60258D20315AC6F1
+    bdr:TTBB285EE064DA672C
         a                   :CoverTitle ;
         rdfs:label          "ទោមនិងគែប"@km .
     
-    bdr:TTBB285EE064DA672C
+    bdr:TTBDC5A75997AFABF0
         a                   :Title ;
         rdfs:label          "ល្បើកទោមនិងគែប"@km ;
-        :femcConversionOf   bdr:TT60258D20315AC6F1 .
+        :femcConversionOf   bdr:TTBB285EE064DA672C .
     
-    bdr:TTC0245A5D86696D4F
-        a                   :CoverTitle ;
-        rdfs:label          "dom niṅ gèp"@km-x-twktt .
+    bdr:TTD68C6B4E47BF819C
+        a                   :Title ;
+        rdfs:label          "lpök dom niṅ gèp"@km-x-twktt ;
+        :femcConversionOf   bdr:TT404BFD6329CDEDE3 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020403 {
-    bda:LG37EFC815FCE63A99
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020403"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020403"@en , "imported pubinfo for W1FEMC020403"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020403"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020403 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020403 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7f/MW1FEMC020403.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020403 ;
-        adm:logEntry        bda:LG37EFC815FCE63A99 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6AD2E67199EF4950
+    bdr:IDD4FA980B959D86BF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.38.III.1" .
     
-    bdr:MFA82509F3C7F1DE23
+    bdr:MF092C1A9513E744F6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "66" ;
         :microfilmStrip     "160" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020403 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6AD2E67199EF4950 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT12BEB1BB43DB95EF , bdr:TT759DF0EB6ACEDA7B , bdr:TTBFDC495133B39C4C , bdr:TTD4FA980B959D86BF ;
+            bdr:IDD4FA980B959D86BF ;
+        :hasTitle           bdr:TT12BEB1BB43DB95EF , bdr:TT37EFC815FCE63A99 , bdr:TT759DF0EB6ACEDA7B , bdr:TTB886461F94FFD5D8 ;
         :instanceHasReproduction  bdr:W1FEMC020403 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA82509F3C7F1DE23 ;
-        :note               bdr:NT092C1A9513E744F6 ;
+        :microfilmItem      bdr:MF092C1A9513E744F6 ;
+        :note               bdr:NTBFDC495133B39C4C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT092C1A9513E744F6
+    bdr:NTBFDC495133B39C4C
         a                   :Note ;
         :contentLocationStatement  "pg. 79" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT12BEB1BB43DB95EF
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD4FA980B959D86BF .
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm saghāyanā gre 3"@km-x-twktt .
     
-    bdr:TT759DF0EB6ACEDA7B
+    bdr:TT37EFC815FCE63A99
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
-        :femcConversionOf   bdr:TTBFDC495133B39C4C .
+        :femcConversionOf   bdr:TT759DF0EB6ACEDA7B .
     
-    bdr:TTBFDC495133B39C4C
+    bdr:TT759DF0EB6ACEDA7B
         a                   :CoverTitle ;
         rdfs:label          "ធម្មសឃាយនាគ្រេ៣"@km .
     
-    bdr:TTD4FA980B959D86BF
-        a                   :CoverTitle ;
-        rdfs:label          "dhamm saghāyanā gre 3"@km-x-twktt .
+    bdr:TTB886461F94FFD5D8
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TT12BEB1BB43DB95EF .
 }

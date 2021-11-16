@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010528 {
-    bda:LG52A6B965F9041F02
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010528"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010528"@en , "imported pubinfo for W1FEMC010528"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010528"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010528 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010528 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "9e/MW1FEMC010528.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010528 ;
-        adm:logEntry        bda:LG52A6B965F9041F02 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFAFB5BBCFEF41533
+    bdr:ID043CC9495E0C05A0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "013-A.02.09.01.III.1" .
     
-    bdr:MFE35952DBB52FB02F
+    bdr:MFB3A878FFE4396B88
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "14" ;
         :microfilmStrip     "57" .
@@ -55,30 +49,29 @@ bdg:MW1FEMC010528 {
         a                   :Instance ;
         skos:prefLabel      "មាឃបូជា វិសាខបូជា"@km , "māghapūjā visākhapūjā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFAFB5BBCFEF41533 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT043CC9495E0C05A0 , bdr:TT46CE6F0674D617B0 ;
+            bdr:ID043CC9495E0C05A0 ;
+        :hasTitle           bdr:TT52A6B965F9041F02 , bdr:TT9CB3C0CE5B21971C ;
         :instanceHasReproduction  bdr:W1FEMC010528 ;
+        :instanceOf         bdr:WA1FEMC010038 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE35952DBB52FB02F ;
-        :note               bdr:NTB3A878FFE4396B88 ;
+        :microfilmItem      bdr:MFB3A878FFE4396B88 ;
+        :note               bdr:NT46CE6F0674D617B0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB3A878FFE4396B88
+    bdr:NT46CE6F0674D617B0
         a                   :Note ;
         :contentLocationStatement  "pg. 157" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT043CC9495E0C05A0
-        a                   :Title ;
-        rdfs:label          "māghapūjā visākhapūjā"@km-x-twktt .
-    
-    bdr:TT46CE6F0674D617B0
+    bdr:TT52A6B965F9041F02
         a                   :Title ;
         rdfs:label          "មាឃបូជា វិសាខបូជា"@km .
+    
+    bdr:TT9CB3C0CE5B21971C
+        a                   :Title ;
+        rdfs:label          "māghapūjā visākhapūjā"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010521 {
-    bda:LGE92FEAFF9D765A6B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010521"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010521"@en , "imported pubinfo for W1FEMC010521"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010521"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010521 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010521 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "8c/MW1FEMC010521.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010521 ;
-        adm:logEntry        bda:LGE92FEAFF9D765A6B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID076554A8FD245CDF
+    bdr:ID529CC39770EA62C2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005-A.02.09.01.III.1" .
     
-    bdr:MF90DC8899A974B190
+    bdr:MF08A4E3C9E9653741
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "14" ;
         :microfilmStrip     "57" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010521 {
         a                   :Instance ;
         skos:prefLabel      "ពាហុំ"@km , "bāhuṃ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID076554A8FD245CDF ;
+            bdr:ID529CC39770EA62C2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT45CAE5D83AC2D4EF , bdr:TT529CC39770EA62C2 ;
+        :hasTitle           bdr:TT9304EFE3E184520A , bdr:TTE92FEAFF9D765A6B ;
         :instanceHasReproduction  bdr:W1FEMC010521 ;
+        :instanceOf         bdr:WA1FEMC010011 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF90DC8899A974B190 ;
-        :note               bdr:NT08A4E3C9E9653741 ;
+        :microfilmItem      bdr:MF08A4E3C9E9653741 ;
+        :note               bdr:NT45CAE5D83AC2D4EF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT08A4E3C9E9653741
+    bdr:NT45CAE5D83AC2D4EF
         a                   :Note ;
         :contentLocationStatement  "pg. 156" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT45CAE5D83AC2D4EF
-        a                   :Title ;
-        rdfs:label          "ពាហុំ"@km .
-    
-    bdr:TT529CC39770EA62C2
+    bdr:TT9304EFE3E184520A
         a                   :Title ;
         rdfs:label          "bāhuṃ"@km-x-twktt .
+    
+    bdr:TTE92FEAFF9D765A6B
+        a                   :Title ;
+        rdfs:label          "ពាហុំ"@km .
 }

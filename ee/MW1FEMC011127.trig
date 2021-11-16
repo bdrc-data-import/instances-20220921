@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011127 {
-    bda:LGAC97E597160702A1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011127"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011127"@en , "imported pubinfo for W1FEMC011127"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011127"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011127 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011127 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "ee/MW1FEMC011127.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011127 ;
-        adm:logEntry        bda:LGAC97E597160702A1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEBE46073F6E8757F
+    bdr:ID3547CE28E34657ED
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "025-A.04.17.02.III.3" .
     
-    bdr:MF346DBB497F298B27
+    bdr:MF759CD095DEB9554F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "49" .
@@ -55,16 +49,15 @@ bdg:MW1FEMC011127 {
         a                   :Instance ;
         skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ"@km , "bhikkhuppāṭimokkh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEBE46073F6E8757F ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3547CE28E34657ED , bdr:TT4F27E4D0E3AF5BA6 , bdr:TT57B2D5B239B0F73C , bdr:TTF733884A1C035430 ;
+            bdr:ID3547CE28E34657ED ;
+        :hasTitle           bdr:TT4F27E4D0E3AF5BA6 , bdr:TT57B2D5B239B0F73C , bdr:TT93E8544697EFA1DF , bdr:TTAC97E597160702A1 ;
         :instanceHasReproduction  bdr:W1FEMC011127 ;
+        :instanceOf         bdr:WA1FEMC030005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF346DBB497F298B27 ;
-        :note               bdr:NT67D7E3C4B740DB52 , bdr:NT759CD095DEB9554F ;
+        :microfilmItem      bdr:MF759CD095DEB9554F ;
+        :note               bdr:NT67D7E3C4B740DB52 , bdr:NTF733884A1C035430 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -73,26 +66,26 @@ bdg:MW1FEMC011127 {
         a                   :Note ;
         :noteText           "Should we write (ចា-ជ) ?"@en .
     
-    bdr:NT759CD095DEB9554F
+    bdr:NTF733884A1C035430
         a                   :Note ;
         :contentLocationStatement  "pg. 272" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT3547CE28E34657ED
+    bdr:TT4F27E4D0E3AF5BA6
         a                   :CoverTitle ;
         rdfs:label          "pātimokkh"@km-x-twktt .
     
-    bdr:TT4F27E4D0E3AF5BA6
-        a                   :Title ;
-        rdfs:label          "bhikkhuppāṭimokkh"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3547CE28E34657ED .
-    
     bdr:TT57B2D5B239B0F73C
-        a                   :Title ;
-        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@km ;
-        :femcConversionOf   bdr:TTF733884A1C035430 .
-    
-    bdr:TTF733884A1C035430
         a                   :CoverTitle ;
         rdfs:label          "បាតិមោក្ខ (ចា-ជ)"@km .
+    
+    bdr:TT93E8544697EFA1DF
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkh"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4F27E4D0E3AF5BA6 .
+    
+    bdr:TTAC97E597160702A1
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@km ;
+        :femcConversionOf   bdr:TT57B2D5B239B0F73C .
 }

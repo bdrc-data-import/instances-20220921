@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010060 {
-    bda:LG523B5BD7135E8DB6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010060"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010060"@en , "imported pubinfo for W1FEMC010060"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010060"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010060 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010060 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "66/MW1FEMC010060.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010060 ;
-        adm:logEntry        bda:LG523B5BD7135E8DB6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD6D65B01337EFC24
+    bdr:ID5A8335D976C67057
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "018-20-PP.01.08.01.III.1" .
     
-    bdr:MF38366E0B68AF6082
+    bdr:MF10198CCB24263C78
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "22" ;
         :microfilmStrip     "17" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010060 {
         a                   :Instance ;
         skos:prefLabel      "ធាតុវន្ទនវត្ថុ"@km , "dhātu vandanavatthu"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD6D65B01337EFC24 ;
+            bdr:ID5A8335D976C67057 ;
         :hasFascicles       "1-3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5A8335D976C67057 , bdr:TTB090594B603D31E6 ;
+        :hasTitle           bdr:TT523B5BD7135E8DB6 , bdr:TTA17CC9C0F09BB5F7 ;
         :instanceHasReproduction  bdr:W1FEMC010060 ;
+        :instanceOf         bdr:WA1FEMC010031 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF38366E0B68AF6082 ;
-        :note               bdr:NT10198CCB24263C78 ;
+        :microfilmItem      bdr:MF10198CCB24263C78 ;
+        :note               bdr:NTB090594B603D31E6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT10198CCB24263C78
+    bdr:NTB090594B603D31E6
         a                   :Note ;
         :contentLocationStatement  "pg. 66" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT5A8335D976C67057
-        a                   :Title ;
-        rdfs:label          "dhātu vandanavatthu"@km-x-twktt .
-    
-    bdr:TTB090594B603D31E6
+    bdr:TT523B5BD7135E8DB6
         a                   :Title ;
         rdfs:label          "ធាតុវន្ទនវត្ថុ"@km .
+    
+    bdr:TTA17CC9C0F09BB5F7
+        a                   :Title ;
+        rdfs:label          "dhātu vandanavatthu"@km-x-twktt .
 }

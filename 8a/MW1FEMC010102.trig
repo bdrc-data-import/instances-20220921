@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010102 {
-    bda:LGB6BF4C78400AAA44
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010102"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010102"@en , "imported pubinfo for W1FEMC010102"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010102"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010102 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010102 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8a/MW1FEMC010102.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010102 ;
-        adm:logEntry        bda:LGB6BF4C78400AAA44 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID403FB1CA2D0C2C5A
+    bdr:ID7ABE738735D99096
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "061-PP.01.10.03.II.1" .
     
-    bdr:MFB9B2966F034D6A10
+    bdr:MF486399B0B0D80DA4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010102 {
         a                   :Instance ;
         skos:prefLabel      "សុរេន្រ្ទវតីសិរីវិជ័យ"@km , "surendr vatī sirī vijăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID403FB1CA2D0C2C5A ;
+            bdr:ID7ABE738735D99096 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT40FB3BDD3474FC91 , bdr:TT63C3744F63BB5F4C , bdr:TT7ABE738735D99096 , bdr:TTEE4CF971C666B674 ;
+        :hasTitle           bdr:TT63C3744F63BB5F4C , bdr:TTB6BF4C78400AAA44 , bdr:TTEE4CF971C666B674 , bdr:TTF80B65F3E66756A4 ;
         :instanceHasReproduction  bdr:W1FEMC010102 ;
+        :instanceOf         bdr:WA1FEMC120038 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB9B2966F034D6A10 ;
-        :note               bdr:NT486399B0B0D80DA4 ;
+        :microfilmItem      bdr:MF486399B0B0D80DA4 ;
+        :note               bdr:NT40FB3BDD3474FC91 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT486399B0B0D80DA4
+    bdr:NT40FB3BDD3474FC91
         a                   :Note ;
         :contentLocationStatement  "pg. 74" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT40FB3BDD3474FC91
-        a                   :CoverTitle ;
-        rdfs:label          "សូរេនវត្តីសិរីវិជៃយ"@km .
-    
     bdr:TT63C3744F63BB5F4C
-        a                   :Title ;
-        rdfs:label          "surendr vatī sirī vijăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7ABE738735D99096 .
-    
-    bdr:TT7ABE738735D99096
         a                   :CoverTitle ;
         rdfs:label          "sūren vattī sirīvijaiy"@km-x-twktt .
     
-    bdr:TTEE4CF971C666B674
+    bdr:TTB6BF4C78400AAA44
         a                   :Title ;
         rdfs:label          "សុរេន្រ្ទវតីសិរីវិជ័យ"@km ;
-        :femcConversionOf   bdr:TT40FB3BDD3474FC91 .
+        :femcConversionOf   bdr:TTEE4CF971C666B674 .
+    
+    bdr:TTEE4CF971C666B674
+        a                   :CoverTitle ;
+        rdfs:label          "សូរេនវត្តីសិរីវិជៃយ"@km .
+    
+    bdr:TTF80B65F3E66756A4
+        a                   :Title ;
+        rdfs:label          "surendr vatī sirī vijăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT63C3744F63BB5F4C .
 }

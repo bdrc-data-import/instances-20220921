@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011587 {
-    bda:LG66E4E497E28CF33B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011587"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011587"@en , "imported pubinfo for W1FEMC011587"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011587"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011587 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011587 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0c/MW1FEMC011587.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011587 ;
-        adm:logEntry        bda:LG66E4E497E28CF33B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID870F8BF578C939BD
+    bdr:ID124749F08E5ABFD3
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "019-A.10.10.01.III.2" .
     
-    bdr:MFDE73D1BA774D05DB
+    bdr:MF557A015FED40F61F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "31" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC011587 {
         a                   :Instance ;
         skos:prefLabel      "ព្រហ្មសូត្រ"@km , "brahm sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID870F8BF578C939BD ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT124749F08E5ABFD3 , bdr:TT44549A0104F49FDD , bdr:TT6953255632817293 , bdr:TT858F13456D117ED5 ;
+            bdr:ID124749F08E5ABFD3 ;
+        :hasTitle           bdr:TT44549A0104F49FDD , bdr:TT66E4E497E28CF33B , bdr:TT7756A9E87C6FF61D , bdr:TT858F13456D117ED5 ;
         :instanceHasReproduction  bdr:W1FEMC011587 ;
+        :instanceOf         bdr:WA1FEMC020016 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDE73D1BA774D05DB ;
-        :note               bdr:NT557A015FED40F61F ;
+        :microfilmItem      bdr:MF557A015FED40F61F ;
+        :note               bdr:NT6953255632817293 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT557A015FED40F61F
+    bdr:NT6953255632817293
         a                   :Note ;
         :contentLocationStatement  "pg. 360" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT124749F08E5ABFD3
+    bdr:TT44549A0104F49FDD
         a                   :CoverTitle ;
         rdfs:label          "dhamm pad pun tun"@km-x-twktt .
     
-    bdr:TT44549A0104F49FDD
-        a                   :Title ;
-        rdfs:label          "brahm sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT124749F08E5ABFD3 .
-    
-    bdr:TT6953255632817293
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រហ្មណ៍សូត្រ"@km .
-    
-    bdr:TT858F13456D117ED5
+    bdr:TT66E4E497E28CF33B
         a                   :Title ;
         rdfs:label          "ព្រហ្មសូត្រ"@km ;
-        :femcConversionOf   bdr:TT6953255632817293 .
+        :femcConversionOf   bdr:TT858F13456D117ED5 .
+    
+    bdr:TT7756A9E87C6FF61D
+        a                   :Title ;
+        rdfs:label          "brahm sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT44549A0104F49FDD .
+    
+    bdr:TT858F13456D117ED5
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រហ្មណ៍សូត្រ"@km .
 }

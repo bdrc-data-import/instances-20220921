@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020341 {
-    bda:LGAE1BC6D9DD8E8BF5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020341"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020341"@en , "imported pubinfo for W1FEMC020341"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020341"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020341 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020341 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "20/MW1FEMC020341.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020341 ;
-        adm:logEntry        bda:LGAE1BC6D9DD8E8BF5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB7ACDBDB663BB881
+    bdr:ID5065685012D7CE7F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.234.I.1" .
     
-    bdr:MF386C3137F4F2B4A3
+    bdr:MFDDB8D20909229B9A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "64" ;
         :microfilmStrip     "158" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020341 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់មហាសប្បុរស"@km , "cpāp' mahā sappuras"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB7ACDBDB663BB881 ;
+            bdr:ID5065685012D7CE7F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3B4DB9BE4D04194A , bdr:TT5065685012D7CE7F , bdr:TT8E1047D1B7AB7531 , bdr:TTC18483D6EF4F5A7D ;
+        :hasTitle           bdr:TT3B4DB9BE4D04194A , bdr:TT8E1047D1B7AB7531 , bdr:TTAE1BC6D9DD8E8BF5 , bdr:TTBC71A72A87482BA6 ;
         :instanceHasReproduction  bdr:W1FEMC020341 ;
+        :instanceOf         bdr:WA1FEMC100055 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF386C3137F4F2B4A3 ;
-        :note               bdr:NTDDB8D20909229B9A ;
+        :microfilmItem      bdr:MFDDB8D20909229B9A ;
+        :note               bdr:NTC18483D6EF4F5A7D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1204" .
     
-    bdr:NTDDB8D20909229B9A
+    bdr:NTC18483D6EF4F5A7D
         a                   :Note ;
         :contentLocationStatement  "pg. 67" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT3B4DB9BE4D04194A
-        a                   :Title ;
-        rdfs:label          "ច្បាប់មហាសប្បុរស"@km ;
-        :femcConversionOf   bdr:TTC18483D6EF4F5A7D .
+        a                   :CoverTitle ;
+        rdfs:label          "ច្ប័បមហាសប្បុរស"@km .
     
-    bdr:TT5065685012D7CE7F
+    bdr:TT8E1047D1B7AB7531
         a                   :CoverTitle ;
         rdfs:label          "cpăp mahā sappuras"@km-x-twktt .
     
-    bdr:TT8E1047D1B7AB7531
+    bdr:TTAE1BC6D9DD8E8BF5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់មហាសប្បុរស"@km ;
+        :femcConversionOf   bdr:TT3B4DB9BE4D04194A .
+    
+    bdr:TTBC71A72A87482BA6
         a                   :Title ;
         rdfs:label          "cpāp' mahā sappuras"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5065685012D7CE7F .
-    
-    bdr:TTC18483D6EF4F5A7D
-        a                   :CoverTitle ;
-        rdfs:label          "ច្ប័បមហាសប្បុរស"@km .
+        :femcConversionOf   bdr:TT8E1047D1B7AB7531 .
 }

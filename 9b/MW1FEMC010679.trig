@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010679 {
-    bda:LGA9B34016788DDC2B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010679"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010679"@en , "imported pubinfo for W1FEMC010679"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010679"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010679 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010679 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9b/MW1FEMC010679.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010679 ;
-        adm:logEntry        bda:LGA9B34016788DDC2B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1C0C8917E724B580
+    bdr:ID409B8EAA8537BAFE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002-A.03.03.02.III.1" .
     
-    bdr:MFE31351BD8DE3765A
+    bdr:MF3576A8A8970A5AC1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "47" ;
         :microfilmStrip     "115" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010679 {
         a                   :Instance ;
         skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1C0C8917E724B580 ;
+            bdr:ID409B8EAA8537BAFE ;
         :hasFascicles       "30" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT199E7BB376CAFA25 , bdr:TT3C77E258DF675376 , bdr:TT409B8EAA8537BAFE , bdr:TT9FA6737EC3FBC05F ;
+        :hasTitle           bdr:TT199E7BB376CAFA25 , bdr:TT3C77E258DF675376 , bdr:TTA9B34016788DDC2B , bdr:TTE67FAC1D5045B7DA ;
         :instanceHasReproduction  bdr:W1FEMC010679 ;
+        :instanceOf         bdr:WA1FEMC010047 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE31351BD8DE3765A ;
-        :note               bdr:NT3576A8A8970A5AC1 ;
+        :microfilmItem      bdr:MF3576A8A8970A5AC1 ;
+        :note               bdr:NT9FA6737EC3FBC05F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3576A8A8970A5AC1
+    bdr:NT9FA6737EC3FBC05F
         a                   :Note ;
         :contentLocationStatement  "pg. 187" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT199E7BB376CAFA25
-        a                   :Title ;
-        rdfs:label          "paṭham sambodhi"@km-x-twktt .
-    
-    bdr:TT3C77E258DF675376
-        a                   :Title ;
-        rdfs:label          "បឋមសម្ពោធិ"@km .
-    
-    bdr:TT409B8EAA8537BAFE
         a                   :CoverTitle ;
         rdfs:label          "pañc antaradhān"@km-x-twktt .
     
-    bdr:TT9FA6737EC3FBC05F
+    bdr:TT3C77E258DF675376
         a                   :CoverTitle ;
         rdfs:label          "បញ្ចអន្តរធាន"@km .
+    
+    bdr:TTA9B34016788DDC2B
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@km .
+    
+    bdr:TTE67FAC1D5045B7DA
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@km-x-twktt .
 }

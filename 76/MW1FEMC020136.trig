@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020136 {
-    bda:LG25C8102959006C9D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020136"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020136"@en , "imported pubinfo for W1FEMC020136"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020136"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020136 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020136 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "76/MW1FEMC020136.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020136 ;
-        adm:logEntry        bda:LG25C8102959006C9D , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID7906480BB20F9968
+    bdr:ID1B53DA08FBEC1A5A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.29.I.1" .
     
-    bdr:MFBB8AEBF974453B80
+    bdr:MF427D2AD69AF645B9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "52" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020136 {
         a                   :Instance ;
         skos:prefLabel      "ក្រមច្បាប់នេះគិត"@km , "kram cpāp' neḥ git"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7906480BB20F9968 ;
+            bdr:ID1B53DA08FBEC1A5A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1B53DA08FBEC1A5A , bdr:TT4BEF852EA5B51D92 , bdr:TTA2B91F1693263CCB , bdr:TTB1B225789BD98481 ;
+        :hasTitle           bdr:TT25C8102959006C9D , bdr:TT63318D4A5B5FC044 , bdr:TTA2B91F1693263CCB , bdr:TTB1B225789BD98481 ;
         :instanceHasReproduction  bdr:W1FEMC020136 ;
+        :instanceOf         bdr:WA1FEMC100083 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFBB8AEBF974453B80 ;
-        :note               bdr:NT427D2AD69AF645B9 ;
+        :microfilmItem      bdr:MF427D2AD69AF645B9 ;
+        :note               bdr:NT4BEF852EA5B51D92 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "667" .
     
-    bdr:NT427D2AD69AF645B9
+    bdr:NT4BEF852EA5B51D92
         a                   :Note ;
         :contentLocationStatement  "pg. 28" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1B53DA08FBEC1A5A
-        a                   :CoverTitle ;
-        rdfs:label          "kraṃm cpăp nī git"@km-x-twktt .
+    bdr:TT25C8102959006C9D
+        a                   :Title ;
+        rdfs:label          "ក្រមច្បាប់នេះគិត"@km ;
+        :femcConversionOf   bdr:TTA2B91F1693263CCB .
     
-    bdr:TT4BEF852EA5B51D92
+    bdr:TT63318D4A5B5FC044
+        a                   :Title ;
+        rdfs:label          "kram cpāp' neḥ git"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB1B225789BD98481 .
+    
+    bdr:TTA2B91F1693263CCB
         a                   :CoverTitle ;
         rdfs:label          "ក្រំមច្ប័បនីគិត"@km .
     
-    bdr:TTA2B91F1693263CCB
-        a                   :Title ;
-        rdfs:label          "ក្រមច្បាប់នេះគិត"@km ;
-        :femcConversionOf   bdr:TT4BEF852EA5B51D92 .
-    
     bdr:TTB1B225789BD98481
-        a                   :Title ;
-        rdfs:label          "kram cpāp' neḥ git"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1B53DA08FBEC1A5A .
+        a                   :CoverTitle ;
+        rdfs:label          "kraṃm cpăp nī git"@km-x-twktt .
 }

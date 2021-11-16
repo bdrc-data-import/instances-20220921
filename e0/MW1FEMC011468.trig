@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011468 {
-    bda:LG9B8BCA752E4A5C0D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011468"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011468"@en , "imported pubinfo for W1FEMC011468"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011468"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011468 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011468 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e0/MW1FEMC011468.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011468 ;
-        adm:logEntry        bda:LG9B8BCA752E4A5C0D , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC1CB4B87CFFF4B8B
+    bdr:ID593DAB076A307BF1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003-007-A.10.08.01.III.1" .
     
-    bdr:MF2874B164160B6921
+    bdr:MFF31A43BCCC86A89F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "35" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011468 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC1CB4B87CFFF4B8B ;
+            bdr:ID593DAB076A307BF1 ;
         :hasFascicles       "1-5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1939C3B314E8B669 , bdr:TT287B05BAA04AADC6 , bdr:TT593DAB076A307BF1 , bdr:TT6C8F0C565701B055 ;
+        :hasTitle           bdr:TT1939C3B314E8B669 , bdr:TT6C8F0C565701B055 , bdr:TT9B8BCA752E4A5C0D , bdr:TTFCF2257CA40F53AD ;
         :instanceHasReproduction  bdr:W1FEMC011468 ;
+        :instanceOf         bdr:WA1FEMC010048 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2874B164160B6921 ;
-        :note               bdr:NTF31A43BCCC86A89F ;
+        :microfilmItem      bdr:MFF31A43BCCC86A89F ;
+        :note               bdr:NT287B05BAA04AADC6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTF31A43BCCC86A89F
+    bdr:NT287B05BAA04AADC6
         a                   :Note ;
         :contentLocationStatement  "pg. 339" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1939C3B314E8B669
-        a                   :Title ;
-        rdfs:label          "paṭham trās'"@km-x-twktt ;
-        :femcConversionOf   bdr:TT593DAB076A307BF1 .
-    
-    bdr:TT287B05BAA04AADC6
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះថម្ម"@km .
-    
-    bdr:TT593DAB076A307BF1
         a                   :CoverTitle ;
         rdfs:label          "braḥ thamm"@km-x-twktt .
     
     bdr:TT6C8F0C565701B055
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះថម្ម"@km .
+    
+    bdr:TT9B8BCA752E4A5C0D
         a                   :Title ;
         rdfs:label          "បឋមត្រាស់"@km ;
-        :femcConversionOf   bdr:TT287B05BAA04AADC6 .
+        :femcConversionOf   bdr:TT6C8F0C565701B055 .
+    
+    bdr:TTFCF2257CA40F53AD
+        a                   :Title ;
+        rdfs:label          "paṭham trās'"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1939C3B314E8B669 .
 }

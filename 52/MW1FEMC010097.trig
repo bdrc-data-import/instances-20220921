@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010097 {
-    bda:LG85448FBE354EB50E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010097"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010097"@en , "imported pubinfo for W1FEMC010097"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010097"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010097 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010097 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "52/MW1FEMC010097.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010097 ;
-        adm:logEntry        bda:LG85448FBE354EB50E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6C765FCA701F5A9
+    bdr:ID2456656B97AA844F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "055-PP.01.10.03.II.2" .
     
-    bdr:MF2A7DF6103E8B3945
+    bdr:MF470D643C09AC52C0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010097 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកជុច"@km , "lpök juc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6C765FCA701F5A9 ;
+            bdr:ID2456656B97AA844F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2456656B97AA844F , bdr:TT4228FC0299932344 , bdr:TT9A452A1893621EDD , bdr:TTAE1333D6B9789C80 ;
+        :hasTitle           bdr:TT42959B4669B97EB2 , bdr:TT85448FBE354EB50E , bdr:TT9A452A1893621EDD , bdr:TTAE1333D6B9789C80 ;
         :instanceHasReproduction  bdr:W1FEMC010097 ;
+        :instanceOf         bdr:WA1FEMC130003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2A7DF6103E8B3945 ;
-        :note               bdr:NT470D643C09AC52C0 ;
+        :microfilmItem      bdr:MF470D643C09AC52C0 ;
+        :note               bdr:NT4228FC0299932344 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT470D643C09AC52C0
+    bdr:NT4228FC0299932344
         a                   :Note ;
         :contentLocationStatement  "pg. 73" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2456656B97AA844F
-        a                   :CoverTitle ;
-        rdfs:label          "juj"@km-x-twktt .
+    bdr:TT42959B4669B97EB2
+        a                   :Title ;
+        rdfs:label          "lpök juc"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAE1333D6B9789C80 .
     
-    bdr:TT4228FC0299932344
+    bdr:TT85448FBE354EB50E
+        a                   :Title ;
+        rdfs:label          "ល្បើកជុច"@km ;
+        :femcConversionOf   bdr:TT9A452A1893621EDD .
+    
+    bdr:TT9A452A1893621EDD
         a                   :CoverTitle ;
         rdfs:label          "ជុជ"@km .
     
-    bdr:TT9A452A1893621EDD
-        a                   :Title ;
-        rdfs:label          "ល្បើកជុច"@km ;
-        :femcConversionOf   bdr:TT4228FC0299932344 .
-    
     bdr:TTAE1333D6B9789C80
-        a                   :Title ;
-        rdfs:label          "lpök juc"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2456656B97AA844F .
+        a                   :CoverTitle ;
+        rdfs:label          "juj"@km-x-twktt .
 }

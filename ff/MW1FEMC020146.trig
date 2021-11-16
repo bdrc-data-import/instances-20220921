@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020146 {
-    bda:LG7CEC4F45075B7000
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020146"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020146"@en , "imported pubinfo for W1FEMC020146"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020146"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020146 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020146 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ff/MW1FEMC020146.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020146 ;
-        adm:logEntry        bda:LG7CEC4F45075B7000 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID33E1245D70C5A66F
+    bdr:ID912D7E3598320C4A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.39.III.1" .
     
-    bdr:MF538EA5E84B874767
+    bdr:MF2415ED7EC651648F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "31" ;
         :microfilmStrip     "53" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020146 {
         a                   :Instance ;
         skos:prefLabel      "ទសវង្ស"@km , "dasavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID33E1245D70C5A66F ;
+            bdr:ID912D7E3598320C4A ;
         :hasFascicles       "1-10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT14BE7C1E927A4D91 , bdr:TT1AC6700B456F49AA , bdr:TT912D7E3598320C4A , bdr:TTF86D7525A9955D39 ;
+        :hasTitle           bdr:TT1AC6700B456F49AA , bdr:TT7CEC4F45075B7000 , bdr:TTEC517DA0DAF0C51B , bdr:TTF86D7525A9955D39 ;
         :instanceHasReproduction  bdr:W1FEMC020146 ;
+        :instanceOf         bdr:WA1FEMC010024 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF538EA5E84B874767 ;
-        :note               bdr:NT2415ED7EC651648F ;
+        :microfilmItem      bdr:MF2415ED7EC651648F ;
+        :note               bdr:NT14BE7C1E927A4D91 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "708" .
     
-    bdr:NT2415ED7EC651648F
+    bdr:NT14BE7C1E927A4D91
         a                   :Note ;
         :contentLocationStatement  "pg. 30" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT14BE7C1E927A4D91
+    bdr:TT1AC6700B456F49AA
         a                   :CoverTitle ;
         rdfs:label          "ទស្សវង្ស"@km .
     
-    bdr:TT1AC6700B456F49AA
+    bdr:TT7CEC4F45075B7000
         a                   :Title ;
         rdfs:label          "ទសវង្ស"@km ;
-        :femcConversionOf   bdr:TT14BE7C1E927A4D91 .
+        :femcConversionOf   bdr:TT1AC6700B456F49AA .
     
-    bdr:TT912D7E3598320C4A
-        a                   :CoverTitle ;
-        rdfs:label          "dassavaṅs"@km-x-twktt .
-    
-    bdr:TTF86D7525A9955D39
+    bdr:TTEC517DA0DAF0C51B
         a                   :Title ;
         rdfs:label          "dasavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TT912D7E3598320C4A .
+        :femcConversionOf   bdr:TTF86D7525A9955D39 .
+    
+    bdr:TTF86D7525A9955D39
+        a                   :CoverTitle ;
+        rdfs:label          "dassavaṅs"@km-x-twktt .
 }

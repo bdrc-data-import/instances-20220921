@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010517 {
-    bda:LG653CE02E1E79AA51
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010517"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010517"@en , "imported pubinfo for W1FEMC010517"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010517"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010517 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010517 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "6c/MW1FEMC010517.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010517 ;
-        adm:logEntry        bda:LG653CE02E1E79AA51 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCDFF85088983DE89
+    bdr:IDE6196C3E495C2CCC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.02.09.01.III.4" .
     
-    bdr:MF663CAD3EDE7AF3F6
+    bdr:MFC42C85049A88E44D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "13" ;
         :microfilmStrip     "55" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010517 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCDFF85088983DE89 ;
+            bdr:IDE6196C3E495C2CCC ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT011E5DC820E7471B , bdr:TT2E9ABB6A14A55D17 , bdr:TTA43413B33FA1384A , bdr:TTE6196C3E495C2CCC ;
+        :hasTitle           bdr:TT011E5DC820E7471B , bdr:TT653CE02E1E79AA51 , bdr:TTA43413B33FA1384A , bdr:TTD85141AAE9F7B84D ;
         :instanceHasReproduction  bdr:W1FEMC010517 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF663CAD3EDE7AF3F6 ;
-        :note               bdr:NTC42C85049A88E44D ;
+        :microfilmItem      bdr:MFC42C85049A88E44D ;
+        :note               bdr:NT2E9ABB6A14A55D17 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC42C85049A88E44D
+    bdr:NT2E9ABB6A14A55D17
         a                   :Note ;
         :contentLocationStatement  "pg. 155" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT011E5DC820E7471B
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
-    
-    bdr:TT2E9ABB6A14A55D17
         a                   :CoverTitle ;
-        rdfs:label          "វិភង្គ"@km .
+        rdfs:label          "vibhaṅg"@km-x-twktt .
     
-    bdr:TTA43413B33FA1384A
+    bdr:TT653CE02E1E79AA51
         a                   :Title ;
         rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
     
-    bdr:TTE6196C3E495C2CCC
+    bdr:TTA43413B33FA1384A
         a                   :CoverTitle ;
-        rdfs:label          "vibhaṅg"@km-x-twktt .
+        rdfs:label          "វិភង្គ"@km .
+    
+    bdr:TTD85141AAE9F7B84D
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
 }

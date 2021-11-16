@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021916 {
-    bda:LG762ECC1A4DCBE6A7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021916"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021916"@en , "imported pubinfo for W1FEMC021916"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021916"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021916 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021916 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "1d/MW1FEMC021916.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021916 ;
-        adm:logEntry        bda:LG762ECC1A4DCBE6A7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6BB573E793210F81
+    bdr:ID19D976B8923B2321
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.698.III.2" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021916 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទសុកគិរីសូត្រ"@km , "cand suk girī sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6BB573E793210F81 ;
+            bdr:ID19D976B8923B2321 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT19D976B8923B2321 , bdr:TTA856CA9907727FD2 , bdr:TTC13735396C7AC62F , bdr:TTF10C07F5E2A9F67E ;
+        :hasTitle           bdr:TT1F2510F3FA75E7AA , bdr:TT762ECC1A4DCBE6A7 , bdr:TTC13735396C7AC62F , bdr:TTF10C07F5E2A9F67E ;
         :instanceHasReproduction  bdr:W1FEMC021916 ;
+        :instanceOf         bdr:WA1FEMC020018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT04A6F74F6882247E ;
+        :note               bdr:NTA856CA9907727FD2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT04A6F74F6882247E
+    bdr:NTA856CA9907727FD2
         a                   :Note ;
         :contentLocationStatement  "pg. 342" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT19D976B8923B2321
-        a                   :CoverTitle ;
-        rdfs:label          "candh sukkharisūt"@km-x-twktt .
+    bdr:TT1F2510F3FA75E7AA
+        a                   :Title ;
+        rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF10C07F5E2A9F67E .
     
-    bdr:TTA856CA9907727FD2
+    bdr:TT762ECC1A4DCBE6A7
+        a                   :Title ;
+        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
+        :femcConversionOf   bdr:TTC13735396C7AC62F .
+    
+    bdr:TTC13735396C7AC62F
         a                   :CoverTitle ;
         rdfs:label          "ចន្ទសុក្ខរិសូត"@km .
     
-    bdr:TTC13735396C7AC62F
-        a                   :Title ;
-        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
-        :femcConversionOf   bdr:TTA856CA9907727FD2 .
-    
     bdr:TTF10C07F5E2A9F67E
-        a                   :Title ;
-        rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT19D976B8923B2321 .
+        a                   :CoverTitle ;
+        rdfs:label          "candh sukkharisūt"@km-x-twktt .
 }

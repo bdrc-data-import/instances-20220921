@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020617 {
-    bda:LG961704CEDCFBEC0A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020617"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020617"@en , "imported pubinfo for W1FEMC020617"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020617"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020617 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020617 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "51/MW1FEMC020617.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020617 ;
-        adm:logEntry        bda:LG961704CEDCFBEC0A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID7558A8CA2B6E6E7F
+    bdr:ID2297FBBACA897F88
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.250.II.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020617 {
         a                   :Instance ;
         skos:prefLabel      "ជ័យទត្ត"@km , "jăy datt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7558A8CA2B6E6E7F ;
+            bdr:ID2297FBBACA897F88 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2297FBBACA897F88 , bdr:TT5C0904DAA338A6EC , bdr:TT9952908A65D610AC , bdr:TTE244E844DF922BAB ;
+        :hasTitle           bdr:TT2ED44B23BCFBFCFE , bdr:TT5C0904DAA338A6EC , bdr:TT961704CEDCFBEC0A , bdr:TTE244E844DF922BAB ;
         :instanceHasReproduction  bdr:W1FEMC020617 ;
+        :instanceOf         bdr:WA1FEMC120017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT5A69C03AD6776CA4 ;
+        :note               bdr:NT9952908A65D610AC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5A69C03AD6776CA4
+    bdr:NT9952908A65D610AC
         a                   :Note ;
         :contentLocationStatement  "pg. 116" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT2297FBBACA897F88
+    bdr:TT2ED44B23BCFBFCFE
+        a                   :Title ;
+        rdfs:label          "jăy datt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5C0904DAA338A6EC .
+    
+    bdr:TT5C0904DAA338A6EC
         a                   :CoverTitle ;
         rdfs:label          "jai dāt'"@km-x-twktt .
     
-    bdr:TT5C0904DAA338A6EC
-        a                   :Title ;
-        rdfs:label          "jăy datt"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2297FBBACA897F88 .
-    
-    bdr:TT9952908A65D610AC
-        a                   :CoverTitle ;
-        rdfs:label          "ជ័យទាត់"@km .
-    
-    bdr:TTE244E844DF922BAB
+    bdr:TT961704CEDCFBEC0A
         a                   :Title ;
         rdfs:label          "ជ័យទត្ត"@km ;
-        :femcConversionOf   bdr:TT9952908A65D610AC .
+        :femcConversionOf   bdr:TTE244E844DF922BAB .
+    
+    bdr:TTE244E844DF922BAB
+        a                   :CoverTitle ;
+        rdfs:label          "ជ័យទាត់"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010106 {
-    bda:LGE0DEB8BC9C82F64B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010106"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010106"@en , "imported pubinfo for W1FEMC010106"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010106"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010106 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010106 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4f/MW1FEMC010106.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010106 ;
-        adm:logEntry        bda:LGE0DEB8BC9C82F64B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8533ED77F24F6AB2
+    bdr:IDE7CCEA4DD8F838F9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "065-PP.01.10.03.III.6" .
     
-    bdr:MF3A8A83229F128CB5
+    bdr:MF0F5624404B67B8D9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010106 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសីល៥"@km , "ānisaṅs sīl 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8533ED77F24F6AB2 ;
+            bdr:IDE7CCEA4DD8F838F9 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4DA0DA8543FC3EBC , bdr:TTB09568CBF9D76178 , bdr:TTBE40D8CDEFD44AE7 , bdr:TTE7CCEA4DD8F838F9 ;
+        :hasTitle           bdr:TTB09568CBF9D76178 , bdr:TTBE40D8CDEFD44AE7 , bdr:TTE0DEB8BC9C82F64B , bdr:TTE193C68D2A550175 ;
         :instanceHasReproduction  bdr:W1FEMC010106 ;
+        :instanceOf         bdr:WA1FEMC060036 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3A8A83229F128CB5 ;
-        :note               bdr:NT0F5624404B67B8D9 ;
+        :microfilmItem      bdr:MF0F5624404B67B8D9 ;
+        :note               bdr:NT4DA0DA8543FC3EBC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0F5624404B67B8D9
+    bdr:NT4DA0DA8543FC3EBC
         a                   :Note ;
         :contentLocationStatement  "pg. 74" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT4DA0DA8543FC3EBC
+    bdr:TTB09568CBF9D76178
+        a                   :CoverTitle ;
+        rdfs:label          "anissaṅgh sil 5"@km-x-twktt .
+    
+    bdr:TTBE40D8CDEFD44AE7
         a                   :CoverTitle ;
         rdfs:label          "អន្សិសង្ឃសិល៥"@km .
     
-    bdr:TTB09568CBF9D76178
-        a                   :Title ;
-        rdfs:label          "ānisaṅs sīl 5"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE7CCEA4DD8F838F9 .
-    
-    bdr:TTBE40D8CDEFD44AE7
+    bdr:TTE0DEB8BC9C82F64B
         a                   :Title ;
         rdfs:label          "អានិសង្សសីល៥"@km ;
-        :femcConversionOf   bdr:TT4DA0DA8543FC3EBC .
+        :femcConversionOf   bdr:TTBE40D8CDEFD44AE7 .
     
-    bdr:TTE7CCEA4DD8F838F9
-        a                   :CoverTitle ;
-        rdfs:label          "anissaṅgh sil 5"@km-x-twktt .
+    bdr:TTE193C68D2A550175
+        a                   :Title ;
+        rdfs:label          "ānisaṅs sīl 5"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB09568CBF9D76178 .
 }

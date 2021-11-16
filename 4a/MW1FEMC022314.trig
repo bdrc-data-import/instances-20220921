@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022314 {
-    bda:LG1B5D3A4B9928F3AD
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022314"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022314"@en , "imported pubinfo for W1FEMC022314"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022314"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022314 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022314 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "4a/MW1FEMC022314.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022314 ;
-        adm:logEntry        bda:LG1B5D3A4B9928F3AD , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF4CEA13F3E5D849D
+    bdr:IDB882790A4EFC4ADD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.392.III.4" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC022314 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF4CEA13F3E5D849D ;
+            bdr:IDB882790A4EFC4ADD ;
         :hasFascicles       "1-7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTA2F6E2F688799A43 , bdr:TTB882790A4EFC4ADD , bdr:TTDE72C38F7B994425 , bdr:TTE5603016390AD36C ;
+        :hasTitle           bdr:TT1B5D3A4B9928F3AD , bdr:TT574C3371DE9D34DC , bdr:TTDE72C38F7B994425 , bdr:TTE5603016390AD36C ;
         :instanceHasReproduction  bdr:W1FEMC022314 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT68E24A0B207E22A8 ;
+        :note               bdr:NTA2F6E2F688799A43 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1201" .
     
-    bdr:NT68E24A0B207E22A8
+    bdr:NTA2F6E2F688799A43
         a                   :Note ;
         :contentLocationStatement  "pg. 413" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTA2F6E2F688799A43
+    bdr:TT1B5D3A4B9928F3AD
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km ;
+        :femcConversionOf   bdr:TTDE72C38F7B994425 .
+    
+    bdr:TT574C3371DE9D34DC
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE5603016390AD36C .
+    
+    bdr:TTDE72C38F7B994425
         a                   :CoverTitle ;
         rdfs:label          "សត្តបករណាភិធម្ម"@km .
     
-    bdr:TTB882790A4EFC4ADD
+    bdr:TTE5603016390AD36C
         a                   :CoverTitle ;
         rdfs:label          "sattapakaraṇābhidhamm"@km-x-twktt .
-    
-    bdr:TTDE72C38F7B994425
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km ;
-        :femcConversionOf   bdr:TTA2F6E2F688799A43 .
-    
-    bdr:TTE5603016390AD36C
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB882790A4EFC4ADD .
 }

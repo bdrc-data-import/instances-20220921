@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011532 {
-    bda:LG7EC930042ABAF379
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011532"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011532"@en , "imported pubinfo for W1FEMC011532"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011532"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011532 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011532 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "69/MW1FEMC011532.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011532 ;
-        adm:logEntry        bda:LG7EC930042ABAF379 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4A086B2936FD6CDA
+    bdr:ID39D1173C7F33C8EE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "016-A.10.09.02.III.5" .
     
-    bdr:MFB749A6569FE921E0
+    bdr:MF1C31E2E13B21AAFE
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "52" ;
         :microfilmStrip     "137" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC011532 {
         a                   :Instance ;
         skos:prefLabel      "មហោសថ​"@km , "mahosath"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4A086B2936FD6CDA ;
+            bdr:ID39D1173C7F33C8EE ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT292DB5B13ABC3875 , bdr:TT39D1173C7F33C8EE , bdr:TT70C0301B197157A2 , bdr:TT9575B4AF824BB90D , bdr:TTA8BD0DDF79542D17 , bdr:TTC64F1387A7DBA07F ;
+        :hasTitle           bdr:TT292DB5B13ABC3875 , bdr:TT70C0301B197157A2 , bdr:TT7EC930042ABAF379 , bdr:TTA8BD0DDF79542D17 , bdr:TTC64F1387A7DBA07F , bdr:TTEBBFE5944B826E97 ;
         :instanceHasReproduction  bdr:W1FEMC011532 ;
+        :instanceOf         bdr:WA1FEMC050006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB749A6569FE921E0 ;
-        :note               bdr:NT1C31E2E13B21AAFE ;
+        :microfilmItem      bdr:MF1C31E2E13B21AAFE ;
+        :note               bdr:NT9575B4AF824BB90D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1C31E2E13B21AAFE
+    bdr:NT9575B4AF824BB90D
         a                   :Note ;
         :contentLocationStatement  "pg. 350" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT292DB5B13ABC3875
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TT39D1173C7F33C8EE
-        a                   :CoverTitle ;
-        rdfs:label          "mahosuthth"@km-x-twktt .
+        a                   :Title ;
+        rdfs:label          "mahosath"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA8BD0DDF79542D17 .
     
     bdr:TT70C0301B197157A2
-        a                   :Title ;
-        rdfs:label          "មហោសថ​"@km ;
-        :femcConversionOf   bdr:TT9575B4AF824BB90D .
-    
-    bdr:TT9575B4AF824BB90D
         a                   :CoverTitle ;
         rdfs:label          "មហោសុថ្ថ"@km .
     
+    bdr:TT7EC930042ABAF379
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
     bdr:TTA8BD0DDF79542D17
-        a                   :Title ;
-        rdfs:label          "mahosath"@km-x-twktt ;
-        :femcConversionOf   bdr:TT39D1173C7F33C8EE .
+        a                   :CoverTitle ;
+        rdfs:label          "mahosuthth"@km-x-twktt .
     
     bdr:TTC64F1387A7DBA07F
+        a                   :Title ;
+        rdfs:label          "មហោសថ​"@km ;
+        :femcConversionOf   bdr:TT70C0301B197157A2 .
+    
+    bdr:TTEBBFE5944B826E97
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
 }

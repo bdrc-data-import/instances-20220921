@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010703 {
-    bda:LG7B39C84E1C715FDA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010703"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010703"@en , "imported pubinfo for W1FEMC010703"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010703"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010703 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010703 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1c/MW1FEMC010703.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010703 ;
-        adm:logEntry        bda:LG7B39C84E1C715FDA , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID232421D6D29F9F5A
+    bdr:IDD5CE19F5D2FBC984
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "013-A.03.07.01.III.2" .
     
-    bdr:MFF8397C4367D2FD01
+    bdr:MF2E86E0AA53538290
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "113" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010703 {
         a                   :Instance ;
         skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km , "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID232421D6D29F9F5A ;
+            bdr:IDD5CE19F5D2FBC984 ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1038C8E5D2FA525D , bdr:TTA8845D485CF59309 , bdr:TTCAAF8330C37981EF , bdr:TTD5CE19F5D2FBC984 ;
+        :hasTitle           bdr:TT1F32C5DF36BAB10B , bdr:TT7B39C84E1C715FDA , bdr:TTA8845D485CF59309 , bdr:TTCAAF8330C37981EF ;
         :instanceHasReproduction  bdr:W1FEMC010703 ;
+        :instanceOf         bdr:WA1FEMC020001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF8397C4367D2FD01 ;
-        :note               bdr:NT2E86E0AA53538290 ;
+        :microfilmItem      bdr:MF2E86E0AA53538290 ;
+        :note               bdr:NT1038C8E5D2FA525D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2E86E0AA53538290
+    bdr:NT1038C8E5D2FA525D
         a                   :Note ;
         :contentLocationStatement  "pg. 192" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1038C8E5D2FA525D
+    bdr:TT1F32C5DF36BAB10B
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCAAF8330C37981EF .
+    
+    bdr:TT7B39C84E1C715FDA
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
+        :femcConversionOf   bdr:TTA8845D485CF59309 .
+    
+    bdr:TTA8845D485CF59309
         a                   :CoverTitle ;
         rdfs:label          "អដ្ឋកថាមង្គលសូត្រ"@km .
     
-    bdr:TTA8845D485CF59309
-        a                   :Title ;
-        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
-        :femcConversionOf   bdr:TT1038C8E5D2FA525D .
-    
     bdr:TTCAAF8330C37981EF
-        a                   :Title ;
-        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgal sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD5CE19F5D2FBC984 .
-    
-    bdr:TTD5CE19F5D2FBC984
         a                   :CoverTitle ;
         rdfs:label          "aṭṭhakathā maṅgal sūtr"@km-x-twktt .
 }

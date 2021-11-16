@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022330 {
-    bda:LG9F909A7AFB8B2162
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022330"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022330"@en , "imported pubinfo for W1FEMC022330"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022330"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022330 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022330 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "6f/MW1FEMC022330.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022330 ;
-        adm:logEntry        bda:LG9F909A7AFB8B2162 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID515E985B2D31FDDB
+    bdr:ID144D958BE1AA7F20
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.817.I.1" .
     
-    bdr:MF014A508867EF83AF
+    bdr:MFEBD12B9D9DCA9EEB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022330 {
         a                   :Instance ;
         skos:prefLabel      "បណ្ដាំក្រមង៉ុយ"@km , "paṇtāṃ kram ṅ''uy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID515E985B2D31FDDB ;
+            bdr:ID144D958BE1AA7F20 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT144D958BE1AA7F20 , bdr:TT257A78696577690B , bdr:TT5BC3619DD580E6CE , bdr:TT615D50B7742AA0C2 ;
+        :hasTitle           bdr:TT257A78696577690B , bdr:TT5BC3619DD580E6CE , bdr:TT9F909A7AFB8B2162 , bdr:TTF3F248C726B7F168 ;
         :instanceHasReproduction  bdr:W1FEMC022330 ;
+        :instanceOf         bdr:WA1FEMC100088 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF014A508867EF83AF ;
-        :note               bdr:NTEBD12B9D9DCA9EEB ;
+        :microfilmItem      bdr:MFEBD12B9D9DCA9EEB ;
+        :note               bdr:NT615D50B7742AA0C2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTEBD12B9D9DCA9EEB
+    bdr:NT615D50B7742AA0C2
         a                   :Note ;
         :contentLocationStatement  "pg. 416" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT144D958BE1AA7F20
+    bdr:TT257A78696577690B
         a                   :CoverTitle ;
         rdfs:label          "pantāṃ kraṃ ṅ''uy"@km-x-twktt .
     
-    bdr:TT257A78696577690B
-        a                   :Title ;
-        rdfs:label          "paṇtāṃ kram ṅ''uy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT144D958BE1AA7F20 .
-    
     bdr:TT5BC3619DD580E6CE
-        a                   :Title ;
-        rdfs:label          "បណ្ដាំក្រមង៉ុយ"@km ;
-        :femcConversionOf   bdr:TT615D50B7742AA0C2 .
-    
-    bdr:TT615D50B7742AA0C2
         a                   :CoverTitle ;
         rdfs:label          "បន្តាំក្រំង៉ុយ"@km .
+    
+    bdr:TT9F909A7AFB8B2162
+        a                   :Title ;
+        rdfs:label          "បណ្ដាំក្រមង៉ុយ"@km ;
+        :femcConversionOf   bdr:TT5BC3619DD580E6CE .
+    
+    bdr:TTF3F248C726B7F168
+        a                   :Title ;
+        rdfs:label          "paṇtāṃ kram ṅ''uy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT257A78696577690B .
 }

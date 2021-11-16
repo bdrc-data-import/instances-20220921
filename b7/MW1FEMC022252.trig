@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022252 {
-    bda:LG2FA392CBFE2300D3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022252"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022252"@en , "imported pubinfo for W1FEMC022252"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022252"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022252 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022252 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "b7/MW1FEMC022252.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022252 ;
-        adm:logEntry        bda:LG2FA392CBFE2300D3 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5E17CA2E28B6918B
+    bdr:ID1A35810ED833BAF2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.330.III.1" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC022252 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5E17CA2E28B6918B ;
+            bdr:ID1A35810ED833BAF2 ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1A35810ED833BAF2 , bdr:TT771A384C5D5BF0BF , bdr:TTC7530E30CDB27049 , bdr:TTDF42CFB8FC0D9DD9 ;
+        :hasTitle           bdr:TT2FA392CBFE2300D3 , bdr:TT771A384C5D5BF0BF , bdr:TTB07CB3CA7B771B72 , bdr:TTC7530E30CDB27049 ;
         :instanceHasReproduction  bdr:W1FEMC022252 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT6707D97D25552F45 ;
+        :note               bdr:NTDF42CFB8FC0D9DD9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "898" .
     
-    bdr:NT6707D97D25552F45
+    bdr:NTDF42CFB8FC0D9DD9
         a                   :Note ;
         :contentLocationStatement  "pg. 402" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1A35810ED833BAF2
-        a                   :CoverTitle ;
-        rdfs:label          "patham saṅgāyanā grè 3"@km-x-twktt .
-    
-    bdr:TT771A384C5D5BF0BF
+    bdr:TT2FA392CBFE2300D3
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
-        :femcConversionOf   bdr:TTDF42CFB8FC0D9DD9 .
+        :femcConversionOf   bdr:TT771A384C5D5BF0BF .
     
-    bdr:TTC7530E30CDB27049
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1A35810ED833BAF2 .
-    
-    bdr:TTDF42CFB8FC0D9DD9
+    bdr:TT771A384C5D5BF0BF
         a                   :CoverTitle ;
         rdfs:label          "បថមសង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTB07CB3CA7B771B72
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC7530E30CDB27049 .
+    
+    bdr:TTC7530E30CDB27049
+        a                   :CoverTitle ;
+        rdfs:label          "patham saṅgāyanā grè 3"@km-x-twktt .
 }

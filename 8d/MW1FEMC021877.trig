@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021877 {
-    bda:LG9C943D05A63347AA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021877"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021877"@en , "imported pubinfo for W1FEMC021877"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021877"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021877 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021877 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "8d/MW1FEMC021877.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021877 ;
-        adm:logEntry        bda:LG9C943D05A63347AA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDDA87DBB2CD3602A
+    bdr:ID332C8C80FFD9E6C3
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.659.III.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021877 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះមាល័យ"@km , "braḥ mālăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDDA87DBB2CD3602A ;
+            bdr:ID332C8C80FFD9E6C3 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT332C8C80FFD9E6C3 , bdr:TT83DFC6DE526B3619 , bdr:TTB81F07610BD1E81C , bdr:TTD81100275572CEF1 ;
+        :hasTitle           bdr:TT83DFC6DE526B3619 , bdr:TT9C943D05A63347AA , bdr:TTB0A1C4175D8E99A0 , bdr:TTB81F07610BD1E81C ;
         :instanceHasReproduction  bdr:W1FEMC021877 ;
+        :instanceOf         bdr:WA1FEMC010018 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT42FF4EDF2F2D7AD7 ;
+        :note               bdr:NTD81100275572CEF1 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT42FF4EDF2F2D7AD7
+    bdr:NTD81100275572CEF1
         a                   :Note ;
         :contentLocationStatement  "pg. 335" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT332C8C80FFD9E6C3
-        a                   :CoverTitle ;
-        rdfs:label          "mahālaiy debb ther"@km-x-twktt .
-    
     bdr:TT83DFC6DE526B3619
-        a                   :Title ;
-        rdfs:label          "ព្រះមាល័យ"@km ;
-        :femcConversionOf   bdr:TTD81100275572CEF1 .
-    
-    bdr:TTB81F07610BD1E81C
-        a                   :Title ;
-        rdfs:label          "braḥ mālăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT332C8C80FFD9E6C3 .
-    
-    bdr:TTD81100275572CEF1
         a                   :CoverTitle ;
         rdfs:label          "មហាលៃយទេព្វថេរ"@km .
+    
+    bdr:TT9C943D05A63347AA
+        a                   :Title ;
+        rdfs:label          "ព្រះមាល័យ"@km ;
+        :femcConversionOf   bdr:TT83DFC6DE526B3619 .
+    
+    bdr:TTB0A1C4175D8E99A0
+        a                   :Title ;
+        rdfs:label          "braḥ mālăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB81F07610BD1E81C .
+    
+    bdr:TTB81F07610BD1E81C
+        a                   :CoverTitle ;
+        rdfs:label          "mahālaiy debb ther"@km-x-twktt .
 }

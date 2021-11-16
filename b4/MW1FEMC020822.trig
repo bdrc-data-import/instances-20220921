@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020822 {
-    bda:LGB44126B7B47688EB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020822"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020822"@en , "imported pubinfo for W1FEMC020822"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020822"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020822 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020822 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "b4/MW1FEMC020822.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020822 ;
-        adm:logEntry        bda:LGB44126B7B47688EB , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8B582475640B3E29
+    bdr:ID4455FB0DAC4E3B54
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.493.II.1" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC020822 {
         a                   :Instance ;
         skos:prefLabel      "ស្រទបចេក"@km , "sradap cek"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8B582475640B3E29 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4455FB0DAC4E3B54 , bdr:TT9BB1A06D295BE928 , bdr:TTAC74919F61E93619 , bdr:TTBE62422ADB49C987 ;
+            bdr:ID4455FB0DAC4E3B54 ;
+        :hasTitle           bdr:TT0801B7FFB783C3CD , bdr:TT9BB1A06D295BE928 , bdr:TTAC74919F61E93619 , bdr:TTB44126B7B47688EB ;
         :instanceHasReproduction  bdr:W1FEMC020822 ;
+        :instanceOf         bdr:WA1FEMC120033 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTC21DAD1618314875 ;
+        :note               bdr:NTBE62422ADB49C987 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC21DAD1618314875
+    bdr:NTBE62422ADB49C987
         a                   :Note ;
         :contentLocationStatement  "pg. 146" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4455FB0DAC4E3B54
+    bdr:TT0801B7FFB783C3CD
+        a                   :Title ;
+        rdfs:label          "sradap cek"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAC74919F61E93619 .
+    
+    bdr:TT9BB1A06D295BE928
+        a                   :CoverTitle ;
+        rdfs:label          "ស្រទព្វចេក"@km .
+    
+    bdr:TTAC74919F61E93619
         a                   :CoverTitle ;
         rdfs:label          "sradabb cek"@km-x-twktt .
     
-    bdr:TT9BB1A06D295BE928
+    bdr:TTB44126B7B47688EB
         a                   :Title ;
         rdfs:label          "ស្រទបចេក"@km ;
-        :femcConversionOf   bdr:TTBE62422ADB49C987 .
-    
-    bdr:TTAC74919F61E93619
-        a                   :Title ;
-        rdfs:label          "sradap cek"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4455FB0DAC4E3B54 .
-    
-    bdr:TTBE62422ADB49C987
-        a                   :CoverTitle ;
-        rdfs:label          "ស្រទព្វចេក"@km .
+        :femcConversionOf   bdr:TT9BB1A06D295BE928 .
 }

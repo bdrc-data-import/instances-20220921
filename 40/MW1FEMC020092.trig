@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020092 {
-    bda:LGEBB0E1E8DA0B1EEA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020092"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020092"@en , "imported pubinfo for W1FEMC020092"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020092"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020092 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020092 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "40/MW1FEMC020092.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020092 ;
-        adm:logEntry        bda:LGEBB0E1E8DA0B1EEA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID4787D7413B46E549
+    bdr:ID53011578C471B557
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.86.III.5" .
     
-    bdr:MF5C64A7E11A2E52D4
+    bdr:MFD8303382C23AE169
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "99" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020092 {
         a                   :Instance ;
         skos:prefLabel      "តិក្កនិបាតជាតក"@km , "tikkanipāt jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4787D7413B46E549 ;
+            bdr:ID53011578C471B557 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT53011578C471B557 , bdr:TT6571537C11AE1712 , bdr:TT72A6F0F202C4E01F , bdr:TTCDC5C9F74391C3BE ;
+        :hasTitle           bdr:TT72A6F0F202C4E01F , bdr:TT9BE1C1A3A400C59E , bdr:TTCDC5C9F74391C3BE , bdr:TTEBB0E1E8DA0B1EEA ;
         :instanceHasReproduction  bdr:W1FEMC020092 ;
+        :instanceOf         bdr:WA1FEMC050019 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5C64A7E11A2E52D4 ;
-        :note               bdr:NTD8303382C23AE169 ;
+        :microfilmItem      bdr:MFD8303382C23AE169 ;
+        :note               bdr:NT6571537C11AE1712 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD8303382C23AE169
+    bdr:NT6571537C11AE1712
         a                   :Note ;
         :contentLocationStatement  "pg. 19" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT53011578C471B557
-        a                   :CoverTitle ;
-        rdfs:label          "tikanipāt"@km-x-twktt .
-    
-    bdr:TT6571537C11AE1712
+    bdr:TT72A6F0F202C4E01F
         a                   :CoverTitle ;
         rdfs:label          "តិកនិបាត"@km .
     
-    bdr:TT72A6F0F202C4E01F
-        a                   :Title ;
-        rdfs:label          "តិក្កនិបាតជាតក"@km ;
-        :femcConversionOf   bdr:TT6571537C11AE1712 .
-    
-    bdr:TTCDC5C9F74391C3BE
+    bdr:TT9BE1C1A3A400C59E
         a                   :Title ;
         rdfs:label          "tikkanipāt jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT53011578C471B557 .
+        :femcConversionOf   bdr:TTCDC5C9F74391C3BE .
+    
+    bdr:TTCDC5C9F74391C3BE
+        a                   :CoverTitle ;
+        rdfs:label          "tikanipāt"@km-x-twktt .
+    
+    bdr:TTEBB0E1E8DA0B1EEA
+        a                   :Title ;
+        rdfs:label          "តិក្កនិបាតជាតក"@km ;
+        :femcConversionOf   bdr:TT72A6F0F202C4E01F .
 }

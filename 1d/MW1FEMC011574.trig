@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011574 {
-    bda:LG08F9B25F5B642B41
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011574"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011574"@en , "imported pubinfo for W1FEMC011574"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011574"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011574 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011574 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1d/MW1FEMC011574.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011574 ;
-        adm:logEntry        bda:LG08F9B25F5B642B41 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD96127ED3F7A6960
+    bdr:IDA02BCB4BAC5F4579
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "007-A.10.10.01.III.1" .
     
-    bdr:MF0945146DA5D28244
+    bdr:MF385629F446F4DF6A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "30" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011574 {
         a                   :Instance ;
         skos:prefLabel      "មង្គលវិវាទ"@km , "maṅgal vīvād"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD96127ED3F7A6960 ;
+            bdr:IDA02BCB4BAC5F4579 ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT00A5B3E1519608B6 , bdr:TTA02BCB4BAC5F4579 , bdr:TTCA4F7BC1219261F6 , bdr:TTE0BC3BD7E61F5CFC ;
+        :hasTitle           bdr:TT00A5B3E1519608B6 , bdr:TT08F9B25F5B642B41 , bdr:TTDF6BFD774927363E , bdr:TTE0BC3BD7E61F5CFC ;
         :instanceHasReproduction  bdr:W1FEMC011574 ;
+        :instanceOf         bdr:WA1FEMC010040 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0945146DA5D28244 ;
-        :note               bdr:NT385629F446F4DF6A ;
+        :microfilmItem      bdr:MF385629F446F4DF6A ;
+        :note               bdr:NTCA4F7BC1219261F6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT385629F446F4DF6A
+    bdr:NTCA4F7BC1219261F6
         a                   :Note ;
         :contentLocationStatement  "pg. 358" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT00A5B3E1519608B6
-        a                   :Title ;
-        rdfs:label          "មង្គលវិវាទ"@km ;
-        :femcConversionOf   bdr:TTCA4F7BC1219261F6 .
-    
-    bdr:TTA02BCB4BAC5F4579
-        a                   :CoverTitle ;
-        rdfs:label          "maṅgal vīvād"@km-x-twktt .
-    
-    bdr:TTCA4F7BC1219261F6
         a                   :CoverTitle ;
         rdfs:label          "មង្គលវីវាទ"@km .
     
-    bdr:TTE0BC3BD7E61F5CFC
+    bdr:TT08F9B25F5B642B41
+        a                   :Title ;
+        rdfs:label          "មង្គលវិវាទ"@km ;
+        :femcConversionOf   bdr:TT00A5B3E1519608B6 .
+    
+    bdr:TTDF6BFD774927363E
         a                   :Title ;
         rdfs:label          "maṅgal vīvād"@km-x-twktt ;
-        :femcConversionOf   bdr:TTA02BCB4BAC5F4579 .
+        :femcConversionOf   bdr:TTE0BC3BD7E61F5CFC .
+    
+    bdr:TTE0BC3BD7E61F5CFC
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal vīvād"@km-x-twktt .
 }

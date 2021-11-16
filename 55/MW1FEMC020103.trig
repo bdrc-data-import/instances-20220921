@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020103 {
-    bda:LGD4C4AECFE5EB2B95
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020103"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020103"@en , "imported pubinfo for W1FEMC020103"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020103"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020103 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020103 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "55/MW1FEMC020103.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020103 ;
-        adm:logEntry        bda:LGD4C4AECFE5EB2B95 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD354AE9544B27E14
+    bdr:ID4EB01DDE4A4E6565
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a*.97.II.1" .
     
-    bdr:MFB9C2B3E28AFB3BB8
+    bdr:MFDFCB4D071F6BC759
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "60" ;
         :microfilmStrip     "154" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020103 {
         a                   :Instance ;
         skos:prefLabel      "ពែងកែវមរកត"@km , "bèṅ kèv marakat"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD354AE9544B27E14 ;
+            bdr:ID4EB01DDE4A4E6565 ;
         :hasFascicles       "6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4EB01DDE4A4E6565 , bdr:TTCB6F3902B4AB9FE8 , bdr:TTEB4A57323C12A346 , bdr:TTFF206B7DA51F359C ;
+        :hasTitle           bdr:TTCB6F3902B4AB9FE8 , bdr:TTD4C4AECFE5EB2B95 , bdr:TTEB4A57323C12A346 , bdr:TTEF31999C1CCCD07B ;
         :instanceHasReproduction  bdr:W1FEMC020103 ;
+        :instanceOf         bdr:WA1FEMC120051 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB9C2B3E28AFB3BB8 ;
-        :note               bdr:NTDFCB4D071F6BC759 ;
+        :microfilmItem      bdr:MFDFCB4D071F6BC759 ;
+        :note               bdr:NTFF206B7DA51F359C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1422" .
     
-    bdr:NTDFCB4D071F6BC759
+    bdr:NTFF206B7DA51F359C
         a                   :Note ;
         :contentLocationStatement  "pg. 21" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4EB01DDE4A4E6565
+    bdr:TTCB6F3902B4AB9FE8
+        a                   :CoverTitle ;
+        rdfs:label          "ពែងកែវមរកដ្ឋ់"@km .
+    
+    bdr:TTD4C4AECFE5EB2B95
+        a                   :Title ;
+        rdfs:label          "ពែងកែវមរកត"@km ;
+        :femcConversionOf   bdr:TTCB6F3902B4AB9FE8 .
+    
+    bdr:TTEB4A57323C12A346
         a                   :CoverTitle ;
         rdfs:label          "bèṅ kèv marakaṭṭh'"@km-x-twktt .
     
-    bdr:TTCB6F3902B4AB9FE8
-        a                   :Title ;
-        rdfs:label          "ពែងកែវមរកត"@km ;
-        :femcConversionOf   bdr:TTFF206B7DA51F359C .
-    
-    bdr:TTEB4A57323C12A346
+    bdr:TTEF31999C1CCCD07B
         a                   :Title ;
         rdfs:label          "bèṅ kèv marakat"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4EB01DDE4A4E6565 .
-    
-    bdr:TTFF206B7DA51F359C
-        a                   :CoverTitle ;
-        rdfs:label          "ពែងកែវមរកដ្ឋ់"@km .
+        :femcConversionOf   bdr:TTEB4A57323C12A346 .
 }

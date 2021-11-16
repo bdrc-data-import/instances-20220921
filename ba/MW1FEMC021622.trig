@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021622 {
-    bda:LGB5F98AA7F6EA5E46
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021622"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021622"@en , "imported pubinfo for W1FEMC021622"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021622"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021622 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021622 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ba/MW1FEMC021622.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021622 ;
-        adm:logEntry        bda:LGB5F98AA7F6EA5E46 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA411A5282C94EDC6
+    bdr:ID95693A78712C3299
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.531.II.2" .
     
-    bdr:MFA78622C8931C3A2C
+    bdr:MF18BD809ED349E1FD
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "132" ;
         :microfilmStrip     "226" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021622 {
         a                   :Instance ;
         skos:prefLabel      "ទន្សាយស៊ីចេក"@km , "dansāy sī cek"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA411A5282C94EDC6 ;
+            bdr:ID95693A78712C3299 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3309335BEC810051 , bdr:TT3EC1B5EA2C69ED07 , bdr:TT774562B160D2B0C7 , bdr:TT95693A78712C3299 ;
+        :hasTitle           bdr:TT3EC1B5EA2C69ED07 , bdr:TT774562B160D2B0C7 , bdr:TTAB93AA72DDEE1E85 , bdr:TTB5F98AA7F6EA5E46 ;
         :instanceHasReproduction  bdr:W1FEMC021622 ;
+        :instanceOf         bdr:WA1FEMC130006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA78622C8931C3A2C ;
-        :note               bdr:NT18BD809ED349E1FD ;
+        :microfilmItem      bdr:MF18BD809ED349E1FD ;
+        :note               bdr:NT3309335BEC810051 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT18BD809ED349E1FD
+    bdr:NT3309335BEC810051
         a                   :Note ;
         :contentLocationStatement  "pg. 292" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3309335BEC810051
+    bdr:TT3EC1B5EA2C69ED07
+        a                   :CoverTitle ;
+        rdfs:label          "sūbhā dansāy"@km-x-twktt .
+    
+    bdr:TT774562B160D2B0C7
         a                   :CoverTitle ;
         rdfs:label          "សូភាទន្សាយ"@km .
     
-    bdr:TT3EC1B5EA2C69ED07
+    bdr:TTAB93AA72DDEE1E85
         a                   :Title ;
         rdfs:label          "dansāy sī cek"@km-x-twktt ;
-        :femcConversionOf   bdr:TT95693A78712C3299 .
+        :femcConversionOf   bdr:TT3EC1B5EA2C69ED07 .
     
-    bdr:TT774562B160D2B0C7
+    bdr:TTB5F98AA7F6EA5E46
         a                   :Title ;
         rdfs:label          "ទន្សាយស៊ីចេក"@km ;
-        :femcConversionOf   bdr:TT3309335BEC810051 .
-    
-    bdr:TT95693A78712C3299
-        a                   :CoverTitle ;
-        rdfs:label          "sūbhā dansāy"@km-x-twktt .
+        :femcConversionOf   bdr:TT774562B160D2B0C7 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020287 {
-    bda:LGBF76736EDFC76CD0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020287"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020287"@en , "imported pubinfo for W1FEMC020287"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020287"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020287 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020287 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e7/MW1FEMC020287.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020287 ;
-        adm:logEntry        bda:LGBF76736EDFC76CD0 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID7D822DD0A3EA0E9A
+    bdr:IDD2863401140BD84A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.180.II.2" .
     
-    bdr:MFDF310B833EB83081
+    bdr:MFD719AEEFF8B295BB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020287 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកត្ថុមនឹកផ្គរ"@km , "lpök​ tlum nịk phgar"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7D822DD0A3EA0E9A ;
+            bdr:IDD2863401140BD84A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3063CFFA7EF12794 , bdr:TT4B681A08D2611820 , bdr:TT998D897256ED705B , bdr:TTD2863401140BD84A ;
+        :hasTitle           bdr:TT3063CFFA7EF12794 , bdr:TT998D897256ED705B , bdr:TTBF76736EDFC76CD0 , bdr:TTF35C6DDE43C458E2 ;
         :instanceHasReproduction  bdr:W1FEMC020287 ;
+        :instanceOf         bdr:WA1FEMC130017 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDF310B833EB83081 ;
-        :note               bdr:NTD719AEEFF8B295BB ;
+        :microfilmItem      bdr:MFD719AEEFF8B295BB ;
+        :note               bdr:NT4B681A08D2611820 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTD719AEEFF8B295BB
+    bdr:NT4B681A08D2611820
         a                   :Note ;
         :contentLocationStatement  "pg. 57" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT3063CFFA7EF12794
-        a                   :Title ;
-        rdfs:label          "ល្បើកត្ថុមនឹកផ្គរ"@km ;
-        :femcConversionOf   bdr:TT4B681A08D2611820 .
-    
-    bdr:TT4B681A08D2611820
         a                   :CoverTitle ;
         rdfs:label          "ថ្លុំនឹកផ្គរ"@km .
     
     bdr:TT998D897256ED705B
-        a                   :Title ;
-        rdfs:label          "lpök​ tlum nịk phgar"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD2863401140BD84A .
-    
-    bdr:TTD2863401140BD84A
         a                   :CoverTitle ;
         rdfs:label          "thluṃ nịk phgar"@km-x-twktt .
+    
+    bdr:TTBF76736EDFC76CD0
+        a                   :Title ;
+        rdfs:label          "ល្បើកត្ថុមនឹកផ្គរ"@km ;
+        :femcConversionOf   bdr:TT3063CFFA7EF12794 .
+    
+    bdr:TTF35C6DDE43C458E2
+        a                   :Title ;
+        rdfs:label          "lpök​ tlum nịk phgar"@km-x-twktt ;
+        :femcConversionOf   bdr:TT998D897256ED705B .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010944 {
-    bda:LGFF8480E84F0AEBF2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010944"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010944"@en , "imported pubinfo for W1FEMC010944"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010944"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010944 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010944 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "3e/MW1FEMC010944.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010944 ;
-        adm:logEntry        bda:LGFF8480E84F0AEBF2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFB6870CF70BEFA3E
+    bdr:ID2C79195AF7B175E7
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "109-A.04.03.02.III.6" .
     
-    bdr:MF9B0654F0EDBD38BE
+    bdr:MF2CB9B25E8BDAE146
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "25" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010944 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សពោធិ"@km , "ānisaṅs bodhi"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFB6870CF70BEFA3E ;
+            bdr:ID2C79195AF7B175E7 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT12395BD578C29BE8 , bdr:TT2C79195AF7B175E7 , bdr:TT428D3AEB7D875540 , bdr:TT7065A4E0E53FA791 ;
+        :hasTitle           bdr:TT12395BD578C29BE8 , bdr:TT7065A4E0E53FA791 , bdr:TT70EBF6CE03920616 , bdr:TTFF8480E84F0AEBF2 ;
         :instanceHasReproduction  bdr:W1FEMC010944 ;
+        :instanceOf         bdr:WA1FEMC060004 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF9B0654F0EDBD38BE ;
-        :note               bdr:NT2CB9B25E8BDAE146 ;
+        :microfilmItem      bdr:MF2CB9B25E8BDAE146 ;
+        :note               bdr:NT428D3AEB7D875540 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2CB9B25E8BDAE146
+    bdr:NT428D3AEB7D875540
         a                   :Note ;
         :contentLocationStatement  "pg. 238" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT12395BD578C29BE8
-        a                   :Title ;
-        rdfs:label          "ānisaṅs bodhi"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2C79195AF7B175E7 .
-    
-    bdr:TT2C79195AF7B175E7
         a                   :CoverTitle ;
         rdfs:label          "annisaṅ bor"@km-x-twktt .
     
-    bdr:TT428D3AEB7D875540
+    bdr:TT7065A4E0E53FA791
         a                   :CoverTitle ;
         rdfs:label          "អន្និសងពោរ"@km .
     
-    bdr:TT7065A4E0E53FA791
+    bdr:TT70EBF6CE03920616
+        a                   :Title ;
+        rdfs:label          "ānisaṅs bodhi"@km-x-twktt ;
+        :femcConversionOf   bdr:TT12395BD578C29BE8 .
+    
+    bdr:TTFF8480E84F0AEBF2
         a                   :Title ;
         rdfs:label          "អានិសង្សពោធិ"@km ;
-        :femcConversionOf   bdr:TT428D3AEB7D875540 .
+        :femcConversionOf   bdr:TT7065A4E0E53FA791 .
 }

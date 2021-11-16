@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011628 {
-    bda:LGA92CC0FC9181453F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011628"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011628"@en , "imported pubinfo for W1FEMC011628"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011628"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011628 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011628 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0b/MW1FEMC011628.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011628 ;
-        adm:logEntry        bda:LGA92CC0FC9181453F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB35A1700C5051EEE
+    bdr:IDBDDFF8EFA7C3A75B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "012-A.10.16.02.III.1" .
     
-    bdr:MFB4ABCD40C5C9830F
+    bdr:MF4003D36850D06969
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "143" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011628 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មបទដ្ឋកថា"@km , "dhammapadaṭṭhakathā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB35A1700C5051EEE ;
+            bdr:IDBDDFF8EFA7C3A75B ;
         :hasFascicles       "13" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3849768F56361FB2 , bdr:TTBDDFF8EFA7C3A75B , bdr:TTCB04B2E9F95648DC , bdr:TTCFE9710F12861649 ;
+        :hasTitle           bdr:TT3849768F56361FB2 , bdr:TT64A66BF8778E422D , bdr:TTA92CC0FC9181453F , bdr:TTCB04B2E9F95648DC ;
         :instanceHasReproduction  bdr:W1FEMC011628 ;
+        :instanceOf         bdr:WA1FEMC010030 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB4ABCD40C5C9830F ;
-        :note               bdr:NT4003D36850D06969 ;
+        :microfilmItem      bdr:MF4003D36850D06969 ;
+        :note               bdr:NTCFE9710F12861649 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4003D36850D06969
+    bdr:NTCFE9710F12861649
         a                   :Note ;
         :contentLocationStatement  "pg. 368" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT3849768F56361FB2
-        a                   :Title ;
-        rdfs:label          "dhammapadaṭṭhakathā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBDDFF8EFA7C3A75B .
-    
-    bdr:TTBDDFF8EFA7C3A75B
         a                   :CoverTitle ;
         rdfs:label          "dham pad"@km-x-twktt .
     
-    bdr:TTCB04B2E9F95648DC
+    bdr:TT64A66BF8778E422D
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3849768F56361FB2 .
+    
+    bdr:TTA92CC0FC9181453F
         a                   :Title ;
         rdfs:label          "ធម្មបទដ្ឋកថា"@km ;
-        :femcConversionOf   bdr:TTCFE9710F12861649 .
+        :femcConversionOf   bdr:TTCB04B2E9F95648DC .
     
-    bdr:TTCFE9710F12861649
+    bdr:TTCB04B2E9F95648DC
         a                   :CoverTitle ;
         rdfs:label          "ធមបទ"@km .
 }

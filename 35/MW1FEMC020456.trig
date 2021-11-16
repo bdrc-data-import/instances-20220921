@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020456 {
-    bda:LG4B35CD6173865381
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020456"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020456"@en , "imported pubinfo for W1FEMC020456"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020456"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020456 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020456 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "35/MW1FEMC020456.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020456 ;
-        adm:logEntry        bda:LG4B35CD6173865381 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8EDA9B912875073B
+    bdr:IDD0E8B8A56F84E6CE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.89.II.1" .
     
-    bdr:MFE88FFE1E3B27983D
+    bdr:MF58CA1E2C5E169537
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "68" ;
         :microfilmStrip     "162" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020456 {
         a                   :Instance ;
         skos:prefLabel      "អនុរុទ្ធ"@km , "anuruddh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8EDA9B912875073B ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1845667EA165464E , bdr:TT22DEB16975F2F2A2 , bdr:TT8394D4BE72B7ABE8 , bdr:TTD0E8B8A56F84E6CE ;
+            bdr:IDD0E8B8A56F84E6CE ;
+        :hasTitle           bdr:TT1845667EA165464E , bdr:TT22DEB16975F2F2A2 , bdr:TT37F77EE5F6CE2212 , bdr:TT4B35CD6173865381 ;
         :instanceHasReproduction  bdr:W1FEMC020456 ;
+        :instanceOf         bdr:WA1FEMC120048 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE88FFE1E3B27983D ;
-        :note               bdr:NT58CA1E2C5E169537 ;
+        :microfilmItem      bdr:MF58CA1E2C5E169537 ;
+        :note               bdr:NT8394D4BE72B7ABE8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1585" .
     
-    bdr:NT58CA1E2C5E169537
+    bdr:NT8394D4BE72B7ABE8
         a                   :Note ;
         :contentLocationStatement  "pg. 89" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1845667EA165464E
-        a                   :Title ;
-        rdfs:label          "អនុរុទ្ធ"@km ;
-        :femcConversionOf   bdr:TT8394D4BE72B7ABE8 .
-    
-    bdr:TT22DEB16975F2F2A2
-        a                   :Title ;
-        rdfs:label          "anuruddh"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD0E8B8A56F84E6CE .
-    
-    bdr:TT8394D4BE72B7ABE8
         a                   :CoverTitle ;
         rdfs:label          "អនុរុទ"@km .
     
-    bdr:TTD0E8B8A56F84E6CE
+    bdr:TT22DEB16975F2F2A2
         a                   :CoverTitle ;
         rdfs:label          "anurud"@km-x-twktt .
+    
+    bdr:TT37F77EE5F6CE2212
+        a                   :Title ;
+        rdfs:label          "anuruddh"@km-x-twktt ;
+        :femcConversionOf   bdr:TT22DEB16975F2F2A2 .
+    
+    bdr:TT4B35CD6173865381
+        a                   :Title ;
+        rdfs:label          "អនុរុទ្ធ"@km ;
+        :femcConversionOf   bdr:TT1845667EA165464E .
 }

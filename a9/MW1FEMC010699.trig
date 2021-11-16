@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010699 {
-    bda:LG9D1E4E71AA64ED95
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010699"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010699"@en , "imported pubinfo for W1FEMC010699"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010699"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010699 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010699 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "a9/MW1FEMC010699.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010699 ;
-        adm:logEntry        bda:LG9D1E4E71AA64ED95 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3781D455A266C701
+    bdr:ID628211FB12107B4E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "009-A.03.07.01.III.1" .
     
-    bdr:MF8EC2954235F64DE5
+    bdr:MFB940D845EB89E6AE
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "46" ;
         :microfilmStrip     "122" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010699 {
         a                   :Instance ;
         skos:prefLabel      "ត្រៃកូដធម៏"@km , "trai kūṭ dhaṛm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3781D455A266C701 ;
+            bdr:ID628211FB12107B4E ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT26D0FB9413C85F12 , bdr:TT628211FB12107B4E ;
+        :hasTitle           bdr:TT514ABDF0850E1DCF , bdr:TT9D1E4E71AA64ED95 ;
         :instanceHasReproduction  bdr:W1FEMC010699 ;
+        :instanceOf         bdr:WA1FEMC010067 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8EC2954235F64DE5 ;
-        :note               bdr:NTB940D845EB89E6AE ;
+        :microfilmItem      bdr:MFB940D845EB89E6AE ;
+        :note               bdr:NT26D0FB9413C85F12 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB940D845EB89E6AE
+    bdr:NT26D0FB9413C85F12
         a                   :Note ;
         :contentLocationStatement  "pg. 191" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT26D0FB9413C85F12
-        a                   :Title ;
-        rdfs:label          "ត្រៃកូដធម៏"@km .
-    
-    bdr:TT628211FB12107B4E
+    bdr:TT514ABDF0850E1DCF
         a                   :Title ;
         rdfs:label          "trai kūṭ dhaṛm"@km-x-twktt .
+    
+    bdr:TT9D1E4E71AA64ED95
+        a                   :Title ;
+        rdfs:label          "ត្រៃកូដធម៏"@km .
 }

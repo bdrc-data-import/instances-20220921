@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010244 {
-    bda:LG1B7F6E713261491E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010244"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010244"@en , "imported pubinfo for W1FEMC010244"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010244"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010244 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010244 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "34/MW1FEMC010244.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010244 ;
-        adm:logEntry        bda:LG1B7F6E713261491E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID2136754EEF8A7717
+    bdr:IDCC3658AADC0DB11D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "044-PP.02.06.02.III.6" .
     
-    bdr:MF6211176F22696642
+    bdr:MF343DF9E86B7AF09E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "4" ;
         :microfilmStrip     "13" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010244 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសព្វទាន"@km , "ānisaṅs sabb dān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2136754EEF8A7717 ;
+            bdr:IDCC3658AADC0DB11D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT7134BED8A65B9655 , bdr:TTCC3658AADC0DB11D , bdr:TTF37B6C4A49110D33 , bdr:TTF6D3F8F84A43CE9A ;
+        :hasTitle           bdr:TT0F9559C4D42080A4 , bdr:TT1B7F6E713261491E , bdr:TTF37B6C4A49110D33 , bdr:TTF6D3F8F84A43CE9A ;
         :instanceHasReproduction  bdr:W1FEMC010244 ;
+        :instanceOf         bdr:WA1FEMC060001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF6211176F22696642 ;
-        :note               bdr:NT343DF9E86B7AF09E ;
+        :microfilmItem      bdr:MF343DF9E86B7AF09E ;
+        :note               bdr:NT7134BED8A65B9655 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT343DF9E86B7AF09E
+    bdr:NT7134BED8A65B9655
         a                   :Note ;
         :contentLocationStatement  "pg. 101" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT7134BED8A65B9655
-        a                   :CoverTitle ;
-        rdfs:label          "សព្វទាន"@km .
+    bdr:TT0F9559C4D42080A4
+        a                   :Title ;
+        rdfs:label          "ānisaṅs sabb dān"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF37B6C4A49110D33 .
     
-    bdr:TTCC3658AADC0DB11D
+    bdr:TT1B7F6E713261491E
+        a                   :Title ;
+        rdfs:label          "អានិសង្សសព្វទាន"@km ;
+        :femcConversionOf   bdr:TTF6D3F8F84A43CE9A .
+    
+    bdr:TTF37B6C4A49110D33
         a                   :CoverTitle ;
         rdfs:label          "sabb dān"@km-x-twktt .
     
-    bdr:TTF37B6C4A49110D33
-        a                   :Title ;
-        rdfs:label          "ānisaṅs sabb dān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCC3658AADC0DB11D .
-    
     bdr:TTF6D3F8F84A43CE9A
-        a                   :Title ;
-        rdfs:label          "អានិសង្សសព្វទាន"@km ;
-        :femcConversionOf   bdr:TT7134BED8A65B9655 .
+        a                   :CoverTitle ;
+        rdfs:label          "សព្វទាន"@km .
 }

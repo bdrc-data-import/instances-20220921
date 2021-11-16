@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010343 {
-    bda:LG9810D006DFFEFD84
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010343"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010343"@en , "imported pubinfo for W1FEMC010343"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010343"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010343 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010343 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "01/MW1FEMC010343.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010343 ;
-        adm:logEntry        bda:LG9810D006DFFEFD84 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA67BDB1054FB885B
+    bdr:IDF7453FA2D5C68116
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "067-PP.03.03.03.III.2" .
     
-    bdr:MFB7A8C5D2929388EF
+    bdr:MFF59E07175ADDC922
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "64" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010343 {
         a                   :Instance ;
         skos:prefLabel      "មាតុគុណសូត្រ"@km , "mātuguṅ sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA67BDB1054FB885B ;
+            bdr:IDF7453FA2D5C68116 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT205D029FD4648768 , bdr:TTE13C9B061DDB4E98 , bdr:TTE63863F617EE5F67 , bdr:TTF7453FA2D5C68116 ;
+        :hasTitle           bdr:TT205D029FD4648768 , bdr:TT9810D006DFFEFD84 , bdr:TTAE9B4C6A22112AD7 , bdr:TTE63863F617EE5F67 ;
         :instanceHasReproduction  bdr:W1FEMC010343 ;
+        :instanceOf         bdr:WA1FEMC020007 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB7A8C5D2929388EF ;
-        :note               bdr:NTF59E07175ADDC922 ;
+        :microfilmItem      bdr:MFF59E07175ADDC922 ;
+        :note               bdr:NTE13C9B061DDB4E98 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTF59E07175ADDC922
+    bdr:NTE13C9B061DDB4E98
         a                   :Note ;
         :contentLocationStatement  "pg. 120" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT205D029FD4648768
-        a                   :Title ;
-        rdfs:label          "មាតុគុណសូត្រ"@km ;
-        :femcConversionOf   bdr:TTE13C9B061DDB4E98 .
-    
-    bdr:TTE13C9B061DDB4E98
         a                   :CoverTitle ;
         rdfs:label          "មាតគុន"@km .
     
-    bdr:TTE63863F617EE5F67
+    bdr:TT9810D006DFFEFD84
+        a                   :Title ;
+        rdfs:label          "មាតុគុណសូត្រ"@km ;
+        :femcConversionOf   bdr:TT205D029FD4648768 .
+    
+    bdr:TTAE9B4C6A22112AD7
         a                   :Title ;
         rdfs:label          "mātuguṅ sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF7453FA2D5C68116 .
+        :femcConversionOf   bdr:TTE63863F617EE5F67 .
     
-    bdr:TTF7453FA2D5C68116
+    bdr:TTE63863F617EE5F67
         a                   :CoverTitle ;
         rdfs:label          "mātagun"@km-x-twktt .
 }

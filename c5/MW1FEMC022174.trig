@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022174 {
-    bda:LGBE9451561EF92F34
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022174"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022174"@en , "imported pubinfo for W1FEMC022174"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022174"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022174 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022174 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c5/MW1FEMC022174.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022174 ;
-        adm:logEntry        bda:LGBE9451561EF92F34 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD1199D3D8292E21C
+    bdr:ID2BE096707662F8DA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.164.V.1" .
     
-    bdr:MF341EFAA4E01DE042
+    bdr:MF999A01EEA46B1875
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "139" ;
         :microfilmStrip     "233" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022174 {
         a                   :Instance ;
         skos:prefLabel      "បឋមលង្កា"@km , "paṭham laṅkā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD1199D3D8292E21C ;
+            bdr:ID2BE096707662F8DA ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT13B057C57CEBB5A6 , bdr:TT2BE096707662F8DA , bdr:TT85228D8C08C3CAE1 , bdr:TTB7DD396FE12A58F9 ;
+        :hasTitle           bdr:TT13B057C57CEBB5A6 , bdr:TT85228D8C08C3CAE1 , bdr:TTBE9451561EF92F34 , bdr:TTCDD60B2D95F604E5 ;
         :instanceHasReproduction  bdr:W1FEMC022174 ;
+        :instanceOf         bdr:WA1FEMC070014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF341EFAA4E01DE042 ;
-        :note               bdr:NT999A01EEA46B1875 ;
+        :microfilmItem      bdr:MF999A01EEA46B1875 ;
+        :note               bdr:NTB7DD396FE12A58F9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1532" .
     
-    bdr:NT999A01EEA46B1875
+    bdr:NTB7DD396FE12A58F9
         a                   :Note ;
         :contentLocationStatement  "pg. 387" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT13B057C57CEBB5A6
-        a                   :Title ;
-        rdfs:label          "បឋមលង្កា"@km ;
-        :femcConversionOf   bdr:TTB7DD396FE12A58F9 .
+        a                   :CoverTitle ;
+        rdfs:label          "ថ្នាក់បថម្មលង្ការ"@km .
     
-    bdr:TT2BE096707662F8DA
+    bdr:TT85228D8C08C3CAE1
         a                   :CoverTitle ;
         rdfs:label          "thnāk' pathamm laṅkār"@km-x-twktt .
     
-    bdr:TT85228D8C08C3CAE1
+    bdr:TTBE9451561EF92F34
+        a                   :Title ;
+        rdfs:label          "បឋមលង្កា"@km ;
+        :femcConversionOf   bdr:TT13B057C57CEBB5A6 .
+    
+    bdr:TTCDD60B2D95F604E5
         a                   :Title ;
         rdfs:label          "paṭham laṅkā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2BE096707662F8DA .
-    
-    bdr:TTB7DD396FE12A58F9
-        a                   :CoverTitle ;
-        rdfs:label          "ថ្នាក់បថម្មលង្ការ"@km .
+        :femcConversionOf   bdr:TT85228D8C08C3CAE1 .
 }

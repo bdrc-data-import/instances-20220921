@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010585 {
-    bda:LGF468A4A7553E02CC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010585"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010585"@en , "imported pubinfo for W1FEMC010585"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010585"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010585 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010585 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "03/MW1FEMC010585.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010585 ;
-        adm:logEntry        bda:LGF468A4A7553E02CC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF50A9059346BA34B
+    bdr:ID65A7CD2933CA9900
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "085-A.02.10.01.III.1" .
     
-    bdr:MFCAB2012A92B0F986
+    bdr:MFCAEDD1F218098F15
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "73" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010585 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF50A9059346BA34B ;
+            bdr:ID65A7CD2933CA9900 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT22414CD02641E9E1 , bdr:TT65A7CD2933CA9900 , bdr:TT83D052BB2294BD1F , bdr:TT883B08E0326B7C23 , bdr:TTCD9F6EDE2D252BE9 , bdr:TTE516F11A1BD129D8 ;
+        :hasTitle           bdr:TT22414CD02641E9E1 , bdr:TT83D052BB2294BD1F , bdr:TTBEC2BF94BB2FB109 , bdr:TTCD9F6EDE2D252BE9 , bdr:TTE516F11A1BD129D8 , bdr:TTF468A4A7553E02CC ;
         :instanceHasReproduction  bdr:W1FEMC010585 ;
+        :instanceOf         bdr:WA1FEMC010059 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCAB2012A92B0F986 ;
-        :note               bdr:NTCAEDD1F218098F15 ;
+        :microfilmItem      bdr:MFCAEDD1F218098F15 ;
+        :note               bdr:NT883B08E0326B7C23 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTCAEDD1F218098F15
+    bdr:NT883B08E0326B7C23
         a                   :Note ;
         :contentLocationStatement  "pg. 168" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT22414CD02641E9E1
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
-    
-    bdr:TT65A7CD2933CA9900
         a                   :CoverTitle ;
-        rdfs:label          "kāsabb cod braḥ ānaṇd chlöy "@km-x-twktt .
+        rdfs:label          "kassap cod braḥ ānand chlöy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT83D052BB2294BD1F .
     
     bdr:TT83D052BB2294BD1F
         a                   :CoverTitle ;
-        rdfs:label          "kassap cod braḥ ānand chlöy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT65A7CD2933CA9900 .
+        rdfs:label          "kāsabb cod braḥ ānaṇd chlöy "@km-x-twktt .
     
-    bdr:TT883B08E0326B7C23
-        a                   :CoverTitle ;
-        rdfs:label          "កាសព្វចោទព្រះអានណ្ទឆ្លើយ"@km .
+    bdr:TTBEC2BF94BB2FB109
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
     
     bdr:TTCD9F6EDE2D252BE9
         a                   :CoverTitle ;
-        rdfs:label          "កស្សបចោទ​ ព្រះអានន្ទឆ្លើយ"@km ;
-        :femcConversionOf   bdr:TT883B08E0326B7C23 .
+        rdfs:label          "កាសព្វចោទព្រះអានណ្ទឆ្លើយ"@km .
     
     bdr:TTE516F11A1BD129D8
+        a                   :CoverTitle ;
+        rdfs:label          "កស្សបចោទ​ ព្រះអានន្ទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TTCD9F6EDE2D252BE9 .
+    
+    bdr:TTF468A4A7553E02CC
         a                   :Title ;
         rdfs:label          "សង្គាយនាគ្រែ៥"@km .
 }

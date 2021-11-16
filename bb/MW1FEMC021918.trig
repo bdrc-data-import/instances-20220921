@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021918 {
-    bda:LGB059331FDA4CDD40
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021918"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021918"@en , "imported pubinfo for W1FEMC021918"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021918"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021918 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021918 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "bb/MW1FEMC021918.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021918 ;
-        adm:logEntry        bda:LGB059331FDA4CDD40 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID458DA6EE5FC6B549
+    bdr:ID26C0AFD2685F389A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.700.III.2" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021918 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទសុកគិរីសូត្រ"@km , "cand suk girī sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID458DA6EE5FC6B549 ;
+            bdr:ID26C0AFD2685F389A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT26C0AFD2685F389A , bdr:TT38F97709944F28DB , bdr:TTC3ABB17C0339DEF6 , bdr:TTF3B924B564363E88 ;
+        :hasTitle           bdr:TTB059331FDA4CDD40 , bdr:TTC3ABB17C0339DEF6 , bdr:TTEBE42DE9A1E25E2B , bdr:TTF3B924B564363E88 ;
         :instanceHasReproduction  bdr:W1FEMC021918 ;
+        :instanceOf         bdr:WA1FEMC020018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT7FD612141C6AF1FC ;
+        :note               bdr:NT38F97709944F28DB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7FD612141C6AF1FC
+    bdr:NT38F97709944F28DB
         a                   :Note ;
         :contentLocationStatement  "pg. 342" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT26C0AFD2685F389A
-        a                   :CoverTitle ;
-        rdfs:label          "cand sukkarīsūtr"@km-x-twktt .
+    bdr:TTB059331FDA4CDD40
+        a                   :Title ;
+        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
+        :femcConversionOf   bdr:TTC3ABB17C0339DEF6 .
     
-    bdr:TT38F97709944F28DB
+    bdr:TTC3ABB17C0339DEF6
         a                   :CoverTitle ;
         rdfs:label          "ចន្ទសុក្ករីសូត្រ"@km .
     
-    bdr:TTC3ABB17C0339DEF6
-        a                   :Title ;
-        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
-        :femcConversionOf   bdr:TT38F97709944F28DB .
-    
-    bdr:TTF3B924B564363E88
+    bdr:TTEBE42DE9A1E25E2B
         a                   :Title ;
         rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT26C0AFD2685F389A .
+        :femcConversionOf   bdr:TTF3B924B564363E88 .
+    
+    bdr:TTF3B924B564363E88
+        a                   :CoverTitle ;
+        rdfs:label          "cand sukkarīsūtr"@km-x-twktt .
 }

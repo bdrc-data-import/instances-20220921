@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010683 {
-    bda:LG7E8C5F343C1D4102
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010683"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010683"@en , "imported pubinfo for W1FEMC010683"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010683"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010683 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010683 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "94/MW1FEMC010683.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010683 ;
-        adm:logEntry        bda:LG7E8C5F343C1D4102 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDAF4D9D90E691D3E6
+    bdr:ID8914461467789469
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002-A.03.05.03.III.4" .
     
-    bdr:MF8B9562A49BB8E474
+    bdr:MFE8A7E71FBCFD4331
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "125" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010683 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAF4D9D90E691D3E6 ;
+            bdr:ID8914461467789469 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1EF46FBCDEBB1CD5 , bdr:TT20898B55909B9C14 , bdr:TT29F84D6A10BE02F4 , bdr:TT470C8B18ADDA63EE , bdr:TT8914461467789469 , bdr:TTC82720EB89483129 ;
+        :hasTitle           bdr:TT1EF46FBCDEBB1CD5 , bdr:TT29F84D6A10BE02F4 , bdr:TT470C8B18ADDA63EE , bdr:TT7E8C5F343C1D4102 , bdr:TTA0B68863644AA8CD , bdr:TTC82720EB89483129 ;
         :instanceHasReproduction  bdr:W1FEMC010683 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8B9562A49BB8E474 ;
-        :note               bdr:NTE8A7E71FBCFD4331 ;
+        :microfilmItem      bdr:MFE8A7E71FBCFD4331 ;
+        :note               bdr:NT20898B55909B9C14 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE8A7E71FBCFD4331
+    bdr:NT20898B55909B9C14
         a                   :Note ;
         :contentLocationStatement  "pg. 188" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT1EF46FBCDEBB1CD5
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
-    
-    bdr:TT20898B55909B9C14
         a                   :CoverTitle ;
-        rdfs:label          "សង្គន្យី"@km .
+        rdfs:label          "សង្គណី"@km ;
+        :femcConversionOf   bdr:TTC82720EB89483129 .
     
     bdr:TT29F84D6A10BE02F4
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
+        a                   :CoverTitle ;
+        rdfs:label          "saṅgaṇī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT470C8B18ADDA63EE .
     
     bdr:TT470C8B18ADDA63EE
         a                   :CoverTitle ;
-        rdfs:label          "saṅgaṇī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8914461467789469 .
-    
-    bdr:TT8914461467789469
-        a                   :CoverTitle ;
         rdfs:label          "saṅganīy°"@km-x-twktt .
+    
+    bdr:TT7E8C5F343C1D4102
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTA0B68863644AA8CD
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
     bdr:TTC82720EB89483129
         a                   :CoverTitle ;
-        rdfs:label          "សង្គណី"@km ;
-        :femcConversionOf   bdr:TT20898B55909B9C14 .
+        rdfs:label          "សង្គន្យី"@km .
 }

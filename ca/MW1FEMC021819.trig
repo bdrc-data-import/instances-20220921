@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021819 {
-    bda:LGFC188E5C471CBB3E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021819"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021819"@en , "imported pubinfo for W1FEMC021819"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021819"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021819 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021819 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "ca/MW1FEMC021819.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021819 ;
-        adm:logEntry        bda:LGFC188E5C471CBB3E , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFEF1513317BD89BA
+    bdr:IDCFB1533D516C962A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.601.I.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021819 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់កេរកាល"@km , "cpāp' ker kāl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFEF1513317BD89BA ;
+            bdr:IDCFB1533D516C962A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CF892724C2E6C53 , bdr:TT552585CF709D6C3D , bdr:TTCFB1533D516C962A , bdr:TTF5CEDD6822DA4590 ;
+        :hasTitle           bdr:TT25BDE1CF69550E28 , bdr:TT552585CF709D6C3D , bdr:TTF5CEDD6822DA4590 , bdr:TTFC188E5C471CBB3E ;
         :instanceHasReproduction  bdr:W1FEMC021819 ;
+        :instanceOf         bdr:WA1FEMC100006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT8F2AF0FCE19B0608 ;
+        :note               bdr:NT0CF892724C2E6C53 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8F2AF0FCE19B0608
+    bdr:NT0CF892724C2E6C53
         a                   :Note ;
         :contentLocationStatement  "pg. 326" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0CF892724C2E6C53
-        a                   :CoverTitle ;
-        rdfs:label          "កេកាល"@km .
-    
-    bdr:TT552585CF709D6C3D
+    bdr:TT25BDE1CF69550E28
         a                   :Title ;
         rdfs:label          "cpāp' ker kāl"@km-x-twktt ;
-        :femcConversionOf   bdr:TTCFB1533D516C962A .
+        :femcConversionOf   bdr:TT552585CF709D6C3D .
     
-    bdr:TTCFB1533D516C962A
+    bdr:TT552585CF709D6C3D
         a                   :CoverTitle ;
         rdfs:label          "ke kāl"@km-x-twktt .
     
     bdr:TTF5CEDD6822DA4590
+        a                   :CoverTitle ;
+        rdfs:label          "កេកាល"@km .
+    
+    bdr:TTFC188E5C471CBB3E
         a                   :Title ;
         rdfs:label          "ច្បាប់កេរកាល"@km ;
-        :femcConversionOf   bdr:TT0CF892724C2E6C53 .
+        :femcConversionOf   bdr:TTF5CEDD6822DA4590 .
 }

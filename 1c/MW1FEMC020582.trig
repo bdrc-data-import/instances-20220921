@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020582 {
-    bda:LG7C1E366FC232E4E3
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020582"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020582"@en , "imported pubinfo for W1FEMC020582"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020582"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020582 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020582 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "1c/MW1FEMC020582.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020582 ;
-        adm:logEntry        bda:LG7C1E366FC232E4E3 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEBA0EA07CCA60956
+    bdr:ID2AC601DC9DA31C98
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d'.215.III.5" .
     
@@ -51,47 +45,46 @@ bdg:MW1FEMC020582 {
         a                   :Instance ;
         skos:prefLabel      "មហាជនកជាតក"@km , "mahā janak jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEBA0EA07CCA60956 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2AC601DC9DA31C98 , bdr:TT61DE2DC35B68F2FE , bdr:TT7F36538CFD76E07F , bdr:TT868211F947FC33C3 , bdr:TTA50CFCEB119E6F53 , bdr:TTC9F15340FF23ABE8 ;
+            bdr:ID2AC601DC9DA31C98 ;
+        :hasTitle           bdr:TT61DE2DC35B68F2FE , bdr:TT7C1E366FC232E4E3 , bdr:TT7F36538CFD76E07F , bdr:TT868211F947FC33C3 , bdr:TTA50CFCEB119E6F53 , bdr:TTB23042D859B27671 ;
         :instanceHasReproduction  bdr:W1FEMC020582 ;
+        :instanceOf         bdr:WA1FEMC050005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT8B374CA25BD488F9 ;
+        :note               bdr:NTC9F15340FF23ABE8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8B374CA25BD488F9
+    bdr:NTC9F15340FF23ABE8
         a                   :Note ;
         :contentLocationStatement  "pg. 111" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT2AC601DC9DA31C98
-        a                   :CoverTitle ;
-        rdfs:label          "janak jātak"@km-x-twktt .
-    
     bdr:TT61DE2DC35B68F2FE
+        a                   :Title ;
+        rdfs:label          "mahā janak jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT868211F947FC33C3 .
+    
+    bdr:TT7C1E366FC232E4E3
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TT7F36538CFD76E07F
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TT868211F947FC33C3
-        a                   :Title ;
-        rdfs:label          "mahā janak jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2AC601DC9DA31C98 .
-    
-    bdr:TTA50CFCEB119E6F53
         a                   :Title ;
         rdfs:label          "មហាជនកជាតក"@km ;
-        :femcConversionOf   bdr:TTC9F15340FF23ABE8 .
+        :femcConversionOf   bdr:TTA50CFCEB119E6F53 .
     
-    bdr:TTC9F15340FF23ABE8
+    bdr:TT868211F947FC33C3
+        a                   :CoverTitle ;
+        rdfs:label          "janak jātak"@km-x-twktt .
+    
+    bdr:TTA50CFCEB119E6F53
         a                   :CoverTitle ;
         rdfs:label          "ជនកជាតក"@km .
+    
+    bdr:TTB23042D859B27671
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011593 {
-    bda:LG65DFF56B4CCF421B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011593"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011593"@en , "imported pubinfo for W1FEMC011593"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011593"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011593 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011593 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "4a/MW1FEMC011593.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011593 ;
-        adm:logEntry        bda:LG65DFF56B4CCF421B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0ADCD1984193D295
+    bdr:IDDF4C13BC3E793BC1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "025-A.10.10.01.II.1" .
     
-    bdr:MF1C20E4E13639EBE4
+    bdr:MF2F7B5E5226EB86C3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "31" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011593 {
         a                   :Instance ;
         skos:prefLabel      "សុវណ្ណខ្យងស័ង្ខ"@km , "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0ADCD1984193D295 ;
+            bdr:IDDF4C13BC3E793BC1 ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3B5B3A1D3F063CB3 , bdr:TT4362F290F36FB909 , bdr:TT6B6282AD1E1F0FB5 , bdr:TTDF4C13BC3E793BC1 ;
+        :hasTitle           bdr:TT3B5B3A1D3F063CB3 , bdr:TT4F01492AFAD88D86 , bdr:TT65DFF56B4CCF421B , bdr:TT6B6282AD1E1F0FB5 ;
         :instanceHasReproduction  bdr:W1FEMC011593 ;
+        :instanceOf         bdr:WA1FEMC120041 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1C20E4E13639EBE4 ;
-        :note               bdr:NT2F7B5E5226EB86C3 ;
+        :microfilmItem      bdr:MF2F7B5E5226EB86C3 ;
+        :note               bdr:NT4362F290F36FB909 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2F7B5E5226EB86C3
+    bdr:NT4362F290F36FB909
         a                   :Note ;
         :contentLocationStatement  "pg. 362" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT3B5B3A1D3F063CB3
-        a                   :Title ;
-        rdfs:label          "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
-        :femcConversionOf   bdr:TTDF4C13BC3E793BC1 .
-    
-    bdr:TT4362F290F36FB909
-        a                   :CoverTitle ;
-        rdfs:label          "ខ្យងសាំង"@km .
-    
-    bdr:TT6B6282AD1E1F0FB5
-        a                   :Title ;
-        rdfs:label          "សុវណ្ណខ្យងស័ង្ខ"@km ;
-        :femcConversionOf   bdr:TT4362F290F36FB909 .
-    
-    bdr:TTDF4C13BC3E793BC1
         a                   :CoverTitle ;
         rdfs:label          "khyaṅ sāṃṅ"@km-x-twktt .
+    
+    bdr:TT4F01492AFAD88D86
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3B5B3A1D3F063CB3 .
+    
+    bdr:TT65DFF56B4CCF421B
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណខ្យងស័ង្ខ"@km ;
+        :femcConversionOf   bdr:TT6B6282AD1E1F0FB5 .
+    
+    bdr:TT6B6282AD1E1F0FB5
+        a                   :CoverTitle ;
+        rdfs:label          "ខ្យងសាំង"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010374 {
-    bda:LGD078677A42627A84
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010374"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010374"@en , "imported pubinfo for W1FEMC010374"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010374"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010374 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010374 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "dd/MW1FEMC010374.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010374 ;
-        adm:logEntry        bda:LGD078677A42627A84 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID982F29EAED69B709
+    bdr:ID48666B1A9A4923EF
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "099-PP.03.03.03.I.1" .
     
-    bdr:MFE53F99C37D80EECF
+    bdr:MF9C55DA5EF6B70FDD
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "66" .
@@ -55,40 +49,39 @@ bdg:MW1FEMC010374 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកពាក្យព្រេង"@km , "lpök lāky breṅ "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID982F29EAED69B709 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT13F312ABA8B4DA68 , bdr:TT48666B1A9A4923EF , bdr:TT94FD121FE2FB20B0 , bdr:TTD6D07E3BFF9CC27B ;
+            bdr:ID48666B1A9A4923EF ;
+        :hasTitle           bdr:TT13F312ABA8B4DA68 , bdr:TT94FD121FE2FB20B0 , bdr:TTB5A4A036103E54AC , bdr:TTD078677A42627A84 ;
         :instanceHasReproduction  bdr:W1FEMC010374 ;
+        :instanceOf         bdr:WA1FEMC100023 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE53F99C37D80EECF ;
-        :note               bdr:NT9C55DA5EF6B70FDD ;
+        :microfilmItem      bdr:MF9C55DA5EF6B70FDD ;
+        :note               bdr:NTD6D07E3BFF9CC27B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9C55DA5EF6B70FDD
+    bdr:NTD6D07E3BFF9CC27B
         a                   :Note ;
         :contentLocationStatement  "pg. 126" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT13F312ABA8B4DA68
-        a                   :Title ;
-        rdfs:label          "lpök lāky breṅ "@km-x-twktt ;
-        :femcConversionOf   bdr:TT48666B1A9A4923EF .
-    
-    bdr:TT48666B1A9A4923EF
         a                   :CoverTitle ;
         rdfs:label          "lpök bāk breṅ"@km-x-twktt .
     
     bdr:TT94FD121FE2FB20B0
-        a                   :Title ;
-        rdfs:label          "ល្បើកពាក្យព្រេង"@km ;
-        :femcConversionOf   bdr:TTD6D07E3BFF9CC27B .
-    
-    bdr:TTD6D07E3BFF9CC27B
         a                   :CoverTitle ;
         rdfs:label          "ល្បើកពាកព្រេង"@km .
+    
+    bdr:TTB5A4A036103E54AC
+        a                   :Title ;
+        rdfs:label          "lpök lāky breṅ "@km-x-twktt ;
+        :femcConversionOf   bdr:TT13F312ABA8B4DA68 .
+    
+    bdr:TTD078677A42627A84
+        a                   :Title ;
+        rdfs:label          "ល្បើកពាក្យព្រេង"@km ;
+        :femcConversionOf   bdr:TT94FD121FE2FB20B0 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022246 {
-    bda:LGAD6630011D4DEEC9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022246"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022246"@en , "imported pubinfo for W1FEMC022246"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022246"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022246 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022246 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "10/MW1FEMC022246.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022246 ;
-        adm:logEntry        bda:LGAD6630011D4DEEC9 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEA66F74455D926F1
+    bdr:IDF16B22318D0FEB5E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.324.III.1" .
     
-    bdr:MF551698F53A661AB2
+    bdr:MFEEAB083EAC23F02E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "142" ;
         :microfilmStrip     "236" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022246 {
         a                   :Instance ;
         skos:prefLabel      "ក្រុងមហាជម្ពូរាជាធិបតី"@km , "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEA66F74455D926F1 ;
+            bdr:IDF16B22318D0FEB5E ;
         :hasFascicles       "1-5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT8EDF641A0FED9395 , bdr:TT99C0CA9F0298CA6A , bdr:TTA6CD6211985C7890 , bdr:TTF16B22318D0FEB5E ;
+        :hasTitle           bdr:TT5C3519614C5EDD1C , bdr:TT99C0CA9F0298CA6A , bdr:TTA6CD6211985C7890 , bdr:TTAD6630011D4DEEC9 ;
         :instanceHasReproduction  bdr:W1FEMC022246 ;
+        :instanceOf         bdr:WA1FEMC010036 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF551698F53A661AB2 ;
-        :note               bdr:NTEEAB083EAC23F02E ;
+        :microfilmItem      bdr:MFEEAB083EAC23F02E ;
+        :note               bdr:NT8EDF641A0FED9395 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "857" .
     
-    bdr:NTEEAB083EAC23F02E
+    bdr:NT8EDF641A0FED9395
         a                   :Note ;
         :contentLocationStatement  "pg. 401" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT8EDF641A0FED9395
+    bdr:TT5C3519614C5EDD1C
+        a                   :Title ;
+        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT99C0CA9F0298CA6A .
+    
+    bdr:TT99C0CA9F0298CA6A
+        a                   :CoverTitle ;
+        rdfs:label          "mahā juṃbūv"@km-x-twktt .
+    
+    bdr:TTA6CD6211985C7890
         a                   :CoverTitle ;
         rdfs:label          "មហាជុំពូវ"@km .
     
-    bdr:TT99C0CA9F0298CA6A
-        a                   :Title ;
-        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF16B22318D0FEB5E .
-    
-    bdr:TTA6CD6211985C7890
+    bdr:TTAD6630011D4DEEC9
         a                   :Title ;
         rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
-        :femcConversionOf   bdr:TT8EDF641A0FED9395 .
-    
-    bdr:TTF16B22318D0FEB5E
-        a                   :CoverTitle ;
-        rdfs:label          "mahā juṃbūv"@km-x-twktt .
+        :femcConversionOf   bdr:TTA6CD6211985C7890 .
 }

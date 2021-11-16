@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011506 {
-    bda:LGBBA50BD712F37D61
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011506"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011506"@en , "imported pubinfo for W1FEMC011506"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011506"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011506 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011506 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "3b/MW1FEMC011506.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011506 ;
-        adm:logEntry        bda:LGBBA50BD712F37D61 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0D9541979D05BBAA
+    bdr:IDF51C707E425AA94B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "048-A.10.08.01.III.6" .
     
-    bdr:MF7394557991A25BB1
+    bdr:MF08E75C3936E0F7B2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "38" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011506 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះវិហារ"@km , "ānisaṅs braḥ vihār"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0D9541979D05BBAA ;
+            bdr:IDF51C707E425AA94B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT01FD31841AB35496 , bdr:TT69D2DC011C1B5256 , bdr:TTB055430D604A2963 , bdr:TTF51C707E425AA94B ;
+        :hasTitle           bdr:TT01FD31841AB35496 , bdr:TTB055430D604A2963 , bdr:TTBBA50BD712F37D61 , bdr:TTF6B24870B87A4C87 ;
         :instanceHasReproduction  bdr:W1FEMC011506 ;
+        :instanceOf         bdr:WA1FEMC060010 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF7394557991A25BB1 ;
-        :note               bdr:NT08E75C3936E0F7B2 ;
+        :microfilmItem      bdr:MF08E75C3936E0F7B2 ;
+        :note               bdr:NT69D2DC011C1B5256 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT08E75C3936E0F7B2
+    bdr:NT69D2DC011C1B5256
         a                   :Note ;
         :contentLocationStatement  "pg. 346" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT01FD31841AB35496
-        a                   :Title ;
-        rdfs:label          "ānisaṅs braḥ vihār"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF51C707E425AA94B .
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṃgh braḥ vīhā"@km-x-twktt .
     
-    bdr:TT69D2DC011C1B5256
+    bdr:TTB055430D604A2963
         a                   :CoverTitle ;
         rdfs:label          "អានិសំឃ៊ព្រះវីហា"@km .
     
-    bdr:TTB055430D604A2963
+    bdr:TTBBA50BD712F37D61
         a                   :Title ;
         rdfs:label          "អានិសង្សព្រះវិហារ"@km ;
-        :femcConversionOf   bdr:TT69D2DC011C1B5256 .
+        :femcConversionOf   bdr:TTB055430D604A2963 .
     
-    bdr:TTF51C707E425AA94B
-        a                   :CoverTitle ;
-        rdfs:label          "ānisaṃgh braḥ vīhā"@km-x-twktt .
+    bdr:TTF6B24870B87A4C87
+        a                   :Title ;
+        rdfs:label          "ānisaṅs braḥ vihār"@km-x-twktt ;
+        :femcConversionOf   bdr:TT01FD31841AB35496 .
 }

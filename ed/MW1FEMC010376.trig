@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010376 {
-    bda:LGD3551F293B6BCFEA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010376"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010376"@en , "imported pubinfo for W1FEMC010376"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010376"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010376 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010376 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "ed/MW1FEMC010376.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010376 ;
-        adm:logEntry        bda:LGD3551F293B6BCFEA , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC7A70067130FE928
+    bdr:IDD8DDE28CBF68738F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "101-PP.03.03.03.I.3" .
     
-    bdr:MF991F76B857777E07
+    bdr:MF8537156FEAC35D17
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "66" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010376 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកកម្មដ្ឋាន"@km , "lpök kammaṭṭhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC7A70067130FE928 ;
+            bdr:IDD8DDE28CBF68738F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTB62DA64D31E57D20 , bdr:TTC0DBB9AE934C86AF , bdr:TTC8093DA61D72FBFB , bdr:TTD8DDE28CBF68738F , bdr:TTF0B46442CE48A98F , bdr:TTF2C12ACDC177CE51 ;
+        :hasTitle           bdr:TTBEAABC24C2716DE9 , bdr:TTC0DBB9AE934C86AF , bdr:TTC8093DA61D72FBFB , bdr:TTD3551F293B6BCFEA , bdr:TTF0B46442CE48A98F , bdr:TTF2C12ACDC177CE51 ;
         :instanceHasReproduction  bdr:W1FEMC010376 ;
+        :instanceOf         bdr:WA1FEMC110003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF991F76B857777E07 ;
-        :note               bdr:NT8537156FEAC35D17 ;
+        :microfilmItem      bdr:MF8537156FEAC35D17 ;
+        :note               bdr:NTB62DA64D31E57D20 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8537156FEAC35D17
+    bdr:NTB62DA64D31E57D20
         a                   :Note ;
         :contentLocationStatement  "pg. 126" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TTB62DA64D31E57D20
-        a                   :CoverTitle ;
-        rdfs:label          "កាំមដ្ឋាន"@km .
-    
-    bdr:TTC0DBB9AE934C86AF
+    bdr:TTBEAABC24C2716DE9
         a                   :Title ;
         rdfs:label          "lpök kammaṭṭhān"@km-x-twktt .
     
+    bdr:TTC0DBB9AE934C86AF
+        a                   :CoverTitle ;
+        rdfs:label          "kammaṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF0B46442CE48A98F .
+    
     bdr:TTC8093DA61D72FBFB
+        a                   :CoverTitle ;
+        rdfs:label          "កម្មដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TTF2C12ACDC177CE51 .
+    
+    bdr:TTD3551F293B6BCFEA
         a                   :Title ;
         rdfs:label          "ល្បើកកម្មដ្ឋាន"@km .
     
-    bdr:TTD8DDE28CBF68738F
+    bdr:TTF0B46442CE48A98F
         a                   :CoverTitle ;
         rdfs:label          "kāṃmaṭṭhān"@km-x-twktt .
     
-    bdr:TTF0B46442CE48A98F
-        a                   :CoverTitle ;
-        rdfs:label          "kammaṭṭhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD8DDE28CBF68738F .
-    
     bdr:TTF2C12ACDC177CE51
         a                   :CoverTitle ;
-        rdfs:label          "កម្មដ្ឋាន"@km ;
-        :femcConversionOf   bdr:TTB62DA64D31E57D20 .
+        rdfs:label          "កាំមដ្ឋាន"@km .
 }

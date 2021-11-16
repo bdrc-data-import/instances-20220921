@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011487 {
-    bda:LGDBE00F99CBA9763C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011487"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011487"@en , "imported pubinfo for W1FEMC011487"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011487"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011487 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011487 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "d5/MW1FEMC011487.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011487 ;
-        adm:logEntry        bda:LGDBE00F99CBA9763C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1AFFB307B0AF0239
+    bdr:ID8DCE3E9F6EB84F1E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "029-A.10.08.01.III.4" .
     
-    bdr:MFABA4C8EFE92E381A
+    bdr:MFEF0306C3A810308D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "37" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC011487 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1AFFB307B0AF0239 ;
+            bdr:ID8DCE3E9F6EB84F1E ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT830DF8D1CBB1D79F , bdr:TT8D07B9AC39349C37 , bdr:TT8DCE3E9F6EB84F1E , bdr:TT9EC2347BFB981B6A , bdr:TTB1C17D3BF2CB8C36 , bdr:TTDDF57C99A494BAEA ;
+        :hasTitle           bdr:TT830DF8D1CBB1D79F , bdr:TT83F95FFB03DCA68A , bdr:TT8D07B9AC39349C37 , bdr:TT9EC2347BFB981B6A , bdr:TTDBE00F99CBA9763C , bdr:TTDDF57C99A494BAEA ;
         :instanceHasReproduction  bdr:W1FEMC011487 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFABA4C8EFE92E381A ;
-        :note               bdr:NTEF0306C3A810308D ;
+        :microfilmItem      bdr:MFEF0306C3A810308D ;
+        :note               bdr:NTB1C17D3BF2CB8C36 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTEF0306C3A810308D
+    bdr:NTB1C17D3BF2CB8C36
         a                   :Note ;
         :contentLocationStatement  "pg. 342" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT830DF8D1CBB1D79F
+        a                   :CoverTitle ;
+        rdfs:label          "ធាតុកថា"@km ;
+        :femcConversionOf   bdr:TTDDF57C99A494BAEA .
+    
+    bdr:TT83F95FFB03DCA68A
         a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
     bdr:TT8D07B9AC39349C37
-        a                   :CoverTitle ;
-        rdfs:label          "dhātu kathā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8DCE3E9F6EB84F1E .
-    
-    bdr:TT8DCE3E9F6EB84F1E
         a                   :CoverTitle ;
         rdfs:label          "dhātu kaththār"@km-x-twktt .
     
     bdr:TT9EC2347BFB981B6A
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
-    
-    bdr:TTB1C17D3BF2CB8C36
         a                   :CoverTitle ;
-        rdfs:label          "ធាតុកថ្ថារ"@km .
+        rdfs:label          "dhātu kathā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8D07B9AC39349C37 .
+    
+    bdr:TTDBE00F99CBA9763C
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
     
     bdr:TTDDF57C99A494BAEA
         a                   :CoverTitle ;
-        rdfs:label          "ធាតុកថា"@km ;
-        :femcConversionOf   bdr:TTB1C17D3BF2CB8C36 .
+        rdfs:label          "ធាតុកថ្ថារ"@km .
 }

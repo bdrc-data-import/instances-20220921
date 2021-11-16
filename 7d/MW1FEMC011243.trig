@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011243 {
-    bda:LG3CB5D96E83A2F4FC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011243"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011243"@en , "imported pubinfo for W1FEMC011243"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011243"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011243 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011243 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "7d/MW1FEMC011243.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011243 ;
-        adm:logEntry        bda:LG3CB5D96E83A2F4FC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6D247B0BC791AA46
+    bdr:IDDD0818E3EECAA781
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "022-A.07.01.05.III.3" .
     
-    bdr:MF1741C780BF9BA71B
+    bdr:MF9FE2BE031B1DFF5E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "27" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011243 {
         a                   :Instance ;
         skos:prefLabel      "បុព្វសិក្ខាវណ្ណនា"@km , "pubb sikkhā vaṇṇanā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6D247B0BC791AA46 ;
+            bdr:IDDD0818E3EECAA781 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6032A90F203FF74E , bdr:TTAF0B984E4FFEB73A , bdr:TTDD0818E3EECAA781 , bdr:TTE0843B6641C7FC54 ;
+        :hasTitle           bdr:TT3CB5D96E83A2F4FC , bdr:TT6032A90F203FF74E , bdr:TTD63BA0A49B3AC09B , bdr:TTE0843B6641C7FC54 ;
         :instanceHasReproduction  bdr:W1FEMC011243 ;
+        :instanceOf         bdr:WA1FEMC030021 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1741C780BF9BA71B ;
-        :note               bdr:NT9FE2BE031B1DFF5E ;
+        :microfilmItem      bdr:MF9FE2BE031B1DFF5E ;
+        :note               bdr:NTAF0B984E4FFEB73A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9FE2BE031B1DFF5E
+    bdr:NTAF0B984E4FFEB73A
         a                   :Note ;
         :contentLocationStatement  "pg. 296" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT6032A90F203FF74E
+    bdr:TT3CB5D96E83A2F4FC
         a                   :Title ;
         rdfs:label          "បុព្វសិក្ខាវណ្ណនា"@km ;
-        :femcConversionOf   bdr:TTAF0B984E4FFEB73A .
+        :femcConversionOf   bdr:TT6032A90F203FF74E .
     
-    bdr:TTAF0B984E4FFEB73A
+    bdr:TT6032A90F203FF74E
         a                   :CoverTitle ;
         rdfs:label          "បុព្ភសិក្ខា"@km .
     
-    bdr:TTDD0818E3EECAA781
-        a                   :CoverTitle ;
-        rdfs:label          "pubbh sikkhā"@km-x-twktt .
-    
-    bdr:TTE0843B6641C7FC54
+    bdr:TTD63BA0A49B3AC09B
         a                   :Title ;
         rdfs:label          "pubb sikkhā vaṇṇanā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTDD0818E3EECAA781 .
+        :femcConversionOf   bdr:TTE0843B6641C7FC54 .
+    
+    bdr:TTE0843B6641C7FC54
+        a                   :CoverTitle ;
+        rdfs:label          "pubbh sikkhā"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010818 {
-    bda:LG62ABA396DD65D6A7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010818"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010818"@en , "imported pubinfo for W1FEMC010818"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010818"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010818 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010818 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "66/MW1FEMC010818.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010818 ;
-        adm:logEntry        bda:LG62ABA396DD65D6A7 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF664965A40F27C78
+    bdr:ID2B4D0DE4DE7F186F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "013-A.04.02.01.III.4" .
     
-    bdr:MFD7B9EAFCC87ADB63
+    bdr:MFAA4A5FE3D72869BB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "39" ;
         :microfilmStrip     "87" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010818 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km , "abhidhamm 9 paricched"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF664965A40F27C78 ;
+            bdr:ID2B4D0DE4DE7F186F ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2544BCCBC1331A61 , bdr:TT2B4D0DE4DE7F186F , bdr:TT3FECD38BA687CB64 , bdr:TTDD2D387AB7EC29C2 ;
+        :hasTitle           bdr:TT3FECD38BA687CB64 , bdr:TT62ABA396DD65D6A7 , bdr:TT8B8A768503AAC30B , bdr:TTDD2D387AB7EC29C2 ;
         :instanceHasReproduction  bdr:W1FEMC010818 ;
+        :instanceOf         bdr:WA1FEMC040002 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD7B9EAFCC87ADB63 ;
-        :note               bdr:NTAA4A5FE3D72869BB ;
+        :microfilmItem      bdr:MFAA4A5FE3D72869BB ;
+        :note               bdr:NT2544BCCBC1331A61 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTAA4A5FE3D72869BB
+    bdr:NT2544BCCBC1331A61
         a                   :Note ;
         :contentLocationStatement  "pg. 214" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2544BCCBC1331A61
-        a                   :CoverTitle ;
-        rdfs:label          "អភិធម្មសង្គ្រោះ"@km .
-    
-    bdr:TT2B4D0DE4DE7F186F
+    bdr:TT3FECD38BA687CB64
         a                   :CoverTitle ;
         rdfs:label          "abhidhamm saṅgroḥ"@km-x-twktt .
     
-    bdr:TT3FECD38BA687CB64
+    bdr:TT62ABA396DD65D6A7
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km .
+    
+    bdr:TT8B8A768503AAC30B
         a                   :Title ;
         rdfs:label          "abhidhamm 9 paricched"@km-x-twktt .
     
     bdr:TTDD2D387AB7EC29C2
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មសង្គ្រោះ"@km .
 }

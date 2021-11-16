@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010394 {
-    bda:LG9606F8C9B5D4ED58
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010394"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010394"@en , "imported pubinfo for W1FEMC010394"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010394"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010394 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010394 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ff/MW1FEMC010394.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010394 ;
-        adm:logEntry        bda:LG9606F8C9B5D4ED58 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE863FD332DEB063F
+    bdr:ID7DD0152F33B4325A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "119-PP.03.03.03.V.3" .
     
-    bdr:MFE3E44A4DEB45CBB0
+    bdr:MF12159302E1D0EE56
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "18" ;
         :microfilmStrip     "1" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010394 {
         a                   :Instance ;
         skos:prefLabel      "មូលព្រះកម្មដ្ឋាន"@km , "mūl braḥ kammaṭṭhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE863FD332DEB063F ;
+            bdr:ID7DD0152F33B4325A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4D0816FACEC9A9FF , bdr:TT6FE6628FB338FDEF , bdr:TT7DD0152F33B4325A , bdr:TTD1DDB608D0580A68 ;
+        :hasTitle           bdr:TT346656059CD1F646 , bdr:TT6FE6628FB338FDEF , bdr:TT9606F8C9B5D4ED58 , bdr:TTD1DDB608D0580A68 ;
         :instanceHasReproduction  bdr:W1FEMC010394 ;
+        :instanceOf         bdr:WA1FEMC080001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE3E44A4DEB45CBB0 ;
-        :note               bdr:NT12159302E1D0EE56 ;
+        :microfilmItem      bdr:MF12159302E1D0EE56 ;
+        :note               bdr:NT4D0816FACEC9A9FF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT12159302E1D0EE56
+    bdr:NT4D0816FACEC9A9FF
         a                   :Note ;
         :contentLocationStatement  "pg. 129" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT4D0816FACEC9A9FF
-        a                   :CoverTitle ;
-        rdfs:label          "មូលព្រះកាម្មថ្ឋាន"@km .
-    
-    bdr:TT6FE6628FB338FDEF
+    bdr:TT346656059CD1F646
         a                   :Title ;
         rdfs:label          "mūl braḥ kammaṭṭhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7DD0152F33B4325A .
+        :femcConversionOf   bdr:TT6FE6628FB338FDEF .
     
-    bdr:TT7DD0152F33B4325A
+    bdr:TT6FE6628FB338FDEF
         a                   :CoverTitle ;
         rdfs:label          "mūl braḥ kāmmathṭhān"@km-x-twktt .
     
-    bdr:TTD1DDB608D0580A68
+    bdr:TT9606F8C9B5D4ED58
         a                   :Title ;
         rdfs:label          "មូលព្រះកម្មដ្ឋាន"@km ;
-        :femcConversionOf   bdr:TT4D0816FACEC9A9FF .
+        :femcConversionOf   bdr:TTD1DDB608D0580A68 .
+    
+    bdr:TTD1DDB608D0580A68
+        a                   :CoverTitle ;
+        rdfs:label          "មូលព្រះកាម្មថ្ឋាន"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020085 {
-    bda:LGE8AB03AE2D50E7AA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020085"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020085"@en , "imported pubinfo for W1FEMC020085"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020085"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020085 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020085 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "d8/MW1FEMC020085.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020085 ;
-        adm:logEntry        bda:LGE8AB03AE2D50E7AA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF4F93334970ED71A
+    bdr:ID680F080DF0A4A0DD
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.79.III.1" .
     
-    bdr:MFDFC16A0E96565392
+    bdr:MF8495B1C659A26EFD
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "99" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020085 {
         a                   :Instance ;
         skos:prefLabel      "សុវិជ្ជាទុវិជ្ជា"@km , "suvijjā duvijjā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF4F93334970ED71A ;
+            bdr:ID680F080DF0A4A0DD ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4683509B925A1C14 , bdr:TT680F080DF0A4A0DD , bdr:TT99C9C76AA06B4375 , bdr:TT9CF1745757F64DFA ;
+        :hasTitle           bdr:TT93D78D3216B1714A , bdr:TT99C9C76AA06B4375 , bdr:TT9CF1745757F64DFA , bdr:TTE8AB03AE2D50E7AA ;
         :instanceHasReproduction  bdr:W1FEMC020085 ;
+        :instanceOf         bdr:WA1FEMC010136 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDFC16A0E96565392 ;
-        :note               bdr:NT8495B1C659A26EFD ;
+        :microfilmItem      bdr:MF8495B1C659A26EFD ;
+        :note               bdr:NT4683509B925A1C14 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1540" .
     
-    bdr:NT8495B1C659A26EFD
+    bdr:NT4683509B925A1C14
         a                   :Note ;
         :contentLocationStatement  "pg. 18" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4683509B925A1C14
-        a                   :CoverTitle ;
-        rdfs:label          "សុវិជាទុវិជា"@km .
+    bdr:TT93D78D3216B1714A
+        a                   :Title ;
+        rdfs:label          "suvijjā duvijjā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT99C9C76AA06B4375 .
     
-    bdr:TT680F080DF0A4A0DD
+    bdr:TT99C9C76AA06B4375
         a                   :CoverTitle ;
         rdfs:label          "suvijā duvijā"@km-x-twktt .
     
-    bdr:TT99C9C76AA06B4375
-        a                   :Title ;
-        rdfs:label          "suvijjā duvijjā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT680F080DF0A4A0DD .
-    
     bdr:TT9CF1745757F64DFA
+        a                   :CoverTitle ;
+        rdfs:label          "សុវិជាទុវិជា"@km .
+    
+    bdr:TTE8AB03AE2D50E7AA
         a                   :Title ;
         rdfs:label          "សុវិជ្ជាទុវិជ្ជា"@km ;
-        :femcConversionOf   bdr:TT4683509B925A1C14 .
+        :femcConversionOf   bdr:TT9CF1745757F64DFA .
 }

@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020026 {
-    bda:LG70AC9B8B08D82C21
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020026"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020026"@en , "imported pubinfo for W1FEMC020026"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020026"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020026 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020026 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "98/MW1FEMC020026.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020026 ;
-        adm:logEntry        bda:LG70AC9B8B08D82C21 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFEA9C1526DFF3BA5
+    bdr:IDE552AE83691184DB
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.26.III.1" .
     
-    bdr:MF0B20151D73D7427D
+    bdr:MF874FEB33DDF3B2D4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "19" ;
         :microfilmStrip     "8" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020026 {
         a                   :Instance ;
         skos:prefLabel      "មហាវគ្គ​ អានាបាណកថា"@km , "mahāvagg ānāpāṇ kathā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFEA9C1526DFF3BA5 ;
+            bdr:IDE552AE83691184DB ;
         :hasFascicles       "16" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT16843719AE1D8AD3 , bdr:TT3EE1698D69368C38 , bdr:TTC6E08C133FA5C66E , bdr:TTE552AE83691184DB ;
+        :hasTitle           bdr:TT16843719AE1D8AD3 , bdr:TT3EE1698D69368C38 , bdr:TT70AC9B8B08D82C21 , bdr:TT8F46BA9D93548EC7 ;
         :instanceHasReproduction  bdr:W1FEMC020026 ;
+        :instanceOf         bdr:WA1FEMC010103 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0B20151D73D7427D ;
-        :note               bdr:NT874FEB33DDF3B2D4 ;
+        :microfilmItem      bdr:MF874FEB33DDF3B2D4 ;
+        :note               bdr:NTC6E08C133FA5C66E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1434" .
     
-    bdr:NT874FEB33DDF3B2D4
+    bdr:NTC6E08C133FA5C66E
         a                   :Note ;
         :contentLocationStatement  "pg. 6" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT16843719AE1D8AD3
-        a                   :Title ;
-        rdfs:label          "មហាវគ្គ​ អានាបាណកថា"@km ;
-        :femcConversionOf   bdr:TTC6E08C133FA5C66E .
-    
-    bdr:TT3EE1698D69368C38
-        a                   :Title ;
-        rdfs:label          "mahāvagg ānāpāṇ kathā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE552AE83691184DB .
-    
-    bdr:TTC6E08C133FA5C66E
         a                   :CoverTitle ;
         rdfs:label          "មហាវគ្គ អានាបានកថា"@km .
     
-    bdr:TTE552AE83691184DB
+    bdr:TT3EE1698D69368C38
         a                   :CoverTitle ;
         rdfs:label          "mahāvagg ānāpān kathā"@km-x-twktt .
+    
+    bdr:TT70AC9B8B08D82C21
+        a                   :Title ;
+        rdfs:label          "មហាវគ្គ​ អានាបាណកថា"@km ;
+        :femcConversionOf   bdr:TT16843719AE1D8AD3 .
+    
+    bdr:TT8F46BA9D93548EC7
+        a                   :Title ;
+        rdfs:label          "mahāvagg ānāpāṇ kathā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3EE1698D69368C38 .
 }

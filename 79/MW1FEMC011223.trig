@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011223 {
-    bda:LG8170F826E1DE894A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011223"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011223"@en , "imported pubinfo for W1FEMC011223"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011223"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011223 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011223 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "79/MW1FEMC011223.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011223 ;
-        adm:logEntry        bda:LG8170F826E1DE894A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDADD34FD8EACFC4D2
+    bdr:ID22C4EAAF7B71B809
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003-A.07.01.05.III.4" .
     
-    bdr:MFB41BBA11A5725862
+    bdr:MF07F7BDC9461A8FAA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "26" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC011223 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDADD34FD8EACFC4D2 ;
+            bdr:ID22C4EAAF7B71B809 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT22C4EAAF7B71B809 , bdr:TT62D8A30BA5654880 , bdr:TT8B0244DA7AF9CABC , bdr:TTE716EF1AED151DD0 ;
+        :hasTitle           bdr:TT083AD00C2D2F2426 , bdr:TT62D8A30BA5654880 , bdr:TT8170F826E1DE894A , bdr:TTE716EF1AED151DD0 ;
         :instanceHasReproduction  bdr:W1FEMC011223 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB41BBA11A5725862 ;
-        :note               bdr:NT07F7BDC9461A8FAA ;
+        :microfilmItem      bdr:MF07F7BDC9461A8FAA ;
+        :note               bdr:NT8B0244DA7AF9CABC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT07F7BDC9461A8FAA
+    bdr:NT8B0244DA7AF9CABC
         a                   :Note ;
         :contentLocationStatement  "pg. 292" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT22C4EAAF7B71B809
-        a                   :CoverTitle ;
-        rdfs:label          "kathāvatthu"@km-x-twktt .
+    bdr:TT083AD00C2D2F2426
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
     bdr:TT62D8A30BA5654880
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
-    
-    bdr:TT8B0244DA7AF9CABC
         a                   :CoverTitle ;
         rdfs:label          "កថាវត្ថុ"@km .
     
-    bdr:TTE716EF1AED151DD0
+    bdr:TT8170F826E1DE894A
         a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
+    bdr:TTE716EF1AED151DD0
+        a                   :CoverTitle ;
+        rdfs:label          "kathāvatthu"@km-x-twktt .
 }

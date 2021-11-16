@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021599 {
-    bda:LG548E6348F41A584C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021599"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021599"@en , "imported pubinfo for W1FEMC021599"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021599"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021599 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021599 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b4/MW1FEMC021599.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021599 ;
-        adm:logEntry        bda:LG548E6348F41A584C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID85A1907F4216323F
+    bdr:IDD86A98F7AC47893F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.261.V.1" .
     
-    bdr:MF034F5236045DCA27
+    bdr:MFDB59836F787C8D43
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "132" ;
         :microfilmStrip     "226" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC021599 {
         a                   :Instance ;
         skos:prefLabel      "បឋមជ្ឈាន"@km , "paṭham jjhān"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID85A1907F4216323F ;
+            bdr:IDD86A98F7AC47893F ;
         :hasFascicles       "1-4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT7F8365984BFD05CD , bdr:TTD6280CADB4D1B1BE , bdr:TTD86A98F7AC47893F , bdr:TTEB1336F9A360D2A6 ;
+        :hasTitle           bdr:TT42ED637C275DA9B6 , bdr:TT548E6348F41A584C , bdr:TT7F8365984BFD05CD , bdr:TTEB1336F9A360D2A6 ;
         :instanceHasReproduction  bdr:W1FEMC021599 ;
+        :instanceOf         bdr:WA1FEMC070014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF034F5236045DCA27 ;
-        :note               bdr:NTDB59836F787C8D43 ;
+        :microfilmItem      bdr:MFDB59836F787C8D43 ;
+        :note               bdr:NTD6280CADB4D1B1BE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1118" .
     
-    bdr:NTDB59836F787C8D43
+    bdr:NTD6280CADB4D1B1BE
         a                   :Note ;
         :contentLocationStatement  "pg. 288" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT7F8365984BFD05CD
+    bdr:TT42ED637C275DA9B6
         a                   :Title ;
         rdfs:label          "paṭham jjhān"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD86A98F7AC47893F .
+        :femcConversionOf   bdr:TT7F8365984BFD05CD .
     
-    bdr:TTD6280CADB4D1B1BE
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្មឈានវីងស៊ុង"@km .
+    bdr:TT548E6348F41A584C
+        a                   :Title ;
+        rdfs:label          "បឋមជ្ឈាន"@km ;
+        :femcConversionOf   bdr:TTEB1336F9A360D2A6 .
     
-    bdr:TTD86A98F7AC47893F
+    bdr:TT7F8365984BFD05CD
         a                   :CoverTitle ;
         rdfs:label          "dhamm jhān vīṅ-suṅ"@km-x-twktt .
     
     bdr:TTEB1336F9A360D2A6
-        a                   :Title ;
-        rdfs:label          "បឋមជ្ឈាន"@km ;
-        :femcConversionOf   bdr:TTD6280CADB4D1B1BE .
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មឈានវីងស៊ុង"@km .
 }

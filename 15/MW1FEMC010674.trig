@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010674 {
-    bda:LG73FC94D63EFD6093
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010674"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010674"@en , "imported pubinfo for W1FEMC010674"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010674"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010674 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010674 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "15/MW1FEMC010674.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010674 ;
-        adm:logEntry        bda:LG73FC94D63EFD6093 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA8931D6034E1A70C
+    bdr:ID17D4F208BAED4ECA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002-A.03.03.01.III.6" .
     
-    bdr:MF4CB75FD7B9C4F6DD
+    bdr:MF11D94A51A204F26F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "124" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010674 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះឧបោសថ"@km , "ānisaṅs braḥ Uposath"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA8931D6034E1A70C ;
+            bdr:ID17D4F208BAED4ECA ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0E5B270494BF71AC , bdr:TT17D4F208BAED4ECA , bdr:TT57D40DFE41B1B5C2 , bdr:TTD09D5797B47EA68D ;
+        :hasTitle           bdr:TT0E5B270494BF71AC , bdr:TT57D40DFE41B1B5C2 , bdr:TT73FC94D63EFD6093 , bdr:TT9C932483A2CA9BFC ;
         :instanceHasReproduction  bdr:W1FEMC010674 ;
+        :instanceOf         bdr:WA1FEMC060009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4CB75FD7B9C4F6DD ;
-        :note               bdr:NT11D94A51A204F26F ;
+        :microfilmItem      bdr:MF11D94A51A204F26F ;
+        :note               bdr:NTD09D5797B47EA68D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT11D94A51A204F26F
+    bdr:NTD09D5797B47EA68D
         a                   :Note ;
         :contentLocationStatement  "pg. 186" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0E5B270494BF71AC
-        a                   :Title ;
-        rdfs:label          "អានិសង្សព្រះឧបោសថ"@km ;
-        :femcConversionOf   bdr:TTD09D5797B47EA68D .
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សព្រះឧបោសថ្ថ"@km .
     
-    bdr:TT17D4F208BAED4ECA
+    bdr:TT57D40DFE41B1B5C2
         a                   :CoverTitle ;
         rdfs:label          "ānisaṅs braḥ Uposathth"@km-x-twktt .
     
-    bdr:TT57D40DFE41B1B5C2
+    bdr:TT73FC94D63EFD6093
+        a                   :Title ;
+        rdfs:label          "អានិសង្សព្រះឧបោសថ"@km ;
+        :femcConversionOf   bdr:TT0E5B270494BF71AC .
+    
+    bdr:TT9C932483A2CA9BFC
         a                   :Title ;
         rdfs:label          "ānisaṅs braḥ Uposath"@km-x-twktt ;
-        :femcConversionOf   bdr:TT17D4F208BAED4ECA .
-    
-    bdr:TTD09D5797B47EA68D
-        a                   :CoverTitle ;
-        rdfs:label          "អានិសង្សព្រះឧបោសថ្ថ"@km .
+        :femcConversionOf   bdr:TT57D40DFE41B1B5C2 .
 }

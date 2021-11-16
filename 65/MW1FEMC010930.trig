@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010930 {
-    bda:LG2D36E88229E316D5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010930"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010930"@en , "imported pubinfo for W1FEMC010930"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010930"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010930 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010930 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "65/MW1FEMC010930.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010930 ;
-        adm:logEntry        bda:LG2D36E88229E316D5 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB203AB5FD4DFAB61
+    bdr:IDABAB5A0D3DBF988F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "092-A.04.03.02.III.4" .
     
-    bdr:MF307010403B6EC396
+    bdr:MF3EFABC8026BF5012
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "23" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010930 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB203AB5FD4DFAB61 ;
+            bdr:IDABAB5A0D3DBF988F ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTABAB5A0D3DBF988F , bdr:TTACA381A740B2A73A , bdr:TTBDF8C680FA8799E9 , bdr:TTD64581DDB520AED3 , bdr:TTE234CE5CFA5F3722 , bdr:TTF7E858273EF7A768 ;
+        :hasTitle           bdr:TT2D36E88229E316D5 , bdr:TTACA381A740B2A73A , bdr:TTBDF8C680FA8799E9 , bdr:TTD64581DDB520AED3 , bdr:TTD900DA4CCB5B337D , bdr:TTF7E858273EF7A768 ;
         :instanceHasReproduction  bdr:W1FEMC010930 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF307010403B6EC396 ;
-        :note               bdr:NT3EFABC8026BF5012 ;
+        :microfilmItem      bdr:MF3EFABC8026BF5012 ;
+        :note               bdr:NTE234CE5CFA5F3722 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3EFABC8026BF5012
+    bdr:NTE234CE5CFA5F3722
         a                   :Note ;
         :contentLocationStatement  "pg. 235" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TTABAB5A0D3DBF988F
-        a                   :CoverTitle ;
-        rdfs:label          "pugal"@km-x-twktt .
-    
-    bdr:TTACA381A740B2A73A
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
-    
-    bdr:TTBDF8C680FA8799E9
-        a                   :CoverTitle ;
-        rdfs:label          "puggal paññatti"@km-x-twktt ;
-        :femcConversionOf   bdr:TTABAB5A0D3DBF988F .
-    
-    bdr:TTD64581DDB520AED3
+    bdr:TT2D36E88229E316D5
         a                   :Title ;
         rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
     
-    bdr:TTE234CE5CFA5F3722
+    bdr:TTACA381A740B2A73A
         a                   :CoverTitle ;
-        rdfs:label          "បុគល"@km .
+        rdfs:label          "puggal paññatti"@km-x-twktt ;
+        :femcConversionOf   bdr:TTBDF8C680FA8799E9 .
+    
+    bdr:TTBDF8C680FA8799E9
+        a                   :CoverTitle ;
+        rdfs:label          "pugal"@km-x-twktt .
+    
+    bdr:TTD64581DDB520AED3
+        a                   :CoverTitle ;
+        rdfs:label          "បុគ្គលបញ្ញត្តិ"@km ;
+        :femcConversionOf   bdr:TTF7E858273EF7A768 .
+    
+    bdr:TTD900DA4CCB5B337D
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
     bdr:TTF7E858273EF7A768
         a                   :CoverTitle ;
-        rdfs:label          "បុគ្គលបញ្ញត្តិ"@km ;
-        :femcConversionOf   bdr:TTE234CE5CFA5F3722 .
+        rdfs:label          "បុគល"@km .
 }

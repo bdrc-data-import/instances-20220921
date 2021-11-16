@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020198 {
-    bda:LGA05D432926D539C7
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020198"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020198"@en , "imported pubinfo for W1FEMC020198"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020198"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020198 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020198 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "6c/MW1FEMC020198.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020198 ;
-        adm:logEntry        bda:LGA05D432926D539C7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE2DA75539BBB1100
+    bdr:ID2B932C8594711395
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.91.III.2" .
     
-    bdr:MFE3ABDB4F1A1D4A41
+    bdr:MF3F15597EAA5E0456
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "32" ;
         :microfilmStrip     "60" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020198 {
         a                   :Instance ;
         skos:prefLabel      "និព្វានសូត្រ"@km , "nibbān sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE2DA75539BBB1100 ;
+            bdr:ID2B932C8594711395 ;
         :hasFascicles       "1-4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT07342FDB2122318E , bdr:TT2B932C8594711395 , bdr:TT708D13205118586F , bdr:TT769466F68399B2EC ;
+        :hasTitle           bdr:TT708D13205118586F , bdr:TT769466F68399B2EC , bdr:TT89E7AF5CAEA0A4DA , bdr:TTA05D432926D539C7 ;
         :instanceHasReproduction  bdr:W1FEMC020198 ;
+        :instanceOf         bdr:WA1FEMC020008 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFE3ABDB4F1A1D4A41 ;
-        :note               bdr:NT3F15597EAA5E0456 ;
+        :microfilmItem      bdr:MF3F15597EAA5E0456 ;
+        :note               bdr:NT07342FDB2122318E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "865" .
     
-    bdr:NT3F15597EAA5E0456
+    bdr:NT07342FDB2122318E
         a                   :Note ;
         :contentLocationStatement  "pg. 40" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT07342FDB2122318E
+    bdr:TT708D13205118586F
         a                   :CoverTitle ;
         rdfs:label          "និពាន្ទសូត្ថ"@km .
     
-    bdr:TT2B932C8594711395
+    bdr:TT769466F68399B2EC
         a                   :CoverTitle ;
         rdfs:label          "nibānd sūtth"@km-x-twktt .
     
-    bdr:TT708D13205118586F
-        a                   :Title ;
-        rdfs:label          "និព្វានសូត្រ"@km ;
-        :femcConversionOf   bdr:TT07342FDB2122318E .
-    
-    bdr:TT769466F68399B2EC
+    bdr:TT89E7AF5CAEA0A4DA
         a                   :Title ;
         rdfs:label          "nibbān sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2B932C8594711395 .
+        :femcConversionOf   bdr:TT769466F68399B2EC .
+    
+    bdr:TTA05D432926D539C7
+        a                   :Title ;
+        rdfs:label          "និព្វានសូត្រ"@km ;
+        :femcConversionOf   bdr:TT708D13205118586F .
 }

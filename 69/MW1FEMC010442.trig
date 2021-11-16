@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010442 {
-    bda:LG1007EAAEF52B4FFF
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010442"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010442"@en , "imported pubinfo for W1FEMC010442"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010442"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010442 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010442 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "69/MW1FEMC010442.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010442 ;
-        adm:logEntry        bda:LG1007EAAEF52B4FFF , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID03E4D3A30DBDD74E
+    bdr:ID1802610A19BD3AE8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "035*-PP.03.03.03.III.1" .
     
-    bdr:MF3A7EAED6A28A6D9F
+    bdr:MFB801835CFDCB182C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "42" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010442 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះមាល័យ"@km , "braḥ mālăy "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID03E4D3A30DBDD74E ;
+            bdr:ID1802610A19BD3AE8 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT040AE8B6C9334D28 , bdr:TT1802610A19BD3AE8 , bdr:TT78F3B41079A0A3A6 , bdr:TTA2F542A69E0D69EE ;
+        :hasTitle           bdr:TT1007EAAEF52B4FFF , bdr:TT3CAEBB88BD64FD1C , bdr:TT78F3B41079A0A3A6 , bdr:TTA2F542A69E0D69EE ;
         :instanceHasReproduction  bdr:W1FEMC010442 ;
+        :instanceOf         bdr:WA1FEMC010018 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3A7EAED6A28A6D9F ;
-        :note               bdr:NTB801835CFDCB182C ;
+        :microfilmItem      bdr:MFB801835CFDCB182C ;
+        :note               bdr:NT040AE8B6C9334D28 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB801835CFDCB182C
+    bdr:NT040AE8B6C9334D28
         a                   :Note ;
         :contentLocationStatement  "pg. 138" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT040AE8B6C9334D28
+    bdr:TT1007EAAEF52B4FFF
+        a                   :Title ;
+        rdfs:label          "ព្រះមាល័យ"@km ;
+        :femcConversionOf   bdr:TT78F3B41079A0A3A6 .
+    
+    bdr:TT3CAEBB88BD64FD1C
+        a                   :Title ;
+        rdfs:label          "braḥ mālăy "@km-x-twktt ;
+        :femcConversionOf   bdr:TTA2F542A69E0D69EE .
+    
+    bdr:TT78F3B41079A0A3A6
         a                   :CoverTitle ;
         rdfs:label          "មហាល្យៃ"@km .
     
-    bdr:TT1802610A19BD3AE8
+    bdr:TTA2F542A69E0D69EE
         a                   :CoverTitle ;
         rdfs:label          "mahā laiy°"@km-x-twktt .
-    
-    bdr:TT78F3B41079A0A3A6
-        a                   :Title ;
-        rdfs:label          "ព្រះមាល័យ"@km ;
-        :femcConversionOf   bdr:TT040AE8B6C9334D28 .
-    
-    bdr:TTA2F542A69E0D69EE
-        a                   :Title ;
-        rdfs:label          "braḥ mālăy "@km-x-twktt ;
-        :femcConversionOf   bdr:TT1802610A19BD3AE8 .
 }

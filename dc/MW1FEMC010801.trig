@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010801 {
-    bda:LG10E4DDA1C989BA8F
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010801"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010801"@en , "imported pubinfo for W1FEMC010801"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010801"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010801 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010801 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "dc/MW1FEMC010801.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010801 ;
-        adm:logEntry        bda:LG10E4DDA1C989BA8F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE8DFC096F885BF1C
+    bdr:IDD239E793801F3B0E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "037-A.03.08.02.III.6" .
     
-    bdr:MFF6D927A000C0E6F9
+    bdr:MF55128CA4FEA8A478
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "51" ;
         :microfilmStrip     "133" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010801 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះធម្មគោរព"@km , "ānisaṅs braḥ dhamm gorab"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE8DFC096F885BF1C ;
+            bdr:IDD239E793801F3B0E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0130A68AE23592B4 , bdr:TT134C452CAC8277AB , bdr:TTA252C2BC97E93AB3 , bdr:TTD239E793801F3B0E ;
+        :hasTitle           bdr:TT10E4DDA1C989BA8F , bdr:TT134C452CAC8277AB , bdr:TT58309FAC648D924E , bdr:TTA252C2BC97E93AB3 ;
         :instanceHasReproduction  bdr:W1FEMC010801 ;
+        :instanceOf         bdr:WA1FEMC060006 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF6D927A000C0E6F9 ;
-        :note               bdr:NT55128CA4FEA8A478 ;
+        :microfilmItem      bdr:MF55128CA4FEA8A478 ;
+        :note               bdr:NT0130A68AE23592B4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT55128CA4FEA8A478
+    bdr:NT0130A68AE23592B4
         a                   :Note ;
         :contentLocationStatement  "pg. 211" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0130A68AE23592B4
+    bdr:TT10E4DDA1C989BA8F
+        a                   :Title ;
+        rdfs:label          "អានិសង្សព្រះធម្មគោរព"@km ;
+        :femcConversionOf   bdr:TT134C452CAC8277AB .
+    
+    bdr:TT134C452CAC8277AB
         a                   :CoverTitle ;
         rdfs:label          "អានិសង្សស្ដាប់ព្រះធម៍"@km .
     
-    bdr:TT134C452CAC8277AB
-        a                   :Title ;
-        rdfs:label          "អានិសង្សព្រះធម្មគោរព"@km ;
-        :femcConversionOf   bdr:TT0130A68AE23592B4 .
-    
-    bdr:TTA252C2BC97E93AB3
+    bdr:TT58309FAC648D924E
         a                   :Title ;
         rdfs:label          "ānisaṅs braḥ dhamm gorab"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD239E793801F3B0E .
+        :femcConversionOf   bdr:TTA252C2BC97E93AB3 .
     
-    bdr:TTD239E793801F3B0E
+    bdr:TTA252C2BC97E93AB3
         a                   :CoverTitle ;
         rdfs:label          "ānisaṅs stāp' braḥ dhaṛm"@km-x-twktt .
 }

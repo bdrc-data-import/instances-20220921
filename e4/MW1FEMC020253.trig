@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020253 {
-    bda:LG9AF45E8E90EF0480
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020253"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020253"@en , "imported pubinfo for W1FEMC020253"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020253"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020253 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020253 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e4/MW1FEMC020253.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020253 ;
-        adm:logEntry        bda:LG9AF45E8E90EF0480 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6A971B2F960CC8C1
+    bdr:IDE186B217E0746CF2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.146.II.1" .
     
-    bdr:MF1CA28E56178CA561
+    bdr:MFA7F0D5853053A879
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "62" ;
         :microfilmStrip     "156" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020253 {
         a                   :Instance ;
         skos:prefLabel      "សិរសា"@km , "sirasā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6A971B2F960CC8C1 ;
+            bdr:IDE186B217E0746CF2 ;
         :hasFascicles       "2, 3, 4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT198A41C3225EA437 , bdr:TT4216B2BBE2FDB738 , bdr:TT8368F85FB4AA4683 , bdr:TTE186B217E0746CF2 ;
+        :hasTitle           bdr:TT198A41C3225EA437 , bdr:TT8368F85FB4AA4683 , bdr:TT9AF45E8E90EF0480 , bdr:TTB8A4AF2DA1605105 ;
         :instanceHasReproduction  bdr:W1FEMC020253 ;
+        :instanceOf         bdr:WA1FEMC120032 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1CA28E56178CA561 ;
-        :note               bdr:NTA7F0D5853053A879 ;
+        :microfilmItem      bdr:MFA7F0D5853053A879 ;
+        :note               bdr:NT4216B2BBE2FDB738 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1112" .
     
-    bdr:NTA7F0D5853053A879
+    bdr:NT4216B2BBE2FDB738
         a                   :Note ;
         :contentLocationStatement  "pg. 50" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT198A41C3225EA437
-        a                   :Title ;
-        rdfs:label          "sirasā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE186B217E0746CF2 .
+        a                   :CoverTitle ;
+        rdfs:label          "serisār"@km-x-twktt .
     
-    bdr:TT4216B2BBE2FDB738
+    bdr:TT8368F85FB4AA4683
         a                   :CoverTitle ;
         rdfs:label          "សេរិសារ"@km .
     
-    bdr:TT8368F85FB4AA4683
+    bdr:TT9AF45E8E90EF0480
         a                   :Title ;
         rdfs:label          "សិរសា"@km ;
-        :femcConversionOf   bdr:TT4216B2BBE2FDB738 .
+        :femcConversionOf   bdr:TT8368F85FB4AA4683 .
     
-    bdr:TTE186B217E0746CF2
-        a                   :CoverTitle ;
-        rdfs:label          "serisār"@km-x-twktt .
+    bdr:TTB8A4AF2DA1605105
+        a                   :Title ;
+        rdfs:label          "sirasā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT198A41C3225EA437 .
 }

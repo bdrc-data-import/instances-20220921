@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020765 {
-    bda:LG5315A6341507DDB9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020765"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020765"@en , "imported pubinfo for W1FEMC020765"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020765"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020765 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020765 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "41/MW1FEMC020765.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020765 ;
-        adm:logEntry        bda:LG5315A6341507DDB9 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9F4EC35E4F0AB45D
+    bdr:ID23C48493D6BF6D16
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.436.III.5" .
     
@@ -51,47 +45,46 @@ bdg:MW1FEMC020765 {
         a                   :Instance ;
         skos:prefLabel      "ពិធូរជាតក"@km , "bhidhūr jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9F4EC35E4F0AB45D ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT23C48493D6BF6D16 , bdr:TT52FBA206A12B2A2C , bdr:TT6FB974AD96EF939C , bdr:TTC30B85E88F091466 , bdr:TTC7D786A7E200C0DE , bdr:TTC9245D26586A08FC ;
+            bdr:ID23C48493D6BF6D16 ;
+        :hasTitle           bdr:TT52FBA206A12B2A2C , bdr:TT5315A6341507DDB9 , bdr:TT6FB974AD96EF939C , bdr:TTC2DFBE3E5AC57AA4 , bdr:TTC30B85E88F091466 , bdr:TTC9245D26586A08FC ;
         :instanceHasReproduction  bdr:W1FEMC020765 ;
+        :instanceOf         bdr:WA1FEMC050003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT936AB9051BFFD920 ;
+        :note               bdr:NTC7D786A7E200C0DE ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT936AB9051BFFD920
+    bdr:NTC7D786A7E200C0DE
         a                   :Note ;
         :contentLocationStatement  "pg. 138" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT23C48493D6BF6D16
-        a                   :CoverTitle ;
-        rdfs:label          "bidhur"@km-x-twktt .
-    
     bdr:TT52FBA206A12B2A2C
+        a                   :Title ;
+        rdfs:label          "ពិធូរជាតក"@km ;
+        :femcConversionOf   bdr:TT6FB974AD96EF939C .
+    
+    bdr:TT5315A6341507DDB9
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TT6FB974AD96EF939C
-        a                   :Title ;
-        rdfs:label          "ពិធូរជាតក"@km ;
-        :femcConversionOf   bdr:TTC7D786A7E200C0DE .
-    
-    bdr:TTC30B85E88F091466
-        a                   :Title ;
-        rdfs:label          "bhidhūr jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT23C48493D6BF6D16 .
-    
-    bdr:TTC7D786A7E200C0DE
         a                   :CoverTitle ;
         rdfs:label          "ពិធុរ"@km .
     
-    bdr:TTC9245D26586A08FC
+    bdr:TTC2DFBE3E5AC57AA4
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTC30B85E88F091466
+        a                   :CoverTitle ;
+        rdfs:label          "bidhur"@km-x-twktt .
+    
+    bdr:TTC9245D26586A08FC
+        a                   :Title ;
+        rdfs:label          "bhidhūr jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC30B85E88F091466 .
 }

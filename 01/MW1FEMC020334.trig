@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020334 {
-    bda:LGB336B05DDA1A5A29
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020334"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020334"@en , "imported pubinfo for W1FEMC020334"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020334"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020334 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020334 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "01/MW1FEMC020334.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020334 ;
-        adm:logEntry        bda:LGB336B05DDA1A5A29 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDEBD2BA036B7A99A
+    bdr:IDDD4C2A353E1FC23F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.227.III.1" .
     
-    bdr:MF06188BAC2A2756EF
+    bdr:MF1231BCA1AD8AA987
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "64" ;
         :microfilmStrip     "158" .
@@ -56,39 +50,38 @@ bdg:MW1FEMC020334 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDEBD2BA036B7A99A ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT55A5141477D7E1E8 , bdr:TT846F636B6C75DF6E , bdr:TTDD4C2A353E1FC23F , bdr:TTFFB73139425F1D63 ;
+            bdr:IDDD4C2A353E1FC23F ;
+        :hasTitle           bdr:TT55A5141477D7E1E8 , bdr:TT846F636B6C75DF6E , bdr:TTB336B05DDA1A5A29 , bdr:TTC295501A59047264 ;
         :instanceHasReproduction  bdr:W1FEMC020334 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF06188BAC2A2756EF ;
-        :note               bdr:NT1231BCA1AD8AA987 ;
+        :microfilmItem      bdr:MF1231BCA1AD8AA987 ;
+        :note               bdr:NTFFB73139425F1D63 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "872" .
     
-    bdr:NT1231BCA1AD8AA987
+    bdr:NTFFB73139425F1D63
         a                   :Note ;
         :contentLocationStatement  "pg. 66" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT55A5141477D7E1E8
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
-    
-    bdr:TT846F636B6C75DF6E
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
-    
-    bdr:TTDD4C2A353E1FC23F
         a                   :CoverTitle ;
         rdfs:label          "desanā grè pī"@km-x-twktt .
     
-    bdr:TTFFB73139425F1D63
+    bdr:TT846F636B6C75DF6E
         a                   :CoverTitle ;
         rdfs:label          "ទេសនាគ្រែបី"@km .
+    
+    bdr:TTB336B05DDA1A5A29
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTC295501A59047264
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
 }

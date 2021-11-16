@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021879 {
-    bda:LG7918DBB86703889D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021879"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021879"@en , "imported pubinfo for W1FEMC021879"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021879"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021879 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021879 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "6e/MW1FEMC021879.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021879 ;
-        adm:logEntry        bda:LG7918DBB86703889D , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID8440284E6F1943D2
+    bdr:IDAAF394713FEEC64C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0d.661.III.1" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC021879 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះមាល័យ"@km , "braḥ mālăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8440284E6F1943D2 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT122FB969B591D5C2 , bdr:TT4A5FF331A5E6DE1E , bdr:TTAAF394713FEEC64C , bdr:TTF155E32152C00B7D ;
+            bdr:IDAAF394713FEEC64C ;
+        :hasTitle           bdr:TT122FB969B591D5C2 , bdr:TT7918DBB86703889D , bdr:TTE0FCC04688B3C760 , bdr:TTF155E32152C00B7D ;
         :instanceHasReproduction  bdr:W1FEMC021879 ;
+        :instanceOf         bdr:WA1FEMC010018 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT7BFE91C7F87A745E ;
+        :note               bdr:NT4A5FF331A5E6DE1E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7BFE91C7F87A745E
+    bdr:NT4A5FF331A5E6DE1E
         a                   :Note ;
         :contentLocationStatement  "pg. 336" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT122FB969B591D5C2
-        a                   :Title ;
-        rdfs:label          "ព្រះមាល័យ"@km ;
-        :femcConversionOf   bdr:TT4A5FF331A5E6DE1E .
-    
-    bdr:TT4A5FF331A5E6DE1E
         a                   :CoverTitle ;
         rdfs:label          "មាល្យៃទេព្វថេរ"@km .
     
-    bdr:TTAAF394713FEEC64C
-        a                   :CoverTitle ;
-        rdfs:label          "mālaiy° debb ther"@km-x-twktt .
+    bdr:TT7918DBB86703889D
+        a                   :Title ;
+        rdfs:label          "ព្រះមាល័យ"@km ;
+        :femcConversionOf   bdr:TT122FB969B591D5C2 .
     
-    bdr:TTF155E32152C00B7D
+    bdr:TTE0FCC04688B3C760
         a                   :Title ;
         rdfs:label          "braḥ mālăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TTAAF394713FEEC64C .
+        :femcConversionOf   bdr:TTF155E32152C00B7D .
+    
+    bdr:TTF155E32152C00B7D
+        a                   :CoverTitle ;
+        rdfs:label          "mālaiy° debb ther"@km-x-twktt .
 }

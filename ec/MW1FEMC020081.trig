@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020081 {
-    bda:LG95E683149E62F0FA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020081"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020081"@en , "imported pubinfo for W1FEMC020081"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020081"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020081 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020081 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ec/MW1FEMC020081.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020081 ;
-        adm:logEntry        bda:LG95E683149E62F0FA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID89CD91CA2332464B
+    bdr:ID166ACCC62AAC2618
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.75.I.3" .
     
-    bdr:MFCE356E9946EE7FBC
+    bdr:MF590080C7EC323A53
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "99" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020081 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកធម្មបរមត្ថ"@km , "lpök dhamm paramatth"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID89CD91CA2332464B ;
+            bdr:ID166ACCC62AAC2618 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT166ACCC62AAC2618 , bdr:TT9E53C41914B97804 , bdr:TTDE635E996DAACCC6 , bdr:TTE8A10430735FB6EE ;
+        :hasTitle           bdr:TT95E683149E62F0FA , bdr:TT9E53C41914B97804 , bdr:TTBB576C028574196C , bdr:TTE8A10430735FB6EE ;
         :instanceHasReproduction  bdr:W1FEMC020081 ;
+        :instanceOf         bdr:WA1FEMC110014 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFCE356E9946EE7FBC ;
-        :note               bdr:NT590080C7EC323A53 ;
+        :microfilmItem      bdr:MF590080C7EC323A53 ;
+        :note               bdr:NTDE635E996DAACCC6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1419" .
     
-    bdr:NT590080C7EC323A53
+    bdr:NTDE635E996DAACCC6
         a                   :Note ;
         :contentLocationStatement  "pg. 17" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT166ACCC62AAC2618
+    bdr:TT95E683149E62F0FA
+        a                   :Title ;
+        rdfs:label          "ល្បើកធម្មបរមត្ថ"@km ;
+        :femcConversionOf   bdr:TTE8A10430735FB6EE .
+    
+    bdr:TT9E53C41914B97804
         a                   :CoverTitle ;
         rdfs:label          "dham paramatth"@km-x-twktt .
     
-    bdr:TT9E53C41914B97804
+    bdr:TTBB576C028574196C
         a                   :Title ;
         rdfs:label          "lpök dhamm paramatth"@km-x-twktt ;
-        :femcConversionOf   bdr:TT166ACCC62AAC2618 .
-    
-    bdr:TTDE635E996DAACCC6
-        a                   :CoverTitle ;
-        rdfs:label          "ធមបរមត្ថ"@km .
+        :femcConversionOf   bdr:TT9E53C41914B97804 .
     
     bdr:TTE8A10430735FB6EE
-        a                   :Title ;
-        rdfs:label          "ល្បើកធម្មបរមត្ថ"@km ;
-        :femcConversionOf   bdr:TTDE635E996DAACCC6 .
+        a                   :CoverTitle ;
+        rdfs:label          "ធមបរមត្ថ"@km .
 }

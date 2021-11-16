@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010299 {
-    bda:LGAB60E2B85D205B50
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010299"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010299"@en , "imported pubinfo for W1FEMC010299"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010299"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010299 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010299 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2a/MW1FEMC010299.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010299 ;
-        adm:logEntry        bda:LGAB60E2B85D205B50 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID742B73790E40B485
+    bdr:IDC8A35B0D6EAF966A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "012-013-PP.03.03.03.III.1" .
     
-    bdr:MF07FF8600ED75F17F
+    bdr:MF4CE3BDE6E089B568
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "61" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010299 {
         a                   :Instance ;
         skos:prefLabel      "បេតវេណី"@km , "pet veṇī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID742B73790E40B485 ;
+            bdr:IDC8A35B0D6EAF966A ;
         :hasFascicles       "2, 5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0FC9C9C90BE131C9 , bdr:TTC8A35B0D6EAF966A , bdr:TTCF4736779964F5BA , bdr:TTD60A91A428231E75 ;
+        :hasTitle           bdr:TT1A2F723A4E98AD6E , bdr:TTAB60E2B85D205B50 , bdr:TTCF4736779964F5BA , bdr:TTD60A91A428231E75 ;
         :instanceHasReproduction  bdr:W1FEMC010299 ;
+        :instanceOf         bdr:WA1FEMC010052 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF07FF8600ED75F17F ;
-        :note               bdr:NT4CE3BDE6E089B568 ;
+        :microfilmItem      bdr:MF4CE3BDE6E089B568 ;
+        :note               bdr:NT0FC9C9C90BE131C9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4CE3BDE6E089B568
+    bdr:NT0FC9C9C90BE131C9
         a                   :Note ;
         :contentLocationStatement  "pg. 112" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0FC9C9C90BE131C9
+    bdr:TT1A2F723A4E98AD6E
+        a                   :Title ;
+        rdfs:label          "pet veṇī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD60A91A428231E75 .
+    
+    bdr:TTAB60E2B85D205B50
+        a                   :Title ;
+        rdfs:label          "បេតវេណី"@km ;
+        :femcConversionOf   bdr:TTCF4736779964F5BA .
+    
+    bdr:TTCF4736779964F5BA
         a                   :CoverTitle ;
         rdfs:label          "បែត្តវីនីជាតក្ខ"@km .
     
-    bdr:TTC8A35B0D6EAF966A
+    bdr:TTD60A91A428231E75
         a                   :CoverTitle ;
         rdfs:label          "pètt vīnī jātakkh"@km-x-twktt .
-    
-    bdr:TTCF4736779964F5BA
-        a                   :Title ;
-        rdfs:label          "បេតវេណី"@km ;
-        :femcConversionOf   bdr:TT0FC9C9C90BE131C9 .
-    
-    bdr:TTD60A91A428231E75
-        a                   :Title ;
-        rdfs:label          "pet veṇī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC8A35B0D6EAF966A .
 }

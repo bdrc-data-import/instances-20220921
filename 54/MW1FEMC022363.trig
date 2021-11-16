@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022363 {
-    bda:LG7FA6C4C58E8DC0A5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022363"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022363"@en , "imported pubinfo for W1FEMC022363"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022363"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022363 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022363 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "54/MW1FEMC022363.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022363 ;
-        adm:logEntry        bda:LG7FA6C4C58E8DC0A5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC65FF9F92B508165
+    bdr:ID0CD9BE821821CE91
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.850.I.3" .
     
-    bdr:MFA470D77D5855D15E
+    bdr:MFC8DF7B46F48053B3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022363 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកនមោក្រយា"@km , "lpök namo krayā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC65FF9F92B508165 ;
+            bdr:ID0CD9BE821821CE91 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CD9BE821821CE91 , bdr:TT28CE42C661E7C090 , bdr:TTA5CA1522F8B9BBB3 , bdr:TTF71CE64CBC90B397 ;
+        :hasTitle           bdr:TT28CE42C661E7C090 , bdr:TT5E637AA39DD00E0E , bdr:TT7FA6C4C58E8DC0A5 , bdr:TTF71CE64CBC90B397 ;
         :instanceHasReproduction  bdr:W1FEMC022363 ;
+        :instanceOf         bdr:WA1FEMC110026 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA470D77D5855D15E ;
-        :note               bdr:NTC8DF7B46F48053B3 ;
+        :microfilmItem      bdr:MFC8DF7B46F48053B3 ;
+        :note               bdr:NTA5CA1522F8B9BBB3 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC8DF7B46F48053B3
+    bdr:NTA5CA1522F8B9BBB3
         a                   :Note ;
         :contentLocationStatement  "pg. 423" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0CD9BE821821CE91
-        a                   :CoverTitle ;
-        rdfs:label          "namo krayār"@km-x-twktt .
-    
     bdr:TT28CE42C661E7C090
-        a                   :Title ;
-        rdfs:label          "ល្បើកនមោក្រយា"@km ;
-        :femcConversionOf   bdr:TTA5CA1522F8B9BBB3 .
-    
-    bdr:TTA5CA1522F8B9BBB3
         a                   :CoverTitle ;
         rdfs:label          "នមោក្រយារ"@km .
     
-    bdr:TTF71CE64CBC90B397
+    bdr:TT5E637AA39DD00E0E
         a                   :Title ;
         rdfs:label          "lpök namo krayā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0CD9BE821821CE91 .
+        :femcConversionOf   bdr:TTF71CE64CBC90B397 .
+    
+    bdr:TT7FA6C4C58E8DC0A5
+        a                   :Title ;
+        rdfs:label          "ល្បើកនមោក្រយា"@km ;
+        :femcConversionOf   bdr:TT28CE42C661E7C090 .
+    
+    bdr:TTF71CE64CBC90B397
+        a                   :CoverTitle ;
+        rdfs:label          "namo krayār"@km-x-twktt .
 }

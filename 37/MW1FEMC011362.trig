@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011362 {
-    bda:LG6ED5E24C013C3705
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011362"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011362"@en , "imported pubinfo for W1FEMC011362"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011362"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011362 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011362 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "37/MW1FEMC011362.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011362 ;
-        adm:logEntry        bda:LG6ED5E24C013C3705 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0C77C6CD0105D707
+    bdr:IDE21AAECB9DF6A08E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "003-A.10.03.02.III.5" .
     
-    bdr:MF0942229B3234C37A
+    bdr:MFDFCA875E6F189978
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "53" ;
         :microfilmStrip     "141" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC011362 {
         a                   :Instance ;
         skos:prefLabel      "មហាវេស្សន្ដរជាតក"@km , "mahā vessantar jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0C77C6CD0105D707 ;
+            bdr:IDE21AAECB9DF6A08E ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT17272400FF3F58A4 , bdr:TT5031901D4A21320B , bdr:TT51AEF5D4B9B411D6 , bdr:TT6014BF32C9069EFF , bdr:TTBD011CAC467FA50B , bdr:TTE21AAECB9DF6A08E ;
+        :hasTitle           bdr:TT5031901D4A21320B , bdr:TT51AEF5D4B9B411D6 , bdr:TT51F55CB2CF6BA1FF , bdr:TT6014BF32C9069EFF , bdr:TT6ED5E24C013C3705 , bdr:TTBD011CAC467FA50B ;
         :instanceHasReproduction  bdr:W1FEMC011362 ;
+        :instanceOf         bdr:WA1FEMC050001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF0942229B3234C37A ;
-        :note               bdr:NTDFCA875E6F189978 ;
+        :microfilmItem      bdr:MFDFCA875E6F189978 ;
+        :note               bdr:NT17272400FF3F58A4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDFCA875E6F189978
+    bdr:NT17272400FF3F58A4
         a                   :Note ;
         :contentLocationStatement  "pg. 319" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT17272400FF3F58A4
-        a                   :CoverTitle ;
-        rdfs:label          "ជជុក"@km .
-    
     bdr:TT5031901D4A21320B
-        a                   :Title ;
-        rdfs:label          "មហាវេស្សន្ដរជាតក"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "ជូជក"@km ;
+        :femcConversionOf   bdr:TTBD011CAC467FA50B .
     
     bdr:TT51AEF5D4B9B411D6
         a                   :CoverTitle ;
-        rdfs:label          "jūjak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE21AAECB9DF6A08E .
+        rdfs:label          "jajuk"@km-x-twktt .
     
-    bdr:TT6014BF32C9069EFF
+    bdr:TT51F55CB2CF6BA1FF
         a                   :Title ;
         rdfs:label          "mahā vessantar jātak"@km-x-twktt .
     
+    bdr:TT6014BF32C9069EFF
+        a                   :CoverTitle ;
+        rdfs:label          "jūjak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT51AEF5D4B9B411D6 .
+    
+    bdr:TT6ED5E24C013C3705
+        a                   :Title ;
+        rdfs:label          "មហាវេស្សន្ដរជាតក"@km .
+    
     bdr:TTBD011CAC467FA50B
         a                   :CoverTitle ;
-        rdfs:label          "ជូជក"@km ;
-        :femcConversionOf   bdr:TT17272400FF3F58A4 .
-    
-    bdr:TTE21AAECB9DF6A08E
-        a                   :CoverTitle ;
-        rdfs:label          "jajuk"@km-x-twktt .
+        rdfs:label          "ជជុក"@km .
 }

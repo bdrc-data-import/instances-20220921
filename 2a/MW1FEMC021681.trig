@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021681 {
-    bda:LGE7EA98FE95FC23A5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-27"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021681"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021681"@en , "imported pubinfo for W1FEMC021681"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021681"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021681 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021681 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2a/MW1FEMC021681.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021681 ;
-        adm:logEntry        bda:LGE7EA98FE95FC23A5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID54221059717A2E10
+    bdr:IDF32BA20B54BC6BE9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.584.V.2" .
     
-    bdr:MFF393B387848CAC97
+    bdr:MFE465D661B1963A92
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "133" ;
         :microfilmStrip     "227" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021681 {
         a                   :Instance ;
         skos:prefLabel      "សេដ្ឋីក្រឹត្យ"@km , "seṭṭhī krịty"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID54221059717A2E10 ;
+            bdr:IDF32BA20B54BC6BE9 ;
         :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "6" ;
-        :hasTitle           bdr:TTBD98618EC01E9981 , bdr:TTE06CB918E851CBE7 , bdr:TTE789D971CFB4111A , bdr:TTF32BA20B54BC6BE9 ;
+        :hasTitle           bdr:TTD27B912D3AF61A42 , bdr:TTE06CB918E851CBE7 , bdr:TTE789D971CFB4111A , bdr:TTE7EA98FE95FC23A5 ;
+        :instanceOf         bdr:WA1FEMC140021 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF393B387848CAC97 ;
-        :note               bdr:NTE465D661B1963A92 ;
+        :microfilmItem      bdr:MFE465D661B1963A92 ;
+        :note               bdr:NTBD98618EC01E9981 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE465D661B1963A92
+    bdr:NTBD98618EC01E9981
         a                   :Note ;
         :contentLocationStatement  "pg. 302" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTBD98618EC01E9981
+    bdr:TTD27B912D3AF61A42
+        a                   :Title ;
+        rdfs:label          "seṭṭhī krịty"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE789D971CFB4111A .
+    
+    bdr:TTE06CB918E851CBE7
         a                   :CoverTitle ;
         rdfs:label          "សេដ្ឋីក្រិត"@km .
     
-    bdr:TTE06CB918E851CBE7
-        a                   :Title ;
-        rdfs:label          "សេដ្ឋីក្រឹត្យ"@km ;
-        :femcConversionOf   bdr:TTBD98618EC01E9981 .
-    
     bdr:TTE789D971CFB4111A
-        a                   :Title ;
-        rdfs:label          "seṭṭhī krịty"@km-x-twktt ;
-        :femcConversionOf   bdr:TTF32BA20B54BC6BE9 .
-    
-    bdr:TTF32BA20B54BC6BE9
         a                   :CoverTitle ;
         rdfs:label          "seṭṭhī krit"@km-x-twktt .
+    
+    bdr:TTE7EA98FE95FC23A5
+        a                   :Title ;
+        rdfs:label          "សេដ្ឋីក្រឹត្យ"@km ;
+        :femcConversionOf   bdr:TTE06CB918E851CBE7 .
 }

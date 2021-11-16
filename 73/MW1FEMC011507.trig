@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011507 {
-    bda:LG7D0E5E1413F911FE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011507"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011507"@en , "imported pubinfo for W1FEMC011507"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011507"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011507 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011507 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "73/MW1FEMC011507.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011507 ;
-        adm:logEntry        bda:LG7D0E5E1413F911FE , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD1E44646A5A83073
+    bdr:ID6115A87DA3BB0EB2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "049-A.10.08.01.III.2" .
     
-    bdr:MFEA1C77F9CBD1BE2C
+    bdr:MFF0DE976A61A35E9D
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "27" ;
         :microfilmStrip     "38" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011507 {
         a                   :Instance ;
         skos:prefLabel      "អង្គុត្តរនិកាយ"@km , "aṅguttaranikāy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD1E44646A5A83073 ;
+            bdr:ID6115A87DA3BB0EB2 ;
         :hasFascicles       "9" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0C7A2B54FD7DC1E5 , bdr:TT34149FE31D22C308 , bdr:TT408937E30AF035F5 , bdr:TT6115A87DA3BB0EB2 ;
+        :hasTitle           bdr:TT0C7A2B54FD7DC1E5 , bdr:TT408937E30AF035F5 , bdr:TT511B921DE6B4362E , bdr:TT7D0E5E1413F911FE ;
         :instanceHasReproduction  bdr:W1FEMC011507 ;
+        :instanceOf         bdr:WA1FEMC020014 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEA1C77F9CBD1BE2C ;
-        :note               bdr:NTF0DE976A61A35E9D ;
+        :microfilmItem      bdr:MFF0DE976A61A35E9D ;
+        :note               bdr:NT34149FE31D22C308 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTF0DE976A61A35E9D
+    bdr:NT34149FE31D22C308
         a                   :Note ;
         :contentLocationStatement  "pg. 346" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0C7A2B54FD7DC1E5
-        a                   :Title ;
-        rdfs:label          "អង្គុត្តរនិកាយ"@km ;
-        :femcConversionOf   bdr:TT34149FE31D22C308 .
-    
-    bdr:TT34149FE31D22C308
         a                   :CoverTitle ;
         rdfs:label          "អង្គតនិកា្យ"@km .
     
     bdr:TT408937E30AF035F5
-        a                   :Title ;
-        rdfs:label          "aṅguttaranikāy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6115A87DA3BB0EB2 .
-    
-    bdr:TT6115A87DA3BB0EB2
         a                   :CoverTitle ;
         rdfs:label          "aṅgat nikāy°"@km-x-twktt .
+    
+    bdr:TT511B921DE6B4362E
+        a                   :Title ;
+        rdfs:label          "aṅguttaranikāy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT408937E30AF035F5 .
+    
+    bdr:TT7D0E5E1413F911FE
+        a                   :Title ;
+        rdfs:label          "អង្គុត្តរនិកាយ"@km ;
+        :femcConversionOf   bdr:TT0C7A2B54FD7DC1E5 .
 }

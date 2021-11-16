@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011117 {
-    bda:LG49B185A448EF685E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011117"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011117"@en , "imported pubinfo for W1FEMC011117"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011117"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011117 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011117 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "19/MW1FEMC011117.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011117 ;
-        adm:logEntry        bda:LG49B185A448EF685E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE8C8AEA3FEBA79F4
+    bdr:ID2240D48A7F27DBB1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "015-A.04.17.02.V.1" .
     
-    bdr:MF3965A8B8644F9BF0
+    bdr:MFDB0AA33D915DA23C
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "29" ;
         :microfilmStrip     "48" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011117 {
         a                   :Instance ;
         skos:prefLabel      "បឋមវិងស៊ុង"@km , "paṭham viṅ-suṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE8C8AEA3FEBA79F4 ;
+            bdr:ID2240D48A7F27DBB1 ;
         :hasFascicles       "1, 3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0EE10478219B9371 , bdr:TT2240D48A7F27DBB1 , bdr:TT8C2723F868274E1C , bdr:TT9B7ACCC0D3F4721E ;
+        :hasTitle           bdr:TT49B185A448EF685E , bdr:TT7D0B4BB7191F6F6D , bdr:TT8C2723F868274E1C , bdr:TT9B7ACCC0D3F4721E ;
         :instanceHasReproduction  bdr:W1FEMC011117 ;
+        :instanceOf         bdr:WA1FEMC070015 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3965A8B8644F9BF0 ;
-        :note               bdr:NTDB0AA33D915DA23C ;
+        :microfilmItem      bdr:MFDB0AA33D915DA23C ;
+        :note               bdr:NT0EE10478219B9371 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDB0AA33D915DA23C
+    bdr:NT0EE10478219B9371
         a                   :Note ;
         :contentLocationStatement  "pg. 271" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0EE10478219B9371
+    bdr:TT49B185A448EF685E
+        a                   :Title ;
+        rdfs:label          "បឋមវិងស៊ុង"@km ;
+        :femcConversionOf   bdr:TT8C2723F868274E1C .
+    
+    bdr:TT7D0B4BB7191F6F6D
+        a                   :Title ;
+        rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT9B7ACCC0D3F4721E .
+    
+    bdr:TT8C2723F868274E1C
         a                   :CoverTitle ;
         rdfs:label          "ធម្មវីងស៊ុំង"@km .
     
-    bdr:TT2240D48A7F27DBB1
+    bdr:TT9B7ACCC0D3F4721E
         a                   :CoverTitle ;
         rdfs:label          "dhamm vīṅ-suṃṅ"@km-x-twktt .
-    
-    bdr:TT8C2723F868274E1C
-        a                   :Title ;
-        rdfs:label          "បឋមវិងស៊ុង"@km ;
-        :femcConversionOf   bdr:TT0EE10478219B9371 .
-    
-    bdr:TT9B7ACCC0D3F4721E
-        a                   :Title ;
-        rdfs:label          "paṭham viṅ-suṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2240D48A7F27DBB1 .
 }

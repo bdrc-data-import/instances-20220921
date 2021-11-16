@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010689 {
-    bda:LG2B3BAF0A4131E266
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010689"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010689"@en , "imported pubinfo for W1FEMC010689"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010689"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010689 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010689 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "53/MW1FEMC010689.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010689 ;
-        adm:logEntry        bda:LG2B3BAF0A4131E266 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5AF658D53E272A58
+    bdr:IDDA60D78F163C013D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "006-A.03.05.03.VI.6" .
     
-    bdr:MFC63B0866C077B8B4
+    bdr:MF670B1D3F7C85FF65
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "125" .
@@ -55,44 +49,43 @@ bdg:MW1FEMC010689 {
         a                   :Instance ;
         skos:prefLabel      "ស្លុតីតូច"@km , "slutī tūc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5AF658D53E272A58 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2095A798246850E1 , bdr:TT20B4A5DFD7DFCF8E , bdr:TTD2A6FED95CC4C917 , bdr:TTDA60D78F163C013D ;
+            bdr:IDDA60D78F163C013D ;
+        :hasTitle           bdr:TT2095A798246850E1 , bdr:TT20B4A5DFD7DFCF8E , bdr:TT2B3BAF0A4131E266 , bdr:TT7B75803B6B6FC36A ;
         :instanceHasReproduction  bdr:W1FEMC010689 ;
+        :instanceOf         bdr:WA1FEMC090017 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC63B0866C077B8B4 ;
-        :note               bdr:NT670B1D3F7C85FF65 , bdr:NTD22638FA4C2600D6 ;
+        :microfilmItem      bdr:MF670B1D3F7C85FF65 ;
+        :note               bdr:NTD22638FA4C2600D6 , bdr:NTD2A6FED95CC4C917 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
-    
-    bdr:NT670B1D3F7C85FF65
-        a                   :Note ;
-        :contentLocationStatement  "pg. 189" ;
-        :noteSource         bdr:W1FEMC01 .
     
     bdr:NTD22638FA4C2600D6
         a                   :Note ;
         :noteText           "Should we write (វាន) ?"@en .
     
+    bdr:NTD2A6FED95CC4C917
+        a                   :Note ;
+        :contentLocationStatement  "pg. 189" ;
+        :noteSource         bdr:W1FEMC01 .
+    
     bdr:TT2095A798246850E1
-        a                   :Title ;
-        rdfs:label          "ស្លុតីតូច"@km ;
-        :femcConversionOf   bdr:TTD2A6FED95CC4C917 .
-    
-    bdr:TT20B4A5DFD7DFCF8E
-        a                   :Title ;
-        rdfs:label          "slutī tūc"@km-x-twktt ;
-        :femcConversionOf   bdr:TTDA60D78F163C013D .
-    
-    bdr:TTD2A6FED95CC4C917
         a                   :CoverTitle ;
         rdfs:label          "គាថា (វាន)"@km .
     
-    bdr:TTDA60D78F163C013D
+    bdr:TT20B4A5DFD7DFCF8E
         a                   :CoverTitle ;
         rdfs:label          "gāthā"@km-x-twktt .
+    
+    bdr:TT2B3BAF0A4131E266
+        a                   :Title ;
+        rdfs:label          "ស្លុតីតូច"@km ;
+        :femcConversionOf   bdr:TT2095A798246850E1 .
+    
+    bdr:TT7B75803B6B6FC36A
+        a                   :Title ;
+        rdfs:label          "slutī tūc"@km-x-twktt ;
+        :femcConversionOf   bdr:TT20B4A5DFD7DFCF8E .
 }

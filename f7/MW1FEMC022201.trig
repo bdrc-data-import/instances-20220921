@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022201 {
-    bda:LG0ED161BF19B9B040
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022201"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022201"@en , "imported pubinfo for W1FEMC022201"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022201"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022201 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022201 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f7/MW1FEMC022201.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022201 ;
-        adm:logEntry        bda:LG0ED161BF19B9B040 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID22E0D1B21A8594C1
+    bdr:ID250372A9B73C946E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.279.II.2" .
     
-    bdr:MF131E34BB1F74AEB0
+    bdr:MFD71429BE02683D97
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "139" ;
         :microfilmStrip     "233" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022201 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកស្រែវែង"@km , "lpök srè vèṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID22E0D1B21A8594C1 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT250372A9B73C946E , bdr:TT74A9EC1B2E1BDE1D , bdr:TTBA66C4D212439066 , bdr:TTE7783708F7C74B15 ;
+            bdr:ID250372A9B73C946E ;
+        :hasTitle           bdr:TT0ED161BF19B9B040 , bdr:TT74A9EC1B2E1BDE1D , bdr:TTD38DF1B2F1D39E10 , bdr:TTE7783708F7C74B15 ;
         :instanceHasReproduction  bdr:W1FEMC022201 ;
+        :instanceOf         bdr:WA1FEMC130016 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF131E34BB1F74AEB0 ;
-        :note               bdr:NTD71429BE02683D97 ;
+        :microfilmItem      bdr:MFD71429BE02683D97 ;
+        :note               bdr:NTBA66C4D212439066 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "639" .
     
-    bdr:NTD71429BE02683D97
+    bdr:NTBA66C4D212439066
         a                   :Note ;
         :contentLocationStatement  "pg. 392" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT250372A9B73C946E
+    bdr:TT0ED161BF19B9B040
+        a                   :Title ;
+        rdfs:label          "ល្បើកស្រែវែង"@km ;
+        :femcConversionOf   bdr:TTE7783708F7C74B15 .
+    
+    bdr:TT74A9EC1B2E1BDE1D
         a                   :CoverTitle ;
         rdfs:label          "lpök srèr vèṅ"@km-x-twktt .
     
-    bdr:TT74A9EC1B2E1BDE1D
+    bdr:TTD38DF1B2F1D39E10
         a                   :Title ;
         rdfs:label          "lpök srè vèṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT250372A9B73C946E .
-    
-    bdr:TTBA66C4D212439066
-        a                   :CoverTitle ;
-        rdfs:label          "ល្បើកស្រែរវែង"@km .
+        :femcConversionOf   bdr:TT74A9EC1B2E1BDE1D .
     
     bdr:TTE7783708F7C74B15
-        a                   :Title ;
-        rdfs:label          "ល្បើកស្រែវែង"@km ;
-        :femcConversionOf   bdr:TTBA66C4D212439066 .
+        a                   :CoverTitle ;
+        rdfs:label          "ល្បើកស្រែរវែង"@km .
 }

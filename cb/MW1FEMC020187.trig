@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020187 {
-    bda:LGEAFE8C33B02283C5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020187"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020187"@en , "imported pubinfo for W1FEMC020187"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020187"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020187 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020187 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cb/MW1FEMC020187.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020187 ;
-        adm:logEntry        bda:LGEAFE8C33B02283C5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF76F970C32811616
+    bdr:ID9480A63A70432B71
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.80.III.1" .
     
-    bdr:MFD372C8CB9BE1C0E3
+    bdr:MFA300BC79D7393230
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "32" ;
         :microfilmStrip     "59" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020187 {
         a                   :Instance ;
         skos:prefLabel      "មារព័ន្ធន៍"@km , "mār băndhan"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF76F970C32811616 ;
+            bdr:ID9480A63A70432B71 ;
         :hasFascicles       "1, 5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4C11284F647990BA , bdr:TT9480A63A70432B71 , bdr:TTF6E8002C618E9AC2 , bdr:TTFACFF694DA70A113 ;
+        :hasTitle           bdr:TT4C11284F647990BA , bdr:TTEAFE8C33B02283C5 , bdr:TTF7A41285C85D023E , bdr:TTFACFF694DA70A113 ;
         :instanceHasReproduction  bdr:W1FEMC020187 ;
+        :instanceOf         bdr:WA1FEMC010041 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD372C8CB9BE1C0E3 ;
-        :note               bdr:NTA300BC79D7393230 ;
+        :microfilmItem      bdr:MFA300BC79D7393230 ;
+        :note               bdr:NTF6E8002C618E9AC2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "839" .
     
-    bdr:NTA300BC79D7393230
+    bdr:NTF6E8002C618E9AC2
         a                   :Note ;
         :contentLocationStatement  "pg. 38" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT4C11284F647990BA
-        a                   :Title ;
-        rdfs:label          "mār băndhan"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9480A63A70432B71 .
-    
-    bdr:TT9480A63A70432B71
         a                   :CoverTitle ;
         rdfs:label          "mā bāndh"@km-x-twktt .
     
-    bdr:TTF6E8002C618E9AC2
-        a                   :CoverTitle ;
-        rdfs:label          "មាពា័ន្ធ"@km .
-    
-    bdr:TTFACFF694DA70A113
+    bdr:TTEAFE8C33B02283C5
         a                   :Title ;
         rdfs:label          "មារព័ន្ធន៍"@km ;
-        :femcConversionOf   bdr:TTF6E8002C618E9AC2 .
+        :femcConversionOf   bdr:TTFACFF694DA70A113 .
+    
+    bdr:TTF7A41285C85D023E
+        a                   :Title ;
+        rdfs:label          "mār băndhan"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4C11284F647990BA .
+    
+    bdr:TTFACFF694DA70A113
+        a                   :CoverTitle ;
+        rdfs:label          "មាពា័ន្ធ"@km .
 }

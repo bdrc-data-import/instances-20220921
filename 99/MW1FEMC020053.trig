@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020053 {
-    bda:LG3EFDF7C67CEE184B
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020053"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020053"@en , "imported pubinfo for W1FEMC020053"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020053"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020053 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020053 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "99/MW1FEMC020053.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020053 ;
-        adm:logEntry        bda:LG3EFDF7C67CEE184B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID794B0F215EBE537E
+    bdr:ID0B3ACC6A7B36015A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.48.II.1" .
     
-    bdr:MF99B0001F630B83FB
+    bdr:MFA8B40321204F24D1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "20" ;
         :microfilmStrip     "9" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020053 {
         a                   :Instance ;
         skos:prefLabel      "ចៅចំហុយនំ"@km , "cau caṃhuy naṃ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID794B0F215EBE537E ;
+            bdr:ID0B3ACC6A7B36015A ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0B3ACC6A7B36015A , bdr:TT348B7A84FE6D3772 , bdr:TT69291BDC8AAF9771 , bdr:TT8C91308E270361DA ;
+        :hasTitle           bdr:TT03318E2903541798 , bdr:TT3EFDF7C67CEE184B , bdr:TT69291BDC8AAF9771 , bdr:TT8C91308E270361DA ;
         :instanceHasReproduction  bdr:W1FEMC020053 ;
+        :instanceOf         bdr:WA1FEMC120063 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF99B0001F630B83FB ;
-        :note               bdr:NTA8B40321204F24D1 ;
+        :microfilmItem      bdr:MFA8B40321204F24D1 ;
+        :note               bdr:NT348B7A84FE6D3772 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1623" .
     
-    bdr:NTA8B40321204F24D1
+    bdr:NT348B7A84FE6D3772
         a                   :Note ;
         :contentLocationStatement  "pg. 11" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0B3ACC6A7B36015A
-        a                   :CoverTitle ;
-        rdfs:label          "cau caṃhuy naṃm"@km-x-twktt .
+    bdr:TT03318E2903541798
+        a                   :Title ;
+        rdfs:label          "cau caṃhuy naṃ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8C91308E270361DA .
     
-    bdr:TT348B7A84FE6D3772
+    bdr:TT3EFDF7C67CEE184B
+        a                   :Title ;
+        rdfs:label          "ចៅចំហុយនំ"@km ;
+        :femcConversionOf   bdr:TT69291BDC8AAF9771 .
+    
+    bdr:TT69291BDC8AAF9771
         a                   :CoverTitle ;
         rdfs:label          "ចៅចំហុយនំម"@km .
     
-    bdr:TT69291BDC8AAF9771
-        a                   :Title ;
-        rdfs:label          "ចៅចំហុយនំ"@km ;
-        :femcConversionOf   bdr:TT348B7A84FE6D3772 .
-    
     bdr:TT8C91308E270361DA
-        a                   :Title ;
-        rdfs:label          "cau caṃhuy naṃ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0B3ACC6A7B36015A .
+        a                   :CoverTitle ;
+        rdfs:label          "cau caṃhuy naṃm"@km-x-twktt .
 }

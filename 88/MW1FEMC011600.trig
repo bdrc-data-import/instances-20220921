@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011600 {
-    bda:LGA7FEDA96959102D1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011600"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011600"@en , "imported pubinfo for W1FEMC011600"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011600"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011600 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011600 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "88/MW1FEMC011600.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011600 ;
-        adm:logEntry        bda:LGA7FEDA96959102D1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDFDFBCE0CBFC940AE
+    bdr:IDAC5FA8F38302D86F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "032-A.10.10.01.III.1" .
     
-    bdr:MFD2B2D2784C5D39DC
+    bdr:MFC24F415D19296F7F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "25" ;
         :microfilmStrip     "31" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011600 {
         a                   :Instance ;
         skos:prefLabel      "អរិយសច្ច"@km , "ariy sacc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFDFBCE0CBFC940AE ;
+            bdr:IDAC5FA8F38302D86F ;
         :hasFascicles       "10" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0B517EB2E6EACEC0 , bdr:TT88ED4A958FAA143E , bdr:TT8F185F870B3389DA , bdr:TTAC5FA8F38302D86F ;
+        :hasTitle           bdr:TT88ED4A958FAA143E , bdr:TT8F185F870B3389DA , bdr:TTA7FEDA96959102D1 , bdr:TTDB6885376A7D659D ;
         :instanceHasReproduction  bdr:W1FEMC011600 ;
+        :instanceOf         bdr:WA1FEMC010003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFD2B2D2784C5D39DC ;
-        :note               bdr:NTC24F415D19296F7F ;
+        :microfilmItem      bdr:MFC24F415D19296F7F ;
+        :note               bdr:NT0B517EB2E6EACEC0 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC24F415D19296F7F
+    bdr:NT0B517EB2E6EACEC0
         a                   :Note ;
         :contentLocationStatement  "pg. 363" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0B517EB2E6EACEC0
+    bdr:TT88ED4A958FAA143E
         a                   :CoverTitle ;
         rdfs:label          "អរិយ្យសាច្ច"@km .
     
-    bdr:TT88ED4A958FAA143E
-        a                   :Title ;
-        rdfs:label          "អរិយសច្ច"@km ;
-        :femcConversionOf   bdr:TT0B517EB2E6EACEC0 .
-    
     bdr:TT8F185F870B3389DA
-        a                   :Title ;
-        rdfs:label          "ariy sacc"@km-x-twktt ;
-        :femcConversionOf   bdr:TTAC5FA8F38302D86F .
-    
-    bdr:TTAC5FA8F38302D86F
         a                   :CoverTitle ;
         rdfs:label          "ariyy sācc"@km-x-twktt .
+    
+    bdr:TTA7FEDA96959102D1
+        a                   :Title ;
+        rdfs:label          "អរិយសច្ច"@km ;
+        :femcConversionOf   bdr:TT88ED4A958FAA143E .
+    
+    bdr:TTDB6885376A7D659D
+        a                   :Title ;
+        rdfs:label          "ariy sacc"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8F185F870B3389DA .
 }

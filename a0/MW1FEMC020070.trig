@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020070 {
-    bda:LGC37B6A2DF4B2DA4E
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020070"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020070"@en , "imported pubinfo for W1FEMC020070"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020070"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020070 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020070 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a0/MW1FEMC020070.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020070 ;
-        adm:logEntry        bda:LGC37B6A2DF4B2DA4E , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDAA4B43648BC42EF3
+    bdr:ID7D541EA8FADF161F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.65.III.1" .
     
-    bdr:MF690FE3E469F6007F
+    bdr:MF5C8691CB71038A1A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "20" ;
         :microfilmStrip     "12" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020070 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មបទដ្ឋកថាប៉េនតន"@km , "dhammapadaṭṭhakathā p\"en tan"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAA4B43648BC42EF3 ;
+            bdr:ID7D541EA8FADF161F ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT355B494FFEC154CF , bdr:TT66F57466967964EF , bdr:TT6D5AB014B90779A0 , bdr:TT7D541EA8FADF161F ;
+        :hasTitle           bdr:TT66F57466967964EF , bdr:TT6D5AB014B90779A0 , bdr:TTC37B6A2DF4B2DA4E , bdr:TTF627C64F80540B2E ;
         :instanceHasReproduction  bdr:W1FEMC020070 ;
+        :instanceOf         bdr:WA1FEMC010028 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF690FE3E469F6007F ;
-        :note               bdr:NT5C8691CB71038A1A ;
+        :microfilmItem      bdr:MF5C8691CB71038A1A ;
+        :note               bdr:NT355B494FFEC154CF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5C8691CB71038A1A
+    bdr:NT355B494FFEC154CF
         a                   :Note ;
         :contentLocationStatement  "pg. 15" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT355B494FFEC154CF
+    bdr:TT66F57466967964EF
         a                   :CoverTitle ;
         rdfs:label          "ធម្មបទ"@km .
     
-    bdr:TT66F57466967964EF
-        a                   :Title ;
-        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនតន"@km ;
-        :femcConversionOf   bdr:TT355B494FFEC154CF .
-    
     bdr:TT6D5AB014B90779A0
-        a                   :Title ;
-        rdfs:label          "dhammapadaṭṭhakathā p\"en tan"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7D541EA8FADF161F .
-    
-    bdr:TT7D541EA8FADF161F
         a                   :CoverTitle ;
         rdfs:label          "dhamm pad"@km-x-twktt .
+    
+    bdr:TTC37B6A2DF4B2DA4E
+        a                   :Title ;
+        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនតន"@km ;
+        :femcConversionOf   bdr:TT66F57466967964EF .
+    
+    bdr:TTF627C64F80540B2E
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā p\"en tan"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6D5AB014B90779A0 .
 }

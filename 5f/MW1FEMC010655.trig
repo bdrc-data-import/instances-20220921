@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010655 {
-    bda:LG15E02379F510AB27
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010655"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010655"@en , "imported pubinfo for W1FEMC010655"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010655"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010655 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010655 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5f/MW1FEMC010655.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010655 ;
-        adm:logEntry        bda:LG15E02379F510AB27 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID80C8AC9069458D63
+    bdr:IDBB4588809F9AA756
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "048-A.02.12.04.V.1" .
     
-    bdr:MF8B794ABD84836493
+    bdr:MF7DA0010F9A98E71F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "43" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010655 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះពុទ្ធគុណបន្ថែ"@km , "braḥ buddh guṇ panlè"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID80C8AC9069458D63 ;
+            bdr:IDBB4588809F9AA756 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2309A1343C5F68B1 , bdr:TT7AFC46B34B64D3F0 , bdr:TTBB4588809F9AA756 , bdr:TTD487D01717BE11BB ;
+        :hasTitle           bdr:TT15E02379F510AB27 , bdr:TT2309A1343C5F68B1 , bdr:TT7AFC46B34B64D3F0 , bdr:TT9878277214C7C750 ;
         :instanceHasReproduction  bdr:W1FEMC010655 ;
+        :instanceOf         bdr:WA1FEMC070002 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF8B794ABD84836493 ;
-        :note               bdr:NT7DA0010F9A98E71F ;
+        :microfilmItem      bdr:MF7DA0010F9A98E71F ;
+        :note               bdr:NTD487D01717BE11BB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7DA0010F9A98E71F
+    bdr:NTD487D01717BE11BB
         a                   :Note ;
         :contentLocationStatement  "pg. 182" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2309A1343C5F68B1
+    bdr:TT15E02379F510AB27
         a                   :Title ;
         rdfs:label          "ព្រះពុទ្ធគុណបន្ថែ"@km ;
-        :femcConversionOf   bdr:TTD487D01717BE11BB .
+        :femcConversionOf   bdr:TT2309A1343C5F68B1 .
+    
+    bdr:TT2309A1343C5F68B1
+        a                   :CoverTitle ;
+        rdfs:label          "ពុទ្ធគុន"@km .
     
     bdr:TT7AFC46B34B64D3F0
-        a                   :Title ;
-        rdfs:label          "braḥ buddh guṇ panlè"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBB4588809F9AA756 .
-    
-    bdr:TTBB4588809F9AA756
         a                   :CoverTitle ;
         rdfs:label          "buddh gun"@km-x-twktt .
     
-    bdr:TTD487D01717BE11BB
-        a                   :CoverTitle ;
-        rdfs:label          "ពុទ្ធគុន"@km .
+    bdr:TT9878277214C7C750
+        a                   :Title ;
+        rdfs:label          "braḥ buddh guṇ panlè"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7AFC46B34B64D3F0 .
 }

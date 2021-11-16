@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011179 {
-    bda:LG4874DF68F48893C2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011179"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011179"@en , "imported pubinfo for W1FEMC011179"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011179"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011179 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011179 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cd/MW1FEMC011179.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011179 ;
-        adm:logEntry        bda:LG4874DF68F48893C2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID516749E6A7AA1D09
+    bdr:ID9B376D235D92FC10
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.05.08.01.III.3" .
     
-    bdr:MF59A6F80BCD22FCE4
+    bdr:MF6E0D1B4E85F4D0B0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "43" ;
         :microfilmStrip     "100" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011179 {
         a                   :Instance ;
         skos:prefLabel      "អនាគារវិន័យ"@km , "anāgār vinăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID516749E6A7AA1D09 ;
+            bdr:ID9B376D235D92FC10 ;
         :hasFascicles       "4, 5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT17487F7B18BBD2E8 , bdr:TT5C2EB764F5F28353 , bdr:TT9711FE91054AD7C2 , bdr:TT9B376D235D92FC10 ;
+        :hasTitle           bdr:TT17487F7B18BBD2E8 , bdr:TT4874DF68F48893C2 , bdr:TT9711FE91054AD7C2 , bdr:TTFD7A443C10D6F7E4 ;
         :instanceHasReproduction  bdr:W1FEMC011179 ;
+        :instanceOf         bdr:WA1FEMC030003 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF59A6F80BCD22FCE4 ;
-        :note               bdr:NT6E0D1B4E85F4D0B0 ;
+        :microfilmItem      bdr:MF6E0D1B4E85F4D0B0 ;
+        :note               bdr:NT5C2EB764F5F28353 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT6E0D1B4E85F4D0B0
+    bdr:NT5C2EB764F5F28353
         a                   :Note ;
         :contentLocationStatement  "pg. 282" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT17487F7B18BBD2E8
-        a                   :Title ;
-        rdfs:label          "anāgār vinăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT9B376D235D92FC10 .
+        a                   :CoverTitle ;
+        rdfs:label          "vinaiy"@km-x-twktt .
     
-    bdr:TT5C2EB764F5F28353
+    bdr:TT4874DF68F48893C2
+        a                   :Title ;
+        rdfs:label          "អនាគារវិន័យ"@km ;
+        :femcConversionOf   bdr:TT9711FE91054AD7C2 .
+    
+    bdr:TT9711FE91054AD7C2
         a                   :CoverTitle ;
         rdfs:label          "វិនៃយ"@km .
     
-    bdr:TT9711FE91054AD7C2
+    bdr:TTFD7A443C10D6F7E4
         a                   :Title ;
-        rdfs:label          "អនាគារវិន័យ"@km ;
-        :femcConversionOf   bdr:TT5C2EB764F5F28353 .
-    
-    bdr:TT9B376D235D92FC10
-        a                   :CoverTitle ;
-        rdfs:label          "vinaiy"@km-x-twktt .
+        rdfs:label          "anāgār vinăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT17487F7B18BBD2E8 .
 }

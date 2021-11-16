@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010928 {
-    bda:LGF53C7ACD07E4922A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010928"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010928"@en , "imported pubinfo for W1FEMC010928"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010928"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010928 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010928 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "25/MW1FEMC010928.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010928 ;
-        adm:logEntry        bda:LGF53C7ACD07E4922A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0F966120912617E1
+    bdr:ID2F7CD1711B16351C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "088-090-A.04.03.02.II.1" .
     
-    bdr:MFFAF5834DD8916FFF
+    bdr:MF982D5C2B1F2B9F44
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "23" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010928 {
         a                   :Instance ;
         skos:prefLabel      "សុគន្ធថោង"@km , "sugandh thoṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0F966120912617E1 ;
+            bdr:ID2F7CD1711B16351C ;
         :hasFascicles       "3-5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2F7CD1711B16351C , bdr:TT5524835D3D018F8A , bdr:TT9399CE0C6F729EAC , bdr:TTC250DAEFFC7F5B78 ;
+        :hasTitle           bdr:TT0438791753576D62 , bdr:TT5524835D3D018F8A , bdr:TT9399CE0C6F729EAC , bdr:TTF53C7ACD07E4922A ;
         :instanceHasReproduction  bdr:W1FEMC010928 ;
+        :instanceOf         bdr:WA1FEMC120036 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFAF5834DD8916FFF ;
-        :note               bdr:NT982D5C2B1F2B9F44 ;
+        :microfilmItem      bdr:MF982D5C2B1F2B9F44 ;
+        :note               bdr:NTC250DAEFFC7F5B78 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT982D5C2B1F2B9F44
+    bdr:NTC250DAEFFC7F5B78
         a                   :Note ;
         :contentLocationStatement  "pg. 235" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT2F7CD1711B16351C
+    bdr:TT0438791753576D62
+        a                   :Title ;
+        rdfs:label          "sugandh thoṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5524835D3D018F8A .
+    
+    bdr:TT5524835D3D018F8A
         a                   :CoverTitle ;
         rdfs:label          "sūgan' thoṅ"@km-x-twktt .
     
-    bdr:TT5524835D3D018F8A
-        a                   :Title ;
-        rdfs:label          "sugandh thoṅ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2F7CD1711B16351C .
-    
     bdr:TT9399CE0C6F729EAC
-        a                   :Title ;
-        rdfs:label          "សុគន្ធថោង"@km ;
-        :femcConversionOf   bdr:TTC250DAEFFC7F5B78 .
-    
-    bdr:TTC250DAEFFC7F5B78
         a                   :CoverTitle ;
         rdfs:label          "សូគន់ថោង"@km .
+    
+    bdr:TTF53C7ACD07E4922A
+        a                   :Title ;
+        rdfs:label          "សុគន្ធថោង"@km ;
+        :femcConversionOf   bdr:TT9399CE0C6F729EAC .
 }

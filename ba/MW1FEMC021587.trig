@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021587 {
-    bda:LGDBD92ABD2CA0AC44
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021587"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021587"@en , "imported pubinfo for W1FEMC021587"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021587"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021587 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021587 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "ba/MW1FEMC021587.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021587 ;
-        adm:logEntry        bda:LGDBD92ABD2CA0AC44 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDECE3EDC5C8BF6D9E
+    bdr:ID19D7D6125E4AA681
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.249.III.1" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC021587 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDECE3EDC5C8BF6D9E ;
+            bdr:ID19D7D6125E4AA681 ;
         :hasFascicles       "1-4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT19D7D6125E4AA681 , bdr:TT71E6F518735EADAA , bdr:TT815A373AD20CB80A , bdr:TT8AF4FCCCDA1A184A ;
+        :hasTitle           bdr:TT34233B650816A005 , bdr:TT71E6F518735EADAA , bdr:TT8AF4FCCCDA1A184A , bdr:TTDBD92ABD2CA0AC44 ;
         :instanceHasReproduction  bdr:W1FEMC021587 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT1960852545C767E9 ;
+        :note               bdr:NT815A373AD20CB80A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "887" .
     
-    bdr:NT1960852545C767E9
+    bdr:NT815A373AD20CB80A
         a                   :Note ;
         :contentLocationStatement  "pg. 286" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT19D7D6125E4AA681
-        a                   :CoverTitle ;
-        rdfs:label          "paṭham saṅgāyanā grè 3"@km-x-twktt .
+    bdr:TT34233B650816A005
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8AF4FCCCDA1A184A .
     
     bdr:TT71E6F518735EADAA
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
-        :femcConversionOf   bdr:TT815A373AD20CB80A .
-    
-    bdr:TT815A373AD20CB80A
         a                   :CoverTitle ;
         rdfs:label          "បឋមសង្គាយនាគ្រែ៣"@km .
     
     bdr:TT8AF4FCCCDA1A184A
+        a                   :CoverTitle ;
+        rdfs:label          "paṭham saṅgāyanā grè 3"@km-x-twktt .
+    
+    bdr:TTDBD92ABD2CA0AC44
         a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt ;
-        :femcConversionOf   bdr:TT19D7D6125E4AA681 .
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km ;
+        :femcConversionOf   bdr:TT71E6F518735EADAA .
 }

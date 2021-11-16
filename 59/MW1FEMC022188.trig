@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022188 {
-    bda:LGEF10BDA4649AECD5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022188"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022188"@en , "imported pubinfo for W1FEMC022188"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022188"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022188 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022188 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "59/MW1FEMC022188.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022188 ;
-        adm:logEntry        bda:LGEF10BDA4649AECD5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3FB61CA37BFB9AED
+    bdr:IDEEC2871D1F387CA8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.174.II.1" .
     
@@ -51,41 +45,40 @@ bdg:MW1FEMC022188 {
         a                   :Instance ;
         skos:prefLabel      "សព្វសិទ្ធ"@km , "sabb siddh"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3FB61CA37BFB9AED ;
+            bdr:IDEEC2871D1F387CA8 ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT87EA0E1E98151592 , bdr:TT91A309CF89EFA05A , bdr:TTAED58166E8A6B338 , bdr:TTEEC2871D1F387CA8 ;
+        :hasTitle           bdr:TT91A309CF89EFA05A , bdr:TTAED58166E8A6B338 , bdr:TTDD13A224CA00E984 , bdr:TTEF10BDA4649AECD5 ;
         :instanceHasReproduction  bdr:W1FEMC022188 ;
+        :instanceOf         bdr:WA1FEMC120027 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT0EA820758C146017 ;
+        :note               bdr:NT87EA0E1E98151592 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1564" .
     
-    bdr:NT0EA820758C146017
+    bdr:NT87EA0E1E98151592
         a                   :Note ;
         :contentLocationStatement  "pg. 390" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT87EA0E1E98151592
+    bdr:TT91A309CF89EFA05A
+        a                   :CoverTitle ;
+        rdfs:label          "sabb siddhi"@km-x-twktt .
+    
+    bdr:TTAED58166E8A6B338
         a                   :CoverTitle ;
         rdfs:label          "សព្វសិទ្ធិ"@km .
     
-    bdr:TT91A309CF89EFA05A
+    bdr:TTDD13A224CA00E984
         a                   :Title ;
         rdfs:label          "sabb siddh"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEEC2871D1F387CA8 .
+        :femcConversionOf   bdr:TT91A309CF89EFA05A .
     
-    bdr:TTAED58166E8A6B338
+    bdr:TTEF10BDA4649AECD5
         a                   :Title ;
         rdfs:label          "សព្វសិទ្ធ"@km ;
-        :femcConversionOf   bdr:TT87EA0E1E98151592 .
-    
-    bdr:TTEEC2871D1F387CA8
-        a                   :CoverTitle ;
-        rdfs:label          "sabb siddhi"@km-x-twktt .
+        :femcConversionOf   bdr:TTAED58166E8A6B338 .
 }

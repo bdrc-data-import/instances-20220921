@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021830 {
-    bda:LG71F029A9ACD30854
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021830"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021830"@en , "imported pubinfo for W1FEMC021830"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021830"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021830 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021830 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "9b/MW1FEMC021830.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021830 ;
-        adm:logEntry        bda:LG71F029A9ACD30854 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID6E961104AE8F5BD5
+    bdr:ID3CF70288EBF20E3E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.612.I.1" .
     
-    bdr:MFFF9B4E7C6E9BACA0
+    bdr:MF1B592216C5EAA40B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "130" ;
         :microfilmStrip     "224" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021830 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ក្រើនស្តីមហាជន"@km , "cpāp' krön stī mahā jan"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6E961104AE8F5BD5 ;
+            bdr:ID3CF70288EBF20E3E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3CF70288EBF20E3E , bdr:TT561EF5642572D635 , bdr:TT7481F760CCB2C325 , bdr:TTBDB9C6A24B85ED00 ;
+        :hasTitle           bdr:TT2688C6E28FA719DA , bdr:TT71F029A9ACD30854 , bdr:TT7481F760CCB2C325 , bdr:TTBDB9C6A24B85ED00 ;
         :instanceHasReproduction  bdr:W1FEMC021830 ;
+        :instanceOf         bdr:WA1FEMC100045 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFFF9B4E7C6E9BACA0 ;
-        :note               bdr:NT1B592216C5EAA40B ;
+        :microfilmItem      bdr:MF1B592216C5EAA40B ;
+        :note               bdr:NT561EF5642572D635 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1B592216C5EAA40B
+    bdr:NT561EF5642572D635
         a                   :Note ;
         :contentLocationStatement  "pg. 328" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3CF70288EBF20E3E
-        a                   :CoverTitle ;
-        rdfs:label          "krön sti mahā jun"@km-x-twktt .
+    bdr:TT2688C6E28FA719DA
+        a                   :Title ;
+        rdfs:label          "cpāp' krön stī mahā jan"@km-x-twktt ;
+        :femcConversionOf   bdr:TTBDB9C6A24B85ED00 .
     
-    bdr:TT561EF5642572D635
+    bdr:TT71F029A9ACD30854
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្រើនស្តីមហាជន"@km ;
+        :femcConversionOf   bdr:TT7481F760CCB2C325 .
+    
+    bdr:TT7481F760CCB2C325
         a                   :CoverTitle ;
         rdfs:label          "ក្រើនស្តិមហាជុន"@km .
     
-    bdr:TT7481F760CCB2C325
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ក្រើនស្តីមហាជន"@km ;
-        :femcConversionOf   bdr:TT561EF5642572D635 .
-    
     bdr:TTBDB9C6A24B85ED00
-        a                   :Title ;
-        rdfs:label          "cpāp' krön stī mahā jan"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3CF70288EBF20E3E .
+        a                   :CoverTitle ;
+        rdfs:label          "krön sti mahā jun"@km-x-twktt .
 }

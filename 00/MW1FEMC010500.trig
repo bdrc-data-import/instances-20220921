@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010500 {
-    bda:LG5598B4C0CA15309C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010500"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010500"@en , "imported pubinfo for W1FEMC010500"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010500"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010500 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010500 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "00/MW1FEMC010500.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010500 ;
-        adm:logEntry        bda:LG5598B4C0CA15309C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID191DE94BD7E48539
+    bdr:ID27E7121757FFD408
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "006-A.02.06.01.III.1" .
     
-    bdr:MF1A1DECA5402C74AD
+    bdr:MFF572CB8EC73C5D76
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "42" ;
         :microfilmStrip     "98" .
@@ -55,34 +49,33 @@ bdg:MW1FEMC010500 {
         a                   :Instance ;
         skos:prefLabel      "សត្តវិបាកា (អំ-អះ)"@km , "satt vipākā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID191DE94BD7E48539 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT27E7121757FFD408 , bdr:TT85F3D874D97590C6 ;
+            bdr:ID27E7121757FFD408 ;
+        :hasTitle           bdr:TT5598B4C0CA15309C , bdr:TTB1F66231C75C0549 ;
         :instanceHasReproduction  bdr:W1FEMC010500 ;
+        :instanceOf         bdr:WA1FEMC010062 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF1A1DECA5402C74AD ;
-        :note               bdr:NTED1716372BDC64ED , bdr:NTF572CB8EC73C5D76 ;
+        :microfilmItem      bdr:MFF572CB8EC73C5D76 ;
+        :note               bdr:NT85F3D874D97590C6 , bdr:NTED1716372BDC64ED ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
+    
+    bdr:NT85F3D874D97590C6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 152" ;
+        :noteSource         bdr:W1FEMC01 .
     
     bdr:NTED1716372BDC64ED
         a                   :Note ;
         :noteText           "Should we write (អំ-អះ) ?"@en .
     
-    bdr:NTF572CB8EC73C5D76
-        a                   :Note ;
-        :contentLocationStatement  "pg. 152" ;
-        :noteSource         bdr:W1FEMC01 .
-    
-    bdr:TT27E7121757FFD408
-        a                   :Title ;
-        rdfs:label          "satt vipākā"@km-x-twktt .
-    
-    bdr:TT85F3D874D97590C6
+    bdr:TT5598B4C0CA15309C
         a                   :Title ;
         rdfs:label          "សត្តវិបាកា (អំ-អះ)"@km .
+    
+    bdr:TTB1F66231C75C0549
+        a                   :Title ;
+        rdfs:label          "satt vipākā"@km-x-twktt .
 }

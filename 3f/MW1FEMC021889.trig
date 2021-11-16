@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021889 {
-    bda:LG6863F760EEA2FA8A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021889"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021889"@en , "imported pubinfo for W1FEMC021889"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021889"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021889 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021889 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "3f/MW1FEMC021889.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021889 ;
-        adm:logEntry        bda:LG6863F760EEA2FA8A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3506F2CCEE753225
+    bdr:ID8E7B987551FB1C0A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.671.III.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021889 {
         a                   :Instance ;
         skos:prefLabel      "ក្រុងមហាជម្ពូរាជាធិបតី"@km , "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3506F2CCEE753225 ;
+            bdr:ID8E7B987551FB1C0A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0625754170C18E01 , bdr:TT596E395A3B28318C , bdr:TT8BD818D084B45642 , bdr:TT8E7B987551FB1C0A ;
+        :hasTitle           bdr:TT596E395A3B28318C , bdr:TT6863F760EEA2FA8A , bdr:TT786CE0FDA71EEDD6 , bdr:TT8BD818D084B45642 ;
         :instanceHasReproduction  bdr:W1FEMC021889 ;
+        :instanceOf         bdr:WA1FEMC010036 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT7685CDE51C80FCA7 ;
+        :note               bdr:NT0625754170C18E01 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7685CDE51C80FCA7
+    bdr:NT0625754170C18E01
         a                   :Note ;
         :contentLocationStatement  "pg. 337" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0625754170C18E01
-        a                   :CoverTitle ;
-        rdfs:label          "មហាជម្ពូបុតី"@km .
-    
     bdr:TT596E395A3B28318C
-        a                   :Title ;
-        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
-        :femcConversionOf   bdr:TT8E7B987551FB1C0A .
-    
-    bdr:TT8BD818D084B45642
-        a                   :Title ;
-        rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
-        :femcConversionOf   bdr:TT0625754170C18E01 .
-    
-    bdr:TT8E7B987551FB1C0A
         a                   :CoverTitle ;
         rdfs:label          "mahā jambū putī"@km-x-twktt .
+    
+    bdr:TT6863F760EEA2FA8A
+        a                   :Title ;
+        rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
+        :femcConversionOf   bdr:TT8BD818D084B45642 .
+    
+    bdr:TT786CE0FDA71EEDD6
+        a                   :Title ;
+        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT596E395A3B28318C .
+    
+    bdr:TT8BD818D084B45642
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជម្ពូបុតី"@km .
 }

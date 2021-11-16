@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010793 {
-    bda:LGAFF340F412E0956C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010793"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010793"@en , "imported pubinfo for W1FEMC010793"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010793"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010793 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010793 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b1/MW1FEMC010793.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010793 ;
-        adm:logEntry        bda:LGAFF340F412E0956C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDE5FC0CB289C5B53C
+    bdr:ID0B402D098C29567F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "029-A.03.08.02.III.1" .
     
-    bdr:MF81B20E235A0B4839
+    bdr:MFE69B226C2D2A0947
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "51" ;
         :microfilmStrip     "133" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010793 {
         a                   :Instance ;
         skos:prefLabel      "តម្រាប់លោកន័យ"@km , "tamrāp' lokanăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE5FC0CB289C5B53C ;
+            bdr:ID0B402D098C29567F ;
         :hasFascicles       "1, 13" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0B402D098C29567F , bdr:TT4CEB742DFC9B1558 , bdr:TT8887DE60BA0AD7B6 , bdr:TTDC9FFE28AC4B54AF ;
+        :hasTitle           bdr:TT4CEB742DFC9B1558 , bdr:TT8887DE60BA0AD7B6 , bdr:TTA1D45E23D1C28149 , bdr:TTAFF340F412E0956C ;
         :instanceHasReproduction  bdr:W1FEMC010793 ;
+        :instanceOf         bdr:WA1FEMC010066 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF81B20E235A0B4839 ;
-        :note               bdr:NTE69B226C2D2A0947 ;
+        :microfilmItem      bdr:MFE69B226C2D2A0947 ;
+        :note               bdr:NTDC9FFE28AC4B54AF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE69B226C2D2A0947
+    bdr:NTDC9FFE28AC4B54AF
         a                   :Note ;
         :contentLocationStatement  "pg. 209" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0B402D098C29567F
+    bdr:TT4CEB742DFC9B1558
         a                   :CoverTitle ;
         rdfs:label          "taṃrāp lokkhanai"@km-x-twktt .
     
-    bdr:TT4CEB742DFC9B1558
-        a                   :Title ;
-        rdfs:label          "tamrāp' lokanăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0B402D098C29567F .
-    
     bdr:TT8887DE60BA0AD7B6
-        a                   :Title ;
-        rdfs:label          "តម្រាប់លោកន័យ"@km ;
-        :femcConversionOf   bdr:TTDC9FFE28AC4B54AF .
-    
-    bdr:TTDC9FFE28AC4B54AF
         a                   :CoverTitle ;
         rdfs:label          "តំរាបលោក្ខនៃ"@km .
+    
+    bdr:TTA1D45E23D1C28149
+        a                   :Title ;
+        rdfs:label          "tamrāp' lokanăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4CEB742DFC9B1558 .
+    
+    bdr:TTAFF340F412E0956C
+        a                   :Title ;
+        rdfs:label          "តម្រាប់លោកន័យ"@km ;
+        :femcConversionOf   bdr:TT8887DE60BA0AD7B6 .
 }

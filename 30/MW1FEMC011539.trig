@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011539 {
-    bda:LG9C8F932994B846A1
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-18"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011539"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011539"@en , "imported pubinfo for W1FEMC011539"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011539"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011539 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011539 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "30/MW1FEMC011539.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011539 ;
-        adm:logEntry        bda:LG9C8F932994B846A1 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD6D74DDF76558653
+    bdr:IDE14D655ECABB271C
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "023-A.10.09.02.III.5" .
     
-    bdr:MF22A3278460C42200
+    bdr:MF306AF9D4C755D7C8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "52" ;
         :microfilmStrip     "137" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC011539 {
         a                   :Instance ;
         skos:prefLabel      "នេមិរាជ​"@km , "nemirāj"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD6D74DDF76558653 ;
+            bdr:IDE14D655ECABB271C ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT420671E9C4C06FC3 , bdr:TT4C39DD8AD7657854 , bdr:TT513FAC37E41642CC , bdr:TTA183B7031E00BDF5 , bdr:TTD61252D5A07E1579 , bdr:TTE14D655ECABB271C ;
+        :hasTitle           bdr:TT420671E9C4C06FC3 , bdr:TT480F9797403D704E , bdr:TT4C39DD8AD7657854 , bdr:TT513FAC37E41642CC , bdr:TT9C8F932994B846A1 , bdr:TTA183B7031E00BDF5 ;
         :instanceHasReproduction  bdr:W1FEMC011539 ;
+        :instanceOf         bdr:WA1FEMC050008 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF22A3278460C42200 ;
-        :note               bdr:NT306AF9D4C755D7C8 ;
+        :microfilmItem      bdr:MF306AF9D4C755D7C8 ;
+        :note               bdr:NTD61252D5A07E1579 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT306AF9D4C755D7C8
+    bdr:NTD61252D5A07E1579
         a                   :Note ;
         :contentLocationStatement  "pg. 352" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT420671E9C4C06FC3
-        a                   :Title ;
-        rdfs:label          "នេមិរាជ​"@km ;
-        :femcConversionOf   bdr:TTD61252D5A07E1579 .
+        a                   :CoverTitle ;
+        rdfs:label          "និមរាជ"@km .
+    
+    bdr:TT480F9797403D704E
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
     
     bdr:TT4C39DD8AD7657854
-        a                   :Title ;
-        rdfs:label          "nemirāj"@km-x-twktt ;
-        :femcConversionOf   bdr:TTE14D655ECABB271C .
+        a                   :CoverTitle ;
+        rdfs:label          "nimarāj"@km-x-twktt .
     
     bdr:TT513FAC37E41642CC
+        a                   :Title ;
+        rdfs:label          "nemirāj"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4C39DD8AD7657854 .
+    
+    bdr:TT9C8F932994B846A1
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TTA183B7031E00BDF5
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TTD61252D5A07E1579
-        a                   :CoverTitle ;
-        rdfs:label          "និមរាជ"@km .
-    
-    bdr:TTE14D655ECABB271C
-        a                   :CoverTitle ;
-        rdfs:label          "nimarāj"@km-x-twktt .
+        a                   :Title ;
+        rdfs:label          "នេមិរាជ​"@km ;
+        :femcConversionOf   bdr:TT420671E9C4C06FC3 .
 }

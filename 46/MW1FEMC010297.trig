@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010297 {
-    bda:LG4B5AD95FA5EBB45D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010297"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010297"@en , "imported pubinfo for W1FEMC010297"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010297"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010297 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010297 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "46/MW1FEMC010297.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010297 ;
-        adm:logEntry        bda:LG4B5AD95FA5EBB45D , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0A208960B7B31EDE
+    bdr:ID7640C793B3EA68A6
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "007-009-PP.03.03.03.III.1" .
     
-    bdr:MFADA3D5C4894A61DF
+    bdr:MF90FEDC13980A7015
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "14-15" ;
         :microfilmStrip     "55-5, 61" .
@@ -55,21 +49,20 @@ bdg:MW1FEMC010297 {
         a                   :Instance ;
         skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0A208960B7B31EDE ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT138EE158FC701631 , bdr:TT32966FFFC19C9740 , bdr:TT3EE83E93CF3A696C , bdr:TT7640C793B3EA68A6 ;
+            bdr:ID7640C793B3EA68A6 ;
+        :hasTitle           bdr:TT138EE158FC701631 , bdr:TT2530FE1617EF2C62 , bdr:TT3EE83E93CF3A696C , bdr:TT4B5AD95FA5EBB45D ;
         :instanceHasReproduction  bdr:W1FEMC010297 ;
+        :instanceOf         bdr:WA1FEMC010044 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFADA3D5C4894A61DF ;
-        :note               bdr:NT90FEDC13980A7015 , bdr:NTF88E41781639C244 ;
+        :microfilmItem      bdr:MF90FEDC13980A7015 ;
+        :note               bdr:NT32966FFFC19C9740 , bdr:NTF88E41781639C244 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT90FEDC13980A7015
+    bdr:NT32966FFFC19C9740
         a                   :Note ;
         :contentLocationStatement  "pg. 112" ;
         :noteSource         bdr:W1FEMC01 .
@@ -79,20 +72,20 @@ bdg:MW1FEMC010297 {
         :noteText           "For the film in column D&E, should we separate like this: \"14(55-5)-15(61)\"? Fragments of three unknown fascicles (fragments de 3 liasses)"@en .
     
     bdr:TT138EE158FC701631
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ mālin"@km-x-twktt .
+    
+    bdr:TT2530FE1617EF2C62
         a                   :Title ;
         rdfs:label          "milindappañhā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7640C793B3EA68A6 .
+        :femcConversionOf   bdr:TT138EE158FC701631 .
     
-    bdr:TT32966FFFC19C9740
+    bdr:TT3EE83E93CF3A696C
         a                   :CoverTitle ;
         rdfs:label          "ក្រុងមាលិន"@km .
     
-    bdr:TT3EE83E93CF3A696C
+    bdr:TT4B5AD95FA5EBB45D
         a                   :Title ;
         rdfs:label          "មិលិន្ទប្បញ្ហា"@km ;
-        :femcConversionOf   bdr:TT32966FFFC19C9740 .
-    
-    bdr:TT7640C793B3EA68A6
-        a                   :CoverTitle ;
-        rdfs:label          "kruṅ mālin"@km-x-twktt .
+        :femcConversionOf   bdr:TT3EE83E93CF3A696C .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010430 {
-    bda:LG1EFE1898ED4F5FF5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010430"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010430"@en , "imported pubinfo for W1FEMC010430"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010430"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010430 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010430 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "45/MW1FEMC010430.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010430 ;
-        adm:logEntry        bda:LG1EFE1898ED4F5FF5 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF4E0BEED7EF9140B
+    bdr:ID5EAEFEEDCEE89876
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "023*-PP.03.03.03.III.1" .
     
-    bdr:MF6BAA8B85505D4B1E
+    bdr:MF13E698BD16A7E6DF
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "41" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010430 {
         a                   :Instance ;
         skos:prefLabel      "ទសវង្ស"@km , "dasavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF4E0BEED7EF9140B ;
+            bdr:ID5EAEFEEDCEE89876 ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT5EAEFEEDCEE89876 , bdr:TT6DD600DCDB3D5525 , bdr:TT850A5CB863E16E9D , bdr:TTACAAF966AE208C7F ;
+        :hasTitle           bdr:TT1875BA74DDE9B086 , bdr:TT1EFE1898ED4F5FF5 , bdr:TT6DD600DCDB3D5525 , bdr:TT850A5CB863E16E9D ;
         :instanceHasReproduction  bdr:W1FEMC010430 ;
+        :instanceOf         bdr:WA1FEMC010024 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF6BAA8B85505D4B1E ;
-        :note               bdr:NT13E698BD16A7E6DF ;
+        :microfilmItem      bdr:MF13E698BD16A7E6DF ;
+        :note               bdr:NTACAAF966AE208C7F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT13E698BD16A7E6DF
+    bdr:NTACAAF966AE208C7F
         a                   :Note ;
         :contentLocationStatement  "pg. 136" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT5EAEFEEDCEE89876
+    bdr:TT1875BA74DDE9B086
+        a                   :Title ;
+        rdfs:label          "dasavaṅs"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6DD600DCDB3D5525 .
+    
+    bdr:TT1EFE1898ED4F5FF5
+        a                   :Title ;
+        rdfs:label          "ទសវង្ស"@km ;
+        :femcConversionOf   bdr:TT850A5CB863E16E9D .
+    
+    bdr:TT6DD600DCDB3D5525
         a                   :CoverTitle ;
         rdfs:label          "dassavaṅa"@km-x-twktt .
     
-    bdr:TT6DD600DCDB3D5525
-        a                   :Title ;
-        rdfs:label          "dasavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TT5EAEFEEDCEE89876 .
-    
     bdr:TT850A5CB863E16E9D
-        a                   :Title ;
-        rdfs:label          "ទសវង្ស"@km ;
-        :femcConversionOf   bdr:TTACAAF966AE208C7F .
-    
-    bdr:TTACAAF966AE208C7F
         a                   :CoverTitle ;
         rdfs:label          "ទស្សវង្ស"@km .
 }

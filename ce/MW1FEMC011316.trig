@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011316 {
-    bda:LG1743A5304D30CB8A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011316"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011316"@en , "imported pubinfo for W1FEMC011316"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011316"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC011316 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011316 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ce/MW1FEMC011316.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011316 ;
-        adm:logEntry        bda:LG1743A5304D30CB8A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3AA92D65A5065067
+    bdr:ID4646F43BE5712BD8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "008-A.09.01.01.III.1" .
     
@@ -50,16 +44,15 @@ bdg:MW1FEMC011316 {
         a                   :Instance ;
         skos:prefLabel      "បឋមសម្ពោធិ"@pi-khmr , "paṭham sambodhi"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3AA92D65A5065067 ;
+            bdr:ID4646F43BE5712BD8 ;
         :hasFascicles       "9, 15, 16" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT18BB8C4BFDC9F3C9 , bdr:TT1AAA9D838ED53989 , bdr:TT3F6CEE2580161F73 , bdr:TT4646F43BE5712BD8 ;
+        :hasTitle           bdr:TT1743A5304D30CB8A , bdr:TT18BB8C4BFDC9F3C9 , bdr:TT1AAA9D838ED53989 , bdr:TTDAFBA985D0A5193F ;
         :instanceHasReproduction  bdr:W1FEMC011316 ;
+        :instanceOf         bdr:WA1FEMC010047 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT19CC2B6CF249DF4F , bdr:NT65489E94FA0CFD70 ;
+        :note               bdr:NT19CC2B6CF249DF4F , bdr:NT3F6CEE2580161F73 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -68,26 +61,26 @@ bdg:MW1FEMC011316 {
         a                   :Note ;
         :noteText           "Film (#) missing"@en .
     
-    bdr:NT65489E94FA0CFD70
+    bdr:NT3F6CEE2580161F73
         a                   :Note ;
         :contentLocationStatement  "pg. 308" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT18BB8C4BFDC9F3C9
+    bdr:TT1743A5304D30CB8A
         a                   :Title ;
         rdfs:label          "បឋមសម្ពោធិ"@pi-khmr ;
-        :femcConversionOf   bdr:TT3F6CEE2580161F73 .
+        :femcConversionOf   bdr:TT18BB8C4BFDC9F3C9 .
     
-    bdr:TT1AAA9D838ED53989
-        a                   :Title ;
-        rdfs:label          "paṭham sambodhi"@pi-x-twktt ;
-        :femcConversionOf   bdr:TT4646F43BE5712BD8 .
-    
-    bdr:TT3F6CEE2580161F73
+    bdr:TT18BB8C4BFDC9F3C9
         a                   :CoverTitle ;
         rdfs:label          "បថមសម្ពោធិ"@pi-khmr .
     
-    bdr:TT4646F43BE5712BD8
+    bdr:TT1AAA9D838ED53989
         a                   :CoverTitle ;
         rdfs:label          "patham sambodhi"@pi-x-twktt .
+    
+    bdr:TTDAFBA985D0A5193F
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT1AAA9D838ED53989 .
 }

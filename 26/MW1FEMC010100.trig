@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010100 {
-    bda:LGE7ABF934D50FA3D8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010100"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010100"@en , "imported pubinfo for W1FEMC010100"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010100"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010100 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010100 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "26/MW1FEMC010100.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010100 ;
-        adm:logEntry        bda:LGE7ABF934D50FA3D8 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3CD22338DACB2EA8
+    bdr:ID03332ED266BB3DCE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "058-PP.01.10.03.II.1" .
     
-    bdr:MF5C4B56BB90A18F7C
+    bdr:MF0E3A5D5C32F36644
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "46" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010100 {
         a                   :Instance ;
         skos:prefLabel      "សូវ៉ាត"@km , "sūvā''t"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3CD22338DACB2EA8 ;
+            bdr:ID03332ED266BB3DCE ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT03332ED266BB3DCE , bdr:TT0ECF5F3D6961600C , bdr:TTB000ED75F8823EC7 , bdr:TTC822DAA3594AF9A4 ;
+        :hasTitle           bdr:TT0ECF5F3D6961600C , bdr:TT83684637A89C4765 , bdr:TTC822DAA3594AF9A4 , bdr:TTE7ABF934D50FA3D8 ;
         :instanceHasReproduction  bdr:W1FEMC010100 ;
+        :instanceOf         bdr:WA1FEMC120039 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5C4B56BB90A18F7C ;
-        :note               bdr:NT0E3A5D5C32F36644 ;
+        :microfilmItem      bdr:MF0E3A5D5C32F36644 ;
+        :note               bdr:NTB000ED75F8823EC7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT0E3A5D5C32F36644
+    bdr:NTB000ED75F8823EC7
         a                   :Note ;
         :contentLocationStatement  "pg. 73" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT03332ED266BB3DCE
+    bdr:TT0ECF5F3D6961600C
         a                   :CoverTitle ;
         rdfs:label          "sūvāt"@km-x-twktt .
     
-    bdr:TT0ECF5F3D6961600C
+    bdr:TT83684637A89C4765
         a                   :Title ;
         rdfs:label          "sūvā''t"@km-x-twktt ;
-        :femcConversionOf   bdr:TT03332ED266BB3DCE .
+        :femcConversionOf   bdr:TT0ECF5F3D6961600C .
     
-    bdr:TTB000ED75F8823EC7
+    bdr:TTC822DAA3594AF9A4
         a                   :CoverTitle ;
         rdfs:label          "សូវាត"@km .
     
-    bdr:TTC822DAA3594AF9A4
+    bdr:TTE7ABF934D50FA3D8
         a                   :Title ;
         rdfs:label          "សូវ៉ាត"@km ;
-        :femcConversionOf   bdr:TTB000ED75F8823EC7 .
+        :femcConversionOf   bdr:TTC822DAA3594AF9A4 .
 }

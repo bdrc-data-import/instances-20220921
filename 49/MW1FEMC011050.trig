@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011050 {
-    bda:LGB7133E56734EEF0B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011050"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011050"@en , "imported pubinfo for W1FEMC011050"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011050"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011050 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011050 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "49/MW1FEMC011050.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011050 ;
-        adm:logEntry        bda:LGB7133E56734EEF0B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID759AE59EF259890A
+    bdr:ID4BAD43E8F8720F2B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "060-A.04.07.01.I.1" .
     
-    bdr:MF89FF58DB93036FE4
+    bdr:MF22F94F7629C2E062
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "82" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011050 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ពាក្យចាស់"@km , "cpāp' bāky cās'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID759AE59EF259890A ;
+            bdr:ID4BAD43E8F8720F2B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3DBC87FD5CCA5D33 , bdr:TT4BAD43E8F8720F2B , bdr:TT6F8B8BBDE1A083C9 , bdr:TT877B7AE245B9395B ;
+        :hasTitle           bdr:TT3DBC87FD5CCA5D33 , bdr:TT877B7AE245B9395B , bdr:TTB7133E56734EEF0B , bdr:TTD308707CE06EF7E5 ;
         :instanceHasReproduction  bdr:W1FEMC011050 ;
+        :instanceOf         bdr:WA1FEMC100002 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF89FF58DB93036FE4 ;
-        :note               bdr:NT22F94F7629C2E062 ;
+        :microfilmItem      bdr:MF22F94F7629C2E062 ;
+        :note               bdr:NT6F8B8BBDE1A083C9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT22F94F7629C2E062
+    bdr:NT6F8B8BBDE1A083C9
         a                   :Note ;
         :contentLocationStatement  "pg. 257" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT3DBC87FD5CCA5D33
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ពាក្យចាស់"@km ;
-        :femcConversionOf   bdr:TT6F8B8BBDE1A083C9 .
-    
-    bdr:TT4BAD43E8F8720F2B
-        a                   :CoverTitle ;
-        rdfs:label          "bāk cās'"@km-x-twktt .
-    
-    bdr:TT6F8B8BBDE1A083C9
         a                   :CoverTitle ;
         rdfs:label          "ពាកចាស់"@km .
     
     bdr:TT877B7AE245B9395B
+        a                   :CoverTitle ;
+        rdfs:label          "bāk cās'"@km-x-twktt .
+    
+    bdr:TTB7133E56734EEF0B
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ពាក្យចាស់"@km ;
+        :femcConversionOf   bdr:TT3DBC87FD5CCA5D33 .
+    
+    bdr:TTD308707CE06EF7E5
         a                   :Title ;
         rdfs:label          "cpāp' bāky cās'"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4BAD43E8F8720F2B .
+        :femcConversionOf   bdr:TT877B7AE245B9395B .
 }

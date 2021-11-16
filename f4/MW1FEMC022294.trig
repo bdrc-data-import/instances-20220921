@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022294 {
-    bda:LG997C3D17106BC7BA
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022294"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022294"@en , "imported pubinfo for W1FEMC022294"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022294"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022294 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022294 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "f4/MW1FEMC022294.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022294 ;
-        adm:logEntry        bda:LG997C3D17106BC7BA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB772D5F4F730BDDB
+    bdr:IDC7699E8CB354CFB6
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.372.III.4" .
     
-    bdr:MF2B35CF156A255D80
+    bdr:MFFF649EF8F1236CF3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC022294 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្មបរមត្ថ"@km , "abhidhamm paramatth"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB772D5F4F730BDDB ;
+            bdr:IDC7699E8CB354CFB6 ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT599AE67FD4EC5C70 , bdr:TT98DA02F3AD90B17C , bdr:TTC7699E8CB354CFB6 , bdr:TTC8D5AEA5F8DA3B99 ;
+        :hasTitle           bdr:TT89F26E01A1647F72 , bdr:TT98DA02F3AD90B17C , bdr:TT997C3D17106BC7BA , bdr:TTC8D5AEA5F8DA3B99 ;
         :instanceHasReproduction  bdr:W1FEMC022294 ;
+        :instanceOf         bdr:WA1FEMC040005 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2B35CF156A255D80 ;
-        :note               bdr:NTFF649EF8F1236CF3 ;
+        :microfilmItem      bdr:MFFF649EF8F1236CF3 ;
+        :note               bdr:NT599AE67FD4EC5C70 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1114" .
     
-    bdr:NTFF649EF8F1236CF3
+    bdr:NT599AE67FD4EC5C70
         a                   :Note ;
         :contentLocationStatement  "pg. 410" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT599AE67FD4EC5C70
+    bdr:TT89F26E01A1647F72
+        a                   :Title ;
+        rdfs:label          "abhidhamm paramatth"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC8D5AEA5F8DA3B99 .
+    
+    bdr:TT98DA02F3AD90B17C
         a                   :CoverTitle ;
         rdfs:label          "បរមត្ថអភិធម្ម"@km .
     
-    bdr:TT98DA02F3AD90B17C
+    bdr:TT997C3D17106BC7BA
         a                   :Title ;
         rdfs:label          "អភិធម្មបរមត្ថ"@km ;
-        :femcConversionOf   bdr:TT599AE67FD4EC5C70 .
-    
-    bdr:TTC7699E8CB354CFB6
-        a                   :CoverTitle ;
-        rdfs:label          "paramatth abhidhamm"@km-x-twktt .
+        :femcConversionOf   bdr:TT98DA02F3AD90B17C .
     
     bdr:TTC8D5AEA5F8DA3B99
-        a                   :Title ;
-        rdfs:label          "abhidhamm paramatth"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC7699E8CB354CFB6 .
+        a                   :CoverTitle ;
+        rdfs:label          "paramatth abhidhamm"@km-x-twktt .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020356 {
-    bda:LGCAA8C837B5AC5D4C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020356"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020356"@en , "imported pubinfo for W1FEMC020356"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020356"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020356 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020356 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b5/MW1FEMC020356.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020356 ;
-        adm:logEntry        bda:LGCAA8C837B5AC5D4C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3BA0789003C3C8C7
+    bdr:ID3AE28A617F8ACA46
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "c.8.II.1" .
     
-    bdr:MFEE567DBB5F686F24
+    bdr:MF57E7D0B7F4C4E60A
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "65" ;
         :microfilmStrip     "159" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020356 {
         a                   :Instance ;
         skos:prefLabel      "ស័ង្ខបត្ត"@km , "săṅkh patt"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3BA0789003C3C8C7 ;
+            bdr:ID3AE28A617F8ACA46 ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3AE28A617F8ACA46 , bdr:TT5EE7DB4C6843D110 , bdr:TTD9D426B00DC9823B , bdr:TTEA18FF29E897DEAF ;
+        :hasTitle           bdr:TTA4334426D5A8CF06 , bdr:TTCAA8C837B5AC5D4C , bdr:TTD9D426B00DC9823B , bdr:TTEA18FF29E897DEAF ;
         :instanceHasReproduction  bdr:W1FEMC020356 ;
+        :instanceOf         bdr:WA1FEMC120029 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFEE567DBB5F686F24 ;
-        :note               bdr:NT57E7D0B7F4C4E60A ;
+        :microfilmItem      bdr:MF57E7D0B7F4C4E60A ;
+        :note               bdr:NT5EE7DB4C6843D110 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "665" .
     
-    bdr:NT57E7D0B7F4C4E60A
+    bdr:NT5EE7DB4C6843D110
         a                   :Note ;
         :contentLocationStatement  "pg. 70" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT3AE28A617F8ACA46
-        a                   :CoverTitle ;
-        rdfs:label          "saṃṅkh phāt'"@km-x-twktt .
+    bdr:TTA4334426D5A8CF06
+        a                   :Title ;
+        rdfs:label          "săṅkh patt"@km-x-twktt ;
+        :femcConversionOf   bdr:TTEA18FF29E897DEAF .
     
-    bdr:TT5EE7DB4C6843D110
+    bdr:TTCAA8C837B5AC5D4C
+        a                   :Title ;
+        rdfs:label          "ស័ង្ខបត្ត"@km ;
+        :femcConversionOf   bdr:TTD9D426B00DC9823B .
+    
+    bdr:TTD9D426B00DC9823B
         a                   :CoverTitle ;
         rdfs:label          "សំង្ខផាត់"@km .
     
-    bdr:TTD9D426B00DC9823B
-        a                   :Title ;
-        rdfs:label          "ស័ង្ខបត្ត"@km ;
-        :femcConversionOf   bdr:TT5EE7DB4C6843D110 .
-    
     bdr:TTEA18FF29E897DEAF
-        a                   :Title ;
-        rdfs:label          "săṅkh patt"@km-x-twktt ;
-        :femcConversionOf   bdr:TT3AE28A617F8ACA46 .
+        a                   :CoverTitle ;
+        rdfs:label          "saṃṅkh phāt'"@km-x-twktt .
 }

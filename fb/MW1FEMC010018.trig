@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010018 {
-    bda:LG3B3BC90BC6048533
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010018"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010018"@en , "imported pubinfo for W1FEMC010018"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010018"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010018 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010018 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "fb/MW1FEMC010018.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010018 ;
-        adm:logEntry        bda:LG3B3BC90BC6048533 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID66AC5C1AE28E5CA5
+    bdr:ID6F3C6123B5E6BE80
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "005-PP.00.03.01.II.1" .
     
-    bdr:MF20FB98F41845A657
+    bdr:MF5250AB586DC16328
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "1" ;
         :microfilmStrip     "1" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010018 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ទគោរព"@km , "cand gorab"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID66AC5C1AE28E5CA5 ;
+            bdr:ID6F3C6123B5E6BE80 ;
         :hasFascicles       "7" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0A265F1A149855BA , bdr:TT31A3514B53B22918 , bdr:TT6F3C6123B5E6BE80 , bdr:TTE3880B436BFEBB08 ;
+        :hasTitle           bdr:TT0A265F1A149855BA , bdr:TT3B3BC90BC6048533 , bdr:TTD3F2173369890F5A , bdr:TTE3880B436BFEBB08 ;
         :instanceHasReproduction  bdr:W1FEMC010018 ;
+        :instanceOf         bdr:WA1FEMC120008 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF20FB98F41845A657 ;
-        :note               bdr:NT5250AB586DC16328 ;
+        :microfilmItem      bdr:MF5250AB586DC16328 ;
+        :note               bdr:NT31A3514B53B22918 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT5250AB586DC16328
+    bdr:NT31A3514B53B22918
         a                   :Note ;
         :contentLocationStatement  "pg. 57" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0A265F1A149855BA
-        a                   :Title ;
-        rdfs:label          "ចន្ទគោរព"@km ;
-        :femcConversionOf   bdr:TT31A3514B53B22918 .
-    
-    bdr:TT31A3514B53B22918
         a                   :CoverTitle ;
         rdfs:label          "ចន្ទ៍គោរុព្ភ"@km .
     
-    bdr:TT6F3C6123B5E6BE80
-        a                   :CoverTitle ;
-        rdfs:label          "cand gorubbh"@km-x-twktt .
+    bdr:TT3B3BC90BC6048533
+        a                   :Title ;
+        rdfs:label          "ចន្ទគោរព"@km ;
+        :femcConversionOf   bdr:TT0A265F1A149855BA .
     
-    bdr:TTE3880B436BFEBB08
+    bdr:TTD3F2173369890F5A
         a                   :Title ;
         rdfs:label          "cand gorab"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6F3C6123B5E6BE80 .
+        :femcConversionOf   bdr:TTE3880B436BFEBB08 .
+    
+    bdr:TTE3880B436BFEBB08
+        a                   :CoverTitle ;
+        rdfs:label          "cand gorubbh"@km-x-twktt .
 }

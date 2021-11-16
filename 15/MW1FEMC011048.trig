@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011048 {
-    bda:LG324DD42C64E14533
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011048"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011048"@en , "imported pubinfo for W1FEMC011048"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011048"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011048 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011048 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "15/MW1FEMC011048.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011048 ;
-        adm:logEntry        bda:LG324DD42C64E14533 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC5530F36969FC56E
+    bdr:ID4F7DD65D47884A9E
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "058-A.04.07.01.II.1" .
     
-    bdr:MFBCAE879A10336BFA
+    bdr:MF3FEBA3FCA407107B
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "82" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011048 {
         a                   :Instance ;
         skos:prefLabel      "ចៅក្រពត"@km , "cau krabat"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC5530F36969FC56E ;
+            bdr:ID4F7DD65D47884A9E ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT080CB28739C7FD89 , bdr:TT33ABFF482E209A1B , bdr:TT4F7DD65D47884A9E , bdr:TT95C8EED56AFAA8BB ;
+        :hasTitle           bdr:TT080CB28739C7FD89 , bdr:TT1290050AA6A32EDB , bdr:TT324DD42C64E14533 , bdr:TT33ABFF482E209A1B ;
         :instanceHasReproduction  bdr:W1FEMC011048 ;
+        :instanceOf         bdr:WA1FEMC120011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFBCAE879A10336BFA ;
-        :note               bdr:NT3FEBA3FCA407107B ;
+        :microfilmItem      bdr:MF3FEBA3FCA407107B ;
+        :note               bdr:NT95C8EED56AFAA8BB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3FEBA3FCA407107B
+    bdr:NT95C8EED56AFAA8BB
         a                   :Note ;
         :contentLocationStatement  "pg. 257" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT080CB28739C7FD89
-        a                   :Title ;
-        rdfs:label          "cau krabat"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4F7DD65D47884A9E .
-    
-    bdr:TT33ABFF482E209A1B
-        a                   :Title ;
-        rdfs:label          "ចៅក្រពត"@km ;
-        :femcConversionOf   bdr:TT95C8EED56AFAA8BB .
-    
-    bdr:TT4F7DD65D47884A9E
         a                   :CoverTitle ;
         rdfs:label          "cov krabat"@km-x-twktt .
     
-    bdr:TT95C8EED56AFAA8BB
+    bdr:TT1290050AA6A32EDB
+        a                   :Title ;
+        rdfs:label          "cau krabat"@km-x-twktt ;
+        :femcConversionOf   bdr:TT080CB28739C7FD89 .
+    
+    bdr:TT324DD42C64E14533
+        a                   :Title ;
+        rdfs:label          "ចៅក្រពត"@km ;
+        :femcConversionOf   bdr:TT33ABFF482E209A1B .
+    
+    bdr:TT33ABFF482E209A1B
         a                   :CoverTitle ;
         rdfs:label          "ចោវក្រពត"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020821 {
-    bda:LGB437050202867370
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020821"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020821"@en , "imported pubinfo for W1FEMC020821"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020821"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020821 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020821 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "1c/MW1FEMC020821.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020821 ;
-        adm:logEntry        bda:LGB437050202867370 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID399D849C54D370F4
+    bdr:ID4C8F87FF6D9A6048
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.492.I.3" .
     
@@ -51,39 +45,38 @@ bdg:MW1FEMC020821 {
         a                   :Instance ;
         skos:prefLabel      "សុបិនកុមារ"@km , "supin kumār"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID399D849C54D370F4 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT4C8F87FF6D9A6048 , bdr:TT5AA057601AEDCF62 , bdr:TTD05CC6B17416483D , bdr:TTE314B726A6224965 ;
+            bdr:ID4C8F87FF6D9A6048 ;
+        :hasTitle           bdr:TT52EDE6F03DF12FD1 , bdr:TTB437050202867370 , bdr:TTD05CC6B17416483D , bdr:TTE314B726A6224965 ;
         :instanceHasReproduction  bdr:W1FEMC020821 ;
+        :instanceOf         bdr:WA1FEMC110005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT8A3B80305EABBE80 ;
+        :note               bdr:NT5AA057601AEDCF62 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8A3B80305EABBE80
+    bdr:NT5AA057601AEDCF62
         a                   :Note ;
         :contentLocationStatement  "pg. 146" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT4C8F87FF6D9A6048
-        a                   :CoverTitle ;
-        rdfs:label          "sūpin"@km-x-twktt .
+    bdr:TT52EDE6F03DF12FD1
+        a                   :Title ;
+        rdfs:label          "supin kumār"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE314B726A6224965 .
     
-    bdr:TT5AA057601AEDCF62
+    bdr:TTB437050202867370
+        a                   :Title ;
+        rdfs:label          "សុបិនកុមារ"@km ;
+        :femcConversionOf   bdr:TTD05CC6B17416483D .
+    
+    bdr:TTD05CC6B17416483D
         a                   :CoverTitle ;
         rdfs:label          "សូបិន"@km .
     
-    bdr:TTD05CC6B17416483D
-        a                   :Title ;
-        rdfs:label          "សុបិនកុមារ"@km ;
-        :femcConversionOf   bdr:TT5AA057601AEDCF62 .
-    
     bdr:TTE314B726A6224965
-        a                   :Title ;
-        rdfs:label          "supin kumār"@km-x-twktt ;
-        :femcConversionOf   bdr:TT4C8F87FF6D9A6048 .
+        a                   :CoverTitle ;
+        rdfs:label          "sūpin"@km-x-twktt .
 }

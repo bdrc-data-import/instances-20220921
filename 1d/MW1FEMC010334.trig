@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010334 {
-    bda:LG7208B09C68AC567D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010334"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010334"@en , "imported pubinfo for W1FEMC010334"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010334"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010334 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010334 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "1d/MW1FEMC010334.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010334 ;
-        adm:logEntry        bda:LG7208B09C68AC567D , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID98CB02B429D30DB7
+    bdr:IDD3518E853F1E8CE2
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "058-PP.03.03.03.V.1" .
     
-    bdr:MF4CA8785F86E50667
+    bdr:MF91DFC58E819532BB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "16" ;
         :microfilmStrip     "64" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010334 {
         a                   :Instance ;
         skos:prefLabel      "អរិតយបុគ្គល"@km , "ariy puggal"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID98CB02B429D30DB7 ;
+            bdr:IDD3518E853F1E8CE2 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT31E94106247D5FDC , bdr:TT8076FDEED5D0C4D5 , bdr:TTD3518E853F1E8CE2 , bdr:TTE7A69FE6A050D451 ;
+        :hasTitle           bdr:TT31E94106247D5FDC , bdr:TT7208B09C68AC567D , bdr:TT8076FDEED5D0C4D5 , bdr:TT99EE76A7ACDC4586 ;
         :instanceHasReproduction  bdr:W1FEMC010334 ;
+        :instanceOf         bdr:WA1FEMC070001 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF4CA8785F86E50667 ;
-        :note               bdr:NT91DFC58E819532BB ;
+        :microfilmItem      bdr:MF91DFC58E819532BB ;
+        :note               bdr:NTE7A69FE6A050D451 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT91DFC58E819532BB
+    bdr:NTE7A69FE6A050D451
         a                   :Note ;
         :contentLocationStatement  "pg. 118" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT31E94106247D5FDC
+        a                   :CoverTitle ;
+        rdfs:label          "អារីយបុគ្គល"@km .
+    
+    bdr:TT7208B09C68AC567D
         a                   :Title ;
         rdfs:label          "អរិតយបុគ្គល"@km ;
-        :femcConversionOf   bdr:TTE7A69FE6A050D451 .
+        :femcConversionOf   bdr:TT31E94106247D5FDC .
     
     bdr:TT8076FDEED5D0C4D5
-        a                   :Title ;
-        rdfs:label          "ariy puggal"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD3518E853F1E8CE2 .
-    
-    bdr:TTD3518E853F1E8CE2
         a                   :CoverTitle ;
         rdfs:label          "ārīyapuggal"@km-x-twktt .
     
-    bdr:TTE7A69FE6A050D451
-        a                   :CoverTitle ;
-        rdfs:label          "អារីយបុគ្គល"@km .
+    bdr:TT99EE76A7ACDC4586
+        a                   :Title ;
+        rdfs:label          "ariy puggal"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8076FDEED5D0C4D5 .
 }

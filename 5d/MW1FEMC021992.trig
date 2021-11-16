@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021992 {
-    bda:LG36E996C499486802
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021992"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021992"@en , "imported pubinfo for W1FEMC021992"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021992"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021992 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021992 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5d/MW1FEMC021992.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021992 ;
-        adm:logEntry        bda:LG36E996C499486802 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD133B78B9A393FD1
+    bdr:ID392AFC35A97876AE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.774.III.6" .
     
-    bdr:MF581CF795ED7D8941
+    bdr:MF8F1DDBA66CC3A517
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "131" ;
         :microfilmStrip     "225" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC021992 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សសព្វទានតូច"@km , "ānisaṅs sabb dān tūc"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD133B78B9A393FD1 ;
+            bdr:ID392AFC35A97876AE ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0134848D1304162D , bdr:TT392AFC35A97876AE , bdr:TTD35645072CB00F1B , bdr:TTDFF7035880A36481 ;
+        :hasTitle           bdr:TT0134848D1304162D , bdr:TT36E996C499486802 , bdr:TTD35645072CB00F1B , bdr:TTF87BF39F8CB0759C ;
         :instanceHasReproduction  bdr:W1FEMC021992 ;
+        :instanceOf         bdr:WA1FEMC060051 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF581CF795ED7D8941 ;
-        :note               bdr:NT8F1DDBA66CC3A517 ;
+        :microfilmItem      bdr:MF8F1DDBA66CC3A517 ;
+        :note               bdr:NTDFF7035880A36481 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8F1DDBA66CC3A517
+    bdr:NTDFF7035880A36481
         a                   :Note ;
         :contentLocationStatement  "pg. 353" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT0134848D1304162D
+        a                   :CoverTitle ;
+        rdfs:label          "សព្វទានតូច"@km .
+    
+    bdr:TT36E996C499486802
         a                   :Title ;
         rdfs:label          "អានិសង្សសព្វទានតូច"@km ;
-        :femcConversionOf   bdr:TTDFF7035880A36481 .
+        :femcConversionOf   bdr:TT0134848D1304162D .
     
-    bdr:TT392AFC35A97876AE
+    bdr:TTD35645072CB00F1B
         a                   :CoverTitle ;
         rdfs:label          "sabb dān tūc"@km-x-twktt .
     
-    bdr:TTD35645072CB00F1B
+    bdr:TTF87BF39F8CB0759C
         a                   :Title ;
         rdfs:label          "ānisaṅs sabb dān tūc"@km-x-twktt ;
-        :femcConversionOf   bdr:TT392AFC35A97876AE .
-    
-    bdr:TTDFF7035880A36481
-        a                   :CoverTitle ;
-        rdfs:label          "សព្វទានតូច"@km .
+        :femcConversionOf   bdr:TTD35645072CB00F1B .
 }

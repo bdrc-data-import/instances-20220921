@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010086 {
-    bda:LG96E5EFBC6AB53962
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010086"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010086"@en , "imported pubinfo for W1FEMC010086"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010086"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010086 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010086 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "00/MW1FEMC010086.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010086 ;
-        adm:logEntry        bda:LG96E5EFBC6AB53962 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB275BB0B25F0D600
+    bdr:ID1EAE2FF84EF15C0B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "044-PP.01.10.03.II.1" .
     
-    bdr:MF382F0116F850D08D
+    bdr:MF335D8ABE124D9DD9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "12" ;
         :microfilmStrip     "45" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010086 {
         a                   :Instance ;
         skos:prefLabel      "ព្រះបាទយសកេរ្តិ៍"@km , "braḥ pād yasakerti"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB275BB0B25F0D600 ;
+            bdr:ID1EAE2FF84EF15C0B ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT022D5D02E8B7F212 , bdr:TT1EAE2FF84EF15C0B , bdr:TT3466C4B69CF68F21 , bdr:TTEB48A7FA6AD6C085 ;
+        :hasTitle           bdr:TT022D5D02E8B7F212 , bdr:TT3466C4B69CF68F21 , bdr:TT96E5EFBC6AB53962 , bdr:TTEB2060AA9E57FFBF ;
         :instanceHasReproduction  bdr:W1FEMC010086 ;
+        :instanceOf         bdr:WA1FEMC120005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF382F0116F850D08D ;
-        :note               bdr:NT335D8ABE124D9DD9 ;
+        :microfilmItem      bdr:MF335D8ABE124D9DD9 ;
+        :note               bdr:NTEB48A7FA6AD6C085 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT335D8ABE124D9DD9
+    bdr:NTEB48A7FA6AD6C085
         a                   :Note ;
         :contentLocationStatement  "pg. 71" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT022D5D02E8B7F212
-        a                   :Title ;
-        rdfs:label          "braḥ pād yasakerti"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1EAE2FF84EF15C0B .
-    
-    bdr:TT1EAE2FF84EF15C0B
         a                   :CoverTitle ;
         rdfs:label          "braḥ pād yassaker"@km-x-twktt .
     
     bdr:TT3466C4B69CF68F21
-        a                   :Title ;
-        rdfs:label          "ព្រះបាទយសកេរ្តិ៍"@km ;
-        :femcConversionOf   bdr:TTEB48A7FA6AD6C085 .
-    
-    bdr:TTEB48A7FA6AD6C085
         a                   :CoverTitle ;
         rdfs:label          "ព្រះបាទយស្សកេរ"@km .
+    
+    bdr:TT96E5EFBC6AB53962
+        a                   :Title ;
+        rdfs:label          "ព្រះបាទយសកេរ្តិ៍"@km ;
+        :femcConversionOf   bdr:TT3466C4B69CF68F21 .
+    
+    bdr:TTEB2060AA9E57FFBF
+        a                   :Title ;
+        rdfs:label          "braḥ pād yasakerti"@km-x-twktt ;
+        :femcConversionOf   bdr:TT022D5D02E8B7F212 .
 }

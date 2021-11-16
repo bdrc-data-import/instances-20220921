@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010813 {
-    bda:LG3CA5406F4D6C2435
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010813"@en ;
-        adm:logWho          bdu:U00091 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010813"@en , "imported pubinfo for W1FEMC010813"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010813"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010813 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010813 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e6/MW1FEMC010813.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010813 ;
-        adm:logEntry        bda:LG3CA5406F4D6C2435 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID44F5B47EBBE59EFD
+    bdr:ID7330F81E5CF52820
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "008-A.04.02.01.III.4" .
     
-    bdr:MFDE43CFB00A9B69B9
+    bdr:MF254CB311A21ED516
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "39" ;
         :microfilmStrip     "86" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC010813 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID44F5B47EBBE59EFD ;
+            bdr:ID7330F81E5CF52820 ;
         :hasFascicles       "6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT22F816E91BC60538 , bdr:TT7330F81E5CF52820 , bdr:TT8E1FC98902ACBAA2 , bdr:TTEE7FFB5C4B73D4A7 ;
+        :hasTitle           bdr:TT2BFE0C237DE0910A , bdr:TT3CA5406F4D6C2435 , bdr:TT8E1FC98902ACBAA2 , bdr:TTEE7FFB5C4B73D4A7 ;
         :instanceHasReproduction  bdr:W1FEMC010813 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDE43CFB00A9B69B9 ;
-        :note               bdr:NT254CB311A21ED516 ;
+        :microfilmItem      bdr:MF254CB311A21ED516 ;
+        :note               bdr:NT22F816E91BC60538 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT254CB311A21ED516
+    bdr:NT22F816E91BC60538
         a                   :Note ;
         :contentLocationStatement  "pg. 213" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT22F816E91BC60538
-        a                   :CoverTitle ;
-        rdfs:label          "យមក"@km .
+    bdr:TT2BFE0C237DE0910A
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
-    bdr:TT7330F81E5CF52820
-        a                   :CoverTitle ;
-        rdfs:label          "yamak"@km-x-twktt .
-    
-    bdr:TT8E1FC98902ACBAA2
+    bdr:TT3CA5406F4D6C2435
         a                   :Title ;
         rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
     
+    bdr:TT8E1FC98902ACBAA2
+        a                   :CoverTitle ;
+        rdfs:label          "យមក"@km .
+    
     bdr:TTEE7FFB5C4B73D4A7
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
+        a                   :CoverTitle ;
+        rdfs:label          "yamak"@km-x-twktt .
 }

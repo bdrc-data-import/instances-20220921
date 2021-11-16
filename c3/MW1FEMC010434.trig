@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010434 {
-    bda:LGCC3F0650535E2F53
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010434"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010434"@en , "imported pubinfo for W1FEMC010434"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010434"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010434 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010434 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c3/MW1FEMC010434.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010434 ;
-        adm:logEntry        bda:LGCC3F0650535E2F53 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDB9CC5027C7F02B40
+    bdr:ID1ADFDF81F7F5A8F0
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "027*-PP.03.03.03.III.6" .
     
-    bdr:MF75CA6AD91C9B295D
+    bdr:MF3FFDD8CA92C2BDF4
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "42" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010434 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សឆាកមហាបង្សុកូល"@km , "ānisaṅs chāk mahā paṅsukūl"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB9CC5027C7F02B40 ;
+            bdr:ID1ADFDF81F7F5A8F0 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1ADFDF81F7F5A8F0 , bdr:TT28D6D493DC46857C , bdr:TT9CAADB5BEA03C8FA , bdr:TTFA4FA47F2B4E5A94 ;
+        :hasTitle           bdr:TT28D6D493DC46857C , bdr:TT8D8EBC49C5703809 , bdr:TTCC3F0650535E2F53 , bdr:TTFA4FA47F2B4E5A94 ;
         :instanceHasReproduction  bdr:W1FEMC010434 ;
+        :instanceOf         bdr:WA1FEMC060012 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF75CA6AD91C9B295D ;
-        :note               bdr:NT3FFDD8CA92C2BDF4 ;
+        :microfilmItem      bdr:MF3FFDD8CA92C2BDF4 ;
+        :note               bdr:NT9CAADB5BEA03C8FA ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT3FFDD8CA92C2BDF4
+    bdr:NT9CAADB5BEA03C8FA
         a                   :Note ;
         :contentLocationStatement  "pg. 137" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1ADFDF81F7F5A8F0
-        a                   :CoverTitle ;
-        rdfs:label          "chāk mahā paṃṅ°-skūl"@km-x-twktt .
-    
     bdr:TT28D6D493DC46857C
-        a                   :Title ;
-        rdfs:label          "អានិសង្សឆាកមហាបង្សុកូល"@km ;
-        :femcConversionOf   bdr:TT9CAADB5BEA03C8FA .
-    
-    bdr:TT9CAADB5BEA03C8FA
         a                   :CoverTitle ;
         rdfs:label          "ឆាកមហាប្ងាំស្កូល"@km .
     
-    bdr:TTFA4FA47F2B4E5A94
+    bdr:TT8D8EBC49C5703809
         a                   :Title ;
         rdfs:label          "ānisaṅs chāk mahā paṅsukūl"@km-x-twktt ;
-        :femcConversionOf   bdr:TT1ADFDF81F7F5A8F0 .
+        :femcConversionOf   bdr:TTFA4FA47F2B4E5A94 .
+    
+    bdr:TTCC3F0650535E2F53
+        a                   :Title ;
+        rdfs:label          "អានិសង្សឆាកមហាបង្សុកូល"@km ;
+        :femcConversionOf   bdr:TT28D6D493DC46857C .
+    
+    bdr:TTFA4FA47F2B4E5A94
+        a                   :CoverTitle ;
+        rdfs:label          "chāk mahā paṃṅ°-skūl"@km-x-twktt .
 }

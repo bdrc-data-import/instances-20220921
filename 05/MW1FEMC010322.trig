@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010322 {
-    bda:LG0BD154AA40115273
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010322"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010322"@en , "imported pubinfo for W1FEMC010322"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010322"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010322 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010322 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "05/MW1FEMC010322.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010322 ;
-        adm:logEntry        bda:LG0BD154AA40115273 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEBB95FC82CF989B2
+    bdr:IDEEA2DBA6AA2DE0A9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "045.III.1-PP.03.03.03" .
     
-    bdr:MF2E422B250ACC959F
+    bdr:MF8BE96982D16C6BA6
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "63" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010322 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEBB95FC82CF989B2 ;
+            bdr:IDEEA2DBA6AA2DE0A9 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0FB8065915FEF82A , bdr:TT7B81454A8BE7B9EB , bdr:TTED1EBA2941C5E616 , bdr:TTEEA2DBA6AA2DE0A9 ;
+        :hasTitle           bdr:TT0BD154AA40115273 , bdr:TT0C6E0EC3508A641F , bdr:TT0FB8065915FEF82A , bdr:TT7B81454A8BE7B9EB ;
         :instanceHasReproduction  bdr:W1FEMC010322 ;
+        :instanceOf         bdr:WA1FEMC010048 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2E422B250ACC959F ;
-        :note               bdr:NT8BE96982D16C6BA6 ;
+        :microfilmItem      bdr:MF8BE96982D16C6BA6 ;
+        :note               bdr:NTED1EBA2941C5E616 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8BE96982D16C6BA6
+    bdr:NTED1EBA2941C5E616
         a                   :Note ;
         :contentLocationStatement  "pg. 116" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0FB8065915FEF82A
+    bdr:TT0BD154AA40115273
         a                   :Title ;
         rdfs:label          "បឋមត្រាស់"@km ;
-        :femcConversionOf   bdr:TTED1EBA2941C5E616 .
+        :femcConversionOf   bdr:TT0FB8065915FEF82A .
     
-    bdr:TT7B81454A8BE7B9EB
+    bdr:TT0C6E0EC3508A641F
         a                   :Title ;
         rdfs:label          "paṭham trās"@km-x-twktt ;
-        :femcConversionOf   bdr:TTEEA2DBA6AA2DE0A9 .
+        :femcConversionOf   bdr:TT7B81454A8BE7B9EB .
     
-    bdr:TTED1EBA2941C5E616
+    bdr:TT0FB8065915FEF82A
         a                   :CoverTitle ;
         rdfs:label          "បថមត្រាស"@km .
     
-    bdr:TTEEA2DBA6AA2DE0A9
+    bdr:TT7B81454A8BE7B9EB
         a                   :CoverTitle ;
         rdfs:label          "patham trās"@km-x-twktt .
 }

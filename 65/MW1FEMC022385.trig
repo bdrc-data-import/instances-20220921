@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022385 {
-    bda:LG7B471DA70A47B034
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022385"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022385"@en , "imported pubinfo for W1FEMC022385"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022385"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC022385 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022385 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "65/MW1FEMC022385.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022385 ;
-        adm:logEntry        bda:LG7B471DA70A47B034 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID72566C38FF600533
+    bdr:IDD5F80454E0B94BC4
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.872.II.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC022385 {
         a                   :Instance ;
         skos:prefLabel      "សុធនកុមារ"@km , "sudhan kumār"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID72566C38FF600533 ;
+            bdr:IDD5F80454E0B94BC4 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1FC6487700DD43CD , bdr:TT53AF31D6C4942EEE , bdr:TTD5F80454E0B94BC4 , bdr:TTECE1BF41965FF50D ;
+        :hasTitle           bdr:TT53AF31D6C4942EEE , bdr:TT7B471DA70A47B034 , bdr:TTC61386973123A494 , bdr:TTECE1BF41965FF50D ;
         :instanceHasReproduction  bdr:W1FEMC022385 ;
+        :instanceOf         bdr:WA1FEMC120035 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT6683A3682A3DABE4 ;
+        :note               bdr:NT1FC6487700DD43CD ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT6683A3682A3DABE4
+    bdr:NT1FC6487700DD43CD
         a                   :Note ;
         :contentLocationStatement  "pg. 427" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT1FC6487700DD43CD
-        a                   :CoverTitle ;
-        rdfs:label          "ព្រះសួធុន"@km .
-    
     bdr:TT53AF31D6C4942EEE
-        a                   :Title ;
-        rdfs:label          "sudhan kumār"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD5F80454E0B94BC4 .
-    
-    bdr:TTD5F80454E0B94BC4
         a                   :CoverTitle ;
         rdfs:label          "braḥ suodhun"@km-x-twktt .
     
-    bdr:TTECE1BF41965FF50D
+    bdr:TT7B471DA70A47B034
         a                   :Title ;
         rdfs:label          "សុធនកុមារ"@km ;
-        :femcConversionOf   bdr:TT1FC6487700DD43CD .
+        :femcConversionOf   bdr:TTECE1BF41965FF50D .
+    
+    bdr:TTC61386973123A494
+        a                   :Title ;
+        rdfs:label          "sudhan kumār"@km-x-twktt ;
+        :femcConversionOf   bdr:TT53AF31D6C4942EEE .
+    
+    bdr:TTECE1BF41965FF50D
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះសួធុន"@km .
 }

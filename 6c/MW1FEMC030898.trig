@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030898 {
-    bda:LG5999749D64FC0808
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-09-09"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC030898"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC030898"@en , "imported pubinfo for W1FEMC030898"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC030898"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC030898 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030898 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "6c/MW1FEMC030898.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030898 ;
-        adm:logEntry        bda:LG5999749D64FC0808 , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID53BEAB0CD5A20006
+    bdr:IDDE58933AE86FBAED
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0893-B.01.06.01.III.6" .
     
@@ -50,29 +44,29 @@ bdg:MW1FEMC030898 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សព្រះធម្មគោរព"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID53BEAB0CD5A20006 ;
-        :hasTitle           bdr:TTDC083BCFD65CF084 , bdr:TTDE58933AE86FBAED ;
+            bdr:IDDE58933AE86FBAED ;
+        :hasTitle           bdr:TT361FEE9937116663 , bdr:TT5999749D64FC0808 ;
         :instanceHasReproduction  bdr:W1FEMC030898 ;
+        :instanceOf         bdr:WA1FEMC060006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT9FE995EE28DC808F ;
+        :note               bdr:NTDC083BCFD65CF084 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT9FE995EE28DC808F
+    bdr:NTDC083BCFD65CF084
         a                   :Note ;
         :contentLocationStatement  "pg. 28" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:TTDC083BCFD65CF084
-        a                   :Title ;
-        rdfs:label          "អានិសង្សព្រះធម្មគោរព"@km ;
-        :femcConversionOf   bdr:TTDE58933AE86FBAED .
-    
-    bdr:TTDE58933AE86FBAED
+    bdr:TT361FEE9937116663
         a                   :CoverTitle ;
         rdfs:label          "គោរពព្រះធម៌"@km .
+    
+    bdr:TT5999749D64FC0808
+        a                   :Title ;
+        rdfs:label          "អានិសង្សព្រះធម្មគោរព"@km ;
+        :femcConversionOf   bdr:TT361FEE9937116663 .
 }

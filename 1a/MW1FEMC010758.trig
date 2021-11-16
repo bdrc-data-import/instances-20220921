@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010758 {
-    bda:LG7E36187D19C32F94
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010758"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010758"@en , "imported pubinfo for W1FEMC010758"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010758"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010758 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010758 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "1a/MW1FEMC010758.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010758 ;
-        adm:logEntry        bda:LG7E36187D19C32F94 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF93CA1EE8DF5DD6D
+    bdr:IDFA430035F9219769
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "029-A.03.08.01.III.5" .
     
-    bdr:MF138F07E739B5B5BB
+    bdr:MF1B673E2EAB585781
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "123" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010758 {
         a                   :Instance ;
         skos:prefLabel      "មហោសថ"@km , "mahosath"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF93CA1EE8DF5DD6D ;
+            bdr:IDFA430035F9219769 ;
         :hasFascicles       "12-15" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT6BB0280CBA8F2069 , bdr:TTA3D53BECB610E2C3 , bdr:TTD6C27661D3851BA5 , bdr:TTE0E0DE3D640CF5E7 , bdr:TTED1E4211B5D51D49 , bdr:TTFA430035F9219769 ;
+        :hasTitle           bdr:TT6BB0280CBA8F2069 , bdr:TT7E36187D19C32F94 , bdr:TTA3D53BECB610E2C3 , bdr:TTD6C27661D3851BA5 , bdr:TTED1E4211B5D51D49 , bdr:TTF71DDAB5D3F98F86 ;
         :instanceHasReproduction  bdr:W1FEMC010758 ;
+        :instanceOf         bdr:WA1FEMC050006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF138F07E739B5B5BB ;
-        :note               bdr:NT1B673E2EAB585781 ;
+        :microfilmItem      bdr:MF1B673E2EAB585781 ;
+        :note               bdr:NTE0E0DE3D640CF5E7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT1B673E2EAB585781
+    bdr:NTE0E0DE3D640CF5E7
         a                   :Note ;
         :contentLocationStatement  "pg. 203" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT6BB0280CBA8F2069
-        a                   :Title ;
-        rdfs:label          "mahosath"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFA430035F9219769 .
+        a                   :CoverTitle ;
+        rdfs:label          "mahosut"@km-x-twktt .
     
-    bdr:TTA3D53BECB610E2C3
+    bdr:TT7E36187D19C32F94
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
-    bdr:TTD6C27661D3851BA5
+    bdr:TTA3D53BECB610E2C3
         a                   :Title ;
-        rdfs:label          "មហោសថ"@km ;
-        :femcConversionOf   bdr:TTE0E0DE3D640CF5E7 .
+        rdfs:label          "mahosath"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6BB0280CBA8F2069 .
     
-    bdr:TTE0E0DE3D640CF5E7
+    bdr:TTD6C27661D3851BA5
         a                   :CoverTitle ;
         rdfs:label          "មហោសុត"@km .
     
     bdr:TTED1E4211B5D51D49
+        a                   :Title ;
+        rdfs:label          "មហោសថ"@km ;
+        :femcConversionOf   bdr:TTD6C27661D3851BA5 .
+    
+    bdr:TTF71DDAB5D3F98F86
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TTFA430035F9219769
-        a                   :CoverTitle ;
-        rdfs:label          "mahosut"@km-x-twktt .
 }

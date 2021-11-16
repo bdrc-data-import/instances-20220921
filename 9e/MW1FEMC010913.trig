@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010913 {
-    bda:LG08A11EB8F8BD85DC
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010913"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010913"@en , "imported pubinfo for W1FEMC010913"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010913"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010913 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010913 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "9e/MW1FEMC010913.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010913 ;
-        adm:logEntry        bda:LG08A11EB8F8BD85DC , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC1144CECA638ADB8
+    bdr:ID7E54CCD204C6C950
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "062-A.04.03.02.III.5" .
     
-    bdr:MF5F83693603F44DDB
+    bdr:MFC80F58D98975F0AC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "23" ;
         :microfilmStrip     "21" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010913 {
         a                   :Instance ;
         skos:prefLabel      "ពិធូរ"@km , "bidhūr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC1144CECA638ADB8 ;
+            bdr:ID7E54CCD204C6C950 ;
         :hasFascicles       "1-4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0279CAE55EF19EC1 , bdr:TT2A1D3EAF89B74100 , bdr:TT637E4886A709124A , bdr:TT715A4870F3AA3C48 , bdr:TT7E54CCD204C6C950 , bdr:TTE597BEB189DC5D54 ;
+        :hasTitle           bdr:TT0279CAE55EF19EC1 , bdr:TT08A11EB8F8BD85DC , bdr:TT2A1D3EAF89B74100 , bdr:TT53DD3040DA865A99 , bdr:TT715A4870F3AA3C48 , bdr:TTE597BEB189DC5D54 ;
         :instanceHasReproduction  bdr:W1FEMC010913 ;
+        :instanceOf         bdr:WA1FEMC050003 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF5F83693603F44DDB ;
-        :note               bdr:NTC80F58D98975F0AC ;
+        :microfilmItem      bdr:MFC80F58D98975F0AC ;
+        :note               bdr:NT637E4886A709124A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTC80F58D98975F0AC
+    bdr:NT637E4886A709124A
         a                   :Note ;
         :contentLocationStatement  "pg. 232" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0279CAE55EF19EC1
+        a                   :Title ;
+        rdfs:label          "bidhūr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE597BEB189DC5D54 .
+    
+    bdr:TT08A11EB8F8BD85DC
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TT2A1D3EAF89B74100
+        a                   :Title ;
+        rdfs:label          "ពិធូរ"@km ;
+        :femcConversionOf   bdr:TT715A4870F3AA3C48 .
+    
+    bdr:TT53DD3040DA865A99
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
-    bdr:TT637E4886A709124A
+    bdr:TT715A4870F3AA3C48
         a                   :CoverTitle ;
         rdfs:label          "ពីធូរ"@km .
     
-    bdr:TT715A4870F3AA3C48
-        a                   :Title ;
-        rdfs:label          "ពិធូរ"@km ;
-        :femcConversionOf   bdr:TT637E4886A709124A .
-    
-    bdr:TT7E54CCD204C6C950
+    bdr:TTE597BEB189DC5D54
         a                   :CoverTitle ;
         rdfs:label          "bīdhūr"@km-x-twktt .
-    
-    bdr:TTE597BEB189DC5D54
-        a                   :Title ;
-        rdfs:label          "bidhūr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT7E54CCD204C6C950 .
 }

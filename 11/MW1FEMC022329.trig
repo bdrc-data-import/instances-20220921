@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022329 {
-    bda:LG1CE40E8F650EEB48
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022329"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022329"@en , "imported pubinfo for W1FEMC022329"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022329"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022329 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022329 ;
         adm:contentProvider  bda:CP045 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "11/MW1FEMC022329.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022329 ;
-        adm:logEntry        bda:LG1CE40E8F650EEB48 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID066EFB22163A8A0A
+    bdr:ID5B3BAAC73AF2A532
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.816.I.1" .
     
-    bdr:MFDE924D5A1AA80B0C
+    bdr:MFEED7FDCB5CEE1087
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "143" ;
         :microfilmStrip     "237" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC022329 {
         a                   :Instance ;
         skos:prefLabel      "ក្រមច្បាប់"@km , "kram cpāp' "@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID066EFB22163A8A0A ;
+            bdr:ID5B3BAAC73AF2A532 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1A1683F2180F111E , bdr:TT5B3BAAC73AF2A532 , bdr:TT7FC3E43A8125316F , bdr:TTF4EF5E964DC89A0F ;
+        :hasTitle           bdr:TT1A1683F2180F111E , bdr:TT1CE40E8F650EEB48 , bdr:TT875755240B1945F2 , bdr:TTF4EF5E964DC89A0F ;
         :instanceHasReproduction  bdr:W1FEMC022329 ;
+        :instanceOf         bdr:WA1FEMC100022 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFDE924D5A1AA80B0C ;
-        :note               bdr:NTEED7FDCB5CEE1087 ;
+        :microfilmItem      bdr:MFEED7FDCB5CEE1087 ;
+        :note               bdr:NT7FC3E43A8125316F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTEED7FDCB5CEE1087
+    bdr:NT7FC3E43A8125316F
         a                   :Note ;
         :contentLocationStatement  "pg. 416" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT1A1683F2180F111E
-        a                   :Title ;
-        rdfs:label          "ក្រមច្បាប់"@km ;
-        :femcConversionOf   bdr:TT7FC3E43A8125316F .
-    
-    bdr:TT5B3BAAC73AF2A532
-        a                   :CoverTitle ;
-        rdfs:label          "kraṃ cpāp "@km-x-twktt .
-    
-    bdr:TT7FC3E43A8125316F
         a                   :CoverTitle ;
         rdfs:label          "ក្រំច្បាប"@km .
     
-    bdr:TTF4EF5E964DC89A0F
+    bdr:TT1CE40E8F650EEB48
+        a                   :Title ;
+        rdfs:label          "ក្រមច្បាប់"@km ;
+        :femcConversionOf   bdr:TT1A1683F2180F111E .
+    
+    bdr:TT875755240B1945F2
         a                   :Title ;
         rdfs:label          "kram cpāp' "@km-x-twktt ;
-        :femcConversionOf   bdr:TT5B3BAAC73AF2A532 .
+        :femcConversionOf   bdr:TTF4EF5E964DC89A0F .
+    
+    bdr:TTF4EF5E964DC89A0F
+        a                   :CoverTitle ;
+        rdfs:label          "kraṃ cpāp "@km-x-twktt .
 }

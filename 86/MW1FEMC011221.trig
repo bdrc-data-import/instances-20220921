@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011221 {
-    bda:LG17D042D0BB0BE543
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011221"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011221"@en , "imported pubinfo for W1FEMC011221"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011221"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011221 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011221 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "86/MW1FEMC011221.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011221 ;
-        adm:logEntry        bda:LG17D042D0BB0BE543 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID080A9E1EA677D2FD
+    bdr:IDC4C231425CAF7C5D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "001-A.07.01.05.III.4" .
     
-    bdr:MF10ABF2EE137C2F82
+    bdr:MF80055C12C7F73FD3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "24" ;
         :microfilmStrip     "26" .
@@ -55,39 +49,38 @@ bdg:MW1FEMC011221 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID080A9E1EA677D2FD ;
+            bdr:IDC4C231425CAF7C5D ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0289787528191535 , bdr:TT1B468DCFB1225D3C , bdr:TT85514A2AAC8309C9 , bdr:TTC4C231425CAF7C5D ;
+        :hasTitle           bdr:TT0289787528191535 , bdr:TT17D042D0BB0BE543 , bdr:TT1B468DCFB1225D3C , bdr:TT73979FD57A5F0AB4 ;
         :instanceHasReproduction  bdr:W1FEMC011221 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF10ABF2EE137C2F82 ;
-        :note               bdr:NT80055C12C7F73FD3 ;
+        :microfilmItem      bdr:MF80055C12C7F73FD3 ;
+        :note               bdr:NT85514A2AAC8309C9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT80055C12C7F73FD3
+    bdr:NT85514A2AAC8309C9
         a                   :Note ;
         :contentLocationStatement  "pg. 292" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT0289787528191535
+        a                   :CoverTitle ;
+        rdfs:label          "សង្គណី"@km .
+    
+    bdr:TT17D042D0BB0BE543
         a                   :Title ;
         rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
     
     bdr:TT1B468DCFB1225D3C
-        a                   :Title ;
-        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
-    
-    bdr:TT85514A2AAC8309C9
-        a                   :CoverTitle ;
-        rdfs:label          "សង្គណី"@km .
-    
-    bdr:TTC4C231425CAF7C5D
         a                   :CoverTitle ;
         rdfs:label          "saṅgaṇī"@km-x-twktt .
+    
+    bdr:TT73979FD57A5F0AB4
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
 }

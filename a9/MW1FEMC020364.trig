@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020364 {
-    bda:LGFA15B525F1BDE236
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020364"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020364"@en , "imported pubinfo for W1FEMC020364"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020364"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020364 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020364 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a9/MW1FEMC020364.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020364 ;
-        adm:logEntry        bda:LGFA15B525F1BDE236 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID845E7F320C0CFDBB
+    bdr:IDC3A2AB139E3186E1
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "c.15.II.1" .
     
-    bdr:MF91C8B97CEF92D260
+    bdr:MF62A15F24ADF24FF8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "65" ;
         :microfilmStrip     "159" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020364 {
         a                   :Instance ;
         skos:prefLabel      "ស្រទប​ចេក​"@km , "sradap cek"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID845E7F320C0CFDBB ;
+            bdr:IDC3A2AB139E3186E1 ;
         :hasFascicles       "1, 2, 3, 5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT16DFE4D27208B83A , bdr:TT9729440EBCDBB1DB , bdr:TTC3A2AB139E3186E1 , bdr:TTDB48226B50879F22 ;
+        :hasTitle           bdr:TT16DFE4D27208B83A , bdr:TT6B0CA4A3506C5459 , bdr:TTDB48226B50879F22 , bdr:TTFA15B525F1BDE236 ;
         :instanceHasReproduction  bdr:W1FEMC020364 ;
+        :instanceOf         bdr:WA1FEMC120033 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF91C8B97CEF92D260 ;
-        :note               bdr:NT62A15F24ADF24FF8 ;
+        :microfilmItem      bdr:MF62A15F24ADF24FF8 ;
+        :note               bdr:NT9729440EBCDBB1DB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "576" .
     
-    bdr:NT62A15F24ADF24FF8
+    bdr:NT9729440EBCDBB1DB
         a                   :Note ;
         :contentLocationStatement  "pg. 72" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT16DFE4D27208B83A
-        a                   :Title ;
-        rdfs:label          "ស្រទប​ចេក​"@km ;
-        :femcConversionOf   bdr:TT9729440EBCDBB1DB .
-    
-    bdr:TT9729440EBCDBB1DB
         a                   :CoverTitle ;
         rdfs:label          "ស្រទព្ទចេក"@km .
     
-    bdr:TTC3A2AB139E3186E1
+    bdr:TT6B0CA4A3506C5459
+        a                   :Title ;
+        rdfs:label          "sradap cek"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDB48226B50879F22 .
+    
+    bdr:TTDB48226B50879F22
         a                   :CoverTitle ;
         rdfs:label          "sradabd cek"@km-x-twktt .
     
-    bdr:TTDB48226B50879F22
+    bdr:TTFA15B525F1BDE236
         a                   :Title ;
-        rdfs:label          "sradap cek"@km-x-twktt ;
-        :femcConversionOf   bdr:TTC3A2AB139E3186E1 .
+        rdfs:label          "ស្រទប​ចេក​"@km ;
+        :femcConversionOf   bdr:TT16DFE4D27208B83A .
 }

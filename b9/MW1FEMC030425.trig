@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC030425 {
-    bda:LG65852BCCA3681425
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-09-10"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC030425"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC030425"@en , "imported pubinfo for W1FEMC030425"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC030425"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC030425 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC030425 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b9/MW1FEMC030425.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC030425 ;
-        adm:logEntry        bda:LG65852BCCA3681425 , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD0E38E542261A1EC
+    bdr:IDF9AA43C8D712195A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0422-B.01.06.01.I.1" .
     
@@ -50,29 +44,29 @@ bdg:MW1FEMC030425 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់កូនចៅធំ"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD0E38E542261A1EC ;
-        :hasTitle           bdr:TT1595D940A0788535 , bdr:TTF9AA43C8D712195A ;
+            bdr:IDF9AA43C8D712195A ;
+        :hasTitle           bdr:TT195DBE39C79B5245 , bdr:TT65852BCCA3681425 ;
         :instanceHasReproduction  bdr:W1FEMC030425 ;
+        :instanceOf         bdr:WA1FEMC100011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT05D08EC7EB95FF72 ;
+        :note               bdr:NT1595D940A0788535 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT05D08EC7EB95FF72
+    bdr:NT1595D940A0788535
         a                   :Note ;
         :contentLocationStatement  "pg. 16" ;
         :noteSource         bda:PR1FEMC03 .
     
-    bdr:TT1595D940A0788535
-        a                   :Title ;
-        rdfs:label          "ច្បាប់កូនចៅធំ"@km ;
-        :femcConversionOf   bdr:TTF9AA43C8D712195A .
-    
-    bdr:TTF9AA43C8D712195A
+    bdr:TT195DBE39C79B5245
         a                   :CoverTitle ;
         rdfs:label          "កូនចៅធំ"@km .
+    
+    bdr:TT65852BCCA3681425
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កូនចៅធំ"@km ;
+        :femcConversionOf   bdr:TT195DBE39C79B5245 .
 }

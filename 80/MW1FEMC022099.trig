@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC022099 {
-    bda:LGF9A0743342D9F976
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-22"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC022099"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC022099"@en , "imported pubinfo for W1FEMC022099"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC022099"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC022099 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC022099 ;
         adm:contentProvider  bda:CP044 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "80/MW1FEMC022099.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC022099 ;
-        adm:logEntry        bda:LGF9A0743342D9F976 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID1C2702C9309D80AB
+    bdr:ID59A45FA793A07C33
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "048.III.1" .
     
-    bdr:MFB085A0BFD331844F
+    bdr:MF7097294D2A8D0AB2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "7" ;
         :microfilmStrip     "28" .
@@ -56,49 +50,48 @@ bdg:MW1FEMC022099 {
         a                   :Instance ;
         skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1C2702C9309D80AB ;
+            bdr:ID59A45FA793A07C33 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3B1B49A56E625322 , bdr:TT59A45FA793A07C33 , bdr:TT67336FEB0AE95C72 , bdr:TT7644D2DBFE08B1CF , bdr:TT76710C691572D715 , bdr:TTC7876577D47982F4 ;
+        :hasTitle           bdr:TT3B1B49A56E625322 , bdr:TT67336FEB0AE95C72 , bdr:TT7644D2DBFE08B1CF , bdr:TT76710C691572D715 , bdr:TTC7692F2E9086D5C7 , bdr:TTF9A0743342D9F976 ;
         :instanceHasReproduction  bdr:W1FEMC022099 ;
+        :instanceOf         bdr:WA1FEMC010058 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB085A0BFD331844F ;
-        :note               bdr:NT7097294D2A8D0AB2 ;
+        :microfilmItem      bdr:MF7097294D2A8D0AB2 ;
+        :note               bdr:NTC7876577D47982F4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT7097294D2A8D0AB2
+    bdr:NTC7876577D47982F4
         a                   :Note ;
         :contentLocationStatement  "pg. 372" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT3B1B49A56E625322
-        a                   :Title ;
-        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
-    
-    bdr:TT59A45FA793A07C33
         a                   :CoverTitle ;
-        rdfs:label          "Uppaḷī"@km-x-twktt .
+        rdfs:label          "ឧបាលិ"@km ;
+        :femcConversionOf   bdr:TT76710C691572D715 .
     
     bdr:TT67336FEB0AE95C72
         a                   :CoverTitle ;
-        rdfs:label          "Upāli"@km-x-twktt ;
-        :femcConversionOf   bdr:TT59A45FA793A07C33 .
+        rdfs:label          "Uppaḷī"@km-x-twktt .
     
     bdr:TT7644D2DBFE08B1CF
-        a                   :Title ;
-        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
+        a                   :CoverTitle ;
+        rdfs:label          "Upāli"@km-x-twktt ;
+        :femcConversionOf   bdr:TT67336FEB0AE95C72 .
     
     bdr:TT76710C691572D715
         a                   :CoverTitle ;
-        rdfs:label          "ឧបាលិ"@km ;
-        :femcConversionOf   bdr:TTC7876577D47982F4 .
-    
-    bdr:TTC7876577D47982F4
-        a                   :CoverTitle ;
         rdfs:label          "ឧប្បឡី"@km .
+    
+    bdr:TTC7692F2E9086D5C7
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
+    
+    bdr:TTF9A0743342D9F976
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
 }

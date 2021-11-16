@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021885 {
-    bda:LGA5264C103698567B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-20"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021885"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021885"@en , "imported pubinfo for W1FEMC021885"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021885"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021885 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021885 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "44/MW1FEMC021885.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021885 ;
-        adm:logEntry        bda:LGA5264C103698567B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3113CED7F48B6244
+    bdr:ID6D22559607E7DB2D
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.667.III.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021885 {
         a                   :Instance ;
         skos:prefLabel      "បឋមត្រាស់"@km , "paṭham trās'"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3113CED7F48B6244 ;
+            bdr:ID6D22559607E7DB2D ;
         :hasFascicles       "4" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT381C85F430D0BCAB , bdr:TT6D22559607E7DB2D , bdr:TTC62CCF4648529239 , bdr:TTE7D5571E8343DAC4 ;
+        :hasTitle           bdr:TT381C85F430D0BCAB , bdr:TTA5264C103698567B , bdr:TTC62CCF4648529239 , bdr:TTF971FBCB8EB6F737 ;
         :instanceHasReproduction  bdr:W1FEMC021885 ;
+        :instanceOf         bdr:WA1FEMC010048 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTB7DF927396F2C608 ;
+        :note               bdr:NTE7D5571E8343DAC4 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB7DF927396F2C608
+    bdr:NTE7D5571E8343DAC4
         a                   :Note ;
         :contentLocationStatement  "pg. 336" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT381C85F430D0BCAB
+        a                   :CoverTitle ;
+        rdfs:label          "ប្រថម្ម"@km .
+    
+    bdr:TTA5264C103698567B
         a                   :Title ;
         rdfs:label          "បឋមត្រាស់"@km ;
-        :femcConversionOf   bdr:TTE7D5571E8343DAC4 .
+        :femcConversionOf   bdr:TT381C85F430D0BCAB .
     
-    bdr:TT6D22559607E7DB2D
+    bdr:TTC62CCF4648529239
         a                   :CoverTitle ;
         rdfs:label          "prathamm"@km-x-twktt .
     
-    bdr:TTC62CCF4648529239
+    bdr:TTF971FBCB8EB6F737
         a                   :Title ;
         rdfs:label          "paṭham trās'"@km-x-twktt ;
-        :femcConversionOf   bdr:TT6D22559607E7DB2D .
-    
-    bdr:TTE7D5571E8343DAC4
-        a                   :CoverTitle ;
-        rdfs:label          "ប្រថម្ម"@km .
+        :femcConversionOf   bdr:TTC62CCF4648529239 .
 }

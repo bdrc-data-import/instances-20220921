@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010540 {
-    bda:LG7E4886C18EE09988
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010540"@en ;
-        adm:logWho          bdu:U00090 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010540"@en , "imported pubinfo for W1FEMC010540"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010540"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010540 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010540 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a8/MW1FEMC010540.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010540 ;
-        adm:logEntry        bda:LG7E4886C18EE09988 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID07B3DB142A9936CA
+    bdr:ID39137555EB85C951
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "030-032-A.02.10.01.III.3" .
     
-    bdr:MFA161031B9D9233F6
+    bdr:MFFEA512D3525CC6D8
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "17" ;
         :microfilmStrip     "70" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010540 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យបព្វជ្ជាខន្ធក"@km , "vinăy pabbajjā khandhak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID07B3DB142A9936CA ;
+            bdr:ID39137555EB85C951 ;
         :hasFascicles       "3, 5, 6" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT04DBE2A51DFB1ED3 , bdr:TT39137555EB85C951 , bdr:TTAD577AE09421448A , bdr:TTFB86E5C7BC6855AD ;
+        :hasTitle           bdr:TT04DBE2A51DFB1ED3 , bdr:TT20657428DB3219F6 , bdr:TT7E4886C18EE09988 , bdr:TTFB86E5C7BC6855AD ;
         :instanceHasReproduction  bdr:W1FEMC010540 ;
+        :instanceOf         bdr:WA1FEMC030032 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA161031B9D9233F6 ;
-        :note               bdr:NTFEA512D3525CC6D8 ;
+        :microfilmItem      bdr:MFFEA512D3525CC6D8 ;
+        :note               bdr:NTAD577AE09421448A ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTFEA512D3525CC6D8
+    bdr:NTAD577AE09421448A
         a                   :Note ;
         :contentLocationStatement  "pg. 160" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT04DBE2A51DFB1ED3
-        a                   :Title ;
-        rdfs:label          "vinăy pabbajjā khandhak"@km-x-twktt ;
-        :femcConversionOf   bdr:TT39137555EB85C951 .
-    
-    bdr:TT39137555EB85C951
         a                   :CoverTitle ;
         rdfs:label          "vinaiy° pabbajā khandh"@km-x-twktt .
     
-    bdr:TTAD577AE09421448A
-        a                   :CoverTitle ;
-        rdfs:label          "វិន្យៃបព្វជាខន្ធ"@km .
+    bdr:TT20657428DB3219F6
+        a                   :Title ;
+        rdfs:label          "vinăy pabbajjā khandhak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT04DBE2A51DFB1ED3 .
     
-    bdr:TTFB86E5C7BC6855AD
+    bdr:TT7E4886C18EE09988
         a                   :Title ;
         rdfs:label          "វិន័យបព្វជ្ជាខន្ធក"@km ;
-        :femcConversionOf   bdr:TTAD577AE09421448A .
+        :femcConversionOf   bdr:TTFB86E5C7BC6855AD .
+    
+    bdr:TTFB86E5C7BC6855AD
+        a                   :CoverTitle ;
+        rdfs:label          "វិន្យៃបព្វជាខន្ធ"@km .
 }

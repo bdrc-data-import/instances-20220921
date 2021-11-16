@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020113 {
-    bda:LG453D51E86FA94A49
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020113"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020113"@en , "imported pubinfo for W1FEMC020113"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020113"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020113 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020113 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "a3/MW1FEMC020113.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020113 ;
-        adm:logEntry        bda:LG453D51E86FA94A49 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9F546A8D2C5DA77C
+    bdr:IDD95FA7CC75677106
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.6.III.5" .
     
-    bdr:MFC69196E5F7DF1200
+    bdr:MF28CF7CFFA3013821
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "30" ;
         :microfilmStrip     "51" .
@@ -56,50 +50,49 @@ bdg:MW1FEMC020113 {
         a                   :Instance ;
         skos:prefLabel      "ចន្ចកុមារជាតក"@km , "cand kumār jātak"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9F546A8D2C5DA77C ;
+            bdr:IDD95FA7CC75677106 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT172775ECCF3B9CD9 , bdr:TT88294B1C6B6B73BB , bdr:TTCF9DA2D8EE1A2AD2 , bdr:TTD95FA7CC75677106 , bdr:TTED98085369A8B10A , bdr:TTEDD23635F2E6D255 ;
+        :hasTitle           bdr:TT172775ECCF3B9CD9 , bdr:TT453D51E86FA94A49 , bdr:TT7775961B6E3455A7 , bdr:TT88294B1C6B6B73BB , bdr:TTED98085369A8B10A , bdr:TTEDD23635F2E6D255 ;
         :instanceHasReproduction  bdr:W1FEMC020113 ;
+        :instanceOf         bdr:WA1FEMC050004 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC69196E5F7DF1200 ;
-        :note               bdr:NT28CF7CFFA3013821 ;
+        :microfilmItem      bdr:MF28CF7CFFA3013821 ;
+        :note               bdr:NTCF9DA2D8EE1A2AD2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "520" .
     
-    bdr:NT28CF7CFFA3013821
+    bdr:NTCF9DA2D8EE1A2AD2
         a                   :Note ;
         :contentLocationStatement  "pg. 23" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT172775ECCF3B9CD9
+        a                   :Title ;
+        rdfs:label          "cand kumār jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT88294B1C6B6B73BB .
+    
+    bdr:TT453D51E86FA94A49
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT7775961B6E3455A7
         a                   :OtherTitle ;
         rdfs:label          "ទសជាតក"@km .
     
     bdr:TT88294B1C6B6B73BB
-        a                   :Title ;
-        rdfs:label          "cand kumār jātak"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD95FA7CC75677106 .
-    
-    bdr:TTCF9DA2D8EE1A2AD2
-        a                   :CoverTitle ;
-        rdfs:label          "ចន្ចកុមារ"@km .
-    
-    bdr:TTD95FA7CC75677106
         a                   :CoverTitle ;
         rdfs:label          "cand kumār"@km-x-twktt .
     
     bdr:TTED98085369A8B10A
-        a                   :OtherTitle ;
-        rdfs:label          "ទសជាតក"@km .
-    
-    bdr:TTEDD23635F2E6D255
         a                   :Title ;
         rdfs:label          "ចន្ចកុមារជាតក"@km ;
-        :femcConversionOf   bdr:TTCF9DA2D8EE1A2AD2 .
+        :femcConversionOf   bdr:TTEDD23635F2E6D255 .
+    
+    bdr:TTEDD23635F2E6D255
+        a                   :CoverTitle ;
+        rdfs:label          "ចន្ចកុមារ"@km .
 }

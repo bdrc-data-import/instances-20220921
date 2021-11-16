@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020479 {
-    bda:LGAA9CF20BDEE52FDB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2009-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020479"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020479"@en , "imported pubinfo for W1FEMC020479"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020479"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020479 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020479 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "16/MW1FEMC020479.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020479 ;
-        adm:logEntry        bda:LGAA9CF20BDEE52FDB , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDABA1D5390C8D1A61
+    bdr:IDD78D5027DC7ED668
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.112.I.1" .
     
-    bdr:MF093343CFA78E12E5
+    bdr:MF2C35E7ED67A0A14F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020479 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់នាងពៅ"@km , "cpāp' nāṅ bau"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDABA1D5390C8D1A61 ;
+            bdr:IDD78D5027DC7ED668 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT416C585A64D67575 , bdr:TT478C0577628835EB , bdr:TT5F1B800455B59948 , bdr:TTD78D5027DC7ED668 ;
+        :hasTitle           bdr:TT428AF39FD33F8AC1 , bdr:TT478C0577628835EB , bdr:TT5F1B800455B59948 , bdr:TTAA9CF20BDEE52FDB ;
         :instanceHasReproduction  bdr:W1FEMC020479 ;
+        :instanceOf         bdr:WA1FEMC100057 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF093343CFA78E12E5 ;
-        :note               bdr:NT2C35E7ED67A0A14F ;
+        :microfilmItem      bdr:MF2C35E7ED67A0A14F ;
+        :note               bdr:NT416C585A64D67575 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT2C35E7ED67A0A14F
+    bdr:NT416C585A64D67575
         a                   :Note ;
         :contentLocationStatement  "pg. 93" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT416C585A64D67575
+    bdr:TT428AF39FD33F8AC1
+        a                   :Title ;
+        rdfs:label          "cpāp' nāṅ bau"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5F1B800455B59948 .
+    
+    bdr:TT478C0577628835EB
         a                   :CoverTitle ;
         rdfs:label          "ន្ងាពោវ"@km .
     
-    bdr:TT478C0577628835EB
-        a                   :Title ;
-        rdfs:label          "ច្បាប់នាងពៅ"@km ;
-        :femcConversionOf   bdr:TT416C585A64D67575 .
-    
     bdr:TT5F1B800455B59948
-        a                   :Title ;
-        rdfs:label          "cpāp' nāṅ bau"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD78D5027DC7ED668 .
-    
-    bdr:TTD78D5027DC7ED668
         a                   :CoverTitle ;
         rdfs:label          "nāṅ° bov"@km-x-twktt .
+    
+    bdr:TTAA9CF20BDEE52FDB
+        a                   :Title ;
+        rdfs:label          "ច្បាប់នាងពៅ"@km ;
+        :femcConversionOf   bdr:TT478C0577628835EB .
 }

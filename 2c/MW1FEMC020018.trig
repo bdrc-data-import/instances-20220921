@@ -12,14 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020018 {
-    bda:LGABACFFE06413F870
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC020018"@en .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020018"@en , "imported pubinfo for W1FEMC020018"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020018"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -33,19 +29,19 @@ bdg:MW1FEMC020018 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020018 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "2c/MW1FEMC020018.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020018 ;
-        adm:logEntry        bda:LGABACFFE06413F870 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID68805A7E25BB52D0
+    bdr:IDBF52368094B3BB51
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "a.18.II.1" .
     
-    bdr:MF3BE463FB56D40755
+    bdr:MF9704D029209326C2
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "19" ;
         :microfilmStrip     "5" .
@@ -54,42 +50,41 @@ bdg:MW1FEMC020018 {
         a                   :Instance ;
         skos:prefLabel      "ភិនវង្ស"@km , "bhinavaṅs"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID68805A7E25BB52D0 ;
+            bdr:IDBF52368094B3BB51 ;
         :hasFascicles       "12, 16, 18, 21" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2CAC533B0D702A0A , bdr:TT68C3F74D02BC882A , bdr:TTBF52368094B3BB51 , bdr:TTF2CEAF1B824C32AB ;
+        :hasTitle           bdr:TT2CAC533B0D702A0A , bdr:TT68C3F74D02BC882A , bdr:TT89F77B10F6FD2AA3 , bdr:TTABACFFE06413F870 ;
         :instanceHasReproduction  bdr:W1FEMC020018 ;
+        :instanceOf         bdr:WA1FEMC120052 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF3BE463FB56D40755 ;
-        :note               bdr:NT9704D029209326C2 ;
+        :microfilmItem      bdr:MF9704D029209326C2 ;
+        :note               bdr:NTF2CEAF1B824C32AB ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1406" .
     
-    bdr:NT9704D029209326C2
+    bdr:NTF2CEAF1B824C32AB
         a                   :Note ;
         :contentLocationStatement  "pg. 4" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT2CAC533B0D702A0A
-        a                   :Title ;
-        rdfs:label          "ភិនវង្ស"@km ;
-        :femcConversionOf   bdr:TTF2CEAF1B824C32AB .
+        a                   :CoverTitle ;
+        rdfs:label          "ភិន្នវុង្ស"@km .
     
     bdr:TT68C3F74D02BC882A
-        a                   :Title ;
-        rdfs:label          "bhinavaṅs"@km-x-twktt ;
-        :femcConversionOf   bdr:TTBF52368094B3BB51 .
-    
-    bdr:TTBF52368094B3BB51
         a                   :CoverTitle ;
         rdfs:label          "bhinnavuṅs"@km-x-twktt .
     
-    bdr:TTF2CEAF1B824C32AB
-        a                   :CoverTitle ;
-        rdfs:label          "ភិន្នវុង្ស"@km .
+    bdr:TT89F77B10F6FD2AA3
+        a                   :Title ;
+        rdfs:label          "bhinavaṅs"@km-x-twktt ;
+        :femcConversionOf   bdr:TT68C3F74D02BC882A .
+    
+    bdr:TTABACFFE06413F870
+        a                   :Title ;
+        rdfs:label          "ភិនវង្ស"@km ;
+        :femcConversionOf   bdr:TT2CAC533B0D702A0A .
 }

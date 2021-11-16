@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010071 {
-    bda:LGC2FBE60FD438BFC4
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010071"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010071"@en , "imported pubinfo for W1FEMC010071"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010071"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010071 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010071 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "5b/MW1FEMC010071.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010071 ;
-        adm:logEntry        bda:LGC2FBE60FD438BFC4 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID37EC99786E71A924
+    bdr:IDD55B4C19089861E3
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "002'-PP.01.08.01.VI.6" .
     
-    bdr:MFA197BA3C76178534
+    bdr:MFE2D7094157EDE4FB
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "21" ;
         :microfilmStrip     "16" .
@@ -55,17 +49,16 @@ bdg:MW1FEMC010071 {
         a                   :Instance ;
         skos:prefLabel      "មហាជ័យ​ ជ័យទិស​​ ជ័យឥសី"@km , "mahā jăy, jăy dis, jăy Isī"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID37EC99786E71A924 ;
+            bdr:IDD55B4C19089861E3 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT840B4F5EC373F67B , bdr:TT9710830ACC1FC413 , bdr:TTB552CA01EC0117C3 , bdr:TTD55B4C19089861E3 ;
+        :hasTitle           bdr:TT840B4F5EC373F67B , bdr:TTA84A2011DE2C4348 , bdr:TTB552CA01EC0117C3 , bdr:TTC2FBE60FD438BFC4 ;
         :instanceHasReproduction  bdr:W1FEMC010071 ;
+        :instanceOf         bdr:WA1FEMC090008 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFA197BA3C76178534 ;
-        :note               bdr:NT492914AC3C1397AD , bdr:NTE2D7094157EDE4FB ;
+        :microfilmItem      bdr:MFE2D7094157EDE4FB ;
+        :note               bdr:NT492914AC3C1397AD , bdr:NT9710830ACC1FC413 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
@@ -74,26 +67,26 @@ bdg:MW1FEMC010071 {
         a                   :Note ;
         :noteText           "Should we write (វាន) ?"@en .
     
-    bdr:NTE2D7094157EDE4FB
+    bdr:NT9710830ACC1FC413
         a                   :Note ;
         :contentLocationStatement  "pg. 68" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT840B4F5EC373F67B
+        a                   :CoverTitle ;
+        rdfs:label          "jaiyaṃ"@km-x-twktt .
+    
+    bdr:TTA84A2011DE2C4348
         a                   :Title ;
         rdfs:label          "mahā jăy, jăy dis, jăy Isī"@km-x-twktt ;
-        :femcConversionOf   bdr:TTD55B4C19089861E3 .
+        :femcConversionOf   bdr:TT840B4F5EC373F67B .
     
-    bdr:TT9710830ACC1FC413
+    bdr:TTB552CA01EC0117C3
         a                   :CoverTitle ;
         rdfs:label          "ជៃយំ​ (វាន)"@km .
     
-    bdr:TTB552CA01EC0117C3
+    bdr:TTC2FBE60FD438BFC4
         a                   :Title ;
         rdfs:label          "មហាជ័យ​ ជ័យទិស​​ ជ័យឥសី"@km ;
-        :femcConversionOf   bdr:TT9710830ACC1FC413 .
-    
-    bdr:TTD55B4C19089861E3
-        a                   :CoverTitle ;
-        rdfs:label          "jaiyaṃ"@km-x-twktt .
+        :femcConversionOf   bdr:TTB552CA01EC0117C3 .
 }

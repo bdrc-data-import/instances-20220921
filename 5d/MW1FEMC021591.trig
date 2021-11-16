@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021591 {
-    bda:LG93443C8166A99D8D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021591"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021591"@en , "imported pubinfo for W1FEMC021591"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021591"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC021591 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021591 ;
         adm:contentProvider  bda:CP042 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5d/MW1FEMC021591.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021591 ;
-        adm:logEntry        bda:LG93443C8166A99D8D , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID5494D211BF86AE91
+    bdr:ID062FBBB96687E53B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.253.III.1" .
     
-    bdr:MF91979537A4F1FA92
+    bdr:MF237AB78B08DBAF0F
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "132" ;
         :microfilmStrip     "226" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC021591 {
         a                   :Instance ;
         skos:prefLabel      "ធជគ្គកម្ម"@km , "dhajaggakamm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5494D211BF86AE91 ;
+            bdr:ID062FBBB96687E53B ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT062FBBB96687E53B , bdr:TT58029898F3377C09 , bdr:TTA5AD75C21760209B , bdr:TTB67D03D20C9A688B ;
+        :hasTitle           bdr:TT58029898F3377C09 , bdr:TT93443C8166A99D8D , bdr:TTA5AD75C21760209B , bdr:TTECBC6B19C8AA21BE ;
         :instanceHasReproduction  bdr:W1FEMC021591 ;
+        :instanceOf         bdr:WA1FEMC010089 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF91979537A4F1FA92 ;
-        :note               bdr:NT237AB78B08DBAF0F ;
+        :microfilmItem      bdr:MF237AB78B08DBAF0F ;
+        :note               bdr:NTB67D03D20C9A688B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "947" .
     
-    bdr:NT237AB78B08DBAF0F
+    bdr:NTB67D03D20C9A688B
         a                   :Note ;
         :contentLocationStatement  "pg. 287" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT062FBBB96687E53B
+    bdr:TT58029898F3377C09
+        a                   :CoverTitle ;
+        rdfs:label          "ធុជកម្ម"@km .
+    
+    bdr:TT93443C8166A99D8D
+        a                   :Title ;
+        rdfs:label          "ធជគ្គកម្ម"@km ;
+        :femcConversionOf   bdr:TT58029898F3377C09 .
+    
+    bdr:TTA5AD75C21760209B
         a                   :CoverTitle ;
         rdfs:label          "dhujakamm"@km-x-twktt .
     
-    bdr:TT58029898F3377C09
-        a                   :Title ;
-        rdfs:label          "ធជគ្គកម្ម"@km ;
-        :femcConversionOf   bdr:TTB67D03D20C9A688B .
-    
-    bdr:TTA5AD75C21760209B
+    bdr:TTECBC6B19C8AA21BE
         a                   :Title ;
         rdfs:label          "dhajaggakamm"@km-x-twktt ;
-        :femcConversionOf   bdr:TT062FBBB96687E53B .
-    
-    bdr:TTB67D03D20C9A688B
-        a                   :CoverTitle ;
-        rdfs:label          "ធុជកម្ម"@km .
+        :femcConversionOf   bdr:TTA5AD75C21760209B .
 }

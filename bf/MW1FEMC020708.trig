@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020708 {
-    bda:LGCCEBBF665CCC748A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020708"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020708"@en , "imported pubinfo for W1FEMC020708"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020708"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC020708 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020708 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "bf/MW1FEMC020708.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020708 ;
-        adm:logEntry        bda:LGCCEBBF665CCC748A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD2060509869BC79D
+    bdr:ID0DE56B1F9C000BA8
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.341.V.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC020708 {
         a                   :Instance ;
         skos:prefLabel      "ធម្មតាមហាអនន្តគុណ"@km , "dhammatā mahā anantaguṇ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD2060509869BC79D ;
+            bdr:ID0DE56B1F9C000BA8 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0DE56B1F9C000BA8 , bdr:TTB627125FC4D87E4C , bdr:TTD93749BF64ED6027 , bdr:TTE0F368EBF75A84D6 ;
+        :hasTitle           bdr:TT7357517F6A028CB8 , bdr:TTB627125FC4D87E4C , bdr:TTCCEBBF665CCC748A , bdr:TTE0F368EBF75A84D6 ;
         :instanceHasReproduction  bdr:W1FEMC020708 ;
+        :instanceOf         bdr:WA1FEMC070006 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT4252864C9FA1DA72 ;
+        :note               bdr:NTD93749BF64ED6027 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT4252864C9FA1DA72
+    bdr:NTD93749BF64ED6027
         a                   :Note ;
         :contentLocationStatement  "pg. 130" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT0DE56B1F9C000BA8
+    bdr:TT7357517F6A028CB8
+        a                   :Title ;
+        rdfs:label          "dhammatā mahā anantaguṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB627125FC4D87E4C .
+    
+    bdr:TTB627125FC4D87E4C
         a                   :CoverTitle ;
         rdfs:label          "dhamtār braḥ mahā anandaguṇ"@km-x-twktt .
     
-    bdr:TTB627125FC4D87E4C
-        a                   :Title ;
-        rdfs:label          "dhammatā mahā anantaguṇ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0DE56B1F9C000BA8 .
-    
-    bdr:TTD93749BF64ED6027
-        a                   :CoverTitle ;
-        rdfs:label          "ធម្តារព្រះមហាអនន្ទគុណ"@km .
-    
-    bdr:TTE0F368EBF75A84D6
+    bdr:TTCCEBBF665CCC748A
         a                   :Title ;
         rdfs:label          "ធម្មតាមហាអនន្តគុណ"@km ;
-        :femcConversionOf   bdr:TTD93749BF64ED6027 .
+        :femcConversionOf   bdr:TTE0F368EBF75A84D6 .
+    
+    bdr:TTE0F368EBF75A84D6
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្តារព្រះមហាអនន្ទគុណ"@km .
 }

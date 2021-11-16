@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010325 {
-    bda:LG6CFA7E747006A63B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-13"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010325"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010325"@en , "imported pubinfo for W1FEMC010325"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010325"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010325 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010325 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ba/MW1FEMC010325.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010325 ;
-        adm:logEntry        bda:LG6CFA7E747006A63B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDEE0F84673905F439
+    bdr:IDAE3B2681F1A36257
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "048-PP.03.03.03.III.6" .
     
-    bdr:MF2A8C4F6527D53D04
+    bdr:MFFF532854950BFEF1
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "15" ;
         :microfilmStrip     "63" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010325 {
         a                   :Instance ;
         skos:prefLabel      "អានិសង្សចម្លងបុណ្យ"@km , "ānisaṅs camlaṅ puṇy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDEE0F84673905F439 ;
+            bdr:IDAE3B2681F1A36257 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT3D5FB51F1BA70025 , bdr:TT80EF25C7E7C24548 , bdr:TTAE3B2681F1A36257 , bdr:TTF0518E3BACD7FA5A ;
+        :hasTitle           bdr:TT3D5FB51F1BA70025 , bdr:TT4998729CD93EBDE3 , bdr:TT6CFA7E747006A63B , bdr:TTF0518E3BACD7FA5A ;
         :instanceHasReproduction  bdr:W1FEMC010325 ;
+        :instanceOf         bdr:WA1FEMC060011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF2A8C4F6527D53D04 ;
-        :note               bdr:NTFF532854950BFEF1 ;
+        :microfilmItem      bdr:MFFF532854950BFEF1 ;
+        :note               bdr:NT80EF25C7E7C24548 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTFF532854950BFEF1
+    bdr:NT80EF25C7E7C24548
         a                   :Note ;
         :contentLocationStatement  "pg. 117" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT3D5FB51F1BA70025
-        a                   :Title ;
-        rdfs:label          "ānisaṅs camlaṅ puṇy"@km-x-twktt ;
-        :femcConversionOf   bdr:TTAE3B2681F1A36257 .
-    
-    bdr:TT80EF25C7E7C24548
-        a                   :CoverTitle ;
-        rdfs:label          "ចំម្លងបុន"@km .
-    
-    bdr:TTAE3B2681F1A36257
         a                   :CoverTitle ;
         rdfs:label          "caṃlaṅ pun"@km-x-twktt .
     
-    bdr:TTF0518E3BACD7FA5A
+    bdr:TT4998729CD93EBDE3
+        a                   :Title ;
+        rdfs:label          "ānisaṅs camlaṅ puṇy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3D5FB51F1BA70025 .
+    
+    bdr:TT6CFA7E747006A63B
         a                   :Title ;
         rdfs:label          "អានិសង្សចម្លងបុណ្យ"@km ;
-        :femcConversionOf   bdr:TT80EF25C7E7C24548 .
+        :femcConversionOf   bdr:TTF0518E3BACD7FA5A .
+    
+    bdr:TTF0518E3BACD7FA5A
+        a                   :CoverTitle ;
+        rdfs:label          "ចំម្លងបុន"@km .
 }

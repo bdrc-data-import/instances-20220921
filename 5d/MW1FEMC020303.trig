@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020303 {
-    bda:LG35CBF0B6691A4908
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020303"@en ;
-        adm:logWho          bdu:U00085 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020303"@en , "imported pubinfo for W1FEMC020303"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020303"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020303 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020303 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "5d/MW1FEMC020303.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020303 ;
-        adm:logEntry        bda:LG35CBF0B6691A4908 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID2100E8D655649E4E
+    bdr:IDFBD7CF5651F8CA22
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.196.II.1" .
     
-    bdr:MFB9B920917058EB01
+    bdr:MFEC9DF576E7ECE433
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "63" ;
         :microfilmStrip     "157" .
@@ -56,32 +50,31 @@ bdg:MW1FEMC020303 {
         a                   :Instance ;
         skos:prefLabel      "ស្តេចក្មេង"@km , "stec kmeṅ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2100E8D655649E4E ;
+            bdr:IDFBD7CF5651F8CA22 ;
         :hasFascicles       "1, 2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TTB94871DDD95502FC , bdr:TTFBD7CF5651F8CA22 ;
+        :hasTitle           bdr:TT1269B69872C983EB , bdr:TT35CBF0B6691A4908 ;
         :instanceHasReproduction  bdr:W1FEMC020303 ;
+        :instanceOf         bdr:WA1FEMC120034 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB9B920917058EB01 ;
-        :note               bdr:NTEC9DF576E7ECE433 ;
+        :microfilmItem      bdr:MFEC9DF576E7ECE433 ;
+        :note               bdr:NTB94871DDD95502FC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "606" .
     
-    bdr:NTEC9DF576E7ECE433
+    bdr:NTB94871DDD95502FC
         a                   :Note ;
         :contentLocationStatement  "pg. 60" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TTB94871DDD95502FC
-        a                   :Title ;
-        rdfs:label          "ស្តេចក្មេង"@km .
-    
-    bdr:TTFBD7CF5651F8CA22
+    bdr:TT1269B69872C983EB
         a                   :Title ;
         rdfs:label          "stec kmeṅ"@km-x-twktt .
+    
+    bdr:TT35CBF0B6691A4908
+        a                   :Title ;
+        rdfs:label          "ស្តេចក្មេង"@km .
 }

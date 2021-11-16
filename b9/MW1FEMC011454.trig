@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011454 {
-    bda:LG256290D2A45D115C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011454"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011454"@en , "imported pubinfo for W1FEMC011454"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011454"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011454 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011454 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b9/MW1FEMC011454.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011454 ;
-        adm:logEntry        bda:LG256290D2A45D115C , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF4FF315D0A8026CF
+    bdr:ID70E868DEB36612BE
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "026-A.10.07.03.II.1" .
     
-    bdr:MF082CFE748822AECC
+    bdr:MFB081E6C26717E87E
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "36" ;
         :microfilmStrip     "73" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011454 {
         a                   :Instance ;
         skos:prefLabel      "កងកប"@km , "kaṅ kap"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF4FF315D0A8026CF ;
+            bdr:ID70E868DEB36612BE ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT01C532F9EA721214 , bdr:TT1063EBB8E2B1294D , bdr:TT70E868DEB36612BE , bdr:TTC75F6A1E1C4F9971 ;
+        :hasTitle           bdr:TT01C532F9EA721214 , bdr:TT1063EBB8E2B1294D , bdr:TT256290D2A45D115C , bdr:TT494CDBD7C8AA595E ;
         :instanceHasReproduction  bdr:W1FEMC011454 ;
+        :instanceOf         bdr:WA1FEMC120019 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF082CFE748822AECC ;
-        :note               bdr:NTB081E6C26717E87E ;
+        :microfilmItem      bdr:MFB081E6C26717E87E ;
+        :note               bdr:NTC75F6A1E1C4F9971 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB081E6C26717E87E
+    bdr:NTC75F6A1E1C4F9971
         a                   :Note ;
         :contentLocationStatement  "pg. 336" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT01C532F9EA721214
-        a                   :Title ;
-        rdfs:label          "kaṅ kap"@km-x-twktt ;
-        :femcConversionOf   bdr:TT70E868DEB36612BE .
-    
-    bdr:TT1063EBB8E2B1294D
-        a                   :Title ;
-        rdfs:label          "កងកប"@km ;
-        :femcConversionOf   bdr:TTC75F6A1E1C4F9971 .
-    
-    bdr:TT70E868DEB36612BE
         a                   :CoverTitle ;
         rdfs:label          "kuṅ kabb"@km-x-twktt .
     
-    bdr:TTC75F6A1E1C4F9971
+    bdr:TT1063EBB8E2B1294D
         a                   :CoverTitle ;
         rdfs:label          "កុងកព្វ"@km .
+    
+    bdr:TT256290D2A45D115C
+        a                   :Title ;
+        rdfs:label          "កងកប"@km ;
+        :femcConversionOf   bdr:TT1063EBB8E2B1294D .
+    
+    bdr:TT494CDBD7C8AA595E
+        a                   :Title ;
+        rdfs:label          "kaṅ kap"@km-x-twktt ;
+        :femcConversionOf   bdr:TT01C532F9EA721214 .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011318 {
-    bda:LGC1097B89C31E186A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-17"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011318"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011318"@en , "imported pubinfo for W1FEMC011318"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011318"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011318 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011318 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c4/MW1FEMC011318.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011318 ;
-        adm:logEntry        bda:LGC1097B89C31E186A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD2DE6F05CF21D551
+    bdr:IDC90A3D6ECA364661
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "010-A.09.01.01.III.1" .
     
-    bdr:MF01EEF09CD4925BCF
+    bdr:MF81107485C7A1FEC0
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "54" ;
         :microfilmStrip     "143" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011318 {
         a                   :Instance ;
         skos:prefLabel      "ពុទ្ធរតនបញ្ហា"@pi-khmr , "buddh ratanapañhā"@pi-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD2DE6F05CF21D551 ;
+            bdr:IDC90A3D6ECA364661 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT55245A765F02B124 , bdr:TTC90A3D6ECA364661 , bdr:TTC9C7673426974B21 , bdr:TTEB89822EA5FF6E83 ;
+        :hasTitle           bdr:TT55245A765F02B124 , bdr:TTC1097B89C31E186A , bdr:TTEB89822EA5FF6E83 , bdr:TTFFF2AC532C828CB4 ;
         :instanceHasReproduction  bdr:W1FEMC011318 ;
+        :instanceOf         bdr:WA1FEMC010019 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangPi ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF01EEF09CD4925BCF ;
-        :note               bdr:NT81107485C7A1FEC0 ;
+        :microfilmItem      bdr:MF81107485C7A1FEC0 ;
+        :note               bdr:NTC9C7673426974B21 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT81107485C7A1FEC0
+    bdr:NTC9C7673426974B21
         a                   :Note ;
         :contentLocationStatement  "pg. 309" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT55245A765F02B124
-        a                   :Title ;
-        rdfs:label          "buddh ratanapañhā"@pi-x-twktt ;
-        :femcConversionOf   bdr:TTC90A3D6ECA364661 .
-    
-    bdr:TTC90A3D6ECA364661
         a                   :CoverTitle ;
         rdfs:label          "buddh ratanapaṇhā"@pi-x-twktt .
     
-    bdr:TTC9C7673426974B21
+    bdr:TTC1097B89C31E186A
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធរតនបញ្ហា"@pi-khmr ;
+        :femcConversionOf   bdr:TTEB89822EA5FF6E83 .
+    
+    bdr:TTEB89822EA5FF6E83
         a                   :CoverTitle ;
         rdfs:label          "ពុទ្ធរតនបណ្ហា"@pi-khmr .
     
-    bdr:TTEB89822EA5FF6E83
+    bdr:TTFFF2AC532C828CB4
         a                   :Title ;
-        rdfs:label          "ពុទ្ធរតនបញ្ហា"@pi-khmr ;
-        :femcConversionOf   bdr:TTC9C7673426974B21 .
+        rdfs:label          "buddh ratanapañhā"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT55245A765F02B124 .
 }

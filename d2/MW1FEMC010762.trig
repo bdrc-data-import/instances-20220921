@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010762 {
-    bda:LG0FD144223874F36B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010762"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010762"@en , "imported pubinfo for W1FEMC010762"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010762"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010762 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010762 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "d2/MW1FEMC010762.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010762 ;
-        adm:logEntry        bda:LG0FD144223874F36B , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDCF98AEB9CC99E6BB
+    bdr:IDBAB1F0152CFB648A
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "033-A.03.08.01.III.1" .
     
-    bdr:MFC15D6593CF52F478
+    bdr:MFFB0FA07363866F13
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "49" ;
         :microfilmStrip     "124" .
@@ -55,31 +49,30 @@ bdg:MW1FEMC010762 {
         a                   :Instance ;
         skos:prefLabel      "ទេវទូតធម៏"@km , "devadūt dhaṛm"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCF98AEB9CC99E6BB ;
+            bdr:IDBAB1F0152CFB648A ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT1452A9BCC05BFB92 , bdr:TTBAB1F0152CFB648A ;
+        :hasTitle           bdr:TT0A69800671BAD11D , bdr:TT0FD144223874F36B ;
         :instanceHasReproduction  bdr:W1FEMC010762 ;
+        :instanceOf         bdr:WA1FEMC010025 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC15D6593CF52F478 ;
-        :note               bdr:NTFB0FA07363866F13 ;
+        :microfilmItem      bdr:MFFB0FA07363866F13 ;
+        :note               bdr:NT1452A9BCC05BFB92 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTFB0FA07363866F13
+    bdr:NT1452A9BCC05BFB92
         a                   :Note ;
         :contentLocationStatement  "pg. 203" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT1452A9BCC05BFB92
-        a                   :Title ;
-        rdfs:label          "ទេវទូតធម៏"@km .
-    
-    bdr:TTBAB1F0152CFB648A
+    bdr:TT0A69800671BAD11D
         a                   :Title ;
         rdfs:label          "devadūt dhaṛm"@km-x-twktt .
+    
+    bdr:TT0FD144223874F36B
+        a                   :Title ;
+        rdfs:label          "ទេវទូតធម៏"@km .
 }

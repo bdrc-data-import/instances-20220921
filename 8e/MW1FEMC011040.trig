@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011040 {
-    bda:LG773D7A706C0F9BE2
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011040"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011040"@en , "imported pubinfo for W1FEMC011040"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011040"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011040 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011040 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "8e/MW1FEMC011040.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011040 ;
-        adm:logEntry        bda:LG773D7A706C0F9BE2 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID29EFDCF1F91C8C96
+    bdr:ID0CB2381F30963ACA
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "050-A.04.07.01.III.2" .
     
-    bdr:MF12457B06841741A4
+    bdr:MFEAD2655B768D0BD3
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "81" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011040 {
         a                   :Instance ;
         skos:prefLabel      "គិរិមានន្ទសូត្រ"@km , "girimānand sūtr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID29EFDCF1F91C8C96 ;
+            bdr:ID0CB2381F30963ACA ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0CB2381F30963ACA , bdr:TT2575CE32FC8BF40D , bdr:TT9531302187539BCB , bdr:TTF6B23C31DF0D4FEE ;
+        :hasTitle           bdr:TT773D7A706C0F9BE2 , bdr:TT9531302187539BCB , bdr:TTE0CDBB2A47077CD8 , bdr:TTF6B23C31DF0D4FEE ;
         :instanceHasReproduction  bdr:W1FEMC011040 ;
+        :instanceOf         bdr:WA1FEMC020021 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF12457B06841741A4 ;
-        :note               bdr:NTEAD2655B768D0BD3 ;
+        :microfilmItem      bdr:MFEAD2655B768D0BD3 ;
+        :note               bdr:NT2575CE32FC8BF40D ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTEAD2655B768D0BD3
+    bdr:NT2575CE32FC8BF40D
         a                   :Note ;
         :contentLocationStatement  "pg. 255" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT0CB2381F30963ACA
-        a                   :CoverTitle ;
-        rdfs:label          "girīmānand ther"@km-x-twktt .
+    bdr:TT773D7A706C0F9BE2
+        a                   :Title ;
+        rdfs:label          "គិរិមានន្ទសូត្រ"@km ;
+        :femcConversionOf   bdr:TT9531302187539BCB .
     
-    bdr:TT2575CE32FC8BF40D
+    bdr:TT9531302187539BCB
         a                   :CoverTitle ;
         rdfs:label          "គិរីមានន្ទថេរ"@km .
     
-    bdr:TT9531302187539BCB
-        a                   :Title ;
-        rdfs:label          "គិរិមានន្ទសូត្រ"@km ;
-        :femcConversionOf   bdr:TT2575CE32FC8BF40D .
-    
-    bdr:TTF6B23C31DF0D4FEE
+    bdr:TTE0CDBB2A47077CD8
         a                   :Title ;
         rdfs:label          "girimānand sūtr"@km-x-twktt ;
-        :femcConversionOf   bdr:TT0CB2381F30963ACA .
+        :femcConversionOf   bdr:TTF6B23C31DF0D4FEE .
+    
+    bdr:TTF6B23C31DF0D4FEE
+        a                   :CoverTitle ;
+        rdfs:label          "girīmānand ther"@km-x-twktt .
 }

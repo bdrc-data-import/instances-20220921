@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020480 {
-    bda:LGE8A79A67661FD0FE
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2009-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020480"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020480"@en , "imported pubinfo for W1FEMC020480"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020480"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020480 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020480 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a6/MW1FEMC020480.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020480 ;
-        adm:logEntry        bda:LGE8A79A67661FD0FE , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID9B1DACC166F14DBF
+    bdr:ID383FF5F6C2F6D512
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.113.II.1" .
     
-    bdr:MFC0636EE8414CADB7
+    bdr:MF22E819778538FAFA
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "69" ;
         :microfilmStrip     "163" .
@@ -56,41 +50,40 @@ bdg:MW1FEMC020480 {
         a                   :Instance ;
         skos:prefLabel      "ស្តេចកំព្រា"@km , "stec kaṃbrā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID9B1DACC166F14DBF ;
+            bdr:ID383FF5F6C2F6D512 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT0C97F3B7B1BB664E , bdr:TT383FF5F6C2F6D512 , bdr:TTF8DDD369078094A4 , bdr:TTFEF815836ECB4A19 ;
+        :hasTitle           bdr:TT0C97F3B7B1BB664E , bdr:TTC5FA91F6BFF3E78C , bdr:TTE8A79A67661FD0FE , bdr:TTF8DDD369078094A4 ;
         :instanceHasReproduction  bdr:W1FEMC020480 ;
+        :instanceOf         bdr:WA1FEMC120088 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFC0636EE8414CADB7 ;
-        :note               bdr:NT22E819778538FAFA ;
+        :microfilmItem      bdr:MF22E819778538FAFA ;
+        :note               bdr:NTFEF815836ECB4A19 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT22E819778538FAFA
+    bdr:NTFEF815836ECB4A19
         a                   :Note ;
         :contentLocationStatement  "pg. 93" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT0C97F3B7B1BB664E
-        a                   :Title ;
-        rdfs:label          "ស្តេចកំព្រា"@km ;
-        :femcConversionOf   bdr:TTFEF815836ECB4A19 .
-    
-    bdr:TT383FF5F6C2F6D512
-        a                   :CoverTitle ;
-        rdfs:label          "stec kaṃm-brār"@km-x-twktt .
-    
-    bdr:TTF8DDD369078094A4
-        a                   :Title ;
-        rdfs:label          "stec kaṃbrā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT383FF5F6C2F6D512 .
-    
-    bdr:TTFEF815836ECB4A19
         a                   :CoverTitle ;
         rdfs:label          "ស្តេចកំមព្រារ"@km .
+    
+    bdr:TTC5FA91F6BFF3E78C
+        a                   :Title ;
+        rdfs:label          "stec kaṃbrā"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF8DDD369078094A4 .
+    
+    bdr:TTE8A79A67661FD0FE
+        a                   :Title ;
+        rdfs:label          "ស្តេចកំព្រា"@km ;
+        :femcConversionOf   bdr:TT0C97F3B7B1BB664E .
+    
+    bdr:TTF8DDD369078094A4
+        a                   :CoverTitle ;
+        rdfs:label          "stec kaṃm-brār"@km-x-twktt .
 }

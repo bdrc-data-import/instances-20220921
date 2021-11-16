@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020242 {
-    bda:LG59C53423D1D5C94C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020242"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020242"@en , "imported pubinfo for W1FEMC020242"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020242"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020242 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020242 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "e1/MW1FEMC020242.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020242 ;
-        adm:logEntry        bda:LG59C53423D1D5C94C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDD60B60ADB9A3D082
+    bdr:IDDD49DF6EA7B723D9
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "b.135.III.3" .
     
-    bdr:MF54E9EDEBA56ED019
+    bdr:MF93EEE4E0D0590A95
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "62" ;
         :microfilmStrip     "156" .
@@ -56,42 +50,41 @@ bdg:MW1FEMC020242 {
         a                   :Instance ;
         skos:prefLabel      "ត្រៃសរណគមន៍"@km , "trai saraṇagaman"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD60B60ADB9A3D082 ;
+            bdr:IDDD49DF6EA7B723D9 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT18EC19D962B3A307 , bdr:TT42442CBC4FE63CF6 , bdr:TTD74421751F13A533 , bdr:TTDD49DF6EA7B723D9 ;
+        :hasTitle           bdr:TT18EC19D962B3A307 , bdr:TT42442CBC4FE63CF6 , bdr:TT59C53423D1D5C94C , bdr:TTB8595D3859119D83 ;
         :instanceHasReproduction  bdr:W1FEMC020242 ;
+        :instanceOf         bdr:WA1FEMC010071 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF54E9EDEBA56ED019 ;
-        :note               bdr:NT93EEE4E0D0590A95 ;
+        :microfilmItem      bdr:MF93EEE4E0D0590A95 ;
+        :note               bdr:NTD74421751F13A533 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr ;
         :workKDPPOldId      "1050" .
     
-    bdr:NT93EEE4E0D0590A95
+    bdr:NTD74421751F13A533
         a                   :Note ;
         :contentLocationStatement  "pg. 48" ;
         :noteSource         bdr:W1FEMC02 .
     
     bdr:TT18EC19D962B3A307
-        a                   :Title ;
-        rdfs:label          "trai saraṇagaman"@km-x-twktt ;
-        :femcConversionOf   bdr:TTDD49DF6EA7B723D9 .
+        a                   :CoverTitle ;
+        rdfs:label          "trai saraṇagamman"@km-x-twktt .
     
     bdr:TT42442CBC4FE63CF6
-        a                   :Title ;
-        rdfs:label          "ត្រៃសរណគមន៍"@km ;
-        :femcConversionOf   bdr:TTD74421751F13A533 .
-    
-    bdr:TTD74421751F13A533
         a                   :CoverTitle ;
         rdfs:label          "ត្រៃសរណគម្មន៍"@km .
     
-    bdr:TTDD49DF6EA7B723D9
-        a                   :CoverTitle ;
-        rdfs:label          "trai saraṇagamman"@km-x-twktt .
+    bdr:TT59C53423D1D5C94C
+        a                   :Title ;
+        rdfs:label          "ត្រៃសរណគមន៍"@km ;
+        :femcConversionOf   bdr:TT42442CBC4FE63CF6 .
+    
+    bdr:TTB8595D3859119D83
+        a                   :Title ;
+        rdfs:label          "trai saraṇagaman"@km-x-twktt ;
+        :femcConversionOf   bdr:TT18EC19D962B3A307 .
 }

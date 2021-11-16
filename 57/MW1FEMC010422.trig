@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010422 {
-    bda:LG6EE5599D1E2CE36A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010422"@en ;
-        adm:logWho          bdu:U00086 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010422"@en , "imported pubinfo for W1FEMC010422"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010422"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010422 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010422 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "57/MW1FEMC010422.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010422 ;
-        adm:logEntry        bda:LG6EE5599D1E2CE36A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID3D8A7B7DE0C868CA
+    bdr:ID09671BA8096BFD77
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "015*-PP.03.03.03.III.3" .
     
-    bdr:MFF890EEC2478C0F9D
+    bdr:MF8EFA5D2748CBB059
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "28" ;
         :microfilmStrip     "40" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC010422 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យសិក្ខាបទវណ្ណនា"@km , "vinăy sikkhāpad vaṇṇanā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3D8A7B7DE0C868CA ;
+            bdr:ID09671BA8096BFD77 ;
         :hasFascicles       "3" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT09671BA8096BFD77 , bdr:TT4ECE48A74BAA07D8 , bdr:TT69F6301578E371FC , bdr:TT7D6A88F832C312CA ;
+        :hasTitle           bdr:TT4ECE48A74BAA07D8 , bdr:TT6EE5599D1E2CE36A , bdr:TT7D6A88F832C312CA , bdr:TTAC01A0409FEDF4BA ;
         :instanceHasReproduction  bdr:W1FEMC010422 ;
+        :instanceOf         bdr:WA1FEMC030036 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFF890EEC2478C0F9D ;
-        :note               bdr:NT8EFA5D2748CBB059 ;
+        :microfilmItem      bdr:MF8EFA5D2748CBB059 ;
+        :note               bdr:NT69F6301578E371FC ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT8EFA5D2748CBB059
+    bdr:NT69F6301578E371FC
         a                   :Note ;
         :contentLocationStatement  "pg. 135" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT09671BA8096BFD77
-        a                   :CoverTitle ;
-        rdfs:label          "vinăy sikkhā văṇṇanār"@km-x-twktt .
-    
     bdr:TT4ECE48A74BAA07D8
-        a                   :Title ;
-        rdfs:label          "វិន័យសិក្ខាបទវណ្ណនា"@km ;
-        :femcConversionOf   bdr:TT69F6301578E371FC .
-    
-    bdr:TT69F6301578E371FC
         a                   :CoverTitle ;
         rdfs:label          "វិន័យសិក្ខាវ័ណ្ណនារ"@km .
     
+    bdr:TT6EE5599D1E2CE36A
+        a                   :Title ;
+        rdfs:label          "វិន័យសិក្ខាបទវណ្ណនា"@km ;
+        :femcConversionOf   bdr:TT4ECE48A74BAA07D8 .
+    
     bdr:TT7D6A88F832C312CA
+        a                   :CoverTitle ;
+        rdfs:label          "vinăy sikkhā văṇṇanār"@km-x-twktt .
+    
+    bdr:TTAC01A0409FEDF4BA
         a                   :Title ;
         rdfs:label          "vinăy sikkhāpad vaṇṇanā"@km-x-twktt ;
-        :femcConversionOf   bdr:TT09671BA8096BFD77 .
+        :femcConversionOf   bdr:TT7D6A88F832C312CA .
 }

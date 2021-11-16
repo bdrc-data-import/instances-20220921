@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC021817 {
-    bda:LG52F2033BF9869D61
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-19"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC021817"@en ;
-        adm:logWho          bdu:U00084 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC021817"@en , "imported pubinfo for W1FEMC021817"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC021817"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,15 +29,15 @@ bdg:MW1FEMC021817 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC021817 ;
         adm:contentProvider  bda:CP043 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "f3/MW1FEMC021817.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC021817 ;
-        adm:logEntry        bda:LG52F2033BF9869D61 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDDDE5F4DA533F6267
+    bdr:ID2A6E988DBCF13314
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d.599.I.1" .
     
@@ -51,40 +45,39 @@ bdg:MW1FEMC021817 {
         a                   :Instance ;
         skos:prefLabel      "ច្បាប់ក្រម"@km , "cpāp' kram"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDDE5F4DA533F6267 ;
+            bdr:ID2A6E988DBCF13314 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT2A6E988DBCF13314 , bdr:TT5B6F75625699C13C , bdr:TTC85A8A1CA538B389 , bdr:TTDBCD4574BB173CCB ;
+        :hasTitle           bdr:TT52F2033BF9869D61 , bdr:TTAAE4299550F832B5 , bdr:TTC85A8A1CA538B389 , bdr:TTDBCD4574BB173CCB ;
         :instanceHasReproduction  bdr:W1FEMC021817 ;
+        :instanceOf         bdr:WA1FEMC100009 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NT875278E1F66E31E8 ;
+        :note               bdr:NT5B6F75625699C13C ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT875278E1F66E31E8
+    bdr:NT5B6F75625699C13C
         a                   :Note ;
         :contentLocationStatement  "pg. 325" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT2A6E988DBCF13314
-        a                   :CoverTitle ;
-        rdfs:label          "cp''āp kraṃm"@km-x-twktt .
+    bdr:TT52F2033BF9869D61
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្រម"@km ;
+        :femcConversionOf   bdr:TTC85A8A1CA538B389 .
     
-    bdr:TT5B6F75625699C13C
+    bdr:TTAAE4299550F832B5
+        a                   :Title ;
+        rdfs:label          "cpāp' kram"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDBCD4574BB173CCB .
+    
+    bdr:TTC85A8A1CA538B389
         a                   :CoverTitle ;
         rdfs:label          "ច្ប៉ាបក្រំម"@km .
     
-    bdr:TTC85A8A1CA538B389
-        a                   :Title ;
-        rdfs:label          "ច្បាប់ក្រម"@km ;
-        :femcConversionOf   bdr:TT5B6F75625699C13C .
-    
     bdr:TTDBCD4574BB173CCB
-        a                   :Title ;
-        rdfs:label          "cpāp' kram"@km-x-twktt ;
-        :femcConversionOf   bdr:TT2A6E988DBCF13314 .
+        a                   :CoverTitle ;
+        rdfs:label          "cp''āp kraṃm"@km-x-twktt .
 }

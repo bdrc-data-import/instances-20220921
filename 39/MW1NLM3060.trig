@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3060 {
+    bda:LGE346B825B51F254A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-11-15T10:34:48.939Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, author, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -21,32 +27,36 @@ bdg:MW1NLM3060 {
     bda:MW1NLM3060  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3060 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "39/MW1NLM3060.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3060 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LGE346B825B51F254A , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM3060  a       :Instance ;
         skos:prefLabel      "bkra shis brtsegs pa sogs/"@bo-x-ewts ;
         :dimensionsStatement  "14x7" ;
-        :hasTitle           bdr:TT68A3F12CA1DC79AE ;
+        :hasTitle           bdr:TT68A3F12CA1DC79AE , bdr:TTAEDA0C3CEE667A9C ;
         :instanceHasReproduction  bdr:W1NLM3060 ;
         :instanceOf         bdr:WA1NLM3060 ;
         :isRoot             true ;
-        :note               bdr:NTAEDA0C3CEE667A9C ;
+        :note               bdr:NT16C3C435A2E50368 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan ;
         :workExtentStatement  "32 ff., 3 ff., 3 ff., 4 ff., 4 ff., 7ff., 2ff., 3 ff., 3ff., 2ff., 4 ff., 9 ff., 8 ff., 6ff., 11ff., 3 ff., 7ff.," .
     
-    bdr:NTAEDA0C3CEE667A9C
+    bdr:NT16C3C435A2E50368
         a                   :Note ;
         :noteText           "nlmId: M0060978"@en .
     
     bdr:TT68A3F12CA1DC79AE
         a                   :Title ;
         rdfs:label          "bkra shis brtsegs pa sogs/"@bo-x-ewts .
+    
+    bdr:TTAEDA0C3CEE667A9C
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa bkra shis brtsegs pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
 }

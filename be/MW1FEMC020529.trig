@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC020529 {
-    bda:LGDE9AA18DBB1D9E08
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC020529"@en ;
-        adm:logWho          bdu:U00088 .
-    
-    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC020529"@en , "imported pubinfo for W1FEMC020529"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC020529"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -35,19 +29,19 @@ bdg:MW1FEMC020529 {
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC020529 ;
         adm:contentProvider  bda:CP041 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "be/MW1FEMC020529.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC020529 ;
-        adm:logEntry        bda:LGDE9AA18DBB1D9E08 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID12FF4801568C4222
+    bdr:ID73037BDD4A502A7F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "d*.162.III.4" .
     
-    bdr:MF943DDAB03D320D9E
+    bdr:MF39DD898265111E25
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "61" ;
         :microfilmStrip     "155" .
@@ -56,40 +50,39 @@ bdg:MW1FEMC020529 {
         a                   :Instance ;
         skos:prefLabel      "ដីកាពាហុំ"@km , "ṭīkā bāhuṃ"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID12FF4801568C4222 ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT73037BDD4A502A7F , bdr:TT8E74BB7D6102B8A8 , bdr:TTAEECD19DDA2E7C27 , bdr:TTBC7A35FF3CA2D76A ;
+            bdr:ID73037BDD4A502A7F ;
+        :hasTitle           bdr:TT25212121B0F8A696 , bdr:TTAEECD19DDA2E7C27 , bdr:TTBC7A35FF3CA2D76A , bdr:TTDE9AA18DBB1D9E08 ;
         :instanceHasReproduction  bdr:W1FEMC020529 ;
+        :instanceOf         bdr:WA1FEMC040011 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF943DDAB03D320D9E ;
-        :note               bdr:NT39DD898265111E25 ;
+        :microfilmItem      bdr:MF39DD898265111E25 ;
+        :note               bdr:NT8E74BB7D6102B8A8 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NT39DD898265111E25
+    bdr:NT8E74BB7D6102B8A8
         a                   :Note ;
         :contentLocationStatement  "pg. 102" ;
         :noteSource         bdr:W1FEMC02 .
     
-    bdr:TT73037BDD4A502A7F
-        a                   :CoverTitle ;
-        rdfs:label          "ṭtīkā bāhuṃ"@km-x-twktt .
+    bdr:TT25212121B0F8A696
+        a                   :Title ;
+        rdfs:label          "ṭīkā bāhuṃ"@km-x-twktt ;
+        :femcConversionOf   bdr:TTBC7A35FF3CA2D76A .
     
-    bdr:TT8E74BB7D6102B8A8
+    bdr:TTAEECD19DDA2E7C27
         a                   :CoverTitle ;
         rdfs:label          "ដ្ដីកាពាហុំ"@km .
     
-    bdr:TTAEECD19DDA2E7C27
+    bdr:TTBC7A35FF3CA2D76A
+        a                   :CoverTitle ;
+        rdfs:label          "ṭtīkā bāhuṃ"@km-x-twktt .
+    
+    bdr:TTDE9AA18DBB1D9E08
         a                   :Title ;
         rdfs:label          "ដីកាពាហុំ"@km ;
-        :femcConversionOf   bdr:TT8E74BB7D6102B8A8 .
-    
-    bdr:TTBC7A35FF3CA2D76A
-        a                   :Title ;
-        rdfs:label          "ṭīkā bāhuṃ"@km-x-twktt ;
-        :femcConversionOf   bdr:TT73037BDD4A502A7F .
+        :femcConversionOf   bdr:TTAEECD19DDA2E7C27 .
 }

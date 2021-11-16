@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010739 {
-    bda:LG680F7BE9A5B05F08
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010739"@en ;
-        adm:logWho          bdu:U00082 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010739"@en , "imported pubinfo for W1FEMC010739"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010739"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010739 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010739 ;
-        adm:facetIndex      14 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "d4/MW1FEMC010739.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010739 ;
-        adm:logEntry        bda:LG680F7BE9A5B05F08 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDA6F46226700866C8
+    bdr:ID842576733342CD8B
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "010-A.03.08.01.III.4" .
     
-    bdr:MF08AB0293567263ED
+    bdr:MFB7B490ECF13D90E9
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "48" ;
         :microfilmStrip     "120" .
@@ -55,49 +49,48 @@ bdg:MW1FEMC010739 {
         a                   :Instance ;
         skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA6F46226700866C8 ;
+            bdr:ID842576733342CD8B ;
         :hasFascicles       "5" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT30D420A7944123F9 , bdr:TT45683F0B5B3B2A28 , bdr:TT842576733342CD8B , bdr:TTC9440EF625C08A77 , bdr:TTE6DACC6AA14694BA , bdr:TTF798338F0AAE5024 ;
+        :hasTitle           bdr:TT30D420A7944123F9 , bdr:TT680F7BE9A5B05F08 , bdr:TTC9440EF625C08A77 , bdr:TTD813F37B9B832338 , bdr:TTE6DACC6AA14694BA , bdr:TTF798338F0AAE5024 ;
         :instanceHasReproduction  bdr:W1FEMC010739 ;
+        :instanceOf         bdr:WA1FEMC040001 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF08AB0293567263ED ;
-        :note               bdr:NTB7B490ECF13D90E9 ;
+        :microfilmItem      bdr:MFB7B490ECF13D90E9 ;
+        :note               bdr:NT45683F0B5B3B2A28 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTB7B490ECF13D90E9
+    bdr:NT45683F0B5B3B2A28
         a                   :Note ;
         :contentLocationStatement  "pg. 199" ;
         :noteSource         bdr:W1FEMC01 .
     
     bdr:TT30D420A7944123F9
         a                   :CoverTitle ;
-        rdfs:label          "kathāvatthu"@km-x-twktt ;
-        :femcConversionOf   bdr:TT842576733342CD8B .
-    
-    bdr:TT45683F0B5B3B2A28
-        a                   :CoverTitle ;
-        rdfs:label          "កថ្ថាវត្ថុ"@km .
-    
-    bdr:TT842576733342CD8B
-        a                   :CoverTitle ;
         rdfs:label          "kaththā vatthu"@km-x-twktt .
     
+    bdr:TT680F7BE9A5B05F08
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+    
     bdr:TTC9440EF625C08A77
+        a                   :CoverTitle ;
+        rdfs:label          "kathāvatthu"@km-x-twktt ;
+        :femcConversionOf   bdr:TT30D420A7944123F9 .
+    
+    bdr:TTD813F37B9B832338
         a                   :Title ;
         rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
     
     bdr:TTE6DACC6AA14694BA
-        a                   :Title ;
-        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+        a                   :CoverTitle ;
+        rdfs:label          "កថាវត្ថុ"@km ;
+        :femcConversionOf   bdr:TTF798338F0AAE5024 .
     
     bdr:TTF798338F0AAE5024
         a                   :CoverTitle ;
-        rdfs:label          "កថាវត្ថុ"@km ;
-        :femcConversionOf   bdr:TT45683F0B5B3B2A28 .
+        rdfs:label          "កថ្ថាវត្ថុ"@km .
 }

@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC011034 {
-    bda:LG748571B74EB2F1E9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-16"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC011034"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC011034"@en , "imported pubinfo for W1FEMC011034"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC011034"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC011034 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC011034 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5f/MW1FEMC011034.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC011034 ;
-        adm:logEntry        bda:LG748571B74EB2F1E9 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDF5FF5818BE4A970E
+    bdr:IDB54D2B75EAB231E7
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "044-A.04.07.01.III.2" .
     
-    bdr:MFB1DDCDF056DB4A89
+    bdr:MFF5AA97E899B3E5AC
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "38" ;
         :microfilmStrip     "81" .
@@ -55,41 +49,40 @@ bdg:MW1FEMC011034 {
         a                   :Instance ;
         skos:prefLabel      "មាតាបិតុឧបដ្ឋានកថា"@km , "mātā pitu Upaṭṭhān kathā"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF5FF5818BE4A970E ;
+            bdr:IDB54D2B75EAB231E7 ;
         :hasFascicles       "2" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT9149910976CB4001 , bdr:TTB212832FF1E232FF , bdr:TTB54D2B75EAB231E7 , bdr:TTDC0E9D2D00844671 ;
+        :hasTitle           bdr:TT6FD4958BB8D28D84 , bdr:TT748571B74EB2F1E9 , bdr:TT9149910976CB4001 , bdr:TTDC0E9D2D00844671 ;
         :instanceHasReproduction  bdr:W1FEMC011034 ;
+        :instanceOf         bdr:WA1FEMC020005 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MFB1DDCDF056DB4A89 ;
-        :note               bdr:NTF5AA97E899B3E5AC ;
+        :microfilmItem      bdr:MFF5AA97E899B3E5AC ;
+        :note               bdr:NTB212832FF1E232FF ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTF5AA97E899B3E5AC
+    bdr:NTB212832FF1E232FF
         a                   :Note ;
         :contentLocationStatement  "pg. 254" ;
         :noteSource         bdr:W1FEMC01 .
     
-    bdr:TT9149910976CB4001
+    bdr:TT6FD4958BB8D28D84
+        a                   :Title ;
+        rdfs:label          "mātā pitu Upaṭṭhān kathā"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDC0E9D2D00844671 .
+    
+    bdr:TT748571B74EB2F1E9
         a                   :Title ;
         rdfs:label          "មាតាបិតុឧបដ្ឋានកថា"@km ;
-        :femcConversionOf   bdr:TTB212832FF1E232FF .
+        :femcConversionOf   bdr:TT9149910976CB4001 .
     
-    bdr:TTB212832FF1E232FF
+    bdr:TT9149910976CB4001
         a                   :CoverTitle ;
         rdfs:label          "មាតាបិតុឧបថ្ថានកថា"@km .
     
-    bdr:TTB54D2B75EAB231E7
+    bdr:TTDC0E9D2D00844671
         a                   :CoverTitle ;
         rdfs:label          "mātā pitu Upaththān kathā"@km-x-twktt .
-    
-    bdr:TTDC0E9D2D00844671
-        a                   :Title ;
-        rdfs:label          "mātā pitu Upaṭṭhān kathā"@km-x-twktt ;
-        :femcConversionOf   bdr:TTB54D2B75EAB231E7 .
 }

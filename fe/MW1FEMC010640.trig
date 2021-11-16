@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC010640 {
-    bda:LG046F3029B9544420
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-07-15"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC010640"@en ;
-        adm:logWho          bdu:U00089 .
-    
-    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 01 workW1FEMC010640"@en , "imported pubinfo for W1FEMC010640"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC010640"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,19 +28,19 @@ bdg:MW1FEMC010640 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC010640 ;
-        adm:facetIndex      13 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "fe/MW1FEMC010640.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC010640 ;
-        adm:logEntry        bda:LG046F3029B9544420 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID49BC42008A059C73
+    bdr:IDFD00529530266E47
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "020-A.02.12.04.III.3" .
     
-    bdr:MF58AC884A43A01EDE
+    bdr:MF3081E53ABDE36FE5
         a                   :ItemMicrofilmAsset ;
         :microfilmCanister  "26" ;
         :microfilmStrip     "33" .
@@ -55,45 +49,44 @@ bdg:MW1FEMC010640 {
         a                   :Instance ;
         skos:prefLabel      "វិន័យ"@km , "vinăy"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID49BC42008A059C73 ;
+            bdr:IDFD00529530266E47 ;
         :hasFascicles       "1" ;
-        :hasInstanceNum     "1" ;
-        :hasTitle           bdr:TT36857CA5474CFE29 , bdr:TT67FF281E13673B5C , bdr:TT7C618E40DF72D54E , bdr:TTFD00529530266E47 ;
+        :hasTitle           bdr:TT046F3029B9544420 , bdr:TT36857CA5474CFE29 , bdr:TT3D3D1BC8242EC14D , bdr:TT67FF281E13673B5C ;
         :instanceHasReproduction  bdr:W1FEMC010640 ;
+        :instanceOf         bdr:WA1FEMC030028 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :microfilmItem      bdr:MF58AC884A43A01EDE ;
-        :note               bdr:NT3081E53ABDE36FE5 , bdr:NT3D9793B177F296A7 ;
+        :microfilmItem      bdr:MF3081E53ABDE36FE5 ;
+        :note               bdr:NT3D9793B177F296A7 , bdr:NT7C618E40DF72D54E ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
-    
-    bdr:NT3081E53ABDE36FE5
-        a                   :Note ;
-        :contentLocationStatement  "pg. 179" ;
-        :noteSource         bdr:W1FEMC01 .
     
     bdr:NT3D9793B177F296A7
         a                   :Note ;
         :noteText           "Should we write (fragment non identifié) ? And in which column ?"@en .
     
-    bdr:TT36857CA5474CFE29
+    bdr:NT7C618E40DF72D54E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 179" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT046F3029B9544420
         a                   :Title ;
         rdfs:label          "វិន័យ"@km ;
-        :femcConversionOf   bdr:TT7C618E40DF72D54E .
+        :femcConversionOf   bdr:TT36857CA5474CFE29 .
     
-    bdr:TT67FF281E13673B5C
-        a                   :Title ;
-        rdfs:label          "vinăy"@km-x-twktt ;
-        :femcConversionOf   bdr:TTFD00529530266E47 .
-    
-    bdr:TT7C618E40DF72D54E
+    bdr:TT36857CA5474CFE29
         a                   :CoverTitle ;
         rdfs:label          "វីន្យៃ"@km .
     
-    bdr:TTFD00529530266E47
+    bdr:TT3D3D1BC8242EC14D
+        a                   :Title ;
+        rdfs:label          "vinăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT67FF281E13673B5C .
+    
+    bdr:TT67FF281E13673B5C
         a                   :CoverTitle ;
         rdfs:label          "vīnaiy°"@km-x-twktt .
 }
