@@ -12,29 +12,25 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC040568 {
-    bda:LGDAC5370D31DEEF61
-        a                   adm:InitialDataCreation ;
-        adm:logMessage      "entered cataloging for W1FEMC040568"@en .
-    
-    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+    bda:LGIM1163D81E  a     adm:InitialDataImport ;
         adm:logAgent        "works-femc04-import.xql" ;
         adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 04 workW1FEMC040568"@en , "imported pubinfo for W1FEMC040568"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC040568"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:MW1FEMC040568
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC040568 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "00/MW1FEMC040568.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC040568 ;
-        adm:logEntry        bda:LGDAC5370D31DEEF61 , bda:LGIM1163D81E ;
+        adm:logEntry        bda:LGIM1163D81E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:IDC97212EE734AB688
+    bdr:ID21C70FFEFFB23E5F
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "0565-B.01.06.01.I.3" .
     
@@ -42,28 +38,28 @@ bdg:MW1FEMC040568 {
         a                   :Instance ;
         skos:prefLabel      "ល្បើកមហាជាតក៍"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC97212EE734AB688 ;
-        :hasTitle           bdr:TT06E7F4A3E1615C24 ;
+            bdr:ID21C70FFEFFB23E5F ;
+        :hasTitle           bdr:TTDAC5370D31DEEF61 ;
         :instanceHasReproduction  bdr:W1FEMC030568 , bdr:W1FEMC040568 ;
+        :instanceOf         bdr:WA1FEMC110046 ;
         :isComplete         true ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTCD4E0E5AD87BCFB7 , bdr:NTF6BAB7EABA12E913 ;
+        :note               bdr:NT06E7F4A3E1615C24 , bdr:NTCD4E0E5AD87BCFB7 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
+    
+    bdr:NT06E7F4A3E1615C24
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
     
     bdr:NTCD4E0E5AD87BCFB7
         a                   :Note ;
         :noteText           "Canister116_Strip210"@en .
     
-    bdr:NTF6BAB7EABA12E913
-        a                   :Note ;
-        :noteSource         bda:PR1FEMC04 ;
-        :noteText           "Catalog" .
-    
-    bdr:TT06E7F4A3E1615C24
+    bdr:TTDAC5370D31DEEF61
         a                   :Title ;
         rdfs:label          "ល្បើកមហាជាតក៍"@km .
 }

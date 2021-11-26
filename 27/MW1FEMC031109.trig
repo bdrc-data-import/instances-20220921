@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC031109 {
-    bda:LGDFA5E6C08969BFCB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-10-05"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC031109"@en ;
-        adm:logWho          bdu:U00083 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC031109"@en , "imported pubinfo for W1FEMC031109"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC031109"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC031109 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031109 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "27/MW1FEMC031109.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031109 ;
-        adm:logEntry        bda:LGDFA5E6C08969BFCB , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID28FF7F593B491157
+    bdr:ID7071B381FAD0D068
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "038-PP.03.03.03.II.1" .
     
@@ -50,30 +44,30 @@ bdg:MW1FEMC031109 {
         a                   :Instance ;
         skos:prefLabel      "ដាវរឿង"@km ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID28FF7F593B491157 ;
+            bdr:ID7071B381FAD0D068 ;
         :hasFascicles       "4" ;
-        :hasTitle           bdr:TT7071B381FAD0D068 , bdr:TTF79FD92E7D5AFDD6 ;
+        :hasTitle           bdr:TT2F165BD05798546D , bdr:TTDFA5E6C08969BFCB ;
         :instanceHasReproduction  bdr:W1FEMC010315 , bdr:W1FEMC031109 ;
+        :instanceOf         bdr:WA1FEMC120030 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTDC977E1ADD91BBCB ;
+        :note               bdr:NTF79FD92E7D5AFDD6 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTDC977E1ADD91BBCB
+    bdr:NTF79FD92E7D5AFDD6
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
     
-    bdr:TT7071B381FAD0D068
-        a                   :Title ;
-        rdfs:label          "ដាវរឿង"@km ;
-        :femcConversionOf   bdr:TTF79FD92E7D5AFDD6 .
-    
-    bdr:TTF79FD92E7D5AFDD6
+    bdr:TT2F165BD05798546D
         a                   :CoverTitle ;
         rdfs:label          "តាវរើង"@km .
+    
+    bdr:TTDFA5E6C08969BFCB
+        a                   :Title ;
+        rdfs:label          "ដាវរឿង"@km ;
+        :femcConversionOf   bdr:TT2F165BD05798546D .
 }

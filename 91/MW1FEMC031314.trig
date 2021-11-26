@@ -12,16 +12,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1FEMC031314 {
-    bda:LGA34C5A51DA833EFB
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2019-10-05"^^xsd:date ;
-        adm:logMessage      "entered cataloging for W1FEMC031314"@en ;
-        adm:logWho          bdu:U00087 .
-    
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC031314"@en , "imported pubinfo for W1FEMC031314"@en ;
+        adm:logMessage      "imported pubinfo for W1FEMC031314"@en ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -34,15 +28,15 @@ bdg:MW1FEMC031314 {
         a                   adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1FEMC031314 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "91/MW1FEMC031314.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC031314 ;
-        adm:logEntry        bda:LGA34C5A51DA833EFB , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:ID0F4566843304741E
+    bdr:ID23909D4736D204DC
         a                   bdr:FEMCManuscriptCode ;
         rdf:value           "008-PP.02.01.01.II.1" .
     
@@ -50,39 +44,39 @@ bdg:MW1FEMC031314 {
         a                   :Instance ;
         skos:prefLabel      "វរនេត្រ​ វរនុជ"@km , "varanetr varanuj"@km-x-twktt ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0F4566843304741E ;
+            bdr:ID23909D4736D204DC ;
         :hasFascicles       "3" ;
-        :hasTitle           bdr:TT23909D4736D204DC , bdr:TT562D025A8EF2F67A , bdr:TT73E9C8175481D35F , bdr:TTB1085D35D7538020 ;
+        :hasTitle           bdr:TT100BA57A28295790 , bdr:TT562D025A8EF2F67A , bdr:TTA34C5A51DA833EFB , bdr:TTB1085D35D7538020 ;
         :instanceHasReproduction  bdr:W1FEMC010140 , bdr:W1FEMC031314 ;
+        :instanceOf         bdr:WA1FEMC120045 ;
         :isComplete         false ;
         :isRoot             true ;
-        :language           bdr:LangKm ;
         :material           bdr:MaterialCoryphaPalmLeaf ;
-        :note               bdr:NTE04AFCB3E4DCB42A ;
+        :note               bdr:NT73E9C8175481D35F ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptKhmr .
     
-    bdr:NTE04AFCB3E4DCB42A
+    bdr:NT73E9C8175481D35F
         a                   :Note ;
         :noteSource         bda:PR1FEMC03 ;
         :noteText           "Catalog" .
     
-    bdr:TT23909D4736D204DC
+    bdr:TT100BA57A28295790
+        a                   :Title ;
+        rdfs:label          "varanetr varanuj"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB1085D35D7538020 .
+    
+    bdr:TT562D025A8EF2F67A
         a                   :CoverTitle ;
         rdfs:label          "វនេត្រវណុជ"@km .
     
-    bdr:TT562D025A8EF2F67A
+    bdr:TTA34C5A51DA833EFB
         a                   :Title ;
         rdfs:label          "វរនេត្រ​ វរនុជ"@km ;
-        :femcConversionOf   bdr:TT23909D4736D204DC .
-    
-    bdr:TT73E9C8175481D35F
-        a                   :CoverTitle ;
-        rdfs:label          "vanetr vaṇuj"@km-x-twktt .
+        :femcConversionOf   bdr:TT562D025A8EF2F67A .
     
     bdr:TTB1085D35D7538020
-        a                   :Title ;
-        rdfs:label          "varanetr varanuj"@km-x-twktt ;
-        :femcConversionOf   bdr:TT73E9C8175481D35F .
+        a                   :CoverTitle ;
+        rdfs:label          "vanetr vaṇuj"@km-x-twktt .
 }
