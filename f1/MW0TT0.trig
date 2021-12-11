@@ -12,33 +12,58 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TT0 {
-    bda:LG56B11EA860104221
+    bda:LG3BD4447996A2D599
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-12-15T16:54:11.735Z"^^xsd:dateTime ;
         adm:logMessage      "added pubinfo"@en ;
         adm:logWho          bdu:U00006 .
     
+    bda:LGCB78E094FB62F44C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-10T08:58:11.735Z"^^xsd:dateTime ;
+        adm:logMessage      "add some actual pubinfo"@en ;
+        adm:logWho          bdu:U00053 .
+    
     bda:MW0TT0  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW0TT0 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f1/MW0TT0.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW0TT0 ;
-        adm:logEntry        bda:LG56B11EA860104221 ;
+        adm:logEntry        bda:LG3BD4447996A2D599 , bda:LGCB78E094FB62F44C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV4D682218A6C4E91F
+        a                   :PublishedEvent ;
+        :notAfter           "1935"^^xsd:gYear ;
+        :notBefore          "1924"^^xsd:gYear .
+    
     bdr:MW0TT0  a           :Instance ;
-        skos:prefLabel      "Taishō Tripitaka"@bo-x-ewts ;
-        :hasTitle           bdr:TT0B4FCBF20541C863 ;
+        skos:prefLabel      "Taishō Tripitaka"@en , "大正新脩大藏經"@zh-hant ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :extentStatement    "100 v." ;
+        :hasTitle           bdr:TT0B4FCBF20541C863 , bdr:TT56B11EA860104221 , bdr:TT9D10BE7E38F64159 ;
+        :instanceEvent      bdr:EV4D682218A6C4E91F ;
         :instanceHasReproduction  bdr:W0TT0 ;
         :instanceOf         bdr:WA0TT0 ;
         :isRoot             true ;
         :numberOfVolumes    100 ;
-        :script             bdr:ScriptTibt .
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "Japan"@en ;
+        :publisherName      "[s.n.]"@en ;
+        :script             bdr:ScriptHani .
     
     bdr:TT0B4FCBF20541C863
         a                   :Title ;
-        rdfs:label          "Taishō Tripitaka"@bo-x-ewts .
+        rdfs:label          "Taishō Tripitaka"@en .
+    
+    bdr:TT56B11EA860104221
+        a                   :Title ;
+        rdfs:label          "Taishō shinshū daizō-kyō"@en .
+    
+    bdr:TT9D10BE7E38F64159
+        a                   :Title ;
+        rdfs:label          "大正新脩大藏經"@zh-hant .
 }
