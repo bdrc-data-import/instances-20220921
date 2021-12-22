@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3443 {
+    bda:LG18A7D32953601F3C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-21T14:19:46.15Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, author, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGIM03915F22  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-08-17T15:51:42.211Z"^^xsd:dateTime ;
@@ -21,34 +27,40 @@ bdg:MW1NLM3443 {
     bda:MW1NLM3443  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3443 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "34/MW1NLM3443.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3443 ;
-        adm:logEntry        bda:LGIM03915F22 ;
+        adm:logEntry        bda:LG18A7D32953601F3C , bda:LGIM03915F22 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:CR7920BCA207CC223F
+        a                   :AgentAsCreator ;
+        :agent              bdr:P84 ;
+        :role               bdr:R0ER0015 .
+    
     bdr:MW1NLM3443  a       :Instance ;
         skos:prefLabel      "dpal gsang ba 'dus pa'i bdag bskyed ngag 'don bkra shis lhun po rgyud pa grwa tshang gi 'don rgyun la rje thams cad mkhyen pas zhus dag mdzad pa sogs/"@bo-x-ewts ;
+        :creator            bdr:CR7920BCA207CC223F ;
         :dimensionsStatement  "30.5x7.5" ;
         :extentStatement    "42 ff., 5 ff., 14 ff., 6 ff., 7 ff., 5 ff., 6-22 ff." ;
         :hasTitle           bdr:TT4193300A52568C1B ;
         :instanceHasReproduction  bdr:W1NLM3443 ;
         :instanceOf         bdr:WA1NLM3443 ;
         :isRoot             true ;
-        :note               bdr:NT0CD662AA84A15F97 , bdr:NT7920BCA207CC223F ;
+        :note               bdr:NT0CD662AA84A15F97 , bdr:NTBE9A7C9D70F0043B ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Manuscript ;
         :script             bdr:ScriptDbuCan .
     
     bdr:NT0CD662AA84A15F97
         a                   :Note ;
-        :noteText           "missingPages: M0061361-010 [Missing page from 1A-5B] Image-159"@en .
-    
-    bdr:NT7920BCA207CC223F
-        a                   :Note ;
         :noteText           "nlmId: M0061361"@en .
+    
+    bdr:NTBE9A7C9D70F0043B
+        a                   :Note ;
+        :noteText           "missingPages: M0061361-010 [Missing page from 1A-5B] Image-159"@en .
     
     bdr:TT4193300A52568C1B
         a                   :Title ;
