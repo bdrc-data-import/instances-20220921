@@ -18,10 +18,15 @@ bdg:MW1FEMC033584 {
         adm:logMessage      "entered cataloging for W1FEMC033584"@en ;
         adm:logWho          bdu:U00090 .
     
-    bda:LGIM4F4FC78A  a     adm:InitialDataImport , adm:UpdateData ;
-        adm:logAgent        "works-femc01-import.xql" , "works-femc03-import.xql" ;
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
         adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
-        adm:logMessage      "imported FEMC 03 workW1FEMC033584"@en , "imported pubinfo for W1FEMC033584"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
         adm:logMethod       bda:BatchMethod .
     
     bda:LGIMF0695A99  a     adm:UpdateData ;
@@ -38,7 +43,7 @@ bdg:MW1FEMC033584 {
         adm:gitPath         "a1/MW1FEMC033584.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1FEMC033584 ;
-        adm:logEntry        bda:LGEE90CF10A9295859 , bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:logEntry        bda:LGEE90CF10A9295859 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:replaceWith     bdr:MW1FEMC043584 ;
         adm:status          bda:StatusWithdrawn .
