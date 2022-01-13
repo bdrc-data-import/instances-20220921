@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS76527 {
-    bda:LGC9FBA668CF3E4ADE
+    bda:LGCA38B0A402F07843
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-01-12T13:28:33.429Z"^^xsd:dateTime ;
+        adm:logMessage      "added bdrc holding note changed to copyright"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD900B039AA42ADEB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-01-10T15:06:33.607Z"^^xsd:dateTime ;
         adm:logMessage      "created work record"@en ;
@@ -21,42 +27,48 @@ bdg:MW8LS76527 {
     bda:MW8LS76527  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS76527 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "39/MW8LS76527.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS76527 ;
-        adm:logEntry        bda:LGC9FBA668CF3E4ADE ;
+        adm:logEntry        bda:LGCA38B0A402F07843 , bda:LGD900B039AA42ADEB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CRF579F073D7A95B25
+    bdr:CR66EE21BDC9D2551E
         a                   :AgentAsCreator ;
         :agent              bdr:P8LS75565 ;
         :role               bdr:R0ER0015 .
     
-    bdr:EV66EE21BDC9D2551E
+    bdr:EVC9FBA668CF3E4ADE
         a                   :PublishedEvent ;
         :notAfter           "2019"^^xsd:gYear ;
         :notBefore          "2005"^^xsd:gYear .
     
     bdr:MW8LS76527  a       :Instance ;
-        skos:prefLabel      "rma dgon gser 'khor/ {dus deb/}"@bo-x-ewts ;
+        skos:prefLabel      "rma dgon gser 'khor/ (dus deb/)"@bo-x-ewts ;
         :biblioNote         "volume 1, 2, 4, 12, 15, 16 are missing"@en ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :creator            bdr:CRF579F073D7A95B25 ;
-        :extentStatement    "50 v. ( 1404 p. )" ;
-        :hasTitle           bdr:TTB2C2DC81676331BD ;
-        :instanceEvent      bdr:EV66EE21BDC9D2551E ;
+        :creator            bdr:CR66EE21BDC9D2551E ;
+        :extentStatement    "v. no. 3, 5, 6, 7, 8, 9, 10, 11, 13, 14." ;
+        :hasTitle           bdr:TTF579F073D7A95B25 ;
+        :instanceEvent      bdr:EVC9FBA668CF3E4ADE ;
         :instanceHasReproduction  bdr:W8LS76527 ;
         :instanceOf         bdr:WA8LS76527 ;
         :isRoot             true ;
+        :note               bdr:NTB2C2DC81676331BD ;
         :numberOfVolumes    50 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "rma yul/"@bo-x-ewts ;
         :publisherName      "rma dgon dge ldan bkra shis chos gling /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS8LS76527 .
     
-    bdr:TTB2C2DC81676331BD
-        a                   :TitlePageTitle ;
-        rdfs:label          "rma dgon gser 'khor/ {dus deb/}"@bo-x-ewts .
+    bdr:NTB2C2DC81676331BD
+        a                   :Note ;
+        :noteText           "BDRC holding:\n\n\nJournal no. 3. = 2005\n\nJournal no. 5. = 2010\nJournal no. 6. = 2011\nJournal no. 7. = 2012\nJournal no. 8. = 2013\nJournal no. 9. = 2014\nJournal no. 10. = 2015\nJournal no. 11. = 2016\n\nJournal no. 13. = 2018\nJournal no. 14. = 2019"@en .
+    
+    bdr:TTF579F073D7A95B25
+        a                   :Title ;
+        rdfs:label          "rma dgon gser 'khor/ (dus deb/)"@bo-x-ewts .
 }
