@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2738 {
+    bda:LG7E9C3A6979C42E00
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-02-07T16:50:34.261Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIMD3D03661  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-11-18T22:29:47.935Z"^^xsd:dateTime ;
@@ -20,40 +26,48 @@ bdg:MW1NLM2738 {
     bda:MW1NLM2738  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2738 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "1b/MW1NLM2738.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2738 ;
-        adm:logEntry        bda:LGIMD3D03661 ;
+        adm:logEntry        bda:LG7E9C3A6979C42E00 , bda:LGIMD3D03661 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2738  a       :Instance ;
-        skos:prefLabel      "shes rab kyi pha rol tu phyin pa stong phrag brgya pa/"@bo-x-ewts ;
+        skos:prefLabel      "'bum/"@bo-x-ewts ;
         :dimensionsStatement  "53x9" ;
         :extentStatement    "294 ff." ;
-        :hasTitle           bdr:TT999339C629EA97A4 ;
+        :hasSourcePrintery  bdr:G3JT12534 ;
+        :hasTitle           bdr:TT999339C629EA97A4 , bdr:TTC0C61201BF8E78AA ;
+        :illustrations      "illustrated" ;
         :instanceHasReproduction  bdr:W1NLM2738 ;
         :instanceOf         bdr:WA1NLM2738 ;
         :isRoot             true ;
-        :note               bdr:NT04B95B9FD7F2F248 , bdr:NTC0C61201BF8E78AA , bdr:NTD95AB8B05F8A2154 ;
+        :note               bdr:NT04B95B9FD7F2F248 , bdr:NT4ED7D33767687C12 , bdr:NTD95AB8B05F8A2154 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "pe cin/"@bo-x-ewts ;
         :script             bdr:ScriptTibt .
     
     bdr:NT04B95B9FD7F2F248
         a                   :Note ;
-        :noteText           "missingPages: M0060656-001 [25, 26 page printed on the same page] Image 47-50"@en .
-    
-    bdr:NTC0C61201BF8E78AA
-        a                   :Note ;
         :noteText           "nlmId: M0060656"@en .
     
-    bdr:NTD95AB8B05F8A2154
+    bdr:NT4ED7D33767687C12
         a                   :Note ;
         :noteText           "coverType: wooden cover"@en .
     
+    bdr:NTD95AB8B05F8A2154
+        a                   :Note ;
+        :noteText           "missingPages: M0060656-001 [25, 26 page printed on the same page] Image 47-50"@en .
+    
     bdr:TT999339C629EA97A4
+        a                   :Title ;
+        rdfs:label          "'bum/"@bo-x-ewts .
+    
+    bdr:TTC0C61201BF8E78AA
         a                   :Title ;
         rdfs:label          "shes rab kyi pha rol tu phyin pa stong phrag brgya pa/"@bo-x-ewts .
 }
