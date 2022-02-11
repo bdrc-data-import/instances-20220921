@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM2760 {
+    bda:LG3855B680E151BC9A
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-02-10T09:52:14.075Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIMD3D03661  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2020-11-18T22:29:47.935Z"^^xsd:dateTime ;
@@ -20,40 +26,44 @@ bdg:MW1NLM2760 {
     bda:MW1NLM2760  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM2760 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "da/MW1NLM2760.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM2760 ;
-        adm:logEntry        bda:LGIMD3D03661 ;
+        adm:logEntry        bda:LG3855B680E151BC9A , bda:LGIMD3D03661 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM2760  a       :Instance ;
-        skos:prefLabel      "'phags pa gser 'od dam pa mdo sde'i dbang po rgyal po zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
+        skos:prefLabel      "gser 'od dam pa mdo sde'i dbang po'i rgyal po/"@bo-x-ewts ;
         :dimensionsStatement  "36x8.5" ;
         :extentStatement    "199 ff." ;
-        :hasTitle           bdr:TT2FF8F00ACB0E8D25 ;
+        :hasTitle           bdr:TT2FF8F00ACB0E8D25 , bdr:TT6038DA826C67665E ;
         :instanceHasReproduction  bdr:W1NLM2760 ;
         :instanceOf         bdr:WA1NLM2760 ;
         :isRoot             true ;
-        :note               bdr:NT2C66A02A57BF1364 , bdr:NT4BBD6AEA7555E322 , bdr:NT6038DA826C67665E ;
+        :note               bdr:NT2C66A02A57BF1364 , bdr:NT4BBD6AEA7555E322 , bdr:NT67D404B2EC15E290 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
         :script             bdr:ScriptTibt .
     
     bdr:NT2C66A02A57BF1364
         a                   :Note ;
-        :noteText           "missingPages: M0060678-001 [Page 55 double numbered] Image 109-112"@en .
+        :noteText           "nlmId: M0060678"@en .
     
     bdr:NT4BBD6AEA7555E322
         a                   :Note ;
-        :noteText           "coverType:  n/a"@en .
+        :noteText           "missingPages: M0060678-001 [Page 55 double numbered] Image 109-112"@en .
     
-    bdr:NT6038DA826C67665E
+    bdr:NT67D404B2EC15E290
         a                   :Note ;
-        :noteText           "nlmId: M0060678"@en .
+        :noteText           "coverType:  n/a"@en .
     
     bdr:TT2FF8F00ACB0E8D25
         a                   :Title ;
+        rdfs:label          "gser 'od dam pa mdo sde'i dbang po'i rgyal po/"@bo-x-ewts .
+    
+    bdr:TT6038DA826C67665E
+        a                   :TitlePageTitle ;
         rdfs:label          "'phags pa gser 'od dam pa mdo sde'i dbang po rgyal po zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
 }
