@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS18955 {
+    bda:LG229D75F92A5AD9FB
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-02-27T18:35:56.603Z"^^xsd:dateTime ;
+        adm:logMessage      "removed double series name"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LG87831EB20A2273F3
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-04-24T10:48:30.31Z"^^xsd:dateTime ;
@@ -20,11 +26,11 @@ bdg:MW8LS18955 {
     bda:MW8LS18955  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW8LS18955 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "cd/MW8LS18955.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS18955 ;
-        adm:logEntry        bda:LG87831EB20A2273F3 ;
+        adm:logEntry        bda:LG229D75F92A5AD9FB , bda:LG87831EB20A2273F3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -33,7 +39,7 @@ bdg:MW8LS18955 {
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787105122578" .
     
-    bdr:MW8LS18955  a       :Instance ;
+    bdr:MW8LS18955  a       :Instance , :SerialInstance ;
         skos:prefLabel      "snyan rtsom thor bu phyogs sdebs mkhas pa'i 'jug sgo/smad cha/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
             bdr:ID32F82854E1860A90 ;
@@ -48,7 +54,8 @@ bdg:MW8LS18955 {
         :publisherLocation  "pe cin/"@en ;
         :publisherName      "mi rigs dpe skrun khang /"@en ;
         :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS8LS18955 .
+        :serialInstanceOf   bdr:WAS8LS18955 ;
+        :seriesNumber       "08" .
     
     bdr:TTEA42BDED022376D8
         a                   :TitlePageTitle ;
