@@ -12,16 +12,35 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ368769 {
+    bda:LGA87131C73F7BA7CD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2022-03-01T14:44:25.299Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:MW4CZ368769  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW4CZ368769 ;
+        adm:facetIndex      4 ;
         adm:gitPath         "ee/MW4CZ368769.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ368769 ;
+        adm:logEntry        bda:LGA87131C73F7BA7CD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW4CZ368769  a      :Instance ;
+        skos:prefLabel      "rgya bod shan sbyar gyi gtam dpe/"@bo-x-ewts , "汉藏谚语"@zh-hans ;
+        :hasTitle           bdr:TT09BD3A3466873160 , bdr:TTFC862DEABD744665 ;
         :instanceOf         bdr:WA4CZ368769 ;
-        :isRoot             true .
+        :isRoot             true ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT09BD3A3466873160
+        a                   :Title ;
+        rdfs:label          "汉藏谚语"@zh-hans .
+    
+    bdr:TTFC862DEABD744665
+        a                   :Title ;
+        rdfs:label          "rgya bod shan sbyar gyi gtam dpe/"@bo-x-ewts .
 }
