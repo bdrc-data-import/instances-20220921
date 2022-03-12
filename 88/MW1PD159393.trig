@@ -12,20 +12,25 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD159393 {
-    bda:LG662083476D92F28F
+    bda:LG2EEB56A9F77B1C42
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-21T21:06:32.399Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG333D7B430B7AD47C
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-03-11T14:58:53.87Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC9F0013724485E6C
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-17T23:47:06.732Z"^^xsd:dateTime ;
         adm:logMessage      "dpe skrun gyi gnas tshul gsar snon byas"@en ;
         adm:logWho          bdu:U00021 .
     
-    bda:LGADAD1D042FD90BD7
+    bda:LGDAF0DB196F24A1A9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-03-28T14:26:27.691Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00021 .
-    
-    bda:LGDAF0DB196F24A1A9
-        a                   adm:UpdateData ;
-        adm:logDate         "2017-05-21T21:06:32.399Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:LGIM6B433BA01E
@@ -38,31 +43,33 @@ bdg:MW1PD159393 {
     bda:MW1PD159393  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1PD159393 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "88/MW1PD159393.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD159393 ;
-        adm:logEntry        bda:LG662083476D92F28F , bda:LGADAD1D042FD90BD7 , bda:LGDAF0DB196F24A1A9 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG2EEB56A9F77B1C42 , bda:LG333D7B430B7AD47C , bda:LGC9F0013724485E6C , bda:LGDAF0DB196F24A1A9 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV36F22C57575F1A0C
+    bdr:EV662083476D92F28F
         a                   :PublishedEvent ;
         :onYear             "2012"^^xsd:gYear .
     
-    bdr:ID954A41F1DE8D0462
+    bdr:ID94A0AB0979ABAC45
         a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
         rdf:value           "9787542120380" .
     
     bdr:MW1PD159393  a      :Instance ;
-        skos:prefLabel      "kun bzang theg mchog ye shes bstan pa'i rdo rje'i gsung 'bum/"@bo-x-ewts ;
+        skos:altLabel       "耿桑塔确益喜多结全集"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/ kun bzang theg mchog ye shes bstan pa/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID954A41F1DE8D0462 ;
+            bdr:ID94A0AB0979ABAC45 ;
         :authorshipStatement  "rtsom pa po/ kun bzang theg mchog ye shes rdo rje yis mdzad/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :extentStatement    "17 v." ;
-        :hasTitle           bdr:TT1D09E83A00986CA4 ;
-        :instanceEvent      bdr:EV36F22C57575F1A0C ;
+        :hasTitle           bdr:TT1D09E83A00986CA4 , bdr:TT36F22C57575F1A0C , bdr:TT954A41F1DE8D0462 , bdr:TTADAD1D042FD90BD7 ;
+        :instanceEvent      bdr:EV662083476D92F28F ;
         :instanceHasReproduction  bdr:W1PD159393 ;
         :instanceOf         bdr:WA1PD159393 ;
         :isRoot             true ;
@@ -75,5 +82,17 @@ bdg:MW1PD159393 {
     
     bdr:TT1D09E83A00986CA4
         a                   :Title ;
+        rdfs:label          "gsung 'bum/ kun bzang theg mchog ye shes bstan pa/"@bo-x-ewts .
+    
+    bdr:TT36F22C57575F1A0C
+        a                   :TitlePageTitle ;
         rdfs:label          "kun bzang theg mchog ye shes bstan pa'i rdo rje'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT954A41F1DE8D0462
+        a                   :OtherTitle ;
+        rdfs:label          "耿桑塔确益喜多结全集"@zh-hans .
+    
+    bdr:TTADAD1D042FD90BD7
+        a                   :Title ;
+        rdfs:label          "geng sang ta que yi xiduo jie quan ji"@zh-latn-pinyin-x-ndia .
 }
