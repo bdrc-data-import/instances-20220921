@@ -16,6 +16,12 @@ bdg:MW5329 {
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGBD01CB5F4C794AF5
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-03-22T17:14:43.018Z"^^xsd:dateTime ;
+        adm:logMessage      "removed PL480, book published at mtsho sngon"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
         adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
@@ -37,17 +43,13 @@ bdg:MW5329 {
         adm:gitPath         "ae/MW5329.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW5329 ;
-        adm:logEntry        bda:LG82D1207703CEA78A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG82D1207703CEA78A , bda:LGBD01CB5F4C794AF5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7FA0BBCBEBE23943
         a                   :PublishedEvent ;
         :eventWhen          "1981,1984printing"^^<http://id.loc.gov/datatypes/edtf> .
-    
-    bdr:ID33F5CA51757FED31
-        a                   bdr:PL480 ;
-        rdf:value           "ch-tib-97" .
     
     bdr:ID6E604FDE4B605F93
         a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
@@ -65,10 +67,11 @@ bdg:MW5329 {
         skos:altLabel       "tsung k'a pa chuan"@zh-latn-wadegile ;
         skos:prefLabel      "tsong kha pa'i rnam thar thub bstan mdzes pa'i rgyan gcig ngo mtshar nor bu'i phreng ba/"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID33F5CA51757FED31 , bdr:ID6E604FDE4B605F93 , bdr:ID7A31337319D1DAE0 , bdr:IDBCC2915A345C51BD ;
+            bdr:ID6E604FDE4B605F93 , bdr:ID7A31337319D1DAE0 , bdr:IDBCC2915A345C51BD ;
         :authorshipStatement  "'brug rgyal dbang chos rje/"@bo-x-ewts ;
         :biblioNote         "dpe deb 'di ni lha sa'i shing par gyi dpe rnying zhig gzhir bzung nas par du bskrun pa yin."@bo-x-ewts ;
-        :editionStatement   "ti 1 pan."@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :editionStatement   "ti 1 pan."@zh-latn-pinyin ;
         :extentStatement    "5, 648 p." ;
         :hasTitle           bdr:TT18CC8114B8997B3B , bdr:TT5FF5E0F588D093B2 , bdr:TTA2A0B0894B753A01 , bdr:TTB319199CBBC1E16F ;
         :instanceEvent      bdr:EV7FA0BBCBEBE23943 ;
@@ -77,6 +80,7 @@ bdg:MW5329 {
         :isRoot             true ;
         :note               bdr:NT8B18FADA45041586 ;
         :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "mtsho sngon/"@bo-x-ewts ;
         :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt .
