@@ -12,32 +12,58 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN21636 {
-    bda:LGD908D59BD0111302
+    bda:LG184D80588C6055B5
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-07T15:52:26.799Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG7B1D90FF873EDDE0
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-06-03T16:01:13.329Z"^^xsd:dateTime ;
+        adm:logMessage      "added infomation"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:MW3CN21636  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW3CN21636 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "54/MW3CN21636.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN21636 ;
-        adm:logEntry        bda:LGD908D59BD0111302 ;
+        adm:logEntry        bda:LG184D80588C6055B5 , bda:LG7B1D90FF873EDDE0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN21636  a       :Instance ;
+    bdr:EVD908D59BD0111302
+        a                   :PublishedEvent ;
+        :onYear             "2017"^^xsd:gYear .
+    
+    bdr:ID8A4D6D1493646EF4
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787570000388" .
+    
+    bdr:MW3CN21636  a       :Instance , :SerialInstance ;
         skos:prefLabel      "drung sa ru pa bsod nams dpal 'byor lugs kyi sa gcod phyogs sgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8A4D6D1493646EF4 ;
+        :authorshipStatement  "si khron zhing chen bod yig dpe rnying bsdu sgrig khang na sbsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
         :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "5 v." ;
         :hasTitle           bdr:TT477DA930BA434437 ;
+        :instanceEvent      bdr:EVD908D59BD0111302 ;
+        :instanceHasReproduction  bdr:W3CN21636 ;
         :instanceOf         bdr:WA3CN21636 ;
         :isRoot             true ;
+        :numberOfVolumes    5 ;
+        :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "lha sa/"@bo-x-ewts ;
         :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS3CN21636 ;
+        :seriesNumber       "67" .
     
     bdr:TT477DA930BA434437
         a                   :Title ;

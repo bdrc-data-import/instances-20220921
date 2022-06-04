@@ -12,38 +12,52 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG209068 {
-    bda:LG9736F2F521AA1AA9
+    bda:LGDB674CD6EF8410E4
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2021-06-29T23:27:08.675Z"^^xsd:dateTime ;
+        adm:logDate         "2022-06-03T16:35:56.145Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:MW2KG209068  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW2KG209068 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "8f/MW2KG209068.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG209068 ;
-        adm:logEntry        bda:LG9736F2F521AA1AA9 ;
+        adm:logEntry        bda:LGDB674CD6EF8410E4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusAcquiring .
+        adm:status          bda:StatusReleased .
     
     bdr:EV1F733A2F844B5DAC
         a                   :PublishedEvent ;
         :onYear             "2015"^^xsd:gYear .
     
-    bdr:MW2KG209068  a      :Instance ;
-        skos:prefLabel      "zhal gdams mchan 'grel dang man ngag gces btus/"@bo-x-ewts , "索达吉文集"@zh-hans ;
+    bdr:ID9736F2F521AA1AA9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105140749" .
+    
+    bdr:MW2KG209068  a      :Instance , :SerialInstance ;
+        skos:altLabel       "索达吉文集"@zh-hans ;
+        skos:prefLabel      "zhal gdams mchan 'grel dang man ngag gces btus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9736F2F521AA1AA9 ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 465 p." ;
         :hasTitle           bdr:TT4F7E62735A0682A0 , bdr:TT7B461AD07D30CD66 ;
         :instanceEvent      bdr:EV1F733A2F844B5DAC ;
+        :instanceHasReproduction  bdr:W2KG209068 ;
         :instanceOf         bdr:WA2KG209068 ;
         :isRoot             true ;
+        :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Modern ;
         :publisherLocation  "pe cin/"@bo-x-ewts ;
         :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS2KG209068 ;
+        :seriesNumber       "13" .
     
     bdr:TT4F7E62735A0682A0
         a                   :OtherTitle ;
