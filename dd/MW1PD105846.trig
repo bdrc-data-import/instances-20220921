@@ -12,16 +12,22 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD105846 {
-    bda:LG308F51C0057C0A2F
+    bda:LG2452A80238CA4A5F
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-10T00:07:54.369Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG58314A637AF7A7AE
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-06-06T14:20:23.789Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, cat info, isbn"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFF8D2012BCFBBC62
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-10-19T15:36:05.198Z"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging"@en ;
         adm:logWho          bdu:U00016 .
-    
-    bda:LGFFFA0D0050B35D1D
-        a                   adm:UpdateData ;
-        adm:logDate         "2017-05-10T00:07:54.369Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00021 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -40,33 +46,44 @@ bdg:MW1PD105846 {
     bda:MW1PD105846  a      adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1PD105846 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "dd/MW1PD105846.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD105846 ;
-        adm:logEntry        bda:LG308F51C0057C0A2F , bda:LGFFFA0D0050B35D1D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG2452A80238CA4A5F , bda:LG58314A637AF7A7AE , bda:LGFF8D2012BCFBBC62 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF647A967BBF7ECB9
+    bdr:CRF647A967BBF7ECB9
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV955E3450C0115D64
         a                   :PublishedEvent ;
         :onYear             "2009"^^xsd:gYear .
     
-    bdr:ID955E3450C0115D64
+    bdr:ID308F51C0057C0A2F
         a                   bdr:HollisId ;
         rdf:value           "014257681" .
+    
+    bdr:ID6C8668E667E0D2DC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542116277" .
     
     bdr:MW1PD105846  a      :Instance , :SerialInstance ;
         skos:altLabel       "扎拉铠甲宗"@zh-hans ;
         skos:prefLabel      "dgra lha'i khrab rdzong /"@bo-x-ewts ;
         <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID955E3450C0115D64 ;
+            bdr:ID308F51C0057C0A2F , bdr:ID6C8668E667E0D2DC ;
+        :authorshipStatement  "gcod pa don grub kyis bsgrigs/"@bo-x-ewts ;
         :contentMethod      bdr:ContentMethod_ComputerInput ;
         :copyrightStatus    bdr:CopyrightUndetermined ;
+        :creator            bdr:CRF647A967BBF7ECB9 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
         :extentStatement    "3, 7, 650 p." ;
         :hasTitle           bdr:TT026295E52FEB9BB1 , bdr:TT9D3E5A41633EE6CD , bdr:TTB917FC540D52FC13 ;
-        :instanceEvent      bdr:EVF647A967BBF7ECB9 ;
+        :instanceEvent      bdr:EV955E3450C0115D64 ;
         :instanceHasReproduction  bdr:W1PD105846 ;
         :instanceOf         bdr:WA1PD105846 ;
         :isRoot             true ;
@@ -76,7 +93,7 @@ bdg:MW1PD105846 {
         :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
         :script             bdr:ScriptTibt ;
         :serialInstanceOf   bdr:WAS1PD105807 ;
-        :seriesNumber       "(4)" .
+        :seriesNumber       "4" .
     
     bdr:TT026295E52FEB9BB1
         a                   :Title ;
