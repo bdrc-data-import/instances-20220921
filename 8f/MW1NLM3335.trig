@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3335 {
+    bda:LG61A4660AEA1816C0
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-08-09T16:03:00.2Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -20,36 +26,48 @@ bdg:MW1NLM3335 {
     bda:MW1NLM3335  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3335 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "8f/MW1NLM3335.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3335 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG61A4660AEA1816C0 , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVBEA65A340C8D306F
+        a                   :PublishedEvent ;
+        :eventWhen          "17thcent."^^<http://id.loc.gov/datatypes/edtf> .
+    
     bdr:MW1NLM3335  a       :Instance ;
-        skos:prefLabel      "bdud rtsi snying po yan lag brgyad pa gsar ba man ngag gi rgyud las dum bu gsum pa man ngag rgyud kyi dka' 'grel legs bshad gser rgyan/"@bo-x-ewts ;
+        skos:prefLabel      "man ngag rgyud kyi dka' 'grel legs bshad gser rgyan/"@bo-x-ewts ;
         :dimensionsStatement  "47x6" ;
         :extentStatement    "440 ff." ;
-        :hasTitle           bdr:TT3F5EEE27ABD44817 ;
+        :hasSourcePrintery  bdr:G1PD129185 ;
+        :hasTitle           bdr:TT05FC87698803ED92 , bdr:TT3F5EEE27ABD44817 ;
+        :instanceEvent      bdr:EVBEA65A340C8D306F ;
         :instanceHasReproduction  bdr:W1NLM3335 ;
         :instanceOf         bdr:WA1NLM3335 ;
         :isRoot             true ;
-        :note               bdr:NT05FC87698803ED92 , bdr:NTBEA65A340C8D306F ;
+        :note               bdr:NTA9D1DB2D26376991 , bdr:NTC2DA09F304C485C2 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "zhol par khang rnying pa/"@bo-x-ewts ;
         :script             bdr:ScriptTibt .
     
-    bdr:NT05FC87698803ED92
+    bdr:NTA9D1DB2D26376991
         a                   :Note ;
         :noteText           "nlmId: M0061253"@en .
     
-    bdr:NTBEA65A340C8D306F
+    bdr:NTC2DA09F304C485C2
         a                   :Note ;
         :noteText           "missingPages: M0061253-001 [Missing page from 338A-338B] Image 675-676"@en .
     
+    bdr:TT05FC87698803ED92
+        a                   :TitlePageTitle ;
+        rdfs:label          "bdud rtsi snying po yan lag brgyad pa gsar ba man ngag gi rgyud las dum bu gsum pa man ngag rgyud kyi dka' 'grel legs bshad gser rgyan/"@bo-x-ewts .
+    
     bdr:TT3F5EEE27ABD44817
         a                   :Title ;
-        rdfs:label          "bdud rtsi snying po yan lag brgyad pa gsar ba man ngag gi rgyud las dum bu gsum pa man ngag rgyud kyi dka' 'grel legs bshad gser rgyan/"@bo-x-ewts .
+        rdfs:label          "man ngag rgyud kyi dka' 'grel legs bshad gser rgyan/"@bo-x-ewts .
 }

@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3329 {
+    bda:LG07EFBE11033AB9DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-08-09T16:02:59.56Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -20,32 +26,39 @@ bdg:MW1NLM3329 {
     bda:MW1NLM3329  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3329 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "14/MW1NLM3329.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3329 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG07EFBE11033AB9DA , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM3329  a       :Instance ;
-        skos:prefLabel      "rgyud thams cad kyi rgyal po dpal gsang ba 'dus pa'i rtsa ba'i rgyud rgyud phyi ma dang bcas pa/"@bo-x-ewts ;
+        skos:prefLabel      "gsang ba 'dus pa'i rtsa ba'i rgyud rgyud phyi ma dang bcas pa/"@bo-x-ewts ;
         :dimensionsStatement  "48x6.5" ;
         :extentStatement    "102 ff." ;
-        :hasTitle           bdr:TT8781C7DD7100FABC ;
+        :hasSourcePrintery  bdr:G3JT12566 ;
+        :hasTitle           bdr:TT8781C7DD7100FABC , bdr:TTD380FB828F010D77 ;
         :instanceHasReproduction  bdr:W1NLM3329 ;
         :instanceOf         bdr:WA1NLM3329 ;
         :isRoot             true ;
-        :note               bdr:NTD380FB828F010D77 ;
+        :note               bdr:NTAC349FF2926356C9 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sog yul/"@bo-x-ewts ;
+        :publisherName      "dga' ldan theg chen gling /"@bo-x-ewts ;
         :script             bdr:ScriptTibt .
     
-    bdr:NTD380FB828F010D77
+    bdr:NTAC349FF2926356C9
         a                   :Note ;
         :noteText           "nlmId: M0061247"@en .
     
     bdr:TT8781C7DD7100FABC
         a                   :Title ;
+        rdfs:label          "gsang ba 'dus pa'i rtsa ba'i rgyud rgyud phyi ma dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TTD380FB828F010D77
+        a                   :TitlePageTitle ;
         rdfs:label          "rgyud thams cad kyi rgyal po dpal gsang ba 'dus pa'i rtsa ba'i rgyud rgyud phyi ma dang bcas pa/"@bo-x-ewts .
 }
