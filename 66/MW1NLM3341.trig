@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3341 {
+    bda:LGF531C1752BAE86FA
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-08-11T15:11:00.182Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -20,32 +26,39 @@ bdg:MW1NLM3341 {
     bda:MW1NLM3341  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:MW1NLM3341 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "66/MW1NLM3341.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3341 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LGF531C1752BAE86FA , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:MW1NLM3341  a       :Instance ;
-        skos:prefLabel      "dam chos 'dul ba mdo rtsa/"@bo-x-ewts ;
+        skos:prefLabel      "'dul ba mdo rtsa ba/"@bo-x-ewts ;
         :dimensionsStatement  "48.5x6.5" ;
         :extentStatement    "150 ff." ;
-        :hasTitle           bdr:TT46DA1B9090906B85 ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TT46DA1B9090906B85 , bdr:TTEA050CF57D1B7ABB ;
         :instanceHasReproduction  bdr:W1NLM3341 ;
         :instanceOf         bdr:WA1NLM3341 ;
         :isRoot             true ;
-        :note               bdr:NTEA050CF57D1B7ABB ;
+        :note               bdr:NT4491236241E51D20 ;
         :numberOfVolumes    1 ;
         :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "a mdo/"@bo-x-ewts ;
+        :publisherName      "bla brang bkra shis 'khyil/"@bo-x-ewts ;
         :script             bdr:ScriptTibt .
     
-    bdr:NTEA050CF57D1B7ABB
+    bdr:NT4491236241E51D20
         a                   :Note ;
         :noteText           "nlmId: M0061259"@en .
     
     bdr:TT46DA1B9090906B85
         a                   :Title ;
+        rdfs:label          "'dul ba mdo rtsa ba/"@bo-x-ewts .
+    
+    bdr:TTEA050CF57D1B7ABB
+        a                   :TitlePageTitle ;
         rdfs:label          "dam chos 'dul ba mdo rtsa/"@bo-x-ewts .
 }
